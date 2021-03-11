@@ -1,0 +1,49 @@
+{
+  "subjectArea": {
+    "name": "X - Airlines Traffic",
+    "sourceBusinessModel": "businessModel:X0 - Airlines",
+    "implicitFactColumn": "logicalColumn:X0 - Airlines.Market Facts.Passengers",
+    "description": "US Air Traffic Passengers and Freight load Analysis",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X - Airlines Traffic.Month"
+      },
+      {
+        "name": "presentationTable:X - Airlines Traffic.Route",
+        "children": [
+          {
+            "name": "presentationTable:X - Airlines Traffic.Origin"
+          },
+          {
+            "name": "presentationTable:X - Airlines Traffic.Destination"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X - Airlines Traffic.Carrier",
+        "children": [
+          {
+            "name": "presentationTable:X - Airlines Traffic.Service"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X - Airlines Traffic.Traffic Facts",
+        "children": [
+          {
+            "name": "presentationTable:X - Airlines Traffic.Freight"
+          },
+          {
+            "name": "presentationTable:X - Airlines Traffic.Passengers"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

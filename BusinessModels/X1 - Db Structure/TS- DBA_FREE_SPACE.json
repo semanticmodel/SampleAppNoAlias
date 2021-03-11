@@ -1,0 +1,143 @@
+{
+  "logicalTable": {
+    "name": "TS- DBA_FREE_SPACE",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Block Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.BLOCK_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blocks",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.BLOCKS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "File Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.FILE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Relative Fno",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.RELATIVE_FNO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Megabytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1/1024/1024",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.BYTES"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DBA_FREE_SPACE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE"
+          ]
+        }
+      }
+    ]
+  }
+}

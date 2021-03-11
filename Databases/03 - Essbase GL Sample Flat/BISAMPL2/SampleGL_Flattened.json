@@ -1,0 +1,3274 @@
+{
+  "cubeTable": {
+    "name": "SampleGL_Flattened",
+    "sourceType": "TABLE",
+    "extName": "samplegl",
+    "memberReference": "Default",
+    "dateFormat": "MM-DD-YYYY",
+    "isMemberAliasUnique": true,
+    "alternateNames": [
+      "Default"
+    ],
+    "DBMap": [
+      {
+        "name": "DEFAULT",
+        "value": "samplegl"
+      }
+    ],
+    "columns": [ {
+        "name": "Revenue Synergies",
+        "extName": "411200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Close %",
+        "extName": "ClosePct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Office Furn and Fixtures",
+        "extName": "511500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Amortization Expense",
+        "extName": "511900",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Times Interest Earned",
+        "extName": "TimesInterestEarned",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Time Periods",
+        "extName": "Gen1,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Depr Exp: Computer Software",
+        "extName": "511700",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Accounts",
+        "extName": "Gen7,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen9,Accounts",
+        "extName": "Gen9,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "IC Receivable",
+        "extName": "112300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Accounts Payable Trade",
+        "extName": "211101",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Leasehold Improvements",
+        "extName": "151400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Consulting Services",
+        "extName": "506100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen10,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Payroll Taxes",
+        "extName": "501240",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "General Fees",
+        "extName": "506400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Management Fees",
+        "extName": "506430",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Meals Expense",
+        "extName": "502200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Ratios",
+        "extName": "Ratios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - HKD",
+        "extName": "HKD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "IC Revenue",
+        "extName": "411300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Prepaid Deposits",
+        "extName": "114200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "CapEx: Computer Software",
+        "extName": "CapExCompSftwr",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Auto Allowance",
+        "extName": "501150",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Vehicles",
+        "extName": "151900",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Minority Interest Curr Trans Adj",
+        "extName": "251300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "General Supplies",
+        "extName": "503000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Accruals",
+        "extName": "211208",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Buildings",
+        "extName": "511200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Dividends Per Share",
+        "extName": "DividendsPerShare",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen1,Scenarios - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Equity Ratio",
+        "extName": "EquityRatio",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Scenarios",
+        "extName": "Gen2,Scenarios",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "HC - Existing",
+        "extName": "HCExist",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Change in Earnings Per Share (%)",
+        "extName": "ChangeInEPS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depreciation and Amort",
+        "extName": "511000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Per Share Data",
+        "extName": "PerShareData",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen8,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Debt/Total Capital (%)",
+        "extName": "DebtToCapital",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Entities",
+        "extName": "Gen5,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Salary change to Plan",
+        "extName": "CHGSAR",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Years Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen5,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen2,Scenarios - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Long-Term Liabilities",
+        "extName": "212000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Return on Net Assets",
+        "extName": "RONA",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Shareholder's Investment",
+        "extName": "252000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "LeadsDrivers",
+        "extName": "LeadsDrivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Working Capital",
+        "extName": "OperWorkingCapital",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Office Supplies",
+        "extName": "503100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Fees Outside Services",
+        "extName": "506000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Allocations",
+        "extName": "515000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Minority Interest",
+        "extName": "251000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Payroll Tax %",
+        "extName": "PayrollTaxPct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "R&D: External Consulting",
+        "extName": "506321",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Minority Interest Net Inc",
+        "extName": "251202",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "FICA Expense",
+        "extName": "501210",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Years - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Charitable Contributions",
+        "extName": "506550",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Advertising and Public Relations",
+        "extName": "506200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Assets",
+        "extName": "100000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Short-Term Investments",
+        "extName": "111200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "EBITDA",
+        "extName": "EBITDA",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - SEK",
+        "extName": "SEK",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "General Bldg/Grnd Maint and Repair",
+        "extName": "509330",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Facility Allocation",
+        "extName": "515110",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - GBP",
+        "extName": "GBP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Years - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Current Taxes",
+        "extName": "321000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Inventory Days",
+        "extName": "InventoryDays",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Return on Invested Capital",
+        "extName": "ROIC",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Insurance",
+        "extName": "506510",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Return on Equity",
+        "extName": "ROE",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Maint and Repair of Bldg-Grnds",
+        "extName": "509300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "BalanceSheet",
+        "extName": "BalanceSheet",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - MYR",
+        "extName": "MYR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "CapEx: Computer Equipment",
+        "extName": "CapExCompEquip",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Current Deferred Taxes",
+        "extName": "211207",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Total Inventory",
+        "extName": "113000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Debt to EBITDA",
+        "extName": "TotalDebtToEBITDA",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Travel",
+        "extName": "502000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Allowance for Doubtful Accounts",
+        "extName": "112400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Retained Earnings: Prior Years",
+        "extName": "253100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen1,Years",
+        "extName": "Gen1,Years",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Current Ratio",
+        "extName": "CurrentRatio",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bonus % - Staff",
+        "extName": "BonusPctStaff",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Fringe Benefits",
+        "extName": "501250",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - USD",
+        "extName": "USD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Accounts",
+        "extName": "Gen1,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Accounts - Saved Assumption,HSP_UDF",
+        "extName": "Saved Assumption,HSP_UDF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Sales Leads",
+        "extName": "SalesLeads",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Entities",
+        "extName": "Gen2,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Equipment Lease and Rental",
+        "extName": "505100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Postage and Freight",
+        "extName": "503200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Expense Synergies",
+        "extName": "512000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Earnings from Investments in Subs",
+        "extName": "340000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gross Revenue",
+        "extName": "411000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "WIP Inventory",
+        "extName": "113200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - CAD",
+        "extName": "CAD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Administrative Allocation",
+        "extName": "515120",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Inventory Turnover",
+        "extName": "InventoryTurnover",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "ASP",
+        "extName": "ASP",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Relocation",
+        "extName": "507300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen3,Entities",
+        "extName": "Gen3,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Property Insurance",
+        "extName": "509120",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Building Services",
+        "extName": "509210",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Travel Expense",
+        "extName": "502100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "IncomeStatement",
+        "extName": "IncomeStatement",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Currency Translation Adjustment",
+        "extName": "252500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Time Periods Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "LT Debt",
+        "extName": "212200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "What if Cost of Sales change to Plan",
+        "extName": "WCHGCOS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "CapEx: Land",
+        "extName": "CapExLand",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Scenarios - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Net Revenue",
+        "extName": "410000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Sales Return %",
+        "extName": "SalesReturnPct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "CapEx: Buildings",
+        "extName": "CapExBuildings",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Asset",
+        "extName": "Asset",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Operating COS",
+        "extName": "451000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "YTD Salary",
+        "extName": "YTDSalary",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "LT Deferred Taxes",
+        "extName": "212100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "R&D: Overtime",
+        "extName": "506322",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Forecast Drivers",
+        "extName": "Forecast Drivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Salary",
+        "extName": "501110",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Entities",
+        "extName": "Gen6,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Cost of Capital (%)",
+        "extName": "CostofCapital",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Trade Receivables",
+        "extName": "112100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Water",
+        "extName": "501300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Sales Returns",
+        "extName": "412100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Base Salary",
+        "extName": "501111",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accum Amort: Intangible Assets",
+        "extName": "182000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Finished Goods Inventory",
+        "extName": "113300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Revaluation Gain/Loss",
+        "extName": "252600",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Payroll Taxes change to Plan",
+        "extName": "CHGPTX",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Raw Materials Inventory",
+        "extName": "113100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen6,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Shared Services Allocation",
+        "extName": "515130",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Cost/Lead",
+        "extName": "CostperLead",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "External R&D",
+        "extName": "506320",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Merit Increase",
+        "extName": "501112",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Mfg Mach and Equip",
+        "extName": "511400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Cash - Checking",
+        "extName": "111100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Salary",
+        "extName": "Salary",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Telephone",
+        "extName": "504100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Sales Growth Rate",
+        "extName": "SalesGrowth Rate",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Prepaid Others",
+        "extName": "114400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Equity",
+        "extName": "Equity",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Receivables Days",
+        "extName": "ReceivablesDays",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities",
+        "extName": "Gen4,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Promotions",
+        "extName": "506220",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Scenarios Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen2,Years - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen3,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Sales change to plan %",
+        "extName": "CHGSLS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Scenarios - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen8,Accounts",
+        "extName": "Gen8,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Earnings Per Share",
+        "extName": "EPS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "HVAC Maint and Repair",
+        "extName": "509320",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Scenarios",
+        "extName": "Gen1,Scenarios",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Salaries and Wages",
+        "extName": "501100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Scenarios Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "LTD Current Portion",
+        "extName": "211205",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accrued Payroll Liabilities",
+        "extName": "211203",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Working Days",
+        "extName": "WorkingDays",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Temporary Help",
+        "extName": "501140",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Time Periods",
+        "extName": "Gen3,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - PHP",
+        "extName": "PHP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Sales Allowance %",
+        "extName": "SalesAllowPct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Building Exp",
+        "extName": "509100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Recruitment",
+        "extName": "507200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "COS Synergies",
+        "extName": "452000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Receivables",
+        "extName": "112200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Net Income",
+        "extName": "300000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - KRW",
+        "extName": "KRW",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Oper Expense",
+        "extName": "506500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "IST Consulting",
+        "extName": "506311",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Security Services",
+        "extName": "509230",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - ARS",
+        "extName": "ARS",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - PLN",
+        "extName": "PLN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gross Profit",
+        "extName": "400000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Vehicles",
+        "extName": "511800",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Computer Equip",
+        "extName": "511600",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "SUI Expense",
+        "extName": "501230",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "What if Other Employee Costs change to Plan",
+        "extName": "WCHGOSR",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Years - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen10,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "CapEx: Vehicles",
+        "extName": "CapExVehicles",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Closed Deals",
+        "extName": "ClosedDeals",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Payable Other",
+        "extName": "211102",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Long-Term Assets",
+        "extName": "185000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "What if Sales change to Plan",
+        "extName": "WCHGSLS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bad Debt Expense",
+        "extName": "506520",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bank and Computer Fees",
+        "extName": "506530",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bonus % - Director",
+        "extName": "BonusPctDir",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Ret Earn: Eq in Earnings of Subs",
+        "extName": "253200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Property Taxes",
+        "extName": "509110",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Entities",
+        "extName": "Gen7,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Interest Expense",
+        "extName": "312200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Facilities Services",
+        "extName": "509200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Accounts",
+        "extName": "Gen4,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen8,Entities",
+        "extName": "Gen8,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Expense",
+        "extName": "Expense",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Appointments %",
+        "extName": "AppointmentsPct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Profit Margin",
+        "extName": "OperProfitMargin",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - EUR",
+        "extName": "EUR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Accounts",
+        "extName": "Gen5,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Cost of Sales change to Plan",
+        "extName": "CHGCOS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Computer Equipment",
+        "extName": "151700",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Leverage Ratios",
+        "extName": "LeverageRatios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bonus Expense",
+        "extName": "501130",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Accounts",
+        "extName": "Gen2,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Liquidity Ratios",
+        "extName": "LiquidityRatios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Janitorial Services",
+        "extName": "509220",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Construction in Progress",
+        "extName": "151100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Value Drivers",
+        "extName": "ValueDrivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Utilities",
+        "extName": "510000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "IST Training",
+        "extName": "506312",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - BRL",
+        "extName": "BRL",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Fixed Assets",
+        "extName": "150000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - ZAR",
+        "extName": "ZAR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "MSRP",
+        "extName": "MSRP",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Employee HR",
+        "extName": "507000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Saved Assumption",
+        "extName": "Saved Assumption",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Misc. Expense",
+        "extName": "506570",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Surplus",
+        "extName": "254000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Payables Days",
+        "extName": "PayablesDays",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Overtime Premium",
+        "extName": "501120",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Allocations In",
+        "extName": "515100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Mfg Mach and Equip",
+        "extName": "151500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Bonus % - VP",
+        "extName": "BonusPctVP",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Working Capital",
+        "extName": "WorkingCapital",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gain (Loss) on Disposal",
+        "extName": "312400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Revenue",
+        "extName": "411100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Headcount",
+        "extName": "Headcount",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Dividends - Common Stock",
+        "extName": "253300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Extraordinary Income",
+        "extName": "350000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Allocations",
+        "extName": "515140",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Allocations Out",
+        "extName": "515200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Liability",
+        "extName": "Liability",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "CapEx: Leasehold Improvements",
+        "extName": "CapExLsholdImprov",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "HC - New",
+        "extName": "HCNew",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - JPY",
+        "extName": "JPY",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Current Assets",
+        "extName": "110000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Pretax Income From Operations",
+        "extName": "311000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Prepaid Expenses",
+        "extName": "114000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Minority Interest Ret Earn",
+        "extName": "251200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Telecommunications",
+        "extName": "504000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Incremental Working Capital Investment",
+        "extName": "IncrWorkCapInvest",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Current Liabilities",
+        "extName": "211200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Cash Income Tax Rate",
+        "extName": "CashIncomeTaxRate",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "GPM",
+        "extName": "GPM",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Prepaid Taxes",
+        "extName": "114300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Days in Receivables",
+        "extName": "DaysInReceivables",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Intangible Assets",
+        "extName": "181000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Total Asset Turnover",
+        "extName": "TotalAssetTurnover",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Taxes and Benefits",
+        "extName": "501200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Facilities Exp",
+        "extName": "509000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Liabilities",
+        "extName": "210000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Sales Discounts",
+        "extName": "412200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Land",
+        "extName": "151200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - MXN",
+        "extName": "MXN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounting Firm Fees",
+        "extName": "506420",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Diluted Earnings Per Share",
+        "extName": "DilutedEPS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Time Periods - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Equipment Maintenance",
+        "extName": "505000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Business Fees and Licenses",
+        "extName": "509240",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Days in Payables",
+        "extName": "DaysinPayables",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other LT Liabilities",
+        "extName": "212400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Units",
+        "extName": "Units",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Expenses",
+        "extName": "500000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gross PPE",
+        "extName": "151000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Time Periods Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Office Furn and Fixtures",
+        "extName": "151600",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accumulated Depreciation",
+        "extName": "152000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Book Value Per Share",
+        "extName": "BookValuePerShare",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Liabilities and Equity",
+        "extName": "200000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "CapEx: Office Furn and Fixtures",
+        "extName": "CapExOffFurn",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Years",
+        "extName": "Gen2,Years",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Facility Rent",
+        "extName": "509130",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Scenarios - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Years - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Buildings",
+        "extName": "151300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Quick Ratio",
+        "extName": "QuickRatio",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - COP",
+        "extName": "COP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Provision for Income Tax",
+        "extName": "320000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "IC Payable",
+        "extName": "211103",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts - Revenue",
+        "extName": "Revenue",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Acquisition Related Expense",
+        "extName": "506560",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Returns and Allowances",
+        "extName": "412000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gas",
+        "extName": "510200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen10,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Dividends from LT Inv in Subs",
+        "extName": "312300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Minority Interest Capital",
+        "extName": "251100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Activity Ratios",
+        "extName": "ActivityRatios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "IC COS",
+        "extName": "453000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Benefit $ / Head",
+        "extName": "BenefitsPerHead",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "COS Rate",
+        "extName": "COSRate",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Return on Assets or Inventory",
+        "extName": "ROA",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Common Shares Outstanding",
+        "extName": "CommonShares",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Internal Strategy Team",
+        "extName": "506310",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Incremental Fixed Capital Investment",
+        "extName": "IncrFixedCapInvest",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Return on Sales",
+        "extName": "ROS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Consulting Firms",
+        "extName": "506120",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "CapEx: Mfg Mach and Equip",
+        "extName": "CapExMfgMach",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Electric",
+        "extName": "510100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Deferred Taxes",
+        "extName": "322000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Fixed Charge Coverage",
+        "extName": "FixedChargeCoverage",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Current Liabilities",
+        "extName": "211000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Directors' Fees",
+        "extName": "506540",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "What if Overheads change to Plan",
+        "extName": "WCHGOVH",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Statistics",
+        "extName": "Statistics",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Minority Interest Income",
+        "extName": "330000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Equipment Repair and Maint",
+        "extName": "505200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Employee Cost change to Plan",
+        "extName": "CHGOSR",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Price",
+        "extName": "Price",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Dividends - Preferred Stock",
+        "extName": "253400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Drivers for What-if Scenarios",
+        "extName": "What-if Drivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Debt/Equity Ratio (%)",
+        "extName": "DebtToEquity",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "What if Salary change to Plan",
+        "extName": "WCHGSAR",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Compensation",
+        "extName": "501000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Retained Earnings",
+        "extName": "253000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - TWD",
+        "extName": "TWD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - DKK",
+        "extName": "DKK",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Total Shareholder's Equity",
+        "extName": "250000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Internet",
+        "extName": "504300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Custom Ratios",
+        "extName": "CustomRatios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Assets",
+        "extName": "180000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "HC - Term",
+        "extName": "HCTerm",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Legal",
+        "extName": "506410",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Preferred Stock",
+        "extName": "252100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Merit %",
+        "extName": "MeritPct",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Cash Flow Per Share",
+        "extName": "CashFlowPerShare",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - CHF",
+        "extName": "CHF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - CNY",
+        "extName": "CNY",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Roof Maint and Repair",
+        "extName": "509310",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Fixed Asset Turnover",
+        "extName": "FixedAssetTurnover",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen5,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Cash and Cash Equivalents",
+        "extName": "111000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Exchange Rate Gain (Loss)",
+        "extName": "312500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Additional Paid-In Capital",
+        "extName": "252300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Retained Earnings: Current Year",
+        "extName": "253500",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Advertising",
+        "extName": "506210",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Cost of Sales",
+        "extName": "450000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Exp (Inc)",
+        "extName": "312000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Preferred / Total Capital (%)",
+        "extName": "PreferredToCapital",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "PayrollDrivers",
+        "extName": "PayrollDrivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Overheads change to Plan",
+        "extName": "CHGOVH",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Bonus % - Manager",
+        "extName": "BonusPctMgr",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Individual Contractors",
+        "extName": "506110",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "RevenueDrivers",
+        "extName": "RevenueDrivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Other Drivers",
+        "extName": "OtherDrivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "What if Payroll Tax change to Plan",
+        "extName": "WCHGPTX",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Time Periods",
+        "extName": "Gen4,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts Receivable -  Net",
+        "extName": "112000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Leasehold Improvements",
+        "extName": "511300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Minority Interest Open Ret Earn",
+        "extName": "251201",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Common Stock",
+        "extName": "252200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Long-Term Deferred Tax Asset",
+        "extName": "186000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "IC LT Loan Payable",
+        "extName": "212300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Long-Term Investments",
+        "extName": "183000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts",
+        "extName": "Gen6,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - AUD",
+        "extName": "AUD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen10,Accounts",
+        "extName": "Gen10,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - PEN",
+        "extName": "PEN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Depr Exp: Existing Assets",
+        "extName": "511100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Cellular Charges",
+        "extName": "504200",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Preferred / Equity Ratio (%)",
+        "extName": "PreferredToEquity",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen7,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Total Pretax Income",
+        "extName": "310000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Years - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Employee Development",
+        "extName": "507400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Investment in Subsidiaries",
+        "extName": "184000",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Interest Income",
+        "extName": "312100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Other Employee Costs",
+        "extName": "507100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Engineering Expense",
+        "extName": "506300",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Short-Term Debt",
+        "extName": "211201",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accrued Interest",
+        "extName": "211206",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Profit Performance Ratios",
+        "extName": "ProfitPerfRatios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "FUTA Expense",
+        "extName": "501220",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Payable",
+        "extName": "211100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Unearned Contract Revenue",
+        "extName": "211204",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Entities",
+        "extName": "Gen1,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Accounts",
+        "extName": "Gen3,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Scenarios - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Years Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "CapitalExpenditures",
+        "extName": "CapitalExpenditures",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Time Periods",
+        "extName": "Gen2,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Computer Software",
+        "extName": "151800",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Treasury Stock",
+        "extName": "252400",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Current Taxes Payable",
+        "extName": "211202",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - VEB",
+        "extName": "VEB",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Prepaid Insurance",
+        "extName": "114100",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Accounts - Expense,HSP_UDF",
+        "extName": "Expense,HSP_UDF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      }
+    ]
+  }
+}

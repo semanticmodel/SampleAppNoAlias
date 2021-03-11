@@ -1,0 +1,53 @@
+{
+  "presentationTable": {
+    "name": "Delay",
+    "alternateNames": [
+      "Del",
+      "L"
+    ],
+    "presentationColumns": [ {
+        "name": "Arr Delay Class",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.20 Arr Delay Grp.Arr Delay Class",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)"
+      },
+      {
+        "name": "Arr Delay Group",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.20 Arr Delay Grp.Arr Delay Group",
+        "alternateNames": [
+          "Arr Delay Grp",
+          "Arrival Delay Group"
+        ]
+      },
+      {
+        "name": "Dept Delay Class",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.22 Dept Delay Grp.Dept Delay Class",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)"
+      },
+      {
+        "name": "Dept Delay Group",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.22 Dept Delay Grp.Dept Delay Group",
+        "alternateNames": [
+          "Dept Delay Grp"
+        ]
+      },
+      {
+        "name": "Cancelled",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.25 Cancelled.Cancelled"
+      },
+      {
+        "name": "Cancel Reason",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.24 Cancellation.Cancel Reason",
+        "alternateNames": [
+          "Cancellation"
+        ]
+      },
+      {
+        "name": "Diverted !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Diverted !",
+        "alternateNames": [
+          "Diverted"
+        ]
+      }
+    ]
+  }
+}

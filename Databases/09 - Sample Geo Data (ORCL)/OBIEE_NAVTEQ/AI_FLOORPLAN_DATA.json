@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "AI_FLOORPLAN_DATA",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CAGE_PEC",
+        "dataType": "INT",
+        "length": 4
+      },
+      {
+        "name": "CAGE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "CAGE_AREA",
+        "dataType": "INT",
+        "length": 3
+      },
+      {
+        "name": "KVA_PRIV",
+        "dataType": "INT",
+        "length": 2
+      },
+      {
+        "name": "IBX",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "KVA_PER_CAB",
+        "dataType": "INT",
+        "length": 5
+      },
+      {
+        "name": "CROSS_CONNECT_COUNT",
+        "dataType": "INT",
+        "length": 3
+      },
+      {
+        "name": "CAGE_COUNT",
+        "dataType": "INT",
+        "length": 2
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "physicalTable": {
+    "name": "BPM_CUBE_PROCESS_V",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PROCESSID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DOMAINNAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "LABEL",
+        "dataType": "VARCHAR",
+        "length": 500
+      },
+      {
+        "name": "UNDEPLOYDATE",
+        "dataType": "TIMESTAMP"
+      },
+      {
+        "name": "PROCESSTYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "SCALABEL",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "PROCESSNAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "COMPOSITENAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMPOSITEDN",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      },
+      {
+        "name": "REVISION",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      }
+    ]
+  }
+}

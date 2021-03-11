@@ -1,0 +1,138 @@
+{
+  "presentationTable": {
+    "name": "All Mviews",
+    "alternateNames": [
+      "All_mviews",
+      "OBJ- ALL_MVIEWS"
+    ],
+    "presentationColumns": [ {
+        "name": "After Fast Refresh",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.After Fast Refresh"
+      },
+      {
+        "name": "Build Mode",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Build Mode"
+      },
+      {
+        "name": "Compile State",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Compile State"
+      },
+      {
+        "name": "Container Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Container Name"
+      },
+      {
+        "name": "Fast Refreshable",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Fast Refreshable"
+      },
+      {
+        "name": "Last Refresh Date",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Last Refresh Date"
+      },
+      {
+        "name": "Last Refresh Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Last Refresh Type"
+      },
+      {
+        "name": "Master Link",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Master Link"
+      },
+      {
+        "name": "Master Rollback Seg",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Master Rollback Seg"
+      },
+      {
+        "name": "Mview Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Mview Name"
+      },
+      {
+        "name": "Num Fresh Pct Regions",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Num Fresh Pct Regions"
+      },
+      {
+        "name": "Num Pct Tables",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Num Pct Tables"
+      },
+      {
+        "name": "Num Stale Pct Regions",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Num Stale Pct Regions"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Owner"
+      },
+      {
+        "name": "Query",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Query"
+      },
+      {
+        "name": "Query Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Query Len"
+      },
+      {
+        "name": "Refresh Method",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Refresh Method"
+      },
+      {
+        "name": "Refresh Mode",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Refresh Mode"
+      },
+      {
+        "name": "Rewrite Capability",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Rewrite Capability"
+      },
+      {
+        "name": "Rewrite Enabled",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Rewrite Enabled"
+      },
+      {
+        "name": "Stale Since",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Stale Since"
+      },
+      {
+        "name": "Staleness",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Staleness"
+      },
+      {
+        "name": "Unknown Consider Fresh",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown Consider Fresh"
+      },
+      {
+        "name": "Unknown External Table",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown External Table"
+      },
+      {
+        "name": "Unknown Import",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown Import"
+      },
+      {
+        "name": "Unknown Plsql Func",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown Plsql Func"
+      },
+      {
+        "name": "Unknown Prebuilt",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown Prebuilt"
+      },
+      {
+        "name": "Unknown Trusted Fd",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Unknown Trusted Fd"
+      },
+      {
+        "name": "Updatable",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Updatable"
+      },
+      {
+        "name": "Update Log",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Update Log"
+      },
+      {
+        "name": "Use No Index",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.Use No Index"
+      },
+      {
+        "name": "# Of Mviews",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_MVIEWS.# Of Mviews"
+      }
+    ]
+  }
+}

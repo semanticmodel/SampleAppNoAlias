@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Mumbai Demographics",
+    "presentationColumns": [ {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Areas.City"
+      },
+      {
+        "name": "Ward",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Areas.Ward"
+      },
+      {
+        "name": "Neighbourhood",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Areas.Neighbourhood",
+        "alternateNames": [
+          "Neighbourhood Total",
+          "NEIGHBOURHOOD_TOTAL"
+        ]
+      },
+      {
+        "name": "Total Population",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Population"
+      },
+      {
+        "name": "Total Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Households"
+      },
+      {
+        "name": "Avg Hh Members",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Hh Members"
+      },
+      {
+        "name": "Population Density",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Population Density"
+      },
+      {
+        "name": "# of Neighbourhoods",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.# of Neighbourhoods"
+      },
+      {
+        "name": "Sum Neighbourhood Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Sum Neighbourhood Area"
+      },
+      {
+        "name": "Avg Neighbourhood Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Neighbourhood Area"
+      },
+      {
+        "name": "Neighbourhood Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Areas.Neighbourhood Code",
+        "alternateNames": [
+          "Detail Code G",
+          "Wardcode G"
+        ]
+      },
+      {
+        "name": "Neighbourhood Description",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Areas.Neighbourhood Description",
+        "alternateNames": [
+          "NEIGHBOURHOOD_DESCRIPTION"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Mumbai Areas",
+        "sourceLogicalTable": "logicalTable:07 - Spatial Samples.Mumbai Areas",
+        "levels": [ {
+            "name": "All Mumbai",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.Mumbai Areas.All Mumbai"
+          },
+          {
+            "name": "Wards",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.Mumbai Areas.Wards",
+            "displayColumn": "presentationColumn:L - Geo Loc.Mumbai Demographics.Ward"
+          },
+          {
+            "name": "Mumbai Areas Detail",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.Mumbai Areas.Mumbai Areas Detail",
+            "displayColumn": "presentationColumn:L - Geo Loc.Mumbai Demographics.Neighbourhood"
+          }
+        ]
+      }
+    ]
+  }
+}

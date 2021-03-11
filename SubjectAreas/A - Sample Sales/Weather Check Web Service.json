@@ -1,0 +1,16 @@
+{
+  "presentationTable": {
+    "name": "Weather Check Web Service",
+    "alternateNames": [
+      "Web Service"
+    ],
+    "presentationColumns": [ {
+        "name": "Report",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.WS_Weather_Check.Report",
+        "alternateNames": [
+          "Result"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "physicalTableAlias": {
+    "name": "D63 Customers (SCD Time Temporal View Query)",
+    "description": "Customer Alias: Alias of the customer dimension table",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_CUSTOMERS_SCD_VIEWQUERY",
+    "overrideSourceCacheSetting": true
+  }
+}

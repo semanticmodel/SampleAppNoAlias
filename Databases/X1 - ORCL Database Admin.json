@@ -1,0 +1,422 @@
+{
+  "database": {
+    "name": "X1 - ORCL Database Admin",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "SYSTEM DB Connection Pool",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "V_$DATABASE_DATABASE_PROPERTIES",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$DATABASE",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "V_$DATABASE_V_$SERVICES",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SERVICES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$DATABASE",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "V_$DATABASE_DATABASE_SUMMARY",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DATABASE_SUMMARY",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$DATABASE",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "ALL_AWS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_AWS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_AWS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_TEMP_FILES_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_DATA_FILES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TEMP_FILES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_DATA_FILES.FILE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FILES.FILE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "DBA_TEMP_FILES_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TEMP_FILES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FILES.TABLESPACE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TYPES_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TYPES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TYPES.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TAB_PARTITIONS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.TABLE_OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_TAB_COL_STATISTICS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TAB_COL_STATISTICS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TAB_COL_STATISTICS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_SEGMENTS_Foreign Key#5",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_SEGMENTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SEGMENTS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_OBJECT_TABLES_Foreign Key#5",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_OBJECT_TABLES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_OBJECT_TABLES.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_OBJECT_SIZE_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_OBJECT_SIZE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_OBJECT_SIZE.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "GV_$SQLSTATS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SQL",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SQLSTATS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_ID",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQLSTATS.SQL_ID"
+          }
+        ]
+      },
+      {
+        "name": "V_$TEMPFILE_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_DATA_FILES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$TEMPFILE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_DATA_FILES.FILE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$TEMPFILE.NAME"
+          }
+        ]
+      },
+      {
+        "name": "ALL_VIEWS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_VIEWS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TAB_STATISTICS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_STATISTICS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_STATISTICS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_COL_PRIVS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.TABLE_SCHEMA"
+          }
+        ]
+      },
+      {
+        "name": "ALL_CUBES_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_CUBES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TAB_COLS_Foreign Key#5",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_COLS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_COLS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "GV_$SESSMETRIC_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SESSION",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SID",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.SESSION_ID"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TAB_PRIVS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_PRIVS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PRIVS.TABLE_SCHEMA"
+          }
+        ]
+      },
+      {
+        "name": "V_$SYSMETRIC_HISTORY_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC.METRIC_ID",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.METRIC_ID"
+          }
+        ]
+      },
+      {
+        "name": "DBA_FREE_SPACE_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_FREE_SPACE.TABLESPACE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "ALL_USERS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_USERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_USERS.USERNAME"
+          }
+        ]
+      },
+      {
+        "name": "V_$SYSMETRIC_SUMMARY_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC.METRIC_ID",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.METRIC_ID"
+          }
+        ]
+      },
+      {
+        "name": "ALL_SYNONYMS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_SYNONYMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_SYNONYMS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_TEMP_FREE_SPACE_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE.TABLESPACE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TABLES_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TABLES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TABLES.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_EXTENTS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_EXTENTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_EXTENTS.TABLESPACE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "ALL_OBJECTS_Foreign Key#4",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_OBJECTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_OBJECTS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_TABLESPACE_GROUPS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACE_GROUPS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACE_GROUPS.TABLESPACE_NAME"
+          }
+        ]
+      },
+      {
+        "name": "GV_$SQLTEXT_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SQL",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.GV$SQLTEXT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_ID",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQLTEXT.SQL_ID"
+          }
+        ]
+      },
+      {
+        "name": "V_$SEGMENT_STATISTICS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_INDEXES_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_INDEXES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_INDEXES.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_MVIEWS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_MVIEWS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "ALL_TAB_HISTOGRAMS_Foreign Key#1",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_HISTOGRAMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_HISTOGRAMS.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "DBA_SYS_PRIVS_Foreign Key",
+        "leftTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL USERS - Owners",
+        "rightTable": "physicalTable:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.ALL USERS - Owners.USERNAME",
+            "rightColumn": "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS.GRANTEE"
+          }
+        ]
+      }
+    ]
+  }
+}

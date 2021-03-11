@@ -1,0 +1,130 @@
+{
+  "logicalTable": {
+    "name": "21 Dep Time Blk",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Dep Time Blk",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "70 DEPTIMEBLK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPTIMEBLK.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_21_Dep_00039CE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.21 Dep Time Blk Detail"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Time Grp",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 = '0001-0559' THEN '01:00 to 09:00' WHEN %1 BETWEEN '06' AND '09' THEN '01:00 to 09:00' WHEN %1 BETWEEN '09' AND '12' THEN '09:00 to 12:00' WHEN %1 BETWEEN '12' AND '17' THEN '12:00 to 17:00' ELSE '18:00 to Midnight' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.21 Dep Time Blk.Dep Time Blk"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "70 DEPTIMEBLK",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPTIMEBLK"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_21_Dep_00039CE2",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "21 Dep Time Blk Total",
+      "logicalLevels": [
+        {
+          "name": "21 Dep Time Blk Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Dept Time Grp",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5,
+          "primaryColumns": [
+            "logicalColumn:Dep Time Grp"
+          ],
+          "displayColumn": "logicalColumn:Dep Time Grp"
+        },
+        {
+          "name": "21 Dep Time Blk Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 19,
+          "primaryColumns": [
+            "logicalColumn:Dep Time Blk"
+          ],
+          "displayColumn": "logicalColumn:Dep Time Blk",
+          "preferredDrillPath": [
+            "X0 - Airlines.50 Flight.50 Flight #"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "21 Dep Time Blk [branch at level 'Dept Time Grp']",
+          "levels": [ "21 Dep Time Blk Total", "Dept Time Grp", "21 Dep Time Blk Detail" ]
+        }
+      ]
+    }
+  }
+}

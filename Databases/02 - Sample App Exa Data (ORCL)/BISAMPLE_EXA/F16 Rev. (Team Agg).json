@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F16 Rev. (Team Agg)",
+    "description": "ZZZ - Not yet filled\r\n",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_REVENUE_F"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "PROJ_TEACHER",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TEACHER_ACCTID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "TEACHER_TEACH_FOR_AMERICA",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "TEACHER_NY_TEACHING_FELLOW",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "TEACHER_PREFIX",
+        "dataType": "VARCHAR",
+        "length": 15
+      }
+    ]
+  }
+}

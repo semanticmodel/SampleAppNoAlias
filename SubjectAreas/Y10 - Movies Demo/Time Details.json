@@ -1,0 +1,50 @@
+{
+  "presentationTable": {
+    "name": "Time Details",
+    "presentationColumns": [ {
+        "name": "End of Year",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.End of Year"
+      },
+      {
+        "name": "Days in Year",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Days in Year"
+      },
+      {
+        "name": "Quarter Number",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Quarter Number"
+      },
+      {
+        "name": "End of Quarter",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.End of Quarter"
+      },
+      {
+        "name": "Days in Quarter",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Days in Quarter"
+      },
+      {
+        "name": "Month Number",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Month Number"
+      },
+      {
+        "name": "End of Month",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.End of Month"
+      },
+      {
+        "name": "Days in Month",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Days in Month"
+      },
+      {
+        "name": "Day Number in Month",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Day Number in Month"
+      },
+      {
+        "name": "Day Number in Week",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Day Number in Week"
+      },
+      {
+        "name": "Month Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Month Name"
+      }
+    ]
+  }
+}

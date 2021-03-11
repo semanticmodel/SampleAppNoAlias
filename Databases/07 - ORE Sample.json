@@ -1,0 +1,81 @@
+{
+  "database": {
+    "name": "07 - ORE Sample",
+    "databaseType": "Oracle 12c",
+    "description": "This datasource represents actual sales, booking and inventory data.",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Relational Connection",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "Complex Join for dummy logical relationship",
+        "leftTable": "physicalTable:07 - ORE Sample.RANDOMREDDOTS",
+        "rightTable": "physicalTable:07 - ORE Sample.ORE_SCRIPTS",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "MANY_TO_ONE",
+        "joinType": "INNER"
+      },
+      {
+        "name": "PERSPGRAPH_Foreign Key",
+        "leftTable": "physicalTable:07 - ORE Sample.RANDOMREDDOTS",
+        "rightTable": "physicalTable:07 - ORE Sample.PERSPGRAPH",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:07 - ORE Sample.RANDOMREDDOTS.ID",
+            "rightColumn": "physicalColumn:07 - ORE Sample.PERSPGRAPH.id"
+          }
+        ]
+      },
+      {
+        "name": "ORE_GRAPHICS_Foreign Key",
+        "leftTable": "physicalTable:07 - ORE Sample.RANDOMREDDOTS",
+        "rightTable": "physicalTable:07 - ORE Sample.ORE_GRAPHICS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:07 - ORE Sample.RANDOMREDDOTS.ID",
+            "rightColumn": "physicalColumn:07 - ORE Sample.ORE_GRAPHICS.ID"
+          }
+        ]
+      }
+    ]
+  }
+}

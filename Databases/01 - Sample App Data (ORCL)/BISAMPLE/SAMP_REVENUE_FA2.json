@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "SAMP_REVENUE_FA2",
+    "description": "Reveue Fact Aggregate table: Stores the aggregated fact information at Qtr and Product grain.",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_REVENUE_FA2.xml",
+    "physicalColumns": [ {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Revenue: Stores the revenue information as a double."
+      },
+      {
+        "name": "Bill_Qtr_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Bill Quarter Key: Joins to Qtr_Key of Time dimension table (Qtr grain)."
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Units: Stores the units information as an integer."
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Joins Prod_Key of Products dimension table."
+      }
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "presentationTable": {
+    "name": "Destination",
+    "description": "->",
+    "alternateNames": [
+      "Des",
+      "T"
+    ],
+    "presentationColumns": [ {
+        "name": "Dest Region Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Region Name",
+        "alternateNames": [
+          "Dest Region"
+        ]
+      },
+      {
+        "name": "Dest Division Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Division Name",
+        "alternateNames": [
+          "Dest Division"
+        ]
+      },
+      {
+        "name": "Dest US State Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest US State Name",
+        "alternateNames": [
+          "Dest US State"
+        ]
+      },
+      {
+        "name": "Dest City Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest City Name",
+        "alternateNames": [
+          "Dest City"
+        ]
+      },
+      {
+        "name": "Dest Airport",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport"
+      },
+      {
+        "name": "Dest Airport Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport Name",
+        "alternateNames": [
+          "Dest Airport Name#1"
+        ]
+      },
+      {
+        "name": "Dest Airport Lat",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport Lat"
+      },
+      {
+        "name": "Dest Airport Long",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport Long"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Dest Airport",
+        "alternateNames": [
+          "16 Dest Airport Map"
+        ],
+        "sourceLogicalTable": "logicalTable:X0 - Airlines.16 Dest Airport Map",
+        "levels": [ {
+            "name": "All Dest Airports",
+            "alternateNames": [
+              "16 Dest Map Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Map Total"
+          },
+          {
+            "name": "Dest Region",
+            "alternateNames": [
+              "16 Dest Region Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Region Map",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Destination.Dest Region Name"
+          },
+          {
+            "name": "Dest Division",
+            "alternateNames": [
+              "16 Dest Division",
+              "16 Dest Division Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Division Map",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Destination.Dest Division Name"
+          },
+          {
+            "name": "Dest State",
+            "alternateNames": [
+              "16 Dest State Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest State Map",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Destination.Dest US State Name"
+          },
+          {
+            "name": "Dest Airport",
+            "alternateNames": [
+              "16 Dest Airport Map Detail"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Destination.Dest Airport Name"
+          }
+        ]
+      }
+    ]
+  }
+}

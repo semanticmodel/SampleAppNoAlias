@@ -1,0 +1,217 @@
+{
+  "presentationTable": {
+    "name": "Database",
+    "alternateNames": [
+      "DB- V_DATABASE"
+    ],
+    "presentationColumns": [ {
+        "name": "Activation#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Activation#"
+      },
+      {
+        "name": "Archive Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Archive Change#"
+      },
+      {
+        "name": "Archivelog Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Archivelog Change#"
+      },
+      {
+        "name": "Archivelog Compression",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Archivelog Compression"
+      },
+      {
+        "name": "Checkpoint Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Checkpoint Change#"
+      },
+      {
+        "name": "Controlfile Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Change#"
+      },
+      {
+        "name": "Controlfile Converted",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Converted"
+      },
+      {
+        "name": "Controlfile Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Created"
+      },
+      {
+        "name": "Controlfile Sequence#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Sequence#"
+      },
+      {
+        "name": "Controlfile Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Time"
+      },
+      {
+        "name": "Controlfile Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Controlfile Type"
+      },
+      {
+        "name": "Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Created"
+      },
+      {
+        "name": "Current Scn",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Current Scn"
+      },
+      {
+        "name": "Database Role",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Database Role"
+      },
+      {
+        "name": "Dataguard Broker",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Dataguard Broker"
+      },
+      {
+        "name": "Db Unique Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Db Unique Name"
+      },
+      {
+        "name": "Dbid",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Dbid"
+      },
+      {
+        "name": "Flashback On",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Flashback On"
+      },
+      {
+        "name": "Force Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Force Logging"
+      },
+      {
+        "name": "Fs Failover Current Target",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Fs Failover Current Target"
+      },
+      {
+        "name": "Fs Failover Observer Host",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Fs Failover Observer Host"
+      },
+      {
+        "name": "Fs Failover Observer Present",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Fs Failover Observer Present"
+      },
+      {
+        "name": "Fs Failover Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Fs Failover Status"
+      },
+      {
+        "name": "Fs Failover Threshold",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Fs Failover Threshold"
+      },
+      {
+        "name": "Guard Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Guard Status"
+      },
+      {
+        "name": "Last Open Incarnation#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Last Open Incarnation#"
+      },
+      {
+        "name": "Log Mode",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Log Mode"
+      },
+      {
+        "name": "Min Required Capture Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Min Required Capture Change#"
+      },
+      {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Name"
+      },
+      {
+        "name": "Open Mode",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Open Mode"
+      },
+      {
+        "name": "Open Resetlogs",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Open Resetlogs"
+      },
+      {
+        "name": "Platform Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Platform Id"
+      },
+      {
+        "name": "Platform Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Platform Name"
+      },
+      {
+        "name": "Primary Db Unique Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Primary Db Unique Name"
+      },
+      {
+        "name": "Prior Resetlogs Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Prior Resetlogs Change#"
+      },
+      {
+        "name": "Prior Resetlogs Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Prior Resetlogs Time"
+      },
+      {
+        "name": "Protection Level",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Protection Level"
+      },
+      {
+        "name": "Protection Mode",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Protection Mode"
+      },
+      {
+        "name": "Recovery Target Incarnation#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Recovery Target Incarnation#"
+      },
+      {
+        "name": "Remote Archive",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Remote Archive"
+      },
+      {
+        "name": "Resetlogs Change#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Resetlogs Change#"
+      },
+      {
+        "name": "Resetlogs Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Resetlogs Time"
+      },
+      {
+        "name": "Standby Became Primary Scn",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Standby Became Primary Scn"
+      },
+      {
+        "name": "Supplemental Log Data All",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data All"
+      },
+      {
+        "name": "Supplemental Log Data Fk",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data Fk"
+      },
+      {
+        "name": "Supplemental Log Data Min",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data Min"
+      },
+      {
+        "name": "Supplemental Log Data Pk",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data Pk"
+      },
+      {
+        "name": "Supplemental Log Data Pl",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data Pl"
+      },
+      {
+        "name": "Supplemental Log Data Ui",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Supplemental Log Data Ui"
+      },
+      {
+        "name": "Switchover#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Switchover#"
+      },
+      {
+        "name": "Switchover Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Switchover Status"
+      },
+      {
+        "name": "Version Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_DATABASE.Version Time"
+      }
+    ]
+  }
+}

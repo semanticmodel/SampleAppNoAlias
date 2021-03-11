@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "36 CARRIER REGION",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.CARRIER_REGION",
+    "caching": {
+      "enable": true
+    }
+  }
+}

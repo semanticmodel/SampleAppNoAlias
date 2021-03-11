@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "GV_$FILE_OPTIMIZED_HISTOGRAM",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDTIM_MICRO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

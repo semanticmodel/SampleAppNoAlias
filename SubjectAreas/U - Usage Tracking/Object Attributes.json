@@ -1,0 +1,62 @@
+{
+  "presentationTable": {
+    "name": "Object Attributes",
+    "alternateNames": [
+      "All Common Attributes",
+      "All Generic Attributes",
+      "Analysis Attributes#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Description",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Description"
+      },
+      {
+        "name": "Folder",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Folder"
+      },
+      {
+        "name": "Object Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Object Name"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Owner"
+      },
+      {
+        "name": "Object Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Object Type"
+      },
+      {
+        "name": "Signature",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Signature"
+      },
+      {
+        "name": "Created Time",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Created Time"
+      },
+      {
+        "name": "Last Modified Time",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Last Modified Time"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Object Type Hier",
+        "alternateNames": [
+          "WS All Objects Dim"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WS Objects Attributes",
+        "levels": [ {
+            "name": "Object Type",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Object Type",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Object Attributes.Object Type"
+          },
+          {
+            "name": "Signature",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Signature",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Object Attributes.Signature"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,93 @@
+{
+  "logicalTable": {
+    "name": "Complaint Classes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Classification",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TEXT_CLASSES_DESC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC.CLASSIFICATION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "TEXT_CLASSES_NODESC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_NODESC.CLASSIFICATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Complaint Desc Class highlighted",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TEXT_CLASSES_DESC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC.COMPLAINT_DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recordid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TEXT_CLASSES_DESC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC.RECORDID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "TEXT_CLASSES_NODESC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_NODESC.RECORDID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "TEXT_CLASSES_DESC",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC"
+          ]
+        }
+      },
+      {
+        "name": "TEXT_CLASSES_NODESC",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_NODESC"
+          ]
+        }
+      }
+    ]
+  }
+}

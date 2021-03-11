@@ -1,0 +1,208 @@
+{
+  "logicalTable": {
+    "name": "X SampleApp Index Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Dashboard Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.DSHBD_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Page Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.DSHBD_PG_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Page Url",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.URL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Excluded",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.EXCLUDED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Not In WS",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.NOT_IN_WS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text Lvl0",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL0"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text Lvl1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text Lvl2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text Lvl3",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Visible Link",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'<a href=' || %1 || 'target=\"_blank\">' || %2 || '</a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.X SampleApp Index Facts.Dashboard Page Url",
+              "logicalColumn:10 - Usage Tracking.X SampleApp Index Facts.Text Lvl0"
+            ]
+          }
+        }
+      },
+      {
+        "name": "# of Links",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AA_DBPAGES_INDEX",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.URL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "AA_DBPAGES_INDEX",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX"
+          ]
+        }
+      }
+    ]
+  }
+}

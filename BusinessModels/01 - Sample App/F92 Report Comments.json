@@ -1,0 +1,196 @@
+{
+  "logicalTable": {
+    "name": "F92 Report Comments",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Commentary",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENTARY"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day key",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.DAY_KEY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Empl key",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.EMPL_KEY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lob key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.LOB_KEY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Cumulated Comments",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Comments",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "case when \r\n %1 =0 \r\nthen \r\n%2\r\n\r\nwhen \r\n %1 is null\r\nthen \r\n%2 end",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Comment id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F92 Report Comments",
+              "physicalExpression": {
+                "expressionTemplate": "case when \r\n %1 =0 \r\nthen \r\n%2\r\n\r\nwhen \r\n %1 is null\r\nthen \r\n%2 end",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.COMMENT_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "F92 Report Comments",
+        "tableMapping": {
+          "allowUnmappedTables": true,
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).F92 Report Comments_Foreign Key"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).F92 Report Comments_FKey#2"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

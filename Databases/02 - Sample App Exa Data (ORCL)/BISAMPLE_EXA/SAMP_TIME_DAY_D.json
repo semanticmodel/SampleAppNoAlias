@@ -1,0 +1,210 @@
+{
+  "physicalTable": {
+    "name": "SAMP_TIME_DAY_D",
+    "description": "Time dimension table at day grain. Stores one record for each day.",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_TIME_DAY_D.xml",
+    "physicalColumns": [ {
+        "name": "Fscl_Week",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Week : Stores the value 1, 2, 3.. upto 53"
+      },
+      {
+        "name": "Cal_Year",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Year: Stores value in the format YYYY"
+      },
+      {
+        "name": "Holiday",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true,
+        "description": "Holiday : Flag to indicate if a day is holiday or not.\r\nPossible vlaues are 0 or 1."
+      },
+      {
+        "name": "Day_Of_Week",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Day of Week: Stores the values 1, 2, 3.. upto 7."
+      },
+      {
+        "name": "Days_in_Mth",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Days in Month : Stores value 28, 29, 30 or 31."
+      },
+      {
+        "name": "Day_Of_Month",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Day of Month: Stores the values 1, 2, 3.. upto 31."
+      },
+      {
+        "name": "Days_in_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Days in Quarter : Stores value 90, 91 or 92"
+      },
+      {
+        "name": "Fscl_Year",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Year : Stores the fiscal year in the format YYYY"
+      },
+      {
+        "name": "Julian_Day_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Day Number : Stores the day number in the Julian Calendar format.\r\nEg:- 40570, 40571 and so on."
+      },
+      {
+        "name": "Beg_of_Mth_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Beginning of Mth Wid: Stores the value in the format YYYYMMDD.\r\nFor the day key 20100202, Beg_of_Qtr_Wid will be 20100201."
+      },
+      {
+        "name": "Per_Name_Half",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true,
+        "description": "Period Name Half: Stores the Half year information in the format YYYY HYHalfYearNumber.\r\nEg:- 2009 HY1"
+      },
+      {
+        "name": "Julian_Qtr_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Quarter Number : Stores the quarter number in the Julian Calendar format. \r\nEg:- 151, 152 and so on."
+      },
+      {
+        "name": "Julian_Week_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Week Number : Stores the week number in the Julian Calendar format. \r\nEg:- 2180, 2181 and so on."
+      },
+      {
+        "name": "Cal_Half",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Half: Stores value 1 or 2"
+      },
+      {
+        "name": "Fscl_Half",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Half : Stores the value 1 or 2"
+      },
+      {
+        "name": "Per_Name_Year",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true,
+        "description": "Period Name Year: Stores the year information in the format YYYY.\r\nEg:- 2009"
+      },
+      {
+        "name": "Cal_Week",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Week: Stores value 1,2,3 ..upto 53."
+      },
+      {
+        "name": "Per_Name_Week",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true,
+        "description": "Period Name Week: Stores the week information in the format YYYY Week Weeknumber.\r\nEg:- 2009 Week 1"
+      },
+      {
+        "name": "Per_Name_Qtr",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true,
+        "description": "Period Name Quarter: Stores the quarter information in the format YYYY QQuarterNumber.\r\nEg:- 2009 Q1"
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Quarter : Stores the value 1, 2, 3 or 4"
+      },
+      {
+        "name": "Day_Of_Year",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Day of Year: Stores the values 1, 2, 3.. upto 366."
+      },
+      {
+        "name": "Day_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Day Key: Surrogate key of the table. Stores the day information in the format YYYYMMDD.\r\nEg:- 20090101"
+      },
+      {
+        "name": "Cal_Month",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Month: Stores value 1,2,3 ..upto 12"
+      },
+      {
+        "name": "Loaded",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Loaded: Flag to indicate if data is loaded for the specific month. \r\nPossible values are 1 or 0."
+      },
+      {
+        "name": "Cal_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Quarter: Stores value 1,2,3 or 4"
+      },
+      {
+        "name": "Calendar_Date",
+        "dataType": "DATE",
+        "nullable": true,
+        "description": "Calendar Date: Stores the information in date format .\r\n"
+      },
+      {
+        "name": "Fscl_Month",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Month : Stores the value 1, 2, 3.. upto 12."
+      },
+      {
+        "name": "Beg_of_Week_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Beginning of Week Wid: Stores the value in the format YYYYMMDD.\r\nFor the day key 20100202, Beg_of_Week_Wid will be 20100131."
+      },
+      {
+        "name": "Per_Name_Month",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true,
+        "description": "Period Name Month: Stores the year information in the format YYYY / MM.\r\nEg:- 2009 / 01"
+      },
+      {
+        "name": "Julian_Month_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Month Number : Stores the month number in the Julian Calendar format. \r\nEg:- 500, 501 and so on."
+      },
+      {
+        "name": "Beg_of_Qtr_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Beginning of Qtr Wid: Stores the value in the format YYYYMMDD.\r\nFor the day key 20100202, Beg_of_Qtr_Wid will be 20100101."
+      }
+    ]
+  }
+}

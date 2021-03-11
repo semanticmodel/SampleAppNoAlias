@@ -1,0 +1,31 @@
+{
+  "physicalTable": {
+    "name": "SA_20_Arr_00039CE9",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Arr_Delay_00039B9B",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Arr_delay_00039B9C",
+        "dataType": "INT"
+      },
+      {
+        "name": "Arr_Del_00039CE9SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

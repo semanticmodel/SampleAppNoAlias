@@ -1,0 +1,74 @@
+{
+  "physicalTable": {
+    "name": "TABLE_PRIVILEGES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "CREATED",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "ALTER_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "GRANTEE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "INDEX_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "GRANTOR",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "UPDATE_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DELETE_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "REFERENCES_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SELECT_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "INSERT_PRIV",
+        "dataType": "VARCHAR",
+        "length": 1
+      }
+    ]
+  }
+}

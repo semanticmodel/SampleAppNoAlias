@@ -1,0 +1,85 @@
+{
+  "logicalTable": {
+    "name": "D12 Orders Line Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Order ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Line Item ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.LINE_ITEM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ORDERS ITEMS DETAILS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ORDER_ITEMS_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H12 Orders Line Attributes.Orders Line Details"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Orders Line Details",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Order ID",
+            "logicalColumn:Line Item ID"
+          ],
+          "displayColumn": "logicalColumn:Order ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H12 Orders Line Attributes",
+          "levels": [ "Total", "Orders Line Details" ]
+        }
+      ]
+    }
+  }
+}

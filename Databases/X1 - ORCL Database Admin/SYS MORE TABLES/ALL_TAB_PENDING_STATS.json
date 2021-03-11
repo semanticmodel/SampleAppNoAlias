@@ -1,0 +1,54 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_PENDING_STATS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUBPARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "AVG_ROW_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "SQL Time",
+    "alternateNames": [
+      "Physical SQL#1"
+    ],
+    "presentationColumns": [ {
+        "name": "End Dt",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.End Dt"
+      },
+      {
+        "name": "End Hour Min",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.End Hour Min"
+      },
+      {
+        "name": "End Ts",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.End Ts"
+      },
+      {
+        "name": "Start Dt",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Start Dt"
+      },
+      {
+        "name": "Start Hour Min",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Start Hour Min"
+      },
+      {
+        "name": "Start Ts",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Start Ts"
+      }
+    ]
+  }
+}

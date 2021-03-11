@@ -1,0 +1,65 @@
+{
+  "presentationTable": {
+    "name": "Session Metrics",
+    "alternateNames": [
+      "SES- GV_$SESSMETRIC"
+    ],
+    "presentationColumns": [ {
+        "name": "Begin Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Begin Time"
+      },
+      {
+        "name": "Cpu",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Cpu"
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.End Time"
+      },
+      {
+        "name": "Hard Parses",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Hard Parses"
+      },
+      {
+        "name": "Inst Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Inst Id"
+      },
+      {
+        "name": "Intsize Csec",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Intsize Csec"
+      },
+      {
+        "name": "Logical Read Pct",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Logical Read Pct"
+      },
+      {
+        "name": "Logical Reads",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Logical Reads"
+      },
+      {
+        "name": "Pga Memory",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Pga Memory"
+      },
+      {
+        "name": "Physical Read Pct",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Physical Read Pct"
+      },
+      {
+        "name": "Physical Reads",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Physical Reads"
+      },
+      {
+        "name": "Serial Num",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Serial Num"
+      },
+      {
+        "name": "Session Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Session Id"
+      },
+      {
+        "name": "Soft Parses",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSMETRIC.Soft Parses"
+      }
+    ]
+  }
+}

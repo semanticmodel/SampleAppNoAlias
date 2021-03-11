@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Per Capita Metrics",
+    "presentationColumns": [ {
+        "name": "Avg Per Capita Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Per Capita Income"
+      },
+      {
+        "name": "Avg Per Capita Savings",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Per Capita Savings"
+      },
+      {
+        "name": "Avg Per Capita Expenditure",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Per Capita Expenditure"
+      }
+    ]
+  }
+}

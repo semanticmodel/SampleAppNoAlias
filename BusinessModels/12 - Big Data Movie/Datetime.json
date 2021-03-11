@@ -1,0 +1,392 @@
+{
+  "logicalTable": {
+    "name": "Datetime",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_IMP",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC.time"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_HIVE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.time"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Date_Id",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.TIME_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.DATEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DAY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day No in Month",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DAY_NUMBER_IN_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day No in Week",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DAY_NUMBER_IN_WEEK"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Week",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.WEEK"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Week000470BA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.MONTH_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Month00046864"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.MONTH_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Month_Name00046865"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month No",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.MONTH_NUMBER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Month_No00046866"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.QUARTER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Quarter00046868"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TIMES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.YEAR_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Year0004686C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "CK_Week000471A0",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.CK_Week000471A0"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "TIMES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_IMP",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_HIVE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_BDSQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC"
+          ]
+        }
+      },
+      {
+        "name": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Week000471A0",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:12 - Big Data Movie.H0 Time.Week"
+        ]
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total Time",
+      "logicalLevels": [
+        {
+          "name": "Total Time",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ],
+          "displayColumn": "logicalColumn:Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Quarter"
+          ],
+          "displayColumn": "logicalColumn:Quarter"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Month"
+          ],
+          "displayColumn": "logicalColumn:Month"
+        },
+        {
+          "name": "Week",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:CK_Week000471A0"
+          ],
+          "displayColumn": "logicalColumn:CK_Week000471A0",
+          "chronologicalKey": "logicalColumn:CK_Week000471A0"
+        },
+        {
+          "name": "Day",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Date_Id"
+          ],
+          "displayColumn": "logicalColumn:Date_Id",
+          "chronologicalKey": "logicalColumn:Date_Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H0 Time [branch at level 'Week']",
+          "levels": [ "Total Time", "Year", "Quarter", "Month", "Week", "Day" ]
+        }
+      ]
+    }
+  }
+}

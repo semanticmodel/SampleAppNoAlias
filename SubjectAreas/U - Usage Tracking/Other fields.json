@@ -1,0 +1,89 @@
+{
+  "presentationTable": {
+    "name": "Other fields",
+    "alternateNames": [
+      "BI Publisher Audit#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Authentication Method",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Authentication Method"
+      },
+      {
+        "name": "Component Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Component Id"
+      },
+      {
+        "name": "Component Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Component Name"
+      },
+      {
+        "name": "Context Fields",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Context Fields"
+      },
+      {
+        "name": "Downstream Component Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Downstream Component Id"
+      },
+      {
+        "name": "Ecid",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Ecid"
+      },
+      {
+        "name": "Home Instance",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Home Instance"
+      },
+      {
+        "name": "Hosting Client Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Hosting Client Id"
+      },
+      {
+        "name": "Instance Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Instance Id"
+      },
+      {
+        "name": "Module Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Module Id"
+      },
+      {
+        "name": "Oracle Home",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Oracle Home"
+      },
+      {
+        "name": "Org Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Org Id"
+      },
+      {
+        "name": "Process Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Process Id"
+      },
+      {
+        "name": "Rid",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Rid"
+      },
+      {
+        "name": "Roles",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Roles"
+      },
+      {
+        "name": "Secondary Session Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Secondary Session Id"
+      },
+      {
+        "name": "Session Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Session Id"
+      },
+      {
+        "name": "Target",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Target"
+      },
+      {
+        "name": "Transaction Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Transaction Id"
+      },
+      {
+        "name": "Upstream Component Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Upstream Component Id"
+      }
+    ]
+  }
+}

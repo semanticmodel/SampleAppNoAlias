@@ -1,0 +1,41 @@
+{
+  "logicalTable": {
+    "name": "BIP Audit Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Counts",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "IAU_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE"
+          ]
+        }
+      }
+    ]
+  }
+}

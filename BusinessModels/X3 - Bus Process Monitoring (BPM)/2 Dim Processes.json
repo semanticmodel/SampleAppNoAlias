@@ -1,0 +1,280 @@
+{
+  "logicalTable": {
+    "name": "2 Dim Processes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSNAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Revision",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.REVISION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "SCA Label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.SCALABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Status",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Undeploy Date",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "2 Dim Processes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.UNDEPLOYDATE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "2 Dim Processes",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).2 Processes Hier.Process Detail"
+        ]
+      },
+      {
+        "name": "9 Facts Taskperf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).2 Processes Hier.Process Detail"
+        ]
+      },
+      {
+        "name": "9 Facts ProcessPerf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf"
+          ]
+        }
+      },
+      {
+        "name": "9 Facts ActiveTasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Processes",
+      "logicalLevels": [
+        {
+          "name": "All Processes",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Process Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Process Type"
+          ],
+          "displayColumn": "logicalColumn:Process Type"
+        },
+        {
+          "name": "Process Status",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Status"
+          ],
+          "displayColumn": "logicalColumn:Status"
+        },
+        {
+          "name": "Process Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Process Id"
+          ],
+          "displayColumn": "logicalColumn:Process Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "2 Processes Hier [branch at level 'Process Status']",
+          "levels": [ "All Processes", "Process Type", "Process Status", "Process Detail" ]
+        }
+      ]
+    }
+  }
+}

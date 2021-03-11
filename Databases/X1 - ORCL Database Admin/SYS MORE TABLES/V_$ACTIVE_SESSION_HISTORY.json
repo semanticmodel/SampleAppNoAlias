@@ -1,0 +1,473 @@
+{
+  "physicalTable": {
+    "name": "V_$ACTIVE_SESSION_HISTORY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TM_DELTA_DB_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_CLASS",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SQL_OPNAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "ECID",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "IN_SEQUENCE_LOAD",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "DELTA_WRITE_IO_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EVENT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "IN_CONNECTION_MGMT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CURRENT_ROW#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SESSION_TYPE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "TOP_LEVEL_CALL_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "P1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TEMP_SPACE_ALLOCATED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_PLAN_OPTIONS",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "IS_AWR_SAMPLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "P1TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "P2TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "IN_BIND",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SESSION_SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "QC_INSTANCE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REPLAY_OVERHEAD",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "DELTA_WRITE_IO_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEQ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLIENT_ID",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "PLSQL_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLE_TIME",
+        "dataType": "TIMESTAMP"
+      },
+      {
+        "name": "SESSION_STATE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DELTA_READ_IO_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_PLSQL_COMPILATION",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "BLOCKING_SESSION_SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_CLASS_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOP_LEVEL_SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "PGA_ALLOCATED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REMOTE_INSTANCE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_EXEC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_PLSQL_EXECUTION",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "TOP_LEVEL_SQL_OPCODE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_PLAN_LINE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TM_DELTA_CPU_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOP_LEVEL_CALL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MODULE",
+        "dataType": "VARCHAR",
+        "length": 48
+      },
+      {
+        "name": "DELTA_READ_IO_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PROGRAM",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "FORCE_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_OPCODE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_SQL_EXECUTION",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "TIME_MODEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CAPTURE_OVERHEAD",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "DELTA_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKING_HANGCHAIN_INFO",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "BLOCKING_INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKING_SESSION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "SAMPLE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_ENTRY_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IS_SQLID_CURRENT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CURRENT_OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DELTA_INTERCONNECT_IO_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONSUMER_GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVICE_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "P2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CURRENT_BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MACHINE",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "QC_SESSION_SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ACTION",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "EVENT#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "XID",
+        "dataType": "VARBINARY",
+        "length": 8
+      },
+      {
+        "name": "SQL_PLAN_OPERATION",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SQL_CHILD_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EVENT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TM_DELTA_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_PLSQL_RPC",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SQL_EXEC_START",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "P3TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "IS_REPLAYED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SESSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIME_WAITED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_JAVA_EXECUTION",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PLSQL_ENTRY_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKING_SESSION_STATUS",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "IN_HARD_PARSE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CURRENT_FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IS_CAPTURED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PORT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "P3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "QC_SESSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IN_CURSOR_CLOSE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "IN_PARSE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SQL_PLAN_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

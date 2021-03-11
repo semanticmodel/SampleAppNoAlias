@@ -1,0 +1,21 @@
+{
+  "initBlock": {
+    "name": "ODM_CLUST_MOD",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select max(model_name) from ODM_CLUSTER_DETAILS_V"
+      }
+    ],
+    "variables": [ {
+        "name": "ODM_CLUST_MOD"
+      }
+    ]
+  }
+}

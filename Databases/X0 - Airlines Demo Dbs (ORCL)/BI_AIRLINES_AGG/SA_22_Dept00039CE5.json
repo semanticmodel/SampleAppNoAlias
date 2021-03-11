@@ -1,0 +1,31 @@
+{
+  "physicalTable": {
+    "name": "SA_22_Dept00039CE5",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Dept_Delay00039BA3",
+        "dataType": "INT"
+      },
+      {
+        "name": "Dept_Delay00039BA2",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dept_De_00039CE5SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

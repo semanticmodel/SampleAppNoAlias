@@ -1,0 +1,122 @@
+{
+  "logicalTable": {
+    "name": "02 Time Week Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Day of Week",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Of_Week"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_02_Day_00039D15",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Name",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 = 1 THEN 'Sunday' WHEN %1 = 2 THEN 'Monday' WHEN %1 = 3 THEN 'Tuesday' WHEN %1 = 4 THEN 'Wednesday' WHEN %1 = 5 THEN 'Thursday' WHEN %1 = 6 THEN 'Friday' ELSE 'Saturday' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.02 Time Week Attributes.Day of Week"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "40 TIME DAY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.02 Week Attrib.02 Day Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_02_Day_00039D15",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.02 Week Attrib.02 Day of Week"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "02 Week Attrib Total",
+      "logicalLevels": [
+        {
+          "name": "02 Week Attrib Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "02 Day of Week",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 7,
+          "primaryColumns": [
+            "logicalColumn:Day of Week"
+          ],
+          "displayColumn": "logicalColumn:Day of Week"
+        },
+        {
+          "name": "02 Day Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1584,
+          "primaryColumns": [
+            "logicalColumn:Day Key"
+          ],
+          "displayColumn": "logicalColumn:Day Key"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "02 Week Attrib [branch at level '02 Day of Week']",
+          "levels": [ "02 Week Attrib Total", "02 Day of Week", "02 Day Detail" ]
+        }
+      ]
+    }
+  }
+}

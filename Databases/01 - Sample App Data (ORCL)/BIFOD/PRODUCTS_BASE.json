@@ -1,0 +1,180 @@
+{
+  "physicalTable": {
+    "name": "PRODUCTS_BASE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ATTRIBUTE6",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "COST_PRICE",
+        "dataType": "DOUBLE",
+        "length": 8
+      },
+      {
+        "name": "ATTRIBUTE8",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE7",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE15",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE9",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE14",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "CATEGORY_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE3",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE4",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "PRODUCT_STATUS",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "LIST_PRICE",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE2",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "SUPPLIER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PRODUCT_NAME",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "MIN_PRICE",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "PRODUCT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE_CATEGORY",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE11",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE5",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE12",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "EXTERNAL_URL",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "WARRANTY_PERIOD_MONTHS",
+        "dataType": "INT",
+        "length": 2
+      },
+      {
+        "name": "ATTRIBUTE13",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "SHIPPING_CLASS_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE1",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ATTRIBUTE10",
+        "dataType": "VARCHAR",
+        "length": 150
+      }
+    ]
+  }
+}

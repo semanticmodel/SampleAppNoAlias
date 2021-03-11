@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "TBS_SPACE_USAGE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TSN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MAXBLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

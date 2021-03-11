@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Temp Free Space",
+    "alternateNames": [
+      "Temp Free Sapce",
+      "TS- DBA_TEMP_FREE_SPACE"
+    ],
+    "presentationColumns": [ {
+        "name": "Allocated Space",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FREE_SPACE.Allocated Space"
+      },
+      {
+        "name": "Free Space",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FREE_SPACE.Free Space"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FREE_SPACE.Tablespace Name"
+      },
+      {
+        "name": "Tablespace Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FREE_SPACE.Tablespace Size"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "physicalTable": {
+    "name": "V$XS_SESSION_ATTRIBUTE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "EVENT_HANDLER",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "LWSID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "ACLOID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "NAMESPACE",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      }
+    ]
+  }
+}

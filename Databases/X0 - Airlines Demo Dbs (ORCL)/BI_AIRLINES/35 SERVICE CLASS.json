@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "35 SERVICE CLASS",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.SERVICE_CLASS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

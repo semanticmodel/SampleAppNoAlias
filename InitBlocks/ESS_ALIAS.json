@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "ESS_ALIAS",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT 'Default' from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "ESS_ALIAS",
+        "value": "'Default'"
+      }
+    ]
+  }
+}

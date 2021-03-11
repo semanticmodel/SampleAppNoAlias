@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SQLTEXT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13,
+        "nullable": true
+      },
+      {
+        "name": "SQL_TEXT",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

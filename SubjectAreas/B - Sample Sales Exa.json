@@ -1,0 +1,111 @@
+{
+  "subjectArea": {
+    "name": "B - Sample Sales Exa",
+    "sourceBusinessModel": "businessModel:01 - Sample App Exa",
+    "implicitFactColumn": "logicalColumn:01 - Sample App Exa.F0 Sales Base Measures.1- Revenue",
+    "description": "SampleApp using Summary Advisor Agg tables.",
+    "tableOrder": [
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Time",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.More Time Objects"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Alternate Calendars"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Products",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Double Column Products"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Products (Ragged Hier)"
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Offices",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.More Office Objects"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Office Regions"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Office Geo Codes"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Sales Person"
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Customers",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.More Customer Objects"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Cust Regions"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Cust Geo Codes"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Orders",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Ship To Regions"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Orders Dates"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Ship To Geo Codes"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Calculated Attributes"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Base Facts",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Counts"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:B - Sample Sales Exa.Calculated Facts",
+        "children": [
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Simple Calculations"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Time Series"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Trailing Measures"
+          },
+          {
+            "name": "presentationTable:B - Sample Sales Exa.Level Based Measures"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

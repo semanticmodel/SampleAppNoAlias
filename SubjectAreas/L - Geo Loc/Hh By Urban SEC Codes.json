@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Hh By Urban SEC Codes",
+    "presentationColumns": [ {
+        "name": "Total Urban Sec B Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Urban Sec B Households"
+      },
+      {
+        "name": "Total Urban Sec C Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Urban Sec C Households"
+      },
+      {
+        "name": "Total Urban Sec A Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Urban Sec A Households",
+        "alternateNames": [
+          "Total Urban Seca Households"
+        ]
+      },
+      {
+        "name": "Total Urban Sec D And E Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Urban Sec D And E Households"
+      }
+    ]
+  }
+}

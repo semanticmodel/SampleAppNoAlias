@@ -1,0 +1,57 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SERVICE_STAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STAT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVICE_NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STAT_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

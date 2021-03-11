@@ -1,0 +1,319 @@
+{
+  "logicalTable": {
+    "name": "D08 Order Ship to Adress",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Country id",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Created by",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).CREATED_BY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Creation date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).CREATION_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last update date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).LAST_UPDATE_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last updated by",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).LAST_UPDATED_BY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).LATITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).LONGITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object version id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).OBJECT_VERSION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Postal code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).POSTAL_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).ADDRESS1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).ADDRESS2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).ADDRESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country Name (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Order Ship To)",
+              "physicalExpression": {
+                "expressionTemplate": "lookup( sparse\r\n%1, \r\n%2,\r\n%2,\r\n'FR')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUNTRY_CODES.COUNTRY_NAME",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ADDRESSES (Order Ship To)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H08 Order Ship to Adress.Ship to Adress Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:Country Name (Lookup Phys)"
+          ],
+          "displayColumn": "logicalColumn:Country Name (Lookup Phys)"
+        },
+        {
+          "name": "City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:City"
+          ],
+          "displayColumn": "logicalColumn:City"
+        },
+        {
+          "name": "Ship to Adress Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 100,
+          "primaryColumns": [
+            "logicalColumn:Address id"
+          ],
+          "displayColumn": "logicalColumn:Address id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H08 Order Ship to Adress [branch at level 'City']",
+          "levels": [ "Total", "Country", "City", "Ship to Adress Detail" ]
+        }
+      ]
+    }
+  }
+}

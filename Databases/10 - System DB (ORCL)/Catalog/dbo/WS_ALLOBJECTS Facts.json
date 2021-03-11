@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WS_ALLOBJECTS Facts",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS"
+  }
+}

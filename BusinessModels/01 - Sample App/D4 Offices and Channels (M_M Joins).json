@@ -1,0 +1,544 @@
+{
+  "logicalTable": {
+    "name": "D4 Offices and Channels (M:M Joins)",
+    "description": "ZZZ - Not yet filled",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "N1  Office",
+        "description": "Help : \r\nStores the Market description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Office_Dsc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N1k  Office Key",
+        "description": "Help : \r\nMarket Key is an integer that uniquely identifies each record in the Market dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N2  Department",
+        "description": "Help : \r\nStores the market area description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Department"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Department"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Department"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N3k  Org_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Org_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Org_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Org_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N2k  Dept_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Dept_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Dept_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Dept_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N3  Organization",
+        "description": "Help : \r\nStores the market district description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Organization"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Organization"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Organization"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N4  Company",
+        "description": "Help : \r\nStores the market region description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Company"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N4k  Company Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices (Direct to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Company_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N6  Channel Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D41 Channels (Revenue).Chnl_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS4 Channels (Direct to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N6k  Channel Key",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev).Chnl_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS4 Channels (Direct to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas).Chnl_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N7  Channel Attribute 1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D41 Channels (Revenue).Chnl_Attribute_1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS4 Channels (Direct to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Attribute_1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Attribute_1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "N8  Chnl-Office Weight",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Channels (Bridged to Revenue)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev).Chnl_Weighting"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS5 Offices  (Bridged to Quotas)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas).Chnl_Weighting"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Offices (Direct to Revenue)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H4 Offices and Channels (M:M).Off and Chnl Detail"
+        ]
+      },
+      {
+        "name": "LTS3 Channels (Bridged to Revenue)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D41 Channels (Revenue)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D43 Chnls Offcs Bridge (Revenue)_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D53 Teams Membership Bridge (Revenue Facts)_FKey#1"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H4 Offices and Channels (M:M).Channel Detail"
+        ]
+      },
+      {
+        "name": "LTS4 Channels (Direct to Quotas)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H4 Offices and Channels (M:M).Channel Detail"
+        ]
+      },
+      {
+        "name": "LTS5 Offices  (Bridged to Quotas)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D63 Channels Custs Bridge (Costs)_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D61 Sales Teams Membership (Bridge Table)_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H4 Offices and Channels (M:M).Channel Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Off and Chnl Total",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Off and Chnl Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "preferredDrillPath": [
+            "01 - Sample App.H4 Offices and Channels (M:M).Off and Chnl Company"
+          ]
+        },
+        {
+          "name": "Off and Chnl Company",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:N4  Company"
+          ],
+          "displayColumn": "logicalColumn:N4  Company",
+          "preferredDrillPath": [
+            "01 - Sample App.H4 Offices and Channels (M:M).Off and Chnl Detail"
+          ]
+        },
+        {
+          "name": "Off and Chnl Organization",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:N3  Organization"
+          ],
+          "displayColumn": "logicalColumn:N3  Organization"
+        },
+        {
+          "name": "Off and Chnl Department",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 11,
+          "primaryColumns": [
+            "logicalColumn:N2  Department"
+          ],
+          "displayColumn": "logicalColumn:N2  Department"
+        },
+        {
+          "name": "Off and Chnl Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 30,
+          "primaryColumns": [
+            "logicalColumn:N1  Office",
+            "logicalColumn:N1k  Office Key"
+          ],
+          "displayColumn": "logicalColumn:N1  Office",
+          "preferredDrillPath": [
+            "01 - Sample App.H5 Sales Rep.Sales Reps Detail"
+          ]
+        },
+        {
+          "name": "Channel Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 35,
+          "primaryColumns": [
+            "logicalColumn:N6k  Channel Key",
+            "logicalColumn:N1k  Office Key"
+          ],
+          "displayColumn": "logicalColumn:N6k  Channel Key"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H4 Offices and Channels (M:M) [branch at level 'Off and Chnl Detail']",
+          "description": "Offices and Channels Dimension:\r\nType - Ragged\r\nDrill Path - Off and Chnl Company->Off and Chnl Organization->Off and Chnl Department->Off and Chnl Detail",
+          "levels": [ "Off and Chnl Total", "Off and Chnl Company", "Off and Chnl Organization", "Off and Chnl Department", "Off and Chnl Detail", "Channel Detail" ]
+        }
+      ]
+    }
+  }
+}

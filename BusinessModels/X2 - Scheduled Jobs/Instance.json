@@ -1,0 +1,135 @@
+{
+  "logicalTable": {
+    "name": "Instance",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Begin Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.BEGIN_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.END_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Execution Time",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.EXECUTION_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Exit Code",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.EXIT_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Instance Id",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Job Id",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.JOB_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance.STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Instance",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance"
+          ]
+        }
+      }
+    ]
+  }
+}

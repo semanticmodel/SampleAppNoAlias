@@ -1,0 +1,76 @@
+{
+  "businessModel": {
+    "name": "11 - OAA Integration",
+    "joins": [      {
+        "name": "11 - OAA Integration:Relationship_2004:2805931400164358",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Cluster Attribute",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Cluster",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2814881401096526",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - GLM Model Details",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - GLM Model",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2815251401096783",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Model Global Details",
+        "rightTable": "logicalTable:11 - OAA Integration.Dim - GLM Model Details",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2810631400175598",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Model",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Association Rule",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2795571399449129",
+        "leftTable": "logicalTable:11 - OAA Integration.Fact - Association Rule",
+        "rightTable": "logicalTable:11 - OAA Integration.Dim - Associantion Rule",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2810661400175602",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Model",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Cluster",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2815221401096774",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Model Global Details",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Model Global Details",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2795631399449129",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Association Rule Consequent",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Association Rule",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2795601399449129",
+        "leftTable": "logicalTable:11 - OAA Integration.Fact - Association Rule",
+        "rightTable": "logicalTable:11 - OAA Integration.Dim - Association Rule Antecedent",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "11 - OAA Integration:Relationship_2004:2805901400164350",
+        "leftTable": "logicalTable:11 - OAA Integration.Dim - Clusters",
+        "rightTable": "logicalTable:11 - OAA Integration.Fact - Cluster",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

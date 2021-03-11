@@ -1,0 +1,175 @@
+{
+  "logicalTable": {
+    "name": "D06 Product Categories",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Category ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category Locked Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_LOCKED_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parent Category ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.PARENT_CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Representative Product ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.REPRESENTATIVE_PRODUCT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cat Description (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No data for this record',\r\n %2 ,\r\n'FR')\r\n\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CATEGORY_TRANSLATIONS.CATEGORY_DESCRIPTION",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cat Name (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No data for this record',\r\n %2 ,\r\n'FR')\r\n\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CATEGORY_TRANSLATIONS.CATEGORY_NAME",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category ID (from Product)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PRODUCT_CATEGORIES_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).CATEGORY_ID"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H06 Product Cat (PCH).Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H06 Product Cat (PCH)",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Category ID"
+          ],
+          "displayColumn": "logicalColumn:Category ID"
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "PRODUCT_CATEGORIES_BASE",
+          "table": "BIEE_CATEGORY_CLOSURE",
+          "memberKey": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_CATEGORY_CLOSURE.MEMBER_KEY",
+          "parentKey": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_CATEGORY_CLOSURE.ANCESTOR_KEY",
+          "distance": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_CATEGORY_CLOSURE.DISTANCE",
+          "leafNodeIdentifier": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_CATEGORY_CLOSURE.IS_LEAF"
+        }
+      ]
+    }
+  }
+}

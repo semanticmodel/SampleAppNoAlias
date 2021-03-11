@@ -1,0 +1,84 @@
+{
+  "logicalTable": {
+    "name": "L1 Lookups FX",
+    "type": "LOOKUP",
+    "logicalColumns": [ {
+        "name": "From_Curr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS FX Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L1 Currency FX Lookup.From_Curr"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fx_Rate",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS FX Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L1 Currency FX Lookup.Fx_Rate"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Qtr_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS FX Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L1 Currency FX Lookup.Qtr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "To_Curr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS FX Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L1 Currency FX Lookup.To_Curr"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS FX Lookups",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.L1 Currency FX Lookup"
+          ]
+        }
+      }
+    ]
+  }
+}

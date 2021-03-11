@@ -1,0 +1,64 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_TABLESPACE_STAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SEGMENT_SPACE_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "EXTENT_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "TSNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "CONTENTS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "IS_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 5
+      }
+    ]
+  }
+}

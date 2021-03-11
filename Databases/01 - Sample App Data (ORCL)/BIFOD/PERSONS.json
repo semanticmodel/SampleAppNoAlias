@@ -1,0 +1,164 @@
+{
+  "physicalTable": {
+    "name": "PERSONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CHILDREN_UNDER_18",
+        "dataType": "INT",
+        "length": 2
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CONTACT_METHOD_CODE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "MEMBERSHIP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "REGISTERED_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CONTACT_BY_AFFILLIATES_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "PERSON_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "CONFIRMED_EMAIL",
+        "dataType": "VARCHAR",
+        "length": 25
+      },
+      {
+        "name": "PROVISIONED_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "DATE_OF_BIRTH",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PRINCIPAL_NAME",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREDIT_LIMIT",
+        "dataType": "DOUBLE",
+        "length": 9
+      },
+      {
+        "name": "FIRST_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PHONE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "PRIMARY_ADDRESS_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "APPROXIMATE_INCOME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MARITAL_STATUS_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SUPPLIER_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MOBILE_PHONE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "PERSON_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TITLE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CONTACTABLE_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "GENDER",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "EMAIL",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "4 Dim Roles",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V"
+  }
+}

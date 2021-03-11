@@ -1,0 +1,42 @@
+{
+  "presentationTable": {
+    "name": "All Aws",
+    "alternateNames": [
+      "ALL_AWS",
+      "OBJ- ALL_AWS"
+    ],
+    "presentationColumns": [ {
+        "name": "Aw Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Aw Name"
+      },
+      {
+        "name": "Aw Number",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Aw Number"
+      },
+      {
+        "name": "Aw Version",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Aw Version"
+      },
+      {
+        "name": "Frozen",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Frozen"
+      },
+      {
+        "name": "Generations",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Generations"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Owner"
+      },
+      {
+        "name": "Pagespaces",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.Pagespaces"
+      },
+      {
+        "name": "# Of Aws",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_AWS.# Of Aws"
+      }
+    ]
+  }
+}

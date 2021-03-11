@@ -1,0 +1,42 @@
+{
+  "physicalTable": {
+    "name": "WRH$_SQLTEXT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_TEXT",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "REF_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

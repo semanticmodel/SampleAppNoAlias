@@ -1,0 +1,154 @@
+{
+  "physicalTable": {
+    "name": "SA_Offices00004AE2",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "D52_Count00003A5A",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "D50_Regio00003AE1",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "D4k_Compa00003B4A",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "D3k_Org_K00003BD6",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "D65_Longi00003D1C",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "D4_Compan00003D2E",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "D59_Estab00003D6B",
+        "dataType": "VARCHAR",
+        "length": 240
+      },
+      {
+        "name": "D64_Latit00003DDC",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "C62_Ctry_00003E06",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true
+      },
+      {
+        "name": "D57_Addre00003E4A",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "D51_Area00003E79",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "D61_Iso_C00003F76",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true
+      },
+      {
+        "name": "D54_State00004039",
+        "dataType": "VARCHAR",
+        "length": 6,
+        "nullable": true
+      },
+      {
+        "name": "D55_City00004085",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "C63_Ctry_000040C7",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true
+      },
+      {
+        "name": "D1_Office000040E7",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "D8_Office000040F2",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "D53_State00004177",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "D1k_Offic00004295",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "D2_Depart000042F5",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "D67_Geo_P00004370",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "D58_Addre000043DA",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "D56_Posta00004538",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "D3_Organi000046E6",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "D2k_Dept_000047CB",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Offices_00004AE2SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

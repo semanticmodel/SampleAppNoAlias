@@ -1,0 +1,122 @@
+{
+  "logicalTable": {
+    "name": "D6 Customers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "All Segments",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Customer Segment",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Customer Segments.All Segments"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Segments - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Customer Segment",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Customer Segments.All Segments - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4k Customer Segment Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Customer Segment",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Customer Segments.Customer Segment"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4  Customer Segment",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Customer Segment",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Customer Segments.Customer Segment - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Customer Segment",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Customer Segments"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H6 Customers.Customer Segment"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Customer Segment - All Segments",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Segments - Desc"
+          ],
+          "displayColumn": "logicalColumn:All Segments - Desc"
+        },
+        {
+          "name": "Customer Segment",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C4  Customer Segment"
+          ],
+          "displayColumn": "logicalColumn:C4  Customer Segment"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H6 Customers [branch at level 'Customer Segment - All Segments']",
+          "levels": [ "Total", "Customer Segment - All Segments", "Customer Segment" ]
+        }
+      ]
+    }
+  }
+}

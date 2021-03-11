@@ -1,0 +1,583 @@
+{
+  "logicalTable": {
+    "name": "GL All Accounts",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Book",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 3",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 4",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 5",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen5 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 6",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen6 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 7",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen7 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 8",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen8 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 9",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen9,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen9 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen9,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Lvl 10",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen10,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen10 Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen10,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Asset",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Asset"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Liability",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Liability"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Equity",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Equity"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Saved Assumption",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Saved Assumption"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Saved Assumption HSP_UDF",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Saved Assumption,HSP_UDF"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - ExchangeRate",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - ExchangeRate"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Revenue",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Expense",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Expense"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Expense HSP_UDF",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Expense,HSP_UDF"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Accounts - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Accounts - Default"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hierarchical",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Gen2,Accounts",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Gen2,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Book"
+          ],
+          "displayColumn": "logicalColumn:Book"
+        },
+        {
+          "name": "Gen3,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Lvl 3"
+          ],
+          "displayColumn": "logicalColumn:Account Lvl 3"
+        },
+        {
+          "name": "Gen4,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen4 Accounts - Member Key"
+          ]
+        },
+        {
+          "name": "Gen5,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen5 Accounts - Member Key"
+          ]
+        },
+        {
+          "name": "Gen6,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Lvl 6"
+          ],
+          "displayColumn": "logicalColumn:Account Lvl 6"
+        },
+        {
+          "name": "Gen7,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen7 Accounts - Member Key"
+          ]
+        },
+        {
+          "name": "Gen8,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen8 Accounts - Member Key"
+          ]
+        },
+        {
+          "name": "Gen9,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen9 Accounts - Member Key"
+          ]
+        },
+        {
+          "name": "Gen10,Accounts",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Lvl 10"
+          ],
+          "displayColumn": "logicalColumn:Account Lvl 10"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "All Accounts [branch at level 'Gen9,Accounts']",
+          "levels": [ "Gen2,Accounts", "Gen3,Accounts", "Gen4,Accounts", "Gen5,Accounts", "Gen6,Accounts", "Gen7,Accounts", "Gen8,Accounts", "Gen9,Accounts", "Gen10,Accounts" ]
+        }
+      ]
+    }
+  }
+}

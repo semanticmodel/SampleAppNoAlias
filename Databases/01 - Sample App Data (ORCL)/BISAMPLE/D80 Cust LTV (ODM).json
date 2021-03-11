@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D80 Cust LTV (ODM)",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_SAMP_CUSTOMERS_LTV"
+  }
+}

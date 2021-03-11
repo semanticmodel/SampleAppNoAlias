@@ -1,0 +1,34 @@
+{
+  "physicalTable": {
+    "name": "V$XS_SESSION_ROLE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "UUID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "ROLEID",
+        "dataType": "DOUBLE",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "LWSID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      }
+    ]
+  }
+}

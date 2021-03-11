@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "V_$SEGSTAT_NAME",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SAMPLED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "STATISTIC#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

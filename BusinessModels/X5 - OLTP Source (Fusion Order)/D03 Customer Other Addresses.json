@@ -1,0 +1,330 @@
+{
+  "logicalTable": {
+    "name": "D03 Customer Other Addresses",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Address1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).ADDRESS1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).ADDRESS2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).ADDRESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country ID",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).LATITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).LONGITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).POSTAL_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address Usages ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.ADDRESS_USAGES_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Associated Owner ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Expired Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.EXPIRED_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.OWNER_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Usage Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.USAGE_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Usage Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2,\r\n'FR',\r\n'USAGE_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Usage Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Country Name (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Cust Non Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "lookup( sparse\r\n%1, \r\n%2,\r\n%2,\r\n'FR')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUNTRY_CODES.COUNTRY_NAME",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ADDRESSES (Cust Non Primary)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ASSOCIATED_OWNER_ID"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ADDRESS_ID"
+            }
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:City"
+          ],
+          "displayColumn": "logicalColumn:City"
+        },
+        {
+          "name": "Cust Other Addresses",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Address ID"
+          ],
+          "displayColumn": "logicalColumn:Address ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H03 Cust Other Addresses [branch at level 'City']",
+          "levels": [ "Total", "City", "Cust Other Addresses" ]
+        }
+      ]
+    }
+  }
+}

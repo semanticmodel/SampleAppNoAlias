@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Memberships",
+    "presentationColumns": [ {
+        "name": "Membership Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Lookup"
+      },
+      {
+        "name": "Membership Description (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Description (Lookup Phys)"
+      },
+      {
+        "name": "Membership Name (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Name (Lookup Phys)"
+      },
+      {
+        "name": "Membership Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Type Code"
+      }
+    ]
+  }
+}

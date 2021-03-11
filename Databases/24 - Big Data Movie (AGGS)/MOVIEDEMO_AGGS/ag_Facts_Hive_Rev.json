@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ag_Facts_Hive_Rev",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "hints": "opt_param('_index_join_enabled','false')+",
+    "physicalColumns": [ {
+        "name": "Month00046864",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "Genre_ID00045FB5",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Customer_C00045FC8",
+        "dataType": "VARCHAR",
+        "length": 400
+      },
+      {
+        "name": "Week000470BA",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "Genre_Name00045FBB",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "Price00046788",
+        "dataType": "DOUBLE",
+        "length": 20
+      }
+    ]
+  }
+}

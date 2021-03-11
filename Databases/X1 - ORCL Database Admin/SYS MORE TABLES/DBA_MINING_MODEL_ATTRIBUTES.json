@@ -1,0 +1,63 @@
+{
+  "physicalTable": {
+    "name": "DBA_MINING_MODEL_ATTRIBUTES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DATA_SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USAGE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "DATA_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ATTRIBUTE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "TARGET",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DATA_TYPE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "DATA_PRECISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

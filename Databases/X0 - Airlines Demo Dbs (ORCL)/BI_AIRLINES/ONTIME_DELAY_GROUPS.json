@@ -1,0 +1,19 @@
+{
+  "physicalTable": {
+    "name": "ONTIME_DELAY_GROUPS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "CODE",
+        "dataType": "INT"
+      }
+    ]
+  }
+}

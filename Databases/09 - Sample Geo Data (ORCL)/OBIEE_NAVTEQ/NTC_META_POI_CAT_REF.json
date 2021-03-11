@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "NTC_META_POI_CAT_REF",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CAT_ID",
+        "dataType": "DOUBLE",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 240
+      }
+    ]
+  }
+}

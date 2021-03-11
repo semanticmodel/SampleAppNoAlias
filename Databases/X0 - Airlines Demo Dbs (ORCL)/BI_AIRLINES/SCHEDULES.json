@@ -1,0 +1,67 @@
+{
+  "physicalTable": {
+    "name": "SCHEDULES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "SCHEDULE_ID",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ORIGIN",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "DEPART_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "AIRLINE",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "WAIT_AT_AIRPORT",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ARR_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "FLIGHT_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "ANALYSIS_FN",
+        "dataType": "VARCHAR",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "FLIGHT_TIME",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "DESTINATION",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "HOP_NUMBER",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

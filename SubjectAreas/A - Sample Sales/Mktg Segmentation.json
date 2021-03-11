@@ -1,0 +1,67 @@
+{
+  "presentationTable": {
+    "name": "Mktg Segmentation",
+    "localization": {
+      "localizationKey": "Mktg Segmentation",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Customer_Objects)"
+    },
+    "description": "This folder contains additional Customer attribute like Key attributes, Date attributes and so on.",
+    "alternateNames": [
+      "More Customer Objects#1"
+    ],
+    "presentationColumns": [ {
+        "name": "X20  Cust Key (Segmentation)",
+        "localization": {
+          "localizationKey": "X20  Cust Key (Segmentation)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Customer_Objects_X20__Cust_Key_(Segmentation))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.X20  Cust Key (Segmentation)",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see hyperlink Marketing), and returns the customer key value"
+      },
+      {
+        "name": "X01 Cache GUID",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M1 Segment Cache Customers.X01 Cache GUID"
+      },
+      {
+        "name": "X02 Cache Qualified ID",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M1 Segment Cache Customers.X02 Cache Qualified ID"
+      },
+      {
+        "name": "X18 Created by",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X18 Created by"
+      },
+      {
+        "name": "X19 Date time",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X19 Date time"
+      },
+      {
+        "name": "X10 SR Hd GUID",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X10 SR Hd GUID"
+      },
+      {
+        "name": "X15 Segment path",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X15 Segment path"
+      },
+      {
+        "name": "X12 SR Hd custom label",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X12 SR Hd custom label"
+      },
+      {
+        "name": "X14 SR Hds count",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X14 SR Hds count"
+      },
+      {
+        "name": "X09 Target level",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M02 Mktg Res Set Headers Customers.X09 Target level"
+      },
+      {
+        "name": "SR Guid",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M03 Mktg Saved Res Set Customers.X05 SR Guid"
+      },
+      {
+        "name": "SR Target level ID",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.M03 Mktg Saved Res Set Customers.SR Target level ID"
+      }
+    ]
+  }
+}

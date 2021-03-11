@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "SA_25_Canc00039D16",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Cancelled_00039C5B",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Cancell_00039D16SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

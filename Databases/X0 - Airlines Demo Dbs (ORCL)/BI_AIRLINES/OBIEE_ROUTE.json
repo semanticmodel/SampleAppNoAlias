@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "OBIEE_ROUTE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DEST",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true
+      },
+      {
+        "name": "ORIGIN",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 250,
+        "nullable": true
+      },
+      {
+        "name": "ROUTE",
+        "dataType": "VARCHAR",
+        "length": 8
+      }
+    ]
+  }
+}

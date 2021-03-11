@@ -1,0 +1,120 @@
+{
+  "presentationTable": {
+    "name": "Balance Sheet",
+    "description": "->",
+    "presentationColumns": [ {
+        "name": "BS Lvl 3",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 3",
+        "alternateNames": [
+          "BS Account Level 3",
+          "BS Level 3"
+        ]
+      },
+      {
+        "name": "BS Lvl 4",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 4",
+        "alternateNames": [
+          "BS Account Level 4",
+          "BS Level 4"
+        ]
+      },
+      {
+        "name": "BS Lvl 5",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 5",
+        "alternateNames": [
+          "BS Account Level 5",
+          "BS Level 5"
+        ]
+      },
+      {
+        "name": "BS Lvl 6",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 6",
+        "alternateNames": [
+          "BS Account Level 6",
+          "BS Level 6"
+        ]
+      },
+      {
+        "name": "BS Lvl 7",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 7",
+        "alternateNames": [
+          "BS Account Level 7",
+          "BS Level 7"
+        ]
+      },
+      {
+        "name": "BS Lvl 8",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 8",
+        "alternateNames": [
+          "BS Account Level 8",
+          "BS Level 8"
+        ]
+      },
+      {
+        "name": "BS Lvl 9",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 9",
+        "alternateNames": [
+          "BS Account Level 9",
+          "BS Level 9"
+        ]
+      },
+      {
+        "name": "BS Lvl 10",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Balance Sheet.BS Lvl 10",
+        "alternateNames": [
+          "BS Account Level 10",
+          "BS Level 10"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Balance Sheet",
+        "alternateNames": [
+          "Accnt Balance Sheet"
+        ],
+        "sourceLogicalTable": "logicalTable:03 - Essbase GL.GL Balance Sheet",
+        "levels": [ {
+            "name": "BS Acct Level 3",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 3",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 3"
+          },
+          {
+            "name": "BS Acct Level 4",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 4",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 4"
+          },
+          {
+            "name": "BS Acct Level 5",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 5",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 5"
+          },
+          {
+            "name": "BS Acct Level 6",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 6",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 6"
+          },
+          {
+            "name": "BS Acct Level 7",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 7",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 7"
+          },
+          {
+            "name": "BS Acct Level 8",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 8",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 8"
+          },
+          {
+            "name": "BS Acct Level 9",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.BS Acct Level 9",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 9"
+          },
+          {
+            "name": "Balance Sheet Detail",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL Balance Sheet.Balance Sheet Detail",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Balance Sheet.BS Lvl 10"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SERVICE_NAME",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SERVICE_NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

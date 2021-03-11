@@ -1,0 +1,23 @@
+{
+  "physicalTable": {
+    "name": "DATABASE_PROPERTIES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PROPERTY_VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PROPERTY_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,95 @@
+{
+  "logicalTable": {
+    "name": "F0 Base Measures",
+    "description": "This logical table contains metrics like Revenue, Billed Qty, Booked Amt and Booked Qty with different types of aggregation like Sum, First on Time , Last on Time and Count Distinct. \r\nAll the metrics in this table are physically mapped to columns in the Revenue fact table.\r\n",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "1 ==== Revenue Base Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "1- Revenue",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F10 Billed Rev. Aggregate (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2- Billed Quantity",
+        "description": "Help :\r\nBilled Quantity data. Sources from Units column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F10 Billed Rev. Aggregate (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "description": "Help :\r\nBilled Unit Price is computed as Revenue divided by Billed Quantity",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 / %2",
+            "expressionObjects": [
+              "logicalColumn:02 - Flat XML files Sample.F0 Base Measures.1- Revenue",
+              "logicalColumn:02 - Flat XML files Sample.F0 Base Measures.2- Billed Quantity"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "F10 Billed Rev. Aggregate (XML Source)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source)"
+          ]
+        }
+      }
+    ]
+  }
+}

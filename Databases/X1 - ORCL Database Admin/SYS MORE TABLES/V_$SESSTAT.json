@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "V_$SESSTAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "STATISTIC#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

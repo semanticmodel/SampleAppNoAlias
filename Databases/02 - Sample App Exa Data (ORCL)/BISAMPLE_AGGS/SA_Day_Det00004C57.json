@@ -1,0 +1,177 @@
+{
+  "physicalTable": {
+    "name": "SA_Day_Det00004C57",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "T52_Julian00003AA0",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T28_Holida00003B97",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "T21_Beg_of00003C9D",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T02_Per_Na00003D05",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "T15_Day_Of00003D71",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T51_Julian00003D99",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T41_Fscl_W00003EDB",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T27_Days_i00003F21",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T03_Per_Na00003FE7",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true
+      },
+      {
+        "name": "T31_Cal_We00004093",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T23_Beg_of00004111",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T01_Per_Na00004187",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "T04_Per_Na000041BD",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "T11_Day_Of000042A8",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T50_Julian000042D7",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T22_Beg_of0000430B",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T53_Julian0000436E",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "LTS4_Targe0000449F",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "T44_Fscl_H000044B8",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "T42_Fscl_M00004514",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "T26_Days_i00004516",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T35_Cal_Ye00004561",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T45_Fscl_Y000045AF",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "T34_Cal_Ha00004693",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T43_Fscl_Q000046BF",
+        "dataType": "VARCHAR",
+        "length": 14,
+        "nullable": true
+      },
+      {
+        "name": "T12_Day_Of0000483E",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T05_Per_Na000048D9",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true
+      },
+      {
+        "name": "T32_Cal_Mo000049A4",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T06_Row_Wi000049D7",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "T33_Cal_Qt000049E3",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Day_Det_00004C57SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

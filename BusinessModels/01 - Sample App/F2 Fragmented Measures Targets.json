@@ -1,0 +1,258 @@
+{
+  "logicalTable": {
+    "name": "F2 Fragmented Measures Targets",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Non Fragmented Measures ---------------------------------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "5- Target Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Targets ORCL (Not Fragmented)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "6- Target Quantity",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Targets ORCL (Not Fragmented)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "5d  Target Rev  (Sum All Non Target Dims)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Targets ORCL (Not Fragmented)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fragmented Measures ------------------------------------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "5a  Target Rev  (Source A)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2A Targets ORCL (Off<16 Fragment)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "5b  Target Rev  (Source B)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2B Targets XML (Off>15 Fragment)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "5c  Total Target Rev  (Fragmented)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2A Targets ORCL (Off<16 Fragment)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Revenue"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2B Targets XML (Off>15 Fragment)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Targets ORCL (Not Fragmented)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H0 Time.Month",
+          "logicalLevel:01 - Sample App.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail",
+          "logicalLevel:01 - Sample App.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS2A Targets ORCL (Off<16 Fragment)",
+        "description": "\r\n",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets"
+          ]
+        },
+        "dataFilter": {
+          "expressionTemplate": "%1 <= 16",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Office_Key"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H0 Time.Month",
+          "logicalLevel:01 - Sample App.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail",
+          "logicalLevel:01 - Sample App.H1 Products.Products Detail"
+        ],
+        "dataFragmentation": {
+          "expressionTemplate": "%1 <= 16",
+          "expressionObjects": [
+            "logicalColumn:01 - Sample App.D3 Offices.D1k  Office Key"
+          ]
+        },
+        "combineWithOtherFragments": true
+      },
+      {
+        "name": "LTS2B Targets XML (Off>15 Fragment)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source)"
+          ]
+        },
+        "dataFilter": {
+          "expressionTemplate": "%1  > 15",
+          "expressionObjects": [
+            "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Office_Key"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H0 Time.Month",
+          "logicalLevel:01 - Sample App.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail",
+          "logicalLevel:01 - Sample App.H1 Products.Products Detail"
+        ],
+        "dataFragmentation": {
+          "expressionTemplate": "%1  > 15",
+          "expressionObjects": [
+            "logicalColumn:01 - Sample App.D3 Offices.D1k  Office Key"
+          ]
+        },
+        "combineWithOtherFragments": true
+      }
+    ]
+  }
+}

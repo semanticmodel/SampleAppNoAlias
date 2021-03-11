@@ -1,0 +1,437 @@
+{
+  "logicalTable": {
+    "name": "F0 Revenue Base Measures",
+    "description": "This logical table contains metrics like Revenue, Billed Qty, Booked Amt and Booked Qty with different types of aggregation like Sum, First on Time , Last on Time and Count Distinct. \r\nAll the metrics in this table are physically mapped to columns in the Revenue fact table.\r\n",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "1a- Revenue (Orcl Db Tables Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "1b- Revenue (Essbase Cube Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS02 Essbase Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "1d- Revenue (Orcl Db Cube Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS03 Orcl OLAP Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "1f- Revenue (XML File Only)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS06  Flat Xml File Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "==== Federated Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "2a- Qty (Orcl Db Tables Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2b- Qty (Essbase Cube Federated)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS02 Essbase Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS06  Flat Xml File Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2d- Qty (Orcl Db Cubes Federated)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Orcl OLAP Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS06  Flat Xml File Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2f- Qty (XML File Federated)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS06  Flat Xml File Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "==== Calculated Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "20a - Unit Price (Orcl Db/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(\r\n%1 \r\n\r\nas double)/\r\n %2 \r\n\r\n",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1a- Revenue (Orcl Db Tables Only)",
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2a- Qty (Orcl Db Tables Only)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "20b - Unit Price (Essb Cube/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(\r\n%1 \r\nas double)/\r\n %2 \r\n",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1b- Revenue (Essbase Cube Only)",
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2a- Qty (Orcl Db Tables Only)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "20d - Unit Price (Orcl Cube/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(\r\n%1 \r\nas double)/\r\n %2 ",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1d- Revenue (Orcl Db Cube Only)",
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2a- Qty (Orcl Db Tables Only)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "20f - Unit Price (XML File/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(\r\n%1  \r\nas double)/\r\n %2 ",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1f- Revenue (XML File Only)",
+              "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2a- Qty (Orcl Db Tables Only)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Source Database Info",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Orcl Db Source",
+              "physicalExpression": {
+                "expressionTemplate": "'Oracle Database'"
+              }
+            },
+            {
+              "logicalTableSource": "LTS02 Essbase Source",
+              "physicalExpression": {
+                "expressionTemplate": "'Essbase Cube'"
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Orcl OLAP Source",
+              "physicalExpression": {
+                "expressionTemplate": "'Oracle Olap Cube'"
+              }
+            },
+            {
+              "logicalTableSource": "LTS06  Flat Xml File Source",
+              "physicalExpression": {
+                "expressionTemplate": "'Flat File XML'"
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS01 Orcl Db Source",
+        "priority": 2,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H6 Customers.Customers Detail",
+          "logicalLevel:06 - Federated Sources.H0 Time.Day Detail",
+          "logicalLevel:06 - Federated Sources.H3 Offices.Offices Detail",
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS02 Essbase Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H6 Customers.Customers Detail",
+          "logicalLevel:06 - Federated Sources.H0 Time.Quarter",
+          "logicalLevel:06 - Federated Sources.H3 Offices.Offices Total",
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS03 Orcl OLAP Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Quarter",
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS06  Flat Xml File Source",
+        "priority": 1,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Month",
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      }
+    ]
+  }
+}

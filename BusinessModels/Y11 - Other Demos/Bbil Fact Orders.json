@@ -1,0 +1,301 @@
+{
+  "logicalTable": {
+    "name": "Bbil Fact Orders",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "# Of Billtocust Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.BILLTOCUST_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Comments",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.COMMENTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Debit Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.DEBIT_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Endcust Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.ENDCUST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ext Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.EXT_AMOUNT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ext Cost",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.EXT_COST"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Line Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.LINE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Order Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.ORDER_NUMBER"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Part Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.PART_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Po#",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.PO#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Std Unit Cost",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.STD_UNIT_COST"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unit Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.UNIT_PRICE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Units",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fact Orders",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.UNITS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Fact Orders",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS"
+          ]
+        }
+      }
+    ]
+  }
+}

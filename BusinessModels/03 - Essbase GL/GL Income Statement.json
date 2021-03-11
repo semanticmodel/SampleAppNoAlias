@@ -1,0 +1,602 @@
+{
+  "logicalTable": {
+    "name": "GL Income Statement",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "PandL Lvl 3",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen3,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen3,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 4",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen4,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 5",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen5,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen5,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen5 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 6",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen6,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen6,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen6 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 7",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen7,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen7,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen7 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 8",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen8,Accounts - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen8,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen8 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 9",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen9 PandL - Member Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen9,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen9,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen9 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen9,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "PandL Lvl 10",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen10 PandL - Member Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen10,Accounts"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen10,Accounts"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen10 PandL - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen10,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen10,Accounts - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen10,Accounts - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen5,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen6,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen7,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen8,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen9,Accounts - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen9,Accounts - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hierarchical",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Acct Income Statement.Income Statement Detail"
+        ]
+      },
+      {
+        "name": "LTS2 GL Flattened",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Income Statement Total",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Income Statement Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Account Level 3",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen3 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 4",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 4"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 4"
+        },
+        {
+          "name": "Account Level 5",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen5 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 6",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen6 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 7",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 7"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 7"
+        },
+        {
+          "name": "Account Level 8",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 8"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 8"
+        },
+        {
+          "name": "Account Level 9",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 9"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 9"
+        },
+        {
+          "name": "Income Statement Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 10"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 10"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Acct Income Statement [branch at level 'Account Level 9']",
+          "levels": [ "Income Statement Total", "Account Level 3", "Account Level 4", "Account Level 5", "Account Level 6", "Account Level 7", "Account Level 8", "Account Level 9", "Income Statement Detail" ]
+        }
+      ]
+    }
+  }
+}

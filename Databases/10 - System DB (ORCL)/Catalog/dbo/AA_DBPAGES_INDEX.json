@@ -1,0 +1,59 @@
+{
+  "physicalTable": {
+    "name": "AA_DBPAGES_INDEX",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "TEXT_LVL2",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "TEXT_LVL1",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "NOT_IN_WS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "URL",
+        "dataType": "VARCHAR",
+        "length": 500
+      },
+      {
+        "name": "TEXT_LVL0_SEQ",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "DSHBD_PG_NAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "TEXT_LVL0",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "EXCLUDED",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TEXT_LVL3",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "DSHBD_NAME",
+        "dataType": "VARCHAR",
+        "length": 150
+      }
+    ]
+  }
+}

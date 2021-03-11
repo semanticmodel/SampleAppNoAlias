@@ -1,0 +1,59 @@
+{
+  "presentationTable": {
+    "name": "Association Rule Antecedent",
+    "alternateNames": [
+      "Dim - Association Rule Antecedent"
+    ],
+    "presentationColumns": [ {
+        "name": "Antecedent Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Attribute Name",
+        "alternateNames": [
+          "Attribute Name"
+        ]
+      },
+      {
+        "name": "Antecedent",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent",
+        "alternateNames": [
+          "Antecedent Value",
+          "Attribute Subname"
+        ]
+      },
+      {
+        "name": "Antecedent Conditional Operator",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Conditional Operator",
+        "alternateNames": [
+          "Conditional Operator"
+        ]
+      },
+      {
+        "name": "Antecedent Attribute Num Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Attribute Num Value",
+        "alternateNames": [
+          "Attribute Num Value"
+        ]
+      },
+      {
+        "name": "Antecedent Attribute Str Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Attribute Str Value",
+        "alternateNames": [
+          "Attribute Str Value"
+        ]
+      },
+      {
+        "name": "Antecedent Confidence",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Confidence",
+        "alternateNames": [
+          "Attribute Confidence"
+        ]
+      },
+      {
+        "name": "Antecedent Support",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Antecedent.Antecedent Support",
+        "alternateNames": [
+          "Attribute Support"
+        ]
+      }
+    ]
+  }
+}

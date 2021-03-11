@@ -1,0 +1,152 @@
+{
+  "logicalTable": {
+    "name": "Bbil Products",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Business Unit",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.BUSINESS_UNIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Part",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PART"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Part Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PART_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pkg",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PKG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Family",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PRODUCT_FAMILY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Line",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PRODUCT_LINE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Spd",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.SPD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Temp",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.TEMP"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Products",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS"
+          ]
+        }
+      }
+    ]
+  }
+}

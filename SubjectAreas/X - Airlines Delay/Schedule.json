@@ -1,0 +1,103 @@
+{
+  "presentationTable": {
+    "name": "Schedule",
+    "alternateNames": [
+      "S",
+      "Sch"
+    ],
+    "presentationColumns": [ {
+        "name": "Dep Time !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Dep Time !",
+        "alternateNames": [
+          "Dep Time"
+        ]
+      },
+      {
+        "name": "Arr Time !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Arr Time !",
+        "alternateNames": [
+          "Arr Time"
+        ]
+      },
+      {
+        "name": "Theoretic Arr Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Theoretic Arr Time"
+      },
+      {
+        "name": "Wheels Off !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Wheels Off !",
+        "alternateNames": [
+          "Wheels Off"
+        ]
+      },
+      {
+        "name": "Wheels On !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Wheels On !",
+        "alternateNames": [
+          "Wheels On"
+        ]
+      },
+      {
+        "name": "Div Reached Dest",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Div Reached Dest"
+      },
+      {
+        "name": "Arr Time Blk",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.23 Arr Time Blk.Arr Time Blk"
+      },
+      {
+        "name": "Dep Time Grp",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.21 Dep Time Blk.Dep Time Grp"
+      },
+      {
+        "name": "Dep Time Blk",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.21 Dep Time Blk.Dep Time Blk"
+      },
+      {
+        "name": "Theoretic Dept Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Theoretic Dept Time"
+      },
+      {
+        "name": "Non Aggd Levels ----------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Arr Delay -------------------------------"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Dep Time Hier",
+        "alternateNames": [
+          "21 Dep Time Blk"
+        ],
+        "sourceLogicalTable": "logicalTable:X0 - Airlines.21 Dep Time Blk",
+        "levels": [ {
+            "name": "Total",
+            "alternateNames": [
+              "21 Dep Time Blk Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Total"
+          },
+          {
+            "name": "Dept Time Group",
+            "alternateNames": [
+              "Dept Time Grp"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.21 Dep Time Blk.Dept Time Grp",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Schedule.Dep Time Grp"
+          },
+          {
+            "name": "Dep Time Block",
+            "alternateNames": [
+              "21 Dep Time Blk Detail",
+              "21 Dep Time Block"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Detail",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Schedule.Dep Time Blk"
+          }
+        ]
+      }
+    ]
+  }
+}

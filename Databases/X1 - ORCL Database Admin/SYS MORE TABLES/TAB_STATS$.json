@@ -1,0 +1,114 @@
+{
+  "physicalTable": {
+    "name": "TAB_STATS$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "AVGSPC_FLB",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CACHEDBLK",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLKCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CACHEHIT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHNCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVGSPC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ANALYZETIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LOGICALREAD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVGRLN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLESIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EMPCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLBCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

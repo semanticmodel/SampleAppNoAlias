@@ -1,0 +1,62 @@
+{
+  "physicalTable": {
+    "name": "V$SEGMENT_STATISTICS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "STATISTIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "STATISTIC#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUBOBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

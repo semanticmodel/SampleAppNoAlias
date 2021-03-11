@@ -1,0 +1,21 @@
+{
+  "physicalTable": {
+    "name": "GENRE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GENRE_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

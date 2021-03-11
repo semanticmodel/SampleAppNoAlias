@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "D96 Model Global Details",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_GLOBAL_DETAILS_V",
+    "caching": {
+      "enable": true
+    }
+  }
+}

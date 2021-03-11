@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Facts (Impala)",
+    "presentationColumns": [ {
+        "name": "Count of Movies",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Count of Movies"
+      },
+      {
+        "name": "Count of Activities",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Count of Activities"
+      },
+      {
+        "name": "Count of Customers",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Count of Customers"
+      },
+      {
+        "name": "Price",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Price"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Recommended"
+      },
+      {
+        "name": "Rating",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Rating"
+      },
+      {
+        "name": "Recommend Flag",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Impala).Recommend Flag"
+      }
+    ]
+  }
+}

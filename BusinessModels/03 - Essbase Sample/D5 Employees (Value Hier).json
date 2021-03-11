@@ -1,0 +1,162 @@
+{
+  "logicalTable": {
+    "name": "D5 Employees (Value Hier)",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "E1  Sales Rep Name",
+        "dataType": "VARCHAR",
+        "sortBy": "E1s  Sales Rep Name Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Employee Names"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Employee Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E1s  Sales Rep Name Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Employee Names -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Employee Name - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E0  Sales Rep Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Employee Names - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Employee Name - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E8  Manager Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Employees Parent Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Employees Parent Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E1",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H5 Employees.Detail"
+        ]
+      },
+      {
+        "name": "Essb Cube E2",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H5 Employees.Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H5 Employees",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 39,
+          "primaryColumns": [
+            "logicalColumn:E0  Sales Rep Number"
+          ]
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "Essb Cube E1"
+        },
+        {
+          "logicalTableSource": "Essb Cube E2"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "businessModel": {
+    "name": "10 - Usage Tracking",
+    "joins": [      {
+        "name": "Relationship_2004:2303161337687039",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Navigation Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2308221337786651",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query Users",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Phys SQL Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2446761341613947",
+        "leftTable": "logicalTable:10 - Usage Tracking.WC Exec Measures",
+        "rightTable": "logicalTable:10 - Usage Tracking.WC Exec Attributes",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2306311337764882",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query Time",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Phys SQL Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2303191337687044",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query Time",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Navigation Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2495531342225302",
+        "leftTable": "logicalTable:10 - Usage Tracking.WR Source Object",
+        "rightTable": "logicalTable:10 - Usage Tracking.WR Search Results",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1920841310651142",
+        "leftTable": "logicalTable:10 - Usage Tracking.BIP Audit",
+        "rightTable": "logicalTable:10 - Usage Tracking.BIP Audit Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2496791342331903",
+        "leftTable": "logicalTable:10 - Usage Tracking.WR Search Criteria",
+        "rightTable": "logicalTable:10 - Usage Tracking.WR Search Results",
+        "joinType": "INNER",
+        "cardinality": "ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2447181341613947",
+        "leftTable": "logicalTable:10 - Usage Tracking.WC Syntax Measures",
+        "rightTable": "logicalTable:10 - Usage Tracking.WC Syntax Attributes",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1935841318508631",
+        "leftTable": "logicalTable:10 - Usage Tracking.WS Objects Attributes",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT L Query Facts",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2303221337687049",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query Users",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Navigation Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1937831318859601",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query Time",
+        "rightTable": "logicalTable:10 - Usage Tracking.WS Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2306371337764895",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT L Query",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Phys SQL Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2308251337786672",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT Phys SQL",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT L Query Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2478161342062628",
+        "leftTable": "logicalTable:10 - Usage Tracking.WP Account",
+        "rightTable": "logicalTable:10 - Usage Tracking.WP Object Permissions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2306341337764886",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT Phys SQL",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Phys SQL Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2497071342490613",
+        "leftTable": "logicalTable:10 - Usage Tracking.WS Objects Attributes",
+        "rightTable": "logicalTable:10 - Usage Tracking.WS Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2477461342061986",
+        "leftTable": "logicalTable:10 - Usage Tracking.WP Object Permissions",
+        "rightTable": "logicalTable:10 - Usage Tracking.WP Object Attributes",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2308281337786679",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT Navigation",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT L Query Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2303131337687036",
+        "leftTable": "logicalTable:10 - Usage Tracking.UT Navigation",
+        "rightTable": "logicalTable:10 - Usage Tracking.UT Navigation Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2788521394566115",
+        "leftTable": "logicalTable:10 - Usage Tracking.X SampleApp Index Page",
+        "rightTable": "logicalTable:10 - Usage Tracking.X SampleApp Index Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

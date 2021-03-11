@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "V_$SQLCOMMAND",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMMAND_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

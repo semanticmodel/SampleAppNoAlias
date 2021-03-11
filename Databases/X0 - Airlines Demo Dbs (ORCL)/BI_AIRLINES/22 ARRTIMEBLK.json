@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "22 ARRTIMEBLK",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.DEPARBLK",
+    "caching": {
+      "enable": true
+    }
+  }
+}

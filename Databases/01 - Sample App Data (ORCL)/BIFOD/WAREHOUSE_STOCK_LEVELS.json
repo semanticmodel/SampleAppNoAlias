@@ -1,0 +1,56 @@
+{
+  "physicalTable": {
+    "name": "WAREHOUSE_STOCK_LEVELS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "WAREHOUSE_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "QUANTITY_ON_HAND",
+        "dataType": "INT",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "PRODUCT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

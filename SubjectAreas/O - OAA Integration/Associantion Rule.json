@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Associantion Rule",
+    "alternateNames": [
+      "Dim - Associantion Rule"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Associantion Rule.Owner"
+      },
+      {
+        "name": "Model Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Associantion Rule.Model Name"
+      },
+      {
+        "name": "Rule Id",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Associantion Rule.Rule Id"
+      }
+    ]
+  }
+}

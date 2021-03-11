@@ -1,0 +1,90 @@
+{
+  "physicalTable": {
+    "name": "GV_$FILESTAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WRITETIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXIOWTM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZED_PHYBLKRD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYBLKRD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYBLKWRT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "READTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MINIOTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXIORTM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LSTIOTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVGIOTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYWRTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

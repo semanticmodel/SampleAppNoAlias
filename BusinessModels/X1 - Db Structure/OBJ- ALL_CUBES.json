@@ -1,0 +1,245 @@
+{
+  "logicalTable": {
+    "name": "OBJ- ALL_CUBES",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Aw Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.AW_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consistent Solve Spec",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.CONSISTENT_SOLVE_SPEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cube Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.CUBE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Description",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Partition Dimension Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PARTITION_DIMENSION_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Partition Hierarchy Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PARTITION_HIERARCHY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Partition Level Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PARTITION_LEVEL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Precompute Condition",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PRECOMPUTE_CONDITION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Precompute Percent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PRECOMPUTE_PERCENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Precompute Percent Top",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.PRECOMPUTE_PERCENT_TOP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sparse Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.SPARSE_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Cubes",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_CUBES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_CUBES.CUBE_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALL_CUBES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.ALL_CUBES"
+          ]
+        }
+      }
+    ]
+  }
+}

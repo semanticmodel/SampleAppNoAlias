@@ -1,0 +1,112 @@
+{
+  "logicalTable": {
+    "name": "Teacher",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Teacher ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_TEACHER_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_TEACHER.TEACHER_ACCTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "NY Teaching Fellow",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_TEACHER_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_TEACHER.TEACHER_NY_TEACHING_FELLOW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prefix",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_TEACHER_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_TEACHER.TEACHER_PREFIX"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Teach for America",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_TEACHER_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_TEACHER.TEACHER_TEACH_FOR_AMERICA"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_TEACHER_LTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y12 - Donations Project.PROJ_TEACHER"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:Teacher ID"
+          ],
+          "displayColumn": "logicalColumn:Teacher ID",
+          "chronologicalKey": "logicalColumn:Teacher ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Teacher",
+          "description": "default hierarchy",
+          "levels": [ "Total", "Detail" ]
+        }
+      ]
+    }
+  }
+}

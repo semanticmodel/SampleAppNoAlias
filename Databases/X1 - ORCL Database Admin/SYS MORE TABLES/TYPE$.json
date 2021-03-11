@@ -1,0 +1,131 @@
+{
+  "physicalTable": {
+    "name": "TYPE$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIDDENMETHODS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPECODE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ROOTTOID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "ATTRIBUTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUBTYPES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "TVOID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "EXTERNTYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PROPERTIES",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HELPERCLASSNAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TYPEID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "EXTERNNAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "VERSION",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "LOCAL_ATTRS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUPERTYPES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HASHCODE",
+        "dataType": "VARBINARY",
+        "length": 17
+      },
+      {
+        "name": "METHODS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOCAL_METHODS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUPERTOID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "VERSION#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

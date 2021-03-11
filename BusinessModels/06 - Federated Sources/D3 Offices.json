@@ -1,0 +1,243 @@
+{
+  "logicalTable": {
+    "name": "D3 Offices",
+    "description": "This logical table maps to the physical Offices Dimension table with various attributes like Office, Department, Organization and so on.",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "D1  Office (Rel Only)",
+        "description": "Help : \r\nOffice: Stores the office description as text",
+        "dataType": "VARCHAR",
+        "sortBy": "D8  Office Sequence (Rel Only)",
+        "descriptorColumn": "D1k  Office Key (Rel Only)",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Dsc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D1k  Office Key (Rel Only)",
+        "description": "Help : \r\nOffice Key: An integer that uniquely identifies each record in the Office dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2  Department (Rel Only)",
+        "description": "Help : \r\nDepartment: Stores the department information as text",
+        "dataType": "VARCHAR",
+        "sortBy": "D2k  Dept Key (Rel Only)",
+        "descriptorColumn": "D2k  Dept Key (Rel Only)",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Department"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2k  Dept Key (Rel Only)",
+        "description": "Help :\r\nDepartment Key: Stores department key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Dept_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3  Organization (Rel Only)",
+        "description": "Help : \r\nOrganization: Stores the Organization information as text",
+        "dataType": "VARCHAR",
+        "sortBy": "D3k  Org Key (Rel Only)",
+        "descriptorColumn": "D3k  Org Key (Rel Only)",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Organization"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3k  Org Key (Rel Only)",
+        "description": "Help :\r\nOrganization Key: Stores Organization key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Org_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4  Company (Rel Only)",
+        "description": "Help : \r\nCompany: Stores the company information as text",
+        "dataType": "VARCHAR",
+        "sortBy": "D4k  Company Key (Rel Only)",
+        "descriptorColumn": "D4k  Company Key (Rel Only)",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4k  Company Key (Rel Only)",
+        "description": "Help :\r\nCompany Key: Stores company key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Company_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D8  Office Sequence (Rel Only)",
+        "description": "Help :\r\nSequence: Stores sequence as an integer",
+        "dataType": "INT",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Sequence"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Offices",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H3 Offices.Offices Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Offices Total",
+      "logicalLevels": [
+        {
+          "name": "Offices Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Offices Company",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:D4  Company (Rel Only)"
+          ],
+          "displayColumn": "logicalColumn:D4  Company (Rel Only)"
+        },
+        {
+          "name": "Offices Organization",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:D3  Organization (Rel Only)"
+          ],
+          "displayColumn": "logicalColumn:D3  Organization (Rel Only)"
+        },
+        {
+          "name": "Offices Department",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:D2  Department (Rel Only)"
+          ],
+          "displayColumn": "logicalColumn:D2  Department (Rel Only)"
+        },
+        {
+          "name": "Offices Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 20,
+          "primaryColumns": [
+            "logicalColumn:D1k  Office Key (Rel Only)"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H3 Offices [branch at level 'Offices Department']",
+          "levels": [ "Offices Total", "Offices Company", "Offices Organization", "Offices Department", "Offices Detail" ]
+        }
+      ]
+    }
+  }
+}

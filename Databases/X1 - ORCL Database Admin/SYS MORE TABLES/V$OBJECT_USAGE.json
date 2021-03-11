@@ -1,0 +1,42 @@
+{
+  "physicalTable": {
+    "name": "V$OBJECT_USAGE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "USED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "START_MONITORING",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "INDEX_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "END_MONITORING",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "MONITORING",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

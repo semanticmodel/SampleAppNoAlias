@@ -1,0 +1,1067 @@
+{
+  "logicalTable": {
+    "name": "F0 Sales Base Measures",
+    "description": "This logical table contains metrics like Revenue, Billed Qty, Booked Amt and Booked Qty with different types of aggregation like Sum, First on Time , Last on Time and Count Distinct. \r\nAll the metrics in this table are physically mapped to columns in the Revenue fact table.\r\n",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "1 ==== Revenue Base Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "1- Revenue",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Revenue"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Revenue00004032"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Revenue00004032"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Revenue00004032"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_RS_04",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.Revenue00004032"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2- Billed Quantity",
+        "description": "Help :\r\nBilled Quantity data. Sources from Units column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Billed_000043DF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Billed_000043DF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Billed_000043DF"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "3- Discount Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Discnt_Value"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Discoun00003CDA"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Discoun00003CDA"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Discoun00003CDA"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "4- Paid Amount",
+        "description": "Help :\r\nBooked Amount data. Sources from Dollars column in FactsRev table joining to time using Booked time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": " IFNULL(%1, 0)",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Revenue"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Paid_Am00003E76"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Paid_Am00003E76"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Paid_Am00003E76"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "7- Shipped Amount",
+        "description": "Help :\r\nBooked Amount data. Sources from Dollars column in FactsRev table joining to time using Booked time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Revenue"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Shipped00003EDA"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Shipped00003EDA"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Shipped00003EDA"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "7- Shipped Quantity",
+        "description": "Help :\r\nBilled Quantity data. Sources from Units column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Units"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.Shipped00004238"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.Shipped00004238"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.Shipped00004238"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "8- Booked Amount",
+        "description": "Help :\r\nBooked Amount data. Sources from Dollars column in FactsRev table joining to time using Booked time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "8- Booked Quantity",
+        "description": "Help :\r\nBilled Quantity data. Sources from Units column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "10- Variable Costs",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Cost_Variable"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "11- Fixed Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Cost_Fixed"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "30 ==== Counts ============",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "31  # of Orders (Bn limit)",
+        "description": "Help :\r\n# of Orders is calculated by counting the distinct occurences of an order in the fact table",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "1"
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "1"
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "1"
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "1"
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "31  # of Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Orders is calculated by counting the distinct occurences of an order in the fact table",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(%1 as double)",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App Exa.F0 Sales Base Measures.31  # of Orders (Bn limit)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "32  # of Cust with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Customers is calculated by counting the distinct occurences of a customer in the fact table",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_CD_01",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01.of_C00004031"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT",
+              "countDistinctBasedRules": [ {
+                  "logicalTableSource": "logicalTableSource:01 - Sample App Exa.F0 Sales Base Measures.02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_CD_01",
+                  "rule": "COUNT_DISTINCT"
+                }
+              ]
+            }
+          ]
+        }
+      },
+      {
+        "name": "33  # of Empl with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Employees is calculated by counting the distinct occurences of an employee in the fact table",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Empl_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Empl_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Empl_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Empl_Key"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "34  # of Offices with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Markets is calculated by counting the distinct occurences of a market in the fact table",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Office_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Office_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Office_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Office_Key"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "35  # of Products with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Products is calculated by counting the distinct occurences of a product in the fact table",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Prod_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Prod_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Prod_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Prod_Key"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "39  Order to Ship Days (Sum)",
+        "description": "Help : \r\nThis maps to the order key in the fact table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_DAY ,\r\n %1 ,\r\n %2 )\r\n",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Order_Day_Dt",
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Ship_Day_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_DAY ,\r\n %1 ,\r\n %2 )\r\n",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Order_Day_Dt",
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Ship_Day_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_DAY ,\r\n %1 ,\r\n %2 )",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Order_Day_Dt",
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Ship_Day_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_DAY ,\r\n %1 ,\r\n %2 )",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Order_Day_Dt",
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Ship_Day_Dt"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "== Internal Columns ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Dummy Object (Used for Pres Headers)",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "X12  Fact Mth Key",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Bill_Mth_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X13  Fact Qtr Key",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Bill_Qtr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X20  Cust Key (Segmentation)",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS03 Revenue (Paid Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS04 Revenue (Ship Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS05 Revenue (Order Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Cust_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Fact Table",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "'Granular Table - Samp_Revenue_F - 5M Rows'"
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+              "physicalExpression": {
+                "expressionTemplate": "'FACT_AGG_OR_03 - 1.2M Rows'"
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+              "physicalExpression": {
+                "expressionTemplate": "'FACT_AGG_OR_02 - 1M Rows'"
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+              "physicalExpression": {
+                "expressionTemplate": "'FACT_AGG_OR_01 - 151k Rows'"
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_RS_04",
+              "physicalExpression": {
+                "expressionTemplate": "'FACT_AGG_OR_RS_04 - 6k Rows'"
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_CD_01",
+              "physicalExpression": {
+                "expressionTemplate": "'FACT_AGG_OR_CD_01 - 499K Rows'"
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS01 Revenue (Billed Time Join)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\."
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H6 Customers.Customers Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Day Detail",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App Exa.H7 Orders.Orders Detail",
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail"
+        ]
+      },
+      {
+        "name": "LTS03 Revenue (Paid Time Join)",
+        "priority": 1,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H6 Customers.Customers Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Day Detail",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App Exa.H7 Orders.Orders Detail",
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail"
+        ]
+      },
+      {
+        "name": "LTS04 Revenue (Ship Time Join)",
+        "priority": 1,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)"
+          ]
+        }
+      },
+      {
+        "name": "LTS05 Revenue (Order Time Join)",
+        "priority": 1,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)"
+          ]
+        }
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_03",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Day Detail"
+        ]
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_02",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Month",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail",
+          "logicalLevel:01 - Sample App Exa.H6 Customers.Customers Detail"
+        ]
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_01",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Month",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail"
+        ]
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_RS_04",
+        "isSysGen": true,
+        "isAtLowerGrain": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H0 Time.Month",
+          "logicalLevel:01 - Sample App Exa.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Prod_Dsc"
+        ]
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_FACT_AGG_OR_CD_01",
+        "isSysGen": true,
+        "isAtLowerGrain": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail",
+          "logicalLevel:01 - Sample App Exa.H0 Time.Month",
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail"
+        ]
+      }
+    ]
+  }
+}

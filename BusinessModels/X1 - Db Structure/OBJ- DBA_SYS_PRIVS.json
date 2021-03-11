@@ -1,0 +1,92 @@
+{
+  "logicalTable": {
+    "name": "OBJ- DBA_SYS_PRIVS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Admin Option",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_SYS_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS.ADMIN_OPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Grantee",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_SYS_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS.GRANTEE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Privilege",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_SYS_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS.PRIVILEGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Privileges",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_SYS_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS.PRIVILEGE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DBA_SYS_PRIVS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DBA_SYS_PRIVS"
+          ]
+        }
+      }
+    ]
+  }
+}

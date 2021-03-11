@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Model Global Details",
+    "alternateNames": [
+      "Dim - Model Global Details"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model Global Details.Owner"
+      },
+      {
+        "name": "Model Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model Global Details.Model Name"
+      },
+      {
+        "name": "Global Detail Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model Global Details.Global Detail Name"
+      }
+    ]
+  }
+}

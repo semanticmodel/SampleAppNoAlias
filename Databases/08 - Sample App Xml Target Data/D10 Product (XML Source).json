@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D10 Product (XML Source)",
+    "sourceTable": "physicalTable:08 - Sample App Xml Target Data.SAMP_XML_PRODUCTS_D"
+  }
+}

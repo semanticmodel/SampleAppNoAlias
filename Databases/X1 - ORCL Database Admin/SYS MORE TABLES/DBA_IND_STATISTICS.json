@@ -1,0 +1,129 @@
+{
+  "physicalTable": {
+    "name": "DBA_IND_STATISTICS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DISTINCT_KEYS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVG_CACHE_HIT_RATIO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLEVEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LEAF_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITION_POSITION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUBPARTITION_POSITION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STALE_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "AVG_DATA_BLOCKS_PER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "AVG_CACHED_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INDEX_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "AVG_LEAF_BLOCKS_PER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLUSTERING_FACTOR",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATTYPE_LOCKED",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "SUBPARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

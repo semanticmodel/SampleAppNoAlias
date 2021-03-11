@@ -1,0 +1,8 @@
+{
+  "physicalTableAlias": {
+    "name": "D51 Employees (PC Hier Closure Table)",
+    "description": "Customer Alias: Alias of the customer dimension table",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_EMPL_PARENT_CHILD_MAP",
+    "overrideSourceCacheSetting": true
+  }
+}

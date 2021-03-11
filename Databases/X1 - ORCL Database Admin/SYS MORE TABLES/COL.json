@@ -1,0 +1,64 @@
+{
+  "physicalTable": {
+    "name": "COL",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COLTYPE",
+        "dataType": "VARCHAR",
+        "length": 106
+      },
+      {
+        "name": "CNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "WIDTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COLNO",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NULLS",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHARACTER_SET_NAME",
+        "dataType": "VARCHAR",
+        "length": 44
+      },
+      {
+        "name": "PRECISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DEFAULTVAL",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "presentationTable": {
+    "name": "Association Rule Facts",
+    "alternateNames": [
+      "Fact - Association Rule"
+    ],
+    "presentationColumns": [ {
+        "name": "Rule Lift",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Rule Lift"
+      },
+      {
+        "name": "Rule Confidence",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Rule Confidence"
+      },
+      {
+        "name": "Rule Support",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Rule Support"
+      },
+      {
+        "name": "Number Of Items",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Number Of Items"
+      },
+      {
+        "name": "Antecedent Support",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Antecedent Support",
+        "alternateNames": [
+          "Antecedent Support %"
+        ]
+      },
+      {
+        "name": "Consequent Support",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Association Rule.Consequent Support"
+      }
+    ]
+  }
+}

@@ -1,0 +1,336 @@
+{
+  "logicalTable": {
+    "name": "D6 Customers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "C0  Customer Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Name - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C1  Customer Name",
+        "dataType": "VARCHAR",
+        "sortBy": "C1s  Customer Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C1s  Customer Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Name - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4  Customer Segment",
+        "dataType": "VARCHAR",
+        "sortBy": "C4s  Customer Segment Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Segments"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Segment"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4s  Customer Segment Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Segments -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Segment - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4k  Cust Segment Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Segments - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Customer Segment - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - High Risk",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customers - High Risk"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - Low Risk",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customers - Low Risk"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Customers",
+        "dataType": "VARCHAR",
+        "sortBy": "All Customers -  Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Customers"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Customers"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Customers -  Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Customers -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Customers - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Customers - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Customers - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Customers - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E1",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H6 Customers.Customer Members"
+        ]
+      },
+      {
+        "name": "Essb Cube E2",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Customers",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "All Customers",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Customers - Member Key"
+          ]
+        },
+        {
+          "name": "Customer Segments",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:C4  Customer Segment"
+          ],
+          "displayColumn": "logicalColumn:C4  Customer Segment"
+        },
+        {
+          "name": "Customer Members",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1000,
+          "primaryColumns": [
+            "logicalColumn:C1  Customer Name"
+          ],
+          "displayColumn": "logicalColumn:C1  Customer Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H6 Customers [branch at level 'Customer Segments']",
+          "levels": [ "All Customers", "Customer Segments", "Customer Members" ]
+        }
+      ]
+    }
+  }
+}

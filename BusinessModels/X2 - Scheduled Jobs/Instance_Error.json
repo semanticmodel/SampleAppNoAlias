@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "Instance_Error",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Error Msg",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance_Error",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance_Error.ERROR_MSG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Instance Id",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance_Error",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance_Error.INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Job Id",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Instance_Error",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance_Error.JOB_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Instance_Error",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Instance_Error"
+          ]
+        }
+      }
+    ]
+  }
+}

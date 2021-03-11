@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "Dim - Model Global Details",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Global Detail Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D96 Model Global Details",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details.GLOBAL_DETAIL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Model Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D96 Model Global Details",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details.MODEL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D96 Model Global Details",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D96 Model Global Details",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details"
+          ]
+        }
+      }
+    ]
+  }
+}

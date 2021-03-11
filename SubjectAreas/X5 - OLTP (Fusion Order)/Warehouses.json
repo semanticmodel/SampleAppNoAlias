@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Warehouses",
+    "presentationColumns": [ {
+        "name": "Warehouse ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Warehouse ID"
+      },
+      {
+        "name": "Warehouse Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Warehouse Name"
+      },
+      {
+        "name": "Whse Address1",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Address1"
+      },
+      {
+        "name": "Whse Address2",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Address2"
+      },
+      {
+        "name": "Whse City",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse City"
+      },
+      {
+        "name": "Whse Country ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Country ID"
+      },
+      {
+        "name": "Whse Latitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Latitude"
+      },
+      {
+        "name": "Whse Longitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Longitude"
+      },
+      {
+        "name": "Whse Postal Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse Postal Code"
+      },
+      {
+        "name": "Whse State Province",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D13 Warehouses.Whse State Province"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "H13 Warehouses",
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total"
+          },
+          {
+            "name": "Whse City",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).F1 Order Facts.Whse City",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Warehouses.Whse City"
+          },
+          {
+            "name": "Whse Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).F1 Order Facts.Whse Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Warehouses.Warehouse Name"
+          }
+        ]
+      }
+    ]
+  }
+}

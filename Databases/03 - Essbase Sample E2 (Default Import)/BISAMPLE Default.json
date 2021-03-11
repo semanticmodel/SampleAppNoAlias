@@ -1,0 +1,6 @@
+{
+  "catalog": {
+    "name": "BISAMPLE Default",
+    "dynamicName": "variable:Verify DUAL Cube Name (=BISAMPLE).CUBE_NAME"
+  }
+}

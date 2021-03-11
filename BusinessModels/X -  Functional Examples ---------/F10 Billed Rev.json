@@ -1,0 +1,33 @@
+{
+  "logicalTable": {
+    "name": "F10 Billed Rev",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Order_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F10 Billed Rev",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "F10 Billed Rev",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev"
+          ]
+        }
+      }
+    ]
+  }
+}

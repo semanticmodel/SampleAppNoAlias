@@ -1,0 +1,2657 @@
+{
+  "database": {
+    "name": "X0 - Airlines Demo Dbs (ORCL)",
+    "databaseType": "Oracle 12c",
+    "description": "(DESCRIPTION=(ADDRESS=(PROTOCOL=TCP)(HOST=10.245.2.235)(PORT = 1521))(CONNECT_DATA =(SID = orcl)))",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Aggr Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 1000,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      },
+      {
+        "name": "Atomic Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 1000,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "CJ_SA__00046FF2_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2",
+          "expressionObjects": [
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05.Orig_Airpo00039C3D",
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "CJ_SA__00046FF2_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2",
+          "expressionObjects": [
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05.Route00039C28",
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "CJ_SA__00046FF2_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2",
+          "expressionObjects": [
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05.Dest_Airpo00039C2A",
+            "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "FK_SA__00046FF2_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).FACT_AGG_OR_CD_05.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E4CC_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01Y.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9CE_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9CE_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9CE_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9CE_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9CE_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7EB_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7EB_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7EB_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7EB_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E669_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_11Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E878_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04D.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E72E_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E77D_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E9A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.CODE00039BFC",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.CODE00039BFC"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E9C7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_32_Airc00039CF2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_32_Airc00039CF2.CODE00039BF9",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.CODE00039BF9"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E9AA",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18.Pax_per_Fl00039C5E",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Pax_per_Fl00039C5E"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA2F_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E92C_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E92C_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E92C_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E92C_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_15D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9F0_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9F0_0003E9AA",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18.Pax_per_Fl00039C5E",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Pax_per_Fl00039C5E"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9F0_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9F0_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9F0_0003E9A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.CODE00039BFC",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.CODE00039BFC"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5C4_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5C4_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5C4_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5C4_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E698",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_50_Flig00039CEF",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_50_Flig00039CEF.Carrier_Fl00039B99",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Carrier_Fl00039B99"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6CA_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_18Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8EA_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8EA_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8EA_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8EA_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8EA_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_13D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E70D_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E70D_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E70D_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E70D_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E70D_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E858_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E858_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E858_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E858_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9B3_0003E9A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.CODE00039BFC",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.CODE00039BFC"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9B3_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9B3_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9B3_0003E9AA",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18.Pax_per_Fl00039C5E",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Pax_per_Fl00039C5E"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9B3_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E9A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.CODE00039BFC",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.CODE00039BFC"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E9C7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_32_Airc00039CF2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_32_Airc00039CF2.CODE00039BF9",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.CODE00039BF9"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E9AA",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18.Pax_per_Fl00039C5E",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Pax_per_Fl00039C5E"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA07_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7CB_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7CB_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7CB_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7CB_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E832_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_02D.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E7A2_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E6A1_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_10Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E759_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_01M.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA1E_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA1E_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003EA1E_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8C6_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_12D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E507_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_03Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E90B_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E90B_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E90B_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E90B_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E90B_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_14D.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E59C_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_06Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E960_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E960_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E960_0003E94B",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0D",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0D.Orig_US_St00039C49",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D.Orig_US_St00039C49"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E960_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_16D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4B2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Arr_Time_B00039BAD"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4A3",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_21_Dep_00039CE2.Dep_Time_B00039BA6",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Dep_Time_B00039BA6"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E5EA_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_08Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E980_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_17D.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9E1_0003E6F9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Dep_Month00039C07"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9E1_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E9E1_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4F7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.CODE00039C1C"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4FE",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Cancelled_00039C5B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E531_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_04Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E63E_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_09Y.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E663",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Day_of_Mon00039C53"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E80A",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Dep_Date00039C13"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E8A1_0003E4AB",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_05D.Dept_Delay00039BA2"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E5E4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_02_Day_00039D15.Day_of_Wee00039C57",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Day_of_Wee00039C57"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E4B8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Arr_Delay_00039B9B"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E57D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Dest_Airpo00039C2A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E574",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Route00039C28"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E4BF",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Dep_Year00039C0A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E4F0",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Carrier_Co00039BAA"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E557",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_11_Orig00039D0B.Orig_Airpo00039C3D",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Orig_Airpo00039C3D"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__0003E617_0003E49D",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_OR_07Y.Distance_G00039B9F"
+          }
+        ]
+      },
+      {
+        "name": "10 GEO_AIPORT_ORIGIN_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.11 COUNTY_HIER_ORIGIN",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.11 COUNTY_HIER_ORIGIN.SC_CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN.STCTY_FIPS"
+          }
+        ]
+      },
+      {
+        "name": "01 DOMESTIC Segment_Foreign Key#2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.ORIGIN",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.DEST",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC Segment_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.34 CARRIER_GROUP_NEW",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.34 CARRIER_GROUP_NEW.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CARRIER_GROUP_NEW"
+          }
+        ]
+      },
+      {
+        "name": "02 DOMESTIC Segment_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Month",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.MONTH"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Qtr",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.QUARTER"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Year",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.YEAR"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC MARKET_Foreign Key#4",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC Segment_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.33 AIRCRAFT_TYPE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.33 AIRCRAFT_TYPE.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRCRAFT_TYPE"
+          }
+        ]
+      },
+      {
+        "name": "01 DOMESTIC Segment_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.36 CARRIER REGION",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.36 CARRIER REGION.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.REGION"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC MARKET_Foreign Key#5",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC MARKET_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.UNIQUE_CARRIER"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC Segment_Foreign Key#2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.32 AIRCRAFT_GROUP",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.32 AIRCRAFT_GROUP.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRCRAFT_GROUP"
+          }
+        ]
+      },
+      {
+        "name": "01 DOMESTIC Segment_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.35 SERVICE CLASS",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.35 SERVICE CLASS.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CLASS"
+          }
+        ]
+      },
+      {
+        "name": "00 DOMESTIC MARKET_Foreign Key#6",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DISTANCE_GROUP"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#7",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DISTANCEGROUP"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#5",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.UNIQUECARRIER"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#14",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Calendar_Date",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.FLIGHTDATE"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEST"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGIN"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#13",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Month",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.MONTH"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Qtr",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.QUARTER"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Year",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.YEAR"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.ORIGIN",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGIN"
+          },
+          {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.DEST",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEST"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#11",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.22 ARRTIMEBLK",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.22 ARRTIMEBLK.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRTIMEBLK"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#9",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.24 CANCELLATION",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.24 CANCELLATION.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CANCELLATIONCODE"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#2",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.20 ARR DELAY GROUPS",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.20 ARR DELAY GROUPS.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRIVALDELAYGROUPS"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#8",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPTIMEBLK",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPTIMEBLK.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEPTIMEBLK"
+          }
+        ]
+      },
+      {
+        "name": "00 PERFORMANCE_POC_Foreign Key#12",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPT DELAY GROUPS",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPT DELAY GROUPS.CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEPARTUREDELAYGROUPS"
+          }
+        ]
+      },
+      {
+        "name": "90 Schedules (NDM)_Foreign Key",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.10 GEO_AIRPORT_ORIGIN.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).ORIGIN"
+          }
+        ]
+      },
+      {
+        "name": "90 Schedules (NDM)_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.AIRPORT",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).DESTINATION"
+          }
+        ]
+      },
+      {
+        "name": "11 GEO_AIPORT_DEST_Foreign Key#1",
+        "leftTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST",
+        "rightTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.SC_CODE",
+            "rightColumn": "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.STCTY_FIPS"
+          }
+        ]
+      }
+    ]
+  }
+}

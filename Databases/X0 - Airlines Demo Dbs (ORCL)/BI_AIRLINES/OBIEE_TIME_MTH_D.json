@@ -1,0 +1,145 @@
+{
+  "physicalTable": {
+    "name": "OBIEE_TIME_MTH_D",
+    "description": "Time dimension table at month grain. Stores one record for each month.",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_TIME_MTH_D.xml",
+    "physicalColumns": [ {
+        "name": "Cal_Half",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Half: Stores value 1 or 2"
+      },
+      {
+        "name": "Fscl_Year",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Year : Stores the fiscal year in the format YYYY"
+      },
+      {
+        "name": "Fscl_Half",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Half : Stores the value 1 or 2"
+      },
+      {
+        "name": "Quarter_Ago_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Quarter Ago Wid: Stores the value in the format YYYYMM.\r\nFor the month key 201001, Quarter_Ago_Wid will be 200910."
+      },
+      {
+        "name": "Per_Name_Qtr",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true,
+        "description": "Period Name Quarter: Stores the quarter information in the format YYYY QQuarterNumber.\r\nEg:- 2009 Q1"
+      },
+      {
+        "name": "Julian_Month_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Month Number : Stores the month number in the Julian Calendar format. \r\nEg:- 500, 501 and so on."
+      },
+      {
+        "name": "Days_in_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Days in Quarter : Stores value 90, 91 or 92"
+      },
+      {
+        "name": "Fscl_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Quarter : Stores the value 1, 2, 3 or 4"
+      },
+      {
+        "name": "Per_Name_Month",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true,
+        "description": "Period Name Month: Stores the year information in the format YYYY / MM.\r\nEg:- 2009 / 01"
+      },
+      {
+        "name": "Julian_Qtr_Num",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Julian Quarter Number : Stores the quarter number in the Julian Calendar format. \r\nEg:- 151, 152 and so on."
+      },
+      {
+        "name": "Cal_Month",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Month: Stores value 1,2,3 ..upto 12"
+      },
+      {
+        "name": "Loaded",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Loaded: Flag to indicate if data is loaded for the specific month. \r\nPossible values are 1 or 0."
+      },
+      {
+        "name": "Cal_Qtr",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Quarter: Stores value 1,2,3 or 4"
+      },
+      {
+        "name": "Month_Ago_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Month Ago Wid:Stores the value in the format YYYYMM.\r\nFor the month key 201001, Month_Ago_Wid will be 200912."
+      },
+      {
+        "name": "Per_Name_Year",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true,
+        "description": "Period Name Year: Stores the year information in the format YYYY.\r\nEg:- 2009"
+      },
+      {
+        "name": "Fscl_Month",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Fiscal Month : Stores the value 1, 2, 3.. upto 12."
+      },
+      {
+        "name": "Cal_Year",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Calendar Year: Stores value in the format YYYY"
+      },
+      {
+        "name": "Beg_of_Qtr_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Beginning of Qtr Wid: Stores the value in the format YYYYMMDD.\r\nFor the day key 20100202, Beg_of_Qtr_Wid will be 20100101."
+      },
+      {
+        "name": "Per_Name_Half",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true,
+        "description": "Period Name Half: Stores the Half year information in the format YYYY HYHalfYearNumber.\r\nEg:- 2009 HY1"
+      },
+      {
+        "name": "Days_in_Mth",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Days in Month : Stores value 28, 29, 30 or 31."
+      },
+      {
+        "name": "Mth_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Month Key: Surrogate key of the table. Stores the month information in the format YYYYMM.\r\nEg:- 200901"
+      },
+      {
+        "name": "Year_Ago_Wid",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Year Ago Wid: Stores the value in the format YYYYMM.\r\nFor the month key 201001, Year_Ago_Wid will be 200901."
+      }
+    ]
+  }
+}

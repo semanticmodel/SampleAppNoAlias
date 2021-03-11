@@ -1,0 +1,40 @@
+{
+  "subjectArea": {
+    "name": "G - Sample Essbase GL",
+    "sourceBusinessModel": "businessModel:03 - Essbase GL",
+    "alternateNames": [
+      "4 - Essbase GL"
+    ],
+    "implicitFactColumn": "logicalColumn:03 - Essbase GL.Measures.Balance",
+    "description": "Essbase GL Financials Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Time Periods"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Accounts"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Income Statement"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Balance Sheet"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.All Accounts"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Scenarios"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Entities"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Facts"
+      },
+      {
+        "name": "presentationTable:G - Sample Essbase GL.Asynchronous Facts"
+      }
+    ]
+  }
+}

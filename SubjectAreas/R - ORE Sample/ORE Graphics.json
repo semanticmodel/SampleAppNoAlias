@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "ORE Graphics",
+    "presentationColumns": [ {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.ORE Graphics.Id"
+      },
+      {
+        "name": "Image",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.ORE Graphics.Image"
+      }
+    ]
+  }
+}

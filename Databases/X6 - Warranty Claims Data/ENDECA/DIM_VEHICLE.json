@@ -1,0 +1,136 @@
+{
+  "physicalTable": {
+    "name": "DIM_VEHICLE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VEHICLE_MODEL_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "VEHICLE_MANUFACTURER",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "DRIVE_TRAIN",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "PRODUCTION_PERIOD",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "PROD_DATE",
+        "dataType": "TIMESTAMP",
+        "length": 19
+      },
+      {
+        "name": "VEHICLE_MAKE",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "VEH_EXPOSURE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "VEHICLE_MODEL",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "PITCH_CIRCLE_DIAMETER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "PRODUCTION_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "VEHICLE_FLOAT",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ROTOR_THICKNESS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "PRODUCTION_MONTH",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "NUM_CYLS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "VIN",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "SALE_DATE",
+        "dataType": "TIMESTAMP",
+        "length": 19
+      },
+      {
+        "name": "VEHICLE_EXPOSURE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ROTOR_TYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "VEHICLE_BUILD_REGION",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "VEH_FLOAT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "VEHICLE_BUILD_COUNTRY",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "ROTOR_GAP",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "VEHICLE_ASSEMBLY_PLANT",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "ROTOR_DIAMETER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "LATERAL_RUN_OUT",
+        "dataType": "VARCHAR",
+        "length": 50
+      }
+    ]
+  }
+}

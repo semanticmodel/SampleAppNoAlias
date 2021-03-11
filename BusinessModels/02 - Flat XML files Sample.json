@@ -1,0 +1,22 @@
+{
+  "businessModel": {
+    "name": "02 - Flat XML files Sample",
+    "description": "ZZZ - Not yet filled\r\n\r\nMain Business Model for SampleApp. \r\nSources from \"01 - Sample App Data (ORCL)\" and \"02 - Sample App XML Data\" on the physical layer. \r\nThis business model is active once SampleApp Core is deployed.\r\nIncludes various examples of logical constructs and aggregations.\r\n",
+    "joins": [      {
+        "name": "01 - Sample App#1:1 - Sample App#1:Relationship_2004:6141210742953#1",
+        "leftTable": "logicalTable:02 - Flat XML files Sample.D1 Products",
+        "rightTable": "logicalTable:02 - Flat XML files Sample.F0 Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY",
+        "drivingTable": "logicalTable:02 - Flat XML files Sample.D1 Products"
+      },
+      {
+        "name": "01 - Sample App#1:1 - Sample App#1:Relationship_2004:6111210742953#1",
+        "leftTable": "logicalTable:02 - Flat XML files Sample.D0 Time",
+        "rightTable": "logicalTable:02 - Flat XML files Sample.F0 Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

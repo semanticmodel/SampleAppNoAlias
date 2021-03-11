@@ -1,0 +1,183 @@
+{
+  "logicalTable": {
+    "name": "Facts (Spark)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Price",
+        "dataType": "FLOAT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.price"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recommended",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "sum(case  when \"movieapp_log_v_SPK_SRC\".\"recommended\" = 'Y' then 1 else 0 end )",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.recommended"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rating",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.rating"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recommended Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.recommended"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Count of Activities",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.activity"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Count of Customers",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.custid"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Count of Movies",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_SPARK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.movieid"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "MOVIEAPP_ACTIVITY_SPARK",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "presentationTable": {
+    "name": "Tab Col Statistics",
+    "alternateNames": [
+      "Dba Tab Col Statistics",
+      "Dba_tab_col_statistics",
+      "OBJ- DBA_TAB_COL_STATISTICS"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Col Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Avg Col Len"
+      },
+      {
+        "name": "Column Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Column Name"
+      },
+      {
+        "name": "Density",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Density"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Global Stats"
+      },
+      {
+        "name": "High Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.High Value"
+      },
+      {
+        "name": "Histogram",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Histogram"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Last Analyzed"
+      },
+      {
+        "name": "Low Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Low Value"
+      },
+      {
+        "name": "Num Buckets",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Num Buckets"
+      },
+      {
+        "name": "Num Distinct",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Num Distinct"
+      },
+      {
+        "name": "Num Nulls",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Num Nulls"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Owner"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Sample Size"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.Table Name"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS.User Stats"
+      }
+    ]
+  }
+}

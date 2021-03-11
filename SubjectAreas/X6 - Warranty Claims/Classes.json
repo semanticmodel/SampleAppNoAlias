@@ -1,0 +1,17 @@
+{
+  "presentationTable": {
+    "name": "Classes",
+    "alternateNames": [
+      "Comments#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Classification",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Classes.Classification"
+      },
+      {
+        "name": "Complaint Desc Class highlighted",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Classes.Complaint Desc Class highlighted"
+      }
+    ]
+  }
+}

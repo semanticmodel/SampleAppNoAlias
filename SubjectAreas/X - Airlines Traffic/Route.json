@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Route",
+    "presentationColumns": [ {
+        "name": "Route Description",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.18 Route.Route Description"
+      },
+      {
+        "name": "Route",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.18 Route.Route"
+      },
+      {
+        "name": "Distance Group",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.19 Distance Group.Distance Group",
+        "alternateNames": [
+          "Distance Grp"
+        ]
+      },
+      {
+        "name": "Distance Class",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.19 Distance Group.Distance Class"
+      }
+    ]
+  }
+}

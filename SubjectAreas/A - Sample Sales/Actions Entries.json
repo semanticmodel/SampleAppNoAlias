@@ -1,0 +1,77 @@
+{
+  "presentationTable": {
+    "name": "Actions Entries",
+    "localization": {
+      "localizationKey": "Actions Entries",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries)"
+    },
+    "alternateNames": [
+      "Actions Entries (WIP)"
+    ],
+    "presentationColumns": [ {
+        "name": "ID",
+        "localization": {
+          "localizationKey": "ID",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_ID)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.ID"
+      },
+      {
+        "name": "Flag",
+        "localization": {
+          "localizationKey": "Flag",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Flag)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Flag"
+      },
+      {
+        "name": "Message",
+        "localization": {
+          "localizationKey": "Message",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Message)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Message"
+      },
+      {
+        "name": "Message Type",
+        "localization": {
+          "localizationKey": "Message Type",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Message_Type)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Message Type"
+      },
+      {
+        "name": "Order Id",
+        "localization": {
+          "localizationKey": "Order Id",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Order_Id)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Order Id"
+      },
+      {
+        "name": "Status",
+        "localization": {
+          "localizationKey": "Status",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Status)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Status"
+      },
+      {
+        "name": "Timestamp",
+        "localization": {
+          "localizationKey": "Timestamp",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Timestamp)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Timestamp"
+      },
+      {
+        "name": "Userid",
+        "localization": {
+          "localizationKey": "Userid",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Actions_Entries_Userid)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F93 Actions Entries.Userid"
+      }
+    ]
+  }
+}

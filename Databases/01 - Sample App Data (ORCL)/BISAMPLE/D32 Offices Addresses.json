@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D32 Offices Addresses",
+    "description": "Customer Addresses Alias: This is an alias of the addresses dimension table and joins to the address_key in customer dimension",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_ADDRESSES_D"
+  }
+}

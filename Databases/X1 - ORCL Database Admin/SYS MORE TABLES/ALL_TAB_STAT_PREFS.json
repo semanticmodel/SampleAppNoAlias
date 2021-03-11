@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_STAT_PREFS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "PREFERENCE_VALUE",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "PREFERENCE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

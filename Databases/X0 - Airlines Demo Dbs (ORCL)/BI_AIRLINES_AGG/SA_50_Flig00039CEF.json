@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "SA_50_Flig00039CEF",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Carrier_Fl00039B99",
+        "dataType": "VARCHAR",
+        "length": 271,
+        "nullable": true
+      },
+      {
+        "name": "Flight__00039CEFSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

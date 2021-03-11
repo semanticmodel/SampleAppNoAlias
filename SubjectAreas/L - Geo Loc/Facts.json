@@ -1,0 +1,57 @@
+{
+  "presentationTable": {
+    "name": "Facts",
+    "alternateNames": [
+      "Indc Ind Sample Data",
+      "Metrics"
+    ],
+    "presentationColumns": [ {
+        "name": "Total Population",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total Population"
+      },
+      {
+        "name": "Total Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total Households"
+      },
+      {
+        "name": "Avg Hh Members",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Avg Hh Members"
+      },
+      {
+        "name": "Avg Population",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Avg Population"
+      },
+      {
+        "name": "# of Districts",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.# of Districts",
+        "alternateNames": [
+          "District Code"
+        ]
+      },
+      {
+        "name": "# of Neighbourhoods",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.# of Neighbourhoods",
+        "alternateNames": [
+          "# of Neighbourhood Code",
+          "Neighbourhood Code"
+        ]
+      },
+      {
+        "name": "# of States",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.# of States",
+        "alternateNames": [
+          "# of State Code",
+          "State Code"
+        ]
+      },
+      {
+        "name": "# of Sub Districts",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.# of Sub Districts",
+        "alternateNames": [
+          "# of Sub District Code",
+          "Sub District Code"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,153 @@
+{
+  "presentationTable": {
+    "name": "Datamining",
+    "alternateNames": [
+      "F27"
+    ],
+    "presentationColumns": [ {
+        "name": "M00 === Mining Regression Model ====",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M00 === Mining Regression Model ====",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "M01- Actual Revenue",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M01- Actual Revenue"
+      },
+      {
+        "name": "M02- Expected Rev",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M02- Expected Rev"
+      },
+      {
+        "name": "M03- Dyn Expected Rev",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M03- Dyn Expected Rev"
+      },
+      {
+        "name": "M05- Actual as % of Exptd",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M05- Actual as % of Exptd"
+      },
+      {
+        "name": "M06- Actual Diff to Exptd",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M06- Actual Diff to Exptd"
+      },
+      {
+        "name": "M07- Actual as % of Dyn Exptd",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M07- Actual as % of Dyn Exptd"
+      },
+      {
+        "name": "M08- Actual Diff to Dyn Exptd",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M08- Actual Diff to Dyn Exptd"
+      },
+      {
+        "name": "M09- Dyn Exptd as % of Exptd",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F7 Datamining Regression Facts.M09- Dyn Exptd as % of Exptd"
+      },
+      {
+        "name": "M10 === LTV Classification Prediction ===",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M10 === LTV Classification Prediction ===",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "M11  Cust Predicted Leaf Node",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M11  Cust Predicted Leaf Node"
+      },
+      {
+        "name": "M12  Cust Predicted LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M12  Cust Predicted LTV"
+      },
+      {
+        "name": "M13  Cust Probab Low LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M13  Cust Probab Low LTV"
+      },
+      {
+        "name": "M14  Cust Probab Medium LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M14  Cust Probab Medium LTV"
+      },
+      {
+        "name": "M15  Cust Probab High LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M15  Cust Probab High LTV"
+      },
+      {
+        "name": "M16  Cust Probab Very High LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M16  Cust Probab Very High LTV"
+      },
+      {
+        "name": "M17  Cust LTV Probability",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M17  Cust LTV Probability"
+      },
+      {
+        "name": "M20 === LTV Tree Nodes ===",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M20 === LTV Tree Nodes ===",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "M20 Tree Node",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M20 Tree Node"
+      },
+      {
+        "name": "M21 Node #",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M21 Node #"
+      },
+      {
+        "name": "M22 Local Rule",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M22 Local Rule"
+      },
+      {
+        "name": "M23 Full Rule",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M23 Full Rule"
+      },
+      {
+        "name": "M24 Node Total Individuals",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M24 Node Total Individuals"
+      },
+      {
+        "name": "M25 Parent Node",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M25 Parent Node"
+      },
+      {
+        "name": "M26 Is Leaf",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M26 Is Leaf"
+      },
+      {
+        "name": "M32 Dynamic Score Local Rule",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M32 Dynamic Score Local Rule"
+      },
+      {
+        "name": "M33 Dynamic Score Full Rule",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M33 Dynamic Score Full Rule"
+      },
+      {
+        "name": "M34 Dynamic Pred Leaf Node",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M34 Dynamic Pred Leaf Node"
+      },
+      {
+        "name": "M35  Dynamic Predicted LTV",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M35  Dynamic Predicted LTV"
+      },
+      {
+        "name": "M36 Dynamic Score Probability",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M36 Dynamic Score Probability"
+      },
+      {
+        "name": "M40 LTV Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M40 LTV Attribute Name"
+      },
+      {
+        "name": "M41 Explanatory Value",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F80 Data Mining LTV Tree Facts.M41 Explanatory Value"
+      },
+      {
+        "name": "M29 Node Hier LTV Prediction",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M29 Node Hier LTV Prediction"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "LTV Classification Tree",
+        "alternateNames": [
+          "H8 LTV Classification"
+        ],
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes",
+        "displayColumn": "presentationColumn:A - Sample Sales.Datamining.M20 Tree Node"
+      }
+    ]
+  }
+}

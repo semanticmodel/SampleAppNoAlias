@@ -1,0 +1,13 @@
+{
+  "presentationTable": {
+    "name": "Model Global Details Facts",
+    "alternateNames": [
+      "Fact - Model Global Details"
+    ],
+    "presentationColumns": [ {
+        "name": "Global Detail Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Model Global Details.Global Detail Value"
+      }
+    ]
+  }
+}

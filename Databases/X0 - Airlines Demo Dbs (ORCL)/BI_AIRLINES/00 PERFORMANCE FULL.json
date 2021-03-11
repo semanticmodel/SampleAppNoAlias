@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "00 PERFORMANCE FULL",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.PERFORMANCE",
+    "caching": {
+      "enable": true
+    }
+  }
+}

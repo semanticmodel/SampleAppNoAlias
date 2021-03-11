@@ -1,0 +1,48 @@
+{
+  "physicalTable": {
+    "name": "WS_DASHBOARD",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "DASHBOARDPAGEPATH",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "SEQUENCEID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PATH",
+        "dataType": "VARCHAR",
+        "length": 400
+      },
+      {
+        "name": "ANALYSISNAME",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "DASHBOARDPAGENAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DASHBOARDSTYLE",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "ANALYSISPATH",
+        "dataType": "VARCHAR",
+        "length": 400
+      },
+      {
+        "name": "DASHBOARDNAME",
+        "dataType": "VARCHAR",
+        "length": 150
+      }
+    ]
+  }
+}

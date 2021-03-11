@@ -1,0 +1,247 @@
+{
+  "logicalTable": {
+    "name": "Channels",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Gen1,Channels",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen1,Channels - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Channels"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Channels - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Channels - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Channels - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Channels - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Type",
+        "dataType": "VARCHAR",
+        "sortBy": "Channel Type - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Type - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Type - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Type - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Type - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Name",
+        "dataType": "VARCHAR",
+        "sortBy": "Channel Name - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Name - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Name - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channel Name - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channel Name - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channels - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channels - Default"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Channels - Long Names",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Channels - Long Names"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Basic",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Basic.BISAMPL2.Basic"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Integration.Channels.Channel Name"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Gen1,Channels",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Gen1,Channels",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen1,Channels - Member Key"
+          ]
+        },
+        {
+          "name": "Channel Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Channel Type"
+          ],
+          "displayColumn": "logicalColumn:Channel Type"
+        },
+        {
+          "name": "Channel Name",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Channel Name"
+          ],
+          "displayColumn": "logicalColumn:Channel Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Channels [branch at level 'Channel Type']",
+          "levels": [ "Gen1,Channels", "Channel Type", "Channel Name" ]
+        }
+      ]
+    }
+  }
+}

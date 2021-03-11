@@ -1,0 +1,76 @@
+{
+  "businessModel": {
+    "name": "07 - Spatial Samples",
+    "joins": [      {
+        "name": "Relationship_2004:2597731366707243",
+        "leftTable": "logicalTable:07 - Spatial Samples.Mumbai Areas",
+        "rightTable": "logicalTable:07 - Spatial Samples.Mumbai Demographics",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2452461341955071",
+        "leftTable": "logicalTable:07 - Spatial Samples.Floorplan Attributes",
+        "rightTable": "logicalTable:07 - Spatial Samples.Floor Plan Metrics",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1914321307714020",
+        "leftTable": "logicalTable:07 - Spatial Samples.Block Groups",
+        "rightTable": "logicalTable:07 - Spatial Samples.Block Group Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1914171307713860",
+        "leftTable": "logicalTable:07 - Spatial Samples.POI_Business_In_Range",
+        "rightTable": "logicalTable:07 - Spatial Samples.POI_Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1916231307714827",
+        "leftTable": "logicalTable:07 - Spatial Samples.Block Group Facts",
+        "rightTable": "logicalTable:07 - Spatial Samples.POI Details",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1915931307714376",
+        "leftTable": "logicalTable:07 - Spatial Samples.POI Details",
+        "rightTable": "logicalTable:07 - Spatial Samples.POI_Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1915901307714362",
+        "leftTable": "logicalTable:07 - Spatial Samples.POI Details",
+        "rightTable": "logicalTable:07 - Spatial Samples.Block Groups",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2597671366707237",
+        "leftTable": "logicalTable:07 - Spatial Samples.India Areas",
+        "rightTable": "logicalTable:07 - Spatial Samples.India Demographics",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2124601335535535",
+        "leftTable": "logicalTable:07 - Spatial Samples.Us County Dim",
+        "rightTable": "logicalTable:07 - Spatial Samples.US County Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2786811394193650",
+        "leftTable": "logicalTable:07 - Spatial Samples.Arena",
+        "rightTable": "logicalTable:07 - Spatial Samples.Arena Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

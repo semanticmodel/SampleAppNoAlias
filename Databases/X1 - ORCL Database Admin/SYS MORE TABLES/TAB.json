@@ -1,0 +1,26 @@
+{
+  "physicalTable": {
+    "name": "TAB",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABTYPE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "CLUSTERID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

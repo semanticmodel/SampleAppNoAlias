@@ -1,0 +1,65 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "description": "Product dimension attribute objects",
+    "alternateNames": [
+      "Alternate Calendars"
+    ],
+    "presentationColumns": [ {
+        "name": "P1  Product",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P1  Product",
+        "description": "Help : \r\nStores the product description."
+      },
+      {
+        "name": "P2  Product Type",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P2  Product Type",
+        "description": "Help : \r\nStores the product type description."
+      },
+      {
+        "name": "P3  LOB",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P3  LOB",
+        "description": "Help : \r\nStores the product's LOB description."
+      },
+      {
+        "name": "P3 LOB (Rel Lookup)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P3 LOB (Rel Lookup)",
+        "description": "Help : \r\nLOB: Stores the product LOB information as text"
+      },
+      {
+        "name": "P4  Brand",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P4  Brand",
+        "description": "Help : \r\nStores the product's brand description."
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Products Hierarchy",
+        "sourceLogicalTable": "logicalTable:06 - Federated Sources.D1 Products",
+        "levels": [ {
+            "name": "Total Products",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D1 Products.Products Total"
+          },
+          {
+            "name": "Brand",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D1 Products.Products Brand",
+            "displayColumn": "presentationColumn:D - Sample Federated.Products.P4  Brand"
+          },
+          {
+            "name": "LOB",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D1 Products.Products LOB",
+            "displayColumn": "presentationColumn:D - Sample Federated.Products.P3  LOB"
+          },
+          {
+            "name": "Type",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D1 Products.Products Type",
+            "displayColumn": "presentationColumn:D - Sample Federated.Products.P2  Product Type"
+          },
+          {
+            "name": "Products",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D1 Products.Products Detail",
+            "displayColumn": "presentationColumn:D - Sample Federated.Products.P1  Product"
+          }
+        ]
+      }
+    ]
+  }
+}

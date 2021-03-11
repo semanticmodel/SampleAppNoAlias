@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "PERSONS (Suppliers)",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

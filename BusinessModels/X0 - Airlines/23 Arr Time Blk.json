@@ -1,0 +1,105 @@
+{
+  "logicalTable": {
+    "name": "23 Arr Time Blk",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Arr Time Blk",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "71 ARRTIMEBLK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.22 ARRTIMEBLK.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_23_Arr_00039CE7",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7.Arr_Time_B00039BAD"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.23 Arr Time Blk Detail"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "71 ARRTIMEBLK",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.22 ARRTIMEBLK"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.23 Arr Time Blk.23 Arr Time Blk Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_23_Arr_00039CE7",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_23_Arr_00039CE7"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.23 Arr Time Blk.23 Arr Time Blk Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.23 Arr Time Blk.23 Arr Time Blk Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "23 Arr Time Blk Total",
+      "logicalLevels": [
+        {
+          "name": "23 Arr Time Blk Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "23 Arr Time Blk Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 19,
+          "primaryColumns": [
+            "logicalColumn:Arr Time Blk"
+          ],
+          "displayColumn": "logicalColumn:Arr Time Blk"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "23 Arr Time Blk",
+          "levels": [ "23 Arr Time Blk Total", "23 Arr Time Blk Detail" ]
+        }
+      ]
+    }
+  }
+}

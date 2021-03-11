@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Telco Dim",
+    "presentationColumns": [ {
+        "name": "Address",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Address"
+      },
+      {
+        "name": "Ageaugmented",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Ageaugmented"
+      },
+      {
+        "name": "Agegroup",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Agegroup"
+      },
+      {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.City"
+      },
+      {
+        "name": "Customer Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Customer Id"
+      },
+      {
+        "name": "Lifetimevalue",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Lifetimevalue"
+      },
+      {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Name"
+      },
+      {
+        "name": "Plans",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Plans"
+      },
+      {
+        "name": "Product",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Product"
+      },
+      {
+        "name": "Region",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Region"
+      },
+      {
+        "name": "Segment",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Segment"
+      },
+      {
+        "name": "State",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.State"
+      },
+      {
+        "name": "Times",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Times"
+      },
+      {
+        "name": "Zip",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Zip"
+      },
+      {
+        "name": "Tenure",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Dim.Tenure"
+      }
+    ]
+  }
+}

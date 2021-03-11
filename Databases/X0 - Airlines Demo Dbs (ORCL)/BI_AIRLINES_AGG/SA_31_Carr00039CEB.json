@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "SA_31_Carr00039CEB",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Carrier00039BA9",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Carrier_00039CEBSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Carrier_Co00039BAA",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,281 @@
+{
+  "logicalTable": {
+    "name": "UT Phys SQL",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Physical Sources",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "UT_SOURCE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE.sources"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical SQL",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.QUERY_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.END_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Hour Min",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.END_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Ts",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.END_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Phys Sql Sequence Id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logical Query Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical SQL Blob",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.QUERY_BLOB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Count",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.ROW_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Hour Min",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.START_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Ts",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.START_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Time Sec",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.TIME_SEC"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "UT_SOURCE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE"
+          ]
+        }
+      },
+      {
+        "name": "S_NQ_DB_ACCT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Phys SQL Total",
+      "logicalLevels": [
+        {
+          "name": "Phys SQL Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Logical Query ID",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5000,
+          "primaryColumns": [
+            "logicalColumn:Logical Query Id"
+          ],
+          "displayColumn": "logicalColumn:Logical Query Id"
+        },
+        {
+          "name": "Physical SQL Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10000,
+          "primaryColumns": [
+            "logicalColumn:Phys Sql Sequence Id",
+            "logicalColumn:Logical Query Id"
+          ],
+          "displayColumn": "logicalColumn:Phys Sql Sequence Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT Phys SQL [branch at level 'Logical Query ID']",
+          "levels": [ "Phys SQL Total", "Logical Query ID", "Physical SQL Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "Commodity Hierarchy - Xref",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Commodity",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "XREF_COMMODITY_HEIRCHY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_COMMODITY_HEIRCHY.COMMODITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Commodity Hierarchy",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "XREF_COMMODITY_HEIRCHY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_COMMODITY_HEIRCHY.COMMODITY_HIERARCHY"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "XREF_COMMODITY_HEIRCHY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.XREF_COMMODITY_HEIRCHY"
+          ]
+        }
+      }
+    ]
+  }
+}

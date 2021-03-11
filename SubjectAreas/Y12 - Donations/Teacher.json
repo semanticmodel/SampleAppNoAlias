@@ -1,0 +1,37 @@
+{
+  "presentationTable": {
+    "name": "Teacher",
+    "presentationColumns": [ {
+        "name": "Teacher ID",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Teacher.Teacher ID"
+      },
+      {
+        "name": "NY Teaching Fellow",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Teacher.NY Teaching Fellow"
+      },
+      {
+        "name": "Prefix",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Teacher.Prefix"
+      },
+      {
+        "name": "Teach for America",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Teacher.Teach for America"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Teacher",
+        "sourceLogicalTable": "logicalTable:Y12 - Donations.Teacher",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Teacher.Total"
+          },
+          {
+            "name": "Detail",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Teacher.Detail",
+            "displayColumn": "presentationColumn:Y12 - Donations.Teacher.Teacher ID"
+          }
+        ]
+      }
+    ]
+  }
+}

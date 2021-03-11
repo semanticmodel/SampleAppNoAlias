@@ -1,0 +1,762 @@
+{
+  "logicalTable": {
+    "name": "UT L Query Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Avg Row Count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ROW_COUNT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Total Time in Secs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.TOTAL_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Total Time In Secs",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "TimeStampDiff(SQL_TSI_second, To_DateTime(cast(%1 as varchar(10))||' '||%2 , 'DD-MON-YY hh24:mi')\r\n,to_DateTime(cast(%3 as varchar(10))||' '||%4 , 'DD-MON-YY hh24:mi')\r\n) \r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Compile Time In Secs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.COMPILE_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Total Num dB Queries",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_DB_QUERY"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Num dB Queries",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_DB_QUERY"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Queries",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Total Time Spent in dB",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Time Spent in dB",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "StartDate",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "QueryText",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.QUERY_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Row Count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ROW_COUNT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Total Time in Secs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.TOTAL_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Compile Time in Secs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.COMPILE_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Time Spent in dB",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CUM_DB_TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "StartHourMin",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Number of cache entries inserted",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_CACHE_INSERTED"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Number of cache hits",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.NUM_CACHE_HITS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_DASHBOARD"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Page Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_DASHBOARD_PG"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Report Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_SRC_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Distinct Users",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "% of Cache Hits",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST ( %1  AS DOUBLE PRECISION ) /  %2 \r\n * 100\r\n",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.UT L Query Facts.# of Queries Hitting Cache",
+              "logicalColumn:10 - Usage Tracking.UT L Query Facts.# of Queries"
+            ]
+          }
+        }
+      },
+      {
+        "name": "# of Queries Hitting Cache",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN   %1 ='Y' then   %2 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.CACHE_IND_FLG",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Users",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.USER_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Sessions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SESSION_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Start Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "To_DateTime(cast(%1 as varchar(10))||' '||%2 , 'DD-MON-YY hh24:mi')\r\n\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.START_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MIN"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQSACCT",
+              "physicalExpression": {
+                "expressionTemplate": "To_DateTime(cast(%1 as varchar(10))||' '||%2 , 'DD-MON-YY hh24:mi')",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.END_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Minutes Start to End",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "TimeStampDiff(SQL_TSI_minute,  %1 , %2 )",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.UT L Query Facts.Min Start Time",
+              "logicalColumn:10 - Usage Tracking.UT L Query Facts.Max End Time"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "NQSACCT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.UT L Query Time.Hour Min Detail",
+          "logicalLevel:10 - Usage Tracking.UT L Query.L SQL Detail",
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail",
+          "logicalLevel:10 - Usage Tracking.UT L Query Users.UT Users Detail",
+          "logicalLevel:10 - Usage Tracking.UT Navigation.UT Navigation",
+          "logicalLevel:10 - Usage Tracking.UT Phys SQL.Phys SQL Total"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Phys SQL Total",
+      "logicalLevels": [
+        {
+          "name": "Phys SQL Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Logical Query ID",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5000,
+          "primaryColumns": [
+            "logicalColumn:Logical Query Id"
+          ],
+          "displayColumn": "logicalColumn:Logical Query Id"
+        },
+        {
+          "name": "Physical SQL Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10000,
+          "primaryColumns": [
+            "logicalColumn:Phys Sql Sequence Id",
+            "logicalColumn:Logical Query Id"
+          ],
+          "displayColumn": "logicalColumn:Phys Sql Sequence Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT Phys SQL [branch at level 'Logical Query ID']",
+          "levels": [ "Phys SQL Total", "Logical Query ID", "Physical SQL Detail" ]
+        }
+      ]
+    }
+  }
+}

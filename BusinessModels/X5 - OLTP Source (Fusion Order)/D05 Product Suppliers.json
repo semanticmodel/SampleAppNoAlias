@@ -1,0 +1,534 @@
+{
+  "logicalTable": {
+    "name": "D05 Product Suppliers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Email",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.EMAIL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).EMAIL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).EMAIL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Phone Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.PHONE_NUMBER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).PHONE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.SUPPLIER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.SUPPLIER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.SUPPLIER_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ui Skin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.UI_SKIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Principal Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).PRINCIPAL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Registered Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).REGISTERED_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Title",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).TITLE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).TITLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "First Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).FIRST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).LAST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).PERSON_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Address1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).ADDRESS1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Address2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).ADDRESS2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Country Id",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).LATITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).LONGITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).POSTAL_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SUPPLIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "PERSONS (Suppliers)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Supplier Primary)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Status Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2  ,\r\n'FR',\r\n'SUPPLIER_STATUS_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Status"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Supplier Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2  ,\r\n'FR',\r\n'SUPPLIER_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Type Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "SUPPLIERS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).SUPPLIER_ID"
+            }
+          ]
+        }
+      },
+      {
+        "name": "PERSONS (Suppliers)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).SUPPLIER_ID"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).PERSONS (Suppliers)_FKey"
+            }
+          ]
+        }
+      },
+      {
+        "name": "ADDRESSES (Supplier Primary)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers)",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).SUPPLIER_ID"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).PERSONS (Suppliers)_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).PERSONS (Suppliers)_FKey#1"
+            }
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Status",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5,
+          "primaryColumns": [
+            "logicalColumn:Supplier Status"
+          ],
+          "displayColumn": "logicalColumn:Supplier Status"
+        },
+        {
+          "name": "Supplier Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 15,
+          "primaryColumns": [
+            "logicalColumn:Supplier ID",
+            "logicalColumn:Product ID"
+          ],
+          "displayColumn": "logicalColumn:Supplier ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H05 Suppliers [branch at level 'Status']",
+          "levels": [ "Total", "Status", "Supplier Detail" ]
+        }
+      ]
+    }
+  }
+}

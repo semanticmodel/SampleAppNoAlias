@@ -1,0 +1,80 @@
+{
+  "presentationTable": {
+    "name": "Orders Attributes",
+    "presentationColumns": [ {
+        "name": "Order ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order ID"
+      },
+      {
+        "name": "Order Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order Date"
+      },
+      {
+        "name": "Order Shipped Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order Shipped Date"
+      },
+      {
+        "name": "Order Status Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order Status Lookup"
+      },
+      {
+        "name": "Order Status Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order Status Code"
+      },
+      {
+        "name": "Customer Collect Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Customer Collect Flag"
+      },
+      {
+        "name": "Free Shipping Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Free Shipping Flag"
+      },
+      {
+        "name": "Giftwrap Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Giftwrap Flag"
+      },
+      {
+        "name": "Giftwrap Message",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Giftwrap Message"
+      },
+      {
+        "name": "Ship To Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Ship To Name"
+      },
+      {
+        "name": "Ship To Phone Number",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Ship To Phone Number"
+      },
+      {
+        "name": "Order Line Item ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Order Line Item ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Orders Hier",
+        "alternateNames": [
+          "H07 Orders Attributes"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D07 Orders Attributes",
+        "levels": [ {
+            "name": "Total Orders",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Total"
+          },
+          {
+            "name": "Status",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Status",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Orders Attributes.Order Status Code"
+          },
+          {
+            "name": "Orders Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Orders Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Orders Attributes.Order ID"
+          }
+        ]
+      }
+    ]
+  }
+}

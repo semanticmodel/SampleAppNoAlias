@@ -1,0 +1,55 @@
+{
+  "businessModel": {
+    "name": "03 - Essbase GL",
+    "joins": [      {
+        "name": "03 - Essbase GL:Relationship_2004:895511286379243",
+        "leftTable": "logicalTable:03 - Essbase GL.Measures",
+        "rightTable": "logicalTable:03 - Essbase GL.Entities",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:903611286463557",
+        "leftTable": "logicalTable:03 - Essbase GL.GL Balance Sheet",
+        "rightTable": "logicalTable:03 - Essbase GL.Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:893951286379243",
+        "leftTable": "logicalTable:03 - Essbase GL.Measures",
+        "rightTable": "logicalTable:03 - Essbase GL.Years",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:892241286379243",
+        "leftTable": "logicalTable:03 - Essbase GL.Measures",
+        "rightTable": "logicalTable:03 - Essbase GL.Time Periods",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:901511286462406",
+        "leftTable": "logicalTable:03 - Essbase GL.GL Income Statement",
+        "rightTable": "logicalTable:03 - Essbase GL.Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:893571286379243",
+        "leftTable": "logicalTable:03 - Essbase GL.Measures",
+        "rightTable": "logicalTable:03 - Essbase GL.GL All Accounts",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "03 - Essbase GL:Relationship_2004:893761286379243",
+        "leftTable": "logicalTable:03 - Essbase GL.Measures",
+        "rightTable": "logicalTable:03 - Essbase GL.Scenarios",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

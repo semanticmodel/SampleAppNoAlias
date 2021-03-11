@@ -1,0 +1,152 @@
+{
+  "logicalTable": {
+    "name": "Bbil Fiscal Periods",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Date Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.DATE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fiscal Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.FISCAL_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fiscal Qtr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.FISCAL_QTR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fiscal We Date",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.FISCAL_WE_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fiscal Week Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.FISCAL_WEEK_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fiscal Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.FISCAL_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plot Qtr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.PLOT_QTR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Transaction Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Fiscal Periods",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.TRANSACTION_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Fiscal Periods",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS"
+          ]
+        }
+      }
+    ]
+  }
+}

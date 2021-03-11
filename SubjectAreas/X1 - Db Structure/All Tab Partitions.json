@@ -1,0 +1,178 @@
+{
+  "presentationTable": {
+    "name": "All Tab Partitions",
+    "alternateNames": [
+      "All_tab_partitions",
+      "OBJ- ALL_TAB_PARTITIONS"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Row Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Avg Row Len"
+      },
+      {
+        "name": "Avg Space",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Avg Space"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Blocks"
+      },
+      {
+        "name": "Buffer Pool",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Buffer Pool"
+      },
+      {
+        "name": "Cell Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Cell Flash Cache"
+      },
+      {
+        "name": "Chain Cnt",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Chain Cnt"
+      },
+      {
+        "name": "Composite",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Composite"
+      },
+      {
+        "name": "Compress For",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Compress For"
+      },
+      {
+        "name": "Compression",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Compression"
+      },
+      {
+        "name": "Empty Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Empty Blocks"
+      },
+      {
+        "name": "Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Flash Cache"
+      },
+      {
+        "name": "Freelist Groups",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Freelist Groups"
+      },
+      {
+        "name": "Freelists",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Freelists"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Global Stats"
+      },
+      {
+        "name": "High Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.High Value"
+      },
+      {
+        "name": "High Value Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.High Value Length"
+      },
+      {
+        "name": "Ini Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Ini Trans"
+      },
+      {
+        "name": "Initial Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Initial Extent"
+      },
+      {
+        "name": "Interval",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Interval"
+      },
+      {
+        "name": "Is Nested",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Is Nested"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Last Analyzed"
+      },
+      {
+        "name": "Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Logging"
+      },
+      {
+        "name": "Max Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Max Extent"
+      },
+      {
+        "name": "Max Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Max Size"
+      },
+      {
+        "name": "Max Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Max Trans"
+      },
+      {
+        "name": "Min Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Min Extent"
+      },
+      {
+        "name": "Next Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Next Extent"
+      },
+      {
+        "name": "Num Rows",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Num Rows"
+      },
+      {
+        "name": "Parent Table Partition",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Parent Table Partition"
+      },
+      {
+        "name": "Partition Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Partition Name"
+      },
+      {
+        "name": "Partition Position",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Partition Position"
+      },
+      {
+        "name": "Pct Free",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Pct Free"
+      },
+      {
+        "name": "Pct Increase",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Pct Increase"
+      },
+      {
+        "name": "Pct Used",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Pct Used"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Sample Size"
+      },
+      {
+        "name": "Segment Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Segment Created"
+      },
+      {
+        "name": "Subpartition Count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Subpartition Count"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Table Name"
+      },
+      {
+        "name": "Table Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Table Owner"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.Tablespace Name"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.User Stats"
+      },
+      {
+        "name": "# Of Partitions",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS.# Of Partitions"
+      }
+    ]
+  }
+}

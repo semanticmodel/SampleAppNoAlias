@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Pop By Earnings",
+    "presentationColumns": [ {
+        "name": "Total Pop 0 - 14 150k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 0 - 14 150k - 500k"
+      },
+      {
+        "name": "Total Pop 0 - 14 Gt 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 0 - 14 Gt 500k"
+      },
+      {
+        "name": "Total Pop 0 - 14 Lt 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 0 - 14 Lt 150k"
+      },
+      {
+        "name": "Total Pop 15 - 29 150k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 15 - 29 150k - 500k"
+      },
+      {
+        "name": "Total Pop 15 - 29 Gt 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 15 - 29 Gt 500k"
+      },
+      {
+        "name": "Total Pop 15 - 29 Lt 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 15 - 29 Lt 150k"
+      },
+      {
+        "name": "Total Pop 30 - 44 150k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 30 - 44 150k - 500k"
+      },
+      {
+        "name": "Total Pop 30 - 44 Gt 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 30 - 44 Gt 500k"
+      },
+      {
+        "name": "Total Pop 30 - 44 Lt 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 30 - 44 Lt 150k"
+      },
+      {
+        "name": "Total Pop 45 - 59 150k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 45 - 59 150k - 500k"
+      },
+      {
+        "name": "Total Pop 45 - 59 Gt 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 45 - 59 Gt 500k"
+      },
+      {
+        "name": "Total Pop 45 - 59 Lt 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 45 - 59 Lt 150k"
+      },
+      {
+        "name": "Total Pop Gt 59 150k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Gt 59 150k - 500k"
+      },
+      {
+        "name": "Total Pop Gt 59 Gt 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Gt 59 Gt 500k"
+      },
+      {
+        "name": "Total Pop Gt 59 Lt 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Gt 59 Lt 150k"
+      }
+    ]
+  }
+}

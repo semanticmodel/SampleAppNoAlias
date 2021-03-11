@@ -1,0 +1,150 @@
+{
+  "logicalTable": {
+    "name": "UT Phys SQL Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "# Physical SQL",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.QUERY_TEXT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Phys Sql Sequence Id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logical Query Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sum Row Count",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.ROW_COUNT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Phys SQL Time Sec",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.TIME_SEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Logical Queries",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_DB_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "S_NQ_DB_ACCT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT"
+          ]
+        }
+      }
+    ]
+  }
+}

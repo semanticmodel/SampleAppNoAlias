@@ -1,0 +1,900 @@
+{
+  "logicalTable": {
+    "name": "DB- V_DATABASE",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Activation#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.ACTIVATION#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Archive Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.ARCHIVE_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Archivelog Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.ARCHIVELOG_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Archivelog Compression",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.ARCHIVELOG_COMPRESSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Checkpoint Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CHECKPOINT_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Converted",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_CONVERTED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Created",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_CREATED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Sequence#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_SEQUENCE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Controlfile Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CONTROLFILE_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Created",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CREATED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Current Scn",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.CURRENT_SCN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Database Role",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.DATABASE_ROLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dataguard Broker",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.DATAGUARD_BROKER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Db Unique Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.DB_UNIQUE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbid",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.DBID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flashback On",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FLASHBACK_ON"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Force Logging",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FORCE_LOGGING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fs Failover Current Target",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FS_FAILOVER_CURRENT_TARGET"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fs Failover Observer Host",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FS_FAILOVER_OBSERVER_HOST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fs Failover Observer Present",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FS_FAILOVER_OBSERVER_PRESENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fs Failover Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FS_FAILOVER_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fs Failover Threshold",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.FS_FAILOVER_THRESHOLD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Guard Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.GUARD_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Open Incarnation#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.LAST_OPEN_INCARNATION#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Log Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.LOG_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Required Capture Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.MIN_REQUIRED_CAPTURE_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Open Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.OPEN_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Open Resetlogs",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.OPEN_RESETLOGS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Platform Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PLATFORM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Platform Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PLATFORM_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Primary Db Unique Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PRIMARY_DB_UNIQUE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prior Resetlogs Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PRIOR_RESETLOGS_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prior Resetlogs Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PRIOR_RESETLOGS_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Protection Level",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PROTECTION_LEVEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Protection Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.PROTECTION_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recovery Target Incarnation#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.RECOVERY_TARGET_INCARNATION#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Remote Archive",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.REMOTE_ARCHIVE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Resetlogs Change#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.RESETLOGS_CHANGE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Resetlogs Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.RESETLOGS_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Standby Became Primary Scn",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.STANDBY_BECAME_PRIMARY_SCN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data All",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_ALL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data Fk",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_FK"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data Min",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data Pk",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_PK"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data Pl",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_PL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplemental Log Data Ui",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SUPPLEMENTAL_LOG_DATA_UI"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Switchover#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SWITCHOVER#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Switchover Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.SWITCHOVER_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Version Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$DATABASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$DATABASE.VERSION_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_$DATABASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.V$DATABASE"
+          ]
+        }
+      }
+    ]
+  }
+}

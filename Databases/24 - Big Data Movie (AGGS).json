@@ -1,0 +1,103 @@
+{
+  "database": {
+    "name": "24 - Big Data Movie (AGGS)",
+    "allowDirectDatabaseRequests": true,
+    "allowPopulateQueries": true,
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Aggs Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "CJ_SA__000473A8_00047397",
+        "leftTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev",
+        "rightTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2 AND %3 = %4",
+          "expressionObjects": [
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev.Month00046864",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Month00046864",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev.Week000470BA",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Week000471A0.Week000470BA"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "CJ_SA__000473A8_0004738C",
+        "leftTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev",
+        "rightTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Country00047066",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2",
+          "expressionObjects": [
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev.Customer_C00045FC8",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Country00047066.Customer_C00045FC8"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "CJ_SA__000473A8_00047391",
+        "leftTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev",
+        "rightTable": "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081",
+        "joinExpression": {
+          "expressionTemplate": "%1 NULLSEQUAL %2 AND %3 NULLSEQUAL %4",
+          "expressionObjects": [
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev.Genre_ID00045FB5",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081.Genre_ID00045FB5",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.ag_Facts_Hive_Rev.Genre_Name00045FBB",
+            "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081.Genre_Name00045FBB"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      }
+    ]
+  }
+}

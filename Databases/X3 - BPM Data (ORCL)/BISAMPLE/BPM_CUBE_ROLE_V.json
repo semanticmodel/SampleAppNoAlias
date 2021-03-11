@@ -1,0 +1,40 @@
+{
+  "physicalTable": {
+    "name": "BPM_CUBE_ROLE_V",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "ISPROCESSOWNER",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "ROLENAME",
+        "dataType": "VARCHAR",
+        "length": 200,
+        "nullable": true
+      },
+      {
+        "name": "LABEL",
+        "dataType": "VARCHAR",
+        "length": 500
+      },
+      {
+        "name": "PROCESSID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ROLEID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "APPROLENAME",
+        "dataType": "VARCHAR",
+        "length": 400
+      }
+    ]
+  }
+}

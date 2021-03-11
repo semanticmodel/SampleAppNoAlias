@@ -1,0 +1,45 @@
+{
+  "presentationTable": {
+    "name": "Explicit Allowings",
+    "alternateNames": [
+      "Facts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Allowed Reads",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Reads"
+      },
+      {
+        "name": "# of Allowed Execute/Traverses",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Execute/Traverses"
+      },
+      {
+        "name": "# of Allowed Writes",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Writes"
+      },
+      {
+        "name": "# of Allowed Deletes",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Deletes"
+      },
+      {
+        "name": "# of Allowed ChangePermitteds",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed ChangePermitteds"
+      },
+      {
+        "name": "# of Allowed Set Ownerships",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Set Ownerships"
+      },
+      {
+        "name": "# of Allowed Run Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Run Publisher Reports"
+      },
+      {
+        "name": "# of Allowed Schedule Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed Schedule Publisher Reports"
+      },
+      {
+        "name": "# of Allowed View Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Allowed View Publisher Reports"
+      }
+    ]
+  }
+}

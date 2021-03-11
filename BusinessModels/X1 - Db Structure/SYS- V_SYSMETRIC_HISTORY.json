@@ -1,0 +1,152 @@
+{
+  "logicalTable": {
+    "name": "SYS- V_SYSMETRIC_HISTORY",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Begin Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.BEGIN_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.END_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Group Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.GROUP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Intsize Csec",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.INTSIZE_CSEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.METRIC_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.METRIC_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Unit",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.METRIC_UNIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_HISTORY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY.VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_$SYSMETRIC_HISTORY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_HISTORY"
+          ]
+        }
+      }
+    ]
+  }
+}

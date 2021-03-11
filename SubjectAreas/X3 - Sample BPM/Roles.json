@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Roles",
+    "presentationColumns": [ {
+        "name": "Process Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.Process Id"
+      },
+      {
+        "name": "App Role Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.App Role Name"
+      },
+      {
+        "name": "Isprocessowner",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.Isprocessowner"
+      },
+      {
+        "name": "Label",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.Label"
+      },
+      {
+        "name": "Role Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.Role Id"
+      },
+      {
+        "name": "Role Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).4 Dim Roles.Role Name"
+      }
+    ]
+  }
+}

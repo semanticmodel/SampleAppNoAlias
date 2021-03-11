@@ -1,0 +1,196 @@
+{
+  "physicalTable": {
+    "name": "V$XS_SESSION",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NLS_DATE_LANGUAGE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_DUAL_CURRENCY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "INACTIVETIMEOUT",
+        "dataType": "INT",
+        "length": 6
+      },
+      {
+        "name": "USERNAME",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "USERGUID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "NLS_TIMESTAMP_FMT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "COOKIE",
+        "dataType": "VARCHAR",
+        "length": 1024
+      },
+      {
+        "name": "NLS_SORT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_NCHAR_CONV_EXCP",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_NUMERIC_CHRS",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_MONETARY_CHRS",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "PROXYGUID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "NLS_CURRENCY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "ACCESSTIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "ACLOID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "NLS_ISO_CURRENCY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_LANGUAGE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_TERRITORY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "AUTHTIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "PROXYID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "NLS_DATE_FORMAT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_TIMESTAMP_TZ_FMT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "SESSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NLS_LENGTH_SEMANTICS",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_LIST_SEPARATOR",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "SID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "APPS_FEATURE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_CREDIT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_CALENDAR",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "CREATETIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "UPDATEID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "NLS_LANG",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "NLS_COMP",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "CREATORID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "USERID",
+        "dataType": "DOUBLE",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "NLS_DEBIT",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

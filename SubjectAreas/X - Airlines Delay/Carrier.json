@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Carrier",
+    "alternateNames": [
+      "C",
+      "Car"
+    ],
+    "presentationColumns": [ {
+        "name": "Tail Num !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Tail Num !",
+        "alternateNames": [
+          "Tail Num"
+        ]
+      },
+      {
+        "name": "Carrier Flight #",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Carrier Flight #",
+        "description": "First Gate Departure Time at Origin Airport",
+        "alternateNames": [
+          "Carrier Flight # !"
+        ]
+      },
+      {
+        "name": "Carrier",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier"
+      },
+      {
+        "name": "Carrier Short",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier Short"
+      },
+      {
+        "name": "Carrier Code",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier Code",
+        "description": "Unique Carrier Code. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2). Use this field for analysis across a range of years.",
+        "alternateNames": [
+          "CODE",
+          "Unique Carrier Code"
+        ]
+      },
+      {
+        "name": "Pilot ID",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.50 Flight.Pilot ID"
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "subjectArea": {
+    "name": "M - Big Data Movie",
+    "sourceBusinessModel": "businessModel:12 - Big Data Movie",
+    "description": "A movie application log data residing in Hadoop HDFS is sourced using different access mechanisms (website click stream logs).",
+    "tableOrder": [
+      {
+        "name": "presentationTable:M - Big Data Movie.Datetime"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Movie"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Customer"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Activity"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Facts (Hive)"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Facts (Impala)"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Facts (BDSQL)"
+      },
+      {
+        "name": "presentationTable:M - Big Data Movie.Facts (Spark)"
+      }
+    ]
+  }
+}

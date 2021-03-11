@@ -1,0 +1,16 @@
+{
+  "physicalTable": {
+    "name": "SESSION_PRIVS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PRIVILEGE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,495 @@
+{
+  "logicalTable": {
+    "name": "F0 Flat Measures (E1)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "--- Base Essb Measures -------------------------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "1- Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "2- Billed Quantity",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).2- Billed Quantity"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "3- Discount Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Discount Amount"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).3- Discount Amount"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "10 - Variable Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Variable Costs"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).10 - Variable Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "11 - Fixed Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Fixed Costs"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).11 - Fixed Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "15 - Gross Margin",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Margin"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).15 - Gross Margin"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "17 - Net Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Net Costs"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).17 - Net Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "16 - Net Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Net Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).16 - Net Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "--- BIEE Logical Calculations ------------------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "18 - Gross Margin Pct",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "(%1 \r\n- %2 \r\n- %3 \r\n-%4 )\r\n\r\n\r\n\r\n/\r\ncast(%5 as double) *100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).3- Discount Amount",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).11 - Fixed Costs",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).10 - Variable Costs",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).16 - Net Revenue"
+            ]
+          }
+        }
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast( %1  as double)/ %2 \r\n\r\n",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).2- Billed Quantity"
+            ]
+          }
+        }
+      },
+      {
+        "name": "22  Discount Rate",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 / %2 \r\n*100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).3- Discount Amount",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue"
+            ]
+          }
+        }
+      },
+      {
+        "name": "121  Period Ago Rev",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "Ago( %1 , 1) ",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue"
+            ]
+          }
+        }
+      },
+      {
+        "name": "123  Rev Pct Var to Period Ago",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "(cast(%1 as double) / %2 -1)*100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue",
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).121  Period Ago Rev"
+            ]
+          }
+        }
+      },
+      {
+        "name": "149  Spanning 4 Periods Rev N-2 to +N+1",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "PeriodRolling( %1, -2,1) ",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue"
+            ]
+          }
+        }
+      },
+      {
+        "name": "60- ---- Essbase Calculations -------------------------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "61  Top 5 Customers (Evaluate)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": " EVALUATE('TopCount(%1.members, 5, %2)' AS  VARCHAR ( 20 ), %1, %2)",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members",
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "62  Rev Cust STDDev (Evaluate Aggr)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": " EVALUATE_AGGR('STDDEV(Customers.currentmember.children,%1)', %1)",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " EVALUATE_AGGR_LOGICAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).62  Rev Cust STDDev (Evaluate Aggr)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "63  Rev Cust Avg (Evaluate Aggr)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": " EVALUATE_AGGR('AVG(Customers.currentmember.children,%1)', %1)",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " EVALUATE_AGGR_LOGICAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).63  Rev Cust Avg (Evaluate Aggr)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "32  # of Customers (Cnt Distinct)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members - Member Key"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E1",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H6 Customers.Customer Members",
+          "logicalLevel:03 - Essbase Sample.H5 Employees.Detail",
+          "logicalLevel:03 - Essbase Sample.H6 Marital Status.Marital Stat",
+          "logicalLevel:03 - Essbase Sample.H0 Time.Month Members",
+          "logicalLevel:03 - Essbase Sample.H0 Month of Year.Month Names",
+          "logicalLevel:03 - Essbase Sample.H1 Products.Product Members"
+        ]
+      }
+    ]
+  }
+}

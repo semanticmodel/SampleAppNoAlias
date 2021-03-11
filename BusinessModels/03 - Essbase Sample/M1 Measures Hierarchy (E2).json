@@ -1,0 +1,273 @@
+{
+  "logicalTable": {
+    "name": "M1 Measures Hierarchy (E2)",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Gen4,Measures",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen4,Measures - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen4,Measures"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4,Measures - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen4,Measures - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4,Measures - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen4,Measures - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3,Measures - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen3,Measures - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3,Measures - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen3,Measures - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3,Measures",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen3,Measures - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen3,Measures"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2,Measures",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen2,Measures - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen2,Measures"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2,Measures - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen2,Measures - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2,Measures - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen2,Measures - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Measures - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen1,Measures - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Measures",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen1,Measures - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen1,Measures"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Measures - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Gen1,Measures - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E2",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.M1 Measures Hier.Gen4,Measures"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Gen1,Measures",
+      "logicalLevels": [
+        {
+          "name": "Gen1,Measures",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen1,Measures - Member Key"
+          ],
+          "displayColumn": "logicalColumn:Gen1,Measures - Member Key"
+        },
+        {
+          "name": "Gen2,Measures",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2,
+          "primaryColumns": [
+            "logicalColumn:Gen2,Measures - Member Key"
+          ]
+        },
+        {
+          "name": "Gen3,Measures",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:Gen3,Measures - Member Key"
+          ]
+        },
+        {
+          "name": "Gen4,Measures",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 8,
+          "primaryColumns": [
+            "logicalColumn:Gen4,Measures"
+          ],
+          "displayColumn": "logicalColumn:Gen4,Measures"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "M1 Measures Hier [branch at level 'Gen3,Measures']",
+          "levels": [ "Gen1,Measures", "Gen2,Measures", "Gen3,Measures", "Gen4,Measures" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Stock Sample",
+    "presentationColumns": [ {
+        "name": "Close",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.Close"
+      },
+      {
+        "name": "High",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.High"
+      },
+      {
+        "name": "Low",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.Low"
+      },
+      {
+        "name": "Open",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.Open"
+      },
+      {
+        "name": "Date",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.Date"
+      },
+      {
+        "name": "Volume",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Stock Sample.Volume"
+      }
+    ]
+  }
+}

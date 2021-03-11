@@ -1,0 +1,210 @@
+{
+  "physicalTable": {
+    "name": "SA_Custome00004BA0",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "C62_Geo_C00003A53",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true
+      },
+      {
+        "name": "C18_Numer00003A74",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "C52_Count00003AAB",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "C50_Regio00003B56",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "C59_Estab00003BC8",
+        "dataType": "VARCHAR",
+        "length": 240
+      },
+      {
+        "name": "C14_Birth00003BF0",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "C69_Area_00003D0E",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "C2k_Cust_00003D34",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "C0_Custom00003EE7",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "C7k_Marit00003F01",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "C64_Latit00003FBA",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "C68_Regio00004065",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "C12_First000040BC",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "C53_State000040CE",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "C5k_Incom00004109",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "C58_Addre0000412F",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "C57_Addre000041A6",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "C61_Geo_C000041C7",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true
+      },
+      {
+        "name": "C8_Prev_M000042FB",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "C4k_Cust_000043D1",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "C65_Longi00004456",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "C6_Credit0000445C",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "C55_City00004549",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "C13_Last_00004592",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "C54_State0000474C",
+        "dataType": "VARCHAR",
+        "length": 6,
+        "nullable": true
+      },
+      {
+        "name": "C3k_Cust_00004761",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "C51_Area00004782",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "C9_Gender0000479D",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "C4_Custom000047D6",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "C1_Custom00004813",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "C56_Posta00004889",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "C67_Geo_P00004948",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "C60k_Addr0000496B",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "C63_Geo_C00004A2B",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true
+      },
+      {
+        "name": "C10_Prev_00004A66",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "Custome_00004BA0SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

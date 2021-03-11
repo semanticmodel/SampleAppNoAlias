@@ -1,0 +1,237 @@
+{
+  "logicalTable": {
+    "name": "90 Schedules",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Analysis Function",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).ANALYSIS_FN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Itinerary",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1 + 1 - min(%1)",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).SCHEDULE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flight Leg",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).HOP_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Origin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).ORIGIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Destination",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).DESTINATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Route",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1 || '-' || %2 ",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).ORIGIN",
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).DESTINATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Departure Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).DEPART_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Arrival Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).ARR_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flight Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).FLIGHT_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Airline",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).AIRLINE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flight Time",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).FLIGHT_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Time at Airport",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "90 Schedules (NDM)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM).WAIT_AT_AIRPORT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "90 Schedules (NDM)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.90 Schedules (NDM)"
+          ]
+        }
+      }
+    ]
+  }
+}

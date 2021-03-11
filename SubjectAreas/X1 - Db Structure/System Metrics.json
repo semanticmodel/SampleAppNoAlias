@@ -1,0 +1,41 @@
+{
+  "presentationTable": {
+    "name": "System Metrics",
+    "alternateNames": [
+      "SYS- V_SYSMETRIC"
+    ],
+    "presentationColumns": [ {
+        "name": "Begin Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Begin Time"
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.End Time"
+      },
+      {
+        "name": "Group Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Group Id"
+      },
+      {
+        "name": "Intsize Csec",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Intsize Csec"
+      },
+      {
+        "name": "Metric Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Metric Id"
+      },
+      {
+        "name": "Metric Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Metric Name"
+      },
+      {
+        "name": "Metric Unit",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Metric Unit"
+      },
+      {
+        "name": "Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC.Value"
+      }
+    ]
+  }
+}

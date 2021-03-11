@@ -1,0 +1,264 @@
+{
+  "physicalTable": {
+    "name": "V_$DATABASE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OPEN_MODE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "PRIOR_RESETLOGS_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "RESETLOGS_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTROLFILE_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_UI",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DATABASE_ROLE",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_MIN",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "ARCHIVELOG_COMPRESSION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "GUARD_STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DB_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PRIMARY_DB_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ARCHIVELOG_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SWITCHOVER#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTROLFILE_CREATED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PLATFORM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REMOTE_ARCHIVE",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "SWITCHOVER_STATUS",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "FS_FAILOVER_OBSERVER_HOST",
+        "dataType": "VARCHAR",
+        "length": 512
+      },
+      {
+        "name": "CHECKPOINT_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RECOVERY_TARGET_INCARNATION#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PROTECTION_MODE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTROLFILE_CONVERTED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FLASHBACK_ON",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_FK",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_PL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "LAST_OPEN_INCARNATION#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_PK",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FS_FAILOVER_STATUS",
+        "dataType": "VARCHAR",
+        "length": 22
+      },
+      {
+        "name": "OPEN_RESETLOGS",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "ACTIVATION#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PROTECTION_LEVEL",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CURRENT_SCN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MIN_REQUIRED_CAPTURE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FS_FAILOVER_CURRENT_TARGET",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "FS_FAILOVER_OBSERVER_PRESENT",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "CONTROLFILE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "PLATFORM_NAME",
+        "dataType": "VARCHAR",
+        "length": 101
+      },
+      {
+        "name": "VERSION_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "DATAGUARD_BROKER",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "ARCHIVE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUPPLEMENTAL_LOG_DATA_ALL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FORCE_LOGGING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "PRIOR_RESETLOGS_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STANDBY_BECAME_PRIMARY_SCN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTROLFILE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTROLFILE_SEQUENCE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RESETLOGS_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "FS_FAILOVER_THRESHOLD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOG_MODE",
+        "dataType": "VARCHAR",
+        "length": 12
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D61 Customer Segments",
+    "description": "Customer Segment Dimension Alias: ",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_CUST_SEGMENTS_D"
+  }
+}

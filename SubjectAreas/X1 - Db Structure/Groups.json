@@ -1,0 +1,17 @@
+{
+  "presentationTable": {
+    "name": "Groups",
+    "alternateNames": [
+      "TS- DBA_TABLESPACE_GROUPS"
+    ],
+    "presentationColumns": [ {
+        "name": "Group Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACE_GROUPS.Group Name"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACE_GROUPS.Tablespace Name"
+      }
+    ]
+  }
+}

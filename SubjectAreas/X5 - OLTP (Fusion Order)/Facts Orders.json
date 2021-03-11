@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Facts Orders",
+    "presentationColumns": [ {
+        "name": "Total Orders Value",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total Orders Value"
+      },
+      {
+        "name": "Quantity",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Quantity"
+      },
+      {
+        "name": "Unit Price",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Unit Price"
+      },
+      {
+        "name": "# of Orders",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.# of Orders"
+      },
+      {
+        "name": "# of Order Lines",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.# of Order Lines"
+      },
+      {
+        "name": "Line Item Value",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Line Item Value"
+      },
+      {
+        "name": "# of Customers",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.# of Customers"
+      },
+      {
+        "name": "Avg Order Value",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Avg Order Value"
+      },
+      {
+        "name": "Avg Line Item Value",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Avg Line Item Value"
+      },
+      {
+        "name": "Total Shipped Orders Value",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total Shipped Orders Value"
+      }
+    ]
+  }
+}

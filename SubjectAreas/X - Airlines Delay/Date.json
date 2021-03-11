@@ -1,0 +1,101 @@
+{
+  "presentationTable": {
+    "name": "Date",
+    "alternateNames": [
+      "D",
+      "Dte"
+    ],
+    "presentationColumns": [ {
+        "name": "Dep Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Year",
+        "alternateNames": [
+          "Per Name Year"
+        ]
+      },
+      {
+        "name": "Dep Half",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Half",
+        "alternateNames": [
+          "Per Name Half"
+        ]
+      },
+      {
+        "name": "Dep Month",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Month",
+        "alternateNames": [
+          "Per Name Month"
+        ]
+      },
+      {
+        "name": "Dep Qtr",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Qtr",
+        "alternateNames": [
+          "Per Name Qtr"
+        ]
+      },
+      {
+        "name": "Dep Week",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Week",
+        "alternateNames": [
+          "Per Name Week"
+        ]
+      },
+      {
+        "name": "Dep Date",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Date",
+        "alternateNames": [
+          "Calendar Date",
+          "Date"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Flight Date Hier",
+        "alternateNames": [
+          "40 Date"
+        ],
+        "sourceLogicalTable": "logicalTable:X0 - Airlines.00 Time",
+        "levels": [ {
+            "name": "Full Period",
+            "alternateNames": [
+              "Time Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Total"
+          },
+          {
+            "name": "Year",
+            "alternateNames": [
+              "Time Year"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Year",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Date.Dep Year"
+          },
+          {
+            "name": "Quarter",
+            "alternateNames": [
+              "Time Qtr"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Qtr",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Date.Dep Qtr"
+          },
+          {
+            "name": "Month",
+            "alternateNames": [
+              "Time Month"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Month",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Date.Dep Month"
+          },
+          {
+            "name": "Date",
+            "alternateNames": [
+              "Time Date"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Date",
+            "displayColumn": "presentationColumn:X - Airlines Delay.Date.Dep Date"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "5 Facts ActiveTasks",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V"
+  }
+}

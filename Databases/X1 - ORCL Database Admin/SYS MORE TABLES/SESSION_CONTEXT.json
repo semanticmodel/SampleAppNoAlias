@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "SESSION_CONTEXT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "ATTRIBUTE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NAMESPACE",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "physicalTable": {
+    "name": "S_NQ_DB_ACCT",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "ROW_COUNT",
+        "dataType": "INT"
+      },
+      {
+        "name": "END_HOUR_MIN",
+        "dataType": "CHAR",
+        "length": 5,
+        "nullable": true
+      },
+      {
+        "name": "END_DT",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "HASH_ID",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "QUERY_BLOB",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PHYSICAL_HASH_ID",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "LOGICAL_QUERY_ID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "ID",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "END_TS",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "START_TS",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "TIME_SEC",
+        "dataType": "INT"
+      },
+      {
+        "name": "START_HOUR_MIN",
+        "dataType": "CHAR",
+        "length": 5
+      },
+      {
+        "name": "QUERY_TEXT",
+        "dataType": "VARCHAR",
+        "length": 1024,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,211 @@
+{
+  "logicalTable": {
+    "name": "OBJ- V_SEGMENT_STATISTICS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Dataobj#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.DATAOBJ#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Obj#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.OBJ#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.OBJECT_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.OBJECT_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Statistic#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.STATISTIC#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Statistic Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.STATISTIC_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subobject Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.SUBOBJECT_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ts#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.TS#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SEGMENT_STATISTICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS.VALUE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_$SEGMENT_STATISTICS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.V$SEGMENT_STATISTICS"
+          ]
+        }
+      }
+    ]
+  }
+}

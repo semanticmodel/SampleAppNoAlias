@@ -1,0 +1,210 @@
+{
+  "logicalTable": {
+    "name": "Posted Date",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.DAY_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.MTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "MTH_ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.MTH_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.MTH_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month #",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.MTH_NUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.QTR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter #",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.QTR_NUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_POSTED_DATE_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.YR"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_POSTED_DATE_LTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y12 - Donations Project.PROJ_POSTED_DATE"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ],
+          "displayColumn": "logicalColumn:Year",
+          "chronologicalKey": "logicalColumn:Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:Quarter"
+          ],
+          "displayColumn": "logicalColumn:Quarter",
+          "chronologicalKey": "logicalColumn:Quarter"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:Month"
+          ],
+          "displayColumn": "logicalColumn:Month",
+          "chronologicalKey": "logicalColumn:Month"
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:Date"
+          ],
+          "displayColumn": "logicalColumn:Date",
+          "chronologicalKey": "logicalColumn:Date"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Posted Date [branch at level 'Month']",
+          "description": "default hierarchy",
+          "levels": [ "Total", "Year", "Quarter", "Month", "Detail" ]
+        }
+      ]
+    }
+  }
+}

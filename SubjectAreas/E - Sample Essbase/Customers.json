@@ -1,0 +1,51 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "presentationColumns": [ {
+        "name": "C0  Customer Number",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.C0  Customer Number"
+      },
+      {
+        "name": "C1  Customer Name",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.C1  Customer Name"
+      },
+      {
+        "name": "C4  Customer Segment",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.C4  Customer Segment"
+      },
+      {
+        "name": "Customers - High Risk",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.Customers - High Risk"
+      },
+      {
+        "name": "Customers - Low Risk",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.Customers - Low Risk"
+      },
+      {
+        "name": "All Customers",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Customers.All Customers"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Cust Segments Hier",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D6 Customers",
+        "levels": [ {
+            "name": "Total Customers",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D6 Customers.All Customers",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Customers.All Customers"
+          },
+          {
+            "name": "Segment",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D6 Customers.Customer Segments",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Customers.C4  Customer Segment"
+          },
+          {
+            "name": "Customers",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D6 Customers.Customer Members",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Customers.C1  Customer Name"
+          }
+        ]
+      }
+    ]
+  }
+}

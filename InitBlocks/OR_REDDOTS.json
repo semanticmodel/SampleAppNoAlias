@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "OR_REDDOTS",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 100 from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "OR_REDDOTS",
+        "value": "100"
+      }
+    ]
+  }
+}

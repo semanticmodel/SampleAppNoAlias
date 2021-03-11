@@ -1,0 +1,683 @@
+{
+  "logicalTable": {
+    "name": "D3 Office",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "All Offices",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Company Hierarchy - All Offices"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Offices - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - All Offices - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D1  Office",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.OFFICE_FORECAST - Organization - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D1k  Office Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Company Hierarchy - Office"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Geography Hierarchy - Office"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Office Forecast Hierarchy - Organization"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2  Department",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Department - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2k  Dept Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Company Hierarchy - Department"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3  Organization",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Organization - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3k  Org Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Company Hierarchy - Organization"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4  Company",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Company - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4k  Company Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Company Hierarchy - Company"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Geos",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Geography Hierarchy - All Offices"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Geos - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - All Offices - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Geography Hierarchy - City"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - City - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Geography Hierarchy - Country"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Country - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Address Key",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Address Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Address Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Address1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Address1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Address1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Address2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Address2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Address2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Latitude"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Latitude"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Longitude"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Longitude"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office - Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Company Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.COMPANY_HIER - Office - Postal Code"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Geography Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.GEOGRAPHY_HIER - Office - Postal Code"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fcst Hier - All Offices",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Office Forecast Hierarchy - All Offices"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fcst Hier - All Offices - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.OFFICE_FORECAST - All Offices - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fcst Hier - Company",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.Office Forecast Hierarchy - Company"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fcst Hier - Company - Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Office Forecast Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office.OFFICE_FORECAST - Company - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Company Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H3 Office.Office"
+        ]
+      },
+      {
+        "name": "Geography Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H3 Office.Office"
+        ]
+      },
+      {
+        "name": "Office Forecast Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Office"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H3 Office.Office"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "All Offices",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Offices"
+          ]
+        },
+        {
+          "name": "Company",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:D4  Company"
+          ],
+          "displayColumn": "logicalColumn:D4  Company"
+        },
+        {
+          "name": "Organization",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:D3k  Org Key"
+          ]
+        },
+        {
+          "name": "Department",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:D2k  Dept Key"
+          ]
+        },
+        {
+          "name": "Office",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:D1k  Office Key"
+          ]
+        },
+        {
+          "name": "All Geos",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Geos - Desc"
+          ],
+          "displayColumn": "logicalColumn:All Geos - Desc"
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Country - Desc"
+          ],
+          "displayColumn": "logicalColumn:Country - Desc"
+        },
+        {
+          "name": "City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:City - Desc"
+          ],
+          "displayColumn": "logicalColumn:City - Desc"
+        },
+        {
+          "name": "Fcst Hier - All Offices",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Fcst Hier - All Offices"
+          ]
+        },
+        {
+          "name": "Fcst Hier - Company",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Fcst Hier - Company - Desc"
+          ],
+          "displayColumn": "logicalColumn:Fcst Hier - Company - Desc"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H3 Office [branch at level 'Department']",
+          "levels": [ "Total", "All Offices", "Company", "Organization", "Department", "Office" ]
+        },
+        {
+          "name": "H3 Office [branch at level 'City']",
+          "levels": [ "Total", "All Geos", "Country", "City", "Office" ]
+        },
+        {
+          "name": "H3 Office [branch at level 'Fcst Hier - Company']",
+          "levels": [ "Total", "Fcst Hier - All Offices", "Fcst Hier - Company", "Office" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "physicalTable": {
+    "name": "DIM_PART_HIST",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PART_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "PART_PREVIOUSHIST3",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PART_PREVIOUSHIST4",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PART_PREVIOUSHIST2",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PART_PREVIOUSHIST5",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PART_PREVIOUSHIST",
+        "dataType": "VARCHAR",
+        "length": 4000
+      }
+    ]
+  }
+}

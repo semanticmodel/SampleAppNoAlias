@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ARENA_DATA",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ATTENDANCE",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "SECTION",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "FEMALE",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "MALE",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "CHILD",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

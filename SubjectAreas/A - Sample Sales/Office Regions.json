@@ -1,0 +1,55 @@
+{
+  "presentationTable": {
+    "name": "Office Regions",
+    "localization": {
+      "localizationKey": "Office Regions",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions)"
+    },
+    "description": "This folder contains additional Office attributes like Office Region, Country, State, City and so on.",
+    "alternateNames": [
+      "Cust Regions#1",
+      "Offices Regions"
+    ],
+    "presentationColumns": [ {
+        "name": "D50  Region",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D50  Region"
+      },
+      {
+        "name": "D51  Area",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D51  Area"
+      },
+      {
+        "name": "D52  Country Name",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D52  Country Name"
+      },
+      {
+        "name": "D53  State Province",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D53  State Province"
+      },
+      {
+        "name": "D54  State Code",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D54  State Code"
+      },
+      {
+        "name": "D55  City",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D55  City"
+      },
+      {
+        "name": "D56  Postal Code",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D56  Postal Code"
+      },
+      {
+        "name": "D57  Address Line 1",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D57  Address Line 1"
+      },
+      {
+        "name": "D58  Address Line 2",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D58  Address Line 2"
+      },
+      {
+        "name": "D60 Full Address",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D60 Full Address"
+      }
+    ]
+  }
+}

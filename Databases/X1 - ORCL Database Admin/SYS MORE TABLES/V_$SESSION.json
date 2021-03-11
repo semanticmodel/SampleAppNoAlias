@@ -1,0 +1,492 @@
+{
+  "physicalTable": {
+    "name": "V_$SESSION",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LOGON_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PROCESS",
+        "dataType": "VARCHAR",
+        "length": 24
+      },
+      {
+        "name": "FAILOVER_METHOD",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CREATOR_ADDR",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "PDML_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "SQL_EXEC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIME_SINCE_LAST_WAIT_MICRO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROW_WAIT_BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SESSION_EDITION_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SECONDS_IN_WAIT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMMAND",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKING_SESSION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKING_INSTANCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "MODULE_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SCHEMA#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_TRACE_PLAN_STATS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "FAILED_OVER",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ROW_WAIT_OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOCKWAIT",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "EVENT#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_TIME_MICRO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TERMINAL",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "PREV_CHILD_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_ENTRY_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RESOURCE_CONSUMER_GROUP",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "SQL_TRACE_WAITS",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "SQL_EXEC_START",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "ROW_WAIT_ROW#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATE",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "LAST_CALL_ET",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FINAL_BLOCKING_SESSION_STATUS",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "SID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "P3RAW",
+        "dataType": "VARBINARY",
+        "length": 8
+      },
+      {
+        "name": "CLIENT_IDENTIFIER",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "CREATOR_SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREV_SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "ACTION",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "CLIENT_INFO",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "P3TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "AUDSID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FINAL_BLOCKING_SESSION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ECID",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "ROW_WAIT_FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_CLASS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVER",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "P1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ACTION_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SCHEMANAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "P2RAW",
+        "dataType": "VARBINARY",
+        "length": 8
+      },
+      {
+        "name": "P1TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "EVENT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "TIME_REMAINING_MICRO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FINAL_BLOCKING_INSTANCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREV_EXEC_START",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PDDL_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "PQ_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "P2TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SEQ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREV_SQL_ADDR",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MACHINE",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "P3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PORT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CURRENT_QUEUE_DURATION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIXED_TABLE_SEQUENCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FAILOVER_TYPE",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "P2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OSUSER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PLSQL_ENTRY_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNERID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_CLASS_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PDML_ENABLED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "USERNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SQL_ADDRESS",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "PADDR",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "SQL_TRACE",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "PROGRAM",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "TOP_LEVEL_CALL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREV_EXEC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TADDR",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "P1RAW",
+        "dataType": "VARBINARY",
+        "length": 8
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "SADDR",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "PREV_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_TRACE_BINDS",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "BLOCKING_SESSION_STATUS",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "WAIT_CLASS",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "USER#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_CHILD_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MODULE",
+        "dataType": "VARCHAR",
+        "length": 48
+      }
+    ]
+  }
+}

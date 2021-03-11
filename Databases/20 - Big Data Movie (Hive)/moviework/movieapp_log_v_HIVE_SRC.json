@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "movieapp_log_v_HIVE_SRC",
+    "sourceTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log"
+  }
+}

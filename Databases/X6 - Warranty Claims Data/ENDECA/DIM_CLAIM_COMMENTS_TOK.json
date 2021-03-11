@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "DIM_CLAIM_COMMENTS_TOK",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FREQUENCY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "TOKEN",
+        "dataType": "VARCHAR",
+        "length": 200,
+        "nullable": true
+      },
+      {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      }
+    ]
+  }
+}

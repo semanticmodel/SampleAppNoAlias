@@ -1,0 +1,80 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SYSTEM_EVENT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "WAIT_CLASS",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "TIME_WAITED_MICRO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "EVENT_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "TOTAL_WAITS_FG",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOTAL_WAITS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_CLASS_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOTAL_TIMEOUTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "EVENT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TIME_WAITED_MICRO_FG",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TOTAL_TIMEOUTS_FG",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

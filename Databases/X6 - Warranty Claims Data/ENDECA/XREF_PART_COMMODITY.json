@@ -1,0 +1,21 @@
+{
+  "physicalTable": {
+    "name": "XREF_PART_COMMODITY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PART_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "COMMODITY",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

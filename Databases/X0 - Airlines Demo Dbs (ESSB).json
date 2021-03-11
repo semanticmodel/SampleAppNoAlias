@@ -1,0 +1,85 @@
+{
+  "database": {
+    "name": "X0 - Airlines Demo Dbs (ESSB)",
+    "databaseType": "Essbase 11.1.2.3.500",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "FLOOR_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ROUND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LTRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RTRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "UPPER_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LOWER_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CONCAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SUBSTRING_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LEFT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RIGHT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CAST_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "MULTI_COLUMN_IN_SUPPORTED",
+        "value": true
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Aggr Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "ESSBASE",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 0,
+          "transactionBoundary": 0
+        }
+      }
+    ]
+  }
+}

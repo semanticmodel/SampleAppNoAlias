@@ -1,0 +1,92 @@
+{
+  "logicalTable": {
+    "name": "DB- DATABASE_PROPERTIES",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Description",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DATABASE_PROPERTIES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Property Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DATABASE_PROPERTIES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES.PROPERTY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Property Value",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DATABASE_PROPERTIES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES.PROPERTY_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Properties",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DATABASE_PROPERTIES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES.PROPERTY_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DATABASE_PROPERTIES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DATABASE_PROPERTIES"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "physicalTable": {
+    "name": "SAMP_EMPL_POSTN_D",
+    "description": "Employee Position dimension table : Stores employee position attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_EMPL_POSTN_D.xml",
+    "physicalColumns": [ {
+        "name": "Postn_Level",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Position Level: Stores the employee position level information as text"
+      },
+      {
+        "name": "Postn_Desc",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Position Description: Stores the employee position description as text"
+      },
+      {
+        "name": "Postn_Key",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Position Key: Surrogate key of the employee position dimension table."
+      }
+    ]
+  }
+}

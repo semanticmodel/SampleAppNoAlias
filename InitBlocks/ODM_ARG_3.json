@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "ODM_ARG_3",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT 'SHIPTO_ADDR_KEY' FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "ODM_ARG_3",
+        "description": "Used for Datamining interaction examples",
+        "value": "'SHIPTO_ADDR_KEY'"
+      }
+    ]
+  }
+}

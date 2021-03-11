@@ -1,0 +1,58 @@
+{
+  "presentationTable": {
+    "name": "Search Results",
+    "alternateNames": [
+      "WR Search Results"
+    ],
+    "presentationColumns": [ {
+        "name": "Target Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.Target Path",
+        "alternateNames": [
+          "Search Pattern Found",
+          "Target"
+        ]
+      },
+      {
+        "name": "Target Status",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.Target Status",
+        "alternateNames": [
+          "Pattern Status"
+        ]
+      },
+      {
+        "name": "# of Target Occurences",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Target Occurences",
+        "alternateNames": [
+          "# of Occurences"
+        ]
+      },
+      {
+        "name": "# of Distinct Source Objects",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Distinct Source Objects"
+      },
+      {
+        "name": "# of Active Targets",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Active Targets",
+        "alternateNames": [
+          "# of Active Status"
+        ]
+      },
+      {
+        "name": "# of Broken Targets",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Broken Targets"
+      },
+      {
+        "name": "# of Unknown Status Targets",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Unknown Status Targets",
+        "alternateNames": [
+          "# of Target Unknown Status",
+          "# of Unknown Status"
+        ]
+      },
+      {
+        "name": "# of Distinct Occurences",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Results.# of Distinct Occurences"
+      }
+    ]
+  }
+}

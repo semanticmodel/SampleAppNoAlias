@@ -1,0 +1,234 @@
+{
+  "presentationTable": {
+    "name": "All Tables",
+    "alternateNames": [
+      "All_tables",
+      "OBJ- ALL_TABLES"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Row Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Avg Row Len"
+      },
+      {
+        "name": "Avg Space",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Avg Space"
+      },
+      {
+        "name": "Avg Space Freelist Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Avg Space Freelist Blocks"
+      },
+      {
+        "name": "Backed Up",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Backed Up"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Blocks"
+      },
+      {
+        "name": "Buffer Pool",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Buffer Pool"
+      },
+      {
+        "name": "Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Cache"
+      },
+      {
+        "name": "Cell Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Cell Flash Cache"
+      },
+      {
+        "name": "Chain Cnt",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Chain Cnt"
+      },
+      {
+        "name": "Cluster Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Cluster Name"
+      },
+      {
+        "name": "Cluster Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Cluster Owner"
+      },
+      {
+        "name": "Compress For",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Compress For"
+      },
+      {
+        "name": "Compression",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Compression"
+      },
+      {
+        "name": "Degree",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Degree"
+      },
+      {
+        "name": "Dependencies",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Dependencies"
+      },
+      {
+        "name": "Dropped",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Dropped"
+      },
+      {
+        "name": "Duration",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Duration"
+      },
+      {
+        "name": "Empty Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Empty Blocks"
+      },
+      {
+        "name": "Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Flash Cache"
+      },
+      {
+        "name": "Freelist Groups",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Freelist Groups"
+      },
+      {
+        "name": "Freelists",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Freelists"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Global Stats"
+      },
+      {
+        "name": "Ini Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Ini Trans"
+      },
+      {
+        "name": "Initial Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Initial Extent"
+      },
+      {
+        "name": "Instances",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Instances"
+      },
+      {
+        "name": "Iot Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Iot Name"
+      },
+      {
+        "name": "Iot Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Iot Type"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Last Analyzed"
+      },
+      {
+        "name": "Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Logging"
+      },
+      {
+        "name": "Max Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Max Extents"
+      },
+      {
+        "name": "Max Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Max Trans"
+      },
+      {
+        "name": "Min Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Min Extents"
+      },
+      {
+        "name": "Monitoring",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Monitoring"
+      },
+      {
+        "name": "Nested",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Nested"
+      },
+      {
+        "name": "Next Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Next Extent"
+      },
+      {
+        "name": "Num Freelist Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Num Freelist Blocks"
+      },
+      {
+        "name": "Num Rows",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Num Rows"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Owner"
+      },
+      {
+        "name": "Partitioned",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Partitioned"
+      },
+      {
+        "name": "Pct Free",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Pct Free"
+      },
+      {
+        "name": "Pct Increase",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Pct Increase"
+      },
+      {
+        "name": "Pct Used",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Pct Used"
+      },
+      {
+        "name": "Read Only",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Read Only"
+      },
+      {
+        "name": "Result Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Result Cache"
+      },
+      {
+        "name": "Row Movement",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Row Movement"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Sample Size"
+      },
+      {
+        "name": "Secondary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Secondary"
+      },
+      {
+        "name": "Segment Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Segment Created"
+      },
+      {
+        "name": "Skip Corrupt",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Skip Corrupt"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Status"
+      },
+      {
+        "name": "Table Lock",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Table Lock"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Table Name"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Tablespace Name"
+      },
+      {
+        "name": "Temporary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.Temporary"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.User Stats"
+      },
+      {
+        "name": "# Of Tables",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TABLES.# Of Tables"
+      }
+    ]
+  }
+}

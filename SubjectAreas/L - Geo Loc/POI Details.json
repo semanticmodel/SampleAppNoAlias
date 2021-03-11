@@ -1,0 +1,88 @@
+{
+  "presentationTable": {
+    "name": "POI Details",
+    "presentationColumns": [ {
+        "name": "# of POIs",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI_Facts.# of POIs"
+      },
+      {
+        "name": "POI Id",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.POI Id",
+        "alternateNames": [
+          "POI_ID"
+        ]
+      },
+      {
+        "name": "POI Name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.POI Name",
+        "alternateNames": [
+          "Name"
+        ]
+      },
+      {
+        "name": "POI Category",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.POI Category"
+      },
+      {
+        "name": "POI Sub Category",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.POI Sub Category",
+        "alternateNames": [
+          "Category Name"
+        ]
+      },
+      {
+        "name": "Full Address",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Full Address"
+      },
+      {
+        "name": "Loc Lat",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Loc Lat",
+        "alternateNames": [
+          "LOC_LAT"
+        ]
+      },
+      {
+        "name": "Loc Long",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Loc Long",
+        "alternateNames": [
+          "LOC_LONG"
+        ]
+      },
+      {
+        "name": "Country Code 2",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Country Code 2",
+        "alternateNames": [
+          "COUNTRY_CODE_2"
+        ]
+      },
+      {
+        "name": "House Number",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.House Number",
+        "alternateNames": [
+          "HOUSE_NUMBER"
+        ]
+      },
+      {
+        "name": "Municipality Name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Municipality Name",
+        "alternateNames": [
+          "MUNICIPALITY_NAME"
+        ]
+      },
+      {
+        "name": "Postal Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Postal Code",
+        "alternateNames": [
+          "POSTAL_CODE"
+        ]
+      },
+      {
+        "name": "Street Name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI Details.Street Name",
+        "alternateNames": [
+          "STREET_NAME"
+        ]
+      }
+    ]
+  }
+}

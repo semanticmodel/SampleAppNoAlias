@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F50 Facts Headcount",
+    "description": "Headcount Fact Alias: Stores the headcount information at day and office grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_HEADCOUNT_F"
+  }
+}

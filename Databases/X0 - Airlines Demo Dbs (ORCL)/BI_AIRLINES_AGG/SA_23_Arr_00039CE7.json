@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "SA_23_Arr_00039CE7",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Arr_Tim_00039CE7SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Arr_Time_B00039BAD",
+        "dataType": "VARCHAR",
+        "length": 20
+      }
+    ]
+  }
+}

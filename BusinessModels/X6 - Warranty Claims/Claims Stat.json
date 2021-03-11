@@ -1,0 +1,1282 @@
+{
+  "logicalTable": {
+    "name": "Claims Stat",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Claim Age",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_AGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Age Bucket",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_AGE_BUCKET"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Age Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_AGE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Date Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_DATE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Labor Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LABOR_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Labor Code Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LABOR_CODE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Labor Desc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LABOR_DESC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Lbr Othr Globl Amt",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LBR_OTHR_GLOBL_AMT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Lbr Othr Globl Amt Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LBR_OTHR_GLOBL_AMT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Lbr Tot Globl Amt",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LBR_TOT_GLOBL_AMT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Lbr Tot Globl Amt Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_LBR_TOT_GLOBL_AMT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Month Num",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_MONTH_NUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Odmtr Mileage",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_ODMTR_MILEAGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Odmtr Mileage Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_ODMTR_MILEAGE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Part Tot Globl Amt",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_PART_TOT_GLOBL_AMT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Part Tot Globl Amt Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_PART_TOT_GLOBL_AMT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Period",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_PERIOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_QUARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Tot Globl Amt",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_TOT_GLOBL_AMT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Tot Globl Amt Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_TOT_GLOBL_AMT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Claim Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.CLAIM_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Days In Service",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DAYS_IN_SERVICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Days In Service Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DAYS_IN_SERVICE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer City Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_CITY_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Geocode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_GEOCODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Geocode Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_GEOCODE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Stateprovince",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_STATEPROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Stateprovince Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DEALER_STATEPROVINCE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Drive Train",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DRIVE_TRAIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Drive Train Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.DRIVE_TRAIN_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lateral Run Out",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.LATERAL_RUN_OUT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Months In Service",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.MONTHS_IN_SERVICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Cyls",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.NUM_CYLS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Cyls Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.NUM_CYLS_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pitch Circle Diameter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PITCH_CIRCLE_DIAMETER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PROD_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod Date Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PROD_DATE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PRODUCTION_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Period",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PRODUCTION_PERIOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.PRODUCTION_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Claims",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.RECORDID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Diameter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.ROTOR_DIAMETER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Gap",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.ROTOR_GAP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Thickness",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.ROTOR_THICKNESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.ROTOR_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sale Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.SALE_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sale Date Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.SALE_DATE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Exposure",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEH_EXPOSURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Exposure Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEH_EXPOSURE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Float",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEH_FLOAT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Float Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEH_FLOAT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Assembly Plant",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_ASSEMBLY_PLANT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Build Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_BUILD_COUNTRY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Build Country Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_BUILD_COUNTRY_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Build Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_BUILD_REGION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Exposure",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_EXPOSURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Exposure Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_EXPOSURE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Float",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_FLOAT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Float Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_FLOAT_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Make",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MAKE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Make Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MAKE_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Manufacturer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MANUFACTURER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Manufacturer Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MANUFACTURER_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MODEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MODEL_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MODEL_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model Year Dist",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VEHICLE_MODEL_YEAR_DIST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recordid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FACT_CLAIM_DN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.RECORDID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "FACT_CLAIM_DN",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "logicalTable": {
+    "name": "M02 Mktg Res Set Headers Customers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "X07 Connection pool",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.CONNECTION_POOL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X18 Created by",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.CREATED_BY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X19 Date time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.DATE_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X10 SR Hd GUID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.GUID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X15 Segment path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.SEGMENT_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X12 SR Hd custom label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.SR_CUSTOM_LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X14 SR Hds count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.SRS_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X09 Target level",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.TARGET_LEVEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X08 Node label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.NODE_LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X17 Node path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.NODE_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X16 Priority",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.PRIORITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X13 SR Hd path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M02 Mktg Res Set Headers Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.SR_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "M02 Mktg Res Set Headers Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers"
+          ]
+        }
+      }
+    ]
+  }
+}

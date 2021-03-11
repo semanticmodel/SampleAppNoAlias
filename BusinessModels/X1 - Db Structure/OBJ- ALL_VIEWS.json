@@ -1,0 +1,262 @@
+{
+  "logicalTable": {
+    "name": "OBJ- ALL_VIEWS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Editioning View",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.EDITIONING_VIEW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Oid Text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.OID_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Oid Text Length",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.OID_TEXT_LENGTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Read Only",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.READ_ONLY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Superview Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.SUPERVIEW_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Text Length",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.TEXT_LENGTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type Text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.TYPE_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type Text Length",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.TYPE_TEXT_LENGTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "View Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.VIEW_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "View Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.VIEW_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "View Type Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.VIEW_TYPE_OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Views",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_VIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_VIEWS.VIEW_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALL_VIEWS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.ALL_VIEWS"
+          ]
+        }
+      }
+    ]
+  }
+}

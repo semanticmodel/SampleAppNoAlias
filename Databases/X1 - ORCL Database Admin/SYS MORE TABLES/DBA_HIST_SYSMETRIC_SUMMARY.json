@@ -1,0 +1,103 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SYSMETRIC_SUMMARY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_UNIT",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "MAXVAL",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SUM_SQUARES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STANDARD_DEVIATION",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MINVAL",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INTSIZE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "AVERAGE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NUM_INTERVAL",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

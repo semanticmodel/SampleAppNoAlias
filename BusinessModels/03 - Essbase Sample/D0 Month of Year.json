@@ -1,0 +1,213 @@
+{
+  "logicalTable": {
+    "name": "D0 Month of Year",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "All Month Names",
+        "dataType": "VARCHAR",
+        "sortBy": "All Month Names -  Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Month Names"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Month Names"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Month Names -  Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Month Names -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Month Names - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Month Names - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.All Month Names - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.All Month Names - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Names",
+        "dataType": "VARCHAR",
+        "sortBy": "Month Names -  Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Month Names"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Month Names"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Names -  Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Month Names -  Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Month Names - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Names - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Month Names - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Month Names - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E1",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H0 Month of Year.Month Names"
+        ]
+      },
+      {
+        "name": "Essb Cube E2",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Month Names",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "All Month Names",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Month Names - Member Key"
+          ]
+        },
+        {
+          "name": "Month Names",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Month Names - Member Key"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H0 Month of Year",
+          "levels": [ "All Month Names", "Month Names" ]
+        }
+      ]
+    }
+  }
+}

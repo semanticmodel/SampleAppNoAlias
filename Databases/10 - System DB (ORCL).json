@@ -1,0 +1,289 @@
+{
+  "database": {
+    "name": "10 - System DB (ORCL)",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "UT Connection Pool",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "description": "Connection pool for Sample Usage Tracking db source. This connection is the same as the Sample relational source, as the UT tables are stored in the same sample db schema.\r\n\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      },
+      {
+        "name": "BSC",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "description": "Connection pool for Scorecards Annotations. This connection is the same as the Sample relational source, as the annotations tables are stored in the same sample db schema.\r\n\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      },
+      {
+        "name": "SampleApp Init Blocks",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "WR_SEARCH_PATTERN_WR_SEARCH_RESULTS_Facts",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_PATTERN",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "WS_ALLOBJECTS Facts_Foreign Key#2",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.SAW_SRC_PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+          }
+        ]
+      },
+      {
+        "name": "WS_ALLOBJECTS Facts_Foreign Key#1",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_SUMMARY_ADVISOR_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICAL_QUERY_ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_DB_ACCT_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_DB_ACCT_Foreign Key#1",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE.id",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_DB_ACCT.LOGICAL_QUERY_ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_ACCT_Foreign Key#3",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICAL_QUERY_ID",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_ACCT_Foreign Key#2",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.UT_SOURCE.id",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_ACCT_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.ID",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.ID"
+          }
+        ]
+      },
+      {
+        "name": "S_NQ_ACCT_Foreign Key#1",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT.SAW_SRC_PATH"
+          }
+        ]
+      },
+      {
+        "name": "AA_INDEX_LINKS_AGG_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.AA_INDEX_LINKS_AGG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL3",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_INDEX_LINKS_AGG.TEXT_LVL3"
+          },
+          {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL2",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_INDEX_LINKS_AGG.TEXT_LVL2"
+          },
+          {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_DBPAGES_INDEX.TEXT_LVL1",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.AA_INDEX_LINKS_AGG.TEXT_LVL1"
+          }
+        ]
+      },
+      {
+        "name": "WR_REF_STATUS_Facts_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.SEQUENCEID",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.SEQUENCEID"
+          }
+        ]
+      },
+      {
+        "name": "WC_LSQL_Facts_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Dim.REPORT_PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.REPORT_PATH"
+          },
+          {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Dim.RUN_DATE",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.RUN_DATE"
+          }
+        ]
+      },
+      {
+        "name": "WC_EXEC_Facts_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Dim.REPORT_PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.REPORT_PATH"
+          },
+          {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Dim.RUN_DATE",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.RUN_DATE"
+          }
+        ]
+      },
+      {
+        "name": "WS_ALLOBJECTS_Dim_FKey#3",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.DASHBOARDPAGEPATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+          }
+        ]
+      },
+      {
+        "name": "WS_ALLOBJECTS_Dim_FKey#1",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+          }
+        ]
+      },
+      {
+        "name": "WS_ALLOBJECTS_Dim_FKey#4",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+          }
+        ]
+      },
+      {
+        "name": "WS_ALLOBJECTS_Dim_FKey#2",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_FILTER",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.PATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+          }
+        ]
+      },
+      {
+        "name": "WP_ACL_Stats_Facts_Foreign Key",
+        "leftTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim",
+        "rightTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.ACCOUNT",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.ACCOUNT"
+          },
+          {
+            "leftColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.OBJECTPATH",
+            "rightColumn": "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.OBJECTPATH"
+          }
+        ]
+      }
+    ]
+  }
+}

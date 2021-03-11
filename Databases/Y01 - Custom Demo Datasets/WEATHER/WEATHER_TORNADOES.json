@@ -1,0 +1,155 @@
+{
+  "physicalTable": {
+    "name": "WEATHER_TORNADOES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FSCALE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "NS",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "YEAR",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "TIMEZONE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "ELAT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATE",
+        "dataType": "VARCHAR",
+        "length": 254
+      },
+      {
+        "name": "CROPLOSS",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "OM",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "SG",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "STATENUMBE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "ID",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "ELON",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "F4",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "INJURIES",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "TIME",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "LOSS",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "FATALITIES",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "MONTH",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "SN",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "WIDTH",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "F2",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "SLAT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SLON",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "F3",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "DAY",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "F1",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIPS",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "DATE_",
+        "dataType": "DOUBLE",
+        "length": 38
+      }
+    ]
+  }
+}

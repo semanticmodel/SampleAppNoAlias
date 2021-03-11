@@ -1,0 +1,106 @@
+{
+  "presentationTable": {
+    "name": "Weather Dim",
+    "presentationColumns": [ {
+        "name": "Date",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Date"
+      },
+      {
+        "name": "Day",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Day"
+      },
+      {
+        "name": "Elat",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Elat"
+      },
+      {
+        "name": "Elon",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Elon"
+      },
+      {
+        "name": "Fips",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Fips"
+      },
+      {
+        "name": "Length",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Length"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Month"
+      },
+      {
+        "name": "Ns",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Ns"
+      },
+      {
+        "name": "Om",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Om"
+      },
+      {
+        "name": "Sg",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Sg"
+      },
+      {
+        "name": "Hail Size",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Hail Size"
+      },
+      {
+        "name": "Slat",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Slat"
+      },
+      {
+        "name": "Slon",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Slon"
+      },
+      {
+        "name": "Sn",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Sn"
+      },
+      {
+        "name": "State",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.State"
+      },
+      {
+        "name": "Statenumbe",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Statenumbe"
+      },
+      {
+        "name": "Time",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Time"
+      },
+      {
+        "name": "Timezone",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Timezone"
+      },
+      {
+        "name": "Width",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Width"
+      },
+      {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Year"
+      },
+      {
+        "name": "Type",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Type"
+      },
+      {
+        "name": "Tornado Fujta Scale",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Tornado Fujta Scale"
+      },
+      {
+        "name": "Wind Magnitude",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Wind Magnitude"
+      },
+      {
+        "name": "Wind Magnitude Detail",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Wind Magnitude Detail"
+      },
+      {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Dim.Id"
+      }
+    ]
+  }
+}

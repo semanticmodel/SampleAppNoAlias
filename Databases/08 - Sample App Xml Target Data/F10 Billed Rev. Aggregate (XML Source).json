@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "F10 Billed Rev. Aggregate (XML Source)",
+    "sourceTable": "physicalTable:08 - Sample App Xml Target Data.SAMP_XML_REVENUE_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

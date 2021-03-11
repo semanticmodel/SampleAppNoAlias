@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "F31 Facts Targets (XML Source)",
+    "sourceTable": "physicalTable:08 - Sample App Xml Target Data.SAMP_XML_TARGETS_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

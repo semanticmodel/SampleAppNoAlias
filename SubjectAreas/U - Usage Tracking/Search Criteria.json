@@ -1,0 +1,16 @@
+{
+  "presentationTable": {
+    "name": "Search Criteria",
+    "alternateNames": [
+      "WR Search Criteria"
+    ],
+    "presentationColumns": [ {
+        "name": "Search Pattern",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Search Criteria.Search Pattern",
+        "alternateNames": [
+          "SEARCH_PATTERN"
+        ]
+      }
+    ]
+  }
+}

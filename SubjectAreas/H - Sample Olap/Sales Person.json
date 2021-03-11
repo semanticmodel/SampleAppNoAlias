@@ -1,0 +1,35 @@
+{
+  "presentationTable": {
+    "name": "Sales Person",
+    "presentationColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D5 Sales Rep (Parent Child Hier).E0  Sales Rep Number"
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D5 Sales Rep (Parent Child Hier).E1  Sales Rep Name"
+      },
+      {
+        "name": "E8  Manager Number",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D5 Sales Rep (Parent Child Hier).E8  Manager Number"
+      },
+      {
+        "name": "Employee Sort Order",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D5 Sales Rep (Parent Child Hier).Employee Sort Order",
+        "alternateNames": [
+          "OLAP_EMPLOYEE_HIER_SORT_ORDER"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Sales Rep Hierarchy",
+        "alternateNames": [
+          "H5 Employees",
+          "Sa;es Rep Hierarchy"
+        ],
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D5 Sales Rep (Parent Child Hier)",
+        "displayColumn": "presentationColumn:H - Sample Olap.Sales Person.E1  Sales Rep Name"
+      }
+    ]
+  }
+}

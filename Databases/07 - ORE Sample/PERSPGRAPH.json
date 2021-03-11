@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "PERSPGRAPH",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select id, image from table(rqTableEval(cursor(\r\nselect valueof(NQ_SESSION.OR_PERSP_THETA) THETA, \r\nvalueof(NQ_SESSION.OR_PERSP_PHI) PHI, \r\n'valueof(NQ_SESSION.OR_PERSP_COLOR)' COLOR from dual), NULL,'PNG','sincFunction'))"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "id",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "image",
+        "dataType": "LONGVARBINARY",
+        "length": 256000,
+        "nullable": true
+      }
+    ]
+  }
+}

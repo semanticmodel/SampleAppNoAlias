@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "S_NQ_SAMPLE_RPD_UIDS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 240
+      },
+      {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "length": 25
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 32,
+        "nullable": true
+      },
+      {
+        "name": "UPGRADE_ID",
+        "dataType": "VARCHAR",
+        "length": 50
+      }
+    ]
+  }
+}

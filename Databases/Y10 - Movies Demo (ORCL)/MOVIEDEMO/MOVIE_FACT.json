@@ -1,0 +1,59 @@
+{
+  "physicalTable": {
+    "name": "MOVIE_FACT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TIME_ID",
+        "dataType": "DATETIME",
+        "length": 22
+      },
+      {
+        "name": "DATE_ID_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "GENRE_ID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "SALES",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ACTIVITY_ID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "TIME_ID_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "RECOMMENDED",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "MOVIE_ID",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "RATING",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CUST_ID",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "physicalTable": {
+    "name": "AirportsCount",
+    "sourceType": "TABLE",
+    "isDeployedView": "true",
+    "physicalColumns": [ {
+        "name": "NumFltYear1",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "NumFltYear2",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "AirportCode",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "Change",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

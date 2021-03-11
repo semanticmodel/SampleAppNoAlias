@@ -1,0 +1,200 @@
+{
+  "logicalTable": {
+    "name": "WR Search Results",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Target Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Target Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Active Targets",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when %1 = 'OK' then 1 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_STATUS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Broken Targets",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when %1 = 'Broken' then 1 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_STATUS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Unknown Status Targets",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when %1 = 'Unknown' then 1 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_STATUS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Target Occurences",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Distinct Occurences",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.TARGET_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Distinct Source Objects",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts.SOURCE_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WR_REF_STATUS_Facts",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Facts"
+          ]
+        }
+      }
+    ]
+  }
+}

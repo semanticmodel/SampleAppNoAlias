@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "DBA_CATALOG",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 11
+      }
+    ]
+  }
+}

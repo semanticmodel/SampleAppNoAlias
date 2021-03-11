@@ -1,0 +1,64 @@
+{
+  "physicalTable": {
+    "name": "GV_$SERVICES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "AQ_HA_NOTIFICATION",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CLB_GOAL",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "CREATION_DATE_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DTP",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "GOAL",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVICE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NETWORK_NAME",
+        "dataType": "VARCHAR",
+        "length": 512
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      }
+    ]
+  }
+}

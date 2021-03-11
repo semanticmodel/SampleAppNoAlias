@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Measures Dimension",
+    "presentationColumns": [ {
+        "name": "Gen1,Measures",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen1,Measures"
+      },
+      {
+        "name": "Gen1,Measures - Member Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen1,Measures - Member Key"
+      },
+      {
+        "name": "Gen2,Measures",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen2,Measures"
+      },
+      {
+        "name": "Gen2,Measures - Member Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen2,Measures - Member Key"
+      },
+      {
+        "name": "Gen3,Measures",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen3,Measures"
+      },
+      {
+        "name": "Gen3,Measures - Member Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen3,Measures - Member Key"
+      },
+      {
+        "name": "Gen4,Measures",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen4,Measures"
+      },
+      {
+        "name": "Gen4,Measures - Member Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen4,Measures - Member Key"
+      }
+    ]
+  }
+}

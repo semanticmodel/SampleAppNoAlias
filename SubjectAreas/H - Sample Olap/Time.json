@@ -1,0 +1,74 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "presentationColumns": [ {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Year"
+      },
+      {
+        "name": "Half Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Half Year"
+      },
+      {
+        "name": "Quarter",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Quarter"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Month"
+      },
+      {
+        "name": "T02 Per Name Month",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.T02 Per Name Month"
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.T03 Per Name Qtr"
+      },
+      {
+        "name": "T04 Per Name Half",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.T04 Per Name Half"
+      },
+      {
+        "name": "T05 Per Name Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.T05 Per Name Year"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Hierarchy",
+        "alternateNames": [
+          "Time Hier"
+        ],
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D0 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D0 Time.Total"
+          },
+          {
+            "name": "Fiscal Year",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D0 Time.Fiscal Year",
+            "displayColumn": "presentationColumn:H - Sample Olap.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Fiscal Half Year",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D0 Time.Fiscal Half Year",
+            "displayColumn": "presentationColumn:H - Sample Olap.Time.T04 Per Name Half"
+          },
+          {
+            "name": "Fiscal Quarter",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D0 Time.Fiscal Quarter",
+            "displayColumn": "presentationColumn:H - Sample Olap.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D0 Time.Month",
+            "displayColumn": "presentationColumn:H - Sample Olap.Time.T02 Per Name Month"
+          }
+        ]
+      }
+    ]
+  }
+}

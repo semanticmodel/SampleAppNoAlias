@@ -1,0 +1,22 @@
+{
+  "physicalTable": {
+    "name": "SAMP_CUST_SEGMENTS_D",
+    "description": "Customer Segment Dimension table: Stores customer segment attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_CUST_SEGMENTS_D.xml",
+    "physicalColumns": [ {
+        "name": "Segment_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Segment Key: Surrogate key of the customer segment dimension table."
+      },
+      {
+        "name": "Segment_Desc",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Segmnent Desc: Stores customer segment description as text"
+      }
+    ]
+  }
+}

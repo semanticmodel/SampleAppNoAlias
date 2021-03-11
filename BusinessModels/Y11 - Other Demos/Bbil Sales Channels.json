@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "Bbil Sales Channels",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Saleschannel",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Sales Channels",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS.SALESCHANNEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Saleschannel Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Sales Channels",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS.SALESCHANNEL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Saleschannelregion",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Sales Channels",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS.SALESCHANNELREGION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Sales Channels",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS"
+          ]
+        }
+      }
+    ]
+  }
+}

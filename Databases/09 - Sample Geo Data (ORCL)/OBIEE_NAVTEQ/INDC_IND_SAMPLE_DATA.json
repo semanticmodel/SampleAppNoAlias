@@ -1,0 +1,75 @@
+{
+  "physicalTable": {
+    "name": "INDC_IND_SAMPLE_DATA",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NEIGHBOURHOOD_CODE",
+        "dataType": "VARCHAR",
+        "length": 14
+      },
+      {
+        "name": "SUB_DISTRICT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "STATE_CODE",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_INCOME",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DISTRICT",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "STATE",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "TOTAL_POPULATION",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NEIGHBOURHOOD",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SUB_DISTRICT_CODE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "DISTRICT_CODE",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "TOTAL_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_EXPENDITURE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_SAVINGS",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

@@ -1,0 +1,473 @@
+{
+  "logicalTable": {
+    "name": "D8 Data Mining Cust LTV Tree Nodes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "M11  Cust Predicted Leaf Node",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).M_PRED_LTV_NODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).M_PRED_LTV_NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M12  Cust Predicted LTV",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).M_PRED_BIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M20 === LTV Tree Nodes ===",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "M20 Tree Node",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(%1 as varchar(2)) ||' - '||%2 ",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M21v Node # (PC Hier)",
+              "logicalColumn:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes.M22v Local Rule (PC Hier)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "M21 Node #",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M21v Node # (PC Hier)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M22 Local Rule",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.LOCAL_RULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M22v Local Rule (PC Hier)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": " CASE  WHEN %1 = 0 THEN 'All Individuals' ELSE  REPLACE( REPLACE(%2, '(', ''), ')', '') END ",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).NODE",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).LOCAL_RULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M23 Full Rule",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": " CASE  WHEN %1 = 0 THEN 'All Individuals' ELSE  REPLACE( REPLACE( REPLACE(%2, ' AND ', ';<br/> AND '), '(', ''), ')', '') END ",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.NODE",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.FULL_RULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M24 Node Total Individuals",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.RECORD_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M25 Parent Node",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.PARENT_NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M25v Parent Node # (PC Hier)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).PARENT_NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M26 Is Leaf",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.IS_LEAF"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M27 Distance",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.DISTANCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M28 Node LTV Prediction",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.PREDICTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M30 === LTV Dynamic Nodes ===",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "M31 Dynamic Score Node #",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes.NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M32 Dynamic Score Local Rule",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes.LOCAL_RULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M33 Dynamic Score Full Rule",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": " CASE  WHEN %1 = 0 THEN 'All Individuals' ELSE  REPLACE( REPLACE( REPLACE(%2, ' AND ', ';<br/> AND '), '(', ''), ')', '') END ",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes.NODE",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes.FULL_RULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M34 Dynamic Pred Leaf Node",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring.M_DYN_PRED_LTV_NODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M35  Dynamic Predicted LTV",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring.M_DYN_PRED_BIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M36 Dynamic Score Probability",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring.M_DYN_PRED_PROB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "M29 Node Hier LTV Prediction",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).PREDICTION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 LTV Tree Nodes (PC Hier)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D65 Closure Table Cust Tree Node_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D63 Cust LTV (Orcl Data Mining)_FKey#1"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H8 LTV Classification.Detail"
+        ]
+      },
+      {
+        "name": "LTS2 LTV Tree Nodes (Leafs)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D80 Cust LTV (ODM Classification)_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D80 Cust LTV (ODM)_FKey"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D82 Cust LTV Dynamic Scoring (ODM Classification)_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H8 LTV Classification.Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H8 LTV Classification",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:M21v Node # (PC Hier)"
+          ],
+          "displayColumn": "logicalColumn:M21v Node # (PC Hier)"
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "LTS1 LTV Tree Nodes (PC Hier)",
+          "table": "D86 Closure Table Cust LTV Nodes",
+          "memberKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.MEMBER_KEY",
+          "parentKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.ANCESTOR_KEY",
+          "distance": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.DISTANCE",
+          "leafNodeIdentifier": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.IS_LEAF"
+        },
+        {
+          "logicalTableSource": "LTS2 LTV Tree Nodes (Leafs)"
+        }
+      ]
+    }
+  }
+}

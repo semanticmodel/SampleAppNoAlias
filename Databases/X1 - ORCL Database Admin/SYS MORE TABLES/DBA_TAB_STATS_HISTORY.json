@@ -1,0 +1,35 @@
+{
+  "physicalTable": {
+    "name": "DBA_TAB_STATS_HISTORY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SUBPARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATS_UPDATE_TIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      }
+    ]
+  }
+}

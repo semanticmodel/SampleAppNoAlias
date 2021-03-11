@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "DBA_TEMP_FREE_SPACE",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "FREE_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ALLOCATED_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

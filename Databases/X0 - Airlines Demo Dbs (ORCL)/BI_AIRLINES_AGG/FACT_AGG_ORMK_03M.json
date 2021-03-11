@@ -1,0 +1,68 @@
+{
+  "physicalTable": {
+    "name": "FACT_AGG_ORMK_03M",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Z_of_Seats00039BE5",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Payload_T00039BE3",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Passengers00039BE2",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Freight_T00039BEF",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Dep_Month00039C07",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "Avg_PAX_pe00039BF3",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Passengers00039BF0",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Carrier_Co00039BAA",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "Mail_Tons00039BE1",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Distance_G00039B9F",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Freight_T00039BE0",
+        "dataType": "DOUBLE",
+        "length": 20
+      }
+    ]
+  }
+}

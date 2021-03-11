@@ -1,0 +1,88 @@
+{
+  "presentationTable": {
+    "name": "Income Statement",
+    "description": "->",
+    "presentationColumns": [ {
+        "name": "PandL Lvl 3",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 3"
+      },
+      {
+        "name": "PandL Lvl 4",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 4"
+      },
+      {
+        "name": "PandL Lvl 5",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 5"
+      },
+      {
+        "name": "PandL Lvl 6",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 6"
+      },
+      {
+        "name": "PandL Lvl 7",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 7"
+      },
+      {
+        "name": "PandL Lvl 8",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 8"
+      },
+      {
+        "name": "PandL Lvl 9",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 9"
+      },
+      {
+        "name": "PandL Lvl 10",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL Income Statement.PandL Lvl 10"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Income Statement",
+        "alternateNames": [
+          "Income Statement#1"
+        ],
+        "sourceLogicalTable": "logicalTable:03 - Essbase GL.Measures",
+        "levels": [ {
+            "name": "Account Level 3",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 3",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 3"
+          },
+          {
+            "name": "Account Level 4",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 4",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 4"
+          },
+          {
+            "name": "Account Level 5",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 5",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 5"
+          },
+          {
+            "name": "Account Level 6",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 6",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 6"
+          },
+          {
+            "name": "Account Level 7",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 7",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 7"
+          },
+          {
+            "name": "Account Level 8",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 8",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 8"
+          },
+          {
+            "name": "Account Level 9",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Account Level 9",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 9"
+          },
+          {
+            "name": "Income Statement Detail",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Measures.Income Statement Detail",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Income Statement.PandL Lvl 10"
+          }
+        ]
+      }
+    ]
+  }
+}

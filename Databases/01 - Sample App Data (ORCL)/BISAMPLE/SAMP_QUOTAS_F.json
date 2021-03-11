@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "SAMP_QUOTAS_F",
+    "description": "Quotas Fact table: Stores the fact information at channel, month and product grain.",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_QUOTAS_F.xml",
+    "physicalColumns": [ {
+        "name": "MTH_KEY",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Month Key: Joins to Mth_Key of Time dimension table (Mth grain)."
+      },
+      {
+        "name": "CHNL_KEY",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Channel Key: Joins to Channel_Key of Channels dimension table."
+      },
+      {
+        "name": "VALUE",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Value: Stores Quotas value as an integer"
+      },
+      {
+        "name": "PROD_KEY",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Joins to Prod_Key of Products dimension table."
+      }
+    ]
+  }
+}

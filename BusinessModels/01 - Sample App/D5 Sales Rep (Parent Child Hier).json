@@ -1,0 +1,326 @@
+{
+  "logicalTable": {
+    "name": "D5 Sales Rep (Parent Child Hier)",
+    "description": "ZZZ - Not yet filled",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Employee_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Employee_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Empl_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Empl_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E2  Sales Rep Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E4  Position",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "E4k  Position Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position.Postn_Desc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E4k  Position Key",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Postn_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E6  Position Level",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position.Postn_Level"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E7  Hire Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Hire_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E8  Manager Number",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Mgr_Id"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Mgr_Id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E9  Manager Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name).Empl_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name).Empl_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E10 Length Of Service",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_YEAR , %1,  VALUEOF(NQ_SESSION.%2))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E7  Hire Date",
+              "variable:LAST_REFRESH_DT.LAST_REFRESH_DT"
+            ]
+          }
+        }
+      },
+      {
+        "name": "E99  Closure Distance",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Distance"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 SRep Hierarchy with Closure",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).emp-posn-join"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D50 Sales Rep (Parent Child Hierarchy)_FKey",
+              "joinType": "LEFT_OUTER"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).emp-closure"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H5 Sales Rep.Sales Reps Detail"
+        ]
+      },
+      {
+        "name": "LTS3 SRep Hier with Closure (Team Agg)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg)",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D53 Sales Rep (PC Hier - Team Agg)_FKey",
+              "joinType": "LEFT_OUTER"
+            },
+            {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D33 Sales Rep Parent Child Closure (Pct to Parent)_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H5 Sales Rep.Sales Reps Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H5 Sales Rep",
+      "logicalLevels": [
+        {
+          "name": "Sales Reps Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Sales Reps Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 29,
+          "primaryColumns": [
+            "logicalColumn:E1  Sales Rep Name"
+          ],
+          "displayColumn": "logicalColumn:E1  Sales Rep Name",
+          "preferredDrillPath": [
+            "01 - Sample App.H6 Customers.Customers Segment"
+          ]
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "LTS1 SRep Hierarchy with Closure",
+          "table": "D51 Closure Table Sales Rep Parent Child",
+          "memberKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+          "parentKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Ancestor_Key",
+          "distance": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Distance",
+          "leafNodeIdentifier": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Is_Leaf"
+        },
+        {
+          "logicalTableSource": "LTS3 SRep Hier with Closure (Team Agg)",
+          "table": "D54 Closure Table Sales Rep (Team Agg)",
+          "memberKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Member_Key",
+          "parentKey": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Ancestor_Key",
+          "distance": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Distance",
+          "leafNodeIdentifier": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Is_Leaf"
+        }
+      ]
+    }
+  }
+}

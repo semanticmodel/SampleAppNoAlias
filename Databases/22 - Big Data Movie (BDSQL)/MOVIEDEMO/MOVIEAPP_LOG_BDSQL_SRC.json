@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "MOVIEAPP_LOG_BDSQL_SRC",
+    "sourceTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "businessModel": {
+    "name": "X -  Functional Examples ---------",
+    "description": "\r\n",
+    "joins": [      {
+        "name": "Relationship_2004:2301611337686415",
+        "leftTable": "logicalTable:X -  Functional Examples ---------.D03 Time Quarter Grain",
+        "rightTable": "logicalTable:X -  Functional Examples ---------.F10 Billed Rev",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

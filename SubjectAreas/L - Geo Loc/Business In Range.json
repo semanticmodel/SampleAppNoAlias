@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Business In Range",
+    "presentationColumns": [ {
+        "name": "Bus name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI_Business_In_Range.Bus name",
+        "alternateNames": [
+          "name"
+        ]
+      },
+      {
+        "name": "POI_ID_Bus",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI_Business_In_Range.POI_ID_Bus"
+      },
+      {
+        "name": "Category name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.POI_Business_In_Range.Category name"
+      }
+    ]
+  }
+}

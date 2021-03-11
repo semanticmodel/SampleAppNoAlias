@@ -1,0 +1,127 @@
+{
+  "physicalTable": {
+    "name": "ODM_ASSO_RULES_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ANT_ATTR_VAL",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CON_ATTR_CONF",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ANT_ATTR_CONF",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "RULE_CONFIDENCE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "ANT_ATTR_NUM_VAL",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CON_ATTR_VAL",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CON_ATTR_STR_VAL",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "ANT_ATTR_SUP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ANT_COND_OP",
+        "dataType": "CHAR",
+        "length": 2
+      },
+      {
+        "name": "ANT_ATTR_STR_VAL",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CON_ATTR_NUM_VAL",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUMBER_OF_ITEMS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "RULE_SUPPORT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CONSEQUENT_SUPPORT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ANTECEDENT_SUPPORT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ANT_ATTR_NM",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CON_ATTR_NM",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "RULE_LIFT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CON_COND_OP",
+        "dataType": "CHAR",
+        "length": 2
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "RULE_ID",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CON_ATTR_SUP",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "physicalTable": {
+    "name": "XREF_COMMODITY_HEIRCHY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMMODITY",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "COMMODITY_HIERARCHY",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

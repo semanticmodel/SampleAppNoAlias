@@ -1,0 +1,65 @@
+{
+  "physicalTable": {
+    "name": "DBA_EXTENTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SEGMENT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "RELATIVE_FNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_NAME",
+        "dataType": "VARCHAR",
+        "length": 81
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BLOCK_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXTENT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

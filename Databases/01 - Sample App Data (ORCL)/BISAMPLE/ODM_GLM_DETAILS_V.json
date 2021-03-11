@@ -1,0 +1,94 @@
+{
+  "physicalTable": {
+    "name": "ODM_GLM_DETAILS_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ATTRIBUTE_SUBNAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "LOWER_COEFF_LIMIT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLASS",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "COEFFICIENT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VIF",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_COEFFICIENT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TEST_STATISTIC",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ATTRIBUTE_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "UPPER_COEFF_LIMIT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_LOWER_COEFF_LIMIT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "EXP_UPPER_COEFF_LIMIT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "P_VALUE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "STD_COEFFICIENT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE_VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "STD_ERROR",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

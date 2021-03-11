@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "Facts",
+    "alternateNames": [
+      "Measures"
+    ],
+    "presentationColumns": [ {
+        "name": "Balance",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Balance"
+      },
+      {
+        "name": "Period Ago Balance",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Period Ago Balance"
+      },
+      {
+        "name": "% Variation to Period Ago",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.% Variation to Period Ago"
+      },
+      {
+        "name": "% of Net Rev",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.% of Net Rev"
+      },
+      {
+        "name": "Net Revenue",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Net Revenue"
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "physicalTableAlias": {
+    "name": "D50 Employees (PC Hier)",
+    "description": "Customer Alias: Alias of the customer dimension table",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_EMPL_D_VH",
+    "overrideSourceCacheSetting": true
+  }
+}

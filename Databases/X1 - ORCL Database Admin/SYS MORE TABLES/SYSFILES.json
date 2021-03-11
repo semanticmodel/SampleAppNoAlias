@@ -1,0 +1,26 @@
+{
+  "physicalTable": {
+    "name": "SYSFILES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TSNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FNAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      }
+    ]
+  }
+}

@@ -1,0 +1,2865 @@
+{
+  "database": {
+    "name": "01 - Sample App Data (ORCL)",
+    "databaseType": "Oracle 12c",
+    "description": "This datasource represents actual sales, booking and inventory data.",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Sample Relational Connection",
+        "connectionTimeoutUnit": "WHEN_QUERY_COMPLETES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "description": "Connection pool for Sample relational db source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)\r\n\r\nYou can also replace the \r\n\"VALUEOF(NQ_SESSION.DSN)\" \r\nby the full string below :\r\n(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=VALUEOF(DB_HOST))(PORT=VALUEOF(DB_PORT))))(CONNECT_DATA=(SID=VALUEOF(DB_SID))))",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "D02 Time Month Grain_F24",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F24 Preserve Dim Members Agg",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D61 Customer Segments_F24",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F24 Preserve Dim Members Agg",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "Complex Join",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Empl_Key"
+          ]
+        },
+        "cardinality": "MANY_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D10 Product (Dynamic Table)_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D87 Cust LTV Facts_D88 DBMS Explain LTV Tabe",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D88 DBMS Explain LTV Tabe",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D02 Time Month Grain_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D54 Sales Rep (PC Closure Team Agg)_F17 Rev. (Siblings Aggr)",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg)",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 >0",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Member_Key",
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Empl_Key",
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Distance"
+          ]
+        },
+        "cardinality": "UNKOWN",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D60 Customers_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D30 Offices_F24",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F24 Preserve Dim Members Agg",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D01 Time Day Grain_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D04 Time Rolling Mth_F90 Facts Rolling Time Mth",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F90 Facts Rolling Time Mth",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D04 Time Rolling Mth",
+        "joinExpression": {
+          "expressionTemplate": "%1 >= %2",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D04 Time Rolling Mth.Mth_Key",
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F90 Facts Rolling Time Mth.Mth_Key"
+          ]
+        },
+        "cardinality": "UNKOWN",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D51 Closure Table Sales Rep Parent Child_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D30 Offices_F23",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F23 Preserve Dim Members Detail",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+      "useJoinExpression": true,
+        "name": "D10 Product (Dynamic Table)_F24",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F24 Preserve Dim Members Agg",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Revenue (Paid Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Ship_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "a061a - a13",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F14 Rev\\. (Ship Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "D63b Cust LTV (Orcl Data Mining)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.MEMBER_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.M_PRED_LTV_NODE"
+          }
+        ]
+      },
+      {
+        "name": "D91 Associantion Rules_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.OWNER"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "D94 Cluster Model Details_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D94 Cluster Model Details",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D94 Cluster Model Details.OWNER"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D94 Cluster Model Details.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "D92 Mining Model Settings_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.OWNER"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "D43 Chnls Offcs Bridge (Revenue)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev).Office_key"
+          }
+        ]
+      },
+      {
+        "name": "D53 Teams Membership Bridge (Revenue Facts)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D41 Channels (Revenue)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D41 Channels (Revenue).Chnl_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D43 Chnls Offs Bridge (Rev).Chnl_Key"
+          }
+        ]
+      },
+      {
+        "name": "D60 Customers_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "D10 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "01 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments.Segment_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Segment_Key"
+          }
+        ]
+      },
+      {
+        "name": "F71 ODM Regression Results_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F71 ODM Regression Results.ORDER_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F50 Facts Quotas_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.MTH_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F50 Facts Quotas_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.PROD_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F20 Fact Quotas_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.CHNL_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F50 Facts Quotas_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.PROD_KEY"
+          }
+        ]
+      },
+      {
+        "name": "ODM_ASSO_RULES_V_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ASSO_RULES_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ASSO_RULES_V.MODEL_NAME"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ASSO_RULES_V.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F17 Rev. (Siblings Aggr)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "F17 Rev. (Siblings Aggr)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F17 Rev. (Siblings Aggr)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Rev. (Billed Dt Flat Aggr)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F17 Rev\\. (Siblings Aggr).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "emp-closure",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D56 Closure Table Sales Rep (Descendants)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D56 Closure Table Sales Rep (Descendants).Ancestor_Key"
+          }
+        ]
+      },
+      {
+        "name": "D93 Mining Model Attributes_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.OWNER"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F21 Facts Revenue Aggregate 2_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F21 Facts Revenue Aggregate 2_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F21 Rev\\. (Aggregate 2).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "D53 Sales Rep (PC Hier - Team Agg)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D58 Sales Rep (Mgr Name).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Mgr_Id"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Targets_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F30 Facts Targets_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F40 Facts Targets.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F80 Facts Forecast Model from Db Function_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Julian_Month_Num",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function.MONTH"
+          }
+        ]
+      },
+      {
+        "name": "F80 Facts Forecast Model from Db Function_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function.PRODUCT"
+          }
+        ]
+      },
+      {
+        "name": "F80 Facts Forecast Model from Db Function_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function.OFFICE"
+          }
+        ]
+      },
+      {
+        "name": "F81 Db Facts Forecast Model from Db Function_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F81 Db Facts Forecast Model from Db Function.PRODUCT"
+          }
+        ]
+      },
+      {
+        "name": "ODM_SAMP_CUSTOMERS_LTV_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_LTV_BIN_RULES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_SAMP_CUSTOMERS_LTV",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_LTV_BIN_RULES.NODE",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_SAMP_CUSTOMERS_LTV.M_PRED_LTV_NODE"
+          }
+        ]
+      },
+      {
+        "name": "ODM_MINING_MODEL_SETTINGS_V_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_SETTINGS_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_SETTINGS_V.MODEL_NAME"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_SETTINGS_V.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "F92 Report Comments_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Day_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.DAY_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F92 Report Comments_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).LOB_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.LOB_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F92 Report Comments_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F92 Report Comments.EMPL_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Revenue (Paid Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Order_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "a061a - a13",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F13 Rev\\. (Order Dt Join).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F82 Db Facts Frequent Itemset from Db Function_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function.PROD_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F82 Db Facts Frequent Itemset from Db Function_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F82 Db Facts Frequent Itemset from Db Function.PROD_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Revenue Aggregate 1_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Revenue Aggregate 1_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F20 Facts Revenue Aggregate 1_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F20 Rev\\. (Aggregate 1).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "01 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments.Segment_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Segment_Key"
+          }
+        ]
+      },
+      {
+        "name": "D10 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "D60 Customers_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "D90 Actions Entries_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F91 Actions Entries",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F91 Actions Entries.Order_Id"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Rev. (Billed Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev._FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Facts  Rev. (Billed Dt Join)  (Team Perf)2_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F16 Rev\\. (Team Agg).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F19 Rev. (Converted)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F19 Rev. (Converted)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Facts Converted Revenue_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F13 Facts Rev. Converted_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "a061a-a11",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F19 Rev. (Converted)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F19 Rev\\. (Converted).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "D50 Sales Rep (Parent Child Hierarchy)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D59 Sales Rep (Mgr Name).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Mgr_Id"
+          }
+        ]
+      },
+      {
+        "name": "emp-posn-join",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D52 Sales Rep Position.Postn_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Postn_Key"
+          }
+        ]
+      },
+      {
+        "name": "ODM_CLUSTER_DETAILS_V_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_CLUSTER_DETAILS_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_CLUSTER_DETAILS_V.MODEL_NAME"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_CLUSTER_DETAILS_V.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "D10 Product (Dynamic Table)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D11 Product Images",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D11 Product Images.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "test_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_PROD_IMG_D",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.SAMP_PROD_IMG_D.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "a061a-a22",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Facts Rev. Rolling (Billed Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "13 Fact Rolling Revenue (Perkey 1)_FKey#3",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "13 Fact Rolling Revenue (Perkey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F90 Facts Rolling Time Mth",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F90 Facts Rolling Time Mth.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "13 Fact Rolling Revenue (Perkey 1)_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Rev. (Rolling)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F12 Rev\\. (Rolling).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "D51 Closure Table Sales Rep Parent Child_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D50 Employees (PC Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D50 Employees (PC Hier).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Ancestor_Key"
+          }
+        ]
+      },
+      {
+        "name": "emp-closure",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Ancestor_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Revenue (Paid Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "a061a - a13",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Paid_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F15 Rev\\. (Paid Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "10 Dim Rolling Time Mth_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D04 Time Rolling Mth",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D04 Time Rolling Mth.Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "a061a-a11",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F22 Rev. (Bridged to Channels)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F22 Rev. (Bridged to Channels)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F22 Rev. (Bridged to Channels)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F22 Rev. (Bridged to Channels)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Rev. (Billed Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F22 Rev\\. (Bridged to Channels).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "ODM_MINING_MODEL_ATTRIBUTES_V_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_ATTRIBUTES_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_ATTRIBUTES_V.MODEL_NAME"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_ATTRIBUTES_V.OWNER"
+          }
+        ]
+      },
+      {
+        "name": "D55 Sales Rep (PC Hier - Childs)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D55 Sales Rep (PC Hier - Childs)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Employee_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D55 Sales Rep (PC Hier - Childs).Mgr_Id"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Mth_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Rev. (Billed Dt Flat Aggr)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Revenue (Billed Time Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F18 Rev\\. (Individual Contrib).Bill_Qtr_Key"
+          }
+        ]
+      },
+      {
+        "name": "D65 Closure Table Cust Tree Node_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D85 Cust LTV Nodes (PC Hierarchy).NODE",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.ANCESTOR_KEY"
+          }
+        ]
+      },
+      {
+        "name": "F40 Facts Headcount_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Day_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Day_Key"
+          }
+        ]
+      },
+      {
+        "name": "F40 Facts Headcount_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "D82 Cust LTV Dynamic Scoring (ODM Classification)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D83 Cust LTV Dynamic Leaf Nodes.NODE",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring.M_DYN_PRED_LTV_NODE"
+          }
+        ]
+      },
+      {
+        "name": "D61 Sales Teams Membership (Bridge Table)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D42 Channels (Quotas).Chnl_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas).Chnl_Key"
+          }
+        ]
+      },
+      {
+        "name": "D63 Channels Custs Bridge (Costs)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D31 Offices (Quotas).Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D44 Chnls Offs Bridge (Quotas).Office_key"
+          }
+        ]
+      },
+      {
+        "name": "F70 ODM Regression Data_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F70 ODM Regression Data",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Order_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F70 ODM Regression Data.ORDER_KEY"
+          }
+        ]
+      },
+      {
+        "name": "D30 Offices_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "D55 Sales Rep (Parent Child Hier) (Siblings)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D57 Sales Rep (PC Hier - Siblings)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D50 Sales Rep (Parent Child Hierarchy).Mgr_Id",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D57 Sales Rep (PC Hier - Siblings).Mgr_Id"
+          }
+        ]
+      },
+      {
+        "name": "D80 Cust LTV (ODM)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D81 Cust LTV Leaf Nodes.NODE",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).M_PRED_LTV_NODE"
+          }
+        ]
+      },
+      {
+        "name": "D63 Cust LTV (Orcl Data Mining)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D86 Closure Table Cust LTV Nodes.MEMBER_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).M_PRED_LTV_NODE"
+          }
+        ]
+      },
+      {
+        "name": "D80 Cust LTV (ODM Classification)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D82 Cust LTV Dynamic Scoring.CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY"
+          }
+        ]
+      },
+      {
+        "name": "D33 Sales Rep Parent Child Closure (Pct to Parent)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D53 Sales Rep (PC Hier - Team Agg).Mgr_Id",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D54 Closure Table Sales Rep (Team Agg).Ancestor_Key"
+          }
+        ]
+      },
+      {
+        "name": "D96 Model Global Details_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D95 GLM Model Details",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D95 GLM Model Details.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "D10 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "01 Customer_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments.Segment_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Segment_Key"
+          }
+        ]
+      },
+      {
+        "name": "D60 Customers_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D87 Cust LTV Facts.CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Revenue (Billed Date Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Rev. (Mago)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D80 Cust LTV (ODM).CUST_KEY",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "a061a-a11",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D51 Closure Table Sales Rep Parent Child.Member_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Rev. (Mago)_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Rev. (Mago)_Foreign Key#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D71 Orders TimeZone Converted.Order_key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Order_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Rev. (Billed Dt Join)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Month_Ago_Wid",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Bill_Mth_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Rev. (Mago)_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F11 Rev\\. (Mago).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "D95 GLM Model Details_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D95 GLM Model Details",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D95 GLM Model Details.OWNER"
+          },
+          {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D95 GLM Model Details.MODEL_NAME"
+          }
+        ]
+      },
+      {
+        "name": "M1 Segment Cache Customers_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.QUALIFIED_ID"
+          }
+        ]
+      },
+      {
+        "name": "M01 Mktg Cache Customers_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.QUALIFIED_ID"
+          }
+        ]
+      },
+      {
+        "name": "M01 Mktg Cache Customers_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.QUALIFIED_ID"
+          }
+        ]
+      },
+      {
+        "name": "M4 Mktg Saved Res Set Customers_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.TARGET_LEVEL_ID"
+          }
+        ]
+      },
+      {
+        "name": "M4 Mktg Saved Res Set Customers_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M02 Mktg Res Set Headers Customers.GUID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.GUID"
+          }
+        ]
+      },
+      {
+        "name": "M03 Mktg Saved Res Set Customers_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D63 Customers (SCD Time Temporal View Query).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.TARGET_LEVEL_ID"
+          }
+        ]
+      },
+      {
+        "name": "M03 Mktg Saved Res Set Customers_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D64 Customers (SCD Time Temporal Session).Cust_Key",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.TARGET_LEVEL_ID"
+          }
+        ]
+      },
+      {
+        "name": "USER_COMMENTS_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D32 Offices Addresses.Region",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.DIM1"
+          }
+        ]
+      },
+      {
+        "name": "USER_COMMENTS_Foreign Key#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.D_DATE"
+          }
+        ]
+      },
+      {
+        "name": "MEMBERSHIP_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.MEMBERSHIP_ID"
+          }
+        ]
+      },
+      {
+        "name": "PRIMARY_ADDRESS_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Primary)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Primary).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID"
+          }
+        ]
+      },
+      {
+        "name": "PERSONS (Suppliers)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Supplier Primary).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).PRIMARY_ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "PERSONS (Suppliers)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.SUPPLIER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS (Suppliers).SUPPLIER_ID"
+          }
+        ]
+      },
+      {
+        "name": "COLLECTION_WAREHOUSE_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.COLLECTION_WAREHOUSE_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "SHIP_TO_ADDRESS_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES.ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.SHIP_TO_ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "DISCOUNT_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "PAYMENT_OPTION_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.PAYMENT_OPTION_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.PAYMENT_OPTION_ID"
+          }
+        ]
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.SHIP_TO_ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.COUPON_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS_FKey#3",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_DATE"
+          }
+        ]
+      },
+      {
+        "name": "SHIPPING_OPTION_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.SHIPPING_OPTION_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.SHIPPING_OPTION_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#8",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.SHIPPING_OPTION_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).SHIPPING_OPTION_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#4",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).ORDER_SHIPPED_DATE"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#6",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Order Ship To).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).SHIP_TO_ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#5",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES.ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).SHIP_TO_ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#3",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#10",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).COLLECTION_WAREHOUSE_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#9",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#7",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.PAYMENT_OPTION_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).PAYMENT_OPTION_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "DISCOUNT_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES.DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES.CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "COUPON_USAGES_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES.APPLIED_DATE"
+          }
+        ]
+      },
+      {
+        "name": "COUPON_USAGES_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES.DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.COUPON_USAGES.ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS.CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "CATEGORY_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS.CATEGORY_ID"
+          }
+        ]
+      },
+      {
+        "name": "SUPPLIER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SUPPLIERS.SUPPLIER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.SUPPLIER_ID"
+          }
+        ]
+      },
+      {
+        "name": "CATEGORY_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_CATEGORIES_BASE.CATEGORY_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.CATEGORY_ID"
+          }
+        ]
+      },
+      {
+        "name": "CUSTOMER_IDENTIFICATIONS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ADDRESS_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "ASSOCIATED_OWNER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.ASSOCIATED_OWNER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ADDRESS_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Cust Non Primary).ADDRESS_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESS_USAGES.ADDRESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "ELIGIBLE_DISCOUNTS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "DISCOUNT_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.DISCOUNT_ID"
+          }
+        ]
+      },
+      {
+        "name": "MEMBERSHIP_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.MEMBERSHIP_ID"
+          }
+        ]
+      },
+      {
+        "name": "test_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODIMG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODIMG.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "PRODUCT_ID#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCT_IMAGES",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_IMAGES.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "PRODUCT_ID#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDER_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes)",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDER_ITEMS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "WAREHOUSE_STOCK_LEVELS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.BIEE_TIME_DAY_D.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS.LAST_UPDATE_DATE"
+          }
+        ]
+      },
+      {
+        "name": "PRODUCT_ID#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "WAREHOUSE_ID",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSE_STOCK_LEVELS.WAREHOUSE_ID"
+          }
+        ]
+      },
+      {
+        "name": "PAYMENT_OPTIONS (Customers)_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS (Customers)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS (Customers).CUSTOMER_ID"
+          }
+        ]
+      },
+      {
+        "name": "PRODUCT_ID#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.PRODUCTS_BASE",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.PRODUCTS_BASE.PRODUCT_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.PRODUCT_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDER_ITEMS_FKey",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS.ORDER_ID",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.ORDER_ID"
+          }
+        ]
+      },
+      {
+        "name": "ORDERS_Foreign Key",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain",
+        "rightTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS.ORDER_DATE"
+          }
+        ]
+      }
+    ]
+  }
+}

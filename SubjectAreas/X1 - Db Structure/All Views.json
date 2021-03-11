@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "All Views",
+    "alternateNames": [
+      "All_views",
+      "OBJ- ALL_VIEWS"
+    ],
+    "presentationColumns": [ {
+        "name": "Editioning View",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Editioning View"
+      },
+      {
+        "name": "Oid Text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Oid Text"
+      },
+      {
+        "name": "Oid Text Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Oid Text Length"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Owner"
+      },
+      {
+        "name": "Read Only",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Read Only"
+      },
+      {
+        "name": "Superview Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Superview Name"
+      },
+      {
+        "name": "Text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Text"
+      },
+      {
+        "name": "Text Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Text Length"
+      },
+      {
+        "name": "Type Text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Type Text"
+      },
+      {
+        "name": "Type Text Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.Type Text Length"
+      },
+      {
+        "name": "View Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.View Name"
+      },
+      {
+        "name": "View Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.View Type"
+      },
+      {
+        "name": "View Type Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.View Type Owner"
+      },
+      {
+        "name": "# Of Views",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_VIEWS.# Of Views"
+      }
+    ]
+  }
+}

@@ -1,0 +1,568 @@
+{
+  "logicalTable": {
+    "name": "OBJ- ALL_MVIEWS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "After Fast Refresh",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.AFTER_FAST_REFRESH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Build Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.BUILD_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Compile State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.COMPILE_STATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Container Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.CONTAINER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fast Refreshable",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.FAST_REFRESHABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Refresh Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.LAST_REFRESH_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Refresh Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.LAST_REFRESH_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Master Link",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.MASTER_LINK"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Master Rollback Seg",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.MASTER_ROLLBACK_SEG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mview Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.MVIEW_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Fresh Pct Regions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.NUM_FRESH_PCT_REGIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Pct Tables",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.NUM_PCT_TABLES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Stale Pct Regions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.NUM_STALE_PCT_REGIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Query",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.QUERY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Query Len",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.QUERY_LEN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Refresh Method",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.REFRESH_METHOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Refresh Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.REFRESH_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rewrite Capability",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.REWRITE_CAPABILITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rewrite Enabled",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.REWRITE_ENABLED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Stale Since",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.STALE_SINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Staleness",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.STALENESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown Consider Fresh",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_CONSIDER_FRESH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown External Table",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_EXTERNAL_TABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown Import",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_IMPORT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown Plsql Func",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_PLSQL_FUNC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown Prebuilt",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_PREBUILT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unknown Trusted Fd",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UNKNOWN_TRUSTED_FD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Updatable",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UPDATABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Update Log",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.UPDATE_LOG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Use No Index",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.USE_NO_INDEX"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Mviews",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_MVIEWS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_MVIEWS.MVIEW_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALL_MVIEWS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.ALL_MVIEWS"
+          ]
+        }
+      }
+    ]
+  }
+}

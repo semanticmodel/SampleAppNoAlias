@@ -1,0 +1,49 @@
+{
+  "presentationTable": {
+    "name": "Physical SQL",
+    "alternateNames": [
+      "Navigation#1"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Logical Queries",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL Facts.# of Logical Queries"
+      },
+      {
+        "name": "# Physical SQL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL Facts.# Physical SQL"
+      },
+      {
+        "name": "Sum Row Count",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL Facts.Sum Row Count"
+      },
+      {
+        "name": "Avg Phys SQL Time Sec",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL Facts.Avg Phys SQL Time Sec"
+      },
+      {
+        "name": "Physical Sources",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Physical Sources"
+      },
+      {
+        "name": "Physical SQL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Physical SQL"
+      },
+      {
+        "name": "Phys Sql Sequence Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Phys Sql Sequence Id"
+      },
+      {
+        "name": "Logical Query Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Logical Query Id"
+      },
+      {
+        "name": "Physical SQL Blob",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Physical SQL Blob"
+      },
+      {
+        "name": "Row Count",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Phys SQL.Row Count"
+      }
+    ]
+  }
+}

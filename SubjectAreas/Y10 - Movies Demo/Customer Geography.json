@@ -1,0 +1,80 @@
+{
+  "presentationTable": {
+    "name": "Customer Geography",
+    "presentationColumns": [ {
+        "name": "Customer ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Customer ID"
+      },
+      {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.City"
+      },
+      {
+        "name": "City ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.City ID"
+      },
+      {
+        "name": "Continent",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Continent"
+      },
+      {
+        "name": "Continent ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Continent ID"
+      },
+      {
+        "name": "Country",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Country"
+      },
+      {
+        "name": "Country Code",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Country Code"
+      },
+      {
+        "name": "Country ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Country ID"
+      },
+      {
+        "name": "State / Province",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.State / Province"
+      },
+      {
+        "name": "State / Province ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.State / Province ID"
+      },
+      {
+        "name": "Street Address",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Geography.Street Address"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Customer Geography",
+        "sourceLogicalTable": "logicalTable:Y10 - Movie Demo (ORCL).Customer Geography",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.Total"
+          },
+          {
+            "name": "Continent",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.Continent",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Customer Geography.Continent"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.Country",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Customer Geography.Country"
+          },
+          {
+            "name": "State",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.State",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Customer Geography.State / Province"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.City",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Customer Geography.City"
+          }
+        ]
+      }
+    ]
+  }
+}

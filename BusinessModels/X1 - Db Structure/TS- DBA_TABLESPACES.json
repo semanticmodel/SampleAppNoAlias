@@ -1,0 +1,407 @@
+{
+  "logicalTable": {
+    "name": "TS- DBA_TABLESPACES",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Allocation Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.ALLOCATION_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bigfile",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.BIGFILE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Block Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.BLOCK_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Compress For",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.COMPRESS_FOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Contents",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.CONTENTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Def Tab Compression",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.DEF_TAB_COMPRESSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Encrypted",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.ENCRYPTED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Extent Management",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.EXTENT_MANAGEMENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Force Logging",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.FORCE_LOGGING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Initial Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.INITIAL_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logging",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.LOGGING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Extents",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.MAX_EXTENTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.MAX_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Extents",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.MIN_EXTENTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Extlen",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.MIN_EXTLEN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Next Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.NEXT_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pct Increase",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.PCT_INCREASE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plugged In",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.PLUGGED_IN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Predicate Evaluation",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.PREDICATE_EVALUATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Retention",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.RETENTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Segment Space Management",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.SEGMENT_SPACE_MANAGEMENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DBA_TABLESPACES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACES"
+          ]
+        }
+      }
+    ]
+  }
+}

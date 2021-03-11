@@ -1,0 +1,548 @@
+{
+  "logicalTable": {
+    "name": "Weather Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Croploss",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.CROPLOSS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.CROPLOSS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.CROPLOSS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "F1",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.F1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.F1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.F1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "F2",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.F2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.F2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.F2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "F3",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.F3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.F3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.F3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "F4",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.F4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.F4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.F4"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fatalities",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.FATALITIES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.FATALITIES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.FATALITIES"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Injuries",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.INJURIES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.INJURIES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.INJURIES"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loss",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.LOSS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.LOSS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.LOSS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ns",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.NS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.NS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.NS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Om",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.OM"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.OM"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.OM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sg",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.SG"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.SG"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.SG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sn",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.SN"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.SN"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.SN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Phenomenons",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Weather Hail",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL.ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Tornadoes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES.ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Weather Wind",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND.ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Weather Hail",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.WEATHER.WEATHER_HAIL"
+          ]
+        },
+        "dataFragmentation": {
+          "expressionTemplate": "%1 = 'Hail'",
+          "expressionObjects": [
+            "logicalColumn:Y11 - Other Demos.Weather Dim.Type"
+          ]
+        },
+        "combineWithOtherFragments": true
+      },
+      {
+        "name": "Weather Tornadoes",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.WEATHER.WEATHER_TORNADOES"
+          ]
+        },
+        "dataFragmentation": {
+          "expressionTemplate": "%1 = 'Tornado'",
+          "expressionObjects": [
+            "logicalColumn:Y11 - Other Demos.Weather Dim.Type"
+          ]
+        },
+        "combineWithOtherFragments": true
+      },
+      {
+        "name": "Weather Wind",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.WEATHER.WEATHER_WIND"
+          ]
+        },
+        "dataFragmentation": {
+          "expressionTemplate": "%1 = 'Wind'",
+          "expressionObjects": [
+            "logicalColumn:Y11 - Other Demos.Weather Dim.Type"
+          ]
+        },
+        "combineWithOtherFragments": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "physicalTable": {
+    "name": "SA_Country00047066",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Customer_C00045FC8",
+        "dataType": "VARCHAR",
+        "length": 400
+      },
+      {
+        "name": "Country_00047066SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

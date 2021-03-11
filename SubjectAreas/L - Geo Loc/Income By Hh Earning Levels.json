@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Income By Hh Earning Levels",
+    "presentationColumns": [ {
+        "name": "Total Inc Hh Earn 150k - 300k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn 150k - 300k"
+      },
+      {
+        "name": "Total Inc Hh Earn 300k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn 300k - 500k"
+      },
+      {
+        "name": "Total Inc Hh Earn 500k - 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn 500k - 1m"
+      },
+      {
+        "name": "Total Inc Hh Earn 75k - 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn 75k - 150k"
+      },
+      {
+        "name": "Total Inc Hh Earn Gt 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn Gt 1m"
+      },
+      {
+        "name": "Total Inc Hh Earn Lt 75k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Inc Hh Earn Lt 75k"
+      }
+    ]
+  }
+}

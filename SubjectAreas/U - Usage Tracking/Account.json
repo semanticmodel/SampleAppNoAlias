@@ -1,0 +1,17 @@
+{
+  "presentationTable": {
+    "name": "Account",
+    "alternateNames": [
+      "WP Account"
+    ],
+    "presentationColumns": [ {
+        "name": "Account Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Account.Account Name"
+      },
+      {
+        "name": "Account Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Account.Account Type"
+      }
+    ]
+  }
+}

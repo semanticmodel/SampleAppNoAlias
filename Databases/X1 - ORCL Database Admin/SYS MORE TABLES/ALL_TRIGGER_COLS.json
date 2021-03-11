@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "ALL_TRIGGER_COLS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "COLUMN_USAGE",
+        "dataType": "VARCHAR",
+        "length": 17
+      },
+      {
+        "name": "COLUMN_LIST",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TRIGGER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TRIGGER_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

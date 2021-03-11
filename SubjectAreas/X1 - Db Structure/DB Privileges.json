@@ -1,0 +1,13 @@
+{
+  "presentationTable": {
+    "name": "DB Privileges",
+    "alternateNames": [
+      "Db Objects#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL USERS - Owners.Owner"
+      }
+    ]
+  }
+}

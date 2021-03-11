@@ -1,0 +1,31 @@
+{
+  "physicalTable": {
+    "name": "TEXT_CLASSES_DESC",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select classification, recordid, \r\nENDECA.MARKUPTEXT(query_string,RECORDID,'DIM_CLAIM_COMMENTS_IDX1','<font color=red>','</font>') COMPLAINT_DESCRIPTION\r\nfrom endeca.text_classification, endeca.DIM_CLAIM_COMMENTS\r\nwhere matches(query_string, \r\n               COMPLAINT_DESCRIPTION)>0\r\norder by classification"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "CLASSIFICATION",
+        "dataType": "VARCHAR",
+        "length": 80,
+        "nullable": true
+      },
+      {
+        "name": "RECORDID",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "COMPLAINT_DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 400,
+        "nullable": true
+      }
+    ]
+  }
+}

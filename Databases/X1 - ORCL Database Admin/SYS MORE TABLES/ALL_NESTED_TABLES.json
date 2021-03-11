@@ -1,0 +1,55 @@
+{
+  "physicalTable": {
+    "name": "ALL_NESTED_TABLES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLE_TYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARENT_TABLE_COLUMN",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TABLE_TYPE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARENT_TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "RETURN_TYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STORAGE_SPEC",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ELEMENT_SUBSTITUTABLE",
+        "dataType": "VARCHAR",
+        "length": 25
+      }
+    ]
+  }
+}

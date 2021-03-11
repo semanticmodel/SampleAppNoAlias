@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Base Facts",
+    "description": "This folder contains all the base facts like Revenue, Quantity, Target, Headcount and so on. All the metrics in this folder have the aggregation type as Sum unless explicitly specified.",
+    "presentationColumns": [ {
+        "name": "1- Revenue",
+        "localization": {
+          "localizationKey": "1- Revenue",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Base_Facts_1-_Revenue)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.F0 Base Measures.1- Revenue",
+        "description": "Help :\r\nRevenue data. Sources from Revenue physical column in 'Sample Revenue Fact' table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "2- Billed Quantity",
+        "localization": {
+          "localizationKey": "2- Billed Quantity",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Base_Facts_2-_Billed_Quantity)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.F0 Base Measures.2- Billed Quantity",
+        "description": "Help :\r\nBilled Quantity data. Sources from Units physical column in 'Sample Revenue Fact' table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimension"
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "localization": {
+          "localizationKey": "20  Actual Unit Price",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_20__Actual_Unit_Price)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.F0 Base Measures.20  Actual Unit Price",
+        "description": "Help :\r\nUnit Price is computed as Revenue divided by Billed Quantity"
+      }
+    ]
+  }
+}

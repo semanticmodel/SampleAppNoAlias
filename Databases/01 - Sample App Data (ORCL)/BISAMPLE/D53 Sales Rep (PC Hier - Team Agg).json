@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D53 Sales Rep (PC Hier - Team Agg)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_EMPL_D_VH"
+  }
+}

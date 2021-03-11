@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Datetime",
+    "presentationColumns": [ {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Year"
+      },
+      {
+        "name": "Time",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Time"
+      },
+      {
+        "name": "Date_Id",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Date_Id"
+      },
+      {
+        "name": "Day Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Day Name"
+      },
+      {
+        "name": "Day No in Month",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Day No in Month"
+      },
+      {
+        "name": "Day No in Week",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Day No in Week"
+      },
+      {
+        "name": "Week",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Week"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Month"
+      },
+      {
+        "name": "Month Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Month Name"
+      },
+      {
+        "name": "Month No",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Month No"
+      },
+      {
+        "name": "Quarter",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Datetime.Quarter"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Hier",
+        "sourceLogicalTable": "logicalTable:12 - Big Data Movie.Datetime",
+        "levels": [ {
+            "name": "Total Time",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Total Time"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Year",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Datetime.Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Quarter",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Datetime.Quarter"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Month",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Datetime.Month"
+          },
+          {
+            "name": "Week",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Week",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Datetime.Week"
+          },
+          {
+            "name": "Day",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Datetime.Day",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Datetime.Date_Id"
+          }
+        ]
+      }
+    ]
+  }
+}

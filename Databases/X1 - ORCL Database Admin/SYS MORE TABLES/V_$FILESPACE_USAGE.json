@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "V_$FILESPACE_USAGE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CHANGESCN_BASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAG",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ALLOCATED_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_MAXSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHANGESCN_WRAP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RFNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

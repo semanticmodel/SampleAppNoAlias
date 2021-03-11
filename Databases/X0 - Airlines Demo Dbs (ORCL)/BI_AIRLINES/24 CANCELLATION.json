@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "24 CANCELLATION",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.CANCELLATION",
+    "caching": {
+      "enable": true
+    }
+  }
+}

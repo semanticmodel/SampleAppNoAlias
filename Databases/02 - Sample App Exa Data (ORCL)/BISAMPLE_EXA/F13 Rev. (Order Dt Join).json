@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F13 Rev. (Order Dt Join)",
+    "description": "Reveue Paid Date Alias: Joins to the Time dimension tables on the Paid date column in the fact.",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_REVENUE_F"
+  }
+}

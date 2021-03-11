@@ -1,0 +1,230 @@
+{
+  "logicalTable": {
+    "name": "D20 Product (Ragged Hier)",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Brand",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Brand"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004C03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Brand00003D44"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "LOB",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).LOB"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004C03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.LOB0000460B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod_Dsc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004C03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Prod_Dsc00003D90"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).TOTAL_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D20 Product (Ragged Hier)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Type"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004C03",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Type000046B3"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D20 Product (Ragged Hier)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)"
+          ]
+        }
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004C03",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Prod_Dsc"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Product (Rgd Sk Lvl) Total",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Product (Rgd Sk Lvl) Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Brand",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Brand"
+          ],
+          "displayColumn": "logicalColumn:Brand"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) LOB",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:LOB"
+          ],
+          "displayColumn": "logicalColumn:LOB"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Type"
+          ],
+          "displayColumn": "logicalColumn:Type"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Prod_Dsc",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Prod_Dsc"
+          ],
+          "displayColumn": "logicalColumn:Prod_Dsc"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Prod_Key"
+          ],
+          "displayColumn": "logicalColumn:Prod_Key"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H2 Products Ragged SkipLevels [branch at level 'Product (Rgd Sk Lvl) Prod_Dsc']",
+          "levels": [ "Product (Rgd Sk Lvl) Total", "Product (Rgd Sk Lvl) Brand", "Product (Rgd Sk Lvl) LOB", "Product (Rgd Sk Lvl) Type", "Product (Rgd Sk Lvl) Prod_Dsc", "Product (Rgd Sk Lvl) Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "TS- DBA_TABLESPACE_GROUPS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Group Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACE_GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACE_GROUPS.GROUP_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TABLESPACE_GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TABLESPACE_GROUPS.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DBA_TABLESPACE_GROUPS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TABLESPACE_GROUPS"
+          ]
+        }
+      }
+    ]
+  }
+}

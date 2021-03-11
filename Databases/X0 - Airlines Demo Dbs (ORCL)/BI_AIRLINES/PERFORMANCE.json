@@ -1,0 +1,473 @@
+{
+  "physicalTable": {
+    "name": "PERFORMANCE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIVREACHEDDEST",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGINWAC",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DISTANCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV2LONGESTGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CRSARRTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAXIOUT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DIV3LONGESTGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV3AIRPORT",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAXIIN",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DIV4WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ARRDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV5LONGESTGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPDELAYMINUTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ORIGINSTATENAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "YEAR",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CANCELLED",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV3TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV3TOTALGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "PILOTID",
+        "dataType": "INT"
+      },
+      {
+        "name": "ARRDELAYMINUTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV5TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ARRIVALDELAYGROUPS",
+        "dataType": "INT"
+      },
+      {
+        "name": "CARRIER",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV2AIRPORT",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV4WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CRSDEPTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ARRTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DISTANCEGROUP",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV1WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIVAIRPORTLANDINGS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "CRSELAPSEDTIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ARRDEL15",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "FLIGHTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXTRA",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV3WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIVDISTANCE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DAYOFWEEK",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIVACTUALELAPSEDTIME",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DIV5WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DESTCITYNAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIVARRDELAY",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "ACTUALELAPSEDTIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DAYOFMONTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV5AIRPORT",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV1TOTALGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CARRIERDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MONTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ORIGINSTATE",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CANCELLATIONCODE",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "LONGESTADDGTIME",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DIV4AIRPORT",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DESTSTATEFIPS",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV2WHEELSON",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV4LONGESTGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DESTSTATENAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "FLIGHTNUM",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ORIGINCITYNAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "LATEAIRCRAFTDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV2WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "FIRSTDEPTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DESTSTATE",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "SECURITYDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DESTWAC",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "FLIGHTDATE",
+        "dataType": "TIMESTAMP",
+        "length": 19
+      },
+      {
+        "name": "DIV3WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRTIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV1LONGESTGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRLINEID",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "WEATHERDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV5TOTALGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV1WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV1AIRPORT",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "UNIQUECARRIER",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ARRTIMEBLK",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGINSTATEFIPS",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "NASDELAY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIV4TOTALGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV2TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV5WHEELSOFF",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPTIMEBLK",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV2TOTALGTIME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DIV4TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPDEL15",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPARTUREDELAYGROUPS",
+        "dataType": "INT"
+      },
+      {
+        "name": "TOTALADDGTIME",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DIV1TAILNUM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "QUARTER",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIVERTED",
+        "dataType": "DOUBLE"
+      }
+    ]
+  }
+}

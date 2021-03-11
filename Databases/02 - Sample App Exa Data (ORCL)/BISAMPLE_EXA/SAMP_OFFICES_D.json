@@ -1,0 +1,79 @@
+{
+  "physicalTable": {
+    "name": "SAMP_OFFICES_D",
+    "description": "Offices dimension table : Stores office dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_OFFICES_D.xml",
+    "physicalColumns": [ {
+        "name": "Sequence",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Sequence: Stores sequence as an integer"
+      },
+      {
+        "name": "Organization",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Organization: Stores the Organization information as text"
+      },
+      {
+        "name": "Dept_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Department Key: Stores department key as an integer"
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Office Key: Surrogate key of the office dimension table."
+      },
+      {
+        "name": "Department",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true,
+        "description": "Department: Stores the department information as text"
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Office_Dsc",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Office Description: Stores the office description as text"
+      },
+      {
+        "name": "Company_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Company Key: Stores company key as an integer"
+      },
+      {
+        "name": "Org_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Organization Key: Stores Organization key as an integer"
+      },
+      {
+        "name": "Address_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Address Key: Joins to Address_Key of Addresses dimension table."
+      },
+      {
+        "name": "Company",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Company: Stores the company information as text"
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "TIMES_HOUR (Cross Join)",
+    "sourceTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES_HOURS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

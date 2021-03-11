@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F20 Rev. (Aggregate 1)",
+    "description": "Reveue Fact Aggregate Alias: Stores the aggregated fact information at Employee and Product grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_FA1",
+    "caching": {
+      "enable": true
+    }
+  }
+}

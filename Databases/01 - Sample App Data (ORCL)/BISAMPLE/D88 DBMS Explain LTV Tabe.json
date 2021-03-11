@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D88 DBMS Explain LTV Tabe",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_LTV_EXPLAIN"
+  }
+}

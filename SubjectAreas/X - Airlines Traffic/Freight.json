@@ -1,0 +1,74 @@
+{
+  "presentationTable": {
+    "name": "Freight",
+    "alternateNames": [
+      "Traffic Facts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Freight (Tons)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Freight (Tons)",
+        "alternateNames": [
+          "Freight (Pounds)"
+        ]
+      },
+      {
+        "name": "Mail (Tons)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Mail (Tons)",
+        "alternateNames": [
+          "Mail (Pounds)",
+          "Mail Tons)"
+        ]
+      },
+      {
+        "name": "Payload (Tons)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Payload (Tons)",
+        "alternateNames": [
+          "Payload (Pounds)"
+        ]
+      },
+      {
+        "name": "Freight Load Factor",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Freight Load Factor",
+        "description": "Percentage ratio of pounds of freight and mails carried to total Payload"
+      },
+      {
+        "name": "Freight (Tons) x Miles",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Freight (Tons) x Miles",
+        "description": "Pounds Miles Transported (for each flight, total pounds of mail and freight x distance)",
+        "alternateNames": [
+          "Freight (pnds) x Miles",
+          "Freight (pnds)-Miles"
+        ]
+      },
+      {
+        "name": "P Ago Freight (Tons)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.P Ago Freight (Tons)",
+        "description": "Non-Stop Segment Freight Transported (pounds)",
+        "alternateNames": [
+          "P Ago Freight (Pounds)",
+          "P_Ago Freight (Pounds)",
+          "Period Ago Freight (Pounds)"
+        ]
+      },
+      {
+        "name": "P Ago Mail (Tons)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.P Ago Mail (Tons)",
+        "description": "Non-Stop Segment Mail Transported (pounds)",
+        "alternateNames": [
+          "P Ago Mail (Pounds)",
+          "P_Ago Mail (Pounds)",
+          "Period Ago Mail (Pounds)"
+        ]
+      },
+      {
+        "name": "P Ago Freight x Miles",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.P Ago Freight x Miles",
+        "description": "Non-Stop Segment Mail Transported (pounds)",
+        "alternateNames": [
+          "P Ago Freight-Miles",
+          "Period Ago Freight-Miles"
+        ]
+      }
+    ]
+  }
+}

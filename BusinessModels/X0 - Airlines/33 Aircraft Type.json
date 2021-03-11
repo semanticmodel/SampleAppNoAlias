@@ -1,0 +1,109 @@
+{
+  "logicalTable": {
+    "name": "33 Aircraft Type",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "CODE",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "33 AIRCRAFT_TYPE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.33 AIRCRAFT_TYPE.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_33_Airc00039CF4",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.CODE00039BFC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Aircraft Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "33 AIRCRAFT_TYPE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.33 AIRCRAFT_TYPE.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_33_Airc00039CF4",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4.Aircraft_T00039BFD"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "33 AIRCRAFT_TYPE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.33 AIRCRAFT_TYPE"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_33_Airc00039CF4",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_33_Airc00039CF4"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "33 Aircraft Type Total",
+      "logicalLevels": [
+        {
+          "name": "33 Aircraft Type Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "33 Aircraft Type Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:CODE"
+          ],
+          "displayColumn": "logicalColumn:CODE"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "33 Aircraft Type",
+          "levels": [ "33 Aircraft Type Total", "33 Aircraft Type Detail" ]
+        }
+      ]
+    }
+  }
+}

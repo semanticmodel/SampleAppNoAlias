@@ -1,0 +1,45 @@
+{
+  "presentationTable": {
+    "name": "Explicit Denials",
+    "alternateNames": [
+      "Explicit Allowings#1"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Denied Reads",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Reads"
+      },
+      {
+        "name": "# of Denied Execute/Traverses",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Execute/Traverses"
+      },
+      {
+        "name": "# of Denied Writes",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Writes"
+      },
+      {
+        "name": "# of Denied Deletes",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Deletes"
+      },
+      {
+        "name": "# of Denied ChangePermitteds",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied ChangePermitteds"
+      },
+      {
+        "name": "# of Denied Set Ownerships",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Set Ownerships"
+      },
+      {
+        "name": "# of Denied Run Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Run Publisher Reports"
+      },
+      {
+        "name": "# of Denied Schedule Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied Schedule Publisher Reports"
+      },
+      {
+        "name": "# of Denied View Publisher Reports",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Denied View Publisher Reports"
+      }
+    ]
+  }
+}

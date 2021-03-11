@@ -1,0 +1,247 @@
+{
+  "logicalTable": {
+    "name": "D1 Products",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "All Products",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.All Products - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Products - ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.All Products"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P0  Product Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Product"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1  Product",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Product - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2  Product Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Type - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2k  Product Type Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3  LOB",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Lob - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3k  LOB Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Lob"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4  Brand",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Brand - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4k  Brand Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Brand Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Brand"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Brand Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H1 Products.Product"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "All Products",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Products - ID"
+          ]
+        },
+        {
+          "name": "Brand",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P4k  Brand Key"
+          ]
+        },
+        {
+          "name": "Lob",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P3k  LOB Key"
+          ]
+        },
+        {
+          "name": "Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P2  Product Type"
+          ],
+          "displayColumn": "logicalColumn:P2  Product Type"
+        },
+        {
+          "name": "Product",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P0  Product Number"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H1 Products [branch at level 'Type']",
+          "levels": [ "Total", "All Products", "Brand", "Lob", "Type", "Product" ]
+        }
+      ]
+    }
+  }
+}

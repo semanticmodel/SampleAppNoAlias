@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "6 Facts ProcessPerf",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCPERF_STD_V"
+  }
+}

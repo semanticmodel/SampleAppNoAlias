@@ -1,0 +1,127 @@
+{
+  "physicalTable": {
+    "name": "SA_11_Orig00039D0B",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Orig_Airpo00039C3F",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "Orig_Count00039C4B",
+        "dataType": "VARCHAR",
+        "length": 90
+      },
+      {
+        "name": "Orig_St_00039D0DSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_S00039C48",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_C00039C4A",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Orig_Divis00039C46",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Orig_US_St00039C49",
+        "dataType": "VARCHAR",
+        "length": 54,
+        "nullable": true
+      },
+      {
+        "name": "Orig_Regio00039C44",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_D00039C45",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_Airpo00039C41",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Orig_Di_00039D0ESK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_City_00039C42",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Orig_Airpo00039C3D",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Orig_R00039C47",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Orig_Airpo00039C40",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "Orig_Ai_00039D0BSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_State00039C4C",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "Orig_Airpo00039C3E",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "Orig_Airpo00039C4F",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Orig_R00039C43",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_State00039C4D",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Orig_Re_00039D0FSK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

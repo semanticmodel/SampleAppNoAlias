@@ -1,0 +1,365 @@
+{
+  "logicalTable": {
+    "name": "D0 Time",
+    "description": "This logical table maps to the physical Time Dimension tables at Day,Month and Quarter grains. \r\nIt is mapped to 4 LTS.\r\nLTS1 Time Day Grain - Maps to the physical time table at day grain.\r\nLTS2 Time Month Grain - Maps to the physical time table at month grain.\r\nLTS3 Time Quarter Grain - Maps to the physical time table at quarter grain.\r\nLTS4 Targets (XML Source) - Maps to Fact targets XML source.\r\n\r\n ",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "T00 Date (Rel Only)",
+        "description": "Help : \r\nStores the information in date format .",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Calendar_Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T01 Per Name Week (Rel Only)",
+        "description": "Help : \r\nPeriod Name Week: Stores the week information in the format YYYY Week Weeknumber.\r\nEg:- 2009 Week 1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Per_Name_Week"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T02 Per Name Month",
+        "description": "Help : \r\nPeriod Name Month: Stores the year information in the format YYYY / MM.\r\nEg:- 2009 / 01",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Per_Name_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS1b Time Month Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Per_Name_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Month"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "description": "Help :\r\nPeriod Name Quarter: Stores the quarter information in the format YYYY QQuarterNumber.\r\nEg:- 2009 Q1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Per_Name_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS1b Time Month Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Per_Name_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Quarters"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Orcl OLAP Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Qtr"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T04 Per Name Half",
+        "description": "Help : \r\nPeriod Name Half: Stores the Half year information in the format YYYY HYHalfYearNumber.\r\nEg:- 2009 HY1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Per_Name_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS1b Time Month Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Per_Name_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Half Years"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Orcl OLAP Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Half"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T05 Per Name Year",
+        "description": "Help :\r\nPeriod Name Year: Stores the year information in the format YYYY.\r\nEg:- 2009",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Time Day Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain.Per_Name_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS1b Time Month Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain.Per_Name_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Years"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Orcl OLAP Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Calendar Time",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Year"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Time Day Grain",
+        "description": "\"1 - Sample App Data\".\"\".\"\".\"D01 Time Day Grain\".\"Cal_Year\" < 2011",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D01 Time Day Grain"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Day Detail"
+        ]
+      },
+      {
+        "name": "LTS1b Time Month Grain",
+        "description": "\"1 - Sample App Data\".\"\".\"\".\"D02 Time Month Grain\".\"Cal_Year\" < 2011",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D02 Time Month Grain"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Month"
+        ]
+      },
+      {
+        "name": "LTS2 Essb Calendar Time",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Quarter"
+        ]
+      },
+      {
+        "name": "LTS3 Orcl OLAP Calendar Time",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H0 Time.Quarter"
+        ]
+      },
+      {
+        "name": "LTS6  Flat Xml File Calendar Time",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source)"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total Time",
+      "logicalLevels": [
+        {
+          "name": "Total Time",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:T05 Per Name Year"
+          ],
+          "displayColumn": "logicalColumn:T05 Per Name Year",
+          "chronologicalKey": "logicalColumn:T05 Per Name Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 30,
+          "primaryColumns": [
+            "logicalColumn:T03 Per Name Qtr"
+          ],
+          "displayColumn": "logicalColumn:T03 Per Name Qtr",
+          "chronologicalKey": "logicalColumn:T03 Per Name Qtr"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 120,
+          "primaryColumns": [
+            "logicalColumn:T02 Per Name Month"
+          ],
+          "displayColumn": "logicalColumn:T02 Per Name Month",
+          "chronologicalKey": "logicalColumn:T02 Per Name Month"
+        },
+        {
+          "name": "Week",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 500,
+          "primaryColumns": [
+            "logicalColumn:T01 Per Name Week (Rel Only)",
+            "logicalColumn:T02 Per Name Month"
+          ],
+          "displayColumn": "logicalColumn:T01 Per Name Week (Rel Only)",
+          "chronologicalKey": "logicalColumn:T01 Per Name Week (Rel Only)"
+        },
+        {
+          "name": "Day Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:T00 Date (Rel Only)"
+          ],
+          "displayColumn": "logicalColumn:T00 Date (Rel Only)",
+          "chronologicalKey": "logicalColumn:T00 Date (Rel Only)"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H0 Time [branch at level 'Week']",
+          "levels": [ "Total Time", "Year", "Quarter", "Month", "Week", "Day Detail" ]
+        }
+      ]
+    }
+  }
+}

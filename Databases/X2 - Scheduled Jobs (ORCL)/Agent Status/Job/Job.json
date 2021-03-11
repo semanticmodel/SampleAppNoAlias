@@ -1,0 +1,42 @@
+{
+  "physicalTable": {
+    "name": "Job",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select J.JOB_ID, J.NAME, J.DESC_TEXT, J.NEXT_RUNTIME_TS,\r\nP.JOB_PARAM AS AGENT_PATH,J.USER_ID\r\nfrom S_NQ_JOB J inner join S_NQ_JOB_PARAM P on J.JOB_ID =\r\nP.JOB_ID\r\nwhere P.RELATIVE_ORDER = 1 and J.DELETE_FLG = 0\r\ngroup by J.JOB_ID, J.NAME, J.DESC_TEXT, J.NEXT_RUNTIME_TS,\r\nP.JOB_PARAM,J.USER_ID"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "NEXT_RUNTIME_TS",
+        "dataType": "DATE"
+      },
+      {
+        "name": "DESC_TEXT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "USER_ID",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "JOB_ID",
+        "dataType": "UINT",
+        "nullable": true
+      },
+      {
+        "name": "AGENT_PATH",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

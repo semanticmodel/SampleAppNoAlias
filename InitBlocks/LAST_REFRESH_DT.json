@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "LAST_REFRESH_DT",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT max(BILL_DAY_DT) FROM samp_revenue_f"
+      }
+    ],
+    "variables": [ {
+        "name": "LAST_REFRESH_DT",
+        "description": "Used to artifically set the last refresh date of datasources",
+        "value": "DATE '2015-12-30' "
+      }
+    ]
+  }
+}

@@ -1,0 +1,783 @@
+{
+  "logicalTable": {
+    "name": "60 Market",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Air Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIR_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Aircraft Config",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRCRAFT_CONFIG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Carrier",
+        "description": "Code assigned by IATA and commonly used to identify a carrier. As the same code may have been assigned to different carriers over time, the code is not always unique. For analysis, use the Unique Carrier Code.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CARRIER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Carrier Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CARRIER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Class",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CLASS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest Wac",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_WAC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Distance",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DISTANCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Passengers",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PASSENGERS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payload",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PAYLOAD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ramp To Ramp",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.RAMP_TO_RAMP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.REGION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Seats",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.SEATS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unique Carrier Entity",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.UNIQUE_CARRIER_ENTITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unique Carrier Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.UNIQUE_CARRIER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Aircraft Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRCRAFT_GROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Aircraft Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRCRAFT_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Airline Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRLINE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Carrier Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CARRIER_GROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Carrier Group New",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.CARRIER_GROUP_NEW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest Airport Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_AIRPORT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest Airport Seq Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_AIRPORT_SEQ_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest City Market Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_CITY_MARKET_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_CITY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State Abr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_STATE_ABR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State Fips",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_STATE_FIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State Nm",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST_STATE_NM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Distance Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DISTANCE_GROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Month",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin Airport Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_AIRPORT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin Airport Seq Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_AIRPORT_SEQ_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin City Market Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_CITY_MARKET_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_CITY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State Abr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_STATE_ABR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State Fips",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_STATE_FIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State Nm",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_STATE_NM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin Wac",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN_WAC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Quarter",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.QUARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Unique Carrier",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.UNIQUE_CARRIER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pax per Flights Grp",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PPF_GROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Unique Row Wid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.UROWID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DOMESTIC_SEGMENT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.60 Segment.60 Segment Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "60 Segment Total",
+      "logicalLevels": [
+        {
+          "name": "60 Segment Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "60 Segment Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Dbg - Airline Id",
+            "logicalColumn:Dbg - Dest",
+            "logicalColumn:Dbg - Month",
+            "logicalColumn:Dbg - Origin",
+            "logicalColumn:Dbg - Quarter",
+            "logicalColumn:Dbg - Year",
+            "logicalColumn:Dbg - Unique Row Wid"
+          ],
+          "displayColumn": "logicalColumn:Dbg - Airline Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "60 Segment",
+          "levels": [ "60 Segment Total", "60 Segment Detail" ]
+        }
+      ]
+    }
+  }
+}

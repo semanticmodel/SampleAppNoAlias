@@ -1,0 +1,81 @@
+{
+  "presentationTable": {
+    "name": "Task Start Time",
+    "alternateNames": [
+      "Task Start Time#2"
+    ],
+    "presentationColumns": [ {
+        "name": "Time Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started",
+        "alternateNames": [
+          "Task Start Time"
+        ]
+      },
+      {
+        "name": "Hour Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Hour Task Started"
+      },
+      {
+        "name": "Date Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Date Task Started"
+      },
+      {
+        "name": "Week Day Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Week Day Task Started"
+      },
+      {
+        "name": "Month Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Month Task Started"
+      },
+      {
+        "name": "Qtr Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Qtr Task Started"
+      },
+      {
+        "name": "Yr Task Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Yr Task Started"
+      },
+      {
+        "name": "Task Sequence Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task Sequence Id",
+        "alternateNames": [
+          "Sequence Id",
+          "Taks Sequence Id"
+        ]
+      },
+      {
+        "name": "Task Discriminator",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task Discriminator",
+        "alternateNames": [
+          "Activity Discriminator"
+        ]
+      },
+      {
+        "name": "Task End Time",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task End Time",
+        "alternateNames": [
+          "Activity End Time",
+          "Taks End Time"
+        ]
+      },
+      {
+        "name": "Task Participant",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task Participant",
+        "alternateNames": [
+          "Activity Participant"
+        ]
+      },
+      {
+        "name": "Task Priority",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task Priority",
+        "alternateNames": [
+          "Activity Priority"
+        ]
+      },
+      {
+        "name": "Task Duration (Min)",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task Duration (Min)"
+      }
+    ]
+  }
+}

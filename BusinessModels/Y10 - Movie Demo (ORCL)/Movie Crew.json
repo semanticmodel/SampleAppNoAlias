@@ -1,0 +1,89 @@
+{
+  "logicalTable": {
+    "name": "Movie Crew",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Crew ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Crew",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CREW.CREW_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Crew Member Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Crew",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CREW.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Crew",
+        "tableMapping": {
+          "allowUnmappedTables": true,
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CREW",
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE",
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CREW"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:Y10 - Movies Demo (ORCL).CREW_ID"
+            },
+            {
+              "physicalJoin": "physicalJoin:Y10 - Movies Demo (ORCL).MOVIE_ID"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:Y10 - Movie Demo (ORCL).Movie Crew.Crew"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Crew",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Crew ID"
+          ],
+          "displayColumn": "logicalColumn:Crew ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Movie Crew",
+          "levels": [ "Total", "Crew" ]
+        }
+      ]
+    }
+  }
+}

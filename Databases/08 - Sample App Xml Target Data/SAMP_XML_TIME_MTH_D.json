@@ -1,0 +1,48 @@
+{
+  "physicalTable": {
+    "name": "SAMP_XML_TIME_MTH_D",
+    "description": "Time dimension table at month grain. Stores one record for each month.",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/samples/SampleAppLite/sample/SampleAppFiles/Data/SAMP_XML_TIME_MTH_D.xml",
+    "physicalColumns": [ {
+        "name": "Per_Name_Year",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TIME_MTH_D/Per_Name_Year",
+        "description": "Period Name Year: Stores the year information in the format YYYY.\r\nEg:- 2009"
+      },
+      {
+        "name": "Mth_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TIME_MTH_D/MTH_KEY",
+        "description": "Month Key: Surrogate key of the table. Stores the month information in the format YYYYMM.\r\nEg:- 200901"
+      },
+      {
+        "name": "Per_Name_Qtr",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TIME_MTH_D/Per_Name_Qtr",
+        "description": "Period Name Quarter: Stores the quarter information in the format YYYY QQuarterNumber.\r\nEg:- 2009 Q1"
+      },
+      {
+        "name": "Per_Name_Month",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TIME_MTH_D/Per_Name_Month",
+        "description": "Period Name Month: Stores the year information in the format YYYY / MM.\r\nEg:- 2009 / 01"
+      },
+      {
+        "name": "Per_Name_Half",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TIME_MTH_D/Per_Name_Half",
+        "description": "Period Name Half: Stores the Half year information in the format YYYY HYHalfYearNumber.\r\nEg:- 2009 HY1"
+      }
+    ]
+  }
+}

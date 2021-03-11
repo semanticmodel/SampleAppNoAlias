@@ -1,0 +1,53 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "presentationColumns": [ {
+        "name": "Product Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product Name"
+      },
+      {
+        "name": "Description (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Description (Lookup Phys)"
+      },
+      {
+        "name": "Product Status Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product Status Lookup"
+      },
+      {
+        "name": "Additional Info (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Additional Info (Lookup Phys)"
+      },
+      {
+        "name": "Product Status Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product Status Code"
+      },
+      {
+        "name": "Default View Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Default View Flag"
+      },
+      {
+        "name": "Image",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Image"
+      },
+      {
+        "name": "Product ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "H04 Products",
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D04 Products",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D04 Products.Total"
+          },
+          {
+            "name": "Product Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D04 Products.Product Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Products.Product ID"
+          }
+        ]
+      }
+    ]
+  }
+}

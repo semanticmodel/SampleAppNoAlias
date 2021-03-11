@@ -1,0 +1,31 @@
+{
+  "presentationTable": {
+    "name": "Traffic Facts",
+    "alternateNames": [
+      "F",
+      "Traf"
+    ],
+    "presentationColumns": [ {
+        "name": "# Depts Performed",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.# Depts Performed"
+      },
+      {
+        "name": "# Depts Scheduled",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.# Depts Scheduled"
+      },
+      {
+        "name": "Ramp To Ramp (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Ramp To Ramp (Min)",
+        "description": "Ramp to Ramp Time (minutes)"
+      },
+      {
+        "name": "Air Time (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Air Time (Min)"
+      },
+      {
+        "name": "Distance (Miles)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Distance (Miles)"
+      }
+    ]
+  }
+}

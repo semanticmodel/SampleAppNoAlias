@@ -1,0 +1,83 @@
+{
+  "logicalTable": {
+    "name": "F2 Forecast Cube",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Forecast Gross Margin",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Forecast Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Forecast Cube.Forecast Gross Margin"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F2 Forecast Cube.Forecast Gross Margin"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Forecast Net Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Forecast Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Forecast Cube.Forecast Net Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F2 Forecast Cube.Forecast Net Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Forecast Cube",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Forecast Cube"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H0 Time.Month",
+          "logicalLevel:04 - Olap Sample.H3 Office.Office",
+          "logicalLevel:04 - Olap Sample.H1 Products.Product"
+        ]
+      }
+    ]
+  }
+}

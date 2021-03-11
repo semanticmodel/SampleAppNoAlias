@@ -1,0 +1,18 @@
+{
+  "physicalTable": {
+    "name": "WS_GET_DOLLARVALUE",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select TO_NUMBER(SYS.WS_GET_DOLLARVALUE( 'VALUEOF(NQ_SESSION.WS_CURRENCY)', 'AVERAGE', 'VALUEOF(NQ_SESSION.WS_PROXY)')) DollarValue from dual\r\n"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "DollarValue",
+        "dataType": "DOUBLE",
+        "nullable": true
+      }
+    ]
+  }
+}

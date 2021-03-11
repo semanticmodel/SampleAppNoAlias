@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "ASSIGN_SERVER_IP",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT UTL_INADDR.GET_HOST_ADDRESS IPAddress FROM dual"
+      }
+    ],
+    "variables": [ {
+        "name": "SERVER_IP",
+        "value": "'127.0.0.1'"
+      }
+    ]
+  }
+}

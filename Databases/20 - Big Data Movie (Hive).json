@@ -1,0 +1,187 @@
+{
+  "database": {
+    "name": "20 - Big Data Movie (Hive)",
+    "databaseType": "Hadoop",
+    "featureOverrides": [ {
+        "name": "ORDERBY_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "DISTINCT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_DAY_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_HOUR_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_MONTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_YEAR_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPLACE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CAST_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CREATE_AS_SELECT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SUBTOTALLING_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ROWNUM_LIMIT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      },
+      {
+        "name": "DATE_FORMAT",
+        "value": ""
+      },
+      {
+        "name": "TIME_FORMAT",
+        "value": ""
+      },
+      {
+        "name": "DATETIME_FORMAT",
+        "value": ""
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Hive ODBC Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "ODBC350",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 131072,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "movieapp_log_json_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log.activity"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DATEID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log.dateid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log.custid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log.movieid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log.genreid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.movieid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#4",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DATEID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.dateid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.activity"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.genreid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.custid"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,1017 @@
+{
+  "logicalTable": {
+    "name": "00 Time",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Julian Month Num",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Julian_Month_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Julian_Month_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Julian_Mon00039C02"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Julian Qtr Num",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Julian_Qtr_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Julian_Qtr_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Julian_Qtr00039C03"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Julian Week Num",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Julian_Week_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Julian_Wee00039C04"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loaded",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Loaded"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Loaded"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Loaded00039C05"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Half",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Per_Name_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Per_Name_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Half00039C06"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Half00039C06"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Per_Name_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Per_Name_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Month00039C07"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Month00039C07"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Qtr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Per_Name_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Per_Name_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Qtr00039C08"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Qtr00039C08"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Week",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Per_Name_Week"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Week00039C09"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Per_Name_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Per_Name_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Ye00039CF9",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Dep_Year00039C0A"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Dep_Year00039C0A"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Year00039C0A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Beg of Mth Wid",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Beg_of_Mth_Wid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Beg_of_Mth00039C0B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Beg of Qtr Wid",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Beg_of_Qtr_Wid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Beg_of_Qtr_Wid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Beg_of_Qtr00039C0C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Beg of Week Wid",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Beg_of_Week_Wid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Beg_of_Wee00039C0D"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cal Half",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Cal_Half00039C0E"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Cal_Half00039C0E"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month of Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Month_of_Y00039C0F"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Month_of_Y00039C0F"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Qtr of Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Qtr_of_Yea00039C10"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Qtr_of_Yea00039C10"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cal Week",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Week"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Cal_Week00039C11"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cal Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Ye00039CF9",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9.Cal_Year00039C12"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB.Cal_Year00039C12"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Cal_Year00039C12"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Calendar_Date"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Dep_Date00039C13"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Day_Key00039C14"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fscl Half",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Fscl_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Fscl_Half"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Fscl_Half00039C15"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fscl Month",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Fscl_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Fscl_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Fscl_Month00039C16"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fscl Qtr",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Fscl_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Fscl_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Fscl_Qtr00039C17"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fscl Week",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Fscl_Week"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Fscl_Week00039C18"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fscl Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Fscl_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Fscl_Year"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Fscl_Year00039C19"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Julian Day Num",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Julian_Day_Num"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC.Julian_Day00039C1A"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "40 TIME MONTH",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.00 Time.Time Month"
+        ]
+      },
+      {
+        "name": "40 TIME DAY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.00 Time.Time Date"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Ye00039CF9",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Ye00039CF9"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.00 Time.Time Year"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Mo00039CFB",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Mo00039CFB"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.00 Time.Time Month"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_Time_Da00039CFC",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_Time_Da00039CFC"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.00 Time.Time Date"
+        ]
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Time Total",
+      "logicalLevels": [
+        {
+          "name": "Time Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Time Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2,
+          "primaryColumns": [
+            "logicalColumn:Dep Year"
+          ],
+          "displayColumn": "logicalColumn:Dep Year",
+          "chronologicalKey": "logicalColumn:Dep Year"
+        },
+        {
+          "name": "Time Half",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:Dep Half"
+          ],
+          "displayColumn": "logicalColumn:Dep Half",
+          "chronologicalKey": "logicalColumn:Dep Half"
+        },
+        {
+          "name": "Time Qtr",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 8,
+          "primaryColumns": [
+            "logicalColumn:Dep Qtr"
+          ],
+          "displayColumn": "logicalColumn:Dep Qtr",
+          "chronologicalKey": "logicalColumn:Dep Qtr"
+        },
+        {
+          "name": "Time Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 25,
+          "primaryColumns": [
+            "logicalColumn:Dep Month"
+          ],
+          "displayColumn": "logicalColumn:Dep Month",
+          "chronologicalKey": "logicalColumn:Dep Month"
+        },
+        {
+          "name": "Time Date",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 800,
+          "primaryColumns": [
+            "logicalColumn:Dep Date"
+          ],
+          "displayColumn": "logicalColumn:Dep Date",
+          "chronologicalKey": "logicalColumn:Dep Date"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "00 Time [branch at level 'Time Month']",
+          "levels": [ "Time Total", "Time Year", "Time Half", "Time Qtr", "Time Month", "Time Date" ]
+        }
+      ]
+    }
+  }
+}

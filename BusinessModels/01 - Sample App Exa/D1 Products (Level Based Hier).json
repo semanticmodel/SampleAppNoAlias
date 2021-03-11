@@ -1,0 +1,496 @@
+{
+  "logicalTable": {
+    "name": "D1 Products (Level Based Hier)",
+    "description": "This logical table maps to the physical Products Dimension table with various attributes like Product Name, Brand, Type and so on.\r\nIt is mapped to 1 LTS\r\nLTS1 Product - Maps the physical Product table where each product entry in the table has values for all the levels. ",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "P0  Product Number",
+        "description": "Help : \r\nProduct Number: An integer that uniquely identifies each record in the Product dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P0_Produc0000459A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1  Product",
+        "description": "Help : \r\nProduct: Stores the product description information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P1_Produc0000477D"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2  Product Type",
+        "description": "Help : \r\nProduct Type: Stores the product type information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Type"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P2_Produc00004505"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3  LOB",
+        "description": "Help : \r\nLOB: Stores the product LOB information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).LOB"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P3_LOB00004630"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4  Brand",
+        "description": "Help : \r\nBrand: Stores the product brand information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Brand"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P4_Brand00003EB6"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P5  Attribute 1",
+        "description": "Help : \r\nAttribute 1: Stores product attribute1 information as text",
+        "dataType": "VARCHAR",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Attribute_1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P5_Attrib0000497F"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P6  Attribute 2",
+        "description": "Help : \r\nAttribute 2: Stores product attribute2 information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Attribute_2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P6_Attrib000044A7"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P7  Product Sequence",
+        "description": "Help : \r\nSequence: Stores product sequence as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Sequence"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P7_Produc00003E5B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2k  Product Type Key",
+        "description": "Help : \r\nType Key: Stores product type key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Type_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P2k_Produ00003CE4"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3k  LOB Key",
+        "description": "Help : \r\nLOB Key: Stores product LOB key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).LOB_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P3k_LOB_K00004015"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4k  Brand Key",
+        "description": "Help :\r\nBrand Key: Stores product brand key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Brand_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P4k_Brand00003CE3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P10  Product (Dble Column)",
+        "description": "Help : \r\nProduct: Stores the product description information as text",
+        "dataType": "VARCHAR",
+        "sortBy": "P7  Product Sequence",
+        "descriptorColumn": "P0  Product Number",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P10_Produ0000471F"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P12  Product Type (Dble Column)",
+        "description": "Help : \r\nProduct Type: Stores the product type information as text",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "P2k  Product Type Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Type"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P12_Produ000041EB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P13  LOB (Dble Column)",
+        "description": "Help : \r\nLOB: Stores the product LOB information as text",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "P3k  LOB Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).LOB"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P13_LOB_00003A8E"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P14  Brand (Dble Column)",
+        "description": "Help : \r\nBrand: Stores the product brand information as text",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "P4k  Brand Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Brand"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P14_Brand000041B5"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Products",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Product00004A9A",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H1 Products.Products Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Products Total",
+      "logicalLevels": [
+        {
+          "name": "Products Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Products Brand",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:P4  Brand"
+          ],
+          "displayColumn": "logicalColumn:P4  Brand"
+        },
+        {
+          "name": "Products LOB",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:P3k  LOB Key"
+          ]
+        },
+        {
+          "name": "Products Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 9,
+          "primaryColumns": [
+            "logicalColumn:P2  Product Type"
+          ],
+          "displayColumn": "logicalColumn:P2  Product Type"
+        },
+        {
+          "name": "Products Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 200,
+          "primaryColumns": [
+            "logicalColumn:P1  Product"
+          ],
+          "displayColumn": "logicalColumn:P1  Product"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H1 Products [branch at level 'Products Type']",
+          "description": "Products Dimension: \r\nType - Regular Dimension.\r\nDrill Path Brand->LOB->Type->Detail",
+          "levels": [ "Products Total", "Products Brand", "Products LOB", "Products Type", "Products Detail" ]
+        }
+      ]
+    }
+  }
+}

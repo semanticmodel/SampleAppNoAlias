@@ -1,0 +1,63 @@
+{
+  "physicalTable": {
+    "name": "GV_$METRIC",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "METRIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "METRIC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ENTITY_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "METRIC_UNIT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INTSIZE_CSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ENTITY_SEQUENCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

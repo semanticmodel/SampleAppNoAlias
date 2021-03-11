@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "21 DEPT DELAY GROUPS",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.ONTIME_DELAY_GROUPS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

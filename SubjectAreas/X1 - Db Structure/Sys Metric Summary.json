@@ -1,0 +1,57 @@
+{
+  "presentationTable": {
+    "name": "Sys Metric Summary",
+    "alternateNames": [
+      "SYS- V_SYSMETRIC_SUMMARY"
+    ],
+    "presentationColumns": [ {
+        "name": "Average",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Average"
+      },
+      {
+        "name": "Begin Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Begin Time"
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.End Time"
+      },
+      {
+        "name": "Group Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Group Id"
+      },
+      {
+        "name": "Intsize Csec",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Intsize Csec"
+      },
+      {
+        "name": "Maxval",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Maxval"
+      },
+      {
+        "name": "Metric Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Metric Id"
+      },
+      {
+        "name": "Metric Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Metric Name"
+      },
+      {
+        "name": "Metric Unit",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Metric Unit"
+      },
+      {
+        "name": "Minval",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Minval"
+      },
+      {
+        "name": "Num Interval",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Num Interval"
+      },
+      {
+        "name": "Standard Deviation",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY.Standard Deviation"
+      }
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "presentationTable": {
+    "name": "Posted Date",
+    "presentationColumns": [ {
+        "name": "Date",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Date"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Month"
+      },
+      {
+        "name": "Month Name",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Month Name"
+      },
+      {
+        "name": "Month #",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Month #"
+      },
+      {
+        "name": "Quarter",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Quarter"
+      },
+      {
+        "name": "Quarter #",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Quarter #"
+      },
+      {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Posted Date.Year"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Posted Date",
+        "sourceLogicalTable": "logicalTable:Y12 - Donations.Posted Date",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Posted Date.Total"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Posted Date.Year",
+            "displayColumn": "presentationColumn:Y12 - Donations.Posted Date.Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Posted Date.Quarter",
+            "displayColumn": "presentationColumn:Y12 - Donations.Posted Date.Quarter"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Posted Date.Month",
+            "displayColumn": "presentationColumn:Y12 - Donations.Posted Date.Month"
+          },
+          {
+            "name": "Detail",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Posted Date.Detail",
+            "displayColumn": "presentationColumn:Y12 - Donations.Posted Date.Date"
+          }
+        ]
+      }
+    ]
+  }
+}

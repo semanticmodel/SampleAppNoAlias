@@ -1,0 +1,78 @@
+{
+  "database": {
+    "name": "Y12 - Donations Project",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Connection Pool",
+        "connectionTimeoutUnit": "WHEN_QUERY_COMPLETES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "V_FACT_Foreign Key",
+        "leftTable": "physicalTable:Y12 - Donations Project.PROJ_POSTED_DATE",
+        "rightTable": "physicalTable:Y12 - Donations Project.PROJ_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y12 - Donations Project.PROJ_POSTED_DATE.DAY_DT",
+            "rightColumn": "physicalColumn:Y12 - Donations Project.PROJ_FACT.DATE_POSTED"
+          }
+        ]
+      },
+      {
+        "name": "V_FACT_Foreign Key#3",
+        "leftTable": "physicalTable:Y12 - Donations Project.PROJ_PROJECT",
+        "rightTable": "physicalTable:Y12 - Donations Project.PROJ_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y12 - Donations Project.PROJ_PROJECT.PROJECTID",
+            "rightColumn": "physicalColumn:Y12 - Donations Project.PROJ_FACT.PROJECTID"
+          }
+        ]
+      },
+      {
+        "name": "V_FACT_Foreign Key#1",
+        "leftTable": "physicalTable:Y12 - Donations Project.PROJ_TEACHER",
+        "rightTable": "physicalTable:Y12 - Donations Project.PROJ_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y12 - Donations Project.PROJ_TEACHER.TEACHER_ACCTID",
+            "rightColumn": "physicalColumn:Y12 - Donations Project.PROJ_FACT.TEACHER_ACCTID"
+          }
+        ]
+      },
+      {
+        "name": "V_FACT_Foreign Key#2",
+        "leftTable": "physicalTable:Y12 - Donations Project.PROJ_SCHOOL",
+        "rightTable": "physicalTable:Y12 - Donations Project.PROJ_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOLID",
+            "rightColumn": "physicalColumn:Y12 - Donations Project.PROJ_FACT.SCHOOLID"
+          }
+        ]
+      }
+    ]
+  }
+}

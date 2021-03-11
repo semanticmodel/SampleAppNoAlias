@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "OBJECT_USAGE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "START_MONITORING",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "END_MONITORING",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

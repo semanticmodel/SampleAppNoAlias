@@ -1,0 +1,73 @@
+{
+  "physicalTable": {
+    "name": "DBA_TEMP_FILES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "AUTOEXTENSIBLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INCREMENT_BY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      },
+      {
+        "name": "USER_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXBLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RELATIVE_FNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "MAXBYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "presentationTable": {
+    "name": "Essb Only Facts",
+    "presentationColumns": [ {
+        "name": "Actual Elapsed Time (Min) ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Actual Elapsed Time (Min) ESSAgg",
+        "description": "Elapsed Time of Flight, in Minutes"
+      },
+      {
+        "name": "Arr Delay (Min) ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Delay (Min) ESSAgg",
+        "description": "Difference in minutes between scheduled and actual arrival time. Early arrivals set to 0."
+      },
+      {
+        "name": "Distance (Miles) ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Distance (Miles) ESSAgg"
+      },
+      {
+        "name": "# of Flights ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Flights ESSAgg"
+      },
+      {
+        "name": "# of Late Flights ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Late Flights ESSAgg"
+      },
+      {
+        "name": "# of Fl Arr Ontime or Early ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Arr Ontime or Early ESSAgg",
+        "description": "Number of flights with 0 minutes delay"
+      },
+      {
+        "name": "Arr Delay as % of Flight Time ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Delay as % of Flight Time ESSAgg",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time."
+      },
+      {
+        "name": "Delay Perf % (0=Ontime,  >0=Late) ESSAgg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Delay Perf % (0=Ontime,  >0=Late) ESSAgg",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time."
+      }
+    ]
+  }
+}

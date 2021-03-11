@@ -1,0 +1,171 @@
+{
+  "logicalTable": {
+    "name": "D09 Order Shipment Options",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Cost Per Class1 Item",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.COST_PER_CLASS1_ITEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost Per Class2 Item",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.COST_PER_CLASS2_ITEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost Per Class3 Item",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.COST_PER_CLASS3_ITEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.COUNTRY_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Free Shipping Allowed Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.FREE_SHIPPING_ALLOWED_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Shipping Method (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP(SPARSE\r\n  %1,\r\n'No value for this record',\r\n'FR',\r\n %2)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTION_TRANSLATIONS.SHIPPING_METHOD",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.SHIPPING_OPTION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Shipping Option ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SHIPPING_OPTIONS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE.SHIPPING_OPTION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "SHIPPING_OPTIONS_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.SHIPPING_OPTIONS_BASE"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Shipping Method",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Shipping Method (Lookup Phys)"
+          ],
+          "displayColumn": "logicalColumn:Shipping Method (Lookup Phys)"
+        },
+        {
+          "name": "Odr Shipment Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Shipping Option ID"
+          ],
+          "displayColumn": "logicalColumn:Shipping Option ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H09 Order Shipment Options [branch at level 'Shipping Method']",
+          "levels": [ "Total", "Shipping Method", "Odr Shipment Detail" ]
+        }
+      ]
+    }
+  }
+}

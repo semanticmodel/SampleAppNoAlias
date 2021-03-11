@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Clusters",
+    "alternateNames": [
+      "Dim - Clusters"
+    ],
+    "presentationColumns": [ {
+        "name": "Model Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Clusters.Model Name"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Clusters.Owner"
+      },
+      {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Clusters.Id"
+      },
+      {
+        "name": "Cluster Id",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Clusters.Cluster Id"
+      }
+    ]
+  }
+}

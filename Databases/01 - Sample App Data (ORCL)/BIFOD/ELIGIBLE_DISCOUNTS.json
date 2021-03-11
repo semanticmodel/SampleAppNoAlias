@@ -1,0 +1,58 @@
+{
+  "physicalTable": {
+    "name": "ELIGIBLE_DISCOUNTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "MEMBERSHIP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "VALID_FROM_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "VALID_TO_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "DISCOUNT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

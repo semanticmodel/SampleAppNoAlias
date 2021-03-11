@@ -1,0 +1,40 @@
+{
+  "physicalTable": {
+    "name": "V_$SEGSTAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATISTIC#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATISTIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

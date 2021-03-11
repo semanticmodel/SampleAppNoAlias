@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "ORE Scripts",
+    "presentationColumns": [ {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.ORE Scripts.Name"
+      },
+      {
+        "name": "Script",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.ORE Scripts.Script"
+      }
+    ]
+  }
+}

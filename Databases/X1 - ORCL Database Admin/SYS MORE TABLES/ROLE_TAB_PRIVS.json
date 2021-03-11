@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ROLE_TAB_PRIVS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "PRIVILEGE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "ROLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "GRANTABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

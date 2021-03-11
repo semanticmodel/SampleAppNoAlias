@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Activities",
+    "presentationColumns": [ {
+        "name": "Activity Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).3 Dim Activities.Activity Id"
+      },
+      {
+        "name": "Activity Label",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).3 Dim Activities.Activity Label"
+      },
+      {
+        "name": "Activity Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).3 Dim Activities.Activity Name"
+      },
+      {
+        "name": "Activity Type",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).3 Dim Activities.Activity Type"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Sessions",
+    "presentationColumns": [ {
+        "name": "Hash ID",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.Hash ID"
+      },
+      {
+        "name": "Session ID",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.Session ID"
+      },
+      {
+        "name": "EC ID",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.EC ID"
+      },
+      {
+        "name": "Tenant ID",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.Tenant ID"
+      },
+      {
+        "name": "Service Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.Service Name"
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "presentationTable": {
+    "name": "FX conversion",
+    "localization": {
+      "localizationKey": "FX conversion",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_FX_conversion)"
+    },
+    "description": "This folder contains simple count metrics like # of Customers, # of Products and so on.",
+    "alternateNames": [
+      "CFX conversion",
+      "Counts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "R4  Order Line FX Rate (Lookup Pref Curr)",
+        "localization": {
+          "localizationKey": "R4  Order Line FX Rate (Lookup Pref Curr)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_FX_conversion_R4__Order_Line_FX_Rate_(Lookup_Pref_Curr))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R4  Order Line FX Rate (Lookup Pref Curr)",
+        "description": "Help : \r\nStores the product's color description."
+      },
+      {
+        "name": "70  Average FX Rate to Pref Currency",
+        "localization": {
+          "localizationKey": "70  Average FX Rate to Pref Currency",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_FX_conversion_70__Average_FX_Rate_to_Pref_Currency)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F6 Logical Calculations Examples.70  Average FX Rate to Pref Currency",
+        "description": "Help :\r\nBilled Unit Price is computed as Revenue divided by Billed Quantity"
+      },
+      {
+        "name": "120  Converted Rev  (Indexcol)",
+        "localization": {
+          "localizationKey": "120  Converted Rev  (Indexcol)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_FX_conversion_120__Converted_Rev__(Indexcol))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.120  Converted Rev  (Indexcol)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      }
+    ]
+  }
+}

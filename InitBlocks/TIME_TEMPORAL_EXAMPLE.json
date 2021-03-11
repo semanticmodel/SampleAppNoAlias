@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "TIME_TEMPORAL_EXAMPLE",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT '01-JAN-13' FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "TIME_TEMPORAL_ASOF",
+        "value": "'01-JAN-16'"
+      }
+    ]
+  }
+}

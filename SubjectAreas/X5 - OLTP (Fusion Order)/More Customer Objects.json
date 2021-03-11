@@ -1,0 +1,98 @@
+{
+  "presentationTable": {
+    "name": "More Customer Objects",
+    "presentationColumns": [ {
+        "name": "Approximate Income",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Approximate Income"
+      },
+      {
+        "name": "Children Under 18",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Children Under 18"
+      },
+      {
+        "name": "Confirmed Email",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Confirmed Email"
+      },
+      {
+        "name": "Contact By Affilliates Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Contact By Affilliates Flag"
+      },
+      {
+        "name": "Contact Method Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Contact Method Lookup"
+      },
+      {
+        "name": "Contact Method Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Contact Method Code"
+      },
+      {
+        "name": "Contactable Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Contactable Flag"
+      },
+      {
+        "name": "Credit Limit",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Credit Limit"
+      },
+      {
+        "name": "Date Of Birth",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Date Of Birth"
+      },
+      {
+        "name": "Mobile Phone Number",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Mobile Phone Number"
+      },
+      {
+        "name": "Principal Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Principal Name"
+      },
+      {
+        "name": "Provisioned Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Provisioned Flag"
+      },
+      {
+        "name": "Registered Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Registered Date"
+      },
+      {
+        "name": "Title Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Title Lookup"
+      },
+      {
+        "name": "Title",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Title"
+      },
+      {
+        "name": "Id Detail",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Id Detail"
+      },
+      {
+        "name": "ID Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.ID Type Lookup"
+      },
+      {
+        "name": "Id Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Id Type Code"
+      },
+      {
+        "name": "Verification Method Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verification Method Lookup"
+      },
+      {
+        "name": "Verification Method Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verification Method Code"
+      },
+      {
+        "name": "Verified By",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verified By"
+      },
+      {
+        "name": "Verified Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verified Date"
+      },
+      {
+        "name": "Verified Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verified Flag"
+      }
+    ]
+  }
+}

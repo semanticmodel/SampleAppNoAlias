@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Household Metrics",
+    "presentationColumns": [ {
+        "name": "Total Household Expenditure",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Household Expenditure"
+      },
+      {
+        "name": "Total Household Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Household Income"
+      },
+      {
+        "name": "Total Household Savings",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Household Savings"
+      },
+      {
+        "name": "Avg Household Expenditure",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Household Expenditure"
+      },
+      {
+        "name": "Avg Household Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Household Income"
+      },
+      {
+        "name": "Avg Household Savings",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Avg Household Savings"
+      }
+    ]
+  }
+}

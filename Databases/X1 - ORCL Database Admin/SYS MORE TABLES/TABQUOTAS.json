@@ -1,0 +1,53 @@
+{
+  "physicalTable": {
+    "name": "TABQUOTAS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PUSED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PFREE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "TNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJNO",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PINC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NEXTEXT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXEXT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "presentationTable": {
+    "name": "User Comments",
+    "presentationColumns": [ {
+        "name": "Posted Date",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Posted Date"
+      },
+      {
+        "name": "Region",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Region"
+      },
+      {
+        "name": "Filed By User",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Filed By User"
+      },
+      {
+        "name": "Report",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Report"
+      },
+      {
+        "name": "User Comment",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.User Comment"
+      },
+      {
+        "name": "No of Comments",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.No of Comments"
+      },
+      {
+        "name": "Posted Month #",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Posted Month #"
+      },
+      {
+        "name": "Posted Quarter #",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Posted Quarter #"
+      },
+      {
+        "name": "Posted Year",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F94 User Comments.Posted Year"
+      }
+    ]
+  }
+}

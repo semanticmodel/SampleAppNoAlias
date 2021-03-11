@@ -1,0 +1,118 @@
+{
+  "physicalTable": {
+    "name": "BPM_CUBE_ACTIVE_STD_V",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "ACTIVITY_PARTICIPANT",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "SEQUENCE_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PROCESS_INSTANCE_ID",
+        "dataType": "VARCHAR",
+        "length": 200,
+        "nullable": true
+      },
+      {
+        "name": "COMPOSITE_NAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITY_TYPE",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "PROCESS_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COMPOSITE_DN",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      },
+      {
+        "name": "COMPOSITE_REVISION",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITY_START_TIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "COMPOSITE_INSTANCE_ID",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "ACTIVITY_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITY_PRIORITY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PROCESS_START_TIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "PROCESS_THREAD_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PROCESS_NAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITY_ROLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DOMAIN_NAME",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITY_NAME",
+        "dataType": "VARCHAR",
+        "length": 256
+      },
+      {
+        "name": "ACTIVITY_LABEL",
+        "dataType": "VARCHAR",
+        "length": 500
+      },
+      {
+        "name": "COMPOSITE_LABEL",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      }
+    ]
+  }
+}

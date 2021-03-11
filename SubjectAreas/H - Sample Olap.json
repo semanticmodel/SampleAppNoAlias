@@ -1,0 +1,74 @@
+{
+  "subjectArea": {
+    "name": "H - Sample Olap",
+    "sourceBusinessModel": "businessModel:04 - Olap Sample",
+    "implicitFactColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.1- Revenue",
+    "description": "Oracle OLAP Datasource Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:H - Sample Olap.Time",
+        "children": [
+          {
+            "name": "presentationTable:H - Sample Olap.More Time Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Products",
+        "children": [
+          {
+            "name": "presentationTable:H - Sample Olap.More Product Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Offices",
+        "children": [
+          {
+            "name": "presentationTable:H - Sample Olap.More Office Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Sales Person"
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Customers"
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Base Facts"
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Calculated Facts",
+        "children": [
+          {
+            "name": "presentationTable:H - Sample Olap.Forecast Measures"
+          },
+          {
+            "name": "presentationTable:H - Sample Olap.Time Series"
+          },
+          {
+            "name": "presentationTable:H - Sample Olap.Hierarchical Measures"
+          },
+          {
+            "name": "presentationTable:H - Sample Olap.Advanced Measures"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:H - Sample Olap.Measures Hierarchy",
+        "children": [
+          {
+            "name": "presentationTable:H - Sample Olap.Dimension"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

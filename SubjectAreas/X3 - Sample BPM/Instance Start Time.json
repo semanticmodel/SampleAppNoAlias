@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Instance Start Time",
+    "alternateNames": [
+      "Process Start Time",
+      "Task Start Time#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Hour Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Hour Instance Started"
+      },
+      {
+        "name": "Week Day Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Week Day Instance Started"
+      },
+      {
+        "name": "Month Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Month Instance Started"
+      },
+      {
+        "name": "Date Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Date Instance Started"
+      },
+      {
+        "name": "Qtr Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Qtr Instance Started"
+      },
+      {
+        "name": "Yr Instance Started",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Yr Instance Started"
+      }
+    ]
+  }
+}

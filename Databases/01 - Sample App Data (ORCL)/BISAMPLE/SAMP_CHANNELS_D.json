@@ -1,0 +1,34 @@
+{
+  "physicalTable": {
+    "name": "SAMP_CHANNELS_D",
+    "description": "Channels Dimension table: Stores channel dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_CHANNELS_D.xml",
+    "physicalColumns": [ {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Chnl_Attribute_1",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "description": "Channel Attribute 1: Stores channel attribute 1 as a text"
+      },
+      {
+        "name": "Chnl_Key",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Channel Key: Surrogate key of the channel dimension table."
+      },
+      {
+        "name": "Chnl_Name",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true,
+        "description": "Channel Name: Stores channel name as text"
+      }
+    ]
+  }
+}

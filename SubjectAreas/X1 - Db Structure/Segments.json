@@ -1,0 +1,99 @@
+{
+  "presentationTable": {
+    "name": "Segments",
+    "alternateNames": [
+      "Dba Segments",
+      "Dba_segments",
+      "OBJ- DBA_SEGMENTS"
+    ],
+    "presentationColumns": [ {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Blocks"
+      },
+      {
+        "name": "Buffer Pool",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Buffer Pool"
+      },
+      {
+        "name": "Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Bytes"
+      },
+      {
+        "name": "Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Extents"
+      },
+      {
+        "name": "Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Flash Cache"
+      },
+      {
+        "name": "Freelists",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Freelists"
+      },
+      {
+        "name": "Header Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Header Blocks"
+      },
+      {
+        "name": "Initial Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Initial Extents"
+      },
+      {
+        "name": "Max Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Max Extents"
+      },
+      {
+        "name": "Max Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Max Size"
+      },
+      {
+        "name": "Min Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Min Extents"
+      },
+      {
+        "name": "Minretention",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Minretention"
+      },
+      {
+        "name": "Next Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Next Extent"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Owner"
+      },
+      {
+        "name": "Partition Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Partition Name"
+      },
+      {
+        "name": "Pct Increase",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Pct Increase"
+      },
+      {
+        "name": "Retention",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Retention"
+      },
+      {
+        "name": "Segment Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Segment Name"
+      },
+      {
+        "name": "Segment Subtype",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Segment Subtype"
+      },
+      {
+        "name": "Segment Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Segment Type"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.Tablespace Name"
+      },
+      {
+        "name": "# Of Segments",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SEGMENTS.# Of Segments"
+      }
+    ]
+  }
+}

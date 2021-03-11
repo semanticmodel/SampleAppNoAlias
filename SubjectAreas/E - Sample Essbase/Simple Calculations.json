@@ -1,0 +1,37 @@
+{
+  "presentationTable": {
+    "name": "Simple Calculations",
+    "presentationColumns": [ {
+        "name": "15 - Gross Margin",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).15 - Gross Margin"
+      },
+      {
+        "name": "17 - Net Costs",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).17 - Net Costs"
+      },
+      {
+        "name": "16 - Net Revenue",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).16 - Net Revenue"
+      },
+      {
+        "name": "18 - Gross Margin Pct",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).18 - Gross Margin Pct"
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).20  Actual Unit Price"
+      },
+      {
+        "name": "22  Discount Rate",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).22  Discount Rate",
+        "alternateNames": [
+          "22  Discount Rate#1"
+        ]
+      },
+      {
+        "name": "32  # of Customers (Cnt Distinct)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).32  # of Customers (Cnt Distinct)"
+      }
+    ]
+  }
+}

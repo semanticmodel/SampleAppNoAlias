@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "PAYMENT_OPTIONS (Customers)",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "presentationTable": {
+    "name": "Temp Files",
+    "alternateNames": [
+      "TS- DBA_TEMP_FILES"
+    ],
+    "presentationColumns": [ {
+        "name": "Autoextensible",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Autoextensible"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Blocks"
+      },
+      {
+        "name": "Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Bytes"
+      },
+      {
+        "name": "File Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.File Id"
+      },
+      {
+        "name": "File Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.File Name"
+      },
+      {
+        "name": "Increment By",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Increment By"
+      },
+      {
+        "name": "Maxblocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Maxblocks"
+      },
+      {
+        "name": "Maxbytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Maxbytes"
+      },
+      {
+        "name": "Relative Fno",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Relative Fno"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Status"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.Tablespace Name"
+      },
+      {
+        "name": "User Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.User Blocks"
+      },
+      {
+        "name": "User Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TEMP_FILES.User Bytes"
+      }
+    ]
+  }
+}

@@ -1,0 +1,254 @@
+{
+  "logicalTable": {
+    "name": "Facts Tasks",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "# Of Completed Tasks",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.SEQUENCE_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Proc Instances",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Avg Duratn Days",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 86400",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Avg Duratn Hrs",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 3600",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Avg Duratn Min",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 60",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Avg Duratn Mths",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "\r\nTimeStampDiff(SQL_TSI_MONTH,\r\n%1,\r\n %2 )\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_START_TIME",
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_END_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Avg Duratn Seconds",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as double)/1000",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_RUNNING_TIME_IN_MSEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Total Duratn Days",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 86400",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Total Duratn Hrs",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 3600",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Total Duratn Min",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 60",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Total Duratn Mths",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "\r\nTimeStampDiff(SQL_TSI_MONTH,\r\n%1,\r\n %2 )\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_START_TIME",
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_END_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Total Duratn Seconds",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as double)/1000\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_RUNNING_TIME_IN_MSEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Taskperf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).3 Activities Hier.Activities Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).1 Composite Hier.Composites Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).5 Proc Instances.Instance Details",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).2 Processes Hier.Process Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).4 Roles Hier.Roles Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).6 Tasks Hier.Task Details"
+        ]
+      }
+    ]
+  }
+}

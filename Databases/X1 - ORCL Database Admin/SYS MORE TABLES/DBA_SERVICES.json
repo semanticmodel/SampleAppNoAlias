@@ -1,0 +1,94 @@
+{
+  "physicalTable": {
+    "name": "DBA_SERVICES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DTP",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "MIN_CARDINALITY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GOAL",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "SERVICE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLB_GOAL",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "MAX_CARDINALITY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NETWORK_NAME",
+        "dataType": "VARCHAR",
+        "length": 512
+      },
+      {
+        "name": "FAILOVER_RETRIES",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "ENABLED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "CREATION_DATE_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FAILOVER_DELAY",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "FAILOVER_METHOD",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "AQ_HA_NOTIFICATIONS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FAILOVER_TYPE",
+        "dataType": "VARCHAR",
+        "length": 64
+      }
+    ]
+  }
+}

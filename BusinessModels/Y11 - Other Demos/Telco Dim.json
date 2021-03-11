@@ -1,0 +1,271 @@
+{
+  "logicalTable": {
+    "name": "Telco Dim",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Address",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.ADDRESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ageaugmented",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.AGEAUGMENTED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Agegroup",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.AGEGROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.CUSTOMER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lifetimevalue",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.LIFETIMEVALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plans",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.PLANS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.PRODUCT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.REGION_"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Segment",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.SEGMENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.STATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Times",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.TIMES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Zip",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.ZIP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tenure",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Telco Denorm",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM.TENURE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Telco Denorm",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.TELCO.TELCO_DENORM"
+          ]
+        }
+      }
+    ]
+  }
+}

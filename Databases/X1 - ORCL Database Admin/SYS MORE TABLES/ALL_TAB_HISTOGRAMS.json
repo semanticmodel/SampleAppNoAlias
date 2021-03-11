@@ -1,0 +1,40 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_HISTOGRAMS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ENDPOINT_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "ENDPOINT_ACTUAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ENDPOINT_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

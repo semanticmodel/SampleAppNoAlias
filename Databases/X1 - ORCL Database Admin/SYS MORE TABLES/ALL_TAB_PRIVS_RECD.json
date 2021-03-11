@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_PRIVS_RECD",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GRANTEE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "GRANTOR",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "PRIVILEGE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "GRANTABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "HIERARCHY",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

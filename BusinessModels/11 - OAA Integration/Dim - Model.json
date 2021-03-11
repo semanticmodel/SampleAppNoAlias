@@ -1,0 +1,408 @@
+{
+  "logicalTable": {
+    "name": "Dim - Model",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Algorithm",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.ALGORITHM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Build Duration",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.BUILD_DURATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Comments",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.COMMENTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Creation Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.CREATION_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mining Function",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MINING_FUNCTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Model Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "D92 Mining Model Settings",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.MODEL_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.MODEL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Model Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.MODEL_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D90 All Models",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "D92 Mining Model Settings",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Setting Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D92 Mining Model Settings",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.SETTING_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Setting Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D92 Mining Model Settings",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.SETTING_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Setting Value",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D92 Mining Model Settings",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings.SETTING_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.ATTRIBUTE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute Spec",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.ATTRIBUTE_SPEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.ATTRIBUTE_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Data Length",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.DATA_LENGTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Data Precision",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.DATA_PRECISION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Data Scale",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.DATA_SCALE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Data Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.DATA_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Target",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.TARGET"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Usage Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D93 Mining Model Attributes",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes.USAGE_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D90 All Models",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D90 All Models"
+          ]
+        }
+      },
+      {
+        "name": "D92 Mining Model Settings",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D92 Mining Model Settings"
+          ]
+        }
+      },
+      {
+        "name": "D93 Mining Model Attributes",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D93 Mining Model Attributes"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "physicalTable": {
+    "name": "ADDRESS_USAGES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ASSOCIATED_OWNER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "USAGE_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "EXPIRED_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "ADDRESS_USAGES_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ADDRESS_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

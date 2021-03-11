@@ -1,0 +1,1260 @@
+{
+  "cubeTable": {
+    "name": "Sample Default Import",
+    "sourceType": "TABLE",
+    "extName": "Sample",
+    "caching": {
+      "enable": true
+    },
+    "memberReference": "Default",
+    "dateFormat": "MM-DD-YYYY",
+    "alternateNames": [
+      "Default",
+      "French",
+      "Italian",
+      "Spanish"
+    ],
+    "DBMap": [
+      {
+        "name": "DEFAULT",
+        "value": "Sample"
+      }
+    ],
+    "columns": [ {
+        "name": "Employee Name",
+        "extName": "Employee Name",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Fiscal - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Month Names",
+        "extName": "Month Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Month Names - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Employees Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Employee L3 - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employee L2 - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Calendar - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen2,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Months Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Employee L3 - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Marital Stat - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employee L2",
+        "extName": "Employee L2",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Brands - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Sample - measure",
+        "extName": "Sample - measure",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "length": 19,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customer Segment - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Marital Status - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen6,Calendar - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employees Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen2,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Product Types - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "LOBs",
+        "extName": "LOBs",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Fiscal",
+        "extName": "Gen3,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month Names - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "All Marital Status - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen3,Fiscal - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Calendar - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "All Marital Status - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Employee L2 - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Calendar",
+        "extName": "Gen6,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Measures",
+        "extName": "Gen2,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Marital Status Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Customer Name - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Fiscal - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "All Month Names",
+        "extName": "All Month Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employee L1",
+        "extName": "Employee L1",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month of Year Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen4,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "All Products - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Products Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen6,Fiscal - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Products - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product Desc - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen3,Calendar - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Product Desc",
+        "extName": "Product Desc",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employees - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product Desc - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "All Employees - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Months - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Measures Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen1,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Products - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Fiscal - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen4,Fiscal - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employees - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Calendar - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen4,Calendar - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Customers Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Month of Year - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Fiscal - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Brands",
+        "extName": "Brands",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Calendar - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product Types - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Fiscal - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Measures",
+        "extName": "Gen1,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Marital Stat - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Employee Name - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Marital Status - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Customers - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Customer Segment - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Measures - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Marital Stat - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Brands - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Marital Stat",
+        "extName": "Marital Stat",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employees Parent Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "parentRef"
+      },
+      {
+        "name": "Gen2,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Products Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen6,Calendar - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Employee L3",
+        "extName": "Employee L3",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customer Name",
+        "extName": "Customer Name",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Fiscal - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employee L1 - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Calendar",
+        "extName": "Gen3,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Month Names - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Product Types - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "All Products - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Month of Year - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month of Year Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "All Customers - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Customer Name - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Calendar - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen5,Calendar - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Products - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Marital Status - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Fiscal - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Employee L2 - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen3,Calendar - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "LOBs - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employees - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month Names - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Customers - Low Risk",
+        "extName": "Low Risk",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Product Types",
+        "extName": "Product Types",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employee L1 - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Customers - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Months - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Calendar - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customer Name - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Marital Status - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customer Segment",
+        "extName": "Customer Segment",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employee Name - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen4,Calendar - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Fiscal - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen5,Calendar",
+        "extName": "Gen5,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Customers",
+        "extName": "All Customers",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employee L3 - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Months - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "LOBs - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Measures",
+        "extName": "Gen3,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Brands - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Measures",
+        "extName": "Gen4,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Calendar - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Months Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Month Names - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Fiscal - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "All Marital Status",
+        "extName": "All Marital Status",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen6,Fiscal - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Marital Status Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Months - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Employees - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen5,Fiscal - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Customer Segment - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Employee L1 - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "All Products",
+        "extName": "All Products",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Calendar",
+        "extName": "Gen2,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen4,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Employees - Italian",
+        "extName": "Italian",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Calendar",
+        "extName": "Gen4,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "All Employees",
+        "extName": "All Employees",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Fiscal",
+        "extName": "Gen2,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen6,Fiscal",
+        "extName": "Gen6,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month of Year - French",
+        "extName": "French",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Employee Name - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "LOBs - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Products - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Fiscal",
+        "extName": "Gen4,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Fiscal",
+        "extName": "Gen5,Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Month of Year - Spanish",
+        "extName": "Spanish",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - High Risk",
+        "extName": "High Risk",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Product Desc - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      }
+    ]
+  }
+}

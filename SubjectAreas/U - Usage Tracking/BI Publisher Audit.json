@@ -1,0 +1,102 @@
+{
+  "presentationTable": {
+    "name": "BI Publisher Audit",
+    "alternateNames": [
+      "X BIP Audit"
+    ],
+    "presentationColumns": [ {
+        "name": "Counts",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit Facts.Counts"
+      },
+      {
+        "name": "Application Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Application Name"
+      },
+      {
+        "name": "Component Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Component Type"
+      },
+      {
+        "name": "Domain Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Domain Name"
+      },
+      {
+        "name": "Event Category",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Event Category"
+      },
+      {
+        "name": "Event Status",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Event Status"
+      },
+      {
+        "name": "Event Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Event Type"
+      },
+      {
+        "name": "Failure Code",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Failure Code"
+      },
+      {
+        "name": "Host Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Host Id"
+      },
+      {
+        "name": "Hostn Waddr",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Hostn Waddr"
+      },
+      {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Id"
+      },
+      {
+        "name": "Initiator",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Initiator"
+      },
+      {
+        "name": "Message Text",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Message Text"
+      },
+      {
+        "name": "Remote Ip",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Remote Ip"
+      },
+      {
+        "name": "Resource",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Resource"
+      },
+      {
+        "name": "Target Component Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Target Component Type"
+      },
+      {
+        "name": "Thread Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Thread Id"
+      },
+      {
+        "name": "Time Originating",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Time Originating",
+        "alternateNames": [
+          "Tstz Originating"
+        ]
+      },
+      {
+        "name": "Day Originating",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Day Originating"
+      },
+      {
+        "name": "Hour Originating",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Hour Originating"
+      },
+      {
+        "name": "Upstream Component Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.BIP Audit.Upstream Component Id"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

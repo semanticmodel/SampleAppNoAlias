@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "ALL_MVIEW_REFRESH_TIMES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "MASTER_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LAST_REFRESH",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "MASTER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

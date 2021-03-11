@@ -1,0 +1,40 @@
+{
+  "physicalTable": {
+    "name": "DBA_FREE_SPACE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RELATIVE_FNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

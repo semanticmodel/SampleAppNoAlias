@@ -1,0 +1,243 @@
+{
+  "physicalTable": {
+    "name": "DOMESTIC_SEGMENT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ORIGIN_CITY_NAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_STATE_ABR",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_AIRPORT_SEQ_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_CITY_MARKET_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_STATE_NM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_STATE_NM",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "QUARTER",
+        "dataType": "INT"
+      },
+      {
+        "name": "CARRIER",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "FREIGHT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "UNIQUE_CARRIER",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRCRAFT_CONFIG",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_CITY_MARKET_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_WAC",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "PASSENGERS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "ORIGIN_AIRPORT_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "PAYLOAD",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "AIR_TIME",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DISTANCE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "FREIGHT_PND_MILES",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "CLASS",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPARTURES_PERFORMED",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "SEATS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DEST_AIRPORT_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CARRIER_GROUP",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "MONTH",
+        "dataType": "INT"
+      },
+      {
+        "name": "DEST_STATE_ABR",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "PASSENGERS_MILES",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "REGION",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "UNIQUE_CARRIER_ENTITY",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEPARTURES_SCHEDULED",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "ORIGIN",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CARRIER_NAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "UROWID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "MAIL",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "PASSENGERS_PER_FLIGHT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "PPF_GROUP",
+        "dataType": "INT"
+      },
+      {
+        "name": "UNIQUE_CARRIER_NAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_AIRPORT_SEQ_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_STATE_FIPS",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRCRAFT_GROUP",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CARRIER_GROUP_NEW",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_WAC",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRLINE_ID",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "RAMP_TO_RAMP",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DEST",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "AIRCRAFT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ORIGIN_STATE_FIPS",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DEST_CITY_NAME",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "YEAR",
+        "dataType": "INT"
+      },
+      {
+        "name": "DISTANCE_GROUP",
+        "dataType": "VARCHAR",
+        "length": 250
+      }
+    ]
+  }
+}

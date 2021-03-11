@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "M13 Mktg Saved Res Set Orders",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_M_SR_ORDERS"
+  }
+}

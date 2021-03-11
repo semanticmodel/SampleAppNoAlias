@@ -1,0 +1,153 @@
+{
+  "logicalTable": {
+    "name": "D6 Customers",
+    "description": "This logical table maps to the physical Customer Dimension table with various attributes like Customer Name, Status, Type and so on.\r\nIt maps to 3 LTS and showcases snowflake dimension modelling.\r\nLTS1 Customers - Maps to the lowest grain of information.\r\nLTS2 Customer Segments - Maps to higher grain of information. Every customer belongs to a customer segment.\r\nLTS3 Customer Adresses - Maps to higher grain of information.\r\n",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "C0  Customer Number",
+        "description": "Help : \r\nCustomer Key is an integer that uniquely identifies each record in the Customer dimension table.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(10))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C1  Customer Name",
+        "description": "Help : \r\nCustomer Name stores the first name followed by the last name.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Customer Members"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C7 Marital Status (Rel Lookup)",
+        "description": "Help : \r\nStores the product's color description.",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE %1,  VALUEOF(NQ_SESSION.\"USERLOCALE\"), %2)",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.L1 Lookups Translation.Lookup_Dsc",
+              "logicalColumn:06 - Federated Sources.D6 Customers.C7k  Marital Status Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C7k  Marital Status Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Marital_St"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Marital Stat - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H6 Customers.Customers Detail"
+        ]
+      },
+      {
+        "name": "LTS2 Essb Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H6 Customers.Customers Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Customers Total",
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Customers Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Customers Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1000,
+          "primaryColumns": [
+            "logicalColumn:C1  Customer Name"
+          ],
+          "displayColumn": "logicalColumn:C1  Customer Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H6 Customers",
+          "levels": [ "Customers Total", "Customers Detail" ]
+        }
+      ]
+    }
+  }
+}

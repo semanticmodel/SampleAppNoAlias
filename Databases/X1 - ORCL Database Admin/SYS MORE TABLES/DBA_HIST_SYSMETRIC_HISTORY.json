@@ -1,0 +1,74 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SYSMETRIC_HISTORY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INTSIZE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_UNIT",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "METRIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "Scenario",
+    "presentationColumns": [ {
+        "name": "Gen1,Scenario",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Scenario.Gen1,Scenario"
+      },
+      {
+        "name": "Scenarios",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Scenario.Scenarios"
+      },
+      {
+        "name": "Scenario - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Scenario.Scenario - Default"
+      },
+      {
+        "name": "Scenario - Long Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Scenario.Scenario - Long Names"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Scenario",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Integration.Scenario",
+        "levels": [ {
+            "name": "Scenarios",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Scenario.Scenarios",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Scenario.Scenarios"
+          }
+        ]
+      }
+    ]
+  }
+}

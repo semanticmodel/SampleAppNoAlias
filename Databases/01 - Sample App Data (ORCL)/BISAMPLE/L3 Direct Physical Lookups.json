@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "L3 Direct Physical Lookups",
+    "description": "Translation Lookups Alias: Stores lookup information in different languages for dimension attributes",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_LOOKUPS_D"
+  }
+}

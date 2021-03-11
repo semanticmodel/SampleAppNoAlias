@@ -1,0 +1,52 @@
+{
+  "logicalTable": {
+    "name": "ORE Scripts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORE_SCRIPTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.ORE_SCRIPTS.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Script",
+        "dataType": "VARCHAR",
+        "sortBy": "Name",
+        "descriptorColumn": "Name",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORE_SCRIPTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.ORE_SCRIPTS.SCRIPT"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ORE_SCRIPTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.ORE_SCRIPTS"
+          ]
+        }
+      }
+    ]
+  }
+}

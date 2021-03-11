@@ -1,0 +1,94 @@
+{
+  "physicalTable": {
+    "name": "GV_$INSTANCE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LOG_SWITCH_WAIT",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "ACTIVE_STATE",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOGINS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "DATABASE_STATUS",
+        "dataType": "VARCHAR",
+        "length": 17
+      },
+      {
+        "name": "ARCHIVER",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "HOST_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SHUTDOWN_PENDING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "PARALLEL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "THREAD#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_ROLE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "STARTUP_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "BLOCKED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INSTANCE_NAME",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "VERSION",
+        "dataType": "VARCHAR",
+        "length": 17
+      }
+    ]
+  }
+}

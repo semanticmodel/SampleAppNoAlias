@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "More Product Objects",
+    "presentationColumns": [ {
+        "name": "All Products",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.All Products"
+      },
+      {
+        "name": "P2k  Product Type Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P2k  Product Type Key"
+      },
+      {
+        "name": "P3k  LOB Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P3k  LOB Key"
+      },
+      {
+        "name": "P4k  Brand Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P4k  Brand Key"
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "SAMP_REVENUE_FA1",
+    "description": "Reveue Fact Aggregate table: Stores the aggregated fact information at Employee and Product grain.",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_REVENUE_FA1.xml",
+    "physicalColumns": [ {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Revenue: Stores revenue information as a double."
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Units: Stores units information as an integer."
+      },
+      {
+        "name": "Empl_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Employee Key: Joins to Empl_Key of Employees dimension table."
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Joins to Prod_Key of Products dimension table."
+      }
+    ]
+  }
+}

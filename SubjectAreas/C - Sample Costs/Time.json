@@ -1,0 +1,174 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "localization": {
+      "localizationKey": "Time",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time)"
+    },
+    "description": "Time dimension attribute objects ",
+    "alternateNames": [
+      "T"
+    ],
+    "presentationColumns": [ {
+        "name": "T05 Per Name Year",
+        "localization": {
+          "localizationKey": "T05 Per Name Year",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T05_Per_Name_Year)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T05 Per Name Year",
+        "description": "Help :\r\nPeriod Name Year. Stores the year information in the format YYYY. Eg :- 2006",
+        "alternateNames": [
+          "Year"
+        ]
+      },
+      {
+        "name": "T00 Calendar Date",
+        "localization": {
+          "localizationKey": "T00 Calendar Date",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T00_Calendar_Date)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T00 Calendar Date",
+        "description": "Help : \r\nStores the date information.",
+        "alternateNames": [
+          "Date"
+        ]
+      },
+      {
+        "name": "T01 Per Name Week",
+        "localization": {
+          "localizationKey": "T01 Per Name Week",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T01_Per_Name_Week)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T01 Per Name Week",
+        "description": "Help : \r\nPeriod Name Week. Stores the week information in the format YYYY Week Number. Eg :- 2006 Week 40",
+        "alternateNames": [
+          "Week"
+        ]
+      },
+      {
+        "name": "T02 Per Name Month",
+        "localization": {
+          "localizationKey": "T02 Per Name Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T02_Per_Name_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T02 Per Name Month",
+        "description": "Help : \r\nPeriod Name Month. Stores the month information in the format YYYY / MM. Eg :- 2006 / 11",
+        "alternateNames": [
+          "Month"
+        ]
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "localization": {
+          "localizationKey": "T03 Per Name Qtr",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T03_Per_Name_Qtr)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T03 Per Name Qtr",
+        "description": "Help :\r\nPeriod Name Quarter. Stores the Quarter information in the format YYYY QQuarterNumber. Eg :- 2006 Q3",
+        "alternateNames": [
+          "Qtr"
+        ]
+      },
+      {
+        "name": "T04 Per Name Half",
+        "localization": {
+          "localizationKey": "T04 Per Name Half",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T04_Per_Name_Half)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T04 Per Name Half",
+        "description": "Help : \r\nPeriod Name Half. Stores the Half year information in the format YYYY HYHalfYearNumber. Eg :- 2006 HY2"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Fiscal Time Hierarchy",
+        "localization": {
+          "localizationKey": "Fiscal Time Hierarchy",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_Fiscal_Time_Hierarchy)"
+        },
+        "description": "Help : \r\nPresentation hierarchy with drill path Total->Day",
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D0 Time",
+        "levels": [ {
+            "name": "Total Fiscal Time",
+            "localization": {
+              "localizationKey": "Total Fiscal Time",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Fiscal_Time_Hierarchy_Total_Fiscal_Time)"
+            },
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Total Time"
+          },
+          {
+            "name": "Day",
+            "localization": {
+              "localizationKey": "Day",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Fiscal_Time_Hierarchy_Day)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Day Detail",
+            "displayColumn": "presentationColumn:C - Sample Costs.Time.T00 Calendar Date"
+          }
+        ]
+      },
+      {
+        "name": "Time Hierarchy",
+        "localization": {
+          "localizationKey": "Time Hierarchy",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_Time_Hierarchy)"
+        },
+        "description": "Help : \r\nPresentation hierarchy with drill path Total->Year->Half->Quarter->Month->Week->Day",
+        "alternateNames": [
+          "Time Levels"
+        ],
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D0 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "localization": {
+              "localizationKey": "Total Time",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Time_Hierarchy_Total_Time)"
+            },
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Total Time"
+          },
+          {
+            "name": "Year",
+            "localization": {
+              "localizationKey": "Year",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Time_Hierarchy_Year)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Year",
+            "displayColumn": "presentationColumn:C - Sample Costs.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Quarter",
+            "localization": {
+              "localizationKey": "Quarter",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Time_Hierarchy_Quarter)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Quarter",
+            "displayColumn": "presentationColumn:C - Sample Costs.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "localization": {
+              "localizationKey": "Month",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Time_Hierarchy_Month)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Month",
+            "displayColumn": "presentationColumn:C - Sample Costs.Time.T02 Per Name Month"
+          },
+          {
+            "name": "Day",
+            "localization": {
+              "localizationKey": "Day",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Time_Time_Hierarchy_Day)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D0 Time.Day Detail",
+            "displayColumn": "presentationColumn:C - Sample Costs.Time.T00 Calendar Date"
+          }
+        ]
+      }
+    ]
+  }
+}

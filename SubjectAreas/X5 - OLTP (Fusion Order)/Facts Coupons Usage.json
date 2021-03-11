@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Facts Coupons Usage",
+    "presentationColumns": [ {
+        "name": "Applied Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F2 Coupon Usages.Applied Date"
+      },
+      {
+        "name": "# of Customers",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F2 Coupon Usages.# of Customers"
+      },
+      {
+        "name": "# of Coupons and Discounts",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F2 Coupon Usages.# of Coupons and Discounts"
+      },
+      {
+        "name": "Order ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F2 Coupon Usages.Order ID"
+      }
+    ]
+  }
+}

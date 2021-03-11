@@ -1,0 +1,65 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_DATABASE_INSTANCE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VERSION",
+        "dataType": "VARCHAR",
+        "length": 17,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_ASH_SAMPLE_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STARTUP_TIME",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "DB_NAME",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "INSTANCE_NAME",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "PARALLEL",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true
+      },
+      {
+        "name": "HOST_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PLATFORM_NAME",
+        "dataType": "VARCHAR",
+        "length": 101
+      }
+    ]
+  }
+}

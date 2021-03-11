@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Trailing Measures",
+    "localization": {
+      "localizationKey": "Trailing Measures",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Trailing_Measures)"
+    },
+    "description": "This folder contains several Rolling Months metrics based on Revenue fact.",
+    "presentationColumns": [ {
+        "name": "147  ---- Dynamic Time Level ----------",
+        "localization": {
+          "localizationKey": "147  ---- Dynamic Time Level ----------",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Trailing_Measures_147__----_Dynamic_Time_Level_----------)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F5 Time Series and Level Based Examples.147  ---- Dynamic Time Level ----------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "147  Trailing 3 Periods Rev  (Dyn Time Level)",
+        "localization": {
+          "localizationKey": "147  Trailing 3 Periods Rev  (Dyn Time Level)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Trailing_Measures_147__Trailing_3_Periods_Rev__(Dyn_Time_Level))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F5 Time Series and Level Based Examples.147  Trailing 3 Periods Rev  (Dyn Time Level)"
+      },
+      {
+        "name": "148  Unbound Rolling Rev  (Dyn Time Level)",
+        "localization": {
+          "localizationKey": "148  Unbound Rolling Rev  (Dyn Time Level)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Trailing_Measures_148__Unbound_Rolling_Rev__(Dyn_Time_Level))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F5 Time Series and Level Based Examples.148  Unbound Rolling Rev  (Dyn Time Level)"
+      },
+      {
+        "name": "149  Spanning 4 Periods Rev N-2 to +N+1",
+        "localization": {
+          "localizationKey": "149  Spanning 4 Periods Rev N-2 to +N+1",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Trailing_Measures_149__Spanning_4_Periods_Rev_N-2_to_+N+1)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F5 Time Series and Level Based Examples.149  Spanning 4 Periods Rev N-2 to +N+1",
+        "alternateNames": [
+          "149  Spanning 4 Periods Rev N-2 to +N+1)"
+        ]
+      }
+    ]
+  }
+}

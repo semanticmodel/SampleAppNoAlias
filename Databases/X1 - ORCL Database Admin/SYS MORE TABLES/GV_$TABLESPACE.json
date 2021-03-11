@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "GV_$TABLESPACE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INCLUDED_IN_DATABASE_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ENCRYPT_IN_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "BIGFILE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FLASHBACK_ON",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

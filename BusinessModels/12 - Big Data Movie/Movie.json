@@ -1,0 +1,269 @@
+{
+  "logicalTable": {
+    "name": "Movie",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Genre ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_IMP",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC.genreid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_HIVE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.genreid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.GENREID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Genre00047081",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081.Genre_ID00045FB5"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Movie ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_IMP",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC.movieid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_HIVE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.movieid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.MOVIEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Movie Popularity",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.POPULARITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Movie Title",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.TITLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Movie Vote Count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.VOTE_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Release Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Genre Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GENRE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Genre00047081",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081.Genre_Name00045FBB"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "MOVIE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE"
+          ]
+        }
+      },
+      {
+        "name": "GENRE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_IMP",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_HIVE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_BDSQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC"
+          ]
+        }
+      },
+      {
+        "name": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Genre00047081",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Genre00047081"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:12 - Big Data Movie.H1 Movie.Genre"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total Movie",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Total Movie",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Genre",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Genre ID",
+            "logicalColumn:Genre Name"
+          ]
+        },
+        {
+          "name": "Movie",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Movie ID"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H1 Movie [branch at level 'Genre']",
+          "levels": [ "Total Movie", "Genre", "Movie" ]
+        }
+      ]
+    }
+  }
+}

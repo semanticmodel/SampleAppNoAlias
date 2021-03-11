@@ -1,0 +1,37 @@
+{
+  "presentationTable": {
+    "name": "Free Space",
+    "alternateNames": [
+      "TS- DBA_FREE_SPACE"
+    ],
+    "presentationColumns": [ {
+        "name": "Block Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Block Id"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Blocks"
+      },
+      {
+        "name": "Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Bytes"
+      },
+      {
+        "name": "File Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.File Id"
+      },
+      {
+        "name": "Relative Fno",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Relative Fno"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Tablespace Name"
+      },
+      {
+        "name": "Megabytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_FREE_SPACE.Megabytes"
+      }
+    ]
+  }
+}

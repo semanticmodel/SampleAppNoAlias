@@ -1,0 +1,106 @@
+{
+  "physicalTable": {
+    "name": "DBA_SEGMENTS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "MAX_EXTENTS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "MINRETENTION",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BUFFER_POOL",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "EXTENTS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "SEGMENT_NAME",
+        "dataType": "VARCHAR",
+        "length": 81
+      },
+      {
+        "name": "MAX_SIZE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "RETENTION",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "INITIAL_EXTENTS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "HEADER_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SEGMENT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "FREELISTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MIN_EXTENTS",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SEGMENT_SUBTYPE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE"
+      }
+    ]
+  }
+}

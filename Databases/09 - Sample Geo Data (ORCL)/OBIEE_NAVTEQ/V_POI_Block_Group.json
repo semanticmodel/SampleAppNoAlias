@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "V_POI_Block_Group",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "Oracle11g",
+        "query": "select distinct \r\nb.id as block_group_id, \r\ns.poi_id as poi_id, \r\nd.name as category_name\r\nfrom \r\nOBIEE_NAVTEQ.block_groups b, \r\nOBIEE_NAVTEQ.ntc_map_poi_shop s, \r\nOBIEE_NAVTEQ.ntc_meta_poi_cat_ref d \r\nwhere\r\ns.iso_country_code='USA' and \r\ns.cat_id = d.cat_id and\r\nd.name = 'VALUEOF(NQ_SESSION.OGS_CATEGORY)' and\r\ns.poi_postcode = 'VALUEOF(NQ_SESSION.OGS_POSTCODE)' and \r\nsdo_within_distance(\r\nb.geometry, s.geometry, 'distance=VALUEOF(NQ_SESSION.OGS_DIST_M)'\r\n)='TRUE'"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "poi_id",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "block_group_id",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "category_name",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "TIMES_HOURS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "HOURS_ID",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "HOURS_DESC",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "HOURS24_DESC",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

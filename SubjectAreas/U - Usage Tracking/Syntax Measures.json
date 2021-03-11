@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "Syntax Measures",
+    "alternateNames": [
+      "Analyses Syntax Facts",
+      "Syntax Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "Is Error",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Is Error"
+      },
+      {
+        "name": "Error Msg",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Error Msg"
+      },
+      {
+        "name": "Analyses Count",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Analyses Count"
+      },
+      {
+        "name": "Bad Syntax Analysis",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Bad Syntax Analysis"
+      },
+      {
+        "name": "Good Syntax Analyses",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Good Syntax Analyses",
+        "alternateNames": [
+          "Good Sytnax Analyses"
+        ]
+      }
+    ]
+  }
+}

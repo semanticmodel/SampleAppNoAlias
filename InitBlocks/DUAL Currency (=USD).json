@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "DUAL Currency (=USD)",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "Select 'USD' From Dual"
+      }
+    ],
+    "variables": [ {
+        "name": "PREFERRED_CURRENCY",
+        "value": "'USD'"
+      }
+    ]
+  }
+}

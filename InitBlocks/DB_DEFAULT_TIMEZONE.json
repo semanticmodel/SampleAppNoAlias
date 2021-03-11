@@ -1,0 +1,21 @@
+{
+  "initBlock": {
+    "name": "DB_DEFAULT_TIMEZONE",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT SESSIONTIMEZONE FROM DUAL DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "DB_DEFAULT_TIMEZONE"
+      }
+    ]
+  }
+}

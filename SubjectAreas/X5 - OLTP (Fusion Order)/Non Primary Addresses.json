@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Non Primary Addresses",
+    "presentationColumns": [ {
+        "name": "Usage Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Usage Type Lookup"
+      },
+      {
+        "name": "Country Name (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Country Name (Lookup Phys)"
+      },
+      {
+        "name": "Owner Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Owner Type Code"
+      },
+      {
+        "name": "Usage Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Usage Type Code"
+      },
+      {
+        "name": "Address1",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Address1"
+      },
+      {
+        "name": "Address2",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Address2"
+      },
+      {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.City"
+      },
+      {
+        "name": "Postal Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Postal Code"
+      },
+      {
+        "name": "State Province",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.State Province"
+      },
+      {
+        "name": "Country ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Country ID"
+      },
+      {
+        "name": "Latitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Latitude"
+      },
+      {
+        "name": "Longitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Longitude"
+      },
+      {
+        "name": "Expired Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Expired Flag"
+      },
+      {
+        "name": "Address ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Address ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Non Primary Addresses",
+        "alternateNames": [
+          "H03 Cust Other Addresses"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Total"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.City",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Non Primary Addresses.City"
+          },
+          {
+            "name": "Cust Other Addresses",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses.Cust Other Addresses",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Non Primary Addresses.Address ID"
+          }
+        ]
+      }
+    ]
+  }
+}

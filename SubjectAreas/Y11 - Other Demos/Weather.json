@@ -1,0 +1,61 @@
+{
+  "presentationTable": {
+    "name": "Weather",
+    "alternateNames": [
+      "Weather Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "Croploss",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Croploss"
+      },
+      {
+        "name": "F1",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.F1"
+      },
+      {
+        "name": "F2",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.F2"
+      },
+      {
+        "name": "F3",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.F3"
+      },
+      {
+        "name": "F4",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.F4"
+      },
+      {
+        "name": "Fatalities",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Fatalities"
+      },
+      {
+        "name": "Injuries",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Injuries"
+      },
+      {
+        "name": "Loss",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Loss"
+      },
+      {
+        "name": "Ns",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Ns"
+      },
+      {
+        "name": "Om",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Om"
+      },
+      {
+        "name": "Sg",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Sg"
+      },
+      {
+        "name": "Sn",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.Sn"
+      },
+      {
+        "name": "# Of Phenomenons",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Weather Facts.# Of Phenomenons"
+      }
+    ]
+  }
+}

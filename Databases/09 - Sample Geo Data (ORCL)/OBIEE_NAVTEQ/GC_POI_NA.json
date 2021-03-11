@@ -1,0 +1,70 @@
+{
+  "physicalTable": {
+    "name": "GC_POI_NA",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "HOUSE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "POI_ID",
+        "dataType": "DOUBLE",
+        "length": 38,
+        "nullable": true
+      },
+      {
+        "name": "FEATURE_CODE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "POSTAL_CODE",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "COUNTRY_CODE_2",
+        "dataType": "CHAR",
+        "length": 3
+      },
+      {
+        "name": "LOC_LAT",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "STREET_NAME",
+        "dataType": "VARCHAR",
+        "length": 240
+      },
+      {
+        "name": "SIDE",
+        "dataType": "CHAR",
+        "length": 1
+      },
+      {
+        "name": "PARTITION_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "LOC_LONG",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 240
+      },
+      {
+        "name": "MUNICIPALITY_NAME",
+        "dataType": "VARCHAR",
+        "length": 240
+      }
+    ]
+  }
+}

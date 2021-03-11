@@ -1,0 +1,13 @@
+{
+  "presentationTable": {
+    "name": "USD Forex Web Service",
+    "alternateNames": [
+      "WS_USDollar_ExhangeRate"
+    ],
+    "presentationColumns": [ {
+        "name": "DollarValue",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.WS_USDollar_ExhangeRate.DollarValue"
+      }
+    ]
+  }
+}

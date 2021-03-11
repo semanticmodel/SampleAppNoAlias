@@ -1,0 +1,61 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "presentationColumns": [ {
+        "name": "P1  Product",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P1  Product"
+      },
+      {
+        "name": "P2  Product Type",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P2  Product Type"
+      },
+      {
+        "name": "P3  LOB",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P3  LOB"
+      },
+      {
+        "name": "P0  Product Number",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P0  Product Number"
+      },
+      {
+        "name": "All Products",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.All Products"
+      },
+      {
+        "name": "P4  Brand",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P4  Brand"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Products Hierarchy",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D1 Products",
+        "levels": [ {
+            "name": "Total Products",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D1 Products.All Products",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Products.All Products"
+          },
+          {
+            "name": "Brand",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D1 Products.Brands",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Products.P4  Brand"
+          },
+          {
+            "name": "LOB",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D1 Products.LOBs",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Products.P3  LOB"
+          },
+          {
+            "name": "Type",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D1 Products.Product Types",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Products.P2  Product Type"
+          },
+          {
+            "name": "Product",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D1 Products.Product Members",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Products.P1  Product"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,868 @@
+{
+  "logicalTable": {
+    "name": "D3 Offices",
+    "description": "This logical table maps to the physical Offices Dimension table with various attributes like Office, Department, Organization and so on.\r\nIt is mapped to 1 LTS\r\nLTS1 Offices - Maps the physical Office table. ",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "D1  Office",
+        "description": "Help : \r\nOffice: Stores the office description as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1_Office000040E7"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D1k  Office Key",
+        "description": "Help : \r\nOffice Key: An integer that uniquely identifies each record in the Office dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1k_Offic00004295"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2  Department",
+        "description": "Help : \r\nDepartment: Stores the department information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Department"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Department"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D2_Depart000042F5"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D2k  Dept Key",
+        "description": "Help :\r\nDepartment Key: Stores department key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Dept_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Dept_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D2k_Dept_000047CB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3  Organization",
+        "description": "Help : \r\nOrganization: Stores the Organization information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Organization"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Organization"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D3_Organi000046E6"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D3k  Org Key",
+        "description": "Help :\r\nOrganization Key: Stores Organization key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Org_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Org_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D3k_Org_K00003BD6"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4  Company",
+        "description": "Help : \r\nCompany: Stores the company information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Company"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Company"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D4_Compan00003D2E"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D4k  Company Key",
+        "description": "Help :\r\nCompany Key: Stores company key as an integer",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Company_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Company_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D4k_Compa00003B4A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D8  Office Sequence",
+        "description": "Help :\r\nSequence: Stores sequence as an integer",
+        "dataType": "INT",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Offices",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Sequence"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Sequence"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D8_Office000040F2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D50  === Addresses Objects =====",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "D50  Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Region"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D50_Regio00003AE1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D51  Area",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Area"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D51_Area00003E79"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D52  Country Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Country_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D52_Count00003A5A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D53  State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.State_Province"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D53_State00004177"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D54  State Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.State_Province_Abbrv"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D54_State00004039"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D55  City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.City"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D55_City00004085"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D56  Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Postal_Code"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D56_Posta00004538"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D57  Address Line 1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Address1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D57_Addre00003E4A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D58  Address Line 2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Address2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D58_Addre000043DA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D59  Establishment Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Estab_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D59_Estab00003D6B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D60 Full Address",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 || ' ' || %2 || ', ' || %3 || ', ' || %4 || ' ' || %5",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App Exa.D3 Offices.D57  Address Line 1",
+              "logicalColumn:01 - Sample App Exa.D3 Offices.D58  Address Line 2",
+              "logicalColumn:01 - Sample App Exa.D3 Offices.D55  City",
+              "logicalColumn:01 - Sample App Exa.D3 Offices.D54  State Code",
+              "logicalColumn:01 - Sample App Exa.D3 Offices.D56  Postal Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "D61  Iso Country code3",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Iso_Country_code3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D61_Iso_C00003F76"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C62  Ctry Cd3 State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Ctry_Cd3_State_Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.C62_Ctry_00003E06"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C63  Ctry Cd3 State Name City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Ctry_Cd3_State_Name_City"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.C63_Ctry_000040C7"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D64  Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Latitude"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D64_Latit00003DDC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D65  Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Longitude"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D65_Longi00003D1C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "D67  Geo Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Offices Addresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Postal_Code"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D67_Geo_P00004370"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Offices",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail"
+        ]
+      },
+      {
+        "name": "LTS2 Offices Addresses",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:02 - Sample App Exa Data (ORCL).D30 Offices_FKey"
+            }
+          ]
+        }
+      },
+      {
+        "name": "02 - Sample App Exa Data (ORCL)__BISAMPLE_AGGS_SA_Offices00004AE2",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App Exa.H3 Offices.Offices Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Offices Total",
+      "logicalLevels": [
+        {
+          "name": "Offices Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Offices Company",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:D4  Company"
+          ],
+          "displayColumn": "logicalColumn:D4  Company"
+        },
+        {
+          "name": "Offices Organization",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:D3  Organization",
+            "logicalColumn:D3k  Org Key"
+          ]
+        },
+        {
+          "name": "Offices Department",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:D2  Department",
+            "logicalColumn:D2k  Dept Key"
+          ]
+        },
+        {
+          "name": "Offices Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 20,
+          "primaryColumns": [
+            "logicalColumn:D1  Office"
+          ],
+          "displayColumn": "logicalColumn:D1  Office"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H3 Offices [branch at level 'Offices Department']",
+          "description": "Office Dimension:\r\nType - Regular\r\nDrill Path - Company->Organization->Department->Detail",
+          "levels": [ "Offices Total", "Offices Company", "Offices Organization", "Offices Department", "Offices Detail" ]
+        }
+      ]
+    }
+  }
+}

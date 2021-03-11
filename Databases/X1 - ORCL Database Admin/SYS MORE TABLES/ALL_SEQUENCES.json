@@ -1,0 +1,60 @@
+{
+  "physicalTable": {
+    "name": "ALL_SEQUENCES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SEQUENCE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ORDER_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CACHE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MAX_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CYCLE_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "MIN_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INCREMENT_BY",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SEQUENCE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

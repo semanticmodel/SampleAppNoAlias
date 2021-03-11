@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "V_$DBFILE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

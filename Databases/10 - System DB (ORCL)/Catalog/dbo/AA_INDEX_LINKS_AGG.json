@@ -1,0 +1,33 @@
+{
+  "physicalTable": {
+    "name": "AA_INDEX_LINKS_AGG",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT \r\nTEXT_LVL3, TEXT_LVL2, TEXT_LVL1,\r\nLISTAGG('<a href='||URL||'target=\"_blank\">'||TEXT_LVL0||'</a>', ',  ') WITHIN GROUP(ORDER BY TEXT_LVL0_SEQ)  as LINKS_AGG\r\nFROM AA_DBPAGES_INDEX \r\nWHERE EXCLUDED IS NULL\r\nGROUP BY TEXT_LVL3, TEXT_LVL2, TEXT_LVL1\r\nORDER BY TEXT_LVL3, TEXT_LVL2, TEXT_LVL1 "
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "TEXT_LVL1",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "TEXT_LVL2",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "LINKS_AGG",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TEXT_LVL3",
+        "dataType": "VARCHAR",
+        "length": 200
+      }
+    ]
+  }
+}

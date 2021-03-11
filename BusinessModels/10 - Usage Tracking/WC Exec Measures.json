@@ -1,0 +1,114 @@
+{
+  "logicalTable": {
+    "name": "WC Exec Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Is Error",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_EXEC_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN EVALUATE('LENGTH(TRIM(TRANSLATE(%1,%2,%3)))',%1,'0123456789',' ') IS NULL THEN \r\n(CASE WHEN Cast(%1 AS INTEGER) = 0 THEN 'Yes' ELSE 'No' END)\r\nELSE\r\n'Yes'\r\nEND",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.ROWCOUNT_MSG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Count Msg",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_EXEC_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.ROWCOUNT_MSG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_EXEC_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.REPORT_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Invalid Analysis",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_EXEC_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN EVALUATE('LENGTH(TRIM(TRANSLATE(%1,%2,%3)))',%1,'0123456789',' ') IS NULL THEN \r\n(CASE WHEN Cast(%1 AS INTEGER) = 0 THEN 1 ELSE 0 END)\r\nELSE\r\n0\r\nEND",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts.ROWCOUNT_MSG"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Valid Analysis",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 -%2 ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WC Exec Measures.Analysis Count",
+              "logicalColumn:10 - Usage Tracking.WC Exec Measures.Invalid Analysis"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WC_EXEC_Facts",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_Facts"
+          ]
+        }
+      }
+    ]
+  }
+}

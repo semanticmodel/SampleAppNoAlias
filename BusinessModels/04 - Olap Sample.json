@@ -1,0 +1,104 @@
+{
+  "businessModel": {
+    "name": "04 - Olap Sample",
+    "joins": [      {
+        "name": "Relationship_2004:1579741291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F0 Revenue Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D5 Sales Rep (Parent Child Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1580071291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1580041291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F0 Revenue Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579711291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D6 Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579921291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F2 Forecast Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1580011291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F2 Forecast Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579681291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F0 Revenue Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D6 Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579981291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579951291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F0 Revenue Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579801291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D9 Measure Hierarchy",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579831291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F2 Forecast Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579771291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D5 Sales Rep (Parent Child Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579861291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F0 Revenue Cube",
+        "rightTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1579891291973957",
+        "leftTable": "logicalTable:04 - Olap Sample.F1 Revenue Measure Hierarchy",
+        "rightTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

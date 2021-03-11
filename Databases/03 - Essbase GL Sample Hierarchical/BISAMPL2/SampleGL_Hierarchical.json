@@ -1,0 +1,1132 @@
+{
+  "cubeTable": {
+    "name": "SampleGL_Hierarchical",
+    "sourceType": "TABLE",
+    "extName": "samplegl",
+    "memberReference": "Default",
+    "dateFormat": "MM-DD-YYYY",
+    "isMemberAliasUnique": true,
+    "alternateNames": [
+      "Default"
+    ],
+    "DBMap": [
+      {
+        "name": "DEFAULT",
+        "value": "samplegl"
+      }
+    ],
+    "columns": [ {
+        "name": "Gen4,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Scenarios - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - CAD",
+        "extName": "CAD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Years - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen1,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - PHP",
+        "extName": "PHP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Time Periods - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Accounts",
+        "extName": "Gen2,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - HKD",
+        "extName": "HKD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen2,Years",
+        "extName": "Gen2,Years",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen9,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen8,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Entities - AUD",
+        "extName": "AUD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Entities - DKK",
+        "extName": "DKK",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Time Periods Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen2,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - ARS",
+        "extName": "ARS",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Scenarios - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen4,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen4,Entities",
+        "extName": "Gen4,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Time Periods",
+        "extName": "Gen3,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Revenue",
+        "extName": "Revenue",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Accounts",
+        "extName": "Gen3,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Scenarios - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Accounts - Expense",
+        "extName": "Expense",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen3,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen5,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Accounts - Saved Assumption",
+        "extName": "Saved Assumption",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Entities - MYR",
+        "extName": "MYR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - GBP",
+        "extName": "GBP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen7,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - PLN",
+        "extName": "PLN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Accounts Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Accounts - Asset",
+        "extName": "Asset",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Years Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen3,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen6,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Scenarios - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen2,Scenarios",
+        "extName": "Gen2,Scenarios",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen8,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Entities - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen2,Scenarios - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen10,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen1,Scenarios",
+        "extName": "Gen1,Scenarios",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Years - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen6,Accounts",
+        "extName": "Gen6,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Years - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen6,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Accounts",
+        "extName": "Gen4,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen7,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen7,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen3,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen3,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen7,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - CNY",
+        "extName": "CNY",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - JPY",
+        "extName": "JPY",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen9,Accounts",
+        "extName": "Gen9,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Entities",
+        "extName": "Gen3,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Saved Assumption,HSP_UDF",
+        "extName": "Saved Assumption,HSP_UDF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - COP",
+        "extName": "COP",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Accounts",
+        "extName": "Gen5,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen10,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - KRW",
+        "extName": "KRW",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen8,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - VEB",
+        "extName": "VEB",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Time Periods - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen8,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen3,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Years - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - ExchangeRate",
+        "extName": "ExchangeRate",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Scenarios - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen7,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen2,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen10,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - ZAR",
+        "extName": "ZAR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen7,Accounts",
+        "extName": "Gen7,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - MXN",
+        "extName": "MXN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen6,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen2,Years - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Accounts",
+        "extName": "Gen1,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Time Periods Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen5,Entities",
+        "extName": "Gen5,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen10,Accounts",
+        "extName": "Gen10,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen5,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen7,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen8,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen8,Entities",
+        "extName": "Gen8,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Equity",
+        "extName": "Equity",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Accounts",
+        "extName": "Gen8,Accounts",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Entities - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Years - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen2,Time Periods - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Entities - BRL",
+        "extName": "BRL",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Years Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Scenarios Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen4,Time Periods",
+        "extName": "Gen4,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen7,Entities",
+        "extName": "Gen7,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Accounts - Expense,HSP_UDF",
+        "extName": "Expense,HSP_UDF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen8,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - USD",
+        "extName": "USD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - TWD",
+        "extName": "TWD",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Entities - PEN",
+        "extName": "PEN",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Accounts - Liability",
+        "extName": "Liability",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen5,Entities - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen3,Time Periods - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Entities - EUR",
+        "extName": "EUR",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Scenarios Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen1,Years",
+        "extName": "Gen1,Years",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Accounts - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "GL1 - measure",
+        "extName": "GL1 - measure",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Time Periods",
+        "extName": "Gen2,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - SEK",
+        "extName": "SEK",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen2,Accounts - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Entities",
+        "extName": "Gen2,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Accounts - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen6,Entities",
+        "extName": "Gen6,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Time Periods",
+        "extName": "Gen1,Time Periods",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Entities - CHF",
+        "extName": "CHF",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Entities - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Entities",
+        "extName": "Gen1,Entities",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      }
+    ]
+  }
+}

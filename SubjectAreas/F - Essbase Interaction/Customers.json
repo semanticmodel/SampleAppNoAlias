@@ -1,0 +1,77 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "presentationColumns": [ {
+        "name": "Gen1,Customers",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Gen1,Customers"
+      },
+      {
+        "name": "Region",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Region"
+      },
+      {
+        "name": "Sub Region",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Sub Region"
+      },
+      {
+        "name": "Country",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Country"
+      },
+      {
+        "name": "State/Province",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.State/Province"
+      },
+      {
+        "name": "Customers - Major Market",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Customers - Major Market"
+      },
+      {
+        "name": "Customers - Small Market",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Customers - Small Market"
+      },
+      {
+        "name": "Customers - New Market",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Customers - New Market"
+      },
+      {
+        "name": "Customers - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Customers - Default"
+      },
+      {
+        "name": "Customers - Long Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Customers.Customers - Long Names"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Customers",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Integration.Customers",
+        "levels": [ {
+            "name": "Gen1,Customers",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Customers.Gen1,Customers",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Customers.Gen1,Customers"
+          },
+          {
+            "name": "Region",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Customers.Region",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Customers.Region"
+          },
+          {
+            "name": "Sub Region",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Customers.Sub Region",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Customers.Sub Region"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Customers.Country",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Customers.Country"
+          },
+          {
+            "name": "State/Province",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Customers.State/Province",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Customers.State/Province"
+          }
+        ]
+      }
+    ]
+  }
+}

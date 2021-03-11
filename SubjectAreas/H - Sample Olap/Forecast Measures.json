@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Forecast Measures",
+    "presentationColumns": [ {
+        "name": "Forecast Gross Margin",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F2 Forecast Cube.Forecast Gross Margin"
+      },
+      {
+        "name": "Forecast Net Revenue",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F2 Forecast Cube.Forecast Net Revenue"
+      }
+    ]
+  }
+}

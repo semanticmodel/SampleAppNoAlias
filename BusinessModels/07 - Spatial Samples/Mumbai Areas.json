@@ -1,0 +1,174 @@
+{
+  "logicalTable": {
+    "name": "Mumbai Areas",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Town",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.TOWN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Neighbourhood Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.WARDCODE_G"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Neighbourhood Area",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.NEIGHBOURHOOD_AREA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Neighbourhood Description",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.NEIGHBOURHOOD_DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Neighbourhood",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "Neighbourhood Code",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.NEIGHBOURHOOD_TOTAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ward",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Indc Mumbai Sample",
+              "physicalExpression": {
+                "expressionTemplate": "left(%1,6)",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE.NEIGHBOURHOOD_TOTAL"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Indc Mumbai Sample",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_MUMBAI_SAMPLE"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:07 - Spatial Samples.Mumbai Areas.Mumbai Areas Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Mumbai",
+      "logicalLevels": [
+        {
+          "name": "All Mumbai",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Wards",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:Ward"
+          ],
+          "displayColumn": "logicalColumn:Ward"
+        },
+        {
+          "name": "Mumbai Areas Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 99,
+          "primaryColumns": [
+            "logicalColumn:Neighbourhood"
+          ],
+          "displayColumn": "logicalColumn:Neighbourhood"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Mumbai Areas [branch at level 'Wards']",
+          "levels": [ "All Mumbai", "Wards", "Mumbai Areas Detail" ]
+        }
+      ]
+    }
+  }
+}

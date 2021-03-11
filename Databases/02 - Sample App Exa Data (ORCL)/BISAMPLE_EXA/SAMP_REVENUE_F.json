@@ -1,0 +1,143 @@
+{
+  "physicalTable": {
+    "name": "SAMP_REVENUE_F",
+    "description": "Reveue Fact table: Stores the fact information at the lowest grain.",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_REVENUE_F.xml",
+    "physicalColumns": [ {
+        "name": "Currency",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true,
+        "description": "Currency: Stores currency information like AUD, USD, EUR.."
+      },
+      {
+        "name": "Discnt_Value",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Discount Value: Stores discount value as a double."
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Office Key: Joins to Office_Key of Employees dimension table."
+      },
+      {
+        "name": "Cost_Fixed",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Revenue: Stores revenue information as a double."
+      },
+      {
+        "name": "Discnt_Rate",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Discount Rate: Stores discount rate as an integer."
+      },
+      {
+        "name": "Empl_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Employee Key: Joins to Empl_Key column of Employees dimension table."
+      },
+      {
+        "name": "Order_Day_Dt",
+        "dataType": "DATETIME",
+        "nullable": true,
+        "description": "Order Day Date: Stores the information in date format."
+      },
+      {
+        "name": "Order_Type",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Order Type:Stores order type value like 'Secure','Express' and so on."
+      },
+      {
+        "name": "Paid_Day_Dt",
+        "dataType": "DATETIME",
+        "nullable": true,
+        "description": "Paid Day Date: Stores the information in date format."
+      },
+      {
+        "name": "Ship_Day_Dt",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "Bill_Mth_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Bill Month Key: Joins to Mth_Key of Time dimension table (Mth grain)."
+      },
+      {
+        "name": "Bill_Qtr_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Bill Quarter Key: Joins to Qtr_Key of Time dimension table (Qtr grain)."
+      },
+      {
+        "name": "Shipto_Addr_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Shipto Address Key: Joins to Address_Key column of Addresses dimension table."
+      },
+      {
+        "name": "Cust_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Customer Key: Joins to Cust_Key column of Customers dimension table."
+      },
+      {
+        "name": "Src_Order_Number",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Cost_Variable",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Revenue: Stores revenue information as a double."
+      },
+      {
+        "name": "Bill_Day_Dt",
+        "dataType": "DATE",
+        "nullable": true,
+        "description": "Bill Day Date: Joins to Calendar_date of Time dimension table (Day grain)."
+      },
+      {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Revenue: Stores revenue information as a double."
+      },
+      {
+        "name": "Order_Status",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Order Status: Stores order status values like '1-Booked','2-Fulfilled' and so on."
+      },
+      {
+        "name": "Order_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Order Number: Uniquely identifies each record in the fact table."
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Units: Stores units information as an integer."
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Joins to Prod_Key of Products dimension table."
+      }
+    ]
+  }
+}

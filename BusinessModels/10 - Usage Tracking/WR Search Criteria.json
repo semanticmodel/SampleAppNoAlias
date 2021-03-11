@@ -1,0 +1,33 @@
+{
+  "logicalTable": {
+    "name": "WR Search Criteria",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Search Pattern",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_SEARCH_PATTERN",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_PATTERN.SEARCH_PATTERN"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WR_SEARCH_PATTERN",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_PATTERN"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "30 UNIQUE_CARRIERS",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.UNIQUE_CARRIERS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "Genre (Activity Level)",
+    "sourceTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+    "caching": {
+      "enable": true
+    }
+  }
+}

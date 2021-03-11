@@ -1,0 +1,147 @@
+{
+  "logicalTable": {
+    "name": "F1 Time Based Fragmentation",
+    "description": "This logical table contains metrics like Revenue, Billed Qty, Booked Amt and Booked Qty with different types of aggregation like Sum, First on Time , Last on Time and Count Distinct. \r\nAll the metrics in this table are physically mapped to columns in the Revenue fact table.\r\n",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "1a- Revenue (DW History Data)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "1b- Revenue (OTLP Real Time Data)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS02 Real Time Order Items",
+              "physicalExpression": {
+                "expressionTemplate": "%1*%2 ",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.QUANTITY",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.UNIT_PRICE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "1c- Revenue Fragmented Sources",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS01 Revenue (Billed Time Join)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Revenue"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS02 Real Time Order Items",
+              "physicalExpression": {
+                "expressionTemplate": "%1*%2 ",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.QUANTITY",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS.UNIT_PRICE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS01 Revenue (Billed Time Join)",
+        "description": "\"01 - Sample App Data (ORCL)\".\"\".\"BISAMPLE\".\"F10 Billed Rev\".\"Bill_Day_Dt\" < '15-DEC-11'",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev"
+          ]
+        },
+        "dataFilter": {
+          "expressionTemplate": "%1 \r\n<= VALUEOF(NQ_SESSION.%2) ",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F10 Billed Rev.Bill_Day_Dt",
+            "variable:FRAGM_DATE_DW.FRAGM_DATE_DW"
+          ]
+        },
+        "dataFragmentation": {
+          "expressionTemplate": "%1 \r\n<= date '2015-12-31'",
+          "expressionObjects": [
+            "logicalColumn:01 - Sample App.D0 Time.T00 Calendar Date"
+          ]
+        },
+        "combineWithOtherFragments": true
+      },
+      {
+        "name": "LTS02 Real Time Order Items",
+        "tableMapping": {
+          "allowUnmappedTables": true,
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDER_ITEMS",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ORDER_ITEMS_FKey"
+            }
+          ]
+        },
+        "dataFilter": {
+          "expressionTemplate": "%1 \r\n>= VALUEOF(NQ_SESSION.%2) ",
+          "expressionObjects": [
+            "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_RT.ORDERS.ORDER_DATE",
+            "variable:FRAGM_DATE_RT.FRAGM_DATE_RT"
+          ]
+        },
+        "dataFragmentation": {
+          "expressionTemplate": "%1  >= date '2015-12-01'",
+          "expressionObjects": [
+            "logicalColumn:01 - Sample App.D0 Time.T00 Calendar Date"
+          ]
+        },
+        "combineWithOtherFragments": true
+      }
+    ]
+  }
+}

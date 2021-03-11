@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Dim- Airports",
+    "presentationColumns": [ {
+        "name": "Airport",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim- Airports.Airport"
+      },
+      {
+        "name": "NumFlightsY2",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim- Airports.NumFlightsY2"
+      },
+      {
+        "name": "ChangeInNumFlts",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim- Airports.ChangeInNumFlts"
+      },
+      {
+        "name": "NumFlightsY1",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim- Airports.NumFlightsY1"
+      }
+    ]
+  }
+}

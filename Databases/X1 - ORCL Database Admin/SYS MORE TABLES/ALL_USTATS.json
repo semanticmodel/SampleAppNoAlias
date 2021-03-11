@@ -1,0 +1,55 @@
+{
+  "physicalTable": {
+    "name": "ALL_USTATS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATSTYPE_SCHEMA",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATISTICS",
+        "dataType": "VARBINARY",
+        "length": 2000
+      },
+      {
+        "name": "STATSTYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OBJECT_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "ASSOCIATION",
+        "dataType": "VARCHAR",
+        "length": 8
+      }
+    ]
+  }
+}

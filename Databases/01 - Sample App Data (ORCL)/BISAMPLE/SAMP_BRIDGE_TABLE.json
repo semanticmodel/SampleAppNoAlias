@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "SAMP_BRIDGE_TABLE",
+    "description": "ZZZ - Not yet filled",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_BRIDGE_TABLE.xml",
+    "physicalColumns": [ {
+        "name": "Chnl_Weighting",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "Office_key",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "Chnl_Key",
+        "dataType": "DOUBLE",
+        "nullable": true
+      }
+    ]
+  }
+}

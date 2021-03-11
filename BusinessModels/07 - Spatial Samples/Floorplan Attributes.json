@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "Floorplan Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Cage Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AI_FLOORPLAN_METRICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.AI_FLOORPLAN_DATA.CAGE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "IBX",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AI_FLOORPLAN_METRICS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.AI_FLOORPLAN_DATA.IBX"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "AI_FLOORPLAN_METRICS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.AI_FLOORPLAN_DATA"
+          ]
+        }
+      }
+    ]
+  }
+}

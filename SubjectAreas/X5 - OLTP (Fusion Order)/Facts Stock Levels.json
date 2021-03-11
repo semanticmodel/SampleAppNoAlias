@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Facts Stock Levels",
+    "presentationColumns": [ {
+        "name": "Last Update Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F3 Stock Levels.Last Update Date"
+      },
+      {
+        "name": "Product ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F3 Stock Levels.Product ID"
+      },
+      {
+        "name": "Quantity On Hand",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F3 Stock Levels.Quantity On Hand"
+      },
+      {
+        "name": "# of Warehouses",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F3 Stock Levels.# of Warehouses"
+      }
+    ]
+  }
+}

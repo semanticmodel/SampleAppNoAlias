@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Facts",
+    "alternateNames": [
+      "Object Permissions#1"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Accounts with Explicit Permisions",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Accounts with Explicit Permisions",
+        "alternateNames": [
+          "# of Accounts",
+          "# of Accounts with Permisions"
+        ]
+      },
+      {
+        "name": "# of Objects with Explicit Permisions",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.# of Objects with Explicit Permisions",
+        "alternateNames": [
+          "# of Objects",
+          "# of Objects with Permisions"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,167 @@
+{
+  "physicalTable": {
+    "name": "V_$DATAFILE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "UNRECOVERABLE_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "ONLINE_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "FIRST_NONLOGGED_SCN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FOREIGN_CREATION_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK1_OFFSET",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RFILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLUGGED_IN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATE_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ONLINE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OFFLINE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLUGIN_RESETLOGS_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "ENABLED",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "LAST_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FOREIGN_CREATION_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FOREIGN_DBID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "AUX_NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      },
+      {
+        "name": "FIRST_NONLOGGED_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      },
+      {
+        "name": "CREATION_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHECKPOINT_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PLUGIN_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHECKPOINT_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "UNRECOVERABLE_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATION_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PLUGGED_READONLY",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "PLUGIN_RESETLOGS_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

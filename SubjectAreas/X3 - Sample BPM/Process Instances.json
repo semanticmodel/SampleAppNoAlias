@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Process Instances",
+    "presentationColumns": [ {
+        "name": "Process Instance",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Process Instance"
+      },
+      {
+        "name": "Instance Start Time",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+      },
+      {
+        "name": "Instance End Time",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance End Time"
+      },
+      {
+        "name": "Process Thread Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Active Tasks.Process Thread Id"
+      },
+      {
+        "name": "Instance Duration (Min)",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Duration (Min)"
+      }
+    ]
+  }
+}

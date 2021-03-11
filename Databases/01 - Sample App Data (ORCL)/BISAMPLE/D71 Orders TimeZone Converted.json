@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D71 Orders TimeZone Converted",
+    "description": "Orders Ship To Alias: This is an alias of the Addresses dimension table which joins to the Ship_To_Address key in all the fact aliases",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F_DST_QUERY"
+  }
+}

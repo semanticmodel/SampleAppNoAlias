@@ -1,0 +1,101 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "presentationColumns": [ {
+        "name": "T05 Per Name Year",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.T05 Per Name Year"
+      },
+      {
+        "name": "T04 Per Name Half",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.T04 Per Name Half"
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.T03 Per Name Qtr"
+      },
+      {
+        "name": "T02 Per Name Month",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.T02 Per Name Month"
+      },
+      {
+        "name": "Calendar Type",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.Calendar Type"
+      },
+      {
+        "name": "Month Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Month of Year.Month Names"
+      },
+      {
+        "name": "Total Time",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D0 Time.Total Time"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Months Hierarchy",
+        "alternateNames": [
+          "Months"
+        ],
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D0 Time",
+        "levels": [ {
+            "name": "All Months",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Total Time",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.Total Time"
+          },
+          {
+            "name": "Calendar Type",
+            "alternateNames": [
+              "Total Month Hiearchy"
+            ],
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Total Month Hiearchy",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.Calendar Type"
+          },
+          {
+            "name": "Years",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Years",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Half Years",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Half Years",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T04 Per Name Half"
+          },
+          {
+            "name": "Quarters",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Quarters",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month Members",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Month Members",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T02 Per Name Month"
+          }
+        ]
+      },
+      {
+        "name": "Time Hierarchy",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D0 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Total Time",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.Total Time"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Years",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Quarters",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D0 Time.Month Members",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Time.T02 Per Name Month"
+          }
+        ]
+      }
+    ]
+  }
+}

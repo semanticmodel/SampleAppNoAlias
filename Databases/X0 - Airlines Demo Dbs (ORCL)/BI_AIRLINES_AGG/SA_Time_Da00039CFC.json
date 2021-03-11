@@ -1,0 +1,172 @@
+{
+  "physicalTable": {
+    "name": "SA_Time_Da00039CFC",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Dep_Year00039C0A",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true
+      },
+      {
+        "name": "Julian_Wee00039C04",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Time_Qt_00039CFASK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Half00039C06",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "Time_Da_00039CFCSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Week00039C18",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Month00039C16",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Date00039C13",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "Qtr_of_Yea00039C10",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Time_Ye_00039CF9SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Week00039C09",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true
+      },
+      {
+        "name": "Beg_of_Wee00039C0D",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Julian_Qtr00039C03",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Cal_Half00039C0E",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Qtr00039C08",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Year00039C19",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Cal_Week00039C11",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Time_Mo_00039CFBSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Month_of_Y00039C0F",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Half00039C15",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Julian_Day00039C1A",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Loaded00039C05",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Day_Key00039C14",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Fscl_Qtr00039C17",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Cal_Year00039C12",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Julian_Mon00039C02",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Time_Ha_00039CFDSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Beg_of_Mth00039C0B",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Beg_of_Qtr00039C0C",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Month00039C07",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      }
+    ]
+  }
+}

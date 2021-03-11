@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ALL_CUBE_DIMENSIONALITY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ET_ATTR_PREFIX",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "ORDER_NUM",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "IS_SPARSE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CUBE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DIMENSION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

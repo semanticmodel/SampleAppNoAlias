@@ -1,0 +1,68 @@
+{
+  "physicalTable": {
+    "name": "ORDER_ITEMS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PRODUCT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ORDER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "LINE_ITEM_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "QUANTITY",
+        "dataType": "INT",
+        "length": 6,
+        "nullable": true
+      },
+      {
+        "name": "UNIT_PRICE",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      }
+    ]
+  }
+}

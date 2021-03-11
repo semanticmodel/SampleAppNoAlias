@@ -1,0 +1,39 @@
+{
+  "physicalTable": {
+    "name": "FACT_AGG_OR_CD_05",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "hints": "opt_param('_index_join_enabled','false')+",
+    "physicalColumns": [ {
+        "name": "Route00039C28",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "Z_of_Aircr00039B49",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Dep_Month00039C07",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "Dest_Airpo00039C2A",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Orig_Airpo00039C3D",
+        "dataType": "VARCHAR",
+        "length": 250
+      }
+    ]
+  }
+}

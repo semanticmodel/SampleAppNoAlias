@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Permissions",
+    "alternateNames": [
+      "Object Permissions",
+      "WP Object Permissions"
+    ],
+    "presentationColumns": [ {
+        "name": "Read",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Read"
+      },
+      {
+        "name": "Execute/Traverse",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Execute/Traverse"
+      },
+      {
+        "name": "Write",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Write"
+      },
+      {
+        "name": "Delete",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Delete"
+      },
+      {
+        "name": "ChangePermissions",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.ChangePermissions"
+      },
+      {
+        "name": "Set Ownership",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Set Ownership"
+      },
+      {
+        "name": "Run Publisher Report",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Run Publisher Report"
+      },
+      {
+        "name": "Schedule Publisher Report",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.Schedule Publisher Report"
+      },
+      {
+        "name": "View Publisher Report",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Permissions.View Publisher Report"
+      }
+    ]
+  }
+}

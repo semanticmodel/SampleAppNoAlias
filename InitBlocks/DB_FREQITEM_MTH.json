@@ -1,0 +1,28 @@
+{
+  "initBlock": {
+    "name": "DB_FREQITEM_MTH",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT 201012 FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "DB_FRQITEM_MTH1",
+        "description": "Used for the opaque view Select statement in Database Frequent Itemset Example",
+        "value": "201412"
+      },
+      {
+        "name": "DB_FRQITEM_MTH2",
+        "description": "Used for the opaque view Select statement in Database Frequent Itemset Example",
+        "value": "201412"
+      }
+    ]
+  }
+}

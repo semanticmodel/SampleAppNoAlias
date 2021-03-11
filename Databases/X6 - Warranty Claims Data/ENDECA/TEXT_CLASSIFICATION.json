@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "TEXT_CLASSIFICATION",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "QUERY_STRING",
+        "dataType": "VARCHAR",
+        "length": 400,
+        "nullable": true
+      },
+      {
+        "name": "ID",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "CLASSIFICATION",
+        "dataType": "VARCHAR",
+        "length": 80,
+        "nullable": true
+      }
+    ]
+  }
+}

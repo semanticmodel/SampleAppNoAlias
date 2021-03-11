@@ -1,0 +1,29 @@
+{
+  "physicalTable": {
+    "name": "BIEE_CATEGORY_CLOSURE",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "DISTANCE",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ANCESTOR_KEY",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MEMBER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "IS_LEAF",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

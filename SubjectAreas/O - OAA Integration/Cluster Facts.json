@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "Cluster Facts",
+    "alternateNames": [
+      "Fact - Cluster"
+    ],
+    "presentationColumns": [ {
+        "name": "Mean",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Cluster.Mean"
+      },
+      {
+        "name": "Record Count",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Cluster.Record Count"
+      },
+      {
+        "name": "Variance",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Cluster.Variance"
+      },
+      {
+        "name": "Mode Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Cluster.Mode Value"
+      },
+      {
+        "name": "Attribute Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - Cluster.Attribute Value"
+      }
+    ]
+  }
+}

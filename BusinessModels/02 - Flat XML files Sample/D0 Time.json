@@ -1,0 +1,163 @@
+{
+  "logicalTable": {
+    "name": "D0 Time",
+    "description": "This logical table maps to the physical Time Dimension tables at Day,Month and Quarter grains. \r\nIt is mapped to 4 LTS.\r\nLTS1 Time Day Grain - Maps to the physical time table at day grain.\r\nLTS2 Time Month Grain - Maps to the physical time table at month grain.\r\nLTS3 Time Quarter Grain - Maps to the physical time table at quarter grain.\r\nLTS4 Targets (XML Source) - Maps to Fact targets XML source.\r\n\r\n ",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "T02 Per Name Month",
+        "description": "Help : \r\nPeriod Name Month: Stores the year information in the format YYYY / MM.\r\nEg:- 2009 / 01",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D02 Time Month Grain (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Month"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "description": "Help :\r\nPeriod Name Quarter: Stores the quarter information in the format YYYY QQuarterNumber.\r\nEg:- 2009 Q1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D02 Time Month Grain (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Qtr"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T04 Per Name Half",
+        "description": "Help : \r\nPeriod Name Half: Stores the Half year information in the format YYYY HYHalfYearNumber.\r\nEg:- 2009 HY1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D02 Time Month Grain (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Half"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T05 Per Name Year",
+        "description": "Help :\r\nPeriod Name Year: Stores the year information in the format YYYY.\r\nEg:- 2009",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D02 Time Month Grain (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Per_Name_Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mth_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D02 Time Month Grain (XML Source)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Mth_Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D02 Time Month Grain (XML Source)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source)"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total Time",
+      "logicalLevels": [
+        {
+          "name": "Total Time",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:T05 Per Name Year"
+          ],
+          "displayColumn": "logicalColumn:T05 Per Name Year",
+          "chronologicalKey": "logicalColumn:T05 Per Name Year"
+        },
+        {
+          "name": "Half",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:T04 Per Name Half"
+          ],
+          "displayColumn": "logicalColumn:T04 Per Name Half",
+          "chronologicalKey": "logicalColumn:T04 Per Name Half"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 28,
+          "primaryColumns": [
+            "logicalColumn:T03 Per Name Qtr"
+          ],
+          "displayColumn": "logicalColumn:T03 Per Name Qtr",
+          "chronologicalKey": "logicalColumn:T03 Per Name Qtr"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 120,
+          "primaryColumns": [
+            "logicalColumn:Mth_Key"
+          ],
+          "chronologicalKey": "logicalColumn:Mth_Key"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H0 Time [branch at level 'Quarter']",
+          "description": "Time Dimension : \r\nType - Time. \r\nIncludes two drill paths: Fiscal Year and Year. \r\nBoth the paths include levels Year->Half->Qtr->Month->Week->Day",
+          "levels": [ "Total Time", "Year", "Half", "Quarter", "Month" ]
+        }
+      ]
+    }
+  }
+}

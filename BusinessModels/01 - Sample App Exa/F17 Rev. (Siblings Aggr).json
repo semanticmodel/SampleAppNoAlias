@@ -1,0 +1,390 @@
+{
+  "logicalTable": {
+    "name": "F17 Rev. (Siblings Aggr)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Bill_Day_Dt",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Bill_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bill_Mth_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Bill_Mth_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bill_Qtr_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Bill_Qtr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost_Fixed",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Cost_Fixed"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost_Variable",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Cost_Variable"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Currency",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Currency"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cust_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Cust_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discnt_Rate",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Discnt_Rate"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discnt_Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Discnt_Value"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Empl_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Empl_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Office_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Day_Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Order_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Order_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Order_Status"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Order_Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Paid_Day_Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Paid_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Prod_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ship_Day_Dt",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Ship_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Shipto_Addr_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Shipto_Addr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Src_Order_Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Src_Order_Number"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F17 Rev. (Siblings Aggr)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Units"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "F17 Rev. (Siblings Aggr)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "physicalTable": {
+    "name": "SHIPPING_OPTIONS_BASE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "COST_PER_CLASS3_ITEM",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "COST_PER_CLASS2_ITEM",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "FREE_SHIPPING_ALLOWED_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SHIPPING_OPTION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "COUNTRY_CODE",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "COST_PER_CLASS1_ITEM",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      }
+    ]
+  }
+}

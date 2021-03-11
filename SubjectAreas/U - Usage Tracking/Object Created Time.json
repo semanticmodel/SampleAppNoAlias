@@ -1,0 +1,54 @@
+{
+  "presentationTable": {
+    "name": "Object Created Time",
+    "localization": {
+      "localizationKey": "Object Created Time",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time)"
+    },
+    "description": "nQuire Period Attributes",
+    "alternateNames": [
+      "Query Time#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Year"
+      },
+      {
+        "name": "Year Month",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Year Month"
+      },
+      {
+        "name": "Year Quarter",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Year Quarter"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Month"
+      },
+      {
+        "name": "Month Number",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Month Number"
+      },
+      {
+        "name": "Day Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Day Name"
+      },
+      {
+        "name": "Week Number",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Week Number"
+      },
+      {
+        "name": "Day Number",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Day Number"
+      },
+      {
+        "name": "Day in Month",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Day in Month"
+      },
+      {
+        "name": "Date",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Date"
+      }
+    ]
+  }
+}

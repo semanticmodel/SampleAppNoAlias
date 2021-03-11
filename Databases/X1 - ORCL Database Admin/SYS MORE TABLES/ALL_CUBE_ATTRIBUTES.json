@@ -1,0 +1,64 @@
+{
+  "physicalTable": {
+    "name": "ALL_CUBE_ATTRIBUTES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DATA_PRECISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATA_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ATTRIBUTE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DATA_SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TARGET_DIMENSION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ATTRIBUTE_ROLE",
+        "dataType": "VARCHAR",
+        "length": 17
+      },
+      {
+        "name": "DIMENSION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 300
+      },
+      {
+        "name": "DATA_TYPE",
+        "dataType": "VARCHAR",
+        "length": 106
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "presentationTable": {
+    "name": "Movie Genre",
+    "presentationColumns": [ {
+        "name": "Genre Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Genre.Genre Name"
+      }
+    ]
+  }
+}

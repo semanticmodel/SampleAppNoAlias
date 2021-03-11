@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "ALL USERS - Owners",
+    "sourceTable": "physicalTable:X1 - ORCL Database Admin.SYS.ALL_USERS"
+  }
+}

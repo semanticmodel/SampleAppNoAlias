@@ -1,0 +1,87 @@
+{
+  "physicalTable": {
+    "name": "ALL_OBJECTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_DDL_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "NAMESPACE",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_ID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "EDITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "TEMPORARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SUBOBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "CREATED",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "GENERATED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DATA_OBJECT_ID",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "SECONDARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      }
+    ]
+  }
+}

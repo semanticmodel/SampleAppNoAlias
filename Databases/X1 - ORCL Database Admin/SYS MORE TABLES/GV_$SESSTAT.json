@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "GV_$SESSTAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATISTIC#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

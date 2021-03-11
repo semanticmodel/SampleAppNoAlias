@@ -1,0 +1,39 @@
+{
+  "physicalTable": {
+    "name": "ALL_SECONDARY_OBJECTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SECONDARY_OBJDATA_TYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "INDEX_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "INDEX_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SECONDARY_OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SECONDARY_OBJECT_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "DB_COL_STATS_COLUMN",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT 'REVENUE' FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "DB_COL_STATS_COLUMN",
+        "description": "Used for Opaque view generating DBMS Statistic info",
+        "value": "'REVENUE'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "physicalTable": {
+    "name": "SA_Time_Mo00039CFB",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Time_Qt_00039CFASK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Year00039C0A",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true
+      },
+      {
+        "name": "Time_Ha_00039CFDSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Half00039C06",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "Cal_Year00039C12",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Month_of_Y00039C0F",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Qtr00039C08",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true
+      },
+      {
+        "name": "Time_Ye_00039CF9SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Qtr_of_Yea00039C10",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Time_Mo_00039CFBSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Month00039C07",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "Cal_Half00039C0E",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

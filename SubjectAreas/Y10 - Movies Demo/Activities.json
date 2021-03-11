@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Activities",
+    "presentationColumns": [ {
+        "name": "Activity ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Activities.Activity ID"
+      },
+      {
+        "name": "Activity",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Activities.Activity"
+      }
+    ]
+  }
+}

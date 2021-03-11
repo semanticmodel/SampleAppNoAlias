@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "presentationColumns": [ {
+        "name": "All Segments",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D6 Customers.All Segments"
+      },
+      {
+        "name": "C4  Customer Segment",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D6 Customers.C4  Customer Segment"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "H6 Customers",
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D6 Customers",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D6 Customers.Total"
+          },
+          {
+            "name": "Customer Segment",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D6 Customers.Customer Segment",
+            "displayColumn": "presentationColumn:H - Sample Olap.Customers.C4  Customer Segment"
+          }
+        ]
+      }
+    ]
+  }
+}

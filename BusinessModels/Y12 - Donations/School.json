@@ -1,0 +1,278 @@
+{
+  "logicalTable": {
+    "name": "School",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "School ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOLID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Charter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_CHARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School County",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_COUNTY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School District",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_DISTRICT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Metro",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_METRO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School NCES ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_NCESID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School NLNS",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_NLNS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Geo State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_STATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Geo Zip",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_ZIP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Geo Long",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_LONGITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "School Geo Lat",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_SCHOOL_LTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y12 - Donations Project.PROJ_SCHOOL.SCHOOL_LATITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_SCHOOL_LTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y12 - Donations Project.PROJ_SCHOOL"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000
+        },
+        {
+          "name": "School Geo State",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:School Geo State"
+          ],
+          "displayColumn": "logicalColumn:School Geo State",
+          "chronologicalKey": "logicalColumn:School Geo State"
+        },
+        {
+          "name": "School City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:School City"
+          ],
+          "displayColumn": "logicalColumn:School City",
+          "chronologicalKey": "logicalColumn:School City"
+        },
+        {
+          "name": "School District",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:School District"
+          ],
+          "displayColumn": "logicalColumn:School District",
+          "chronologicalKey": "logicalColumn:School District"
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 2000,
+          "primaryColumns": [
+            "logicalColumn:School ID"
+          ],
+          "displayColumn": "logicalColumn:School ID",
+          "chronologicalKey": "logicalColumn:School ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "School [branch at level 'School District']",
+          "description": "default hierarchy",
+          "levels": [ "Total", "School Geo State", "School City", "School District", "Detail" ]
+        }
+      ]
+    }
+  }
+}

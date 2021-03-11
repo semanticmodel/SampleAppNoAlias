@@ -1,0 +1,210 @@
+{
+  "logicalTable": {
+    "name": "F1 Revenue Measure Hierarchy",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "% Change Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.% Change Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.% Change Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prior Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.Prior Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Prior Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Parent Share",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.Product Parent Share"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Product Parent Share"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.Value"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Value"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year To Date",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.Year To Date"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Year To Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "YTD % Chg Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube w/Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy.YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Revenue Cube w/Measure Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube w/Measure Hierarchy"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H0 Time.Month",
+          "logicalLevel:04 - Olap Sample.H3 Office.Office",
+          "logicalLevel:04 - Olap Sample.H1 Products.Product",
+          "logicalLevel:04 - Olap Sample.H5 Sales Rep.Detail",
+          "logicalLevel:04 - Olap Sample.H6 Customers.Customer Segment",
+          "logicalLevel:04 - Olap Sample.H9 Measures Hierarchy.Detail"
+        ]
+      }
+    ]
+  }
+}

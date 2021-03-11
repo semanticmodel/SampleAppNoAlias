@@ -1,0 +1,125 @@
+{
+  "logicalTable": {
+    "name": "20 Arr Delay Grp",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Arr Delay Group",
+        "description": "Arrival Delay intervals, every (15-minutes from <-15 to >180)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "20 ARRIVAL_DELAY_GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.20 ARR DELAY GROUPS.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_20_Arr_00039CE9",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_Delay_00039B9B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Arr delay Code",
+        "description": "Arrival Delay intervals, every (15-minutes from <-15 to >180)",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "20 ARRIVAL_DELAY_GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.20 ARR DELAY GROUPS.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_20_Arr_00039CE9",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9.Arr_delay_00039B9C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Arr Delay Class",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 < 0 THEN '1 - In Advance' WHEN %1 = 0 THEN '2 - Within 15 Min Delay' WHEN %1 < 4 THEN '3 - From 15 to 60 Min Delay' ELSE '4 - Over 1hr Delay' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.20 Arr Delay Grp.Arr delay Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "20 ARRIVAL_DELAY_GROUPS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.20 ARR DELAY GROUPS"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.20 Arr Delay.20 Arr Delay Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_20_Arr_00039CE9",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_20_Arr_00039CE9"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.20 Arr Delay.20 Arr Delay Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "20 Arr Delay Total",
+      "logicalLevels": [
+        {
+          "name": "20 Arr Delay Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "20 Arr Delay Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 16,
+          "primaryColumns": [
+            "logicalColumn:Arr Delay Group"
+          ],
+          "displayColumn": "logicalColumn:Arr Delay Group"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "20 Arr Delay",
+          "levels": [ "20 Arr Delay Total", "20 Arr Delay Detail" ]
+        }
+      ]
+    }
+  }
+}

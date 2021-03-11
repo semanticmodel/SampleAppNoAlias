@@ -1,0 +1,258 @@
+{
+  "businessModel": {
+    "name": "X1 - Db Structure",
+    "joins": [      {
+        "name": "Relationship_2004:2262981336045820",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL_OBJECTS",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2265901336047221",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- DBA_SYS_PRIVS",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2262151336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_MVIEWS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2271241336048237",
+        "leftTable": "logicalTable:X1 - Db Structure.DB- V_DATABASE",
+        "rightTable": "logicalTable:X1 - Db Structure.DB- DATABASE_PROPERTIES",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2297101336125939",
+        "leftTable": "logicalTable:X1 - Db Structure.TS- DBA_FREE_SPACE",
+        "rightTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACES",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2296921336125939",
+        "leftTable": "logicalTable:X1 - Db Structure.TS- DBA_EXTENTS",
+        "rightTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACES",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262211336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262121336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_SYNONYMS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2261851336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TABLES",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2261971336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_INDEXES",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2277341336048950",
+        "leftTable": "logicalTable:X1 - Db Structure.SYS- V_SYSMETRIC",
+        "rightTable": "logicalTable:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2265931336047227",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TAB_PRIVS",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2261881336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TAB_COLS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2265871336047215",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL_USERS",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2273631336048565",
+        "leftTable": "logicalTable:X1 - Db Structure.SES- GV_SESSMETRIC",
+        "rightTable": "logicalTable:X1 - Db Structure.SES- GV_SESSION",
+        "joinType": "FULL_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262091336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_VIEWS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2267251336047723",
+        "leftTable": "logicalTable:X1 - Db Structure.TS- DBA_TEMP_FILES",
+        "rightTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACES",
+        "joinType": "FULL_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2277641336048950",
+        "leftTable": "logicalTable:X1 - Db Structure.SYS- V_SYSMETRIC",
+        "rightTable": "logicalTable:X1 - Db Structure.SYS- V_SYSMETRIC_SUMMARY",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2265841336047210",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL_COL_PRIVS",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2262001336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TAB_PARTITIONS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2271211336048230",
+        "leftTable": "logicalTable:X1 - Db Structure.DB- V_DATABASE",
+        "rightTable": "logicalTable:X1 - Db Structure.DB- DATABASE_SUMMARY",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2267391336047723",
+        "leftTable": "logicalTable:X1 - Db Structure.TS- DBA_TEMP_FREE_SPACE",
+        "rightTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACES",
+        "joinType": "FULL_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2265751336046931",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- V_SEGMENT_STATISTICS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262181336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_AWS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2261911336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_OBJECT_TABLES",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2261941336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- DBA_SEGMENTS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2265471336046931",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- DBA_TAB_COL_STATISTICS",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2277731336049070",
+        "leftTable": "logicalTable:X1 - Db Structure.DB- V_DATABASE",
+        "rightTable": "logicalTable:X1 - Db Structure.DB- V_SERVICES",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2271091336048079",
+        "leftTable": "logicalTable:X1 - Db Structure.DF- V_TEMPFILE",
+        "rightTable": "logicalTable:X1 - Db Structure.DF- DBA_DATA_FILE",
+        "joinType": "FULL_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262061336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_CUBES",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2262031336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- DBA_OBJECT_SIZE",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2276351336048565",
+        "leftTable": "logicalTable:X1 - Db Structure.SQL- GV_SQL",
+        "rightTable": "logicalTable:X1 - Db Structure.SQL- GV_SQLSTATS",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2667521377092887",
+        "leftTable": "logicalTable:X1 - Db Structure.GET_DBMS_STAT Dummy Dim",
+        "rightTable": "logicalTable:X1 - Db Structure.GET_DBMS_STAT",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2276551336048565",
+        "leftTable": "logicalTable:X1 - Db Structure.SQL- GV_SQLTEXT",
+        "rightTable": "logicalTable:X1 - Db Structure.SQL- GV_SQL",
+        "joinType": "FULL_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2266931336047723",
+        "leftTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACES",
+        "rightTable": "logicalTable:X1 - Db Structure.TS- DBA_TABLESPACE_GROUPS",
+        "joinType": "FULL_OUTER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2261791336045484",
+        "leftTable": "logicalTable:X1 - Db Structure.OBJ- ALL_TYPES",
+        "rightTable": "logicalTable:X1 - Db Structure.OBJ- ALL USERS - Owners",
+        "joinType": "LEFT_OUTER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

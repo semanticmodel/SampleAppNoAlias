@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Sales Channels",
+    "alternateNames": [
+      "Bbil Sales Channels"
+    ],
+    "presentationColumns": [ {
+        "name": "Saleschannel",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Channels.Saleschannel"
+      },
+      {
+        "name": "Saleschannel Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Channels.Saleschannel Id"
+      },
+      {
+        "name": "Saleschannelregion",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Channels.Saleschannelregion"
+      }
+    ]
+  }
+}

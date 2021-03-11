@@ -1,0 +1,76 @@
+{
+  "physicalTable": {
+    "name": "DBA_TEMP_FILES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "MAXBLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AUTOEXTENSIBLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INCREMENT_BY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXBYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "RELATIVE_FNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE_NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      }
+    ]
+  }
+}

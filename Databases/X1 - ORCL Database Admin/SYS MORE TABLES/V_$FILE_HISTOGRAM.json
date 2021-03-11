@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "V_$FILE_HISTOGRAM",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SINGLEBLKRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDTIM_MILLI",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

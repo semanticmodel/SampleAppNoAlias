@@ -1,0 +1,79 @@
+{
+  "logicalTable": {
+    "name": "34 Carrier Group",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "CODE",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "34 CARRIER_GROUP_NEW",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.34 CARRIER_GROUP_NEW.CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Carrier Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "34 CARRIER_GROUP_NEW",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.34 CARRIER_GROUP_NEW.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "34 CARRIER_GROUP_NEW",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.34 CARRIER_GROUP_NEW"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.34 Carrier Group.34 Carrier Group Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "34 Carrier Group Total",
+      "logicalLevels": [
+        {
+          "name": "34 Carrier Group Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "34 Carrier Group Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:CODE"
+          ],
+          "displayColumn": "logicalColumn:CODE"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "34 Carrier Group",
+          "levels": [ "34 Carrier Group Total", "34 Carrier Group Detail" ]
+        }
+      ]
+    }
+  }
+}

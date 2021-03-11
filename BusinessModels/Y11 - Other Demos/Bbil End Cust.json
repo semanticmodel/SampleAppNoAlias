@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "Bbil End Cust",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Endcust Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil End Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST.ENDCUST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Endcustname",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil End Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST.ENDCUSTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil End Cust",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST"
+          ]
+        }
+      }
+    ]
+  }
+}

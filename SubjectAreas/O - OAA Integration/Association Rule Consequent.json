@@ -1,0 +1,58 @@
+{
+  "presentationTable": {
+    "name": "Association Rule Consequent",
+    "alternateNames": [
+      "Dim - Association Rule Consequent"
+    ],
+    "presentationColumns": [ {
+        "name": "Consequent Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Attribute Name",
+        "alternateNames": [
+          "Attribute Name"
+        ]
+      },
+      {
+        "name": "Consequent",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent",
+        "alternateNames": [
+          "Attribute Subname"
+        ]
+      },
+      {
+        "name": "Consequent Conditional Operator",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Conditional Operator",
+        "alternateNames": [
+          "Conditional Operator"
+        ]
+      },
+      {
+        "name": "Consequent Attribute Num Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Attribute Num Value",
+        "alternateNames": [
+          "Attribute Num Value"
+        ]
+      },
+      {
+        "name": "Consequent Attribute Str Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Attribute Str Value",
+        "alternateNames": [
+          "Attribute Str Value"
+        ]
+      },
+      {
+        "name": "Consequent Confidence",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Confidence",
+        "alternateNames": [
+          "Attribute Confidence"
+        ]
+      },
+      {
+        "name": "Consequent Support",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Association Rule Consequent.Consequent Support",
+        "alternateNames": [
+          "Attribute Support"
+        ]
+      }
+    ]
+  }
+}

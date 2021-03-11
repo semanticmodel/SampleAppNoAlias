@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "ALL_USERS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "USERNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "USER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATED",
+        "dataType": "DATETIME",
+        "nullable": true
+      }
+    ]
+  }
+}

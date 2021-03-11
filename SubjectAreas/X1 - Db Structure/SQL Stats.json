@@ -1,0 +1,181 @@
+{
+  "presentationTable": {
+    "name": "SQL Stats",
+    "alternateNames": [
+      "SQL- GV_$SQLSTATS"
+    ],
+    "presentationColumns": [ {
+        "name": "Application Wait Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Application Wait Time"
+      },
+      {
+        "name": "Avg Hard Parse Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Avg Hard Parse Time"
+      },
+      {
+        "name": "Buffer Gets",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Buffer Gets"
+      },
+      {
+        "name": "Cluster Wait Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Cluster Wait Time"
+      },
+      {
+        "name": "Concurrency Wait Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Concurrency Wait Time"
+      },
+      {
+        "name": "Cpu Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Cpu Time"
+      },
+      {
+        "name": "Direct Writes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Direct Writes"
+      },
+      {
+        "name": "Disk Reads",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Disk Reads"
+      },
+      {
+        "name": "Elapsed Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Elapsed Time"
+      },
+      {
+        "name": "End Of Fetch Count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.End Of Fetch Count"
+      },
+      {
+        "name": "Exact Matching Signature",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Exact Matching Signature"
+      },
+      {
+        "name": "Executions",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Executions"
+      },
+      {
+        "name": "Fetches",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Fetches"
+      },
+      {
+        "name": "Force Matching Signature",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Force Matching Signature"
+      },
+      {
+        "name": "Inst Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Inst Id"
+      },
+      {
+        "name": "Invalidations",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Invalidations"
+      },
+      {
+        "name": "Io Cell Offload Eligible Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Io Cell Offload Eligible Bytes"
+      },
+      {
+        "name": "Io Cell Offload Returned Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Io Cell Offload Returned Bytes"
+      },
+      {
+        "name": "Io Cell Uncompressed Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Io Cell Uncompressed Bytes"
+      },
+      {
+        "name": "Io Interconnect Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Io Interconnect Bytes"
+      },
+      {
+        "name": "Java Exec Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Java Exec Time"
+      },
+      {
+        "name": "Last Active Child Address",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Last Active Child Address"
+      },
+      {
+        "name": "Last Active Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Last Active Time"
+      },
+      {
+        "name": "Loads",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Loads"
+      },
+      {
+        "name": "Parse Calls",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Parse Calls"
+      },
+      {
+        "name": "Physical Read Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Physical Read Bytes"
+      },
+      {
+        "name": "Physical Read Requests",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Physical Read Requests"
+      },
+      {
+        "name": "Physical Write Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Physical Write Bytes"
+      },
+      {
+        "name": "Physical Write Requests",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Physical Write Requests"
+      },
+      {
+        "name": "Plan Hash Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Plan Hash Value"
+      },
+      {
+        "name": "Plsql Exec Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Plsql Exec Time"
+      },
+      {
+        "name": "Px Servers Executions",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Px Servers Executions"
+      },
+      {
+        "name": "Rows Processed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Rows Processed"
+      },
+      {
+        "name": "Serializable Aborts",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Serializable Aborts"
+      },
+      {
+        "name": "Sharable Mem",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Sharable Mem"
+      },
+      {
+        "name": "Sorts",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Sorts"
+      },
+      {
+        "name": "Sql Fulltext",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Sql Fulltext"
+      },
+      {
+        "name": "Sql Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Sql Id"
+      },
+      {
+        "name": "Sql Text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Sql Text"
+      },
+      {
+        "name": "Total Sharable Mem",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Total Sharable Mem"
+      },
+      {
+        "name": "Typecheck Mem",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Typecheck Mem"
+      },
+      {
+        "name": "User Io Wait Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.User Io Wait Time"
+      },
+      {
+        "name": "Version Count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLSTATS.Version Count"
+      }
+    ]
+  }
+}

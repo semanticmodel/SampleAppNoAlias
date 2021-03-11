@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "S_NQ_ACCT_Dim",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT"
+  }
+}

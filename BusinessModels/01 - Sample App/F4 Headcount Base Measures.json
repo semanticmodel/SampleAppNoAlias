@@ -1,0 +1,78 @@
+{
+  "logicalTable": {
+    "name": "F4 Headcount Base Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "9- Full Time Empl  (Beg Period)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Facts Headcount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Fte"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            },
+            {
+              "dimension": "logicalTable:01 - Sample App.H0 Time",
+              "rule": "FIRST"
+            }
+          ]
+        }
+      },
+      {
+        "name": "9- Full Time Empl  (End Period)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Facts Headcount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount.Fte"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            },
+            {
+              "dimension": "logicalTable:01 - Sample App.H0 Time",
+              "rule": "LAST"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Facts Headcount",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F50 Facts Headcount"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H0 Time.Day Detail",
+          "logicalLevel:01 - Sample App.H3 Offices.Offices Detail"
+        ]
+      }
+    ]
+  }
+}

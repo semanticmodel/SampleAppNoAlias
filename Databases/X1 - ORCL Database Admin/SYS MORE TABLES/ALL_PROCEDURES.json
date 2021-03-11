@@ -1,0 +1,85 @@
+{
+  "physicalTable": {
+    "name": "ALL_PROCEDURES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PROCEDURE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OVERLOAD",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "PARALLEL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AGGREGATE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INTERFACE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "AUTHID",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "IMPLTYPEOWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PIPELINED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "IMPLTYPENAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DETERMINISTIC",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

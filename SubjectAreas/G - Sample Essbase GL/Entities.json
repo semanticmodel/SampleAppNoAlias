@@ -1,0 +1,82 @@
+{
+  "presentationTable": {
+    "name": "Entities",
+    "presentationColumns": [ {
+        "name": "Geo",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Geo"
+      },
+      {
+        "name": "Region",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Region"
+      },
+      {
+        "name": "Country",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Country"
+      },
+      {
+        "name": "Entity",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Entity"
+      },
+      {
+        "name": "Domain",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Domain"
+      },
+      {
+        "name": "Department",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Department"
+      },
+      {
+        "name": "Unit",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Unit",
+        "alternateNames": [
+          "Unita"
+        ]
+      },
+      {
+        "name": "Entities - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Entities.Entities - Default"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Entities",
+        "sourceLogicalTable": "logicalTable:03 - Essbase GL.Entities",
+        "levels": [ {
+            "name": "Geo",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Geo",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Geo"
+          },
+          {
+            "name": "Region",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Region",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Region"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Country",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Country"
+          },
+          {
+            "name": "Entity",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Entity",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Entity"
+          },
+          {
+            "name": "Domain",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Domain",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Domain"
+          },
+          {
+            "name": "Department",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Department",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Department"
+          },
+          {
+            "name": "Unit",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Entities.Unit",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Entities.Unit"
+          }
+        ]
+      }
+    ]
+  }
+}

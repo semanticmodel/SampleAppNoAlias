@@ -1,0 +1,129 @@
+{
+  "logicalTable": {
+    "name": "22 Dept Delay Grp",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Dept Delay Group",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "Dept Delay Code",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "21 DEPT DELAY GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPT DELAY GROUPS.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_22_Dept00039CE5",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dept Delay Code",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "21 DEPT DELAY GROUPS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPT DELAY GROUPS.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_22_Dept00039CE5",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5.Dept_Delay00039BA3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dept Delay Class",
+        "description": "Departure Delay intervals, every (15 minutes from <-15 to >180)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 < 0 THEN '1 - In Advance' WHEN %1 = 0 THEN '2 - Within 15 Min Delay' WHEN %1 < 4 THEN '3 - From 15 to 60 Min Delay' ELSE '4 - Over 1hr Delay' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.22 Dept Delay Grp.Dept Delay Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "21 DEPT DELAY GROUPS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.21 DEPT DELAY GROUPS"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.22 Dept Delay.22 Dept Delay Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_22_Dept00039CE5",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_22_Dept00039CE5"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.22 Dept Delay.22 Dept Delay Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "22 Dept Delay Total",
+      "logicalLevels": [
+        {
+          "name": "22 Dept Delay Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "22 Dept Delay Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 16,
+          "primaryColumns": [
+            "logicalColumn:Dept Delay Group"
+          ],
+          "displayColumn": "logicalColumn:Dept Delay Group",
+          "preferredDrillPath": [
+            "X0 - Airlines.50 Flight.50 Flight #"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "22 Dept Delay",
+          "levels": [ "22 Dept Delay Total", "22 Dept Delay Detail" ]
+        }
+      ]
+    }
+  }
+}

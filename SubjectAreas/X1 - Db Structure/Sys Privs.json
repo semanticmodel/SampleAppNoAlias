@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Sys Privs",
+    "alternateNames": [
+      "Dba Sys Privs",
+      "Dba_sys_privs",
+      "OBJ- DBA_SYS_PRIVS"
+    ],
+    "presentationColumns": [ {
+        "name": "Admin Option",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SYS_PRIVS.Admin Option"
+      },
+      {
+        "name": "Grantee",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SYS_PRIVS.Grantee"
+      },
+      {
+        "name": "Privilege",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SYS_PRIVS.Privilege"
+      },
+      {
+        "name": "# Of Privileges",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- DBA_SYS_PRIVS.# Of Privileges",
+        "alternateNames": [
+          "# Of Privilees"
+        ]
+      }
+    ]
+  }
+}

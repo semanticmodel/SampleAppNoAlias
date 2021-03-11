@@ -1,0 +1,158 @@
+{
+  "presentationTable": {
+    "name": "All Tab Cols",
+    "alternateNames": [
+      "All_tab_cols",
+      "OBJ- ALL_TAB_COLS"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Col Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Avg Col Len"
+      },
+      {
+        "name": "Char Col Decl Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Char Col Decl Length"
+      },
+      {
+        "name": "Char Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Char Length"
+      },
+      {
+        "name": "Char Used",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Char Used"
+      },
+      {
+        "name": "Character Set Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Character Set Name"
+      },
+      {
+        "name": "Column Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Column Id"
+      },
+      {
+        "name": "Column Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Column Name"
+      },
+      {
+        "name": "Data Default",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Default"
+      },
+      {
+        "name": "Data Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Length"
+      },
+      {
+        "name": "Data Precision",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Precision"
+      },
+      {
+        "name": "Data Scale",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Scale"
+      },
+      {
+        "name": "Data Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Type"
+      },
+      {
+        "name": "Data Type Mod",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Type Mod"
+      },
+      {
+        "name": "Data Type Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Type Owner"
+      },
+      {
+        "name": "Data Upgraded",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Data Upgraded"
+      },
+      {
+        "name": "Default Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Default Length"
+      },
+      {
+        "name": "Density",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Density"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Global Stats"
+      },
+      {
+        "name": "Hidden Column",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Hidden Column"
+      },
+      {
+        "name": "High Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.High Value"
+      },
+      {
+        "name": "Histogram",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Histogram"
+      },
+      {
+        "name": "Internal Column Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Internal Column Id"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Last Analyzed"
+      },
+      {
+        "name": "Low Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Low Value"
+      },
+      {
+        "name": "Nullable",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Nullable"
+      },
+      {
+        "name": "Num Buckets",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Num Buckets"
+      },
+      {
+        "name": "Num Distinct",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Num Distinct"
+      },
+      {
+        "name": "Num Nulls",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Num Nulls"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Owner"
+      },
+      {
+        "name": "Qualified Col Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Qualified Col Name"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Sample Size"
+      },
+      {
+        "name": "Segment Column Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Segment Column Id"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Table Name"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.User Stats"
+      },
+      {
+        "name": "V80 Fmt Image",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.V80 Fmt Image"
+      },
+      {
+        "name": "Virtual Column",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.Virtual Column"
+      },
+      {
+        "name": "# Of Columns",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_COLS.# Of Columns"
+      }
+    ]
+  }
+}

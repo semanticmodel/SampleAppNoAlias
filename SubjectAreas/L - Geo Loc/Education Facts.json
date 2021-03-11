@@ -1,0 +1,137 @@
+{
+  "presentationTable": {
+    "name": "Education Facts",
+    "alternateNames": [
+      "Block Group Facts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Edu 10 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 10 F"
+      },
+      {
+        "name": "Edu 10 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 10 M"
+      },
+      {
+        "name": "Edu 11 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 11 F"
+      },
+      {
+        "name": "Edu 11 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 11 M"
+      },
+      {
+        "name": "Edu 12 Nodiploma F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 12 Nodiploma F"
+      },
+      {
+        "name": "Edu 12 Nodiploma M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 12 Nodiploma M"
+      },
+      {
+        "name": "Edu 1ormore Coll Nodeg F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 1ormore Coll Nodeg F"
+      },
+      {
+        "name": "Edu 1ormore Coll Nodeg M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 1ormore Coll Nodeg M"
+      },
+      {
+        "name": "Edu 5 To 6 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 5 To 6 F"
+      },
+      {
+        "name": "Edu 5 To 6 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 5 To 6 M"
+      },
+      {
+        "name": "Edu 7 To 8 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 7 To 8 F"
+      },
+      {
+        "name": "Edu 7 To 8 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 7 To 8 M"
+      },
+      {
+        "name": "Edu 9 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 9 F"
+      },
+      {
+        "name": "Edu 9 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu 9 M"
+      },
+      {
+        "name": "Edu Asso Degree F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Asso Degree F"
+      },
+      {
+        "name": "Edu Asso Degree M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Asso Degree M"
+      },
+      {
+        "name": "Edu Bach Degree F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Bach Degree F"
+      },
+      {
+        "name": "Edu Bach Degree M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Bach Degree M"
+      },
+      {
+        "name": "Edu Doct Degree F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Doct Degree F"
+      },
+      {
+        "name": "Edu Doct Degree M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Doct Degree M"
+      },
+      {
+        "name": "Edu Hs Grad F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Hs Grad F"
+      },
+      {
+        "name": "Edu Hs Grad M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Hs Grad M"
+      },
+      {
+        "name": "Edu K To 4 F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu K To 4 F"
+      },
+      {
+        "name": "Edu K To 4 M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu K To 4 M"
+      },
+      {
+        "name": "Edu Lt 1 College F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Lt 1 College F"
+      },
+      {
+        "name": "Edu Lt 1 College M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Lt 1 College M"
+      },
+      {
+        "name": "Edu Mast Degree F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Mast Degree F"
+      },
+      {
+        "name": "Edu Mast Degree M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Mast Degree M"
+      },
+      {
+        "name": "Edu None F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu None F"
+      },
+      {
+        "name": "Edu None M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu None M"
+      },
+      {
+        "name": "Edu Prof Degree F",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Prof Degree F"
+      },
+      {
+        "name": "Edu Prof Degree M",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Edu Prof Degree M"
+      }
+    ]
+  }
+}

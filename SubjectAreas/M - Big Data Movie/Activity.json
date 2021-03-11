@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Activity",
+    "presentationColumns": [ {
+        "name": "Activity",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Activity.Activity"
+      },
+      {
+        "name": "Activity Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Activity.Activity Name"
+      }
+    ]
+  }
+}

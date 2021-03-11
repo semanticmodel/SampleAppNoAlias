@@ -1,0 +1,113 @@
+{
+  "logicalTable": {
+    "name": "D9 Measure Hierarchy",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Measures",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Measures.Measures"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ParentKey",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Measures.ParentKey"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Measure Name",
+        "dataType": "VARCHAR",
+        "sortBy": "Measures Sort Order",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Measures.Measures - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Measures Sort Order",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Measure Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Measures.Measures Sort Order"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Measure Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Measures"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H9 Measures Hierarchy.Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H9 Measures Hierarchy",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Measure Name"
+          ],
+          "displayColumn": "logicalColumn:Measure Name"
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "Measure Hierarchy"
+        }
+      ]
+    }
+  }
+}

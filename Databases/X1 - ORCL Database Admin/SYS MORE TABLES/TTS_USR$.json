@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "TTS_USR$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FOUND",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

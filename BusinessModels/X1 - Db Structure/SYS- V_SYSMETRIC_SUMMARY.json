@@ -1,0 +1,220 @@
+{
+  "logicalTable": {
+    "name": "SYS- V_SYSMETRIC_SUMMARY",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Average",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.AVERAGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Begin Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.BEGIN_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.END_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Group Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.GROUP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Intsize Csec",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.INTSIZE_CSEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Maxval",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.MAXVAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.METRIC_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.METRIC_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Metric Unit",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.METRIC_UNIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Minval",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.MINVAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Interval",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.NUM_INTERVAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Standard Deviation",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_$SYSMETRIC_SUMMARY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY.STANDARD_DEVIATION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_$SYSMETRIC_SUMMARY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.V$SYSMETRIC_SUMMARY"
+          ]
+        }
+      }
+    ]
+  }
+}

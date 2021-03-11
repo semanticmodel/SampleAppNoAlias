@@ -1,0 +1,48 @@
+{
+  "physicalTable": {
+    "name": "V_$SYSMETRIC_HISTORY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "END_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "INTSIZE_CSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "METRIC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "METRIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "METRIC_UNIT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

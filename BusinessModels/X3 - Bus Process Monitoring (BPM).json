@@ -1,0 +1,111 @@
+{
+  "businessModel": {
+    "name": "X3 - Bus Process Monitoring (BPM)",
+    "joins": [      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:861281285337857",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Proc Instances",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:854661285327696",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).1 Dim Composite",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Proc Instances",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:861251285337851",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:4 New BPM:Relationship_2004:840781285318840",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).6 Dim Tasks",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:4 New BPM:Relationship_2004:840811285318854",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).3 Dim Activities",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:4 New BPM:Relationship_2004:837221285316846",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).4 Dim Roles",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:855451285329409",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).1 Dim Composite",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:4 New BPM:Relationship_2004:840841285318859",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).1 Dim Composite",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:854631285327688",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).2 Dim Processes",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Proc Instances",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:861311285337863",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:856291285330812",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).4 Dim Roles",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:855361285329375",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).6 Dim Tasks",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:855421285329403",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).2 Dim Processes",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:4 New BPM:Relationship_2004:837251285316846",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Tasks",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).2 Dim Processes",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "4 BPM:4 New BPM#1:Relationship_2004:855391285329391",
+        "leftTable": "logicalTable:X3 - Bus Process Monitoring (BPM).3 Dim Activities",
+        "rightTable": "logicalTable:X3 - Bus Process Monitoring (BPM).Facts Active Tasks",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "presentationTable": {
+    "name": "Scenarios",
+    "presentationColumns": [ {
+        "name": "Scenarios",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Scenarios.Scenarios"
+      }
+    ]
+  }
+}

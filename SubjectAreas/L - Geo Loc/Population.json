@@ -1,0 +1,113 @@
+{
+  "presentationTable": {
+    "name": "Population",
+    "alternateNames": [
+      "Block Group Facts#2"
+    ],
+    "presentationColumns": [ {
+        "name": "Pop Female 10to14",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 10to14"
+      },
+      {
+        "name": "Pop Female 15to17",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 15to17"
+      },
+      {
+        "name": "Pop Female 18to24",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 18to24"
+      },
+      {
+        "name": "Pop Female 25to29",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 25to29"
+      },
+      {
+        "name": "Pop Female 30to39",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 30to39"
+      },
+      {
+        "name": "Pop Female 40to49",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 40to49"
+      },
+      {
+        "name": "Pop Female 50to59",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 50to59"
+      },
+      {
+        "name": "Pop Female 60to69",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 60to69"
+      },
+      {
+        "name": "Pop Female 70to79",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female 70to79"
+      },
+      {
+        "name": "Pop Female Ge25",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female Ge25"
+      },
+      {
+        "name": "Pop Female Lt 10",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female Lt 10"
+      },
+      {
+        "name": "Pop Female Over80",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female Over80"
+      },
+      {
+        "name": "Pop Male",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male"
+      },
+      {
+        "name": "Pop Male 10to14",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 10to14"
+      },
+      {
+        "name": "Pop Male 15to17",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 15to17"
+      },
+      {
+        "name": "Pop Male 18to24",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 18to24"
+      },
+      {
+        "name": "Pop Male 25to29",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 25to29"
+      },
+      {
+        "name": "Pop Male 30to39",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 30to39"
+      },
+      {
+        "name": "Pop Male 40to49",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 40to49"
+      },
+      {
+        "name": "Pop Male 50to59",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 50to59"
+      },
+      {
+        "name": "Pop Male 60to69",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 60to69"
+      },
+      {
+        "name": "Pop Male 70to79",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male 70to79"
+      },
+      {
+        "name": "Pop Male Ge25",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male Ge25"
+      },
+      {
+        "name": "Pop Male Lt 10",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male Lt 10"
+      },
+      {
+        "name": "Pop Male Over80",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Male Over80"
+      },
+      {
+        "name": "Pop Female",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Pop Female"
+      }
+    ]
+  }
+}

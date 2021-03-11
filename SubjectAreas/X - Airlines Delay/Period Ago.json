@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "Period Ago",
+    "description": "->",
+    "presentationColumns": [ {
+        "name": "Period Ago # of Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Period Ago # of Flights",
+        "alternateNames": [
+          "P_Ago # of Flights"
+        ]
+      },
+      {
+        "name": "PerAgo % increase of Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.PerAgo % increase of Flights"
+      },
+      {
+        "name": "PerAgo # of Late Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.PerAgo # of Late Flights"
+      },
+      {
+        "name": "PerAgo % increase of Late Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.PerAgo % increase of Late Flights",
+        "alternateNames": [
+          "PerAgo % increase of Laet Flights"
+        ]
+      }
+    ]
+  }
+}

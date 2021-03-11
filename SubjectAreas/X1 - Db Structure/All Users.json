@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "All Users",
+    "alternateNames": [
+      "All_users",
+      "OBJ- ALL_USERS"
+    ],
+    "presentationColumns": [ {
+        "name": "Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_USERS.Created"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_USERS.Owner"
+      },
+      {
+        "name": "User Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_USERS.User Id"
+      },
+      {
+        "name": "# Of Users",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_USERS.# Of Users"
+      }
+    ]
+  }
+}

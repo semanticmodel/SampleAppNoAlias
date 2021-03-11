@@ -1,0 +1,85 @@
+{
+  "database": {
+    "name": "08 - Sample App Xml Target Data",
+    "databaseType": "XML",
+    "description": "This datasource represents Forecast data at month and market level only.\r\n",
+    "featureOverrides": [ {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "SampleApp XML Connection",
+        "connectionTimeoutUnit": "WHEN_QUERY_COMPLETES",
+        "maxConnDiff": 10,
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "NQSXML",
+        "xmlRefreshInterval": 2147483647,
+        "outputType": "xml",
+        "xmlHeaderPath": "C:\\oracle\\Middleware\\Oracle_Home\\biclient\\Admintool\\bi\\bitools\\bin\\..\\..\\..\\domains\\bi\\config\\fmwconfig\\biconfig\\OBIS\\NQSQueryHeader.xml",
+        "trailerPath": "C:\\oracle\\Middleware\\Oracle_Home\\biclient\\Admintool\\bi\\bitools\\bin\\..\\..\\..\\domains\\bi\\config\\fmwconfig\\biconfig\\OBIS\\NQSQueryTrailer.xml",
+        "description": "Connection pool for Sample App Xml File source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 0,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "F31 Facts Targets (XML Source)_FKey#2",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices",
+        "rightTable": "physicalTable:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F31 Facts Targets (XML Source)_FKey#3",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Prod_key"
+          }
+        ]
+      },
+      {
+        "name": "F31 Facts Targets (XML Source)_FKey#1",
+        "leftTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:08 - Sample App Xml Target Data.F31 Facts Targets (XML Source).Prod_key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev. Aggregate (XML Source)_FKey",
+        "leftTable": "physicalTable:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source)",
+        "rightTable": "physicalTable:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:08 - Sample App Xml Target Data.D02 Time Month Grain (XML Source).Mth_Key",
+            "rightColumn": "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Mth_key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev. Aggregate (XML Source)_FKey#1",
+        "leftTable": "physicalTable:08 - Sample App Xml Target Data.D10 Product (XML Source)",
+        "rightTable": "physicalTable:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Prod_Key",
+            "rightColumn": "physicalColumn:08 - Sample App Xml Target Data.F10 Billed Rev\\. Aggregate (XML Source).Prod_key"
+          }
+        ]
+      }
+    ]
+  }
+}

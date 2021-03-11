@@ -1,0 +1,277 @@
+{
+  "database": {
+    "name": "23 - Big Data Movie (Spark)",
+    "allowDirectDatabaseRequests": true,
+    "allowPopulateQueries": true,
+    "databaseType": "Apache Spark SQL",
+    "featureOverrides": [ {
+        "name": "UNION_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "FIRST_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LAST_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_SHORT_NAME_OF_MONTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_SHORT_NAME_OF_DAY_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TIMESTAMP_ADD_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TIMESTAMP_DIFF_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ASCII_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "EXP_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SIGN_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LOG_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LOG10_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PI_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "DEGREES_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RADIANS_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SIN_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "COS_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TAN_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ASIN_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ACOS_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ATAN_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ATAN2_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SINH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "COSH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TANH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPLACE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SPACE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_LONG_NAME_OF_MONTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CALENDAR_EXTRACT_LONG_NAME_OF_DAY_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RUNNING_COUNT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CREATE_AS_SELECT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "WITH_CLAUSE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "NESTED_ORDERBY_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "COALESCE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Spark ODBC Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "ODBC350",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 131072,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "movieapp_log_json_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log.activity"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log.movieid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log.genreid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DATEID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log.dateid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_json_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log.custid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.genreid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.activity"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.custid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key#4",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.DATEID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.dateid"
+          }
+        ]
+      },
+      {
+        "name": "movieapp_log_v_HIVE_SRC_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:23 - Big Data Movie (Spark).moviework.movieapp_log_v_SPK_SRC.movieid"
+          }
+        ]
+      }
+    ]
+  }
+}

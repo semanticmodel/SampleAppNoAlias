@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "Bill To Cust",
+    "alternateNames": [
+      "Bbil Bill To Cust"
+    ],
+    "presentationColumns": [ {
+        "name": "Billtocust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Billtocust Id"
+      },
+      {
+        "name": "Billtocustname",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Billtocustname"
+      },
+      {
+        "name": "Billtocustnumber",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Billtocustnumber"
+      },
+      {
+        "name": "Billtocustsegment",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Billtocustsegment"
+      },
+      {
+        "name": "Saleschannel Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Saleschannel Id"
+      },
+      {
+        "name": "Salesrep Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Bill To Cust.Salesrep Id"
+      }
+    ]
+  }
+}

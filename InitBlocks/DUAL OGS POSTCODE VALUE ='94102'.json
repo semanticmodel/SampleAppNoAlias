@@ -1,0 +1,24 @@
+{
+  "initBlock": {
+    "name": "DUAL OGS POSTCODE VALUE ='94102'",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "description": "This is a generic Init Block of type Character used by several variables for which init value is not important",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "Select '94102' From Dual"
+      }
+    ],
+    "variables": [ {
+        "name": "OGS_POSTCODE",
+        "description": "Used for Geospatial interaction examples",
+        "value": "'94102'"
+      }
+    ]
+  }
+}

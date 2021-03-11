@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Year",
+    "presentationColumns": [ {
+        "name": "History",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Year.History"
+      },
+      {
+        "name": "Quarter",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Year.Quarter"
+      },
+      {
+        "name": "Months",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Year.Months"
+      },
+      {
+        "name": "Year - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Year.Year - Default"
+      },
+      {
+        "name": "Year - Long Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Year.Year - Long Names"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Year",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Integration.Year",
+        "levels": [ {
+            "name": "History",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Year.History",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Year.History"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Year.Quarter",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Year.Quarter"
+          },
+          {
+            "name": "Months",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Year.Months",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Year.Months"
+          }
+        ]
+      }
+    ]
+  }
+}

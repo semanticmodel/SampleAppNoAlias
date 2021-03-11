@@ -1,0 +1,80 @@
+{
+  "presentationTable": {
+    "name": "Delay Facts",
+    "alternateNames": [
+      "F2",
+      "FctsD"
+    ],
+    "presentationColumns": [ {
+        "name": "Delay Perf % (0=Ontime,  >0=Late)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Delay Perf % (0=Ontime,  >0=Late)",
+        "description": "Index of Arrival delay expressed as Percentage of Air time. If Air time = 100 and Arr delay = 5, Perf = 5%",
+        "alternateNames": [
+          "Delay Perf %",
+          "Delay Perf Index",
+          "Delay Perf Index (1=Ontime,  >1=Late)"
+        ]
+      },
+      {
+        "name": "# of Late Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Late Flights",
+        "alternateNames": [
+          "Late Flights"
+        ]
+      },
+      {
+        "name": "% of Sch Fl Within 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Sch Fl Within 30 Min Late",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "% of Sch Fl < 30 Min Late",
+          "% of Sch Fl Arr Less than 30 Min Late",
+          "% of Sched Fl Arr Less than 30 Min Late",
+          "% of Sched Fl Within 30 Min Arr Delay"
+        ]
+      },
+      {
+        "name": "% of Sch Fl Over 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Sch Fl Over 30 Min Late",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "% of Sch Fl Arr Over than 30 Min Late",
+          "% of Sched Fl Arr Over than 30 Min Late",
+          "% of Sched Fl Over 30 Min Arr Delay"
+        ]
+      },
+      {
+        "name": "Avg Delay per Pax-K-Miles (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Avg Delay per Pax-K-Miles (Min)",
+        "alternateNames": [
+          "Avg Delay P. PAX-Miles (Min)",
+          "Avg Delay per 1K Pax.Miles (Min)",
+          "Avg Delay per Pax.K.Miles (Min)"
+        ]
+      },
+      {
+        "name": "-- Delay Catchup during Flight ----------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Carrier Delay -------------------------------"
+        ]
+      },
+      {
+        "name": "% Delay Increase After Dept",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% Delay Increase After Dept",
+        "description": "% increase of delay after departure. If plane left 10 min late and arrived 15 min late, % increase = 50%"
+      },
+      {
+        "name": "Diff Arr - Dept Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Diff Arr - Dept Delay",
+        "description": "Difference in minutes between Arrival and Departure delay. If plane left 10 min late and arrived 15 min late, difference = 5."
+      },
+      {
+        "name": "Ratio Arr to Dept Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Ratio Arr to Dept Delay",
+        "description": "Ratio of Arrival dealy in minutes divided by Departure Delay. If plane left 10 min late and arrived 15 min late, ratio = 1.5."
+      }
+    ]
+  }
+}

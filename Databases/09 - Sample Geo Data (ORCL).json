@@ -1,0 +1,139 @@
+{
+  "database": {
+    "name": "09 - Sample Geo Data (ORCL)",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Obiee_navteq Connection",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "GC_POI_NA_Foreign Key",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF.CAT_ID",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.FEATURE_CODE"
+          }
+        ]
+      },
+      {
+        "name": "GC_POI_NA_FKey#2",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group.poi_id",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.POI_ID"
+          }
+        ]
+      },
+      {
+        "name": "GC_POI_NA_FKey#1",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business.POI_Id",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.POI_ID"
+          }
+        ]
+      },
+      {
+        "name": "V_POI_Block_Group_FKey",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS.ID",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group.block_group_id"
+          }
+        ]
+      },
+      {
+        "name": "V_Business_POI_Near_Address_FKey",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF.CAT_ID",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business.cat_id"
+          }
+        ]
+      },
+      {
+        "name": "INDC_IND_SAMPLE_DATA_Foreign Key#2",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_STATES",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_STATES.ID",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA.STATE_CODE"
+          }
+        ]
+      },
+      {
+        "name": "INDC_IND_SAMPLE_DATA_Foreign Key#3",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SUBDISTRICTS",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SUBDISTRICTS.WARDCODE_G",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA.SUB_DISTRICT_CODE"
+          }
+        ]
+      },
+      {
+        "name": "INDC_IND_SAMPLE_DATA_Foreign Key#1",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_NEIGHBOURHOODS",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_NEIGHBOURHOODS.WARDCODE_G",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA.NEIGHBOURHOOD_CODE"
+          }
+        ]
+      },
+      {
+        "name": "INDC_IND_SAMPLE_DATA_Foreign Key",
+        "leftTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_DISTRICTS",
+        "rightTable": "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_DISTRICTS.ID",
+            "rightColumn": "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.INDC_IND_SAMPLE_DATA.DISTRICT_CODE"
+          }
+        ]
+      }
+    ]
+  }
+}

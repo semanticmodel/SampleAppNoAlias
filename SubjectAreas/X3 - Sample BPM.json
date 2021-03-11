@@ -1,0 +1,64 @@
+{
+  "subjectArea": {
+    "name": "X3 - Sample BPM",
+    "sourceBusinessModel": "businessModel:X3 - Bus Process Monitoring (BPM)",
+    "implicitFactColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.# Of Proc Instances",
+    "description": "BPM (Business Process Management) Analytics",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X3 - Sample BPM.Processes",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.SOA Composite"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X3 - Sample BPM.Activities",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.Roles"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X3 - Sample BPM.Process Instances",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.Instance Start Time"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X3 - Sample BPM.Tasks",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.Task Start Time"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X3 - Sample BPM.Facts Process Instances",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.Process Duration"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X3 - Sample BPM.Facts Tasks",
+        "children": [
+          {
+            "name": "presentationTable:X3 - Sample BPM.Duration"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

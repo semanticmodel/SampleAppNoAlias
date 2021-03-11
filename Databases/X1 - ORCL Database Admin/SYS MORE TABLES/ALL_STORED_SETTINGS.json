@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ALL_STORED_SETTINGS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "PARAM_VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PARAM_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

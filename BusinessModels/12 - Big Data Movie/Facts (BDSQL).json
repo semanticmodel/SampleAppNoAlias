@@ -1,0 +1,183 @@
+{
+  "logicalTable": {
+    "name": "Facts (BDSQL)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Count of Activities",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.ACTIVITYID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Count of Customers",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.CUSTID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Count of Movies",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.MOVIEID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.PRICE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rating",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.RATING"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recommended Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.RECOMMENDED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recommended",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": " CASE  WHEN %1 = 'Y' THEN 1 ELSE 0 END ",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.RECOMMENDED"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "MOVIEAPP_ACTIVITY_BDSQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC"
+          ]
+        }
+      }
+    ]
+  }
+}

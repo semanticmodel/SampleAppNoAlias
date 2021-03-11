@@ -1,0 +1,89 @@
+{
+  "presentationTable": {
+    "name": "Model",
+    "alternateNames": [
+      "Dim - Model"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Owner"
+      },
+      {
+        "name": "Model Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Model Name"
+      },
+      {
+        "name": "Mining Function",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Mining Function"
+      },
+      {
+        "name": "Algorithm",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Algorithm"
+      },
+      {
+        "name": "Creation Date",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Creation Date"
+      },
+      {
+        "name": "Build Duration",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Build Duration"
+      },
+      {
+        "name": "Model Size",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Model Size"
+      },
+      {
+        "name": "Comments",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Comments"
+      },
+      {
+        "name": "Setting Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Setting Name"
+      },
+      {
+        "name": "Setting Type",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Setting Type"
+      },
+      {
+        "name": "Setting Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Setting Value"
+      },
+      {
+        "name": "Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Attribute Name"
+      },
+      {
+        "name": "Attribute Spec",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Attribute Spec"
+      },
+      {
+        "name": "Attribute Type",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Attribute Type"
+      },
+      {
+        "name": "Data Type",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Data Type"
+      },
+      {
+        "name": "Data Length",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Data Length"
+      },
+      {
+        "name": "Data Precision",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Data Precision"
+      },
+      {
+        "name": "Data Scale",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Data Scale"
+      },
+      {
+        "name": "Usage Type",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Usage Type"
+      },
+      {
+        "name": "Target",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Model.Target"
+      }
+    ]
+  }
+}

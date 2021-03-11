@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "D01 Time Day Grain",
+    "description": "Time Dimension Alias at day grain. Stores one record for each day.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_TIME_DAY_D",
+    "caching": {
+      "enable": true
+    }
+  }
+}

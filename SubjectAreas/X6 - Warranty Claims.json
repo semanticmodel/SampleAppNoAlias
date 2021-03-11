@@ -1,0 +1,53 @@
+{
+  "subjectArea": {
+    "name": "X6 - Warranty Claims",
+    "sourceBusinessModel": "businessModel:X6 - Warranty Claims",
+    "description": "Claims Warranty Demo Datasource (ORCL)",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Claims",
+        "children": [
+          {
+            "name": "presentationTable:X6 - Warranty Claims.Details"
+          },
+          {
+            "name": "presentationTable:X6 - Warranty Claims.Comments"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Classes",
+        "children": [
+          {
+            "name": "presentationTable:X6 - Warranty Claims.Complaint Classification"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Dealer"
+      },
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Supplier"
+      },
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Vehicle"
+      },
+      {
+        "name": "presentationTable:X6 - Warranty Claims.Other",
+        "children": [
+          {
+            "name": "presentationTable:X6 - Warranty Claims.Claims Stats",
+            "children": [
+              {
+                "name": "presentationTable:X6 - Warranty Claims.Claims Attr Sigmas"
+              },
+              {
+                "name": "presentationTable:X6 - Warranty Claims.Vehicles"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

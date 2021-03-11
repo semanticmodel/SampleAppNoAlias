@@ -1,0 +1,80 @@
+{
+  "logicalTable": {
+    "name": "UT L Query Users",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "User Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.USER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Impersonated User",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.IMPERSONATOR_USER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "S_NQ_ACCT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.UT L Query Users.UT Users Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "UT Users Total",
+      "logicalLevels": [
+        {
+          "name": "UT Users Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "UT Users Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:User Name",
+            "logicalColumn:Impersonated User"
+          ],
+          "displayColumn": "logicalColumn:User Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT L Query Users",
+          "levels": [ "UT Users Total", "UT Users Detail" ]
+        }
+      ]
+    }
+  }
+}

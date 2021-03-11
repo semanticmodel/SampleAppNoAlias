@@ -1,0 +1,20 @@
+{
+  "presentationTable": {
+    "name": "Sales Person",
+    "presentationColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D5 Employees (Value Hier).E0  Sales Rep Number"
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D5 Employees (Value Hier).E1  Sales Rep Name"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Sales Rep Hierarchy",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D5 Employees (Value Hier)",
+        "displayColumn": "presentationColumn:E - Sample Essbase.Sales Person.E1  Sales Rep Name"
+      }
+    ]
+  }
+}

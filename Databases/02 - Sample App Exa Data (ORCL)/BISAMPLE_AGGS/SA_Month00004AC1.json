@@ -1,0 +1,41 @@
+{
+  "physicalTable": {
+    "name": "SA_Month00004AC1",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "T02_Per_Na00003D05",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "T03_Per_Na00003FE7",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true
+      },
+      {
+        "name": "T04_Per_Na000041BD",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "T05_Per_Na000048D9",
+        "dataType": "VARCHAR",
+        "length": 4,
+        "nullable": true
+      },
+      {
+        "name": "Month_00004AC1SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

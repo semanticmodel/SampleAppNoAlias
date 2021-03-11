@@ -1,0 +1,97 @@
+{
+  "physicalTable": {
+    "name": "ALL_SUMMARIES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_REFRESH_SCN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "KNOWN_STALE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "REFRESH_METHOD",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "INCREFRESHTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTAINS_VIEWS",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SUMMARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "LAST_REFRESH_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CONTAINER_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "QUERY",
+        "dataType": "LONGVARCHAR",
+        "length": 40000
+      },
+      {
+        "name": "RESTRICTED_SYNTAX",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "QUERY_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INC_REFRESHABLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "FULLREFRESHTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTAINER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "UNUSABLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SUMMARY_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

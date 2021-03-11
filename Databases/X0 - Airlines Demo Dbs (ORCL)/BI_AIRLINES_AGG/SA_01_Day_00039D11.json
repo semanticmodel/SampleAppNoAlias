@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "SA_01_Day_00039D11",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Day_of_Mon00039C53",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Day_of__00039D11SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

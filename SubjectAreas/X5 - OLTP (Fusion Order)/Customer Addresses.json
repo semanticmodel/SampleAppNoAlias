@@ -1,0 +1,69 @@
+{
+  "presentationTable": {
+    "name": "Customer Addresses",
+    "presentationColumns": [ {
+        "name": "Address1 (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Address1 (Primary Add)"
+      },
+      {
+        "name": "Address2 (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Address2 (Primary Add)"
+      },
+      {
+        "name": "City (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.City (Primary Add)"
+      },
+      {
+        "name": "Country ID (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Country ID (Primary Add)"
+      },
+      {
+        "name": "Postal Code (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Postal Code (Primary Add)"
+      },
+      {
+        "name": "State Province (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.State Province (Primary Add)"
+      },
+      {
+        "name": "Country Name (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Country Name (Lookup Phys)"
+      },
+      {
+        "name": "Latitude (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Latitude (Primary Add)"
+      },
+      {
+        "name": "Longitude (Primary Add)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Longitude (Primary Add)"
+      },
+      {
+        "name": "Primary Address ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Primary Address ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Cust Primary Addresses",
+        "alternateNames": [
+          "H02 Cust Primary Addresses"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Total"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.City",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Customer Addresses.City (Primary Add)"
+          },
+          {
+            "name": "Cust Address",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses.Cust Address",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Customer Addresses.Primary Address ID"
+          }
+        ]
+      }
+    ]
+  }
+}

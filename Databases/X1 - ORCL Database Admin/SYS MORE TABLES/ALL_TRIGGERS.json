@@ -1,0 +1,120 @@
+{
+  "physicalTable": {
+    "name": "ALL_TRIGGERS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "AFTER_STATEMENT",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "CROSSEDITION",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "TRIGGER_BODY",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "INSTEAD_OF_ROW",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "REFERENCING_NAMES",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "APPLY_SERVER_ONLY",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FIRE_ONCE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ACTION_TYPE",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "TRIGGER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "AFTER_ROW",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "WHEN_CLAUSE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TRIGGER_TYPE",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "BEFORE_ROW",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "BEFORE_STATEMENT",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "BASE_OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "TRIGGERING_EVENT",
+        "dataType": "VARCHAR",
+        "length": 227
+      }
+    ]
+  }
+}

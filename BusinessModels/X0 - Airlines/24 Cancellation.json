@@ -1,0 +1,110 @@
+{
+  "logicalTable": {
+    "name": "24 Cancellation",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "CODE",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "24 CANCELLATION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.24 CANCELLATION.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_24_Canc00039CFE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.CODE00039C1C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cancel Reason",
+        "description": "Specifies The Reason For Cancellation",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "24 CANCELLATION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.24 CANCELLATION.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_24_Canc00039CFE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE.Cancel_Rea00039C1D"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "24 CANCELLATION",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.24 CANCELLATION"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.24 Cancellation.24 Cancel Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_24_Canc00039CFE",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_24_Canc00039CFE"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.24 Cancellation.24 Cancel Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "24 Cancel Total",
+      "logicalLevels": [
+        {
+          "name": "24 Cancel Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "24 Cancel Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5,
+          "primaryColumns": [
+            "logicalColumn:CODE"
+          ],
+          "displayColumn": "logicalColumn:CODE"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "24 Cancellation",
+          "levels": [ "24 Cancel Total", "24 Cancel Detail" ]
+        }
+      ]
+    }
+  }
+}

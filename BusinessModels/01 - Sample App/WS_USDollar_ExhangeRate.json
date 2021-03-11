@@ -1,0 +1,33 @@
+{
+  "logicalTable": {
+    "name": "WS_USDollar_ExhangeRate",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "DollarValue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WS_GET_DOLLARVALUE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.WS_GET_DOLLARVALUE.DollarValue"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WS_GET_DOLLARVALUE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.WS_GET_DOLLARVALUE"
+          ]
+        }
+      }
+    ]
+  }
+}

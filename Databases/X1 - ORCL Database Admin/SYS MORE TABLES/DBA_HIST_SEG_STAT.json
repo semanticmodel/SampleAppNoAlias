@@ -1,0 +1,256 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SEG_STAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPACE_ALLOCATED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_BUFFER_BUSY_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PHYSICAL_READS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZED_PHYSICAL_READS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROW_LOCK_WAITS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITES_DIRECT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CU_BLOCKS_RECEIVED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DB_BLOCK_CHANGES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CU_BLOCKS_RECEIVED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZED_PHYSICAL_READS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READS_DIRECT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROW_LOCK_WAITS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PHYSICAL_READS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPACE_USED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CU_BLOCKS_SERVED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CR_BLOCKS_SERVED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ITL_WAITS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHAIN_ROW_EXCESS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CR_BLOCKS_RECEIVED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_SCANS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_BUSY_WAITS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPACE_ALLOCATED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CU_BLOCKS_SERVED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DB_BLOCK_CHANGES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOGICAL_READS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITES_DIRECT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHAIN_ROW_EXCESS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPACE_USED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READS_DIRECT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_BUSY_WAITS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_BUFFER_BUSY_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "GC_CR_BLOCKS_SERVED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ITL_WAITS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_SCANS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GC_CR_BLOCKS_RECEIVED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOGICAL_READS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "33 AIRCRAFT_TYPE",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.AIRCRAFT_TYPE",
+    "caching": {
+      "enable": true
+    }
+  }
+}

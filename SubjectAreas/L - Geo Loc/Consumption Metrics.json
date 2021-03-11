@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Consumption Metrics",
+    "presentationColumns": [ {
+        "name": "Total Car Ownership",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Car Ownership"
+      },
+      {
+        "name": "Total Color Tv Ownership",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Color Tv Ownership"
+      },
+      {
+        "name": "Total Refrigerator Ownership",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Refrigerator Ownership"
+      },
+      {
+        "name": "Total Two Wheeler Ownership",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Two Wheeler Ownership"
+      },
+      {
+        "name": "Total Washing Machine Ownership",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Washing Machine Ownership"
+      }
+    ]
+  }
+}

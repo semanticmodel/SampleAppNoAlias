@@ -1,0 +1,72 @@
+{
+  "presentationTable": {
+    "name": "Fragmented Measures",
+    "localization": {
+      "localizationKey": "Fragmented Measures",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Federated_Measures)"
+    },
+    "description": "This folder contains Quota and Forecast Amt allocations derived based on Period Ago allocation rules.",
+    "alternateNames": [
+      "Federated Measures"
+    ],
+    "presentationColumns": [ {
+        "name": "1a- Revenue (DW History Data)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F1 Time Based Fragmentation.1a- Revenue (DW History Data)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "alternateNames": [
+          "1a- Revenue (DW Data)",
+          "1h- Revenue (DW Data)"
+        ]
+      },
+      {
+        "name": "1b- Revenue (OTLP Real Time Data)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F1 Time Based Fragmentation.1b- Revenue (OTLP Real Time Data)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "alternateNames": [
+          "1c- Revenue (OTLP Real Time Data)"
+        ]
+      },
+      {
+        "name": "1c- Revenue Fragmented Sources",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F1 Time Based Fragmentation.1c- Revenue Fragmented Sources",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "alternateNames": [
+          "1c- Revenue Fragmented",
+          "1c- Revenue Fragmented (a+b+",
+          "1f- Revenue Fragmented"
+        ]
+      },
+      {
+        "name": "--- Time Based Fragmentation",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.Dummy Object (Used for Pres Headers)",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "alternateNames": [
+          "Dummy Object (Used for Pres Headers)"
+        ]
+      },
+      {
+        "name": "--- Dimension Based Fragmentation",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.Dummy Object (Used for Pres Headers)",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "alternateNames": [
+          "--- Time Based Fragmentation#1"
+        ]
+      },
+      {
+        "name": "5a  Target Rev  (Source A)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F2 Fragmented Measures Targets.5a  Target Rev  (Source A)"
+      },
+      {
+        "name": "5b  Target Rev  (Source B)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F2 Fragmented Measures Targets.5b  Target Rev  (Source B)"
+      },
+      {
+        "name": "5c  Total Target Rev  (Fragmented)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F2 Fragmented Measures Targets.5c  Total Target Rev  (Fragmented)",
+        "alternateNames": [
+          "5c  Target Rev  (Sum A + B)"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "physicalTable": {
+    "name": "SAMP_EMPL_D_VH",
+    "description": "Employee Dimension table: Stores employee dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_EMPL_D_VH.xml",
+    "physicalColumns": [ {
+        "name": "Hire_Dt",
+        "dataType": "DATETIME",
+        "nullable": true,
+        "description": "Hire Date: Stores employee hire date information in date format"
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Type: Stores employee type information as text"
+      },
+      {
+        "name": "Postn_Key",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Position Key: Joins to Postn_key in employee position dimension table"
+      },
+      {
+        "name": "Mgr_Id",
+        "dataType": "INT",
+        "description": "Manager Id: Stores manager id as an integer"
+      },
+      {
+        "name": "Employee_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Employee Key: Surrogate key of the employee dimension table."
+      },
+      {
+        "name": "Empl_Name",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Employee Name: Stores employee name as a text"
+      }
+    ]
+  }
+}

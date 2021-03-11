@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D10 Product (Dynamic Table)",
+    "description": "Product Alias: Name of the underlying table is determined by the repository variable called \"DYNAMIC_PRODUCT_TABLE\". Stores product dimension attribute information",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_PRODUCTS_D"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "initBlock": {
+    "name": "SELECTION_STEP_OFFICE_INIT",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT '{\"type\":\"Hierarchy\",\"column\":{\"hier_id\":\"Offices Hierarchy\",\"dim_id\":\"H3 Offices\",\"table_name\":\"Offices\", \"subject_area\": \"A - Sample Sales\"}, \"members\":  [{\"level_id\":\"Company\", \"values\":[10001,10002]},{\"level_id\":\"Organization\",\"values\": [1005]}]}'   FROM DUAL; "
+      }
+    ],
+    "variables": [ {
+        "name": "SELECTION_STEP_OFFICE"
+      }
+    ]
+  }
+}

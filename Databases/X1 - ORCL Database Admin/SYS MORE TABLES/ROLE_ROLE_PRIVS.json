@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "ROLE_ROLE_PRIVS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GRANTED_ROLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ROLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ADMIN_OPTION",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

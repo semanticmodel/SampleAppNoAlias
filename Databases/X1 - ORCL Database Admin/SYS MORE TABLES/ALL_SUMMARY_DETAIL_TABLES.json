@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ALL_SUMMARY_DETAIL_TABLES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SUMMARY_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DETAIL_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DETAIL_TYPE",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "DETAIL_RELATION",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DETAIL_ALIAS",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "logicalTable": {
+    "name": "Supplier - Dimension",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Supplier Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_SUPPLIER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_COUNTRY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Location",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_SUPPLIER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_LOCATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_SUPPLIER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_SUPPLIER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier Ultimatename",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_SUPPLIER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_ULTIMATENAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DIM_SUPPLIER",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER"
+          ]
+        }
+      }
+    ]
+  }
+}

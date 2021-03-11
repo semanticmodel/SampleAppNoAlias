@@ -1,0 +1,18 @@
+{
+  "initBlock": {
+    "name": "Set Translation",
+    "type": "SESSION",
+    "queryReturnsVariableNamesAndValues": true,
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT  STRING_KEY,  STRING_VALUE \r\nFROM  SAMP_STRINGS \r\nWHERE LANGUAGE_KEY = 'VALUEOF(NQ_SESSION.USERLOCALE)'"
+      }
+    ]
+  }
+}

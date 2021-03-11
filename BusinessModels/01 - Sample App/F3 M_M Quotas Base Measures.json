@@ -1,0 +1,47 @@
+{
+  "logicalTable": {
+    "name": "F3 M:M Quotas Base Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "8- Quota Amount",
+        "dataType": "INT",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Fact Quotas",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas.VALUE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Fact Quotas",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.F30 Facts Quotas"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H0 Time.Month",
+          "logicalLevel:01 - Sample App.H4 Offices and Channels (M:M).Channel Detail",
+          "logicalLevel:01 - Sample App.H1 Products.Products Detail"
+        ]
+      }
+    ]
+  }
+}

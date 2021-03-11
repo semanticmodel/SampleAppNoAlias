@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D41 Channels (Revenue)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_CHANNELS_D"
+  }
+}

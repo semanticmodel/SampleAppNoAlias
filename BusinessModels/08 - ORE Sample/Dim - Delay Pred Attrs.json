@@ -1,0 +1,220 @@
+{
+  "logicalTable": {
+    "name": "Dim - Delay Pred Attrs",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "DepDelay",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.DepDelay"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Distance",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Distance"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ArrTime",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.ArrTime"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "DayofMonth",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.DayofMonth"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "DepTime",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.DepTime"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Dest"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "FlightNum",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.FlightNum"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Month"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Origin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Origin"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "UniqueCarrier",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.UniqueCarrier"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Route",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Route"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DELAY_PRED",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.DELAY_PRED"
+          ]
+        }
+      }
+    ]
+  }
+}

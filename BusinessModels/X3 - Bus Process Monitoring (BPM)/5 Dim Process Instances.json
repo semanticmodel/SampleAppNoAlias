@@ -1,0 +1,292 @@
+{
+  "logicalTable": {
+    "name": "5 Dim Process Instances",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Process Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Instance End Time",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_END_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Instance",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_INSTANCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_INSTANCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Instance Start Time",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_START_TIME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_START_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hour Instance Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( HOUR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Week Day Instance Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " DAYOFWEEK(%1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Month Instance Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( MONTH  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Date Instance Started",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as date)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_START_TIME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "cast(\r\n%1 as date)\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_START_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Qtr Instance Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( QUARTER_OF_YEAR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Yr Instance Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( YEAR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Instance Duration (Min)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_MINUTE , %1, %2)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance Start Time",
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).5 Dim Process Instances.Instance End Time"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Facts Taskperf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).5 Proc Instances.Instance Details"
+        ]
+      },
+      {
+        "name": "Facts ActiveTasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).5 Proc Instances.Instance Details"
+        ]
+      },
+      {
+        "name": "Facts ProcessPerf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Instances",
+      "logicalLevels": [
+        {
+          "name": "All Instances",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Processes",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Process Id"
+          ],
+          "displayColumn": "logicalColumn:Process Id"
+        },
+        {
+          "name": "Instance Details",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Process Id",
+            "logicalColumn:Process Instance"
+          ],
+          "displayColumn": "logicalColumn:Process Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "5 Proc Instances [branch at level 'Processes']",
+          "levels": [ "All Instances", "Processes", "Instance Details" ]
+        }
+      ]
+    }
+  }
+}

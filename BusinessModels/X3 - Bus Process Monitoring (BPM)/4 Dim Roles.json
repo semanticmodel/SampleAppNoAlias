@@ -1,0 +1,209 @@
+{
+  "logicalTable": {
+    "name": "4 Dim Roles",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "App Role Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.APPROLENAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Isprocessowner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.ISPROCESSOWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.PROCESSID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts TasksPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Role Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.ROLEID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts TasksPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_ROLE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Role Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "3 Dim Roles",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.ROLENAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_ROLE_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts TasksPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_ROLE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "3 Dim Roles",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).4 Roles Hier.Roles Detail"
+        ]
+      },
+      {
+        "name": "9 Facts ActiveTasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        }
+      },
+      {
+        "name": "9 Facts TasksPerf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Roles",
+      "logicalLevels": [
+        {
+          "name": "All Roles",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Roles Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Process Id",
+            "logicalColumn:Role Id"
+          ],
+          "displayColumn": "logicalColumn:Process Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "4 Roles Hier",
+          "levels": [ "All Roles", "Roles Detail" ]
+        }
+      ]
+    }
+  }
+}

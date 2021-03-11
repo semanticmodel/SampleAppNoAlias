@@ -1,0 +1,42 @@
+{
+  "physicalTable": {
+    "name": "DBA_OBJECT_SIZE",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "SOURCE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "PARSED_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CODE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ERROR_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

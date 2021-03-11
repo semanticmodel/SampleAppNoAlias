@@ -1,0 +1,10 @@
+{
+  "presentationTable": {
+    "name": "Trailing Measures",
+    "presentationColumns": [ {
+        "name": "149  Spanning 4 Periods Rev N-2 to +N+1",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).149  Spanning 4 Periods Rev N-2 to +N+1"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D43 Chnls Offs Bridge (Rev)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BRIDGE_TABLE"
+  }
+}

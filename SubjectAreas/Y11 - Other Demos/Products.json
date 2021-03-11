@@ -1,0 +1,41 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "alternateNames": [
+      "Bbil Products"
+    ],
+    "presentationColumns": [ {
+        "name": "Business Unit",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Business Unit"
+      },
+      {
+        "name": "Part",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Part"
+      },
+      {
+        "name": "Part Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Part Id"
+      },
+      {
+        "name": "Pkg",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Pkg"
+      },
+      {
+        "name": "Product Family",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Product Family"
+      },
+      {
+        "name": "Product Line",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Product Line"
+      },
+      {
+        "name": "Spd",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Spd"
+      },
+      {
+        "name": "Temp",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Products.Temp"
+      }
+    ]
+  }
+}

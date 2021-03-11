@@ -1,0 +1,19 @@
+{
+  "subjectArea": {
+    "name": "X -  Functional Sources ---------",
+    "sourceBusinessModel": "businessModel:X -  Functional Examples ---------",
+    "alternateNames": [
+      "20 Functional Sources Examples ---------",
+      "S - Functional Sources Examples ---------",
+      "X -  Functional & Demo Sources ---------",
+      "X - Functional & Demo Sources ---------",
+      "X - Functional Sources Examples ---------"
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

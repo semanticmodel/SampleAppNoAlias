@@ -1,0 +1,56 @@
+{
+  "logicalTable": {
+    "name": "M1 Measure Dimension (E2)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Generic measure",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Essb Cube E2",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import.Sample - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase Sample.M1 Measure Dimension (E2).Generic measure"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Essb Cube E2",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E2 (Default Import).BISAMPLE Default.Sample Default Import"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Sample.H5 Employees.Detail",
+          "logicalLevel:03 - Essbase Sample.M1 Measures Hier.Gen4,Measures",
+          "logicalLevel:03 - Essbase Sample.H0 Time.Month Members",
+          "logicalLevel:03 - Essbase Sample.H1 Products.Product Members",
+          "logicalLevel:03 - Essbase Sample.H0 Month of Year.Month Names",
+          "logicalLevel:03 - Essbase Sample.H6 Customers.Customer Members",
+          "logicalLevel:03 - Essbase Sample.H6 Marital Status.Marital Stat"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Product",
+    "presentationColumns": [ {
+        "name": "Gen1,Product",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Product.Gen1,Product"
+      },
+      {
+        "name": "Category",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Product.Category"
+      },
+      {
+        "name": "Subcategory",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Product.Subcategory"
+      },
+      {
+        "name": "Product - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Product.Product - Default"
+      },
+      {
+        "name": "Product - Long Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Product.Product - Long Names"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Product",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Integration.Product",
+        "levels": [ {
+            "name": "Gen1,Product",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Product.Gen1,Product",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Product.Gen1,Product"
+          },
+          {
+            "name": "Category",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Product.Category",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Product.Category"
+          },
+          {
+            "name": "Subcategory",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Product.Subcategory",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Product.Subcategory"
+          }
+        ]
+      }
+    ]
+  }
+}

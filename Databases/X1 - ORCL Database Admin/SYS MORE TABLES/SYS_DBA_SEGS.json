@@ -1,0 +1,160 @@
+{
+  "physicalTable": {
+    "name": "SYS_DBA_SEGS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLESPACE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RELATIVE_FNO",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RETENTION",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "SEGMENT_TYPE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FREELIST_GROUPS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLASH_CACHE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MIN_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MINRETENTION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITIAL_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_NAME",
+        "dataType": "VARCHAR",
+        "length": 81
+      },
+      {
+        "name": "SEGMENT_SUBTYPE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "SEGMENT_OBJD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FREELISTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HEADER_FILE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 18
+      },
+      {
+        "name": "BLOCKSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HEADER_BLOCK",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CELL_FLASH_CACHE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_POOL_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

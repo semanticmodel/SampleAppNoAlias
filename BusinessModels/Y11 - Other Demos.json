@@ -1,0 +1,118 @@
+{
+  "businessModel": {
+    "name": "Y11 - Other Demos",
+    "joins": [      {
+        "name": "Relationship_2004:2849641401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Fiscal Periods",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2853651401458737",
+        "leftTable": "logicalTable:Y11 - Other Demos.Weather Dim",
+        "rightTable": "logicalTable:Y11 - Other Demos.Weather Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2854731401461534",
+        "leftTable": "logicalTable:Y11 - Other Demos.Telco Dim",
+        "rightTable": "logicalTable:Y11 - Other Demos.Telco Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2850461401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Scenarios",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2849381401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Bill To Cust",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2850091401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Sales Channels",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2850331401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Sales Reps",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2850491401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Scenarios",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2850301401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Sales Reps",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2849671401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Fiscal Periods",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2850061401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Sales Channels",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2848951401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Bill To Cust",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2849411401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil End Cust",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2849931401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2848981401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Bookings",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil End Cust",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2849901401456267",
+        "leftTable": "logicalTable:Y11 - Other Demos.Bbil Fact Orders",
+        "rightTable": "logicalTable:Y11 - Other Demos.Bbil Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

@@ -1,0 +1,685 @@
+{
+  "logicalTable": {
+    "name": "50 Flight",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Arr Del > 15 Min !",
+        "description": "Arrival Delay Indicator, 15 Minutes or More (1=Yes)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRDEL15"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Arr Time !",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Carrier",
+        "description": "Code assigned by IATA and commonly used to identify a carrier. As the same code may have been assigned to different carriers over time, the code is not always unique. For analysis, use the Unique Carrier Code.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CARRIER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Del >15 Min !",
+        "description": "Departure Delay Indicator, 15 Minutes or More (1=Yes)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEPDEL15"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dep Time !",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEPTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Wac",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DESTWAC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Div Reached Dest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DIVREACHEDDEST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Diverted !",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DIVERTED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Extra",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.EXTRA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "First Dep Time !",
+        "description": "First Gate Departure Time at Origin Airport",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.FIRSTDEPTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flight Num !",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.FLIGHTNUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tail Num !",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.TAILNUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wheels Off !",
+        "description": "Wheels Off Time (local time: hhmm)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.WHEELSOFF"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wheels On !",
+        "description": "Wheels On Time (local time: hhmm)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.WHEELSON"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Airlineid",
+        "description": "An identification number assigned by US DOT to identify a unique airline (carrier). A unique airline (carrier) is defined as one holding and reporting under the same DOT certificate regardless of its Code, Name, or holding company/corporation.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.AIRLINEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Arrival Delay Groups",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRIVALDELAYGROUPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Cancellation Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CANCELLATIONCODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Departure Delay Groups",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEPARTUREDELAYGROUPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DEST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DESTCITYNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DESTSTATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State Fips",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DESTSTATEFIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Dest State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DESTSTATENAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Distance Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.DISTANCEGROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Flight Date",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.FLIGHTDATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGINCITYNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGINSTATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State Fips",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGINSTATEFIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dbg - Origin State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGINSTATENAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Origin Wac",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ORIGINWAC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Carrier Flight #",
+        "description": "First Gate Departure Time at Origin Airport",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1 || '-' || %2",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CARRIER",
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.FLIGHTNUM"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_50_Flig00039CEF",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_50_Flig00039CEF.Carrier_Fl00039B99"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Theoretic Dept Time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CRSDEPTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Theoretic Arr Time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.ARRTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pilot ID",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Flights Performance",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.PILOTID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Flights Performance",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.50 Flight.50 Flight Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_50_Flig00039CEF",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_50_Flig00039CEF"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.50 Flight.50 Flight #"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "50 Flight Total",
+      "logicalLevels": [
+        {
+          "name": "50 Flight Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "50 Flight #",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 50000,
+          "primaryColumns": [
+            "logicalColumn:Carrier Flight #"
+          ],
+          "displayColumn": "logicalColumn:Carrier Flight #"
+        },
+        {
+          "name": "50 Flight Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1000000,
+          "primaryColumns": [
+            "logicalColumn:Carrier Flight #",
+            "logicalColumn:Flight Num !",
+            "logicalColumn:Tail Num !",
+            "logicalColumn:Dbg - Airlineid",
+            "logicalColumn:Dbg - Flight Date",
+            "logicalColumn:Theoretic Dept Time",
+            "logicalColumn:Theoretic Arr Time"
+          ],
+          "displayColumn": "logicalColumn:Carrier Flight #"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "50 Flight [branch at level '50 Flight #']",
+          "levels": [ "50 Flight Total", "50 Flight #", "50 Flight Detail" ]
+        }
+      ]
+    }
+  }
+}

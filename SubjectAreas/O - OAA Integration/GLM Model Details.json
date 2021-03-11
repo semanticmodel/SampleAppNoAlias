@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "GLM Model Details",
+    "alternateNames": [
+      "Dim - GLM Model Details"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - GLM Model Details.Owner"
+      },
+      {
+        "name": "Model Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - GLM Model Details.Model Name"
+      },
+      {
+        "name": "Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - GLM Model Details.Attribute Name"
+      },
+      {
+        "name": "Attribute Subname",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - GLM Model Details.Attribute Subname"
+      },
+      {
+        "name": "Class",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - GLM Model Details.Class"
+      }
+    ]
+  }
+}

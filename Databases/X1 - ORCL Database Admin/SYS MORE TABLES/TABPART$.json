@@ -1,0 +1,148 @@
+{
+  "physicalTable": {
+    "name": "TABPART$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ROWCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHNCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLKCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BO#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BHIBOUNDVAL",
+        "dataType": "LONGVARBINARY",
+        "length": 4000
+      },
+      {
+        "name": "HIBOUNDVAL",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PCTUSED$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "AVGSPC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCTFREE$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "EMPCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLESIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ANALYZETIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "INITRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PART#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVGRLN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIBOUNDLEN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXTRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,878 @@
+{
+  "logicalTable": {
+    "name": "D01 Customers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Approximate Income",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.APPROXIMATE_INCOME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Children Under 18",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CHILDREN_UNDER_18"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Confirmed Email",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CONFIRMED_EMAIL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Contact By Affilliates Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CONTACT_BY_AFFILLIATES_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Contact Method Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CONTACT_METHOD_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Contactable Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CONTACTABLE_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Credit Limit",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.CREDIT_LIMIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Date Of Birth",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.DATE_OF_BIRTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Email",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.EMAIL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "First Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.FIRST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gender",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.GENDER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.LAST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Marital Status Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.MARITAL_STATUS_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Membership ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.MEMBERSHIP_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MEMBERSHIPS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mobile Phone Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.MOBILE_PHONE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Person ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Person Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PERSON_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Phone Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PHONE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Primary Address ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PRIMARY_ADDRESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Principal Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PRINCIPAL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Provisioned Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.PROVISIONED_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Registered Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.REGISTERED_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Supplier ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.SUPPLIER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Title",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PERSONS.TITLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Membership Description (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MEMBERSHIPS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP(SPARSE\r\n%1, \r\n'No values for this record',\r\n'FR',\r\n%2\r\n)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIP_TRANSLATIONS.DESCRIPTION",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Membership Name (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MEMBERSHIPS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP(SPARSE\r\n%1, \r\n'No values for this record',\r\n'FR',\r\n%2\r\n)",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIP_TRANSLATIONS.MEMBERSHIP_NAME",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Membership Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MEMBERSHIPS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE.MEMBERSHIP_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ELIGIBLE_DISCOUNTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.DISCOUNT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Valid From Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ELIGIBLE_DISCOUNTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.VALID_FROM_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Valid To Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ELIGIBLE_DISCOUNTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS.VALID_TO_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_INTERESTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer Interests ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_INTERESTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS.CUSTOMER_INTERESTS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Additional Information",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.ADDITIONAL_INFORMATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Id Detail",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.ID_DETAIL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Id Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.ID_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Verification Method Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.VERIFICATION_METHOD_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Verified By",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.VERIFIED_BY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Verified Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.VERIFIED_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Verified Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER_IDENTIFICATIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS.VERIFIED_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Person Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'PERSON_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Person Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Marital Status Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'MARITAL_STATUS_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Marital Status Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Gender Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'GENDER_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Gender"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Title Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'PERSON_TITLE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Title"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Membership Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'MEMBERSHIP_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Contact Method Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'CONTACT_METHOD_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Contact Method Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "ID Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'ID_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Id Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Verification Method Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'VERIFICATION_METHOD_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Verification Method Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PERSONS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PERSONS"
+          ]
+        }
+      },
+      {
+        "name": "ELIGIBLE_DISCOUNTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ELIGIBLE_DISCOUNTS"
+          ]
+        }
+      },
+      {
+        "name": "CUSTOMER_INTERESTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_INTERESTS"
+          ]
+        }
+      },
+      {
+        "name": "CUSTOMER_IDENTIFICATIONS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.CUSTOMER_IDENTIFICATIONS"
+          ]
+        }
+      },
+      {
+        "name": "MEMBERSHIPS_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.MEMBERSHIPS_BASE"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Membership Name",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:Membership Name (Lookup Phys)"
+          ],
+          "displayColumn": "logicalColumn:Membership Name (Lookup Phys)"
+        },
+        {
+          "name": "Person Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 50,
+          "primaryColumns": [
+            "logicalColumn:Person Type Code"
+          ],
+          "displayColumn": "logicalColumn:Person Type Code"
+        },
+        {
+          "name": "Customer ID",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 100,
+          "primaryColumns": [
+            "logicalColumn:Person ID"
+          ],
+          "displayColumn": "logicalColumn:Person ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H01 Customers [branch at level 'Person Type']",
+          "levels": [ "Total", "Membership Name", "Person Type", "Customer ID" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "CARRIER_GROUP_NEW",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CODE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 250
+      }
+    ]
+  }
+}

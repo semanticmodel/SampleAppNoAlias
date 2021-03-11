@@ -1,0 +1,210 @@
+{
+  "presentationTable": {
+    "name": "Orders",
+    "localization": {
+      "localizationKey": "Orders",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders)"
+    },
+    "description": "Orders dimension attribute objects",
+    "alternateNames": [
+      "R"
+    ],
+    "presentationColumns": [ {
+        "name": "R1  Order Status",
+        "localization": {
+          "localizationKey": "R1  Order Status",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_R1__Order_Status)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R1  Order Status",
+        "description": "Help : \r\nStores the order status description.",
+        "alternateNames": [
+          "OrderStatus"
+        ]
+      },
+      {
+        "name": "R2  Order Type",
+        "localization": {
+          "localizationKey": "R2  Order Type",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_R2__Order_Type)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R2  Order Type",
+        "alternateNames": [
+          "OrderType"
+        ]
+      },
+      {
+        "name": "R3  Order Currency",
+        "localization": {
+          "localizationKey": "R3  Order Currency",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_R3__Order_Currency)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R3  Order Currency"
+      },
+      {
+        "name": "R5  Order Discount Rate",
+        "localization": {
+          "localizationKey": "R5  Order Discount Rate",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_R5__Order_Discount_Rate)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R5  Order Discount Rate",
+        "description": "Help : \r\nMapped to Order date in the fact table."
+      },
+      {
+        "name": "R0  Order Key",
+        "localization": {
+          "localizationKey": "R0  Order Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_R0__Order_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R0  Order Key",
+        "description": "Help : \r\nThis maps to the order key in the fact table.",
+        "alternateNames": [
+          "Order"
+        ]
+      },
+      {
+        "name": "R6  Transactional Order Number",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D7 Orders (Facts Attributes).R6  Transactional Order Number",
+        "description": "Help : \r\nThis maps to the order key in the fact table."
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Orders Hierarchy",
+        "localization": {
+          "localizationKey": "Orders Hierarchy",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_Orders_Hierarchy)"
+        },
+        "description": "Help : \r\nPresentation hierarchy with drill path \r\nTotal->Order Status->Detail Order",
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "levels": [ {
+            "name": "Total Orders",
+            "localization": {
+              "localizationKey": "Total Orders",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Orders_Hierarchy_Total_Orders)"
+            },
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Total Orders"
+          },
+          {
+            "name": "Order Types",
+            "localization": {
+              "localizationKey": "Order Types",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Orders_Hierarchy_Order_Types)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Order Type",
+            "displayColumn": "presentationColumn:A - Sample Sales.Orders.R2  Order Type"
+          },
+          {
+            "name": "Order Status",
+            "localization": {
+              "localizationKey": "Order Status",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Orders_Hierarchy_Order_Status)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Order Status",
+            "displayColumn": "presentationColumn:A - Sample Sales.Orders.R1  Order Status"
+          },
+          {
+            "name": "Detail Order",
+            "localization": {
+              "localizationKey": "Detail Order",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Orders_Hierarchy_Detail_Order)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Orders Detail",
+            "displayColumn": "presentationColumn:A - Sample Sales.Orders.R0  Order Key"
+          }
+        ]
+      },
+      {
+        "name": "Ship To Region Hier",
+        "localization": {
+          "localizationKey": "Ship To Region Hier",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Orders_Ship_To_Region_Hier)"
+        },
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "levels": [ {
+            "name": "All Regions",
+            "localization": {
+              "localizationKey": "All Regions",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_All_Regions)"
+            },
+            "alternateNames": [
+              "Detail Orders"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Total Orders"
+          },
+          {
+            "name": "Ship to Region",
+            "localization": {
+              "localizationKey": "Ship to Region",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_Ship_to_Region)"
+            },
+            "alternateNames": [
+              "Bill to Region"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A Descriptions",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R50  Region"
+          },
+          {
+            "name": "Ship to Area",
+            "localization": {
+              "localizationKey": "Ship to Area",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_Ship_to_Area)"
+            },
+            "alternateNames": [
+              "Area"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A Area",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R51  Area"
+          },
+          {
+            "name": "Ship to Country",
+            "localization": {
+              "localizationKey": "Ship to Country",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_Ship_to_Country)"
+            },
+            "alternateNames": [
+              "Bill To Country"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A Country",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R52  Country Name"
+          },
+          {
+            "name": "Ship to State",
+            "localization": {
+              "localizationKey": "Ship to State",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_Ship_to_State)"
+            },
+            "alternateNames": [
+              "Bill To State"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A State",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R53  State Province"
+          },
+          {
+            "name": "Ship to City",
+            "localization": {
+              "localizationKey": "Ship to City",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Orders_Ship_To_Region_Hier_Ship_to_City)"
+            },
+            "alternateNames": [
+              "Bill To City"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A City",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R55  City"
+          },
+          {
+            "name": "Ship To Zip",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A Postal Code",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R56  Postal Code"
+          },
+          {
+            "name": "Ship To Estab",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D7 Orders (Facts Attributes).Ship To Geo A Establishment",
+            "displayColumn": "presentationColumn:A - Sample Sales.Ship To Regions.R59  Establishment Name"
+          }
+        ]
+      }
+    ]
+  }
+}

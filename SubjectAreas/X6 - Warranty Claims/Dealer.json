@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Dealer",
+    "alternateNames": [
+      "Dealer - Dimension"
+    ],
+    "presentationColumns": [ {
+        "name": "Dealer",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Dealer - Dimension.Dealer"
+      },
+      {
+        "name": "Dealer City",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Dealer - Dimension.Dealer City"
+      },
+      {
+        "name": "Dealer Geocode",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Dealer - Dimension.Dealer Geocode"
+      },
+      {
+        "name": "Dealer State Province",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Dealer - Dimension.Dealer State Province"
+      }
+    ]
+  }
+}

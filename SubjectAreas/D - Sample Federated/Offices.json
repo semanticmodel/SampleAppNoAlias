@@ -1,0 +1,60 @@
+{
+  "presentationTable": {
+    "name": "Offices",
+    "description": "Offices dimension attribute objects",
+    "presentationColumns": [ {
+        "name": "D1  Office (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D3 Offices.D1  Office (Rel Only)",
+        "description": "Help : \r\nStores the Market description."
+      },
+      {
+        "name": "D2  Department (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D3 Offices.D2  Department (Rel Only)",
+        "description": "Help : \r\nStores the market area description."
+      },
+      {
+        "name": "D3  Organization (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D3 Offices.D3  Organization (Rel Only)",
+        "description": "Help : \r\nStores the market district description."
+      },
+      {
+        "name": "D4  Company (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D3 Offices.D4  Company (Rel Only)",
+        "description": "Help : \r\nStores the market region description.",
+        "alternateNames": [
+          "D4  Company"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Offices Hierarchy",
+        "sourceLogicalTable": "logicalTable:06 - Federated Sources.D3 Offices",
+        "levels": [ {
+            "name": "Corporate Total",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D3 Offices.Offices Total"
+          },
+          {
+            "name": "Company",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D3 Offices.Offices Company",
+            "displayColumn": "presentationColumn:D - Sample Federated.Offices.D4  Company (Rel Only)"
+          },
+          {
+            "name": "Organization",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D3 Offices.Offices Organization",
+            "displayColumn": "presentationColumn:D - Sample Federated.Offices.D3  Organization (Rel Only)"
+          },
+          {
+            "name": "Department",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D3 Offices.Offices Department",
+            "displayColumn": "presentationColumn:D - Sample Federated.Offices.D2  Department (Rel Only)"
+          },
+          {
+            "name": "Offices",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D3 Offices.Offices Detail",
+            "displayColumn": "presentationColumn:D - Sample Federated.Offices.D1  Office (Rel Only)"
+          }
+        ]
+      }
+    ]
+  }
+}

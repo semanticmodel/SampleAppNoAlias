@@ -1,0 +1,243 @@
+{
+  "logicalTable": {
+    "name": "POI Details",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Country Code 2",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.COUNTRY_CODE_2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "House Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.HOUSE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loc Lat",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.LOC_LAT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loc Long",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.LOC_LONG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Municipality Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.MUNICIPALITY_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "POI Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "POI Category",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NTC_META_POI_CAT_REF",
+              "physicalExpression": {
+                "expressionTemplate": " substring(%1 from 13) \r\n",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF.TABLE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "POI Sub Category",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NTC_META_POI_CAT_REF",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Full Address",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 ||' '||%2 ||', SF, CA '||%3 ",
+            "expressionObjects": [
+              "logicalColumn:07 - Spatial Samples.POI Details.House Number",
+              "logicalColumn:07 - Spatial Samples.POI Details.Street Name",
+              "logicalColumn:07 - Spatial Samples.POI Details.Postal Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "POI Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.POI_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.POSTAL_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Side",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.SIDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Street Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GC_POI_NA",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA.STREET_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "GC_POI_NA",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.GC_POI_NA"
+          ]
+        }
+      },
+      {
+        "name": "NTC_META_POI_CAT_REF",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "physicalTableAlias": {
+    "name": "F10 Billed Rev.",
+    "description": "Reveue Billed Date Alias: Joins to the Time dimension tables on the Billed date column in the fact.",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_REVENUE_F",
+    "overrideSourceCacheSetting": true
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "database": {
+    "name": "X6 - Warranty Claims Data",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Warranty Claims Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 100,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "description": "Connection pool for Sample relational db source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)\r\n\r\nYou can also replace the \r\n\"VALUEOF(NQ_SESSION.DSN)\" \r\nby the full string below :\r\n(DESCRIPTION=(ADDRESS_LIST=(ADDRESS=(PROTOCOL=TCP)(HOST=VALUEOF(DB_HOST))(PORT=VALUEOF(DB_PORT))))(CONNECT_DATA=(SID=VALUEOF(DB_SID))))",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 100
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "FACT_CLAIM_DN_Foreign Key",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VIN",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM_DN.VIN"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_FK3",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VIN",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.VIN"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_FK1",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_DEALER",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_DEALER.DEALER",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.CLAIM_DEALER"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_Foreign Key#3",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_NODESC",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_NODESC.RECORDID",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.RECORDID"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_Foreign Key#1",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK.ID",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.RECORDID"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_Foreign Key",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS.RECORDID",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.RECORDID"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_FK2",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_SUPPLIER.SUPPLIER_ULTIMATENAME",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.SUPPLIER_ULTIMATENAME"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_FK4",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY.PART_NUMBER",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.PART_NUMBER"
+          }
+        ]
+      },
+      {
+        "name": "FACT_CLAIM_Foreign Key#2",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSES_DESC.RECORDID",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.FACT_CLAIM.RECORDID"
+          }
+        ]
+      },
+      {
+        "name": "XREF_PART_COMMODITY_FK1",
+        "leftTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.XREF_COMMODITY_HEIRCHY",
+        "rightTable": "physicalTable:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_COMMODITY_HEIRCHY.COMMODITY",
+            "rightColumn": "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY.COMMODITY"
+          }
+        ]
+      }
+    ]
+  }
+}

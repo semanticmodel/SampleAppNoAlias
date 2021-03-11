@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Interests",
+    "presentationColumns": [ {
+        "name": "Category ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Category ID"
+      },
+      {
+        "name": "Customer Interests ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Customer Interests ID"
+      },
+      {
+        "name": "Additional Information",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Additional Information"
+      }
+    ]
+  }
+}

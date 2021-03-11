@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "ALL_SYNC_CAPTURE_PREPARED_TABS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SCN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

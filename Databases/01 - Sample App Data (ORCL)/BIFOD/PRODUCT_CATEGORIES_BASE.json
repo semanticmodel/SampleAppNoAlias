@@ -1,0 +1,60 @@
+{
+  "physicalTable": {
+    "name": "PRODUCT_CATEGORIES_BASE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CATEGORY_LOCKED_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "PARENT_CATEGORY_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REPRESENTATIVE_PRODUCT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CATEGORY_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      }
+    ]
+  }
+}

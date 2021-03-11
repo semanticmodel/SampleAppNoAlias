@@ -1,0 +1,99 @@
+{
+  "physicalTable": {
+    "name": "PAYMENT_OPTIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ROUTING_IDENTIFIER",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ACCOUNT_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 19,
+        "nullable": true
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INSTITUTION_NAME",
+        "dataType": "VARCHAR",
+        "length": 120
+      },
+      {
+        "name": "CHECK_DIGITS",
+        "dataType": "INT",
+        "length": 4
+      },
+      {
+        "name": "VALID_TO_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "VALID_FROM_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "PAYMENT_OPTION_ID",
+        "dataType": "DOUBLE",
+        "length": 16,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "PAYMENT_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "CARD_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BILLING_ADDRESS_ID",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "EXPIRE_DATE",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

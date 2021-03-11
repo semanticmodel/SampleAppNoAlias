@@ -1,0 +1,76 @@
+{
+  "physicalTable": {
+    "name": "SAMP_XML_PRODUCTS_D",
+    "description": "Products dimension table : Stores product dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/samples/SampleAppLite/sample/SampleAppFiles/Data/SAMP_XML_PRODUCTS_D.xml",
+    "physicalColumns": [ {
+        "name": "Type_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/TYPE_KEY",
+        "description": "Type Key: Stores product type key as an integer"
+      },
+      {
+        "name": "Sequence",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/SEQUENCE",
+        "description": "Sequence: Stores product sequence as an integer"
+      },
+      {
+        "name": "Brand_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/BRAND_KEY",
+        "description": "Brand Key: Stores product brand key as an integer"
+      },
+      {
+        "name": "Brand",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/BRAND",
+        "description": "Brand: Stores the product brand information as text"
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/TYPE",
+        "description": "Type: Stores the product type information as text"
+      },
+      {
+        "name": "LOB_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/LOB_KEY",
+        "description": "LOB Key: Stores product LOB key as an integer"
+      },
+      {
+        "name": "LOB",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/LOB",
+        "description": "LOB: Stores the product LOB information as text"
+      },
+      {
+        "name": "Prod_Dsc",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/PROD_DSC",
+        "description": "Product Description: Stores the product description information as text"
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_PRODUCTS_D/PROD_KEY",
+        "description": "Product Key: Surrogate key of the product dimension table."
+      }
+    ]
+  }
+}

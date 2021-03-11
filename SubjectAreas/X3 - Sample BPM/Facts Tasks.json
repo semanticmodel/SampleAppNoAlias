@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Facts Tasks",
+    "presentationColumns": [ {
+        "name": "# Of Completed Tasks",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.# Of Completed Tasks"
+      },
+      {
+        "name": "# Of Proc Instances",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.# Of Proc Instances"
+      },
+      {
+        "name": "# Of Active Tasks",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Active Tasks.# Of Active Tasks"
+      },
+      {
+        "name": "# Of Active Proc Instances",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Active Tasks.# Of Active Proc Instances"
+      }
+    ]
+  }
+}

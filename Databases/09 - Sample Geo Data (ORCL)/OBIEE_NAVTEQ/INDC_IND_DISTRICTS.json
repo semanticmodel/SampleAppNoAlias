@@ -1,0 +1,70 @@
+{
+  "physicalTable": {
+    "name": "INDC_IND_DISTRICTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "AREA",
+        "dataType": "DOUBLE",
+        "length": 12
+      },
+      {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_EXPENDITURE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_SAVINGS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NAME1",
+        "dataType": "CHAR",
+        "length": 39
+      },
+      {
+        "name": "PARTS",
+        "dataType": "INT",
+        "length": 8
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_INCOME",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POINTS",
+        "dataType": "INT",
+        "length": 8
+      },
+      {
+        "name": "NAME2",
+        "dataType": "CHAR",
+        "length": 24
+      },
+      {
+        "name": "TOTAL_POPULATION",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "LENGTH",
+        "dataType": "DOUBLE",
+        "length": 11
+      }
+    ]
+  }
+}

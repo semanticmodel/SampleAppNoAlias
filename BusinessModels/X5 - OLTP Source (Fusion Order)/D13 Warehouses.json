@@ -1,0 +1,284 @@
+{
+  "logicalTable": {
+    "name": "D13 Warehouses",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Address ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WAREHOUSES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.ADDRESS_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).ADDRESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Warehouse ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WAREHOUSES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Warehouse Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WAREHOUSES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES.WAREHOUSE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Address1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).ADDRESS1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Address2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).ADDRESS2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Country ID",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).LATITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).LONGITUDE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).POSTAL_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Whse State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ADDRESSES (Warehouses)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses).STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WAREHOUSES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H13 Warehouses.Whse Detail"
+        ]
+      },
+      {
+        "name": "ADDRESSES (Warehouses)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.WAREHOUSES",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES (Warehouses)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ADDRESS_ID"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H13 Warehouses.Whse Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Whse City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Whse City"
+          ],
+          "displayColumn": "logicalColumn:Whse City"
+        },
+        {
+          "name": "Whse Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Warehouse Name"
+          ],
+          "displayColumn": "logicalColumn:Warehouse Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H13 Warehouses [branch at level 'Whse City']",
+          "levels": [ "Total", "Whse City", "Whse Detail" ]
+        }
+      ]
+    }
+  }
+}

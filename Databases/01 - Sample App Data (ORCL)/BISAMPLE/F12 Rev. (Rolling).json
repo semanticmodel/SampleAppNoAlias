@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F12 Rev. (Rolling)",
+    "description": "Reveue Rolling Months Fact Alias: Stores the rolling month values of the fact. \r\nEg:- Rolling 3 months of Revenue",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

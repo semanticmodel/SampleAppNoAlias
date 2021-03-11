@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "ADDRESSES (Order Ship To)",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.ADDRESSES",
+    "caching": {
+      "enable": true
+    }
+  }
+}

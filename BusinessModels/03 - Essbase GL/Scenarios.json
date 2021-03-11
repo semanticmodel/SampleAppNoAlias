@@ -1,0 +1,117 @@
+{
+  "logicalTable": {
+    "name": "Scenarios",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Scenarios",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Scenarios"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2 Scenarios - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Scenarios - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Scenarios - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Scenarios - Default"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hierarchical",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios"
+        ]
+      },
+      {
+        "name": "LTS2 GL Flattened",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Scenarios",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Scenarios",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Scenarios"
+          ],
+          "displayColumn": "logicalColumn:Scenarios"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Scenarios",
+          "levels": [ "Scenarios" ]
+        }
+      ]
+    }
+  }
+}

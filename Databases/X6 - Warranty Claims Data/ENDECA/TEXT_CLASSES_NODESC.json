@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "TEXT_CLASSES_NODESC",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select classification, recordid from endeca.text_classification, endeca.DIM_CLAIM_COMMENTS\r\nwhere matches(query_string, \r\n               COMPLAINT_DESCRIPTION)>0\r\norder by classification"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "CLASSIFICATION",
+        "dataType": "VARCHAR",
+        "length": 80,
+        "nullable": true
+      },
+      {
+        "name": "RECORDID",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      }
+    ]
+  }
+}

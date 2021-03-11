@@ -1,0 +1,62 @@
+{
+  "presentationTable": {
+    "name": "More Time Objects",
+    "presentationColumns": [ {
+        "name": "All Years - Time Span",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.All Years - Time Span"
+      },
+      {
+        "name": "Half Year - End Date",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Half Year - End Date"
+      },
+      {
+        "name": "Half Year - Prior Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Half Year - Prior Year"
+      },
+      {
+        "name": "Half Year - Time Span",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Half Year - Time Span"
+      },
+      {
+        "name": "Quarter - End Date",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Quarter - End Date"
+      },
+      {
+        "name": "Quarter - Prior Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Quarter - Prior Year"
+      },
+      {
+        "name": "Quarter - Time Span",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Quarter - Time Span"
+      },
+      {
+        "name": "Year - End Date",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Year - End Date"
+      },
+      {
+        "name": "Year - Prior Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Year - Prior Year"
+      },
+      {
+        "name": "Year - Time Span",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Year - Time Span"
+      },
+      {
+        "name": "Month - End Date",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Month - End Date"
+      },
+      {
+        "name": "Month - Prior Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Month - Prior Year"
+      },
+      {
+        "name": "Month - Time Span",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.Month - Time Span"
+      },
+      {
+        "name": "All Years",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D0 Time.All Years"
+      }
+    ]
+  }
+}

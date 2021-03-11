@@ -1,0 +1,114 @@
+{
+  "logicalTable": {
+    "name": "D5 Sales Rep (Parent Child Hier)",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "dataType": "VARCHAR",
+        "sortBy": "Employee Sort Order",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Employee Organization",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Employee.Employee"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E8  Manager Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Employee Organization",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Employee.ParentKey"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "dataType": "VARCHAR",
+        "sortBy": "Employee Sort Order",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Employee Organization",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Employee.Employee - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Employee Sort Order",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Employee Organization",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Employee.OLAP_EMPLOYEE_HIER_SORT_ORDER"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Employee Organization",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Employee"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H5 Sales Rep.Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "PARENT_CHILD",
+    "parentChildHierarchy": {
+      "name": "H5 Sales Rep",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:E1  Sales Rep Name"
+          ],
+          "displayColumn": "logicalColumn:E1  Sales Rep Name"
+        }
+      ],
+      "relationshipTables": [ {
+          "logicalTableSource": "Employee Organization"
+        }
+      ]
+    }
+  }
+}

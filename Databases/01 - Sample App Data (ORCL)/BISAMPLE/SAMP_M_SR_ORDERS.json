@@ -1,0 +1,104 @@
+{
+  "physicalTable": {
+    "name": "SAMP_M_SR_ORDERS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "CHANNEL",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "GUID",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "OFFER_CODE",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "TAG_01",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_02",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_03",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_04",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_05",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_06",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_07",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_08",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_09",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_10",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_11",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_12",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_13",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_14",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TAG_15",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "TARGET_LEVEL_ID",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

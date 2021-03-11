@@ -1,0 +1,98 @@
+{
+  "businessModel": {
+    "name": "03 - Essbase Sample",
+    "description": "This business model requires the Sample Essbase Source to be active. It is disabled by default and should only be enabled once the Essbase Add on for Sample App is installed",
+    "joins": [      {
+        "name": "Essbase Sample (Modified):Relationship_2004:20561268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D0 Month of Year",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:779881276504943",
+        "leftTable": "logicalTable:03 - Essbase Sample.D0 Time",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Essbase Sample (Modified):Relationship_2004:19701268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D5 Employees (Value Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:703531276172343",
+        "leftTable": "logicalTable:03 - Essbase Sample.D1 Products",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Essbase Sample (Modified):Relationship_2004:19381268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D6 Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Essbase Sample (Modified):Relationship_2004:18851268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D1 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Essbase Sample (Modified):Relationship_2004:20191268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D6 Cust Marital Status",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:785071276507013",
+        "leftTable": "logicalTable:03 - Essbase Sample.D5 Employees (Value Hier)",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Essbase Sample (Modified):Relationship_2004:21331268377507",
+        "leftTable": "logicalTable:03 - Essbase Sample.F0 Flat Measures (E1)",
+        "rightTable": "logicalTable:03 - Essbase Sample.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:813331281505507",
+        "leftTable": "logicalTable:03 - Essbase Sample.D6 Customers",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:813301281505501",
+        "leftTable": "logicalTable:03 - Essbase Sample.D0 Month of Year",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:703051276171050",
+        "leftTable": "logicalTable:03 - Essbase Sample.M1 Measures Hierarchy (E2)",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:813361281505516",
+        "leftTable": "logicalTable:03 - Essbase Sample.D6 Cust Marital Status",
+        "rightTable": "logicalTable:03 - Essbase Sample.M1 Measure Dimension (E2)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

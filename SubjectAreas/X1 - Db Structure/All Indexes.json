@@ -1,0 +1,246 @@
+{
+  "presentationTable": {
+    "name": "All Indexes",
+    "alternateNames": [
+      "All_indexes",
+      "OBJ- ALL_INDEXES"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Data Blocks Per Key",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Avg Data Blocks Per Key"
+      },
+      {
+        "name": "Avg Leaf Blocks Per Key",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Avg Leaf Blocks Per Key"
+      },
+      {
+        "name": "Blevel",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Blevel"
+      },
+      {
+        "name": "Buffer Pool",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Buffer Pool"
+      },
+      {
+        "name": "Cell Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Cell Flash Cache"
+      },
+      {
+        "name": "Clustering Factor",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Clustering Factor"
+      },
+      {
+        "name": "Compression",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Compression"
+      },
+      {
+        "name": "Degree",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Degree"
+      },
+      {
+        "name": "Distinct Keys",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Distinct Keys"
+      },
+      {
+        "name": "Domidx Management",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Domidx Management"
+      },
+      {
+        "name": "Domidx Opstatus",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Domidx Opstatus"
+      },
+      {
+        "name": "Domidx Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Domidx Status"
+      },
+      {
+        "name": "Dropped",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Dropped"
+      },
+      {
+        "name": "Duration",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Duration"
+      },
+      {
+        "name": "Flash Cache",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Flash Cache"
+      },
+      {
+        "name": "Freelist Groups",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Freelist Groups"
+      },
+      {
+        "name": "Freelists",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Freelists"
+      },
+      {
+        "name": "Funcidx Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Funcidx Status"
+      },
+      {
+        "name": "Generated",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Generated"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Global Stats"
+      },
+      {
+        "name": "Include Column",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Include Column"
+      },
+      {
+        "name": "Index Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Index Name"
+      },
+      {
+        "name": "Index Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Index Type"
+      },
+      {
+        "name": "Ini Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Ini Trans"
+      },
+      {
+        "name": "Initial Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Initial Extent"
+      },
+      {
+        "name": "Instances",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Instances"
+      },
+      {
+        "name": "Iot Redundant Pkey Elim",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Iot Redundant Pkey Elim"
+      },
+      {
+        "name": "Ityp Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Ityp Name"
+      },
+      {
+        "name": "Ityp Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Ityp Owner"
+      },
+      {
+        "name": "Join Index",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Join Index"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Last Analyzed"
+      },
+      {
+        "name": "Leaf Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Leaf Blocks"
+      },
+      {
+        "name": "Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Logging"
+      },
+      {
+        "name": "Max Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Max Extents"
+      },
+      {
+        "name": "Max Trans",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Max Trans"
+      },
+      {
+        "name": "Min Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Min Extents"
+      },
+      {
+        "name": "Next Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Next Extent"
+      },
+      {
+        "name": "Num Rows",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Num Rows"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Owner"
+      },
+      {
+        "name": "Parameters",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Parameters"
+      },
+      {
+        "name": "Partitioned",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Partitioned"
+      },
+      {
+        "name": "Pct Direct Access",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Pct Direct Access"
+      },
+      {
+        "name": "Pct Free",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Pct Free"
+      },
+      {
+        "name": "Pct Increase",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Pct Increase"
+      },
+      {
+        "name": "Pct Threshold",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Pct Threshold"
+      },
+      {
+        "name": "Prefix Length",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Prefix Length"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Sample Size"
+      },
+      {
+        "name": "Secondary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Secondary"
+      },
+      {
+        "name": "Segment Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Segment Created"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Status"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Table Name"
+      },
+      {
+        "name": "Table Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Table Owner"
+      },
+      {
+        "name": "Table Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Table Type"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Tablespace Name"
+      },
+      {
+        "name": "Temporary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Temporary"
+      },
+      {
+        "name": "Uniqueness",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Uniqueness"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.User Stats"
+      },
+      {
+        "name": "Visibility",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.Visibility"
+      },
+      {
+        "name": "# Of Indexes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_INDEXES.# Of Indexes"
+      }
+    ]
+  }
+}

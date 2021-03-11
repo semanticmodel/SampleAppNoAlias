@@ -1,0 +1,246 @@
+{
+  "logicalTable": {
+    "name": "Product",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Gen1,Product",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen1,Product - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Product"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Product - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Product - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Product - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Product - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category",
+        "dataType": "VARCHAR",
+        "sortBy": "Category - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Category"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Category - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Category - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subcategory",
+        "dataType": "VARCHAR",
+        "sortBy": "Subcategory - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Subcategory"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subcategory - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Subcategory - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subcategory - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Subcategory - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Product - Default"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product - Long Names",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Product - Long Names"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Basic",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Basic.BISAMPL2.Basic"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Integration.Product.Subcategory"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Gen1,Product",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Gen1,Product",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen1,Product - Member Key"
+          ]
+        },
+        {
+          "name": "Category",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Category"
+          ],
+          "displayColumn": "logicalColumn:Category"
+        },
+        {
+          "name": "Subcategory",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Subcategory - Member Key"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Product [branch at level 'Category']",
+          "levels": [ "Gen1,Product", "Category", "Subcategory" ]
+        }
+      ]
+    }
+  }
+}

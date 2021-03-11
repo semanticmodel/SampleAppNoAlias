@@ -1,0 +1,133 @@
+{
+  "physicalTable": {
+    "name": "TABPARTV$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PHYPART#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BO#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CHNCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "AVGSPC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EMPCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVGRLN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ANALYZETIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SAMPLESIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXTRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PART#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIBOUNDLEN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PCTUSED$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PCTFREE$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BLKCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIBOUNDVAL",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

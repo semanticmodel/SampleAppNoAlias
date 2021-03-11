@@ -1,0 +1,387 @@
+{
+  "logicalTable": {
+    "name": "UT L Query Time",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Start Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " CAST ( EXTRACT( YEAR  FROM %1) AS VARCHAR ( 4 ))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " CAST ( EXTRACT( YEAR  FROM %1) AS VARCHAR ( 4 )) || ' Q' ||  CAST ( EXTRACT( QUARTER_OF_YEAR  FROM %1) AS VARCHAR ( 1 ))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " CAST ( EXTRACT( YEAR  FROM %1) AS VARCHAR ( 4 )) || ' ' ||  LEFT( MONTHNAME(%1), 3)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "CHAR",
+        "sortBy": "Month Number",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " MONTHNAME(%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Number",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " EXTRACT( MONTH  FROM %1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Name",
+        "dataType": "CHAR",
+        "sortBy": "Day Number",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " DAYNAME(%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Week Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " CAST ( EXTRACT( YEAR  FROM %1) AS VARCHAR ( 4 )) || ' WEEK ' ||  CAST ( EXTRACT( WEEK_OF_YEAR  FROM %1) AS VARCHAR ( 2 ))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Number",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " DAYOFWEEK(%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day in Month",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " DAYOFMONTH(%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_DT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Hour Min",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Hour Min",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.END_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.END_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": " CAST (%1 AS DATE )",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ran",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "cast(TIMESTAMPDIFF(SQL_TSI_SECOND,  %1 , CURRENT_TIMESTAMP(1)) as varchar (7))||' seconds ago'",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Start Timestamp",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "To_DateTime(cast(%1 as varchar(10))||' '||%2, 'DD-MON-YY hh24:mi')",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.START_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Timestamp",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "NQ_ACCT",
+              "physicalExpression": {
+                "expressionTemplate": "To_DateTime(cast(%1 as varchar(10))||' '||%2, 'DD-MON-YY hh24:mi')",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.END_TS",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.END_HOUR_MIN"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "NQ_ACCT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.UT L Query Time.Hour Min Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "TotalTime",
+      "logicalLevels": [
+        {
+          "name": "TotalTime",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ],
+          "displayColumn": "logicalColumn:Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year Quarter"
+          ],
+          "displayColumn": "logicalColumn:Year Quarter"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year Month"
+          ],
+          "displayColumn": "logicalColumn:Year Month"
+        },
+        {
+          "name": "Week Number",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year",
+            "logicalColumn:Week Number",
+            "logicalColumn:Year Month"
+          ],
+          "displayColumn": "logicalColumn:Year"
+        },
+        {
+          "name": "Date",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Start Date"
+          ],
+          "displayColumn": "logicalColumn:Start Date"
+        },
+        {
+          "name": "Hour Min Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10000,
+          "primaryColumns": [
+            "logicalColumn:Start Hour Min",
+            "logicalColumn:Start Time",
+            "logicalColumn:End Time"
+          ],
+          "displayColumn": "logicalColumn:Start Hour Min"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT L Query Time [branch at level 'Date']",
+          "levels": [ "TotalTime", "Year", "Quarter", "Month", "Week Number", "Date", "Hour Min Detail" ]
+        }
+      ]
+    }
+  }
+}

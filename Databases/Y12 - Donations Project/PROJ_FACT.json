@@ -1,0 +1,56 @@
+{
+  "physicalTable": {
+    "name": "PROJ_FACT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TEACHER_ACCTID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SCHOOLID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "TOTAL_DONATIONS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DATE_COMPLETED",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "STUDENTS_REACHED",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "PROJECTID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "DATE_POSTED",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "TOTAL_PRICE_EXCLUDING_OPT_S",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_DONORS",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

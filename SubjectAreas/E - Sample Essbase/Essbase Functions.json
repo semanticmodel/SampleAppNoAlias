@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Essbase Functions",
+    "presentationColumns": [ {
+        "name": "62  Rev Cust STDDev (Evaluate Aggr)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).62  Rev Cust STDDev (Evaluate Aggr)",
+        "alternateNames": [
+          "62  Revenue Cust STDDev (Evaluate Aggr)",
+          "Revenue Cust STDDev (Evaluate Aggr)"
+        ]
+      },
+      {
+        "name": "63  Rev Cust Avg (Evaluate Aggr)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).63  Rev Cust Avg (Evaluate Aggr)",
+        "alternateNames": [
+          "63  Revenue Cust Avg (Evaluate Aggr)",
+          "Revenue Cust Avg (Evaluate Aggr)"
+        ]
+      },
+      {
+        "name": "61  Top 5 Customers (Evaluate)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).61  Top 5 Customers (Evaluate)",
+        "alternateNames": [
+          "Evaluate Top",
+          "Top 5 Customers (Evaluate)"
+        ]
+      }
+    ]
+  }
+}

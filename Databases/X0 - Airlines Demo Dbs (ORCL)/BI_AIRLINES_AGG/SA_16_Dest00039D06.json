@@ -1,0 +1,122 @@
+{
+  "physicalTable": {
+    "name": "SA_16_Dest00039D06",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Dest_City_00039C2F",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Dest_D00039C32",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Dest_C00039C37",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Dest_S00039C35",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Dest_Regio00039C31",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "Dest_Divis00039C33",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Dest_Airpo00039C2B",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "Dest_Re_00039D0ASK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dest_St_00039D08SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dest_State00039C3A",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Dest_Airpo00039C2C",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "Dest_State00039C39",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "Dest_R00039C34",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Dest_Airpo00039C2E",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "Dest_US_St00039C36",
+        "dataType": "VARCHAR",
+        "length": 54,
+        "nullable": true
+      },
+      {
+        "name": "Dest_Airpo00039C2A",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dest_Count00039C38",
+        "dataType": "VARCHAR",
+        "length": 90
+      },
+      {
+        "name": "Dest_R00039C30",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Dest_Ai_00039D06SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dest_Airpo00039C2D",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "Dest_Di_00039D09SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "physicalTable": {
+    "name": "DBA_TAB_COL_STATISTICS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NUM_DISTINCT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_BUCKETS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "HISTOGRAM",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DENSITY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_NULLS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOW_VALUE",
+        "dataType": "VARBINARY",
+        "length": 32
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "AVG_COL_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "HIGH_VALUE",
+        "dataType": "VARBINARY",
+        "length": 32
+      }
+    ]
+  }
+}

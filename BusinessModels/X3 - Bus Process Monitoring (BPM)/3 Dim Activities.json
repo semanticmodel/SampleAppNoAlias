@@ -1,0 +1,140 @@
+{
+  "logicalTable": {
+    "name": "3 Dim Activities",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Activity Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "1 Dim Activities",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.ACTIVITYID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Activity Label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "1 Dim Activities",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Activity Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "1 Dim Activities",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.ACTIVITYNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Activity Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "1 Dim Activities",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.ACTIVITYTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "1 Dim Activities",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.PROCESSID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "1 Dim Activities",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).3 Activities Hier.Activities Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Activities",
+      "logicalLevels": [
+        {
+          "name": "All Activities",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Activities Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Activity Type"
+          ],
+          "displayColumn": "logicalColumn:Activity Type"
+        },
+        {
+          "name": "Activities Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Activity Id",
+            "logicalColumn:Process Id"
+          ],
+          "displayColumn": "logicalColumn:Activity Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "3 Activities Hier [branch at level 'Activities Type']",
+          "levels": [ "All Activities", "Activities Type", "Activities Detail" ]
+        }
+      ]
+    }
+  }
+}

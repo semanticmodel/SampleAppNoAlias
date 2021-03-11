@@ -1,0 +1,81 @@
+{
+  "physicalTable": {
+    "name": "PROJ_PROJECT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DATE_POSTED",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "DATE_EXPIRATION",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "SECONDARY_FOCUS_AREA",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SECONDARY_FOCUS_SUBJECT",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "ELIGIBLE_DOUBLE_IMPACT_MATCH",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "POVERTY_LEVEL",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "PROJECTID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "PRIMARY_FOCUS_SUBJECT",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DATE_COMPLETED",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "PRIMARY_FOCUS_AREA",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "RESOURCE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "FUNDING_STATUS",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "GRADE_LEVEL",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "TOTAL_DONATIONS",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      }
+    ]
+  }
+}

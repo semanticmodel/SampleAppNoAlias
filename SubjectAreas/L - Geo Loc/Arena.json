@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "Arena",
+    "presentationColumns": [ {
+        "name": "Section",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena.Section"
+      },
+      {
+        "name": "Section Type",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena.Section Type"
+      },
+      {
+        "name": "Male Attendance",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena Facts.Male Attendance"
+      },
+      {
+        "name": "Female Attendance",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena Facts.Female Attendance",
+        "alternateNames": [
+          "Femal Attendance"
+        ]
+      },
+      {
+        "name": "Child Attendance",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena Facts.Child Attendance"
+      },
+      {
+        "name": "Total Attendance",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Arena Facts.Total Attendance"
+      }
+    ]
+  }
+}

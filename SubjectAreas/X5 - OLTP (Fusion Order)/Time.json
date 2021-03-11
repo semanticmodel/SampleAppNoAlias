@@ -1,0 +1,71 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "presentationColumns": [ {
+        "name": "Calendar Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Calendar Date"
+      },
+      {
+        "name": "Per Name Week",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Per Name Week"
+      },
+      {
+        "name": "Per Name Month",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Per Name Month"
+      },
+      {
+        "name": "Per Name Qtr",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Per Name Qtr"
+      },
+      {
+        "name": "Per Name Half",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Per Name Half"
+      },
+      {
+        "name": "Per Name Year",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Per Name Year"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Hier",
+        "alternateNames": [
+          "H00 Time"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D00 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Total"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Year",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Time.Per Name Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Quarter",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Time.Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Month",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Time.Per Name Month"
+          },
+          {
+            "name": "Week",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Week",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Time.Per Name Week"
+          },
+          {
+            "name": "Day Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D00 Time.Day Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Time.Calendar Date"
+          }
+        ]
+      }
+    ]
+  }
+}

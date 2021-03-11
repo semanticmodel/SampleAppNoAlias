@@ -1,0 +1,125 @@
+{
+  "physicalTable": {
+    "name": "DBA_TABLESPACES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PREDICATE_EVALUATION",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "INITIAL_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MAX_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_SPACE_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "RETENTION",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "DEF_TAB_COMPRESSION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "LOGGING",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "ALLOCATION_TYPE",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "BIGFILE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "COMPRESS_FOR",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "MAX_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FORCE_LOGGING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXTENT_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "ENCRYPTED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "CONTENTS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "MIN_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "MIN_EXTLEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLUGGED_IN",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

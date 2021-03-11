@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F91 Actions Entries",
+    "description": "Actions Alias: This alias is primarily used to showcase the Action framework within OBIEE. Some of the SampleApp examples will writeback to this alias using the Action framework.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_ACTIONS"
+  }
+}

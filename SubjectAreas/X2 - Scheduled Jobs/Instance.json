@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Instance",
+    "presentationColumns": [ {
+        "name": "Begin Time",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Begin Time"
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.End Time"
+      },
+      {
+        "name": "Execution Time",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Execution Time"
+      },
+      {
+        "name": "Exit Code",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Exit Code"
+      },
+      {
+        "name": "Instance Id",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Instance Id"
+      },
+      {
+        "name": "Job Id",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Job Id"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance.Status"
+      },
+      {
+        "name": "Error Msg",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Instance_Error.Error Msg"
+      }
+    ]
+  }
+}

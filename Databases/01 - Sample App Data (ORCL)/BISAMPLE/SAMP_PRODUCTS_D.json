@@ -1,0 +1,88 @@
+{
+  "physicalTable": {
+    "name": "SAMP_PRODUCTS_D",
+    "description": "Products dimension table : Stores product dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_PRODUCTS_D.xml",
+      "dynamicName": "variable:DUAL Prod Table.DYNAMIC_PRODUCT_TABLE",
+    "physicalColumns": [ {
+        "name": "LOB_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "LOB Key: Stores product LOB key as an integer"
+      },
+      {
+        "name": "Type_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Type Key: Stores product type key as an integer"
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "Prod_Dsc",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Product Description: Stores the product description information as text"
+      },
+      {
+        "name": "Attribute_1",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Attribute 1: Stores product attribute1 information as text"
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Type: Stores the product type information as text"
+      },
+      {
+        "name": "LOB",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "LOB: Stores the product LOB information as text"
+      },
+      {
+        "name": "Sequence",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Sequence: Stores product sequence as an integer"
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Surrogate key of the product dimension table."
+      },
+      {
+        "name": "Brand_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Brand Key: Stores product brand key as an integer"
+      },
+      {
+        "name": "Attribute_2",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Attribute 2: Stores product attribute2 information as text"
+      },
+      {
+        "name": "Brand",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Brand: Stores the product brand information as text"
+      }
+    ]
+  }
+}

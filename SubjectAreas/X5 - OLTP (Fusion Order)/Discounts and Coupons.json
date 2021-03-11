@@ -1,0 +1,96 @@
+{
+  "presentationTable": {
+    "name": "Discounts and Coupons",
+    "presentationColumns": [ {
+        "name": "Discount ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount ID"
+      },
+      {
+        "name": "Discount Description (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Description (Lookup Phys)"
+      },
+      {
+        "name": "Discount Add Free Shipping Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Add Free Shipping Flag"
+      },
+      {
+        "name": "Discount Apply As Percentage Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Apply As Percentage Flag"
+      },
+      {
+        "name": "Discount Amount",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Amount"
+      },
+      {
+        "name": "Discount Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Type Lookup"
+      },
+      {
+        "name": "Discount Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Type Code"
+      },
+      {
+        "name": "Discount Easy Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Easy Code"
+      },
+      {
+        "name": "Discount Onetime Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Onetime Flag"
+      },
+      {
+        "name": "Coupon ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon ID"
+      },
+      {
+        "name": "Coupon Description (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Description (Lookup Phys)"
+      },
+      {
+        "name": "Coupon Add Free Shipping Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Add Free Shipping Flag"
+      },
+      {
+        "name": "Coupon Apply As Percentage Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Apply As Percentage Flag"
+      },
+      {
+        "name": "Coupon Amount",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Amount"
+      },
+      {
+        "name": "Coupon Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Type Lookup"
+      },
+      {
+        "name": "Coupon Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Type Code"
+      },
+      {
+        "name": "Coupon Easy Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Easy Code"
+      },
+      {
+        "name": "Coupon Onetime Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Onetime Flag"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Discounts and Coupons",
+        "alternateNames": [
+          "H11 Discounts and Coupons"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Total"
+          },
+          {
+            "name": "Discounts Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discounts Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Discounts and Coupons.Discount ID"
+          }
+        ]
+      }
+    ]
+  }
+}

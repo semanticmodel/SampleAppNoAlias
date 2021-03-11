@@ -1,0 +1,55 @@
+{
+  "physicalTable": {
+    "name": "ODM_CLUSTER_DETAILS_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VARIANCE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MODE_VALUE",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "RECORD_COUNT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ATTRIBUTE_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "CLUSTER_ID",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "ID",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MEAN",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

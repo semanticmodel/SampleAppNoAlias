@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Properties",
+    "alternateNames": [
+      "DB- DATABASE_PROPERTIES"
+    ],
+    "presentationColumns": [ {
+        "name": "Description",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- DATABASE_PROPERTIES.Description"
+      },
+      {
+        "name": "Property Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- DATABASE_PROPERTIES.Property Name"
+      },
+      {
+        "name": "Property Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- DATABASE_PROPERTIES.Property Value"
+      },
+      {
+        "name": "# Of Properties",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- DATABASE_PROPERTIES.# Of Properties"
+      }
+    ]
+  }
+}

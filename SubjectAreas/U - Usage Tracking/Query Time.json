@@ -1,0 +1,173 @@
+{
+  "presentationTable": {
+    "name": "Query Time",
+    "localization": {
+      "localizationKey": "Query Time",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time)"
+    },
+    "description": "nQuire Period Attributes",
+    "presentationColumns": [ {
+        "name": "Start Date",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Start Date",
+        "alternateNames": [
+          "Start Date#1"
+        ]
+      },
+      {
+        "name": "Day in Month",
+        "localization": {
+          "localizationKey": "Day in Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_in_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Day in Month",
+        "description": "Actual Day within the month.  Valid Values are 1-31 and change by month."
+      },
+      {
+        "name": "Week Number",
+        "localization": {
+          "localizationKey": "Week Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Week_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Week Number",
+        "description": "Actual Week Number 1-52 Valid Values.  First Week in January = 1.  This accounts for leap year."
+      },
+      {
+        "name": "Ran",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Ran"
+      },
+      {
+        "name": "Start Time",
+        "localization": {
+          "localizationKey": "Start Time",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Date)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Start Time",
+        "description": "Actual Request Date that follows a MMM DD, CCYY format. For example June 9, 1999."
+      },
+      {
+        "name": "Start Hour Min",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Start Hour Min",
+        "alternateNames": [
+          "Star Hour Min"
+        ]
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.End Time"
+      },
+      {
+        "name": "End Hour Min",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.End Hour Min"
+      },
+      {
+        "name": "Year",
+        "localization": {
+          "localizationKey": "Year",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Year",
+        "description": "Actual Year that the request was generated to the nQuire Server.  Format is 1999, 2000 etc..."
+      },
+      {
+        "name": "Year Quarter",
+        "localization": {
+          "localizationKey": "Year Quarter",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year_Quarter)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Year Quarter"
+      },
+      {
+        "name": "Year Month",
+        "localization": {
+          "localizationKey": "Year Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Year_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Year Month"
+      },
+      {
+        "name": "Month",
+        "localization": {
+          "localizationKey": "Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Month",
+        "description": "Actual Month Name in long Format MMMMMMM Valid Values are January, March etc..."
+      },
+      {
+        "name": "Month Number",
+        "localization": {
+          "localizationKey": "Month Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Month_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Month Number",
+        "description": "Actual Month Number starting with 1 = January thru 12 = December."
+      },
+      {
+        "name": "Day Name",
+        "localization": {
+          "localizationKey": "Day Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Day Name",
+        "description": "Actual Weekday/Weekend Day.  Valid Values are Monday - Sunday."
+      },
+      {
+        "name": "Day Number",
+        "localization": {
+          "localizationKey": "Day Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Query_Time_Day_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Day Number",
+        "description": "Actual Day Number within a week.  Valid Values are 1-7.  1 = Sunday - 7 = Saturday."
+      },
+      {
+        "name": "Start Timestamp",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.Start Timestamp"
+      },
+      {
+        "name": "End Timestamp",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Time.End Timestamp"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "UT Time Query Run",
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WS Measures",
+        "levels": [ {
+            "name": "TotalTime",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.TotalTime"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Year",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Quarter",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Year Quarter"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Month",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Year Month"
+          },
+          {
+            "name": "Week Number",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Week Number",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Week Number"
+          },
+          {
+            "name": "Date",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Date",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Start Time"
+          },
+          {
+            "name": "Hour Min",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Measures.Hour Min Detail",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Query Time.Start Hour Min"
+          }
+        ]
+      }
+    ]
+  }
+}

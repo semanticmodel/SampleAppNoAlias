@@ -1,0 +1,84 @@
+{
+  "logicalTable": {
+    "name": "TS- DBA_TEMP_FREE_SPACE",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Allocated Space",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TEMP_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE.ALLOCATED_SPACE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Free Space",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TEMP_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE.FREE_SPACE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TEMP_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBA_TEMP_FREE_SPACE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE.TABLESPACE_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DBA_TEMP_FREE_SPACE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.DBA_TEMP_FREE_SPACE"
+          ]
+        }
+      }
+    ]
+  }
+}

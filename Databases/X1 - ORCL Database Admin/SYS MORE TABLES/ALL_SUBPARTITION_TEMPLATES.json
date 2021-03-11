@@ -1,0 +1,43 @@
+{
+  "physicalTable": {
+    "name": "ALL_SUBPARTITION_TEMPLATES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "USER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SUBPARTITION_POSITION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUBPARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 34,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "HIGH_BOUND",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

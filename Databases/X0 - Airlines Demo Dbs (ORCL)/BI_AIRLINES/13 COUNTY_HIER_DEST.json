@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "13 COUNTY_HIER_DEST",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.OBIEE_COUNTY_HIER"
+  }
+}

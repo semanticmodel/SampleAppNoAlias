@@ -1,0 +1,94 @@
+{
+  "presentationTable": {
+    "name": "Source Object Attributes",
+    "alternateNames": [
+      "WR Source Object"
+    ],
+    "presentationColumns": [ {
+        "name": "Source Signature",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Signature",
+        "alternateNames": [
+          "Signature"
+        ]
+      },
+      {
+        "name": "Source Path L0",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Path L0",
+        "alternateNames": [
+          "Path L0"
+        ]
+      },
+      {
+        "name": "Source Path L1",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Path L1",
+        "alternateNames": [
+          "Path L1"
+        ]
+      },
+      {
+        "name": "Source Path L2",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Path L2",
+        "alternateNames": [
+          "Path L2"
+        ]
+      },
+      {
+        "name": "Source Path Rest",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Path Rest",
+        "alternateNames": [
+          "Path Rest"
+        ]
+      },
+      {
+        "name": "Sequence ID",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Sequence ID"
+      },
+      {
+        "name": "Source Object Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Object Name"
+      },
+      {
+        "name": "Source Object Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WR Source Object.Source Object Path"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "All Objects",
+        "alternateNames": [
+          "WR All Objects"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WR Source Object",
+        "levels": [ {
+            "name": "All Folders",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.All Folders"
+          },
+          {
+            "name": "Path Level 0",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.Path Level 0",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Source Object Attributes.Source Path L0"
+          },
+          {
+            "name": "Path Level 1",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.Path Level 1",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Source Object Attributes.Source Path L1"
+          },
+          {
+            "name": "Path Level 2",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.Path Level 2",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Source Object Attributes.Source Path L2"
+          },
+          {
+            "name": "Path Level 3",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.Path Level 3",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Source Object Attributes.Source Path Rest"
+          },
+          {
+            "name": "Full Path",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WR Source Object.Full Path",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Source Object Attributes.Source Object Path"
+          }
+        ]
+      }
+    ]
+  }
+}

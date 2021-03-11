@@ -1,0 +1,114 @@
+{
+  "presentationTable": {
+    "name": "Vehicles",
+    "presentationColumns": [ {
+        "name": "Drive Train",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Drive Train"
+      },
+      {
+        "name": "Lateral Run Out",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Lateral Run Out"
+      },
+      {
+        "name": "Months In Service",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Months In Service"
+      },
+      {
+        "name": "Num Cyls",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Num Cyls"
+      },
+      {
+        "name": "Pitch Circle Diameter",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Pitch Circle Diameter"
+      },
+      {
+        "name": "Prod Date",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Prod Date"
+      },
+      {
+        "name": "Production Month",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Production Month"
+      },
+      {
+        "name": "Production Period",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Production Period"
+      },
+      {
+        "name": "Production Year",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Production Year"
+      },
+      {
+        "name": "Rotor Diameter",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Rotor Diameter"
+      },
+      {
+        "name": "Rotor Gap",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Rotor Gap"
+      },
+      {
+        "name": "Rotor Thickness",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Rotor Thickness"
+      },
+      {
+        "name": "Rotor Type",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Rotor Type"
+      },
+      {
+        "name": "Sale Date",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Sale Date"
+      },
+      {
+        "name": "Veh Exposure",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Veh Exposure"
+      },
+      {
+        "name": "Veh Float",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Veh Float"
+      },
+      {
+        "name": "Vehicle Assembly Plant",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Assembly Plant"
+      },
+      {
+        "name": "Vehicle Build Country",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Build Country"
+      },
+      {
+        "name": "Vehicle Build Region",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Build Region"
+      },
+      {
+        "name": "Vehicle Exposure",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Exposure"
+      },
+      {
+        "name": "Vehicle Float",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Float"
+      },
+      {
+        "name": "Vehicle Make",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Make"
+      },
+      {
+        "name": "Vehicle Make Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Make Dist"
+      },
+      {
+        "name": "Vehicle Manufacturer",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Manufacturer"
+      },
+      {
+        "name": "Vehicle Model",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Model"
+      },
+      {
+        "name": "Vehicle Model Year",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Model Year"
+      },
+      {
+        "name": "Vin",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vin"
+      }
+    ]
+  }
+}

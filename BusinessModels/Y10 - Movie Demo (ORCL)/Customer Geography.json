@@ -1,0 +1,267 @@
+{
+  "logicalTable": {
+    "name": "Customer Geography",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Customer ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CUST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "City ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CITY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Continent",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CONTINENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Continent ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CONTINENT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.COUNTRY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.COUNTRY_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.COUNTRY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State / Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State / Province ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.STATE_PROVINCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Street Address",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Cust.",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.STREET_ADDRESS"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Cust.",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Continent",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Continent ID"
+          ]
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Country"
+          ],
+          "displayColumn": "logicalColumn:Country"
+        },
+        {
+          "name": "State",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:State / Province"
+          ],
+          "displayColumn": "logicalColumn:State / Province"
+        },
+        {
+          "name": "City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:City"
+          ],
+          "displayColumn": "logicalColumn:City"
+        },
+        {
+          "name": "Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Customer ID"
+          ],
+          "displayColumn": "logicalColumn:Customer ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Customer Geography [branch at level 'City']",
+          "levels": [ "Total", "Continent", "Country", "State", "City", "Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "MOVIE_CAST",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "MOVIE_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "CAST_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "CHARACTER",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

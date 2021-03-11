@@ -1,0 +1,222 @@
+{
+  "logicalTable": {
+    "name": "WR Source Object",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Source Path L0",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.PATH_L0"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Path L1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.PATH_L1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Path L2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.PATH_L2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Path Rest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.PATH_REST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sequence ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Signature",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.SIGNATURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Object Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.SOURCE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Source Object Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WR_REF_STATUS_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim.SOURCE_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WR_REF_STATUS_Dim",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS_Dim"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Folders",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "All Folders",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Path Level 0",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Source Path L0"
+          ],
+          "displayColumn": "logicalColumn:Source Path L0"
+        },
+        {
+          "name": "Path Level 1",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Source Path L0",
+            "logicalColumn:Source Path L1"
+          ],
+          "displayColumn": "logicalColumn:Source Path L0"
+        },
+        {
+          "name": "Path Level 2",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Source Path L0",
+            "logicalColumn:Source Path L1",
+            "logicalColumn:Source Path L2"
+          ],
+          "displayColumn": "logicalColumn:Source Path L0"
+        },
+        {
+          "name": "Path Level 3",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Source Path L0",
+            "logicalColumn:Source Path L1",
+            "logicalColumn:Source Path L2",
+            "logicalColumn:Source Path Rest"
+          ],
+          "displayColumn": "logicalColumn:Source Path L0"
+        },
+        {
+          "name": "Full Path",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Source Object Path"
+          ],
+          "displayColumn": "logicalColumn:Source Object Path"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "WR All Objects [branch at level 'Path Level 3']",
+          "levels": [ "All Folders", "Path Level 0", "Path Level 1", "Path Level 2", "Path Level 3", "Full Path" ]
+        }
+      ]
+    }
+  }
+}

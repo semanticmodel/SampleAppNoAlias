@@ -1,0 +1,96 @@
+{
+  "logicalTable": {
+    "name": "35 PaxPF Group",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Pax per Flights Code",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PPF_GROUP"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_35_PPF_00039D18",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18.Pax_per_Fl00039C5E"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pax per Flights Grp",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 = 0 THEN 'Cargo Flight' WHEN %1 = 1 THEN '0 to 50' WHEN %1 = 2 THEN '050 to 100' WHEN %1 = 3 THEN '100 to 150' WHEN %1 BETWEEN 4 AND 6 THEN '150 to 300' ELSE '300 and over' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.35 PaxPF Group.Pax per Flights Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DOMESTIC_SEGMENT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_35_PPF_00039D18",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_35_PPF_00039D18"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "35 PPF Group Total",
+      "logicalLevels": [
+        {
+          "name": "35 PPF Group Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "35 PPF Group Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:Pax per Flights Code"
+          ],
+          "displayColumn": "logicalColumn:Pax per Flights Code"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "35 PPF Group",
+          "levels": [ "35 PPF Group Total", "35 PPF Group Detail" ]
+        }
+      ]
+    }
+  }
+}

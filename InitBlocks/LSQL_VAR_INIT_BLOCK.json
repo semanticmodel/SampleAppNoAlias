@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "LSQL_VAR_INIT_BLOCK",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select '-' from dual;"
+      }
+    ],
+    "variables": [ {
+        "name": "LSQL_VAR",
+        "description": "Used in dynamic lsql setting example",
+        "value": "'-'"
+      }
+    ]
+  }
+}

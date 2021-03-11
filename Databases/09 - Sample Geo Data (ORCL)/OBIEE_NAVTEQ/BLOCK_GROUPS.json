@@ -1,0 +1,455 @@
+{
+  "physicalTable": {
+    "name": "BLOCK_GROUPS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GEOMETRY",
+        "dataType": "VARBINARY",
+        "length": 10
+      },
+      {
+        "name": "POP_FEMALE_18TO24",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_PROF_DEGREE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_25TO29",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_75K_LT100K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_5_TO_6_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_HS_GRAD_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIPSCO",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TRACT_ID",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "HH_INC_GE_15K_LT20K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_9_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_HS_GRAD_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "HH_INC_GE_100K_LT125K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_1ORMORE_COLL_NODEG_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_DOCT_DEGREE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_5_TO_6_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_125K_LT150K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_11_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_LT_10K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_7_TO_8_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_11_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_OVER80",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_30TO39",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_50TO59",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_7_TO_8_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_15TO17",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_LT_10",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_9_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_LT_1_COLLEGE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_K_TO_4_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_60K_LT75K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_10TO14",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_K_TO_4_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_NONE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_60TO69",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOTAL_POP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ST_NAME",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "EDU_MAST_DEGREE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HOUSEHOLD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_12_NODIPLOMA_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_50TO59",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CO_NAME",
+        "dataType": "VARCHAR",
+        "length": 31
+      },
+      {
+        "name": "EDU_10_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_12_NODIPLOMA_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_10TO14",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_ASSO_DEGREE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_50K_LT60K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_15TO17",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_25K_LT30K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_10_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_BACH_DEGREE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_200K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_LT_10",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BGP_LABEL",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "MED_HOUSEHOLD_INCOME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_BACH_DEGREE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_30TO39",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_18TO24",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_PROF_DEGREE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_LT_1_COLLEGE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_DOCT_DEGREE_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_OVER80",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIPSSTCO",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "EDU_ASSO_DEGREE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BGP_ID",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "HH_INC_GE_35K_LT40K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_70TO79",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_30K_LT35K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_40K_LT45K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_45K_LT50K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIPSST",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "EDU_MAST_DEGREE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ST_ABRV",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "POP_FEMALE_25TO29",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_NONE_M_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_20K_LT25K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_70TO79",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EDU_1ORMORE_COLL_NODEG_F_GE25",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_60TO69",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_10K_LT15K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_FEMALE_40TO49",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HH_INC_GE_150K_LT200K",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POP_MALE_40TO49",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

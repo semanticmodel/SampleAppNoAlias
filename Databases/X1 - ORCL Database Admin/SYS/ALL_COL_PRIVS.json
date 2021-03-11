@@ -1,0 +1,48 @@
+{
+  "physicalTable": {
+    "name": "ALL_COL_PRIVS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "GRANTABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "PRIVILEGE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "GRANTEE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_SCHEMA",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "GRANTOR",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

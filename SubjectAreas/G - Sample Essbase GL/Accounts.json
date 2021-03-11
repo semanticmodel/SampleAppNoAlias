@@ -1,0 +1,54 @@
+{
+  "presentationTable": {
+    "name": "Accounts",
+    "hierarchies": [ {
+        "name": "All Accounts",
+        "alternateNames": [
+          "Accounts"
+        ],
+        "sourceLogicalTable": "logicalTable:03 - Essbase GL.GL All Accounts",
+        "levels": [ {
+            "name": "Gen3,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen3,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 3"
+          },
+          {
+            "name": "Gen4,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen4,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 4"
+          },
+          {
+            "name": "Gen5,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen5,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 5"
+          },
+          {
+            "name": "Gen6,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen6,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 6"
+          },
+          {
+            "name": "Gen7,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen7,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 7"
+          },
+          {
+            "name": "Gen8,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen8,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 8"
+          },
+          {
+            "name": "Gen9,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen9,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 9"
+          },
+          {
+            "name": "Gen10,Accounts",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.GL All Accounts.Gen10,Accounts",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.All Accounts.Account Lvl 10"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_FILESTATXS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PHYBLKRD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WRITETIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PHYRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYWRTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SINGLEBLKRDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYBLKWRT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "READTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "WAIT_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TSNAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FILENAME",
+        "dataType": "VARCHAR",
+        "length": 513,
+        "nullable": true
+      },
+      {
+        "name": "SINGLEBLKRDTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BLOCK_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

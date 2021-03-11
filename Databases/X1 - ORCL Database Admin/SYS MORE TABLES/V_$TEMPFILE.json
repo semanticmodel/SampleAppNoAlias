@@ -1,0 +1,69 @@
+{
+  "physicalTable": {
+    "name": "V_$TEMPFILE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 513
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATION_CHANGE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RFILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ENABLED",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CREATION_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "BLOCK_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATE_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      }
+    ]
+  }
+}

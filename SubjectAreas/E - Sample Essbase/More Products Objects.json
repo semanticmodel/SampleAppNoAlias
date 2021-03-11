@@ -1,0 +1,42 @@
+{
+  "presentationTable": {
+    "name": "More Products Objects",
+    "presentationColumns": [ {
+        "name": "P2k  Product Type Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P2k  Product Type Key"
+      },
+      {
+        "name": "P1s  Product Memnor",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P1s  Product Memnor"
+      },
+      {
+        "name": "P2s  Product Type Memnor",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P2s  Product Type Memnor"
+      },
+      {
+        "name": "P3k  LOB Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P3k  LOB Key"
+      },
+      {
+        "name": "P3s  LOB Memnor",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P3s  LOB Memnor"
+      },
+      {
+        "name": "P4k  Brand Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P4k  Brand Key"
+      },
+      {
+        "name": "P4s  Brand Memnor",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.P4s  Brand Memnor"
+      },
+      {
+        "name": "All Products -  Memnor",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.All Products -  Memnor"
+      },
+      {
+        "name": "All Products - Member Key",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D1 Products.All Products - Member Key"
+      }
+    ]
+  }
+}

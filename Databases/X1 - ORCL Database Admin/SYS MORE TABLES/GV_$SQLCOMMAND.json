@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "GV_$SQLCOMMAND",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMMAND_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

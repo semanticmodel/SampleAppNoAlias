@@ -1,0 +1,50 @@
+{
+  "presentationTable": {
+    "name": "More Office Objects",
+    "presentationColumns": [ {
+        "name": "D1k  Office Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D1k  Office Key"
+      },
+      {
+        "name": "D2k  Dept Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D2k  Dept Key"
+      },
+      {
+        "name": "D3k  Org Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D3k  Org Key"
+      },
+      {
+        "name": "D4k  Company Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D4k  Company Key"
+      },
+      {
+        "name": "Office - Address Key",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Address Key"
+      },
+      {
+        "name": "Office - Latitude",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Latitude"
+      },
+      {
+        "name": "Office - Longitude",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Longitude"
+      },
+      {
+        "name": "All Offices",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.All Offices"
+      },
+      {
+        "name": "All Geos",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.All Geos"
+      },
+      {
+        "name": "Fcst Hier - All Offices",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Fcst Hier - All Offices"
+      },
+      {
+        "name": "Office - Address2",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Address2"
+      }
+    ]
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "description": "Customer dimension attribute objects",
+    "presentationColumns": [ {
+        "name": "C0  Customer Number",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D6 Customers.C0  Customer Number",
+        "description": "Help : \r\nStores the customer number."
+      },
+      {
+        "name": "C1  Customer Name",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D6 Customers.C1  Customer Name",
+        "description": "Help : \r\nStores the customer name as first name + last name."
+      },
+      {
+        "name": "C7 Marital Status (Rel Lookup)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D6 Customers.C7 Marital Status (Rel Lookup)",
+        "description": "Help : \r\nStores the product's color description."
+      },
+      {
+        "name": "C7k  Marital Status Key",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D6 Customers.C7k  Marital Status Key"
+      }
+    ]
+  }
+}

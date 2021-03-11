@@ -1,0 +1,105 @@
+{
+  "presentationTable": {
+    "name": "India Demographics",
+    "alternateNames": [
+      "Indc Ind States"
+    ],
+    "presentationColumns": [ {
+        "name": "State Name 1",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.State Name 1"
+      },
+      {
+        "name": "State Name 2",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.State Name 2"
+      },
+      {
+        "name": "District Name 1",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.District Name 1"
+      },
+      {
+        "name": "District Name 2",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.District Name 2"
+      },
+      {
+        "name": "Subdistrict Name 1",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Subdistrict Name 1",
+        "alternateNames": [
+          "Subdistricts Name 1"
+        ]
+      },
+      {
+        "name": "Subdistrict Name 2",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Subdistrict Name 2",
+        "alternateNames": [
+          "Subdistricts Name 2"
+        ]
+      },
+      {
+        "name": "Neighbourhood Name 1",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Neighbourhood Name 1"
+      },
+      {
+        "name": "Neighbourhood Name 2",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Neighbourhood Name 2"
+      },
+      {
+        "name": "State Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.State Code",
+        "alternateNames": [
+          "State Id"
+        ]
+      },
+      {
+        "name": "District Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.District Code",
+        "alternateNames": [
+          "District Id"
+        ]
+      },
+      {
+        "name": "Subdistrict Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Subdistrict Code",
+        "alternateNames": [
+          "Subdistricts Code"
+        ]
+      },
+      {
+        "name": "Neighbourhood Code",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Areas.Neighbourhood Code",
+        "alternateNames": [
+          "Neighbourhoods Code"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "India Areas",
+        "sourceLogicalTable": "logicalTable:07 - Spatial Samples.India Areas",
+        "levels": [ {
+            "name": "All India",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.India Areas.All India"
+          },
+          {
+            "name": "State",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.India Areas.State",
+            "displayColumn": "presentationColumn:L - Geo Loc.India Demographics.State Name 1"
+          },
+          {
+            "name": "Districts",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.India Areas.Districts",
+            "displayColumn": "presentationColumn:L - Geo Loc.India Demographics.District Name 1"
+          },
+          {
+            "name": "Subdistricts",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.India Areas.Subdistricts",
+            "displayColumn": "presentationColumn:L - Geo Loc.India Demographics.Subdistrict Name 1"
+          },
+          {
+            "name": "Neighbourhoods",
+            "sourceLogicalLevel": "logicalLevel:07 - Spatial Samples.India Areas.Neighbourhoods",
+            "displayColumn": "presentationColumn:L - Geo Loc.India Demographics.Neighbourhood Name 1"
+          }
+        ]
+      }
+    ]
+  }
+}

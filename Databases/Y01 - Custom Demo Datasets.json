@@ -1,0 +1,205 @@
+{
+  "database": {
+    "name": "Y01 - Custom Demo Datasets",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 10,
+          "tempTablePrefix": "TT"
+        }
+      },
+      {
+        "name": "Connection Pool Init",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 10,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#3",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.DATE_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.DATE_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#5",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_REPS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_REPS.SALESREP_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.SALESREP_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#6",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS.SCENARIO_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.SCENARIO_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#2",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PART_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.PART_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUST_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.BILLTOCUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#1",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST.ENDCUST_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.ENDCUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_ORDERS_Foreign Key#4",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS.SALESCHANNEL_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_ORDERS.SALESCHANNEL_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#6",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS.SCENARIO_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.SCENARIO_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#3",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FISCAL_PERIODS.DATE_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.DATE_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#4",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_CHANNELS.SALESCHANNEL_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.SALESCHANNEL_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#1",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_END_CUST.ENDCUST_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.ENDCUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#5",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_REPS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SALES_REPS.SALESREP_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.SALESREP_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUST_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.BILLTOCUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "BBIL_FACT_BOOKINGS_Foreign Key#2",
+        "leftTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS",
+        "rightTable": "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_PRODUCTS.PART_ID",
+            "rightColumn": "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_FACT_BOOKINGS.PART_ID"
+          }
+        ]
+      }
+    ]
+  }
+}

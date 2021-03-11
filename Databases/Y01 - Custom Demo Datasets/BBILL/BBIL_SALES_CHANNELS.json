@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "BBIL_SALES_CHANNELS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SALESCHANNEL_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "SALESCHANNEL",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SALESCHANNELREGION",
+        "dataType": "VARCHAR",
+        "length": 160
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "physicalTable": {
+    "name": "MOVIEAPP_ACTIVITY_LOG",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "DATEID",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "DATETIMEID",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ACTIVITYID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "CUSTID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "RATING",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "GENREID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "PRICE",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "MOVIEID",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "RECOMMENDED",
+        "dataType": "VARCHAR",
+        "length": 5,
+        "nullable": true
+      }
+    ]
+  }
+}

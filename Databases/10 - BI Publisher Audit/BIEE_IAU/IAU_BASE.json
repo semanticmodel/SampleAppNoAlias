@@ -1,0 +1,196 @@
+{
+  "physicalTable": {
+    "name": "IAU_BASE",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "IAU_CONTEXTFIELDS",
+        "dataType": "VARCHAR",
+        "length": 2000
+      },
+      {
+        "name": "IAU_HOSTID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_COMPONENTID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_APPLICATIONNAME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_HOMEINSTANCE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_REMOTEIP",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_SECONDARYSESSIONID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_ROLES",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_HOSTINGCLIENTID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_THREADID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_HOSTNWADDR",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_INITIATOR",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_ORGID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_SESSIONID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_FAILURECODE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_PROCESSID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_AUTHENTICATIONMETHOD",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IAU_COMPONENTTYPE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_ORACLEHOME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_COMPONENTDATA",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "IAU_MESSAGETEXT",
+        "dataType": "VARCHAR",
+        "length": 2000
+      },
+      {
+        "name": "IAU_TSTZORIGINATING",
+        "dataType": "TIMESTAMP"
+      },
+      {
+        "name": "IAU_TARGETCOMPONENTTYPE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_DOMAINNAME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_TARGET",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_COMPONENTNAME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_INSTANCEID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_ECID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_EVENTTYPE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_RID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_EVENTSTATUS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IAU_DOWNSTREAMCOMPONENTID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_EVENTCATEGORY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_UPSTREAMCOMPONENTID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_TRANSACTIONID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_MODULEID",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "IAU_RESOURCE",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

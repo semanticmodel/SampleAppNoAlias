@@ -1,0 +1,49 @@
+{
+  "physicalTable": {
+    "name": "BBIL_FISCAL_PERIODS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TRANSACTION_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "FISCAL_MONTH",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "PLOT_QTR",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "FISCAL_YEAR",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "FISCAL_WE_DATE",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "DATE_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "FISCAL_WEEK_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 39
+      },
+      {
+        "name": "FISCAL_QTR",
+        "dataType": "VARCHAR",
+        "length": 34
+      }
+    ]
+  }
+}

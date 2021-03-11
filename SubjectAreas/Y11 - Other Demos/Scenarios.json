@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Scenarios",
+    "alternateNames": [
+      "Bbil Scenarios"
+    ],
+    "presentationColumns": [ {
+        "name": "Scenario",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Scenarios.Scenario"
+      },
+      {
+        "name": "Scenario Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Scenarios.Scenario Id"
+      },
+      {
+        "name": "Scenario Parent",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Scenarios.Scenario Parent"
+      }
+    ]
+  }
+}

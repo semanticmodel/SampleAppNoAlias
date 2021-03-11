@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "DBA_SYS_PRIVS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PRIVILEGE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "GRANTEE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ADMIN_OPTION",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "presentationTable": {
+    "name": "Schedules",
+    "alternateNames": [
+      "90 Schedules"
+    ],
+    "presentationColumns": [ {
+        "name": "Analysis Function",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Analysis Function"
+      },
+      {
+        "name": "Itinerary",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Itinerary"
+      },
+      {
+        "name": "Flight Leg",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Flight Leg"
+      },
+      {
+        "name": "Origin",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Origin"
+      },
+      {
+        "name": "Destination",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Destination"
+      },
+      {
+        "name": "Route",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Route"
+      },
+      {
+        "name": "Departure Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Departure Time"
+      },
+      {
+        "name": "Arrival Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Arrival Time"
+      },
+      {
+        "name": "Flight Number",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Flight Number"
+      },
+      {
+        "name": "Airline",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Airline"
+      },
+      {
+        "name": "Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Flight Time"
+      },
+      {
+        "name": "Wait Time at Airport",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.90 Schedules.Wait Time at Airport"
+      }
+    ]
+  }
+}

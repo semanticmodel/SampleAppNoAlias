@@ -1,0 +1,252 @@
+{
+  "logicalTable": {
+    "name": "D07 Orders Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Customer Collect Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).CUSTOMER_COLLECT_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Free Shipping Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).FREE_SHIPPING_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Giftwrap Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).GIFTWRAP_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Giftwrap Message",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).GIFTWRAP_MESSAGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Shipped Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_SHIPPED_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Status Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_STATUS_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ship To Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).SHIP_TO_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ship To Phone Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).SHIP_TO_PHONE_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Total",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Attributes)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes).ORDER_TOTAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Status Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2,\r\n'FR',\r\n'ORDER_STATUS_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D07 Orders Attributes.Order Status Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ORDERS (Attributes)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Attributes)"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Status",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Order Status Code"
+          ],
+          "displayColumn": "logicalColumn:Order Status Code"
+        },
+        {
+          "name": "Orders Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Order ID"
+          ],
+          "displayColumn": "logicalColumn:Order ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H07 Orders Attributes [branch at level 'Status']",
+          "levels": [ "Total", "Status", "Orders Detail" ]
+        }
+      ]
+    }
+  }
+}

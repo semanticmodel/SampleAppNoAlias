@@ -1,0 +1,132 @@
+{
+  "businessModel": {
+    "name": "Y10 - Movie Demo (ORCL)",
+    "joins": [      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315901343841580",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customers",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315871343841579",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Time",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315481343841447",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customer Geography",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315961343841583",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Genre",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315451343841445",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315571343841480",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Genre",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movie Activities",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315511343841449",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customer Segment",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:316051343841587",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Crew",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315541343841451",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customers",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315841343841577",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Cast",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315661343841514",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Crew",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movies",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315601343841482",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Activities",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movie Activities",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315991343841585",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customer Segment",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315931343841582",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Customer Geography",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:316021343841586",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Transactions",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315691343841516",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Cast",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movies",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315631343841512",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movies",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Y10 - Movie Demo (ORCL):Movie:Movie:Relationship_2004:315721343841518",
+        "leftTable": "logicalTable:Y10 - Movie Demo (ORCL).Movie Genre",
+        "rightTable": "logicalTable:Y10 - Movie Demo (ORCL).Facts - Movies",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

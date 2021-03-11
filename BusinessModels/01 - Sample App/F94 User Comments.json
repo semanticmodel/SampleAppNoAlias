@@ -1,0 +1,165 @@
+{
+  "logicalTable": {
+    "name": "F94 User Comments",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Posted Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.D_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.DIM1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filed By User",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.FILED_BY_USER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Report",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.REPORT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User Comment",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.USER_COMMENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "No of Comments",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "USER_COMMENTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS.USER_COMMENT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Posted Month #",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "MonthName(%1 )",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.F94 User Comments.Posted Date"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Posted Quarter #",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(Year( %1) as char(2)) || 'Q' || cast(Quarter_Of_Year( %1 ) as char(2))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.F94 User Comments.Posted Date"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Posted Year",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "Year(%1 ) ",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.F94 User Comments.Posted Date"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "USER_COMMENTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE_OTHER.USER_COMMENTS"
+          ]
+        }
+      }
+    ]
+  }
+}

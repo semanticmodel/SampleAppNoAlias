@@ -1,0 +1,40 @@
+{
+  "physicalTable": {
+    "name": "V_$TABLESPACE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ENCRYPT_IN_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BIGFILE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INCLUDED_IN_DATABASE_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "FLASHBACK_ON",
+        "dataType": "VARCHAR",
+        "length": 3
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "physicalTable": {
+    "name": "DBA_HIST_SESS_TIME_STATS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SUM_USER_IO_WAIT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUM_CPU_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SESSION_TYPE",
+        "dataType": "VARCHAR",
+        "length": 64,
+        "nullable": true
+      },
+      {
+        "name": "SUM_SYS_IO_WAIT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MIN_LOGON_TIME",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

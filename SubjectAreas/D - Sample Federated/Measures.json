@@ -1,0 +1,80 @@
+{
+  "presentationTable": {
+    "name": "Measures",
+    "description": "This folder contains all the base facts like Revenue, Quantity, Target, Headcount and so on. All the metrics in this folder have the aggregation type as Sum unless explicitly specified.",
+    "presentationColumns": [ {
+        "name": "1a- Revenue (Orcl Db Tables Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1a- Revenue (Orcl Db Tables Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "1b- Revenue (Essbase Cube Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1b- Revenue (Essbase Cube Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "1d- Revenue (Orcl Db Cube Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1d- Revenue (Orcl Db Cube Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "1f- Revenue (XML File Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1f- Revenue (XML File Only)"
+      },
+      {
+        "name": "==== Federated Metrics ========",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.==== Federated Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "2a- Qty (Orcl Db Tables Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2a- Qty (Orcl Db Tables Only)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "2b- Qty (Essbase Cube Federated)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2b- Qty (Essbase Cube Federated)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "2d- Qty (Orcl Db Cubes Federated)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2d- Qty (Orcl Db Cubes Federated)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "2f- Qty (XML File Federated)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.2f- Qty (XML File Federated)"
+      },
+      {
+        "name": "==== Calculated Metrics ========",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.==== Calculated Metrics ========",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries"
+      },
+      {
+        "name": "20a - Unit Price (Orcl Db/Orcl Db)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.20a - Unit Price (Orcl Db/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "20b - Unit Price (Essb Cube/Orcl Db)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.20b - Unit Price (Essb Cube/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "20d - Unit Price (Orcl Cube/Orcl Db)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.20d - Unit Price (Orcl Cube/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "20f - Unit Price (XML File/Orcl Db)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.20f - Unit Price (XML File/Orcl Db)",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      },
+      {
+        "name": "Source Database Info",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.Source Database Info",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions"
+      }
+    ]
+  }
+}

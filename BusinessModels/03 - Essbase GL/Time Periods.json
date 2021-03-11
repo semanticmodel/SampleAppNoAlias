@@ -1,0 +1,276 @@
+{
+  "logicalTable": {
+    "name": "Time Periods",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Total Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Time Periods"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Time Periods"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2 Time Periods - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Time Periods - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Time Periods - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarters",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Time Periods"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen3,Time Periods"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3 Time Periods - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Time Periods - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen3,Time Periods - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Months",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen4 Time Periods - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Time Periods"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Time Periods"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4 Time Periods - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Time Periods - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Time Periods - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Time Periods - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Time Periods - Default"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Time Periods - Default"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4 Time Periods - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Time Periods - Memnor"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Time Periods - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hierarchical",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Time Periods.Months"
+        ]
+      },
+      {
+        "name": "LTS2 GL Flattened",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Time Periods.Months"
+        ]
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Year",
+      "logicalLevels": [
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen2 Time Periods - Member Key"
+          ]
+        },
+        {
+          "name": "Quarters",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen3 Time Periods - Member Key"
+          ]
+        },
+        {
+          "name": "Months",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Months"
+          ],
+          "displayColumn": "logicalColumn:Months",
+          "chronologicalKey": "logicalColumn:Months"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Time Periods [branch at level 'Quarters']",
+          "levels": [ "Year", "Quarters", "Months" ]
+        }
+      ]
+    }
+  }
+}

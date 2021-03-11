@@ -1,0 +1,69 @@
+{
+  "presentationTable": {
+    "name": "Fact Bookings",
+    "alternateNames": [
+      "Bbil Fact Bookings"
+    ],
+    "presentationColumns": [ {
+        "name": "# Of Billtocust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.# Of Billtocust Id"
+      },
+      {
+        "name": "Comments",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Comments"
+      },
+      {
+        "name": "Date Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Date Id"
+      },
+      {
+        "name": "Debit Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Debit Number"
+      },
+      {
+        "name": "# Of Endcust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.# Of Endcust Id"
+      },
+      {
+        "name": "Ext Amount",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Ext Amount"
+      },
+      {
+        "name": "Line Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Line Number"
+      },
+      {
+        "name": "# Of Order Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.# Of Order Number"
+      },
+      {
+        "name": "# Of Part Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.# Of Part Id"
+      },
+      {
+        "name": "Po#",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Po#"
+      },
+      {
+        "name": "Saleschannel Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Saleschannel Id"
+      },
+      {
+        "name": "Salesrep Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Salesrep Id"
+      },
+      {
+        "name": "Scenario Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Scenario Id"
+      },
+      {
+        "name": "Unit Price",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Unit Price"
+      },
+      {
+        "name": "Units",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Bookings.Units"
+      }
+    ]
+  }
+}

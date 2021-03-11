@@ -1,0 +1,347 @@
+{
+  "logicalTable": {
+    "name": "6 Dim Tasks",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Time Task Started",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_START_TIME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_START_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hour Task Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( HOUR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Week Day Task Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " DAYOFWEEK(%1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Month Task Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( MONTH  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Date Task Started",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": " CAST (%1 AS DATE )",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_START_TIME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as date)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_START_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Qtr Task Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( QUARTER_OF_YEAR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Yr Task Started",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " EXTRACT( YEAR  FROM %1)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.SEQUENCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.SEQUENCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task End Time",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_END_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Activity Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Instance ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_INSTANCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Duration (Min)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_MINUTE , %1, %2)",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Time Task Started",
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).6 Dim Tasks.Task End Time"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Task Discriminator",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_DISCRIMINATOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Participant",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_PARTICIPANT"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_PARTICIPANT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Task Priority",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_PRIORITY"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_PRIORITY"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "9 Facts Taskperf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        }
+      },
+      {
+        "name": "9 Facts ActiveTasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Tasks",
+      "logicalLevels": [
+        {
+          "name": "All Tasks",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Task Details",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Task Sequence Id",
+            "logicalColumn:Activity Id",
+            "logicalColumn:Process Instance ID"
+          ],
+          "displayColumn": "logicalColumn:Task Sequence Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "6 Tasks Hier",
+          "levels": [ "All Tasks", "Task Details" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,414 @@
+{
+  "businessModel": {
+    "name": "01 - Sample App",
+    "description": "\r\n",
+    "joins": [      {
+        "name": "Relationship_2004:353981268837471",
+        "leftTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App.F93 Actions Entries",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:86861261413728",
+        "leftTable": "logicalTable:01 - Sample App.D4 Offices and Channels (M:M Joins)",
+        "rightTable": "logicalTable:01 - Sample App.F3 M:M Quotas Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:302651466051425",
+        "leftTable": "logicalTable:01 - Sample App.D6a Customers (SCD ViewQuery)",
+        "rightTable": "logicalTable:01 - Sample App.M1 Segment Cache Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:295061266339882",
+        "leftTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App.F6 Logical Calculations Examples",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1865331300957682",
+        "leftTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "rightTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:6051210742953#1",
+        "leftTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1865301300957682",
+        "leftTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "rightTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1858541300455682",
+        "leftTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "rightTable": "logicalTable:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1868241300979932",
+        "leftTable": "logicalTable:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:84341261071730",
+        "leftTable": "logicalTable:01 - Sample App.F2 Fragmented Measures Targets",
+        "rightTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2918031423043622",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F94 User Comments",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:978101290688580",
+        "leftTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F92 Report Comments",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2918641423045905",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F94 User Comments",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2643191375692773",
+        "leftTable": "logicalTable:01 - Sample App.D6b Customers (SCD Session)",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2642951375692725",
+        "leftTable": "logicalTable:01 - Sample App.D6a Customers (SCD ViewQuery)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:6111210742953#1",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2922011436105883",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.X_Binary Objects",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:275151265635518",
+        "leftTable": "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:357011268846946",
+        "leftTable": "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F91 SalesRep Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2568981361791359",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.WS_Weather_Check",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2611241366954490",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.WS_USDollar_ExhangeRate",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:195391212404727#1",
+        "leftTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2567351361460928",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F81 Database Functions Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:63261257862862",
+        "leftTable": "logicalTable:01 - Sample App.F3 M:M Quotas Base Measures",
+        "rightTable": "logicalTable:01 - Sample App.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2567291361460914",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F81 Database Functions Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1866731300961543",
+        "leftTable": "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:275181265635522",
+        "leftTable": "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F3 M:M Quotas Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:84311261071730",
+        "leftTable": "logicalTable:01 - Sample App.F2 Fragmented Measures Targets",
+        "rightTable": "logicalTable:01 - Sample App.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:978201290688681",
+        "leftTable": "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F92 Report Comments",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:6171210742953#1",
+        "leftTable": "logicalTable:01 - Sample App.D4 Offices and Channels (M:M Joins)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2567381361460934",
+        "leftTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F81 Database Functions Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:84581261071734",
+        "leftTable": "logicalTable:01 - Sample App.F4 Headcount Base Measures",
+        "rightTable": "logicalTable:01 - Sample App.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:1865391300957682",
+        "leftTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "rightTable": "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:978231290688689",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F92 Report Comments",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:295031266339874",
+        "leftTable": "logicalTable:01 - Sample App.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App.F5 Time Series and Level Based Examples",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1865361300957682",
+        "leftTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "rightTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2643041375692735",
+        "leftTable": "logicalTable:01 - Sample App.D6a Customers (SCD ViewQuery)",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2643161375692770",
+        "leftTable": "logicalTable:01 - Sample App.D6b Customers (SCD Session)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:302311466050112",
+        "leftTable": "logicalTable:01 - Sample App.M02 Mktg Res Set Headers Customers",
+        "rightTable": "logicalTable:01 - Sample App.M03 Mktg Saved Res Set Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1866271300957741",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1866301300957757",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F7 Datamining Regression Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:63381257863058",
+        "leftTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F3 M:M Quotas Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:318001267628943",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2664341376389715",
+        "leftTable": "logicalTable:01 - Sample App.D7b Orders (TimeZone Converted)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:318131267629164",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F2 Fragmented Measures Targets",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1875751301653053",
+        "leftTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "rightTable": "logicalTable:01 - Sample App.F80 Data Mining LTV Tree Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:218871263492729",
+        "leftTable": "logicalTable:01 - Sample App.F90 Time Facts",
+        "rightTable": "logicalTable:01 - Sample App.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:6141210742953#1",
+        "leftTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY",
+        "drivingTable": "logicalTable:01 - Sample App.D1 Products (Level Based Hier)"
+      },
+      {
+        "name": "Relationship_2004:2387231338911489",
+        "leftTable": "logicalTable:01 - Sample App.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App.F1 Time Based Fragmentation",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2643011375692732",
+        "leftTable": "logicalTable:01 - Sample App.D6a Customers (SCD ViewQuery)",
+        "rightTable": "logicalTable:01 - Sample App.F80 Data Mining LTV Tree Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#1:Relationship_2004:65421258565038",
+        "leftTable": "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2567321361460922",
+        "leftTable": "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F81 Database Functions Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:1875721301653033",
+        "leftTable": "logicalTable:01 - Sample App.D8 Data Mining Cust LTV Tree Nodes",
+        "rightTable": "logicalTable:01 - Sample App.F80 Data Mining LTV Tree Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:318031267628966",
+        "leftTable": "logicalTable:01 - Sample App.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App.F4 Headcount Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:302591466051417",
+        "leftTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "rightTable": "logicalTable:01 - Sample App.M1 Segment Cache Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:275211265635527",
+        "leftTable": "logicalTable:01 - Sample App.D2 Products (Ragged SkipLevels Hier)",
+        "rightTable": "logicalTable:01 - Sample App.F2 Fragmented Measures Targets",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:302621466051421",
+        "leftTable": "logicalTable:01 - Sample App.D6b Customers (SCD Session)",
+        "rightTable": "logicalTable:01 - Sample App.M1 Segment Cache Customers",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2643101375692765",
+        "leftTable": "logicalTable:01 - Sample App.D6b Customers (SCD Session)",
+        "rightTable": "logicalTable:01 - Sample App.F80 Data Mining LTV Tree Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

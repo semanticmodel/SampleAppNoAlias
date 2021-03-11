@@ -1,0 +1,55 @@
+{
+  "presentationTable": {
+    "name": "Passengers",
+    "alternateNames": [
+      "Traffic Facts#2"
+    ],
+    "presentationColumns": [ {
+        "name": "Passengers",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Passengers"
+      },
+      {
+        "name": "# of Seats",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.# of Seats"
+      },
+      {
+        "name": "PAX Load Factor",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.PAX Load Factor",
+        "description": "Percentage ratio of passengers to available seats.",
+        "alternateNames": [
+          "Passenger Load Factor"
+        ]
+      },
+      {
+        "name": "Passengers x Miles",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Passengers x Miles",
+        "description": "Passengers Miles Transported (for each flight, # of passengers x distance)",
+        "alternateNames": [
+          "Passengers-Miles"
+        ]
+      },
+      {
+        "name": "Avg PAX per Flight",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.Avg PAX per Flight"
+      },
+      {
+        "name": "P Ago Passengers",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.P Ago Passengers",
+        "description": "Non-Stop Segment Passengers Transported",
+        "alternateNames": [
+          "P_Ago Passengers",
+          "Period Ago Passengers"
+        ]
+      },
+      {
+        "name": "P Ago Passengers x Miles",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Market Facts.P Ago Passengers x Miles",
+        "description": "Non-Stop Segment Passengers Transported",
+        "alternateNames": [
+          "P Ago Passengers-Miles",
+          "Period Ago Passengers-Miles"
+        ]
+      }
+    ]
+  }
+}

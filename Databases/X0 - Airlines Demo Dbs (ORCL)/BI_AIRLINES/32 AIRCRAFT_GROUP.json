@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "32 AIRCRAFT_GROUP",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.AIRCRAFT_GROUP",
+    "caching": {
+      "enable": true
+    }
+  }
+}

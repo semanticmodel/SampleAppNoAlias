@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "D91 Associantion Rules",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ASSO_RULES_V",
+    "caching": {
+      "enable": true
+    }
+  }
+}

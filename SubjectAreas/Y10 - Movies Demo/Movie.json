@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Movie",
+    "presentationColumns": [ {
+        "name": "Movie ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie.Movie ID"
+      },
+      {
+        "name": "Popularity",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie.Popularity"
+      },
+      {
+        "name": "Title",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie.Title"
+      },
+      {
+        "name": "Vote Count",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie.Vote Count"
+      },
+      {
+        "name": "Movie Year",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie.Movie Year"
+      }
+    ]
+  }
+}

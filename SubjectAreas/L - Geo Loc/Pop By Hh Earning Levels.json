@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Pop By Hh Earning Levels",
+    "presentationColumns": [ {
+        "name": "Total Pop Hh Earn 150k - 300k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn 150k - 300k"
+      },
+      {
+        "name": "Total Pop Hh Earn 300k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn 300k - 500k"
+      },
+      {
+        "name": "Total Pop Hh Earn 500k - 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn 500k - 1m"
+      },
+      {
+        "name": "Total Pop Hh Earn 75k - 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn 75k - 150k"
+      },
+      {
+        "name": "Total Pop Hh Earn Gt 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn Gt 1m"
+      },
+      {
+        "name": "Total Pop Hh Earn Lt 75k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Hh Earn Lt 75k"
+      }
+    ]
+  }
+}

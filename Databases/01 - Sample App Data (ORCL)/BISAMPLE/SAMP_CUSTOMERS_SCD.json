@@ -1,0 +1,109 @@
+{
+  "physicalTable": {
+    "name": "SAMP_CUSTOMERS_SCD",
+    "description": "Customers Dimension table: Stores customer dimension attribute information",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_CUSTOMERS_D.xml",
+    "physicalColumns": [ {
+        "name": "Status_Key",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Status Key: Stores customer status as text"
+      },
+      {
+        "name": "Crdt_Rate",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Credit Rate: Stores customer credit rate information as an integer"
+      },
+      {
+        "name": "End_Time",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "Address_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Address Key: Joins to Address_Key of Addresses dimension table."
+      },
+      {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Name: Stores the customer name in text"
+      },
+      {
+        "name": "Income_Lvl",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Income level: Stores the information in text"
+      },
+      {
+        "name": "Type_Key",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Type Key: Stores the information as text"
+      },
+      {
+        "name": "Cust_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Cust Key: Surrogate key of the customer dimension table."
+      },
+      {
+        "name": "Fst_Contact_Dt",
+        "dataType": "DATE",
+        "nullable": true,
+        "description": "First Contact Date: Stores the information in date format"
+      },
+      {
+        "name": "Marital_St",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Marital Status: Stores the information in text"
+      },
+      {
+        "name": "Segment_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Segment Key: Joins to segment_key in customer segments dimension table"
+      },
+      {
+        "name": "Num_Attribute",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Credit Rate: Stores customer credit rate information as an integer"
+      },
+      {
+        "name": "Birth_Dt",
+        "dataType": "DATE",
+        "nullable": true,
+        "description": "Birth Date: Stores the information in date format"
+      },
+      {
+        "name": "Start_Time",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "Lst_Order_Dt",
+        "dataType": "DATETIME",
+        "nullable": true,
+        "description": "Last Order Date: Stores the information in date format"
+      },
+      {
+        "name": "Gender",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Income level: Stores the information in text"
+      }
+    ]
+  }
+}

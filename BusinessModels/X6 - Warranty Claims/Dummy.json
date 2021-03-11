@@ -1,0 +1,52 @@
+{
+  "logicalTable": {
+    "name": "Dummy",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Classification",
+        "dataType": "VARCHAR",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TEXT_CLASSIFICATION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSIFICATION.CLASSIFICATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Search Query String",
+        "dataType": "VARCHAR",
+        "writeable": true,
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "TEXT_CLASSIFICATION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSIFICATION.QUERY_STRING"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "TEXT_CLASSIFICATION",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.TEXT_CLASSIFICATION"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,441 @@
+{
+  "logicalTable": {
+    "name": "Vehicle - Dimension",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Drive Train",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.DRIVE_TRAIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lateral Run Out",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.LATERAL_RUN_OUT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Cyls",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.NUM_CYLS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pitch Circle Diameter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.PITCH_CIRCLE_DIAMETER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod Date",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.PROD_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.PRODUCTION_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Period",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.PRODUCTION_PERIOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Production Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.PRODUCTION_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Diameter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.ROTOR_DIAMETER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Gap",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.ROTOR_GAP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Thickness",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.ROTOR_THICKNESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rotor Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.ROTOR_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sale Date",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.SALE_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Exposure",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEH_EXPOSURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Veh Float",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEH_FLOAT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Assembly Plant",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_ASSEMBLY_PLANT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Build Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_BUILD_COUNTRY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Build Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_BUILD_REGION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Exposure",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_EXPOSURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Float",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_FLOAT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Make",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_MAKE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Manufacturer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_MANUFACTURER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_MODEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Vehicle Model Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VEHICLE_MODEL_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "VIN",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_VEHICLE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE.VIN"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DIM_VEHICLE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_VEHICLE"
+          ]
+        }
+      }
+    ]
+  }
+}

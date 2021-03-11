@@ -1,0 +1,68 @@
+{
+  "physicalTable": {
+    "name": "ODM_MINING_MODEL_ATTRIBUTES_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DATA_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ATTRIBUTE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 11
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "DATA_TYPE",
+        "dataType": "VARCHAR",
+        "length": 106
+      },
+      {
+        "name": "ATTRIBUTE_SPEC",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "DATA_PRECISION",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DATA_SCALE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "USAGE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "TARGET",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ATTRIBUTE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      }
+    ]
+  }
+}

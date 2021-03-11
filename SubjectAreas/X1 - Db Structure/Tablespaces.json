@@ -1,0 +1,101 @@
+{
+  "presentationTable": {
+    "name": "Tablespaces",
+    "alternateNames": [
+      "TS- DBA_TABLESPACES"
+    ],
+    "presentationColumns": [ {
+        "name": "Allocation Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Allocation Type"
+      },
+      {
+        "name": "Bigfile",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Bigfile"
+      },
+      {
+        "name": "Block Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Block Size"
+      },
+      {
+        "name": "Compress For",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Compress For"
+      },
+      {
+        "name": "Contents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Contents"
+      },
+      {
+        "name": "Def Tab Compression",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Def Tab Compression"
+      },
+      {
+        "name": "Encrypted",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Encrypted"
+      },
+      {
+        "name": "Extent Management",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Extent Management"
+      },
+      {
+        "name": "Force Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Force Logging"
+      },
+      {
+        "name": "Initial Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Initial Extent"
+      },
+      {
+        "name": "Logging",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Logging"
+      },
+      {
+        "name": "Max Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Max Extents"
+      },
+      {
+        "name": "Max Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Max Size"
+      },
+      {
+        "name": "Min Extents",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Min Extents"
+      },
+      {
+        "name": "Min Extlen",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Min Extlen"
+      },
+      {
+        "name": "Next Extent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Next Extent"
+      },
+      {
+        "name": "Pct Increase",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Pct Increase"
+      },
+      {
+        "name": "Plugged In",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Plugged In"
+      },
+      {
+        "name": "Predicate Evaluation",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Predicate Evaluation"
+      },
+      {
+        "name": "Retention",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Retention"
+      },
+      {
+        "name": "Segment Space Management",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Segment Space Management"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Status"
+      },
+      {
+        "name": "Tablespace Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.TS- DBA_TABLESPACES.Tablespace Name"
+      }
+    ]
+  }
+}

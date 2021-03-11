@@ -1,0 +1,133 @@
+{
+  "physicalTable": {
+    "name": "ORDERS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "ORDER_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 8,
+        "nullable": true
+      },
+      {
+        "name": "GIFTWRAP_MESSAGE",
+        "dataType": "VARCHAR",
+        "length": 2000
+      },
+      {
+        "name": "CUSTOMER_COLLECT_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "GIFTWRAP_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "PAYMENT_OPTION_ID",
+        "dataType": "DOUBLE",
+        "length": 16
+      },
+      {
+        "name": "ORDER_SHIPPED_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SHIP_TO_NAME",
+        "dataType": "VARCHAR",
+        "length": 120
+      },
+      {
+        "name": "COLLECTION_WAREHOUSE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "COUPON_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ORDER_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "DISCOUNT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FREE_SHIPPING_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "ORDER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "SHIP_TO_ADDRESS_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SHIP_TO_PHONE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "SHIPPING_OPTION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "ORDER_STATUS_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

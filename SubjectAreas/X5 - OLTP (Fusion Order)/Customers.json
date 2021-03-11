@@ -1,0 +1,83 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "presentationColumns": [ {
+        "name": "Last Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Last Name"
+      },
+      {
+        "name": "First Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.First Name"
+      },
+      {
+        "name": "Gender Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Gender Lookup"
+      },
+      {
+        "name": "Gender",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Gender"
+      },
+      {
+        "name": "Marital Status Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Marital Status Lookup"
+      },
+      {
+        "name": "Marital Status Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Marital Status Code"
+      },
+      {
+        "name": "Person Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Person Type Lookup"
+      },
+      {
+        "name": "Person Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Person Type Code"
+      },
+      {
+        "name": "Phone Number",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Phone Number"
+      },
+      {
+        "name": "Email",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Email"
+      },
+      {
+        "name": "Person ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Person ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Customers Hier",
+        "alternateNames": [
+          "All Customers",
+          "Customers",
+          "H01 Customers"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D01 Customers",
+        "levels": [ {
+            "name": "All Customers",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D01 Customers.Total"
+          },
+          {
+            "name": "Membership Name",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D01 Customers.Membership Name",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Memberships.Membership Name (Lookup Phys)"
+          },
+          {
+            "name": "Person Type",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D01 Customers.Person Type",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Customers.Person Type Code"
+          },
+          {
+            "name": "Customer ID",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D01 Customers.Customer ID",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Customers.Person ID"
+          }
+        ]
+      }
+    ]
+  }
+}

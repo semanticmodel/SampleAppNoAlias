@@ -1,0 +1,738 @@
+{
+  "logicalTable": {
+    "name": "OBJ- ALL_TAB_PARTITIONS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Avg Row Len",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.AVG_ROW_LEN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Space",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.AVG_SPACE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blocks",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.BLOCKS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Buffer Pool",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.BUFFER_POOL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cell Flash Cache",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.CELL_FLASH_CACHE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Chain Cnt",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.CHAIN_CNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Composite",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.COMPOSITE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Compress For",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.COMPRESS_FOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Compression",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.COMPRESSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Empty Blocks",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.EMPTY_BLOCKS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Flash Cache",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.FLASH_CACHE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Freelist Groups",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.FREELIST_GROUPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Freelists",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.FREELISTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Global Stats",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.GLOBAL_STATS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "High Value",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.HIGH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "High Value Length",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.HIGH_VALUE_LENGTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ini Trans",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.INI_TRANS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Initial Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.INITIAL_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Interval",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.INTERVAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Is Nested",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.IS_NESTED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Analyzed",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.LAST_ANALYZED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logging",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.LOGGING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.MAX_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.MAX_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Max Trans",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.MAX_TRANS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.MIN_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Next Extent",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.NEXT_EXTENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Num Rows",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.NUM_ROWS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parent Table Partition",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PARENT_TABLE_PARTITION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Partition Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PARTITION_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Partition Position",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PARTITION_POSITION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pct Free",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PCT_FREE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pct Increase",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PCT_INCREASE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pct Used",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PCT_USED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sample Size",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.SAMPLE_SIZE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Segment Created",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.SEGMENT_CREATED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Subpartition Count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.SUBPARTITION_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Table Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.TABLE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Table Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.TABLE_OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Tablespace Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.TABLESPACE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User Stats",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.USER_STATS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Partitions",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_TAB_PARTITIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS.PARTITION_NAME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALL_TAB_PARTITIONS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.ALL_TAB_PARTITIONS"
+          ]
+        }
+      }
+    ]
+  }
+}

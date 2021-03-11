@@ -1,0 +1,188 @@
+{
+  "logicalTable": {
+    "name": "Us County Dim",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Area",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.AREA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Area_id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.AREA_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cbsa_id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.CBSA_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "County",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "ST_CTY_FIPS",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.COUNTY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "CTY_FIPS",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.CTYFIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Msa_id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.MSA_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.STATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ST_FIPS",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.STFIPS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Stname",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.STNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ST_CTY_FIPS",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "COUNTY",
+              "physicalExpression": {
+                "expressionTemplate": "%1||%2 ",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.STFIPS",
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY.CTYFIPS"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "COUNTY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.COUNTY"
+          ]
+        }
+      }
+    ]
+  }
+}

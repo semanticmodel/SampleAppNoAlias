@@ -1,0 +1,48 @@
+{
+  "presentationTable": {
+    "name": "Carrier",
+    "alternateNames": [
+      "Flight Details"
+    ],
+    "presentationColumns": [ {
+        "name": "Aircraft Grp",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.32 Aircraft Group.Aircraft Grp",
+        "alternateNames": [
+          "Aircraft Group"
+        ]
+      },
+      {
+        "name": "Aircraft Type",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.33 Aircraft Type.Aircraft Type"
+      },
+      {
+        "name": "Pax per Flights Code",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.35 PaxPF Group.Pax per Flights Code"
+      },
+      {
+        "name": "Pax per Flights Grp",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.35 PaxPF Group.Pax per Flights Grp"
+      },
+      {
+        "name": "Carrier",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier",
+        "alternateNames": [
+          "Unique Carrier"
+        ]
+      },
+      {
+        "name": "Carrier Code",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier Code",
+        "description": "Unique Carrier Code. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2). Use this field for analysis across a range of years.",
+        "alternateNames": [
+          "CODE",
+          "Unique Carrier Code"
+        ]
+      },
+      {
+        "name": "Carrier Short",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.31 Carrier.Carrier Short"
+      }
+    ]
+  }
+}

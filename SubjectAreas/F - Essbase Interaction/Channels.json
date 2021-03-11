@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Channels",
+    "presentationColumns": [ {
+        "name": "Gen1,Channels",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Channels.Gen1,Channels"
+      },
+      {
+        "name": "Channel Type",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Channels.Channel Type"
+      },
+      {
+        "name": "Channel Name",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Channels.Channel Name"
+      },
+      {
+        "name": "Channels - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Channels.Channels - Default"
+      },
+      {
+        "name": "Channels - Long Names",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Channels.Channels - Long Names"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Channels",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Integration.Channels",
+        "levels": [ {
+            "name": "Gen1,Channels",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Channels.Gen1,Channels",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Channels.Gen1,Channels"
+          },
+          {
+            "name": "Channel Type",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Channels.Channel Type",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Channels.Channel Type"
+          },
+          {
+            "name": "Channel Name",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Integration.Channels.Channel Name",
+            "displayColumn": "presentationColumn:F - Essbase Interaction.Channels.Channel Name"
+          }
+        ]
+      }
+    ]
+  }
+}

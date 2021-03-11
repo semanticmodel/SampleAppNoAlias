@@ -1,0 +1,118 @@
+{
+  "logicalTable": {
+    "name": "Job",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Agent Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.AGENT_PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Desciption Text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.DESC_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Job Id",
+        "dataType": "UINT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.JOB_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Next Runtime",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.NEXT_RUNTIME_TS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Job",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job.USER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Job",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X2 - Scheduled Jobs (ORCL).Agent Status.Job.Job"
+          ]
+        }
+      }
+    ]
+  }
+}

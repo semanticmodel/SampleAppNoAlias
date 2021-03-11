@@ -1,0 +1,78 @@
+{
+  "physicalTable": {
+    "name": "DBA_COLL_TYPES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ELEM_STORAGE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "UPPER_BOUND",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ELEM_TYPE_MOD",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "CHARACTER_SET_NAME",
+        "dataType": "VARCHAR",
+        "length": 44
+      },
+      {
+        "name": "LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "PRECISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NULLS_STORED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ELEM_TYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ELEM_TYPE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COLL_TYPE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

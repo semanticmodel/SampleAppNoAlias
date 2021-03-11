@@ -1,0 +1,84 @@
+{
+  "logicalTable": {
+    "name": "Dim- Airports",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Airport",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AirportsCount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.AirportsCount.AirportCode"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "NumFlightsY2",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AirportsCount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.AirportsCount.NumFltYear2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ChangeInNumFlts",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AirportsCount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.AirportsCount.Change"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "NumFlightsY1",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "AirportsCount",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.AirportsCount.NumFltYear1"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "AirportsCount",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.AirportsCount"
+          ]
+        }
+      }
+    ]
+  }
+}

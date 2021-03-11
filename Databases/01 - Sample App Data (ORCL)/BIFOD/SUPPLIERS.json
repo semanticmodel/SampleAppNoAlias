@@ -1,0 +1,71 @@
+{
+  "physicalTable": {
+    "name": "SUPPLIERS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "PHONE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "SUPPLIER_NAME",
+        "dataType": "VARCHAR",
+        "length": 120,
+        "nullable": true
+      },
+      {
+        "name": "SUPPLIER_STATUS",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "EMAIL",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "UI_SKIN",
+        "dataType": "VARCHAR",
+        "length": 60
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "SUPPLIER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

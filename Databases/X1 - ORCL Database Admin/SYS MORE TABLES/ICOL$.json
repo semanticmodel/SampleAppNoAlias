@@ -1,0 +1,87 @@
+{
+  "physicalTable": {
+    "name": "ICOL$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "INTCOL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "POS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SEGCOLLENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGCOL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OFFSET",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BO#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      }
+    ]
+  }
+}

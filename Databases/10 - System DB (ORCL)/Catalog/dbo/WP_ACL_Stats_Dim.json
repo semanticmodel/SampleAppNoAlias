@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WP_ACL_Stats_Dim",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_STATS"
+  }
+}

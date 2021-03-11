@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "D90 All Models",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_ALL_MINING_MODELS_V",
+    "caching": {
+      "enable": true
+    }
+  }
+}

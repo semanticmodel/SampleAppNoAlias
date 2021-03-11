@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "7 Facts TasksPerf",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V"
+  }
+}

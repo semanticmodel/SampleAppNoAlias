@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WC_EXEC_Facts",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_EXEC_RESULTS"
+  }
+}

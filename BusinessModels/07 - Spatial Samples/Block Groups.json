@@ -1,0 +1,136 @@
+{
+  "logicalTable": {
+    "name": "Block Groups",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Poi Id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Ntc Map Poi Shop",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group.poi_id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "POI Category Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Ntc Map Poi Shop",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group.category_name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Block Id in range of POIs",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Ntc Map Poi Shop",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group.block_group_id"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Block Group",
+              "physicalExpression": {
+                "expressionTemplate": "BGP_ID",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS.BGP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Block Label in range of POIs",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Block Group",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS.BGP_LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Block Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Block Group",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Block Label",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "Block Id",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Block Group",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS.BGP_LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Ntc Map Poi Shop",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_Block_Group"
+          ]
+        }
+      },
+      {
+        "name": "Block Group",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.BLOCK_GROUPS"
+          ]
+        }
+      }
+    ]
+  }
+}

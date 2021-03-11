@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "Part Commodity - Xref",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Commodity",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "XREF_PART_COMMODITY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY.COMMODITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Part Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "XREF_PART_COMMODITY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY.PART_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "XREF_PART_COMMODITY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.XREF_PART_COMMODITY"
+          ]
+        }
+      }
+    ]
+  }
+}

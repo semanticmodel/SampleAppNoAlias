@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D30 Offices",
+    "description": "Offices dimension Alias: Stores office dimension attribute information",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_OFFICES_D"
+  }
+}

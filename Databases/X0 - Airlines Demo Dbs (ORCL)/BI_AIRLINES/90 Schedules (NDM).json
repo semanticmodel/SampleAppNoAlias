@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "90 Schedules (NDM)",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.SCHEDULES"
+  }
+}

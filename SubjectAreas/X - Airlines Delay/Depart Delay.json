@@ -1,0 +1,80 @@
+{
+  "presentationTable": {
+    "name": "Depart Delay",
+    "description": "->",
+    "alternateNames": [
+      "Departure Delay",
+      "F4"
+    ],
+    "presentationColumns": [ {
+        "name": "Dep Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Dep Delay (Min)",
+        "description": "Difference in minutes between scheduled and actual departure time. Early departures set to 0."
+      },
+      {
+        "name": "Dep Lag (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Dep Lag (Min)",
+        "description": "Difference in minutes between scheduled and actual departure time. Early departures negative values."
+      },
+      {
+        "name": "Dept Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Dept Delay as % of Flight Time",
+        "description": "Departure Delay expressed as % of total trip time.",
+        "alternateNames": [
+          "Dept Delay Time as % of Flight Time",
+          "Dept Delayas % of Flight Time"
+        ]
+      },
+      {
+        "name": "Dept Lag as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Dept Lag as % of Flight Time",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time."
+      },
+      {
+        "name": "Avg Dep Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Avg Dep Delay (Min)",
+        "description": "Avg difference in minutes between scheduled and actual departure time. Early departures set to 0."
+      },
+      {
+        "name": "# of Fl Dep Ontime or Early",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Dep Ontime or Early",
+        "description": "Number of flights that depart ontime or early.",
+        "alternateNames": [
+          "# of Dep Ontime or Early",
+          "# of Departures Ontime or Early"
+        ]
+      },
+      {
+        "name": "# of Fl Dep 1 to 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Dep 1 to 30 Min Late",
+        "description": "Number of flights that departed with less of 30 minutes delay",
+        "alternateNames": [
+          "# of Dep 1 to 30 Min Late",
+          "# of Departures 1 to 30 Min Late"
+        ]
+      },
+      {
+        "name": "% of Fl Dep 1 to 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Dep 1 to 30 Min Late",
+        "description": "Percent of flights that Depart with less of 30 minutes delay",
+        "alternateNames": [
+          "% of Dep 1 to 30 Min Late",
+          "% of Departures 1 to 30 Min Late"
+        ]
+      },
+      {
+        "name": "% of Fl Dep Ontime or Early",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Dep Ontime or Early",
+        "description": "% of Flights that departed ontime or early.",
+        "alternateNames": [
+          "% of Dep Ontime or Early",
+          "% of Departures Ontime or Early"
+        ]
+      },
+      {
+        "name": "% of Fl Departing Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Departing Late"
+      }
+    ]
+  }
+}

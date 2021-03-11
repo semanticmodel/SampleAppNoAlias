@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "USER_COMMENTS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "USER_COMMENT",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "DIM1",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "D_DATE",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "FILED_BY_USER",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "REPORT",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true
+      }
+    ]
+  }
+}

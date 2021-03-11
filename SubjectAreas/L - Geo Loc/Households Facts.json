@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Households Facts",
+    "alternateNames": [
+      "Households",
+      "Metrics#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Total Household Expenditure",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total Household Expenditure"
+      },
+      {
+        "name": "Total Household Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total Household Income"
+      },
+      {
+        "name": "Total Household Savings",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total Household Savings"
+      },
+      {
+        "name": "Avg Household Expenditure",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Avg Household Expenditure"
+      },
+      {
+        "name": "Avg Household Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Avg Household Income"
+      },
+      {
+        "name": "Avg Household Savings",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Avg Household Savings"
+      }
+    ]
+  }
+}

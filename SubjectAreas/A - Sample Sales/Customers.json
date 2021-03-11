@@ -1,0 +1,380 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "localization": {
+      "localizationKey": "Customers",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers)"
+    },
+    "description": "Customer dimension attribute objects",
+    "alternateNames": [
+      "C"
+    ],
+    "presentationColumns": [ {
+        "name": "C1  Customer Name",
+        "localization": {
+          "localizationKey": "C1  Customer Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C1__Customer_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C1  Customer Name",
+        "description": "Help : \r\nStores the customer name as first name + last name.",
+        "alternateNames": [
+          "Customer"
+        ]
+      },
+      {
+        "name": "C0  Customer Number",
+        "localization": {
+          "localizationKey": "C0  Customer Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C0__Customer_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C0  Customer Number",
+        "description": "Help : \r\nStores the customer number.",
+        "alternateNames": [
+          "Cust #"
+        ]
+      },
+      {
+        "name": "C2  Customer Status",
+        "localization": {
+          "localizationKey": "C2  Customer Status",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C2__Customer_Status)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C2  Customer Status",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "alternateNames": [
+          "CustStatus"
+        ]
+      },
+      {
+        "name": "C2b  Customer Status (Phys Lookup)",
+        "localization": {
+          "localizationKey": "C2b  Customer Status (Phys Lookup)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C2b__Customer_Status_(Phys_Lookup))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C2b  Customer Status (Phys Lookup)",
+        "description": "Help : \r\nStores the customer segment ID."
+      },
+      {
+        "name": "C3  Customer Type",
+        "localization": {
+          "localizationKey": "C3  Customer Type",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C3__Customer_Type)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C3  Customer Type",
+        "description": "Help : \r\nStores the customer type description.",
+        "alternateNames": [
+          "CustType"
+        ]
+      },
+      {
+        "name": "C3b  Customer Type (Phys Lookup)",
+        "localization": {
+          "localizationKey": "C3b  Customer Type (Phys Lookup)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C3b__Customer_Type_(Phys_Lookup))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C3b  Customer Type (Phys Lookup)",
+        "description": "Help : \r\nStores the customer segment ID."
+      },
+      {
+        "name": "C4  Customer Segment",
+        "localization": {
+          "localizationKey": "C4  Customer Segment",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C4__Customer_Segment)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C4  Customer Segment",
+        "description": "Help : \r\nStores the segment description.",
+        "alternateNames": [
+          "C4  Segment (Snowflk)",
+          "Segment"
+        ]
+      },
+      {
+        "name": "C5  Income Level",
+        "localization": {
+          "localizationKey": "C5  Income Level",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C5__Income_Level)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C5  Income Level",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "alternateNames": [
+          "Income Level"
+        ]
+      },
+      {
+        "name": "C6  Credit Rate",
+        "localization": {
+          "localizationKey": "C6  Credit Rate",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C6__Credit_Rate)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C6  Credit Rate",
+        "description": "Help : \r\nStores the credit rate description.",
+        "alternateNames": [
+          "Credit Rate"
+        ]
+      },
+      {
+        "name": "C7a Marital Status (Dense Lookup)",
+        "localization": {
+          "localizationKey": "C7a Marital Status (Dense Lookup)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C7a_Marital_Status_(Dense_Lookup))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C7a Marital Status (Dense Lookup)",
+        "alternateNames": [
+          "C7 Marital Status",
+          "C7 Marital Status (Dense Lang Lookup)",
+          "C7 Marital Status (Dense Lookup)"
+        ]
+      },
+      {
+        "name": "C7b Marital Status (Sparse Lookup)",
+        "localization": {
+          "localizationKey": "C7b Marital Status (Sparse Lookup)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C7b_Marital_Status_(Sparse_Lookup))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C7b Marital Status (Sparse Lookup)",
+        "description": "Help : \r\nStores the product's color description.",
+        "alternateNames": [
+          "C7 Marital Status (Sparse Lang Lookup)",
+          "C7 Marital Status (Sparse Lookup)"
+        ]
+      },
+      {
+        "name": "C7c Marital Status (Phys Lookup)",
+        "localization": {
+          "localizationKey": "C7c Marital Status (Phys Lookup)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C7c_Marital_Status_(Phys_Lookup))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C7c Marital Status (Phys Lookup)",
+        "description": "Help : \r\nStores the product's color description.",
+        "alternateNames": [
+          "C7c Marital Status (Lookup Physical)",
+          "C7c Marital Status (Physical Lookup)"
+        ]
+      },
+      {
+        "name": "C9  Gender",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C9  Gender",
+        "alternateNames": [
+          "C15  Gender"
+        ]
+      },
+      {
+        "name": "C19  Months as Customer",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C19  Months as Customer",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD."
+      },
+      {
+        "name": "C20  Years as Customer",
+        "localization": {
+          "localizationKey": "C20  Years as Customer",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C20__Years_as_Customer)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C20  Years as Customer",
+        "description": "Help : \r\nStores the Years as Customers as a number.",
+        "alternateNames": [
+          "Years as Cust"
+        ]
+      },
+      {
+        "name": "C21  Customer Age",
+        "localization": {
+          "localizationKey": "C21  Customer Age",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_C21__Customer_Age)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C21  Customer Age",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD.",
+        "alternateNames": [
+          "CustAge"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Cust Segments Hier",
+        "localization": {
+          "localizationKey": "Cust Segments Hier",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_Cust_Segments_Hier)"
+        },
+        "description": "Help : \r\nPresentation hierarchy with drill path \r\nTotal->Segment->Detail Customer",
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "levels": [ {
+            "name": "Total Customers",
+            "localization": {
+              "localizationKey": "Total Customers",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Segments_Hier_Total_Customers)"
+            },
+            "alternateNames": [
+              "All Customers",
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Total",
+            "displayColumn": "presentationColumn:A - Sample Sales.More Customer Objects.C99  Total Value (Hier)"
+          },
+          {
+            "name": "Segment",
+            "localization": {
+              "localizationKey": "Segment",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Segments_Hier_Segment)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Segment",
+            "displayColumn": "presentationColumn:A - Sample Sales.Customers.C4  Customer Segment"
+          },
+          {
+            "name": "Customers",
+            "localization": {
+              "localizationKey": "Customers",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Segments_Hier_Customers)"
+            },
+            "alternateNames": [
+              "Detail Customer"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Detail",
+            "displayColumn": "presentationColumn:A - Sample Sales.Customers.C1  Customer Name"
+          }
+        ]
+      },
+      {
+        "name": "Cust Type Hier",
+        "localization": {
+          "localizationKey": "Cust Type Hier",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_Cust_Type_Hier)"
+        },
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "levels": [ {
+            "name": "Total Customers",
+            "localization": {
+              "localizationKey": "Total Customers",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Type_Hier_Total_Customers)"
+            },
+            "alternateNames": [
+              "Customers Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Total",
+            "displayColumn": "presentationColumn:A - Sample Sales.More Customer Objects.C99  Total Value (Hier)"
+          },
+          {
+            "name": "Cust Type",
+            "localization": {
+              "localizationKey": "Cust Type",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Type_Hier_Cust_Type)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Type",
+            "displayColumn": "presentationColumn:A - Sample Sales.Customers.C3  Customer Type"
+          },
+          {
+            "name": "Customers",
+            "localization": {
+              "localizationKey": "Customers",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Type_Hier_Customers)"
+            },
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Detail",
+            "displayColumn": "presentationColumn:A - Sample Sales.Customers.C1  Customer Name"
+          }
+        ]
+      },
+      {
+        "name": "Cust Region Hier",
+        "localization": {
+          "localizationKey": "Cust Region Hier",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Customers_Cust_Region_Hier)"
+        },
+        "alternateNames": [
+          "Cust Region Heir",
+          "H4 Customers"
+        ],
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D6 Customers (Snowflakes)",
+        "levels": [ {
+            "name": "Customers Total",
+            "localization": {
+              "localizationKey": "Customers Total",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Customers_Total)"
+            },
+            "alternateNames": [
+              "Customers Detail"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Total",
+            "displayColumn": "presentationColumn:A - Sample Sales.More Customer Objects.C99  Total Value (Hier)"
+          },
+          {
+            "name": "Cust Region",
+            "localization": {
+              "localizationKey": "Cust Region",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_Region)"
+            },
+            "alternateNames": [
+              "Customers 2 Region"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A Descriptions",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C50  Region"
+          },
+          {
+            "name": "Cust Area",
+            "localization": {
+              "localizationKey": "Cust Area",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_Area)"
+            },
+            "alternateNames": [
+              "Customers 2 Area"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A Area",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C51  Area"
+          },
+          {
+            "name": "Cust Country",
+            "localization": {
+              "localizationKey": "Cust Country",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_Country)"
+            },
+            "alternateNames": [
+              "Customers 2 Country"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A Country",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C52  Country Name"
+          },
+          {
+            "name": "Cust State",
+            "localization": {
+              "localizationKey": "Cust State",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_State)"
+            },
+            "alternateNames": [
+              "Customers 2 State"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A State",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C53  State Province"
+          },
+          {
+            "name": "Cust City",
+            "localization": {
+              "localizationKey": "Cust City",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_City)"
+            },
+            "alternateNames": [
+              "Customers 2 City"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A City",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C55  City"
+          },
+          {
+            "name": "Cust Postal Code",
+            "localization": {
+              "localizationKey": "Cust Postal Code",
+              "nameVariable": "VALUEOF(NQ_SESSION.CN_Customers_Cust_Region_Hier_Cust_Postal_Code)"
+            },
+            "alternateNames": [
+              "Customer Details",
+              "Customer Detailse",
+              "Customers 2 Postal Code"
+            ],
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Custs Geo A Postal Code",
+            "displayColumn": "presentationColumn:A - Sample Sales.Cust Regions.C56  Postal Code"
+          },
+          {
+            "name": "Customer Detail",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App.D6 Customers (Snowflakes).Customers Detail",
+            "displayColumn": "presentationColumn:A - Sample Sales.Customers.C1  Customer Name"
+          }
+        ]
+      }
+    ]
+  }
+}

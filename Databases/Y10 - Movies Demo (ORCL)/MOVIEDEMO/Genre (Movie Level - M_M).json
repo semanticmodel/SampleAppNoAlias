@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "Genre (Movie Level - M:M)",
+    "sourceTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.GENRE",
+    "caching": {
+      "enable": true
+    }
+  }
+}

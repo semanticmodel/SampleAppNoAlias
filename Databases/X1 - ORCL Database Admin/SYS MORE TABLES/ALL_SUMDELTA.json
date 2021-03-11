@@ -1,0 +1,60 @@
+{
+  "physicalTable": {
+    "name": "ALL_SUMDELTA",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PARTITIONOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TABLEOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SCN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "HIGHROWID",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "LOWROWID",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "DMLOPERATION",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SEQUENCE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "XID",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

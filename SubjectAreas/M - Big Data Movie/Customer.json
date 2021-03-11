@@ -1,0 +1,84 @@
+{
+  "presentationTable": {
+    "name": "Customer",
+    "presentationColumns": [ {
+        "name": "Cust ID",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Cust ID"
+      },
+      {
+        "name": "First Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.First Name"
+      },
+      {
+        "name": "Last Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Last Name"
+      },
+      {
+        "name": "Full Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Full Name"
+      },
+      {
+        "name": "Customer Age",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Customer Age"
+      },
+      {
+        "name": "Customer City",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Customer City"
+      },
+      {
+        "name": "Customer Country",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Customer Country"
+      },
+      {
+        "name": "Customer E-mail",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Customer E-mail"
+      },
+      {
+        "name": "Gender",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Gender"
+      },
+      {
+        "name": "Income Level",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Income Level"
+      },
+      {
+        "name": "Customer State",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Customer State"
+      },
+      {
+        "name": "Marital Status",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Customer.Marital Status"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Customer Hier",
+        "sourceLogicalTable": "logicalTable:12 - Big Data Movie.Customer",
+        "levels": [ {
+            "name": "Total Customer",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Customer.Total Customer"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Customer.Country",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Customer.Customer Country"
+          },
+          {
+            "name": "State",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Customer.State",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Customer.Customer State"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Customer.City",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Customer.Customer City"
+          },
+          {
+            "name": "Customer Name",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Customer.Customer Name",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Customer.Full Name"
+          }
+        ]
+      }
+    ]
+  }
+}

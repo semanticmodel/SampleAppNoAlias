@@ -1,0 +1,59 @@
+{
+  "subjectArea": {
+    "name": "Y11 - Other Demos",
+    "sourceBusinessModel": "businessModel:Y11 - Other Demos",
+    "alternateNames": [
+      "Y10 - Other Demos"
+    ],
+    "tableOrder": [
+      {
+        "name": "presentationTable:Y11 - Other Demos.Billings and Bookings",
+        "children": [
+          {
+            "name": "presentationTable:Y11 - Other Demos.Bill To Cust"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.End Cust"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Fact Bookings"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Fact Orders"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Fiscal Periods"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Products"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Sales Channels"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Sales Reps"
+          },
+          {
+            "name": "presentationTable:Y11 - Other Demos.Scenarios"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:Y11 - Other Demos.Weather",
+        "children": [
+          {
+            "name": "presentationTable:Y11 - Other Demos.Weather Dim"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:Y11 - Other Demos.Telco",
+        "children": [
+          {
+            "name": "presentationTable:Y11 - Other Demos.Telco Dim"
+          }
+        ]
+      }
+    ]
+  }
+}

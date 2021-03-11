@@ -1,0 +1,29 @@
+{
+  "presentationTable": {
+    "name": "Supplier",
+    "alternateNames": [
+      "Supplier - Dimension"
+    ],
+    "presentationColumns": [ {
+        "name": "Supplier Country",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Supplier - Dimension.Supplier Country"
+      },
+      {
+        "name": "Supplier Location",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Supplier - Dimension.Supplier Location"
+      },
+      {
+        "name": "Supplier Name",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Supplier - Dimension.Supplier Name"
+      },
+      {
+        "name": "Supplier State Province",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Supplier - Dimension.Supplier State Province"
+      },
+      {
+        "name": "Supplier Ultimatename",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Supplier - Dimension.Supplier Ultimatename"
+      }
+    ]
+  }
+}

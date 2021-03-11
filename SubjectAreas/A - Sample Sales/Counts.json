@@ -1,0 +1,78 @@
+{
+  "presentationTable": {
+    "name": "Counts",
+    "localization": {
+      "localizationKey": "Counts",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts)"
+    },
+    "description": "This folder contains simple count metrics like # of Customers, # of Products and so on.",
+    "presentationColumns": [ {
+        "name": "31  # of Orders  (Cnt Distinct)",
+        "localization": {
+          "localizationKey": "31  # of Orders  (Cnt Distinct)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts_31__#_of_Orders__(Cnt_Distinct))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.31  # of Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Orders is calculated by counting the distinct occurences of an order in the fact table",
+        "alternateNames": [
+          "# of Orders",
+          "34  # of Orders  (Cnt Distinct)"
+        ]
+      },
+      {
+        "name": "32  # of Cust with Orders  (Cnt Distinct)",
+        "localization": {
+          "localizationKey": "32  # of Cust with Orders  (Cnt Distinct)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts_32__#_of_Cust_with_Orders__(Cnt_Distinct))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.32  # of Cust with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Customers is calculated by counting the distinct occurences of a customer in the fact table",
+        "alternateNames": [
+          "# of Custs",
+          "31  # of Cust with Orders  (Cnt Distinct)"
+        ]
+      },
+      {
+        "name": "33  # of Empl with Orders  (Cnt Distinct)",
+        "localization": {
+          "localizationKey": "33  # of Empl with Orders  (Cnt Distinct)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts_33__#_of_Empl_with_Orders__(Cnt_Distinct))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.33  # of Empl with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Employees is calculated by counting the distinct occurences of an employee in the fact table",
+        "alternateNames": [
+          "32  # of Empl with Orders  (Cnt Distinct)"
+        ]
+      },
+      {
+        "name": "34  # of Offices with Orders  (Cnt Distinct)",
+        "localization": {
+          "localizationKey": "34  # of Offices with Orders  (Cnt Distinct)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts_34__#_of_Offices_with_Orders__(Cnt_Distinct))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.34  # of Offices with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Markets is calculated by counting the distinct occurences of a market in the fact table",
+        "alternateNames": [
+          "33  # of Offices with Orders  (Cnt Distinct)"
+        ]
+      },
+      {
+        "name": "35  # of Products with Orders  (Cnt Distinct)",
+        "localization": {
+          "localizationKey": "35  # of Products with Orders  (Cnt Distinct)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Counts_35__#_of_Products_with_Orders__(Cnt_Distinct))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.35  # of Products with Orders  (Cnt Distinct)",
+        "description": "Help :\r\n# of Products is calculated by counting the distinct occurences of a product in the fact table"
+      },
+      {
+        "name": "LTS forcing Orders Count as a Sum",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.LTS forcing Orders Count as a Sum",
+        "description": "Help :\r\n# of Orders is calculated by counting the distinct occurences of an order in the fact table",
+        "alternateNames": [
+          "Additive Orders Count"
+        ]
+      }
+    ]
+  }
+}

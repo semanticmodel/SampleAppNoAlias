@@ -1,0 +1,74 @@
+{
+  "presentationTable": {
+    "name": "Ship to Adress",
+    "presentationColumns": [ {
+        "name": "Address1",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Address1"
+      },
+      {
+        "name": "Address2",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Address2"
+      },
+      {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.City"
+      },
+      {
+        "name": "Postal code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Postal code"
+      },
+      {
+        "name": "State province",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.State province"
+      },
+      {
+        "name": "Country Name (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Country Name (Lookup Phys)"
+      },
+      {
+        "name": "Country id",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Country id"
+      },
+      {
+        "name": "Latitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Latitude"
+      },
+      {
+        "name": "Longitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Longitude"
+      },
+      {
+        "name": "Address id",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Address id"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Ship to Adress",
+        "alternateNames": [
+          "H08 Order Ship to Adress"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Total"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Country",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Ship to Adress.Country Name (Lookup Phys)"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.City",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Ship to Adress.City"
+          },
+          {
+            "name": "Ship to Adress Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress.Ship to Adress Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Ship to Adress.Address id"
+          }
+        ]
+      }
+    ]
+  }
+}

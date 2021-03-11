@@ -1,0 +1,35 @@
+{
+  "physicalTable": {
+    "name": "SAMP_CURRENCY_D",
+    "description": "Currency Dimension table: Stores currency conversion rate information at quarter grain",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_CURRENCY_D.xml",
+    "physicalColumns": [ {
+        "name": "From_Curr",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true,
+        "description": "From Currency: Stores the 'From Currency' code"
+      },
+      {
+        "name": "To_Curr",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true,
+        "description": "To Currency: Stores the 'To currency' code"
+      },
+      {
+        "name": "Fx_Rate",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "description": "Fx Rate: Stores FX rate as a double"
+      },
+      {
+        "name": "Qtr_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Quarter Key: Joins to Qtr_Key of Time dimension table (Qtr grain)."
+      }
+    ]
+  }
+}

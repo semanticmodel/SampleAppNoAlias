@@ -1,0 +1,88 @@
+{
+  "logicalTable": {
+    "name": "WP Account",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Account Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.ACCOUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.ACCOUNTTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WP_ACL_Stats_Dim",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WP All Accounts.WP Account Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Accounts",
+      "logicalLevels": [
+        {
+          "name": "All Accounts",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "WP Account Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Type"
+          ],
+          "displayColumn": "logicalColumn:Account Type"
+        },
+        {
+          "name": "WP Account Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Name"
+          ],
+          "displayColumn": "logicalColumn:Account Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "WP All Accounts [branch at level 'WP Account Type']",
+          "levels": [ "All Accounts", "WP Account Type", "WP Account Detail" ]
+        }
+      ]
+    }
+  }
+}

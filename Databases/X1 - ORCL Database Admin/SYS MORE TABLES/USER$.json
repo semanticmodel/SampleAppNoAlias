@@ -1,0 +1,140 @@
+{
+  "physicalTable": {
+    "name": "USER$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PTIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DEFROLE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DEFGRP#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ASTATUS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "RESOURCE$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "DEFSCHCLASS",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PASSWORD",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "EXPTIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "TEMPTS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "EXT_USERNAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LTIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LCOUNT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DEFGRP_SEQ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "AUDIT$",
+        "dataType": "VARCHAR",
+        "length": 38
+      },
+      {
+        "name": "DATATS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CTIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      }
+    ]
+  }
+}

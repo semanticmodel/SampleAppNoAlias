@@ -1,0 +1,51 @@
+{
+  "physicalTable": {
+    "name": "movieapp_log",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "activity",
+        "dataType": "INT",
+        "length": 10
+      },
+      {
+        "name": "genreid",
+        "dataType": "INT",
+        "length": 10
+      },
+      {
+        "name": "recommended",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "time",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "dateid",
+        "dataType": "INT"
+      },
+      {
+        "name": "price",
+        "dataType": "FLOAT",
+        "length": 24
+      },
+      {
+        "name": "movieid",
+        "dataType": "INT",
+        "length": 10
+      },
+      {
+        "name": "rating",
+        "dataType": "INT",
+        "length": 10
+      },
+      {
+        "name": "custid",
+        "dataType": "INT",
+        "length": 10
+      }
+    ]
+  }
+}

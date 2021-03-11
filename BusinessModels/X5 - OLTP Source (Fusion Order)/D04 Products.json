@@ -1,0 +1,611 @@
+{
+  "logicalTable": {
+    "name": "D04 Products",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Attribute1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute10",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE10"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute11",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE11"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute12",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE12"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute13",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE13"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute14",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE14"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute15",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE15"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute3",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute4",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE4"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute5",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE5"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute6",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE6"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute7",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE7"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute8",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE8"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute9",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE9"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Attribute Category",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.ATTRIBUTE_CATEGORY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.CATEGORY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.COST_PRICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "External Url",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.EXTERNAL_URL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "List Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.LIST_PRICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Min Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.MIN_PRICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Name",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "Product ID",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Status Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Shipping Class Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.SHIPPING_CLASS_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Warranty Period Months",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.WARRANTY_PERIOD_MONTHS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Default View Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_IMAGES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODIMG.DEFAULT_VIEW_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Detail Image ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_IMAGES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODIMG.DETAIL_IMAGE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Image",
+        "dataType": "LONGVARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_IMAGES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODIMG.IMAGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Image ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCT_IMAGES",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODIMG.PRODUCT_IMAGE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Description (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No description for this product',\r\n'FR',\r\n %2 )\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_TRANSLATIONS.DESCRIPTION",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Status Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n%2,\r\n'FR',\r\n'PRODUCT_STATUS_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product Status Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Additional Info (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PRODUCTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No additional info for this product',\r\n'FR',\r\n %2 )\r\n\r\n",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCT_TRANSLATIONS.ADDITIONAL_INFO",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE.PRODUCT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PRODUCTS_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODUCTS_BASE"
+          ]
+        }
+      },
+      {
+        "name": "PRODUCT_IMAGES",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PRODIMG"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Product Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Product ID"
+          ],
+          "displayColumn": "logicalColumn:Product ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H04 Products",
+          "levels": [ "Total", "Product Detail" ]
+        }
+      ]
+    }
+  }
+}

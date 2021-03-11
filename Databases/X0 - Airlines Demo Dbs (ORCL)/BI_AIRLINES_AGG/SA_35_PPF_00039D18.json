@@ -1,0 +1,26 @@
+{
+  "physicalTable": {
+    "name": "SA_35_PPF_00039D18",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Pax_per_Fl00039C5E",
+        "dataType": "INT"
+      },
+      {
+        "name": "PPF_Gro_00039D18SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "logicalTable": {
+    "name": "Bbil Bill To Cust",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Billtocust Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Billtocustname",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUSTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Billtocustnumber",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUSTNUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Billtocustsegment",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.BILLTOCUSTSEGMENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Saleschannel Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.SALESCHANNEL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Salesrep Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Bill To Cust",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST.SALESREP_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Bill To Cust",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_BILL_TO_CUST"
+          ]
+        }
+      }
+    ]
+  }
+}

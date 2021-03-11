@@ -1,0 +1,131 @@
+{
+  "physicalTable": {
+    "name": "FACT_CLAIM",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CLAIM_MONTH_NUM",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "VIN",
+        "dataType": "VARCHAR",
+        "length": 25
+      },
+      {
+        "name": "CLAIM_DEALER",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_MONTH",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_LABOR_DESC",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_PART_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "PART_HIST_COUNT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "PART_OPTIONS",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DAYS_IN_SERVICE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "CLAIM_PERIOD",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "SUPPLIER_ULTIMATENAME",
+        "dataType": "VARCHAR",
+        "length": 75
+      },
+      {
+        "name": "CLAIM_ODMTR_MILEAGE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "MONTHS_IN_SERVICE",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "CLAIM_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "RECORDID",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      },
+      {
+        "name": "CLAIM_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "CLAIM_LABOR_CODE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_AGE_BUCKET",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_AGE",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "PART_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 25
+      },
+      {
+        "name": "CLAIM_QUARTER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CLAIM_LBR_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "CLAIM_LBR_OTHR_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 38
+      },
+      {
+        "name": "CLAIM_DATE",
+        "dataType": "TIMESTAMP",
+        "length": 19
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "physicalTable": {
+    "name": "V_$SERVICEMETRIC_HISTORY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ELAPSEDPERCALL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBTIMEPERCALL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "CTMHASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVICE_NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CPUPERCALL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "CALLSPERSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INTSIZE_CSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBTIMEPERSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

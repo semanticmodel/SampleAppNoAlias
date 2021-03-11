@@ -1,0 +1,401 @@
+{
+  "presentationTable": {
+    "name": "Sessions",
+    "alternateNames": [
+      "SES- GV_$SESSION"
+    ],
+    "presentationColumns": [ {
+        "name": "Action",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Action"
+      },
+      {
+        "name": "Action Hash",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Action Hash"
+      },
+      {
+        "name": "Audsid",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Audsid"
+      },
+      {
+        "name": "Blocking Instance",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Blocking Instance"
+      },
+      {
+        "name": "Blocking Session",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Blocking Session"
+      },
+      {
+        "name": "Blocking Session Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Blocking Session Status"
+      },
+      {
+        "name": "Client Identifier",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Client Identifier"
+      },
+      {
+        "name": "Client Info",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Client Info"
+      },
+      {
+        "name": "Command",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Command"
+      },
+      {
+        "name": "Creator Addr",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Creator Addr"
+      },
+      {
+        "name": "Creator Serial#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Creator Serial#"
+      },
+      {
+        "name": "Current Queue Duration",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Current Queue Duration"
+      },
+      {
+        "name": "Ecid",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Ecid"
+      },
+      {
+        "name": "Event",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Event"
+      },
+      {
+        "name": "Event#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Event#"
+      },
+      {
+        "name": "Failed Over",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Failed Over"
+      },
+      {
+        "name": "Failover Method",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Failover Method"
+      },
+      {
+        "name": "Failover Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Failover Type"
+      },
+      {
+        "name": "Final Blocking Instance",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Final Blocking Instance"
+      },
+      {
+        "name": "Final Blocking Session",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Final Blocking Session"
+      },
+      {
+        "name": "Final Blocking Session Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Final Blocking Session Status"
+      },
+      {
+        "name": "Fixed Table Sequence",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Fixed Table Sequence"
+      },
+      {
+        "name": "Inst Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Inst Id"
+      },
+      {
+        "name": "Last Call Et",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Last Call Et"
+      },
+      {
+        "name": "Lockwait",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Lockwait"
+      },
+      {
+        "name": "Logon Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Logon Time"
+      },
+      {
+        "name": "Machine",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Machine"
+      },
+      {
+        "name": "Module",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Module"
+      },
+      {
+        "name": "Module Hash",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Module Hash"
+      },
+      {
+        "name": "Osuser",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Osuser"
+      },
+      {
+        "name": "Ownerid",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Ownerid"
+      },
+      {
+        "name": "P1",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P1"
+      },
+      {
+        "name": "P1raw",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P1raw"
+      },
+      {
+        "name": "P1text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P1text"
+      },
+      {
+        "name": "P2",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P2"
+      },
+      {
+        "name": "P2raw",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P2raw"
+      },
+      {
+        "name": "P2text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P2text"
+      },
+      {
+        "name": "P3",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P3"
+      },
+      {
+        "name": "P3raw",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P3raw"
+      },
+      {
+        "name": "P3text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.P3text"
+      },
+      {
+        "name": "Paddr",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Paddr"
+      },
+      {
+        "name": "Pddl Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Pddl Status"
+      },
+      {
+        "name": "Pdml Enabled",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Pdml Enabled"
+      },
+      {
+        "name": "Pdml Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Pdml Status"
+      },
+      {
+        "name": "Plsql Entry Object Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Plsql Entry Object Id"
+      },
+      {
+        "name": "Plsql Entry Subprogram Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Plsql Entry Subprogram Id"
+      },
+      {
+        "name": "Plsql Object Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Plsql Object Id"
+      },
+      {
+        "name": "Plsql Subprogram Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Plsql Subprogram Id"
+      },
+      {
+        "name": "Port",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Port"
+      },
+      {
+        "name": "Pq Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Pq Status"
+      },
+      {
+        "name": "Prev Child Number",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Child Number"
+      },
+      {
+        "name": "Prev Exec Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Exec Id"
+      },
+      {
+        "name": "Prev Exec Start",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Exec Start"
+      },
+      {
+        "name": "Prev Hash Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Hash Value"
+      },
+      {
+        "name": "Prev Sql Addr",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Sql Addr"
+      },
+      {
+        "name": "Prev Sql Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Prev Sql Id"
+      },
+      {
+        "name": "Process",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Process"
+      },
+      {
+        "name": "Program",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Program"
+      },
+      {
+        "name": "Resource Consumer Group",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Resource Consumer Group"
+      },
+      {
+        "name": "Row Wait Block#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Row Wait Block#"
+      },
+      {
+        "name": "Row Wait File#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Row Wait File#"
+      },
+      {
+        "name": "Row Wait Obj#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Row Wait Obj#"
+      },
+      {
+        "name": "Row Wait Row#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Row Wait Row#"
+      },
+      {
+        "name": "Saddr",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Saddr"
+      },
+      {
+        "name": "Schema#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Schema#"
+      },
+      {
+        "name": "Schemaname",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Schemaname"
+      },
+      {
+        "name": "Seconds In Wait",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Seconds In Wait"
+      },
+      {
+        "name": "Seq#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Seq#"
+      },
+      {
+        "name": "Serial#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Serial#"
+      },
+      {
+        "name": "Server",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Server"
+      },
+      {
+        "name": "Service Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Service Name"
+      },
+      {
+        "name": "Session Edition Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Session Edition Id"
+      },
+      {
+        "name": "Sid",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sid"
+      },
+      {
+        "name": "Sql Address",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Address"
+      },
+      {
+        "name": "Sql Child Number",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Child Number"
+      },
+      {
+        "name": "Sql Exec Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Exec Id"
+      },
+      {
+        "name": "Sql Exec Start",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Exec Start"
+      },
+      {
+        "name": "Sql Hash Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Hash Value"
+      },
+      {
+        "name": "Sql Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Id"
+      },
+      {
+        "name": "Sql Trace",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Trace"
+      },
+      {
+        "name": "Sql Trace Binds",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Trace Binds"
+      },
+      {
+        "name": "Sql Trace Plan Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Trace Plan Stats"
+      },
+      {
+        "name": "Sql Trace Waits",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Sql Trace Waits"
+      },
+      {
+        "name": "State",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.State"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Status"
+      },
+      {
+        "name": "Taddr",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Taddr"
+      },
+      {
+        "name": "Terminal",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Terminal"
+      },
+      {
+        "name": "Time Remaining Micro",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Time Remaining Micro"
+      },
+      {
+        "name": "Time Since Last Wait Micro",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Time Since Last Wait Micro"
+      },
+      {
+        "name": "Top Level Call#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Top Level Call#"
+      },
+      {
+        "name": "Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Type"
+      },
+      {
+        "name": "User#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.User#"
+      },
+      {
+        "name": "Username",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Username"
+      },
+      {
+        "name": "Wait Class",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Wait Class"
+      },
+      {
+        "name": "Wait Class#",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Wait Class#"
+      },
+      {
+        "name": "Wait Class Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Wait Class Id"
+      },
+      {
+        "name": "Wait Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Wait Time"
+      },
+      {
+        "name": "Wait Time Micro",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SES- GV_SESSION.Wait Time Micro"
+      }
+    ]
+  }
+}

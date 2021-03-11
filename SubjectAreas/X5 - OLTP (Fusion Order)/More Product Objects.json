@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "More Product Objects",
+    "presentationColumns": [ {
+        "name": "Cost Price",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Cost Price"
+      },
+      {
+        "name": "External Url",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.External Url"
+      },
+      {
+        "name": "List Price",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.List Price"
+      },
+      {
+        "name": "Min Price",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Min Price"
+      },
+      {
+        "name": "Warranty Period Months",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Warranty Period Months"
+      },
+      {
+        "name": "Detail Image ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Detail Image ID"
+      },
+      {
+        "name": "Product Image ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Product Image ID"
+      }
+    ]
+  }
+}

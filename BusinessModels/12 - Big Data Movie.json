@@ -1,0 +1,118 @@
+{
+  "businessModel": {
+    "name": "12 - Big Data Movie",
+    "joins": [      {
+        "name": "Relationship_2004:2891681420194219",
+        "leftTable": "logicalTable:12 - Big Data Movie.Datetime",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Hive)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "09 - Hadoop (Movie Demo):Relationship_2004:2648241375894447",
+        "leftTable": "logicalTable:12 - Big Data Movie.Customer",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Impala)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2886741420012040",
+        "leftTable": "logicalTable:12 - Big Data Movie.Activity",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Hive)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "09 - Hadoop (Movie Demo):12 - Movie Hadoop#1:Movie Hadoop:Relationship_2004:437941368041448",
+        "leftTable": "logicalTable:12 - Big Data Movie.Movie",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Impala)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipCustomerMOVIEAPP_ACTIVITY_LOG",
+        "leftTable": "logicalTable:12 - Big Data Movie.Facts (BDSQL)",
+        "rightTable": "logicalTable:12 - Big Data Movie.Customer",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipDatetimeMOVIEAPP_ACTIVITY_LOG",
+        "leftTable": "logicalTable:12 - Big Data Movie.Facts (BDSQL)",
+        "rightTable": "logicalTable:12 - Big Data Movie.Datetime",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2886831420012050",
+        "leftTable": "logicalTable:12 - Big Data Movie.Movie",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Hive)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipMovieMOVIEAPP_ACTIVITY_LOG",
+        "leftTable": "logicalTable:12 - Big Data Movie.Facts (BDSQL)",
+        "rightTable": "logicalTable:12 - Big Data Movie.Movie",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2891711420194224",
+        "leftTable": "logicalTable:12 - Big Data Movie.Datetime",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Impala)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:294511464092419",
+        "leftTable": "logicalTable:12 - Big Data Movie.Customer",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Spark)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipActivityMOVIEAPP_ACTIVITY_LOG",
+        "leftTable": "logicalTable:12 - Big Data Movie.Facts (BDSQL)",
+        "rightTable": "logicalTable:12 - Big Data Movie.Activity",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "09 - Hadoop (Movie Demo):Relationship_2004:2648351375895605",
+        "leftTable": "logicalTable:12 - Big Data Movie.Activity",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Impala)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:294571464092432",
+        "leftTable": "logicalTable:12 - Big Data Movie.Movie",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Spark)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:294541464092426",
+        "leftTable": "logicalTable:12 - Big Data Movie.Activity",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Spark)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2886771420012043",
+        "leftTable": "logicalTable:12 - Big Data Movie.Customer",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Hive)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:294601464092437",
+        "leftTable": "logicalTable:12 - Big Data Movie.Datetime",
+        "rightTable": "logicalTable:12 - Big Data Movie.Facts (Spark)",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

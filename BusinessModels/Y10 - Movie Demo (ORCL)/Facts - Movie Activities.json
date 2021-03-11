@@ -1,0 +1,122 @@
+{
+  "logicalTable": {
+    "name": "Facts - Movie Activities",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Number of Activities",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE_FACT",
+              "physicalExpression": {
+                "expressionTemplate": "1"
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sales",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE_FACT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.SALES"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Recommended",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE_FACT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.RECOMMENDED"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Average Rating",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIE_FACT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.RATING"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "MOVIE_FACT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:Y10 - Movie Demo (ORCL).Movie.Movie Detail",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Movie Genre.Genre",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Time.Day-Date",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Customers.Detail",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Activities.Detail",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Customer Segment.Detail",
+          "logicalLevel:Y10 - Movie Demo (ORCL).Customer Geography.Detail"
+        ]
+      }
+    ]
+  }
+}

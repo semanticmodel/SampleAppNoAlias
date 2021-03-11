@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Facts - Movies",
+    "presentationColumns": [ {
+        "name": "# of Movies in Base",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movies.# of Movies in Base"
+      },
+      {
+        "name": "Average Popularity",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movies.Average Popularity"
+      },
+      {
+        "name": "Sum of Vote Counts",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movies.Sum of Vote Counts"
+      }
+    ]
+  }
+}

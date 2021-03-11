@@ -1,0 +1,119 @@
+{
+  "physicalTable": {
+    "name": "TTS_OBJ_VIEW",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REMOTEOWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CTIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "SUBNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "OWNER#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MTIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "OID$",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "STIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LINKNAME",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NAMESPACE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

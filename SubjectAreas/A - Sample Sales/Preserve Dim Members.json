@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Preserve Dim Members",
+    "description": "This folder contains various Variation metrics on Revenue like Variations to Period Ago and Time span variations.",
+    "alternateNames": [
+      "Many to Many Weighthing#1"
+    ],
+    "presentationColumns": [ {
+        "name": "121  Preserve Dim Members",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.121  Preserve Dim Members",
+        "description": "Help :\r\nRevenue data. Sources from Dollars physical column in FactsRev table joining to time using Billed time.  \r\n\r\n- Returns sum of data over any selected dimensions",
+        "alternateNames": [
+          "121  Preserve Dimension Members"
+        ]
+      }
+    ]
+  }
+}

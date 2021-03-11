@@ -1,0 +1,49 @@
+{
+  "physicalTable": {
+    "name": "WC_EXEC_RESULTS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "REPORT_NAME",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ROWCOUNT_MSG",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "PATH_REST",
+        "dataType": "VARCHAR",
+        "length": 300
+      },
+      {
+        "name": "REPORT_PATH",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      },
+      {
+        "name": "PATH_LEVEL1",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "PATH_LEVEL0",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "RUN_DATE",
+        "dataType": "DATETIME",
+        "length": 100,
+        "nullable": true
+      },
+      {
+        "name": "PATH_LEVEL2",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

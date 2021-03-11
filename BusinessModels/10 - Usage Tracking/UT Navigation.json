@@ -1,0 +1,225 @@
+{
+  "logicalTable": {
+    "name": "UT Navigation",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Logical Query Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICAL_QUERY_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logical fact table id",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICALFACTTABLEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "LTS id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.LOGICALTABLESOURCEIDVECTOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Processing Time in millisec",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.PROCESSINGTIMEINMILLISEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Query Grain level",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "EVALUATE('dbms_lob.substr(%1,4000,1 )',\r\n%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.QUERYLEVELIDVECTOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Query status",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.QUERYSTATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "LTS Grain Level",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "EVALUATE('dbms_lob.substr(%1,4000,1 )',\r\n%1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.SOURCECELLLEVELIDVECTOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Version",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SUMMARY_ADVISOR",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR.VERSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "LTS Name",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE  %1,  %2 , %2   )",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.UT RPD UIDs Lookups.NAME",
+              "logicalColumn:10 - Usage Tracking.UT Navigation.LTS id"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Logical Fact Table Name",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE  %1,  %2, %2)",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.UT RPD UIDs Lookups.NAME",
+              "logicalColumn:10 - Usage Tracking.UT Navigation.Logical fact table id"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "S_NQ_SUMMARY_ADVISOR",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_SUMMARY_ADVISOR"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.UT Navigation.UT Navigation Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "UT Navigation",
+      "logicalLevels": [
+        {
+          "name": "UT Navigation",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Logical Query Id",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Logical Query Id"
+          ],
+          "displayColumn": "logicalColumn:Logical Query Id"
+        },
+        {
+          "name": "UT Navigation Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Logical Query Id",
+            "logicalColumn:Logical fact table id",
+            "logicalColumn:LTS id",
+            "logicalColumn:Processing Time in millisec",
+            "logicalColumn:Query Grain level",
+            "logicalColumn:Query status",
+            "logicalColumn:LTS Grain Level",
+            "logicalColumn:Version"
+          ],
+          "displayColumn": "logicalColumn:Logical Query Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT Navigation [branch at level 'Logical Query Id']",
+          "levels": [ "UT Navigation", "Logical Query Id", "UT Navigation Detail" ]
+        }
+      ]
+    }
+  }
+}

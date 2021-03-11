@@ -1,0 +1,101 @@
+{
+  "presentationTable": {
+    "name": "X SampleApp Index Page",
+    "presentationColumns": [ {
+        "name": "Dashboard Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Dashboard Name"
+      },
+      {
+        "name": "Dashboard Page Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Dashboard Page Name"
+      },
+      {
+        "name": "Url",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Url",
+        "alternateNames": [
+          "Dashboard Page Url"
+        ]
+      },
+      {
+        "name": "Excluded",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Excluded"
+      },
+      {
+        "name": "Not In WS",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Not In WS"
+      },
+      {
+        "name": "Text Lvl0",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Text Lvl0"
+      },
+      {
+        "name": "Text Lvl1",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Text Lvl1"
+      },
+      {
+        "name": "Text Lvl2",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Text Lvl2"
+      },
+      {
+        "name": "Text Lvl3",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Text Lvl3"
+      },
+      {
+        "name": "Single Link",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Single Link",
+        "alternateNames": [
+          "Visible Link"
+        ]
+      },
+      {
+        "name": "Agged Links",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Page.Agged Links"
+      },
+      {
+        "name": "# of Links",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.X SampleApp Index Facts.# of Links"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Index Hier",
+        "alternateNames": [
+          "X SampleApp Index"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.X SampleApp Index Page",
+        "levels": [ {
+            "name": "All Pages",
+            "alternateNames": [
+              "X SampleApp Index Page Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.X SampleApp Index Page Total"
+          },
+          {
+            "name": "Lvl3",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.Lvl3",
+            "displayColumn": "presentationColumn:U - Usage Tracking.X SampleApp Index Page.Text Lvl3"
+          },
+          {
+            "name": "Lvl2",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.Lvl2",
+            "displayColumn": "presentationColumn:U - Usage Tracking.X SampleApp Index Page.Text Lvl2"
+          },
+          {
+            "name": "Lvl1",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.Lvl1",
+            "displayColumn": "presentationColumn:U - Usage Tracking.X SampleApp Index Page.Text Lvl1"
+          },
+          {
+            "name": "Link",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.Link",
+            "displayColumn": "presentationColumn:U - Usage Tracking.X SampleApp Index Page.Single Link"
+          },
+          {
+            "name": "X SampleApp Index Page Detail",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.X SampleApp Index Page.X SampleApp Index Page Detail",
+            "displayColumn": "presentationColumn:U - Usage Tracking.X SampleApp Index Page.Dashboard Name"
+          }
+        ]
+      }
+    ]
+  }
+}

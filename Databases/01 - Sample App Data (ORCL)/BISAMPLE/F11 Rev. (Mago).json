@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F11 Rev. (Mago)",
+    "description": "Reveue MonthAgo Fact Alias: Stores the previous month's fact information by joining to the Month_Ago_Wid in the Time dimension table",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D31 Offices (Quotas)",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_OFFICES_D"
+  }
+}

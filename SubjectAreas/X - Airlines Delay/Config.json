@@ -1,0 +1,19 @@
+{
+  "presentationTable": {
+    "name": "Config",
+    "presentationColumns": [ {
+        "name": "Source Fact Table",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Source Fact Table",
+        "description": "Indicates which Agg Fact table are hit in the Databases to fulfill the query."
+      },
+      {
+        "name": "# of Flights - Atomic Source Only",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Flights - Atomic Source Only"
+      },
+      {
+        "name": "# of Flights - IMDB Only",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Flights - IMDB Only"
+      }
+    ]
+  }
+}

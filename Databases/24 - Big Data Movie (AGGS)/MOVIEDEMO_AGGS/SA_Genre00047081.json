@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "SA_Genre00047081",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Genre_Name00045FBB",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "Genre_00047081SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Genre_ID00045FB5",
+        "dataType": "DOUBLE",
+        "length": 12
+      }
+    ]
+  }
+}

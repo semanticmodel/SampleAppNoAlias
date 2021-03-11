@@ -1,0 +1,41 @@
+{
+  "subjectArea": {
+    "name": "D - Sample Federated",
+    "sourceBusinessModel": "businessModel:06 - Federated Sources",
+    "implicitFactColumn": "logicalColumn:06 - Federated Sources.F0 Revenue Base Measures.1a- Revenue (Orcl Db Tables Only)",
+    "description": "Multiple Data-source Federation Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:D - Sample Federated.Time"
+      },
+      {
+        "name": "presentationTable:D - Sample Federated.Products",
+        "children": [
+          {
+            "name": "presentationTable:D - Sample Federated.More Product Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:D - Sample Federated.Offices",
+        "children": [
+          {
+            "name": "presentationTable:D - Sample Federated.More Office Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:D - Sample Federated.Customers"
+      },
+      {
+        "name": "presentationTable:D - Sample Federated.Measures"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

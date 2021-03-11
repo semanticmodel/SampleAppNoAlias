@@ -1,0 +1,57 @@
+{
+  "presentationTable": {
+    "name": "GLM Model Facts",
+    "alternateNames": [
+      "Fact - GLM Model"
+    ],
+    "presentationColumns": [ {
+        "name": "Attribute Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Attribute Value"
+      },
+      {
+        "name": "Coefficient",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Coefficient"
+      },
+      {
+        "name": "Exp Coefficient",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Exp Coefficient"
+      },
+      {
+        "name": "Exp Lower Coeff Limit",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Exp Lower Coeff Limit"
+      },
+      {
+        "name": "Exp Upper Coeff Limit",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Exp Upper Coeff Limit"
+      },
+      {
+        "name": "Lower Coeff Limit",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Lower Coeff Limit"
+      },
+      {
+        "name": "P Value",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.P Value"
+      },
+      {
+        "name": "Std Coefficient",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Std Coefficient"
+      },
+      {
+        "name": "Std Error",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Std Error"
+      },
+      {
+        "name": "Test Statistic",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Test Statistic"
+      },
+      {
+        "name": "Upper Coeff Limit",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Upper Coeff Limit"
+      },
+      {
+        "name": "Vif",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Fact - GLM Model.Vif"
+      }
+    ]
+  }
+}

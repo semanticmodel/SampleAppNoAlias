@@ -1,0 +1,66 @@
+{
+  "logicalTable": {
+    "name": "Delay Prediction",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Actual ArrDelay",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.ArrDelay"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Predicted ArrDelay",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DELAY_PRED",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.DELAY_PRED.Pred"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DELAY_PRED",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.DELAY_PRED"
+          ]
+        }
+      }
+    ]
+  }
+}

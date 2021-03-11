@@ -1,0 +1,36 @@
+{
+  "presentationTable": {
+    "name": "Measures Hierarchy",
+    "presentationColumns": [ {
+        "name": "Generic measure",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.M1 Measure Dimension (E2).Generic measure"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "M1 Measures Hier",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.M1 Measures Hierarchy (E2)",
+        "levels": [ {
+            "name": "Gen1,Measures",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen1,Measures",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Measures Dimension.Gen1,Measures"
+          },
+          {
+            "name": "Gen2,Measures",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen2,Measures",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Measures Dimension.Gen2,Measures"
+          },
+          {
+            "name": "Gen3,Measures",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen3,Measures",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Measures Dimension.Gen3,Measures"
+          },
+          {
+            "name": "Gen4,Measures",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.M1 Measures Hierarchy (E2).Gen4,Measures",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Measures Dimension.Gen4,Measures"
+          }
+        ]
+      }
+    ]
+  }
+}

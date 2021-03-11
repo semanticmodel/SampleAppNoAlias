@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "M01 Mktg Cache Customers",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_M_C_CUSTOMERS"
+  }
+}

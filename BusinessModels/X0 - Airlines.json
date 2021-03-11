@@ -1,0 +1,223 @@
+{
+  "businessModel": {
+    "name": "X0 - Airlines",
+    "joins": [      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:338601324037952",
+        "leftTable": "logicalTable:X0 - Airlines.00 Time",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:336471323990315",
+        "leftTable": "logicalTable:X0 - Airlines.34 Carrier Group",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:620031325784047",
+        "leftTable": "logicalTable:X0 - Airlines.25 Cancelled",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:446371324572394",
+        "leftTable": "logicalTable:X0 - Airlines.16 Dest Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:362651323967058",
+        "leftTable": "logicalTable:X0 - Airlines.22 Dept Delay Grp",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:373611323971837",
+        "leftTable": "logicalTable:X0 - Airlines.60 Market",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:447121324576112",
+        "leftTable": "logicalTable:X0 - Airlines.11 Orig Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:446401324572397",
+        "leftTable": "logicalTable:X0 - Airlines.16 Dest Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2512801358149053",
+        "leftTable": "logicalTable:X0 - Airlines.11 Orig Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.90 Schedules",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:602971325761389",
+        "leftTable": "logicalTable:X0 - Airlines.02 Time Week Attributes",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:361511324049242",
+        "leftTable": "logicalTable:X0 - Airlines.37 Service Class",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:338631324037955",
+        "leftTable": "logicalTable:X0 - Airlines.00 Time",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:373461323971809",
+        "leftTable": "logicalTable:X0 - Airlines.31 Carrier",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:363181323967724",
+        "leftTable": "logicalTable:X0 - Airlines.23 Arr Time Blk",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:336441323990305",
+        "leftTable": "logicalTable:X0 - Airlines.33 Aircraft Type",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:362681323967064",
+        "leftTable": "logicalTable:X0 - Airlines.31 Carrier",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:384681324483138",
+        "leftTable": "logicalTable:X0 - Airlines.18 Route",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:384711324483145",
+        "leftTable": "logicalTable:X0 - Airlines.18 Route",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:3 - Airlines2:Relationship_2004:197601322496153",
+        "leftTable": "logicalTable:X0 - Airlines.50 Flight",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:602421325760755",
+        "leftTable": "logicalTable:X0 - Airlines.01 Time Day Attributes",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:362621323967054",
+        "leftTable": "logicalTable:X0 - Airlines.20 Arr Delay Grp",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:336411323990268",
+        "leftTable": "logicalTable:X0 - Airlines.32 Aircraft Group",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:362741323967072",
+        "leftTable": "logicalTable:X0 - Airlines.21 Dep Time Blk",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:362711323967068",
+        "leftTable": "logicalTable:X0 - Airlines.19 Distance Group",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:3 - Airlines2:Relationship_2004:373521323971822",
+        "leftTable": "logicalTable:X0 - Airlines.19 Distance Group",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:347941324039890",
+        "leftTable": "logicalTable:X0 - Airlines.24 Cancellation",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:602451325760761",
+        "leftTable": "logicalTable:X0 - Airlines.01 Time Day Attributes",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2512831358149066",
+        "leftTable": "logicalTable:X0 - Airlines.16 Dest Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.90 Schedules",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:361541324049249",
+        "leftTable": "logicalTable:X0 - Airlines.36 Carrier Region",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:447091324576107",
+        "leftTable": "logicalTable:X0 - Airlines.11 Orig Airport Map",
+        "rightTable": "logicalTable:X0 - Airlines.Flight Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Airlines:3 - Airlines:Relationship_2004:768271327320153",
+        "leftTable": "logicalTable:X0 - Airlines.35 PaxPF Group",
+        "rightTable": "logicalTable:X0 - Airlines.Market Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

@@ -1,0 +1,337 @@
+{
+  "logicalTable": {
+    "name": "Customer",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Cust ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_IMP",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC.custid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_HIVE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.custid"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.CUSTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer Age",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.AGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.COUNTRY"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Country00047066",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Country00047066.Customer_C00045FC8"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer E-mail",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.EMAIL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "First Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.FIRST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.LAST_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Full Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "FULL_NAME",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.FULL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gender",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.GENDER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Income Level",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.INCOME_LEVEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customer State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.STATE_PROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Marital Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "CUSTOMER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.MARITAL_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "CUSTOMER",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_IMP",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_HIVE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_BDSQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC"
+          ]
+        }
+      },
+      {
+        "name": "23 - Big Data Movie (AGGS)__MOVIEDEMO_AGGS_SA_Country00047066",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:24 - Big Data Movie (AGGS).MOVIEDEMO_AGGS.SA_Country00047066"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:12 - Big Data Movie.H2 Customer.Country"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total Customer",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Total Customer",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Customer Country"
+          ],
+          "displayColumn": "logicalColumn:Customer Country"
+        },
+        {
+          "name": "State",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Customer State"
+          ],
+          "displayColumn": "logicalColumn:Customer State"
+        },
+        {
+          "name": "City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Customer City"
+          ],
+          "displayColumn": "logicalColumn:Customer City"
+        },
+        {
+          "name": "Customer Name",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Cust ID"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H2 Customer [branch at level 'City']",
+          "levels": [ "Total Customer", "Country", "State", "City", "Customer Name" ]
+        }
+      ]
+    }
+  }
+}

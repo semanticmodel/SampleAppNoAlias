@@ -1,0 +1,50 @@
+{
+  "presentationTable": {
+    "name": "Expenses Metrics",
+    "presentationColumns": [ {
+        "name": "Total Exp Clothing Footwear",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Clothing Footwear"
+      },
+      {
+        "name": "Total Exp Durables Personal",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Durables Personal"
+      },
+      {
+        "name": "Total Exp Fmcg",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Fmcg"
+      },
+      {
+        "name": "Total Exp Food Related",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Food Related"
+      },
+      {
+        "name": "Total Exp Misc Goods Services",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Misc Goods Services"
+      },
+      {
+        "name": "Total Exp Hh Earn 150k - 3000k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn 150k - 3000k"
+      },
+      {
+        "name": "Total Exp Hh Earn 300k - 500k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn 300k - 500k"
+      },
+      {
+        "name": "Total Exp Hh Earn 500k - 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn 500k - 1m"
+      },
+      {
+        "name": "Total Exp Hh Earn 75k - 150k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn 75k - 150k"
+      },
+      {
+        "name": "Total Exp Hh Earn Gt 1m",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn Gt 1m"
+      },
+      {
+        "name": "Total Exp Hh Earn Lt 75k",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Exp Hh Earn Lt 75k"
+      }
+    ]
+  }
+}

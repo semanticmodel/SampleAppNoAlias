@@ -1,0 +1,93 @@
+{
+  "presentationTable": {
+    "name": "Arrival Delay",
+    "description": "->",
+    "alternateNames": [
+      "Delay Details",
+      "DelD",
+      "F3"
+    ],
+    "presentationColumns": [ {
+        "name": "Arr Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Delay (Min)",
+        "description": "Difference in minutes between scheduled and actual arrival time. Early arrivals are set to 0."
+      },
+      {
+        "name": "Arr Lag (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Lag (Min)",
+        "description": "Difference in minutes between scheduled and actual arrival time. Early arrival are negative values."
+      },
+      {
+        "name": "Arr Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Delay as % of Flight Time",
+        "description": "Arrival Delay expressed as % of total trip time.",
+        "alternateNames": [
+          "Arr Delay as % of Flight"
+        ]
+      },
+      {
+        "name": "Arr Lag as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Arr Lag as % of Flight Time",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time."
+      },
+      {
+        "name": "Avg Arr Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Avg Arr Delay (Min)",
+        "description": "Avg of difference in minutes between scheduled and actual arrival time. Early arrivals set to 0."
+      },
+      {
+        "name": "# of Fl Arr Ontime or Early",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Arr Ontime or Early",
+        "description": "Number of flights with 0 minutes delay",
+        "alternateNames": [
+          "# of Arr Ontime or Early",
+          "# of Arrivals Ontime or Early"
+        ]
+      },
+      {
+        "name": "# of Fl Arr 1 to 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Arr 1 to 30 Min Late",
+        "description": "Number of flights with less of 30 minutes Arrival delay",
+        "alternateNames": [
+          "# of Arr 1 to 30 Min Late",
+          "# of Arrivals 1 to 30 Min Late",
+          "# of Fl Arr Less than 30 Min Late"
+        ]
+      },
+      {
+        "name": "# of Fl Arr Over 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Fl Arr Over 30 Min Late",
+        "alternateNames": [
+          "# of Fl Arr over 30 Min Late init",
+          "Fl over 30 Min Late"
+        ]
+      },
+      {
+        "name": "% of Fl Arr 1 to 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Arr 1 to 30 Min Late",
+        "description": "Percent of flights that arrive with less of 30 minutes Arrival delay.",
+        "alternateNames": [
+          "% of Arr 1 to 30 Min Late",
+          "% of Arrivals 1 to 30 Min Late",
+          "% of Fl Arr Less than 30 Min Late"
+        ]
+      },
+      {
+        "name": "% of Fl Arr Over 30 Min Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Arr Over 30 Min Late"
+      },
+      {
+        "name": "% of Fl Arr Ontime or Early",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Arr Ontime or Early",
+        "description": "% of Flights that arrived ontime or early.",
+        "alternateNames": [
+          "% of Arr Ontime"
+        ]
+      },
+      {
+        "name": "% of Fl Arrived Late",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% of Fl Arrived Late"
+      }
+    ]
+  }
+}

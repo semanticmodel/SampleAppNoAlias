@@ -1,0 +1,38 @@
+{
+  "physicalTable": {
+    "name": "WS_DBPROMPT",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "SUBJECTAREA",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ANALYSISCOLUMN",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "PATH",
+        "dataType": "VARCHAR",
+        "length": 400
+      },
+      {
+        "name": "PROMPTNAME",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "ANALYSISTABLE",
+        "dataType": "VARCHAR",
+        "length": 150
+      },
+      {
+        "name": "SEQUENCEID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

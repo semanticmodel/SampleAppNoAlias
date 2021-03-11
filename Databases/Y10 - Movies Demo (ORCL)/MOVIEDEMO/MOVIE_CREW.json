@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "MOVIE_CREW",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "JOB",
+        "dataType": "VARCHAR",
+        "length": 32,
+        "nullable": true
+      },
+      {
+        "name": "CREW_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "MOVIE_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      }
+    ]
+  }
+}

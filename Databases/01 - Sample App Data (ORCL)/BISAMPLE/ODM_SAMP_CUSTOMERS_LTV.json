@@ -1,0 +1,123 @@
+{
+  "physicalTable": {
+    "name": "ODM_SAMP_CUSTOMERS_LTV",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "M_PRED_PROB_L",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE_KEY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "M_LTV",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_CRDT_RATE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_AGE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ADDRESS_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREV_MARITAL_ST",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "GENDER",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "M_PRED_BIN",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "CUST_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_PRED_PROB_H",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS_KEY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "SEGMENT_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_PRED_LTV_NODE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_MARITAL_ST",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "M_PRED_PROB_VH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "M_MONTHS_CONTACT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BIRTH_DT",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "M_INCOME_LVL",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "PREV_MARITAL_ST_DT",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "M_PRED_PROB_M",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "FST_CONTACT_DT",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LST_ORDER_DT",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

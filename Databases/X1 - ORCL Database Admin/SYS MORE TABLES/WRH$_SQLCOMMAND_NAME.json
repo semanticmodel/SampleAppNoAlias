@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "WRH$_SQLCOMMAND_NAME",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COMMAND_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

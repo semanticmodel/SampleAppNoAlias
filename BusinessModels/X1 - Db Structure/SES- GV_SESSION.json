@@ -1,0 +1,1682 @@
+{
+  "logicalTable": {
+    "name": "SES- GV_SESSION",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Action",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ACTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Action Hash",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ACTION_HASH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Audsid",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.AUDSID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blocking Instance",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.BLOCKING_INSTANCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blocking Session",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.BLOCKING_SESSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Blocking Session Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.BLOCKING_SESSION_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Client Identifier",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.CLIENT_IDENTIFIER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Client Info",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.CLIENT_INFO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Command",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.COMMAND"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Creator Addr",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.CREATOR_ADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Creator Serial#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.CREATOR_SERIAL#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Current Queue Duration",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.CURRENT_QUEUE_DURATION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ecid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ECID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.EVENT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.EVENT#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Failed Over",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FAILED_OVER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Failover Method",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FAILOVER_METHOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Failover Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FAILOVER_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Final Blocking Instance",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FINAL_BLOCKING_INSTANCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Final Blocking Session",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FINAL_BLOCKING_SESSION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Final Blocking Session Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FINAL_BLOCKING_SESSION_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fixed Table Sequence",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.FIXED_TABLE_SEQUENCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Inst Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.INST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Call Et",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.LAST_CALL_ET"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lockwait",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.LOCKWAIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logon Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.LOGON_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Machine",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.MACHINE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Module",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.MODULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Module Hash",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.MODULE_HASH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Osuser",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.OSUSER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ownerid",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.OWNERID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1raw",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P1RAW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P1TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2raw",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P2RAW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P2TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3raw",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P3RAW"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.P3TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Paddr",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pddl Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PDDL_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pdml Enabled",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PDML_ENABLED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pdml Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PDML_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plsql Entry Object Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PLSQL_ENTRY_OBJECT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plsql Entry Subprogram Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PLSQL_ENTRY_SUBPROGRAM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plsql Object Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PLSQL_OBJECT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plsql Subprogram Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PLSQL_SUBPROGRAM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Port",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PORT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pq Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PQ_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Child Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_CHILD_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Exec Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_EXEC_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Exec Start",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_EXEC_START"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Sql Addr",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_SQL_ADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prev Sql Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PREV_SQL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PROCESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Program",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.PROGRAM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Resource Consumer Group",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.RESOURCE_CONSUMER_GROUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Wait Block#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ROW_WAIT_BLOCK#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Wait File#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ROW_WAIT_FILE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Wait Obj#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ROW_WAIT_OBJ#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Row Wait Row#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.ROW_WAIT_ROW#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Saddr",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Schema#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SCHEMA#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Schemaname",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SCHEMANAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Seconds In Wait",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SECONDS_IN_WAIT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Seq#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SEQ#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Serial#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SERIAL#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Server",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SERVER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Service Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SERVICE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Session Edition Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SESSION_EDITION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sid",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Address",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_ADDRESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Child Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_CHILD_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Exec Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_EXEC_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Exec Start",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_EXEC_START"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Trace",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_TRACE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Trace Binds",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_TRACE_BINDS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Trace Plan Stats",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_TRACE_PLAN_STATS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Trace Waits",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.SQL_TRACE_WAITS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.STATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Taddr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Terminal",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TERMINAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Time Remaining Micro",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TIME_REMAINING_MICRO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Time Since Last Wait Micro",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TIME_SINCE_LAST_WAIT_MICRO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Top Level Call#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TOP_LEVEL_CALL#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.USER#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Username",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.USERNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Class",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.WAIT_CLASS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Class#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.WAIT_CLASS#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Class Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.WAIT_CLASS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.WAIT_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Wait Time Micro",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSION.WAIT_TIME_MICRO"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "GV_$SESSION",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.GV$SESSION"
+          ]
+        }
+      }
+    ]
+  }
+}

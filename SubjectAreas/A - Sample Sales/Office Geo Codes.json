@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Office Geo Codes",
+    "localization": {
+      "localizationKey": "Office Geo Codes",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Geo_Codes)"
+    },
+    "description": "This folder contains Office Geographic details like latitude, longitude and so on.",
+    "alternateNames": [
+      "Cust Geo Codes#1"
+    ],
+    "presentationColumns": [ {
+        "name": "D61  Iso Country code3",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D61  Iso Country code3"
+      },
+      {
+        "name": "C62  Ctry Cd3 State Name",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.C62  Ctry Cd3 State Name"
+      },
+      {
+        "name": "C63  Ctry Cd3 State Name City",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.C63  Ctry Cd3 State Name City"
+      },
+      {
+        "name": "D64  Latitude",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D64  Latitude"
+      },
+      {
+        "name": "D65  Longitude",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D65  Longitude"
+      },
+      {
+        "name": "D67  Geo Postal Code",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D67  Geo Postal Code"
+      }
+    ]
+  }
+}

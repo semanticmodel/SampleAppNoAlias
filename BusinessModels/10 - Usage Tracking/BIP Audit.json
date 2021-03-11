@@ -1,0 +1,688 @@
+{
+  "logicalTable": {
+    "name": "BIP Audit",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Application Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_APPLICATIONNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Authentication Method",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_AUTHENTICATIONMETHOD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Component Data",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_COMPONENTDATA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Component Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_COMPONENTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Component Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_COMPONENTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Component Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_COMPONENTTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Context Fields",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_CONTEXTFIELDS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Domain Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_DOMAINNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Downstream Component Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_DOWNSTREAMCOMPONENTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ecid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ECID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event Category",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_EVENTCATEGORY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event Status",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_EVENTSTATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Event Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_EVENTTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Failure Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_FAILURECODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Home Instance",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_HOMEINSTANCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Host Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_HOSTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hosting Client Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_HOSTINGCLIENTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hostn Waddr",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_HOSTNWADDR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Initiator",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_INITIATOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Instance Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_INSTANCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Message Text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_MESSAGETEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Module Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_MODULEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Oracle Home",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ORACLEHOME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Org Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ORGID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_PROCESSID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Remote Ip",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_REMOTEIP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Resource",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_RESOURCE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_RID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Roles",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_ROLES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Secondary Session Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_SECONDARYSESSIONID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Session Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_SESSIONID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Target",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_TARGET"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Target Component Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_TARGETCOMPONENTTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Thread Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_THREADID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Transaction Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_TRANSACTIONID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Time Originating",
+        "dataType": "TIMESTAMP",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_TSTZORIGINATING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Upstream Component Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "IAU_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE.IAU_UPSTREAMCOMPONENTID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Originating",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "DayName(%1 ) ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.BIP Audit.Time Originating"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Hour Originating",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "Hour(%1 ) ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.BIP Audit.Time Originating"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "IAU_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - BI Publisher Audit.BIEE_IAU.IAU_BASE"
+          ]
+        }
+      }
+    ]
+  }
+}

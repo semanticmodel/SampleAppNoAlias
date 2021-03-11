@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "V_$METRICGROUP",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INTERVAL_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_INTERVAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

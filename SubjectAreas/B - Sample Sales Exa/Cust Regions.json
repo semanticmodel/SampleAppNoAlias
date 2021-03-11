@@ -1,0 +1,110 @@
+{
+  "presentationTable": {
+    "name": "Cust Regions",
+    "localization": {
+      "localizationKey": "Cust Regions",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions)"
+    },
+    "description": "This folder contains additional Office attributes like Office Region, Country, State, City and so on.",
+    "alternateNames": [
+      "Cust Region"
+    ],
+    "presentationColumns": [ {
+        "name": "C50  Region",
+        "localization": {
+          "localizationKey": "C50  Region",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C50__Region)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C50  Region",
+        "alternateNames": [
+          "Region"
+        ]
+      },
+      {
+        "name": "C51  Area",
+        "localization": {
+          "localizationKey": "C51  Area",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C51__Area)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C51  Area",
+        "alternateNames": [
+          "Area"
+        ]
+      },
+      {
+        "name": "C52  Country Name",
+        "localization": {
+          "localizationKey": "C52  Country Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C52__Country_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C52  Country Name",
+        "alternateNames": [
+          "Country"
+        ]
+      },
+      {
+        "name": "C53  State Province",
+        "localization": {
+          "localizationKey": "C53  State Province",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C53__State_Province)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C53  State Province"
+      },
+      {
+        "name": "C54  State Code",
+        "localization": {
+          "localizationKey": "C54  State Code",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C54__State_Code)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C54  State Code"
+      },
+      {
+        "name": "C55  City",
+        "localization": {
+          "localizationKey": "C55  City",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C55__City)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C55  City",
+        "alternateNames": [
+          "City"
+        ]
+      },
+      {
+        "name": "C56  Postal Code",
+        "localization": {
+          "localizationKey": "C56  Postal Code",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C56__Postal_Code)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C56  Postal Code"
+      },
+      {
+        "name": "C57  Address Line 1",
+        "localization": {
+          "localizationKey": "C57  Address Line 1",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C57__Address_Line_1)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C57  Address Line 1"
+      },
+      {
+        "name": "C58  Address Line 2",
+        "localization": {
+          "localizationKey": "C58  Address Line 2",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C58__Address_Line_2)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C58  Address Line 2"
+      },
+      {
+        "name": "C59  Establishment Name",
+        "localization": {
+          "localizationKey": "C59  Establishment Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Cust_Regions_C59__Establishment_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C59  Establishment Name"
+      },
+      {
+        "name": "C60  Full Address",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D6 Customers (Snowflakes).C60  Full Address"
+      }
+    ]
+  }
+}

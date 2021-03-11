@@ -1,0 +1,21 @@
+{
+  "initBlock": {
+    "name": "ProxyLevel",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select proxyLevel \r\n\tfrom SAMP_USERS_PROXIES \r\n\twhere 'VALUEOF(NQ_SESSION.RUNAS)'=targetId and ':USER'=proxyId"
+      }
+    ],
+    "variables": [ {
+        "name": "PROXYLEVEL"
+      }
+    ]
+  }
+}

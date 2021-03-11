@@ -1,0 +1,26 @@
+{
+  "physicalTable": {
+    "name": "SYS_FBA_USERS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "FA#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

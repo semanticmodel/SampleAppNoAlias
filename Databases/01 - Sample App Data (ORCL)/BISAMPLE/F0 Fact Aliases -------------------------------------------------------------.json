@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "F0 Fact Aliases -------------------------------------------------------------",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.O Datamining Source Tables ====================="
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "logicalTable": {
+    "name": "Facts Active Tasks",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "# Of Active Tasks",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Active Tasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.SEQUENCE_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Of Active Proc Instances",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Active Tasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Process Thread Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Active Tasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_THREAD_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Active Tasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).2 Processes Hier.Process Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).4 Roles Hier.Roles Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).5 Proc Instances.Instance Details",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).6 Tasks Hier.Task Details",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).1 Composite Hier.Composites Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).3 Activities Hier.Activities Detail"
+        ]
+      }
+    ]
+  }
+}

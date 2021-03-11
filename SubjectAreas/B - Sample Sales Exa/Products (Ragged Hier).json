@@ -1,0 +1,60 @@
+{
+  "presentationTable": {
+    "name": "Products (Ragged Hier)",
+    "presentationColumns": [ {
+        "name": "Brand",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).Brand"
+      },
+      {
+        "name": "LOB",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).LOB"
+      },
+      {
+        "name": "Prod_Dsc",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).Prod_Dsc"
+      },
+      {
+        "name": "Prod_Key",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).Prod_Key"
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).TOTAL_VALUE"
+      },
+      {
+        "name": "Type",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D20 Product (Ragged Hier).Type"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "H2 Products Ragged SkipLevels",
+        "sourceLogicalTable": "logicalTable:01 - Sample App Exa.D20 Product (Ragged Hier)",
+        "levels": [ {
+            "name": "Product (Rgd Sk Lvl) Total",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App Exa.D20 Product (Ragged Hier).Product (Rgd Sk Lvl) Total"
+          },
+          {
+            "name": "Product (Rgd Sk Lvl) Brand",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App Exa.D20 Product (Ragged Hier).Product (Rgd Sk Lvl) Brand",
+            "displayColumn": "presentationColumn:B - Sample Sales Exa.Products (Ragged Hier).Brand"
+          },
+          {
+            "name": "Product (Rgd Sk Lvl) LOB",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App Exa.D20 Product (Ragged Hier).Product (Rgd Sk Lvl) LOB",
+            "displayColumn": "presentationColumn:B - Sample Sales Exa.Products (Ragged Hier).LOB"
+          },
+          {
+            "name": "Product (Rgd Sk Lvl) Type",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App Exa.D20 Product (Ragged Hier).Product (Rgd Sk Lvl) Type",
+            "displayColumn": "presentationColumn:B - Sample Sales Exa.Products (Ragged Hier).Type"
+          },
+          {
+            "name": "Product (Rgd Sk Lvl) Prod_Dsc",
+            "sourceLogicalLevel": "logicalLevel:01 - Sample App Exa.D20 Product (Ragged Hier).Product (Rgd Sk Lvl) Prod_Dsc",
+            "displayColumn": "presentationColumn:B - Sample Sales Exa.Products (Ragged Hier).Prod_Dsc"
+          }
+        ]
+      }
+    ]
+  }
+}

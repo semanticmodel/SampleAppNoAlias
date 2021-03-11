@@ -1,0 +1,62 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "presentationColumns": [ {
+        "name": "P0  Product Number",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P0  Product Number"
+      },
+      {
+        "name": "P1  Product",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P1  Product"
+      },
+      {
+        "name": "P2  Product Type",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P2  Product Type"
+      },
+      {
+        "name": "P3  LOB",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P3  LOB"
+      },
+      {
+        "name": "P4  Brand",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D1 Products.P4  Brand"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Products Hierarchy",
+        "alternateNames": [
+          "Products Hier"
+        ],
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D1 Products",
+        "levels": [ {
+            "name": "Total Products",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D1 Products.Total"
+          },
+          {
+            "name": "Brand",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D1 Products.Brand",
+            "displayColumn": "presentationColumn:H - Sample Olap.Products.P4  Brand"
+          },
+          {
+            "name": "Lob",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D1 Products.Lob",
+            "displayColumn": "presentationColumn:H - Sample Olap.Products.P3  LOB"
+          },
+          {
+            "name": "Type",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D1 Products.Type",
+            "displayColumn": "presentationColumn:H - Sample Olap.Products.P2  Product Type"
+          },
+          {
+            "name": "Product",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D1 Products.Product",
+            "displayColumn": "presentationColumn:H - Sample Olap.Products.P1  Product"
+          }
+        ]
+      }
+    ]
+  }
+}

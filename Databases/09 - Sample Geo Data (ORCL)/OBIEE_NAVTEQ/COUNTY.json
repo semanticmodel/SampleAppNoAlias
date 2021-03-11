@@ -1,0 +1,90 @@
+{
+  "physicalTable": {
+    "name": "COUNTY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "STATE",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "TOTPOP2001",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "MSA_ID",
+        "dataType": "VARCHAR",
+        "length": 4
+      },
+      {
+        "name": "CBSA_ID",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "TOTPOP2002",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TOTPOP2003",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "AREA_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "STNAME",
+        "dataType": "VARCHAR",
+        "length": 35
+      },
+      {
+        "name": "TOTPOP2006",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "AREA",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TOTPOP2008",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TOTPOP2007",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TOTPOP2000",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "CTYFIPS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "COUNTY",
+        "dataType": "VARCHAR",
+        "length": 35
+      },
+      {
+        "name": "STFIPS",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "TOTPOP2005",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TOTPOP2004",
+        "dataType": "DOUBLE"
+      }
+    ]
+  }
+}

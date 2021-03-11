@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "ODM_GLOBAL_DETAILS_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GLOBAL_DETAIL_VALUE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "GLOBAL_DETAIL_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

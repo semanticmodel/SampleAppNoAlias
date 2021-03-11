@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "INDC_IND_STATES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "NAME2",
+        "dataType": "CHAR",
+        "length": 8
+      },
+      {
+        "name": "AREA",
+        "dataType": "DOUBLE",
+        "length": 13
+      },
+      {
+        "name": "AREA_NEW",
+        "dataType": "DOUBLE",
+        "length": 24
+      },
+      {
+        "name": "POINTS",
+        "dataType": "INT",
+        "length": 8
+      },
+      {
+        "name": "NAME1",
+        "dataType": "CHAR",
+        "length": 36
+      },
+      {
+        "name": "PARTS",
+        "dataType": "INT",
+        "length": 8
+      },
+      {
+        "name": "LENGTH",
+        "dataType": "DOUBLE",
+        "length": 11
+      }
+    ]
+  }
+}

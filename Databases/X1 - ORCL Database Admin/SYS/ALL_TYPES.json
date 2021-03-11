@@ -1,0 +1,82 @@
+{
+  "physicalTable": {
+    "name": "ALL_TYPES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PREDEFINED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LOCAL_ATTRIBUTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FINAL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INSTANTIABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "LOCAL_METHODS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INCOMPLETE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TYPECODE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ATTRIBUTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SUPERTYPE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TYPEID",
+        "dataType": "VARBINARY",
+        "length": 16
+      },
+      {
+        "name": "METHODS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SUPERTYPE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TYPE_OID",
+        "dataType": "VARBINARY",
+        "length": 16
+      }
+    ]
+  }
+}

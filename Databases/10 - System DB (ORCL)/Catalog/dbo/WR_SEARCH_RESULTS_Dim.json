@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WR_SEARCH_RESULTS_Dim",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WR_SEARCH_RESULTS"
+  }
+}

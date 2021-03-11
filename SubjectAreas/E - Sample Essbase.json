@@ -1,0 +1,66 @@
+{
+  "subjectArea": {
+    "name": "E - Sample Essbase",
+    "sourceBusinessModel": "businessModel:03 - Essbase Sample",
+    "implicitFactColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue",
+    "description": "Essbase Datasource Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:E - Sample Essbase.Time"
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Products",
+        "children": [
+          {
+            "name": "presentationTable:E - Sample Essbase.More Products Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Customers",
+        "children": [
+          {
+            "name": "presentationTable:E - Sample Essbase.Marital Status"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Sales Person"
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Base Facts"
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Calculated Facts",
+        "children": [
+          {
+            "name": "presentationTable:E - Sample Essbase.Time Series"
+          },
+          {
+            "name": "presentationTable:E - Sample Essbase.Trailing Measures"
+          },
+          {
+            "name": "presentationTable:E - Sample Essbase.Simple Calculations"
+          },
+          {
+            "name": "presentationTable:E - Sample Essbase.Essbase Functions"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:E - Sample Essbase.Measures Hierarchy",
+        "children": [
+          {
+            "name": "presentationTable:E - Sample Essbase.Measures Dimension"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

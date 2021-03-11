@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "GV_$STATISTICS_LEVEL",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "STATISTICS_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SESSION_SETTABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ACTIVATION_LEVEL",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "STATISTICS_VIEW_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SYSTEM_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "SESSION_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      }
+    ]
+  }
+}

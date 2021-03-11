@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "2 Dim Processes",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V"
+  }
+}

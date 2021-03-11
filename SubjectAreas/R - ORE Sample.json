@@ -1,0 +1,55 @@
+{
+  "subjectArea": {
+    "name": "R - ORE Sample",
+    "sourceBusinessModel": "businessModel:08 - ORE Sample",
+    "description": "ORE - OBIEE intergation examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:R - ORE Sample.Airlines",
+        "children": [
+          {
+            "name": "presentationTable:R - ORE Sample.Delay Prediction"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.Pred Attrs"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.Addl Attrs"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.AirportsCount"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.Dim- Airports"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:R - ORE Sample.Graphics",
+        "children": [
+          {
+            "name": "presentationTable:R - ORE Sample.RandomRedDots"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.PerspGraph"
+          },
+          {
+            "name": "presentationTable:R - ORE Sample.ORE Graphics"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:R - ORE Sample.ORE Scripts"
+      },
+      {
+        "name": "presentationTable:R - ORE Sample.Stock Sample"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

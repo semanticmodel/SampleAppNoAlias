@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "SA_18_Rout00039D04",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ORIGIN00039C27",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Route_D_00039D04SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "DEST00039C26",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true
+      },
+      {
+        "name": "Route_Desc00039C25",
+        "dataType": "VARCHAR",
+        "length": 250,
+        "nullable": true
+      },
+      {
+        "name": "Route00039C28",
+        "dataType": "VARCHAR",
+        "length": 8
+      }
+    ]
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "physicalTable": {
+    "name": "V$SERVICES",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "GOAL",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "SERVICE_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CREATION_DATE_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "NAME_HASH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NETWORK_NAME",
+        "dataType": "VARCHAR",
+        "length": 512
+      },
+      {
+        "name": "AQ_HA_NOTIFICATION",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DTP",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CLB_GOAL",
+        "dataType": "VARCHAR",
+        "length": 5
+      }
+    ]
+  }
+}

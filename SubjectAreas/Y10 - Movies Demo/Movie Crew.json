@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Movie Crew",
+    "presentationColumns": [ {
+        "name": "Crew ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Crew.Crew ID"
+      },
+      {
+        "name": "Crew Member Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Crew.Crew Member Name"
+      }
+    ]
+  }
+}

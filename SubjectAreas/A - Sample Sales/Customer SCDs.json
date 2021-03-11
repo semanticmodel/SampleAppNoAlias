@@ -1,0 +1,11 @@
+{
+  "presentationTable": {
+    "name": "Customer SCDs",
+    "presentationColumns": [ {
+        "name": "38  # of Cust SCD Table (Cnt Distinct)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.38  # of Cust SCD Table (Cnt Distinct)",
+        "description": "Help :\r\n# of Customers is calculated by counting the distinct occurences of a customer in the fact table"
+      }
+    ]
+  }
+}

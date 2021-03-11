@@ -1,0 +1,304 @@
+{
+  "database": {
+    "name": "22 - Big Data Movie (BDSQL)",
+    "allowDirectDatabaseRequests": true,
+    "allowPopulateQueries": true,
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "BDSQL Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.MOVIEID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.TIME_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.DATEID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key#4",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.ACTIVITYID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level)",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level).GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.GENREID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.CUSTID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_LOG_BDSQL_SRC_Foreign Key#5",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.GENREID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_GENRE_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Movie Level - M:M)",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_GENRE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Movie Level - M:M).GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_GENRE.GENRE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.TIME_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level)",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level).GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.GENRE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_V_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.ACTIVITY_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES_HOURS",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES_HOURS.HOURS_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.TIME_ID_KEY"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_V_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_FACT.CUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "SEG",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER_SEGMENT",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER_SEGMENT.SEGMENT_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.SEG"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_ID",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CAST",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CAST.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "CAST_ID",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CAST",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CAST",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CAST.CAST_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CAST.CAST_ID"
+          }
+        ]
+      },
+      {
+        "name": "CREW_ID",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CREW",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CREW",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CREW.CREW_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CREW.CREW_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_ID",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CREW",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_CREW.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key#3",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES.TIME_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.DATEID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key#4",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level)",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.Genre (Activity Level).GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.GENREID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key#2",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.MOVIEID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key#5",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.GENRE.GENRE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.GENREID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key#1",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.CUSTID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_LOG_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_ACTIVITY_LOG.ACTIVITYID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_Foreign Key",
+        "leftTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_GENRE",
+        "rightTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE_GENRE.MOVIE_ID",
+            "rightColumn": "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIE.MOVIE_ID"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "presentationTable": {
+    "name": "Projects",
+    "presentationColumns": [ {
+        "name": "Project ID",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Project ID"
+      },
+      {
+        "name": "Date Completed",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Date Completed"
+      },
+      {
+        "name": "Date Expiration",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Date Expiration"
+      },
+      {
+        "name": "Date Posted",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Date Posted"
+      },
+      {
+        "name": "Eligible Double Impact Match",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Eligible Double Impact Match"
+      },
+      {
+        "name": "Funding Status",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Funding Status"
+      },
+      {
+        "name": "Grade Level",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Grade Level"
+      },
+      {
+        "name": "Poverty Level",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Poverty Level"
+      },
+      {
+        "name": "Resource Type",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Resource Type"
+      },
+      {
+        "name": "Primary Focus Area",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Primary Focus Area"
+      },
+      {
+        "name": "Primary Focus Subject",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Primary Focus Subject"
+      },
+      {
+        "name": "Secondary Focus Area",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Secondary Focus Area"
+      },
+      {
+        "name": "Secondary Focus Subject",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Secondary Focus Subject"
+      },
+      {
+        "name": "Project Donations",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Projects.Project Donations"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Projects",
+        "sourceLogicalTable": "logicalTable:Y12 - Donations.Projects",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Projects.Total"
+          },
+          {
+            "name": "Detail",
+            "sourceLogicalLevel": "logicalLevel:Y12 - Donations.Projects.Detail",
+            "displayColumn": "presentationColumn:Y12 - Donations.Projects.Project ID"
+          }
+        ]
+      }
+    ]
+  }
+}

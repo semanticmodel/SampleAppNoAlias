@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Hierarchical Measures",
+    "presentationColumns": [ {
+        "name": "Gross Margin Product Rank",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Product Rank"
+      },
+      {
+        "name": "Gross Margin Product Share",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Product Share"
+      },
+      {
+        "name": "Net Revenue Product Rank",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Product Rank"
+      },
+      {
+        "name": "Net Revenue Share",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Share"
+      }
+    ]
+  }
+}

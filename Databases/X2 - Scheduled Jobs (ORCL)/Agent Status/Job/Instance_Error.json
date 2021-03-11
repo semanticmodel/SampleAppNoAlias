@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "Instance_Error",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select\r\nJOB_ID ,\r\nINSTANCE_ID,\r\nreplace(\r\nreplace(\r\nreplace(\r\nreplace(\r\nmax( decode( val_number, 1 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 2 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 3 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 4 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 5 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 6 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 8 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 9 , ERROR_MSG_TEXT, null ) ) ||\r\nmax( decode( val_number, 10 , ERROR_MSG_TEXT, null ) ),\r\n'$_\\s_$',' '),\r\n'$_\\r_$',' '),\r\n'$_\\n_$',' '),\r\n'$_\\,$',',') AS ERROR_MSG\r\nfrom\r\n( select\r\nJOB_ID,\r\nINSTANCE_ID,\r\nrow_number() over ( partition by JOB_ID, INSTANCE_ID\r\norder by RELATIVE_ORDER ) as val_number ,\r\nERROR_MSG_TEXT\r\nfrom S_NQ_ERR_MSG\r\n) ta\r\nGROUP BY JOB_ID, INSTANCE_ID"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "INSTANCE_ID",
+        "dataType": "UINT",
+        "nullable": true
+      },
+      {
+        "name": "JOB_ID",
+        "dataType": "UINT",
+        "nullable": true
+      },
+      {
+        "name": "ERROR_MSG",
+        "dataType": "VARCHAR",
+        "length": 5000
+      }
+    ]
+  }
+}

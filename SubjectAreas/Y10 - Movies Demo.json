@@ -1,0 +1,72 @@
+{
+  "subjectArea": {
+    "name": "Y10 - Movies Demo",
+    "sourceBusinessModel": "businessModel:Y10 - Movie Demo (ORCL)",
+    "alternateNames": [
+      "Movies Transactions",
+      "X8 - Movies Demo"
+    ],
+    "description": "Movies Demo Dataset (ORCL)",
+    "tableOrder": [
+      {
+        "name": "presentationTable:Y10 - Movies Demo.Facts",
+        "children": [
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Facts - Transactions"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Facts - Movie Activities"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Facts - Customers"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Facts - Movies"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:Y10 - Movies Demo.Activities"
+      },
+      {
+        "name": "presentationTable:Y10 - Movies Demo.Movies, Cast and Crew",
+        "children": [
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Movie"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Movie Genre"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Movie Crew"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Movie Cast"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:Y10 - Movies Demo.Time",
+        "children": [
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Time Details"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:Y10 - Movies Demo.Customers and Customer Details",
+        "children": [
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Customer Segment"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Customer Geography"
+          },
+          {
+            "name": "presentationTable:Y10 - Movies Demo.Customers"
+          }
+        ]
+      }
+    ]
+  }
+}

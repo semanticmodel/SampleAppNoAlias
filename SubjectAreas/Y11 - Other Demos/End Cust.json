@@ -1,0 +1,17 @@
+{
+  "presentationTable": {
+    "name": "End Cust",
+    "alternateNames": [
+      "Bbil End Cust"
+    ],
+    "presentationColumns": [ {
+        "name": "Endcust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil End Cust.Endcust Id"
+      },
+      {
+        "name": "Endcustname",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil End Cust.Endcustname"
+      }
+    ]
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "physicalTable": {
+    "name": "ADDRESSES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "ADDRESS_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LATITUDE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "POSTAL_CODE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COUNTRY_ID",
+        "dataType": "CHAR",
+        "length": 2,
+        "nullable": true
+      },
+      {
+        "name": "STATE_PROVINCE",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "LONGITUDE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ADDRESS2",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "ADDRESS1",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "physicalTable": {
+    "name": "SYSAUTH$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SEQUENCE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PRIVILEGE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OPTION$",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GRANTEE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

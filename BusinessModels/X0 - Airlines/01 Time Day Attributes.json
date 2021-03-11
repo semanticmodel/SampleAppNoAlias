@@ -1,0 +1,157 @@
+{
+  "logicalTable": {
+    "name": "01 Time Day Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Qtr of Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME MONTH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH.Cal_Qtr"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Cal_Qtr"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day of Month",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Of_Month"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_01_Day_00039D11",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11.Day_of_Mon00039C53"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day of Year !",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Of_Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "40 TIME DAY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY.Day_Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "40 TIME MONTH",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.41 TIME MONTH"
+          ]
+        }
+      },
+      {
+        "name": "40 TIME DAY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.40 TIME DAY"
+          ]
+        }
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_01_Day_00039D11",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_01_Day_00039D11"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.01 Day Attrib.01 Day of Mth"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "01 Day Attrib Total",
+      "logicalLevels": [
+        {
+          "name": "01 Day Attrib Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "01 Day of Mth",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 31,
+          "primaryColumns": [
+            "logicalColumn:Day of Month"
+          ],
+          "displayColumn": "logicalColumn:Day of Month"
+        },
+        {
+          "name": "01 Day Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10000,
+          "primaryColumns": [
+            "logicalColumn:Day Key"
+          ],
+          "displayColumn": "logicalColumn:Day Key"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "01 Day Attrib [branch at level '01 Day of Mth']",
+          "levels": [ "01 Day Attrib Total", "01 Day of Mth", "01 Day Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,135 @@
+{
+  "logicalTable": {
+    "name": "OBJ- ALL_COL_PRIVS",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Column Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.COLUMN_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Grantable",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.GRANTABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Grantee",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.GRANTEE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Grantor",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.GRANTOR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Privilege",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.PRIVILEGE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Table Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.TABLE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Table Schema",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALL_COL_PRIVS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS.TABLE_SCHEMA"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALL_COL_PRIVS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.ALL_COL_PRIVS"
+          ]
+        }
+      }
+    ]
+  }
+}

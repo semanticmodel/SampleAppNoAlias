@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D6 Customers Dimension Aliases ------------------------------",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.O Datamining Source Tables ====================="
+  }
+}

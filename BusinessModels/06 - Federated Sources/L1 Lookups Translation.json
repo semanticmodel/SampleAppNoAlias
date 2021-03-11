@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "L1 Lookups Translation",
+    "type": "LOOKUP",
+    "logicalColumns": [ {
+        "name": "Lookup_Dsc",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L2 Other Lookups.Lookup_Dsc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Lookup_Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L2 Other Lookups.Lookup_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Language_Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS Lookups",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L2 Other Lookups.Language_Key"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS Lookups",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.L2 Other Lookups"
+          ]
+        }
+      }
+    ]
+  }
+}

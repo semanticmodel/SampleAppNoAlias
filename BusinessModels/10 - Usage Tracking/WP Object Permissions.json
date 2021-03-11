@@ -1,0 +1,708 @@
+{
+  "logicalTable": {
+    "name": "WP Object Permissions",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Read",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.READ"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Execute/Traverse",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.EXECUTE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Write",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.WRITE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Delete",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.DEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ChangePermissions",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.CHANGEPERMISSIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Set Ownership",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SETOWNERSHIP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Run Publisher Report",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.RUNPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Schedule Publisher Report",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SCHEDULEPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "View Publisher Report",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.VIEWPUBLISHEROUTPUT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Reads",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when %1 = 'Y' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.READ"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Execute/Traverses",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.EXECUTE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Writes",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.WRITE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Deletes",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.DEL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed ChangePermitteds",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.CHANGEPERMISSIONS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Set Ownerships",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SETOWNERSHIP"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Run Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.RUNPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed Schedule Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SCHEDULEPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Allowed View Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'Y' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.VIEWPUBLISHEROUTPUT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Reads",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when %1 = 'N' THEN 1 END\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.READ"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Execute/Traverses",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.EXECUTE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Writes",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.WRITE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Deletes",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.DEL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied ChangePermitteds",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1  END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.CHANGEPERMISSIONS"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Set Ownerships",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SETOWNERSHIP"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Run Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1  END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.RUNPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied Schedule Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1  END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.SCHEDULEPUBLISHERREPORT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Denied View Publisher Reports",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1= 'N' THEN 1  END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.VIEWPUBLISHEROUTPUT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Accounts with Explicit Permisions",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.ACCOUNT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Objects with Explicit Permisions",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts.OBJECTPATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WP_ACL_Stats_Facts",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Facts"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WP All Objects.Full Path",
+          "logicalLevel:10 - Usage Tracking.WP All Accounts.WP Account Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Accounts",
+      "logicalLevels": [
+        {
+          "name": "All Accounts",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "WP Account Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Type"
+          ],
+          "displayColumn": "logicalColumn:Account Type"
+        },
+        {
+          "name": "WP Account Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Account Name"
+          ],
+          "displayColumn": "logicalColumn:Account Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "WP All Accounts [branch at level 'WP Account Type']",
+          "levels": [ "All Accounts", "WP Account Type", "WP Account Detail" ]
+        }
+      ]
+    }
+  }
+}

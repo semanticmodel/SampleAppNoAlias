@@ -1,0 +1,140 @@
+{
+  "businessModel": {
+    "name": "X5 - OLTP Source (Fusion Order)",
+    "description": "Demonstrates how to build a business model from an OLTP data model in the physical layer using OBIEE.",
+    "joins": [      {
+        "name": "Relationship_2004:641071273073962",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D10 Order Payment Options",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:647261273082988",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D05 Product Suppliers",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F3 Stock Levels",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:617171273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:618681273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D01 Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:624931273062687",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D04 Products",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:625611273062835",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D07 Orders Attributes",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:662581273151221",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D08 Order Ship to Adress",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:625641273062840",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D12 Orders Line Attributes",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:620071273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:618621273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F2 Coupon Usages",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D01 Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:615931273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F2 Coupon Usages",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:624101273062529",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F3 Stock Levels",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D04 Products",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:647231273082983",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D05 Product Suppliers",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:646771273077550",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D07 Orders Attributes",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F2 Coupon Usages",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:625671273062857",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D06 Product Categories",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:665221273153001",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D00 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:620881273059824",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).F3 Stock Levels",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).D13 Warehouses",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:638861273071788",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D03 Customer Other Addresses",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:630291273067640",
+        "leftTable": "logicalTable:X5 - OLTP Source (Fusion Order).D02 Customer Primary Addresses",
+        "rightTable": "logicalTable:X5 - OLTP Source (Fusion Order).F1 Order Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

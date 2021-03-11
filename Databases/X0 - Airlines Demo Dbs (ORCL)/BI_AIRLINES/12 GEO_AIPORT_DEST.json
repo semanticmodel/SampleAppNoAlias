@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "12 GEO_AIPORT_DEST",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.OBIEE_GEO_AIRPORT_BRIDGE"
+  }
+}

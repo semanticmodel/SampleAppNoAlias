@@ -1,0 +1,193 @@
+{
+  "database": {
+    "name": "Y10 - Movies Demo (ORCL)",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "MovieDemo Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "TIMES_HOUR (Cross Join)_TIMES#1",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES_HOUR (Cross Join)",
+        "joinExpression": {
+          "expressionTemplate": "1=1"
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#2",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.TIME_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_V_Foreign Key#2",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.CUST_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.CUST_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_V_Foreign Key#1",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#1",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Activity Level)",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Activity Level).GENRE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.GENRE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key#3",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES_HOURS",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES_HOURS.HOURS_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID_KEY"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_FACT_Foreign Key",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.ACTIVITY",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.ACTIVITY.ACTIVITY_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.ACTIVITY_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_GENRE_Foreign Key",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Movie Level - M:M)",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_GENRE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Movie Level - M:M).GENRE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_GENRE.GENRE_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_ID",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CAST",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CAST.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "CAST_ID",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CAST",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CAST",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CAST.CAST_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CAST.CAST_ID"
+          }
+        ]
+      },
+      {
+        "name": "CREW_ID",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CREW",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CREW",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CREW.CREW_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CREW.CREW_ID"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_ID",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CREW",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE.MOVIE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_CREW.MOVIE_ID"
+          }
+        ]
+      },
+      {
+        "name": "SEG",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER_SEGMENT",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER_SEGMENT.SEGMENT_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.CUSTOMER.SEG"
+          }
+        ]
+      },
+      {
+        "name": "MOVIE_Foreign Key",
+        "leftTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_GENRE",
+        "rightTable": "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_GENRE.MOVIE_ID",
+            "rightColumn": "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE.MOVIE_ID"
+          }
+        ]
+      }
+    ]
+  }
+}

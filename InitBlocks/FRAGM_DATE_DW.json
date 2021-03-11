@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "FRAGM_DATE_DW",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT '20-DEC-2012' FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "FRAGM_DATE_DW",
+        "value": "'20-DEC-2015'"
+      }
+    ]
+  }
+}

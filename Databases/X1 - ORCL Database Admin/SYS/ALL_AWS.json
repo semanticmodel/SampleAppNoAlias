@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "ALL_AWS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PAGESPACES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AW_VERSION",
+        "dataType": "VARCHAR",
+        "length": 4
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "AW_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "GENERATIONS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AW_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "FROZEN",
+        "dataType": "VARCHAR",
+        "length": 6
+      }
+    ]
+  }
+}

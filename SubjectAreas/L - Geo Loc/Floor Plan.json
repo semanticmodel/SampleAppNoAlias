@@ -1,0 +1,48 @@
+{
+  "presentationTable": {
+    "name": "Floor Plan",
+    "alternateNames": [
+      "A1_KVA_PER_CAGE",
+      "Floor Plan Metrics",
+      "KVA Per Cage",
+      "KVA_PER_CAGE"
+    ],
+    "presentationColumns": [ {
+        "name": "IBX",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floorplan Attributes.IBX"
+      },
+      {
+        "name": "Cage Number",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floorplan Attributes.Cage Number"
+      },
+      {
+        "name": "KVA per Cab",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floor Plan Metrics.KVA per Cab",
+        "alternateNames": [
+          "KVA_PER_CAB"
+        ]
+      },
+      {
+        "name": "Cross Connect Count",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floor Plan Metrics.Cross Connect Count",
+        "alternateNames": [
+          "CROSS_CONNECT_COUNT"
+        ]
+      },
+      {
+        "name": "Cage Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floor Plan Metrics.Cage Area",
+        "alternateNames": [
+          "CAGE_AREA"
+        ]
+      },
+      {
+        "name": "Cage Count",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Floor Plan Metrics.Cage Count",
+        "alternateNames": [
+          "CAGE_COUNT"
+        ]
+      }
+    ]
+  }
+}

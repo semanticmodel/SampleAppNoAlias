@@ -1,0 +1,34 @@
+{
+  "initBlock": {
+    "name": "WS_VARS_INIT_BLOCK",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 'San Francisco','United States','-', 'EUR' from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "WS_CITY",
+        "value": "'San Francisco'"
+      },
+      {
+        "name": "WS_COUNTRY",
+        "value": "'United States'"
+      },
+      {
+        "name": "WS_PROXY",
+        "value": "'-'"
+      },
+      {
+        "name": "WS_CURRENCY",
+        "value": "'EUR'"
+      }
+    ]
+  }
+}

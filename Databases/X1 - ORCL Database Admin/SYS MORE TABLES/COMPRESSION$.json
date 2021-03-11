@@ -1,0 +1,116 @@
+{
+  "physicalTable": {
+    "name": "COMPRESSION$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ULEVEL",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SUBLEVEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOUTSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ILEVEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "UNCMPSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MTIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "TINSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CTINSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CMPSIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BESTSORTCOL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ANALYZER",
+        "dataType": "LONGVARBINARY",
+        "length": 4000
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

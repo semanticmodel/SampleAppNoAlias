@@ -1,0 +1,113 @@
+{
+  "physicalTable": {
+    "name": "DBA_MVIEW_ANALYSIS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INVALID",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "REVISION",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "REWRITE_ENABLED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "UNUSABLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "MVIEW_TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "CONTAINS_VIEWS",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "QUERY",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "INC_REFRESHABLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "INCREFRESHTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RESTRICTED_SYNTAX",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "REFRESH_METHOD",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "LAST_REFRESH_SCN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONTAINER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "KNOWN_STALE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SUMMARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "MVIEW_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "LAST_REFRESH_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "FULLREFRESHTIM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "QUERY_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

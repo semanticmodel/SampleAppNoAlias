@@ -1,0 +1,45 @@
+{
+  "presentationTable": {
+    "name": "Areas and Other Facts",
+    "alternateNames": [
+      "Households Facts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Total State Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total State Area"
+      },
+      {
+        "name": "Total State Area New",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total State Area New"
+      },
+      {
+        "name": "Total State Length",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total State Length"
+      },
+      {
+        "name": "Total State Parts",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total State Parts"
+      },
+      {
+        "name": "Total State Points",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total State Points"
+      },
+      {
+        "name": "Total District Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total District Area"
+      },
+      {
+        "name": "Total District Length",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total District Length"
+      },
+      {
+        "name": "Total District Parts",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total District Parts"
+      },
+      {
+        "name": "Total District Points",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.India Demographics.Total District Points"
+      }
+    ]
+  }
+}

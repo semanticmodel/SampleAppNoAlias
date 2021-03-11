@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "All Tab Privs",
+    "alternateNames": [
+      "All_tab_privs",
+      "OBJ- ALL_TAB_PRIVS"
+    ],
+    "presentationColumns": [ {
+        "name": "Grantable",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Grantable"
+      },
+      {
+        "name": "Grantee",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Grantee"
+      },
+      {
+        "name": "Grantor",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Grantor"
+      },
+      {
+        "name": "Hierarchy",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Hierarchy"
+      },
+      {
+        "name": "Privilege",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Privilege"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Table Name"
+      },
+      {
+        "name": "Table Schema",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_PRIVS.Table Schema"
+      }
+    ]
+  }
+}

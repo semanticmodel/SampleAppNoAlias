@@ -1,0 +1,93 @@
+{
+  "presentationTable": {
+    "name": "Month",
+    "alternateNames": [
+      "40 Date",
+      "Date"
+    ],
+    "presentationColumns": [ {
+        "name": "Dep Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Year",
+        "alternateNames": [
+          "Per Name Year"
+        ]
+      },
+      {
+        "name": "Dep Month",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Month",
+        "alternateNames": [
+          "Per Name Month"
+        ]
+      },
+      {
+        "name": "Qtr of Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Qtr of Year",
+        "alternateNames": [
+          "Cal Qtr"
+        ]
+      },
+      {
+        "name": "Month of Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Month of Year",
+        "alternateNames": [
+          "Cal Month"
+        ]
+      },
+      {
+        "name": "Dep Half",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Half",
+        "alternateNames": [
+          "Per Name Half"
+        ]
+      },
+      {
+        "name": "Dep Qtr",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Dep Qtr",
+        "alternateNames": [
+          "Per Name Qtr"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Flight Month Hier",
+        "alternateNames": [
+          "40 Date",
+          "Flight Date Hier"
+        ],
+        "sourceLogicalTable": "logicalTable:X0 - Airlines.00 Time",
+        "levels": [ {
+            "name": "Full Period",
+            "alternateNames": [
+              "Time Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Total"
+          },
+          {
+            "name": "Year",
+            "alternateNames": [
+              "Time Year"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Year",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Month.Dep Year"
+          },
+          {
+            "name": "Quarter",
+            "alternateNames": [
+              "Time Qtr"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Qtr",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Month.Dep Qtr"
+          },
+          {
+            "name": "Month",
+            "alternateNames": [
+              "Time Month"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.00 Time.Time Month",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Month.Dep Month"
+          }
+        ]
+      }
+    ]
+  }
+}

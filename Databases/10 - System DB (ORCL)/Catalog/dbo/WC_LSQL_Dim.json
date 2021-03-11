@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WC_LSQL_Dim",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_RESULTS"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "DB Objects",
+    "alternateNames": [
+      "Database Objects",
+      "OBJ- ALL USERS - Owners"
+    ],
+    "presentationColumns": [ {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL USERS - Owners.Owner"
+      }
+    ]
+  }
+}

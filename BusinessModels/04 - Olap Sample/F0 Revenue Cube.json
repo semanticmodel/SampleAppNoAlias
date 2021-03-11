@@ -1,0 +1,1197 @@
+{
+  "logicalTable": {
+    "name": "F0 Revenue Cube",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "1- Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "2- Billed Quantity",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Units"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "3- Discount Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Discount Amount"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.3- Discount Amount"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "10 - Variable Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Variable Cost"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.10 - Variable Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "11 - Fixed Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Fixed Cost"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.11 - Fixed Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "15 - Gross Margin",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.15 - Gross Margin"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "16 - Net Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.16 - Net Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "17 - Net Costs",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Cost"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.17 - Net Costs"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "31  # of Orders  (Cnt Distinct)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Number of Orders"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.31  # of Orders  (Cnt Distinct)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cross Over Gross Margin Forecast",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Cross Over Gross Margin Forecast"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Cross Over Gross Margin Forecast"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cross Over Net Revenue Forecast",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Cross Over Net Revenue Forecast"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Cross Over Net Revenue Forecast"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin %",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin %"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin %"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin % Chg Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1\r\n*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin % Chg Pr Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin % Chg Pr Year"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin % Chg Pr Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Avg",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin 3 Period Moving Avg"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Avg"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Max",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin 3 Period Moving Max"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Max"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Total",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin 3 Period Moving Total"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Total"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin Pr Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin Pr Year"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Pr Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin Product Rank",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin Product Rank"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Product Rank"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin Product Share",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin Product Share"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin Product Share"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin YTD",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin YTD"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin YTD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gross Margin YTD % Chg Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Gross Margin YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue % Chg Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue % Chg Pr Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue % Chg Pr Year"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue % Chg Pr Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue % Yearly Target",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue % Yearly Target"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue % Yearly Target"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Avg",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue 3 Period Moving Avg"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Avg"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Max",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue 3 Period Moving Max"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Max"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Total",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue 3 Period Moving Total"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Total"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Pr Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Pr Year"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Pr Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Product Rank",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Product Rank"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Product Rank"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Share",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Share"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Share"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Target Remaining",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Target Remaining"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Target Remaining"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue Yearly Target (5% Growth)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue Yearly Target (5% Growth)"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Yearly Target (5% Growth)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue YTD",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue YTD"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue YTD"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Net Revenue YTD % Chg Pr Period",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1*100",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Net Revenue YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue YTD % Chg Pr Period"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Product Alert (10% Drop)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Revenue Cube",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube.Product Alert (10% Drop)"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Product Alert (10% Drop)"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast (%1 as double)/%2 ",
+            "expressionObjects": [
+              "logicalColumn:04 - Olap Sample.F0 Revenue Cube.1- Revenue",
+              "logicalColumn:04 - Olap Sample.F0 Revenue Cube.2- Billed Quantity"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Revenue Cube",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Revenue Cube"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H0 Time.Month",
+          "logicalLevel:04 - Olap Sample.H3 Office.Office",
+          "logicalLevel:04 - Olap Sample.H1 Products.Product",
+          "logicalLevel:04 - Olap Sample.H5 Sales Rep.Detail",
+          "logicalLevel:04 - Olap Sample.H6 Customers.Customer Segment"
+        ]
+      }
+    ]
+  }
+}

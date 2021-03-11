@@ -1,0 +1,15 @@
+{
+  "physicalTable": {
+    "name": "TTS_ERROR$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VIOLATIONS",
+        "dataType": "VARCHAR",
+        "length": 2000
+      }
+    ]
+  }
+}

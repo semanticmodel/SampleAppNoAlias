@@ -1,0 +1,31 @@
+{
+  "physicalTable": {
+    "name": "SAMP_BLOBS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "BLOB",
+        "dataType": "LONGVARBINARY",
+        "length": 640000,
+        "nullable": true
+      },
+      {
+        "name": "ITEMTYPE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "ITEMID",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "ITEMNAME",
+        "dataType": "VARCHAR",
+        "length": 120,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,66 @@
+{
+  "physicalTable": {
+    "name": "PRODUCT_TRANSLATIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "SOURCE_LANG",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LANGUAGE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ADDITIONAL_INFO",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "PRODUCT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      }
+    ]
+  }
+}

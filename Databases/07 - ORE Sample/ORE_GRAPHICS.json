@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "ORE_GRAPHICS",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select id, image\r\nfrom table(rqTableEval(\r\nVALUEOF(NQ_SESSION.ORE_PARAM1), \r\nVALUEOF(NQ_SESSION.ORE_PARAM2),\r\n'PNG',\r\n'valueof(NQ_SESSION.ORE_SCRIPTNAME)'))"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "IMAGE",
+        "dataType": "LONGVARBINARY",
+        "length": 400000,
+        "nullable": true
+      },
+      {
+        "name": "ID",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

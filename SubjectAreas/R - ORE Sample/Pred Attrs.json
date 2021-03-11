@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Pred Attrs",
+    "description": "->",
+    "alternateNames": [
+      "Dim - Delay Pred Attrs"
+    ],
+    "presentationColumns": [ {
+        "name": "DepDelay",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.DepDelay"
+      },
+      {
+        "name": "Distance",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Distance"
+      }
+    ]
+  }
+}

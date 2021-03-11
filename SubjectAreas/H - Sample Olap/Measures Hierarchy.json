@@ -1,0 +1,39 @@
+{
+  "presentationTable": {
+    "name": "Measures Hierarchy",
+    "presentationColumns": [ {
+        "name": "% Change Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.% Change Pr Period"
+      },
+      {
+        "name": "Prior Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Prior Period"
+      },
+      {
+        "name": "Product Parent Share",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Product Parent Share"
+      },
+      {
+        "name": "Value",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Value"
+      },
+      {
+        "name": "Year To Date",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.Year To Date"
+      },
+      {
+        "name": "YTD % Chg Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F1 Revenue Measure Hierarchy.YTD % Chg Pr Period"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Measures Hierarchy",
+        "alternateNames": [
+          "H9 Measures Hierarchy"
+        ],
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D9 Measure Hierarchy",
+        "displayColumn": "presentationColumn:H - Sample Olap.Dimension.Measure Name"
+      }
+    ]
+  }
+}

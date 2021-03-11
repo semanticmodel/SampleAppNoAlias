@@ -1,0 +1,59 @@
+{
+  "physicalTable": {
+    "name": "FACT_AGG_OR_01",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "hints": "opt_param('_index_join_enabled','false')+",
+    "physicalColumns": [ {
+        "name": "Discoun00003CDA",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "T02_Per_Na00003D05",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "Paid_Am00003E76",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Shipped00003EDA",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Revenue00004032",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "Shipped00004238",
+        "dataType": "INT",
+        "length": 12
+      },
+      {
+        "name": "D1k_Offic00004295",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Billed_000043DF",
+        "dataType": "INT",
+        "length": 12
+      },
+      {
+        "name": "P0_Produc0000459A",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D83 Cust LTV Dynamic Leaf Nodes",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_LTV_BIN_RULES"
+  }
+}

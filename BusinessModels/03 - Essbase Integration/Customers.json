@@ -1,0 +1,417 @@
+{
+  "logicalTable": {
+    "name": "Customers",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Gen1,Customers",
+        "dataType": "VARCHAR",
+        "sortBy": "Gen1,Customers - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Customers"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Customers - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Customers - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen1,Customers - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Gen1,Customers - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "sortBy": "Region - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Region"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Region - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Region - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sub Region",
+        "dataType": "VARCHAR",
+        "sortBy": "Sub Region - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Sub Region"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sub Region - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Sub Region - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sub Region - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Sub Region - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country",
+        "dataType": "VARCHAR",
+        "sortBy": "Country - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Country"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Country - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Country - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State/Province",
+        "dataType": "VARCHAR",
+        "sortBy": "State/Province - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.State/Province"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State/Province - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.State/Province - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "State/Province - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.State/Province - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - Major Market",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Customers - Major Market"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - Small Market",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Customers - Small Market"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - New Market",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Customers - New Market"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Customers - Default"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Customers - Long Names",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Customers - Long Names"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Basic",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Basic.BISAMPL2.Basic"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Integration.Customers.State/Province"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Gen1,Customers",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Gen1,Customers",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen1,Customers - Member Key"
+          ]
+        },
+        {
+          "name": "Region",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Region - Member Key"
+          ]
+        },
+        {
+          "name": "Sub Region",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Sub Region - Member Key"
+          ]
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Country - Member Key"
+          ]
+        },
+        {
+          "name": "State/Province",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:State/Province"
+          ],
+          "displayColumn": "logicalColumn:State/Province"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Customers [branch at level 'Country']",
+          "levels": [ "Gen1,Customers", "Region", "Sub Region", "Country", "State/Province" ]
+        }
+      ]
+    }
+  }
+}

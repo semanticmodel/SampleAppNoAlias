@@ -1,0 +1,148 @@
+{
+  "logicalTable": {
+    "name": "31 Carrier",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Carrier",
+        "description": "Unique Carrier Name. When the same name has been used by multiple carriers, a numeric suffix is used for earlier users, for example, Air Caribbean, Air Caribbean (1).",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "30 UNIQUE_CARRIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_31_Carr00039CEB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier00039BA9"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Carrier Code",
+        "description": "Unique Carrier Code. When the same code has been used by multiple carriers, a numeric suffix is used for earlier users, for example, PA, PA(1), PA(2). Use this field for analysis across a range of years.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "30 UNIQUE_CARRIERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS.CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_31_Carr00039CEB",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB.Carrier_Co00039BAA"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.31 Carrier Detail"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Carrier Short",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LEFT(%1, 25)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.31 Carrier.Carrier"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "30 UNIQUE_CARRIERS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.30 UNIQUE_CARRIERS"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_31_Carr00039CEB",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_31_Carr00039CEB"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "31 Carrier Total",
+      "logicalLevels": [
+        {
+          "name": "31 Carrier Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "31 Carrier Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 28,
+          "primaryColumns": [
+            "logicalColumn:Carrier Code"
+          ],
+          "preferredDrillPath": [
+            "X0 - Airlines.11 Orig Airport Map.11 Orig Region Map"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "31 Carrier",
+          "levels": [ "31 Carrier Total", "31 Carrier Detail" ]
+        }
+      ]
+    }
+  }
+}

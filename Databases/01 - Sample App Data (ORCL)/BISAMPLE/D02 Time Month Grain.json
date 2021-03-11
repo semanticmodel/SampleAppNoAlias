@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D02 Time Month Grain",
+    "description": "Time Dimension Alias at month grain. Stores one record for each month.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_TIME_MTH_D"
+  }
+}

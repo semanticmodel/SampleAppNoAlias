@@ -1,0 +1,35 @@
+{
+  "presentationTable": {
+    "name": "Base Facts",
+    "presentationColumns": [ {
+        "name": "1- Revenue",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).1- Revenue",
+        "alternateNames": [
+          "Revenue"
+        ]
+      },
+      {
+        "name": "2- Billed Quantity",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).2- Billed Quantity",
+        "alternateNames": [
+          "Units"
+        ]
+      },
+      {
+        "name": "3- Discount Amount",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).3- Discount Amount",
+        "alternateNames": [
+          "Discount Value"
+        ]
+      },
+      {
+        "name": "10 - Variable Costs",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).10 - Variable Costs"
+      },
+      {
+        "name": "11 - Fixed Costs",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).11 - Fixed Costs"
+      }
+    ]
+  }
+}

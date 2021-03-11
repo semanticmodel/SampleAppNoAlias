@@ -1,0 +1,54 @@
+{
+  "presentationTable": {
+    "name": "Movie",
+    "presentationColumns": [ {
+        "name": "Genre ID",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Genre ID"
+      },
+      {
+        "name": "Movie ID",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Movie ID"
+      },
+      {
+        "name": "Movie Popularity",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Movie Popularity"
+      },
+      {
+        "name": "Movie Title",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Movie Title"
+      },
+      {
+        "name": "Movie Vote Count",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Movie Vote Count"
+      },
+      {
+        "name": "Release Year",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Release Year"
+      },
+      {
+        "name": "Genre Name",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Movie.Genre Name"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Movie Hier",
+        "sourceLogicalTable": "logicalTable:12 - Big Data Movie.Movie",
+        "levels": [ {
+            "name": "Total Movie",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Movie.Total Movie"
+          },
+          {
+            "name": "Genre",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Movie.Genre",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Movie.Genre Name"
+          },
+          {
+            "name": "Movie",
+            "sourceLogicalLevel": "logicalLevel:12 - Big Data Movie.Movie.Movie",
+            "displayColumn": "presentationColumn:M - Big Data Movie.Movie.Movie Title"
+          }
+        ]
+      }
+    ]
+  }
+}

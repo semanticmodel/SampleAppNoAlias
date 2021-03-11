@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Exec Attributes",
+    "alternateNames": [
+      "Analyses Execution Dim",
+      "Attributes",
+      "Execution Dim"
+    ],
+    "presentationColumns": [ {
+        "name": "Analysis URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Analysis URL"
+      },
+      {
+        "name": "Path_L0",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Path_L0"
+      },
+      {
+        "name": "Path_L1",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Path_L1"
+      },
+      {
+        "name": "Path_L2",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Path_L2"
+      },
+      {
+        "name": "Path_L3",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Path_L3"
+      },
+      {
+        "name": "Analysis Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Analysis Name"
+      },
+      {
+        "name": "Analysis Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Analysis Path"
+      },
+      {
+        "name": "Run Date",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Run Date"
+      },
+      {
+        "name": "Last Run Date",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Attributes.Last Run Date"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Catalog Path",
+        "alternateNames": [
+          "WC Exec Path"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WC Exec Attributes",
+        "levels": [ {
+            "name": "All Folders",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.All Folders"
+          },
+          {
+            "name": "Path level 0",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.Path level 0",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Exec Attributes.Path_L0"
+          },
+          {
+            "name": "Path level 1",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.Path level 1",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Exec Attributes.Path_L1"
+          },
+          {
+            "name": "Path level 2",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.Path level 2",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Exec Attributes.Path_L2"
+          },
+          {
+            "name": "Path level 3",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.Path level 3",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Exec Attributes.Path_L3"
+          },
+          {
+            "name": "Full Path",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WC Exec Attributes.Full Path",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Exec Attributes.Analysis Path"
+          }
+        ]
+      }
+    ]
+  }
+}

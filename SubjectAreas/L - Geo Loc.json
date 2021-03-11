@@ -1,0 +1,100 @@
+{
+  "subjectArea": {
+    "name": "L - Geo Loc",
+    "sourceBusinessModel": "businessModel:07 - Spatial Samples",
+    "description": "Geo Localization Expressions Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:L - Geo Loc.POI Details",
+        "children": [
+          {
+            "name": "presentationTable:L - Geo Loc.Business In Range"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.Blocks",
+        "children": [
+          {
+            "name": "presentationTable:L - Geo Loc.Education Facts"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Population"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Income"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.US Counties"
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.Floor Plan"
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.Arena"
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.India Demographics",
+        "children": [
+          {
+            "name": "presentationTable:L - Geo Loc.Facts"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Households Facts"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Areas and Other Facts"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:L - Geo Loc.Mumbai Demographics",
+        "children": [
+          {
+            "name": "presentationTable:L - Geo Loc.Expenses Metrics"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Consumption Metrics"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Population Metrics"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Pop By Earnings"
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Household Metrics",
+            "children": [
+              {
+                "name": "presentationTable:L - Geo Loc.Hh By Urban SEC Codes"
+              },
+              {
+                "name": "presentationTable:L - Geo Loc.Hh By Earning Levels"
+              },
+              {
+                "name": "presentationTable:L - Geo Loc.Pop By Hh Earning Levels"
+              },
+              {
+                "name": "presentationTable:L - Geo Loc.Savings By Hh Earning Levels"
+              },
+              {
+                "name": "presentationTable:L - Geo Loc.Income By Hh Earning Levels"
+              }
+            ]
+          },
+          {
+            "name": "presentationTable:L - Geo Loc.Per Capita Metrics"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

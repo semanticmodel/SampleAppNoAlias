@@ -1,0 +1,37 @@
+{
+  "physicalTable": {
+    "name": "SAMP_LOOKUPS_D",
+    "description": "Lookups dimension table : Stores lookup information for various dimension attributes in different languages",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_LOOKUPS_D.xml",
+    "physicalColumns": [ {
+        "name": "Lookup_Dsc",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Lookup Description: Stores the description of a dimension attribute in a specific language"
+      },
+      {
+        "name": "Lookup_Type",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Lookup Type: Stores the name of the dimension attribute. Some possible values are 'Marital Status', 'Customer Type' and so on."
+      },
+      {
+        "name": "Language_Key",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Language Key: Stores the language information in short form like 'en', 'fr', 'es' and so on."
+      },
+      {
+        "name": "Lookup_Key",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Lookup Key: Stores the key value of a dimension attribute in a specific language"
+      }
+    ]
+  }
+}

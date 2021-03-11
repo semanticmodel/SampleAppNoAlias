@@ -1,0 +1,226 @@
+{
+  "logicalTable": {
+    "name": "Facts Proc Instances",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "# Of Completed Proc Inst",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Proc Inst Avg Duratn Days",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 86400",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Avg Duratn Hrs",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 3600",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Avg Duratn Min",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 60",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Avg Duratn Mths",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_MONTH , %1, %2)",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_START_TIME",
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_END_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Proc Inst Avg Duratn Seconds",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as double)/1000\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_RUNNING_TIME_IN_MSEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Proc Inst Total Duratn Days",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 86400",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Total Duratn Hrs",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 3600",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Total Duratn Min",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / 60",
+            "expressionObjects": [
+              "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Seconds"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Proc Inst Total Duratn Mths",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_MONTH , %1, %2)",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_START_TIME",
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_END_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Proc Inst Total Duratn Seconds",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as double)/1000\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_RUNNING_TIME_IN_MSEC"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ProcessPerf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).5 Proc Instances.Instance Details",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).2 Processes Hier.Process Detail",
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).1 Composite Hier.Composites Detail"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "physicalTable": {
+    "name": "DIM_CLAIM_COMMENTS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "COMPLAINT_DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TERMS",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "COMPLAINT",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "RECORDID",
+        "dataType": "VARCHAR",
+        "length": 50,
+        "nullable": true
+      }
+    ]
+  }
+}

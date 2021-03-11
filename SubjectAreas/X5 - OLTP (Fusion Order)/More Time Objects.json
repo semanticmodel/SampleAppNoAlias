@@ -1,0 +1,86 @@
+{
+  "presentationTable": {
+    "name": "More Time Objects",
+    "presentationColumns": [ {
+        "name": "Cal Half",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Cal Half"
+      },
+      {
+        "name": "Cal Month",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Cal Month"
+      },
+      {
+        "name": "Cal Qtr",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Cal Qtr"
+      },
+      {
+        "name": "Cal Week",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Cal Week"
+      },
+      {
+        "name": "Cal Year",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Cal Year"
+      },
+      {
+        "name": "Day Key",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Day Key"
+      },
+      {
+        "name": "Day Of Month",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Day Of Month"
+      },
+      {
+        "name": "Day Of Week",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Day Of Week"
+      },
+      {
+        "name": "Day Of Year",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Day Of Year"
+      },
+      {
+        "name": "Days in Mth",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Days in Mth"
+      },
+      {
+        "name": "Days in Qtr",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Days in Qtr"
+      },
+      {
+        "name": "Fscl Half",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Fscl Half"
+      },
+      {
+        "name": "Fscl Month",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Fscl Month"
+      },
+      {
+        "name": "Fscl Qtr",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Fscl Qtr"
+      },
+      {
+        "name": "Fscl Week",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Fscl Week"
+      },
+      {
+        "name": "Fscl Year",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Fscl Year"
+      },
+      {
+        "name": "Julian Day Num",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Julian Day Num"
+      },
+      {
+        "name": "Julian Month Num",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Julian Month Num"
+      },
+      {
+        "name": "Julian Qtr Num",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Julian Qtr Num"
+      },
+      {
+        "name": "Julian Week Num",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D00 Time.Julian Week Num"
+      }
+    ]
+  }
+}

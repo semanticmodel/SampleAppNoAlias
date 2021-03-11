@@ -1,0 +1,133 @@
+{
+  "presentationTable": {
+    "name": "Offices",
+    "alternateNames": [
+      "Office"
+    ],
+    "presentationColumns": [ {
+        "name": "D1  Office",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D1  Office"
+      },
+      {
+        "name": "D2  Department",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D2  Department"
+      },
+      {
+        "name": "D3  Organization",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D3  Organization"
+      },
+      {
+        "name": "D4  Company",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.D4  Company"
+      },
+      {
+        "name": "City",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.City"
+      },
+      {
+        "name": "Country",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Country"
+      },
+      {
+        "name": "Office - Address1",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Address1"
+      },
+      {
+        "name": "Office - Postal Code",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Office - Postal Code"
+      },
+      {
+        "name": "Fcst Hier - Company",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D3 Office.Fcst Hier - Company"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Offices Hierarchy",
+        "alternateNames": [
+          "Offices Hier"
+        ],
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "levels": [ {
+            "name": "Total Offices",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Total"
+          },
+          {
+            "name": "Company",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Company",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D4  Company"
+          },
+          {
+            "name": "Organization",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Organization",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D3  Organization"
+          },
+          {
+            "name": "Department",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Department",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D2  Department"
+          },
+          {
+            "name": "Office",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Office",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D1  Office"
+          }
+        ]
+      },
+      {
+        "name": "Office Geos Hier",
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "levels": [ {
+            "name": "Total Geos",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Total"
+          },
+          {
+            "name": "Country",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Country",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.Country"
+          },
+          {
+            "name": "City",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.City",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.City"
+          },
+          {
+            "name": "Office",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Office",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D1  Office"
+          }
+        ]
+      },
+      {
+        "name": "Office Fcst Hier",
+        "sourceLogicalTable": "logicalTable:04 - Olap Sample.D3 Office",
+        "levels": [ {
+            "name": "Total Fcst",
+            "alternateNames": [
+              "Total"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Total"
+          },
+          {
+            "name": "Company Fcst",
+            "alternateNames": [
+              "Fcst Hier - Company"
+            ],
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Fcst Hier - Company",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.Fcst Hier - Company"
+          },
+          {
+            "name": "Office",
+            "sourceLogicalLevel": "logicalLevel:04 - Olap Sample.D3 Office.Office",
+            "displayColumn": "presentationColumn:H - Sample Olap.Offices.D1  Office"
+          }
+        ]
+      }
+    ]
+  }
+}

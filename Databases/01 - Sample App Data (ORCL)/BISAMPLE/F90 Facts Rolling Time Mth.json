@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F90 Facts Rolling Time Mth",
+    "description": "Time dimension Alias: This alias is specifically used for the Rolling month metrics.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_TIME_MTH_D"
+  }
+}

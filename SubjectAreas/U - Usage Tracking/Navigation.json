@@ -1,0 +1,84 @@
+{
+  "presentationTable": {
+    "name": "Navigation",
+    "alternateNames": [
+      "Logical Navigation",
+      "UT Summary Adv"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Logical Queries",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation Facts.# of Logical Queries"
+      },
+      {
+        "name": "# of Logical Fact Tables",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation Facts.# of Logical Fact Tables"
+      },
+      {
+        "name": "Avg Process Time in Sec",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation Facts.Avg Process Time in Sec"
+      },
+      {
+        "name": "Logical SQL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query.Logical SQL"
+      },
+      {
+        "name": "Logical Query Id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.Logical Query Id",
+        "alternateNames": [
+          "LOGICAL_QUERY_ID"
+        ]
+      },
+      {
+        "name": "Logical Fact Table Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.Logical Fact Table Name"
+      },
+      {
+        "name": "LTS Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.LTS Name",
+        "alternateNames": [
+          "Lookup",
+          "LTS Name (Lookup)"
+        ]
+      },
+      {
+        "name": "Query status",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.Query status",
+        "alternateNames": [
+          "Querystatus"
+        ]
+      },
+      {
+        "name": "Query Grain level",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.Query Grain level",
+        "alternateNames": [
+          "Query level",
+          "Query level id vector",
+          "Querylevelidvector"
+        ]
+      },
+      {
+        "name": "LTS Grain Level",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.LTS Grain Level",
+        "alternateNames": [
+          "LTC Grain Level",
+          "Source cell level id vector",
+          "Sourcecelllevelidvector"
+        ]
+      },
+      {
+        "name": "Logical fact table id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.Logical fact table id",
+        "alternateNames": [
+          "Logicalfacttableid"
+        ]
+      },
+      {
+        "name": "LTS id",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT Navigation.LTS id",
+        "alternateNames": [
+          "Logicaltablesourceidvector"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "DBA_TAB_COMMENTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 11
+      }
+    ]
+  }
+}

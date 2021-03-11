@@ -1,0 +1,59 @@
+{
+  "presentationTable": {
+    "name": "Fiscal Cal",
+    "localization": {
+      "localizationKey": "Fiscal Cal",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars)"
+    },
+    "description": "This folder contains additional time attributes like Calendar time attributes, Fiscal time attributes, Julian period numbers and so on.",
+    "alternateNames": [
+      "Alternate Calendars#2"
+    ],
+    "presentationColumns": [ {
+        "name": "T41 Fscl Week",
+        "localization": {
+          "localizationKey": "T41 Fscl Week",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars_T41_Fscl_Week)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T41 Fscl Week",
+        "description": "Help : \r\nStores the Fiscal week number and is a value between 1 and 53."
+      },
+      {
+        "name": "T42 Fscl Month",
+        "localization": {
+          "localizationKey": "T42 Fscl Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars_T42_Fscl_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T42 Fscl Month",
+        "description": "Help : \r\nStores the Fiscal month number and is a value between 1 and 12."
+      },
+      {
+        "name": "T43 Fscl Qtr",
+        "localization": {
+          "localizationKey": "T43 Fscl Qtr",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars_T43_Fscl_Qtr)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T43 Fscl Qtr",
+        "description": "Help : \r\nStores the Fiscal quarter number and is a value between 1 and 4."
+      },
+      {
+        "name": "T44 Fscl Half",
+        "localization": {
+          "localizationKey": "T44 Fscl Half",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars_T44_Fscl_Half)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T44 Fscl Half",
+        "description": "Help : \r\nStores the Fiscal half year number and is either 1 or 2."
+      },
+      {
+        "name": "T45 Fscl Year",
+        "localization": {
+          "localizationKey": "T45 Fscl Year",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Alternate_Calendars_T45_Fscl_Year)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D0 Time.T45 Fscl Year",
+        "description": "Help : \r\nStores the Fiscal Year number in the format YYYY."
+      }
+    ]
+  }
+}

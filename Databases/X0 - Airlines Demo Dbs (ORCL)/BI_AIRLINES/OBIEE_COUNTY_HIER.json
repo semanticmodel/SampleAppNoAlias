@@ -1,0 +1,58 @@
+{
+  "physicalTable": {
+    "name": "OBIEE_COUNTY_HIER",
+    "description": "SELECT M.AIRPORT, M.TR_CITY_NAME, M.TR_AIRPORT_NAME, \r\nM.TR_STATE_NAME,AIRPORT_ID, M.LATITUDE, M.LONGITUDE,\t\r\nC.STFIPS,C.CTYFIPS\r\nFROM AIRLINES.MASTER_CORD M, OBIEE_NAVTEQ.COUNTY C \t\r\nWHERE M.TR_COUNTRY_NAME = 'United States of America' AND M.END_DATE IS NULL\t\r\nAND SDO_ANYINTERACT(C.GEOMETRY, SDO_GEOMETRY(2001, 8307,\t\r\nSDO_POINT_TYPE(M.LONGITUDE, M.LATITUDE, NULL), NULL, NULL)) = 'TRUE'\t\r\nORDER BY M.AIRPORT",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "D_NAME",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SC_CODE",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "RD_CODE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "R_CODE",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "S_NAME",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "S_CODE",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "C_CODE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "C_NAME",
+        "dataType": "VARCHAR",
+        "length": 90
+      },
+      {
+        "name": "D_CODE",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "R_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

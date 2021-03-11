@@ -1,0 +1,141 @@
+{
+  "physicalTable": {
+    "name": "COL$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NULL$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TYPE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "SEGCOLLENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PRECISION#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHARSETID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PROPERTY",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "INTCOL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DEFLENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGCOL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FIXEDSTORAGE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "DEFAULT$",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CHARSETFORM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OFFSET",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

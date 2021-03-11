@@ -1,0 +1,39 @@
+{
+  "presentationTable": {
+    "name": "Product Categories",
+    "presentationColumns": [ {
+        "name": "Cat Description (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Cat Description (Lookup Phys)"
+      },
+      {
+        "name": "Cat Name (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Cat Name (Lookup Phys)"
+      },
+      {
+        "name": "Category Locked Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Category Locked Flag"
+      },
+      {
+        "name": "Representative Product ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Representative Product ID"
+      },
+      {
+        "name": "Category ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Category ID"
+      },
+      {
+        "name": "Parent Category ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D06 Product Categories.Parent Category ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Categories Hier (PCH)",
+        "alternateNames": [
+          "H06 Product Cat (PCH)"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D06 Product Categories",
+        "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Product Categories.Category ID"
+      }
+    ]
+  }
+}

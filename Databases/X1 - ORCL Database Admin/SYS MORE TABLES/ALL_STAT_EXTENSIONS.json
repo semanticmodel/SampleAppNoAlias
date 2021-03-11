@@ -1,0 +1,43 @@
+{
+  "physicalTable": {
+    "name": "ALL_STAT_EXTENSIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DROPPABLE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "EXTENSION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "EXTENSION",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CREATOR",
+        "dataType": "VARCHAR",
+        "length": 6
+      }
+    ]
+  }
+}

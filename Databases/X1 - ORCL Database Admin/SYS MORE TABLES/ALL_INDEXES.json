@@ -1,0 +1,303 @@
+{
+  "physicalTable": {
+    "name": "ALL_INDEXES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INCLUDE_COLUMN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLEVEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_FREE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TEMPORARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "DISTINCT_KEYS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "BUFFER_POOL",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "CLUSTERING_FACTOR",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "LOGGING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "LEAF_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ITYP_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DOMIDX_STATUS",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "SECONDARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARAMETERS",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "UNIQUENESS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "DEGREE",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "MIN_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_THRESHOLD",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_TYPE",
+        "dataType": "CHAR",
+        "length": 5
+      },
+      {
+        "name": "INSTANCES",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "AVG_DATA_BLOCKS_PER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "FUNCIDX_STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "CELL_FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DOMIDX_OPSTATUS",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "DROPPED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GENERATED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITIAL_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PREFIX_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VISIBILITY",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "INDEX_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SEGMENT_CREATED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DURATION",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "FREELISTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FREELIST_GROUPS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITIONED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "JOIN_INDEX",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INI_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INDEX_TYPE",
+        "dataType": "VARCHAR",
+        "length": 27
+      },
+      {
+        "name": "NUM_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "ITYP_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "COMPRESSION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "IOT_REDUNDANT_PKEY_ELIM",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DOMIDX_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 14
+      },
+      {
+        "name": "AVG_LEAF_BLOCKS_PER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_DIRECT_ACCESS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      }
+    ]
+  }
+}

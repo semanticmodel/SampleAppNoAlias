@@ -1,0 +1,81 @@
+{
+  "physicalTable": {
+    "name": "CUSTOMER_IDENTIFICATIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "VERIFIED_BY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ADDITIONAL_INFORMATION",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "VERIFIED_DATE",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "VERIFIED_FLAG",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "VERIFICATION_METHOD_CODE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "ID_TYPE_CODE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "ID_DETAIL",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

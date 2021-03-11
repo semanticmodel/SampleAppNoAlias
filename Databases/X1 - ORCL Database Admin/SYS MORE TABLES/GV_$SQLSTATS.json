@@ -1,0 +1,224 @@
+{
+  "physicalTable": {
+    "name": "GV_$SQLSTATS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLUSTER_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOTAL_SHARABLE_MEM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ELAPSED_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DISK_READS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CPU_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SORTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_INTERCONNECT_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_FULLTEXT",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "LAST_ACTIVE_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "TYPECHECK_MEM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWS_PROCESSED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FETCHES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FORCE_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_CELL_OFFLOAD_RETURNED_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONCURRENCY_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_GETS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VERSION_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "JAVA_EXEC_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_TEXT",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "PHYSICAL_READ_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INVALIDATIONS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVG_HARD_PARSE_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIRECT_WRITES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_CELL_OFFLOAD_ELIGIBLE_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "APPLICATION_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SERIALIZABLE_ABORTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARSE_CALLS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXACT_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_SERVERS_EXECUTIONS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_ACTIVE_CHILD_ADDRESS",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "SHARABLE_MEM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXECUTIONS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOADS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_EXEC_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLAN_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_CELL_UNCOMPRESSED_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_OF_FETCH_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "USER_IO_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

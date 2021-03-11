@@ -1,0 +1,13 @@
+{
+  "presentationTable": {
+    "name": "Cluster Attribute",
+    "alternateNames": [
+      "Dim - Cluster Attribute"
+    ],
+    "presentationColumns": [ {
+        "name": "Attribute Name",
+        "sourceLogicalColumn": "logicalColumn:11 - OAA Integration.Dim - Cluster Attribute.Attribute Name"
+      }
+    ]
+  }
+}

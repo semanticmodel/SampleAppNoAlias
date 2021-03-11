@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Dimension",
+    "alternateNames": [
+      "Measures Dim"
+    ],
+    "presentationColumns": [ {
+        "name": "Measures",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D9 Measure Hierarchy.Measures"
+      },
+      {
+        "name": "ParentKey",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D9 Measure Hierarchy.ParentKey"
+      },
+      {
+        "name": "Measure Name",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D9 Measure Hierarchy.Measure Name"
+      },
+      {
+        "name": "Measures Sort Order",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.D9 Measure Hierarchy.Measures Sort Order"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "initBlock": {
+    "name": "OR_PERSP_INIT",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 30,30,'lightblue' from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "OR_PERSP_THETA",
+        "value": "30"
+      },
+      {
+        "name": "OR_PERSP_PHI",
+        "value": "30"
+      },
+      {
+        "name": "OR_PERSP_COLOR",
+        "value": "'lightblue'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F30 Facts Quotas",
+    "description": "Quotas Fact Alias: Stores the fact information at channel, month and product grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_QUOTAS_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

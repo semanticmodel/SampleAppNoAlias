@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "WS_GET_WEATHER",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 1 id, sys.ws_get_weather( 'VALUEOF(NQ_SESSION.WS_CITY)' , 'VALUEOF(NQ_SESSION.WS_COUNTRY)' , 'VALUEOF(NQ_SESSION.WS_PROXY)') report  from dual"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "REPORT",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "ID",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

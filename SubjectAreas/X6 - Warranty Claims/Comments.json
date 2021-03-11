@@ -1,0 +1,48 @@
+{
+  "presentationTable": {
+    "name": "Comments",
+    "alternateNames": [
+      "Claim Comments"
+    ],
+    "presentationColumns": [ {
+        "name": "Complaint",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim Comments.Complaint"
+      },
+      {
+        "name": "Complaint Description",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim Comments.Complaint Description",
+        "alternateNames": [
+          "COMPLAINT_DESCRIPTION"
+        ]
+      },
+      {
+        "name": "Terms",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim Comments.Terms"
+      },
+      {
+        "name": "# of Tokens",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Tokens Facts.# of Tokens"
+      },
+      {
+        "name": "Sum of Token Freq",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Tokens Facts.Sum of Token Freq"
+      },
+      {
+        "name": "Avg of Token Freq",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Tokens Facts.Avg of Token Freq"
+      },
+      {
+        "name": "Complaint Desc Token",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Tokens.Complaint Desc Token"
+      },
+      {
+        "name": "Token Freq in Document",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Tokens.Token Freq in Document",
+        "alternateNames": [
+          "Complaint Desc Token Freq",
+          "Token Freq"
+        ]
+      }
+    ]
+  }
+}

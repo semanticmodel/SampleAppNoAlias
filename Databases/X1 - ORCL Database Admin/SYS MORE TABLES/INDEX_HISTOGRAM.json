@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "INDEX_HISTOGRAM",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "KEYS_WITH_REPEAT_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "REPEAT_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

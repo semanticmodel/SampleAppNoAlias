@@ -1,0 +1,73 @@
+{
+  "physicalTable": {
+    "name": "SA_11_Orig00039D0D",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Orig_State00039C4D",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Orig_R00039C43",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_US_St00039C49",
+        "dataType": "VARCHAR",
+        "length": 54,
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_D00039C45",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_Divis00039C46",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "Orig_Re_00039D0FSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_R00039C47",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "Orig_Regio00039C44",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "Orig_S00039C48",
+        "dataType": "VARCHAR",
+        "length": 2
+      },
+      {
+        "name": "Orig_St_00039D0DSK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Orig_Di_00039D0ESK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

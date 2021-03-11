@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F21 Rev. (Aggregate 2)",
+    "description": "Reveue Fact Aggregate Alias: Stores the aggregated fact information at Qtr and Product grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_FA2",
+    "caching": {
+      "enable": true
+    }
+  }
+}

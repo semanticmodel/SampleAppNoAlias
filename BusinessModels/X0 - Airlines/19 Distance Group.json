@@ -1,0 +1,122 @@
+{
+  "logicalTable": {
+    "name": "19 Distance Group",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Distance Group",
+        "description": "Distance Intervals, every 250 Miles, for Flight Segment",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "50 DISTANCE_GROUP_250",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_19_DGro00039CE0",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0.Distance_G00039B9F"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.19 DGroup Detail"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Distance Class",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 IN ('0250-0499 Miles', 'Less Than 250 Miles') THEN 'Below 500 Miles' WHEN %1 IN ('0500-0749 Miles', '0750-0999 Miles') THEN 'Btw 500 and 1000 Miles' ELSE 'Over 1000 Miles' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.19 Distance Group.Distance Group"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "50 DISTANCE_GROUP_250",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.19 DISTANCE_GROUP_250"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_19_DGro00039CE0",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_19_DGro00039CE0"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "19 DGroup Total",
+      "logicalLevels": [
+        {
+          "name": "19 DGroup Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "19 DGroup Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 11,
+          "primaryColumns": [
+            "logicalColumn:Distance Group"
+          ],
+          "displayColumn": "logicalColumn:Distance Group",
+          "preferredDrillPath": [
+            "X0 - Airlines.11 Orig Airport Map.11 Orig Division Map"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "19 Distance Group",
+          "levels": [ "19 DGroup Total", "19 DGroup Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "physicalTable": {
+    "name": "SAMP_PRODUCTS_DR",
+    "description": "Products dimension table Ragged: Stores ragged and skipped level data.",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_PRODUCTS_DR.xml",
+    "physicalColumns": [ {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Product Key: Surrogate key of the product dimension table."
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "description": "Type: Stores the product type information as text"
+      },
+      {
+        "name": "Prod_Dsc",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "description": "Product Description: Stores the product description information as text"
+      },
+      {
+        "name": "Brand",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true,
+        "description": "Brand: Stores the product brand information as text"
+      },
+      {
+        "name": "LOB",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "description": "LOB: Stores the product LOB information as text"
+      },
+      {
+        "name": "TOTAL_VALUE",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true
+      }
+    ]
+  }
+}

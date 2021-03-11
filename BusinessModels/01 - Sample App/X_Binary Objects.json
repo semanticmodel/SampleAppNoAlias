@@ -1,0 +1,86 @@
+{
+  "logicalTable": {
+    "name": "X_Binary Objects",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Binary Content",
+        "dataType": "LONGVARBINARY",
+        "sortBy": "ID",
+        "descriptorColumn": "ID",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SAMP_BLOBS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BLOBS.BLOB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SAMP_BLOBS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BLOBS.ITEMID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SAMP_BLOBS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BLOBS.ITEMNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "SAMP_BLOBS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BLOBS.ITEMTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "SAMP_BLOBS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_BLOBS"
+          ]
+        }
+      }
+    ]
+  }
+}

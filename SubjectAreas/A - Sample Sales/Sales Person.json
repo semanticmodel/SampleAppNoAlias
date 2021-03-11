@@ -1,0 +1,107 @@
+{
+  "presentationTable": {
+    "name": "Sales Person",
+    "localization": {
+      "localizationKey": "Sales Person",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person)"
+    },
+    "description": "Employee dimension attribute objects",
+    "alternateNames": [
+      "E"
+    ],
+    "presentationColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "localization": {
+          "localizationKey": "E0  Sales Rep Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E0__Sales_Rep_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E0  Sales Rep Number",
+        "description": "Help : \r\nStores the employee number."
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "localization": {
+          "localizationKey": "E1  Sales Rep Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E1__Sales_Rep_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E1  Sales Rep Name",
+        "description": "Help : \r\nStores the employee name as first name + last name.",
+        "alternateNames": [
+          "SalesRep"
+        ]
+      },
+      {
+        "name": "E2  Sales Rep Type",
+        "localization": {
+          "localizationKey": "E2  Sales Rep Type",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E2__Sales_Rep_Type)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E2  Sales Rep Type",
+        "description": "Help : \r\nStores the employee type description."
+      },
+      {
+        "name": "E4  Position",
+        "localization": {
+          "localizationKey": "E4  Position",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E4__Position)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E4  Position",
+        "description": "Help : \r\nStores the position description."
+      },
+      {
+        "name": "E6  Position Level",
+        "localization": {
+          "localizationKey": "E6  Position Level",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E6__Position_Level)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E6  Position Level",
+        "description": "Help : \r\nStores the position level description."
+      },
+      {
+        "name": "E7  Hire Date",
+        "localization": {
+          "localizationKey": "E7  Hire Date",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E7__Hire_Date)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E7  Hire Date",
+        "description": "Help : \r\nStores the employee hire date in the format MM/DD/YYYY."
+      },
+      {
+        "name": "E8  Manager Number",
+        "localization": {
+          "localizationKey": "E8  Manager Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E8__Manager_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E8  Manager Number",
+        "description": "Help : \r\nStores the employee's manager number."
+      },
+      {
+        "name": "E9  Manager Name",
+        "localization": {
+          "localizationKey": "E9  Manager Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E9__Manager_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E9  Manager Name"
+      },
+      {
+        "name": "E10 Length Of Service",
+        "localization": {
+          "localizationKey": "E10 Length Of Service",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_E10_Length_Of_Service)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E10 Length Of Service"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Sales Rep Hierarchy",
+        "localization": {
+          "localizationKey": "Sales Rep Hierarchy",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Sales_Person_Sales_Rep_Hierarchy)"
+        },
+        "description": "Help : \r\nPresentation hierarchy of type Parent-Child.",
+        "sourceLogicalTable": "logicalTable:01 - Sample App.D5 Sales Rep (Parent Child Hier)",
+        "displayColumn": "presentationColumn:A - Sample Sales.Sales Person.E1  Sales Rep Name"
+      }
+    ]
+  }
+}

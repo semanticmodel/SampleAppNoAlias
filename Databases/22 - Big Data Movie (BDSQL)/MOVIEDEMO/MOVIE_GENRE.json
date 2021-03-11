@@ -1,0 +1,22 @@
+{
+  "physicalTable": {
+    "name": "MOVIE_GENRE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "GENRE_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "MOVIE_ID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      }
+    ]
+  }
+}

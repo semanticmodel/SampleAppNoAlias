@@ -1,0 +1,79 @@
+{
+  "logicalTable": {
+    "name": "37 Service Class",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Service Class Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "26 SERVICE CLASS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.35 SERVICE CLASS.CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Service Class",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "26 SERVICE CLASS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.35 SERVICE CLASS.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "26 SERVICE CLASS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.35 SERVICE CLASS"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.37 Service Class.37 Service Class Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "37 Service Class Total",
+      "logicalLevels": [
+        {
+          "name": "37 Service Class Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "37 Service Class Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Service Class Code"
+          ],
+          "displayColumn": "logicalColumn:Service Class Code"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "37 Service Class",
+          "levels": [ "37 Service Class Total", "37 Service Class Detail" ]
+        }
+      ]
+    }
+  }
+}

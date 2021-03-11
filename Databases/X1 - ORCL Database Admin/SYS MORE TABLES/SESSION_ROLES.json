@@ -1,0 +1,16 @@
+{
+  "physicalTable": {
+    "name": "SESSION_ROLES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ROLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

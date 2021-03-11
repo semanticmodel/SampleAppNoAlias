@@ -1,0 +1,115 @@
+{
+  "physicalTable": {
+    "name": "TELCO_DENORM",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ACTUALCHURN",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "CUSTOMER_ID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "PROFIT",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "STATE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "ADDRESS",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "LIFETIMEVALUE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "TENURE",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "PLANS",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "REVENUE",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "COST",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "ZIP",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "SEGMENT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "AGEGROUP",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "REGION_",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "AGEAUGMENTED",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "PREDICTEDCHURN",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "TOTALCOMPLAINTS",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "PRODUCT",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "TIMES",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

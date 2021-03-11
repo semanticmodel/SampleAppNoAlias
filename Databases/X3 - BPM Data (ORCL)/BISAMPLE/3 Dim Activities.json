@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "3 Dim Activities",
+    "sourceTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V"
+  }
+}

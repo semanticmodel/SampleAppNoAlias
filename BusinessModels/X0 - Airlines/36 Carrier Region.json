@@ -1,0 +1,79 @@
+{
+  "logicalTable": {
+    "name": "36 Carrier Region",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Carrier Region Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "27 CARRIER REGION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.36 CARRIER REGION.CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Carrier Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "27 CARRIER REGION",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.36 CARRIER REGION.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "27 CARRIER REGION",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.36 CARRIER REGION"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.36 Carrier Region.36 Carrier Region Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "36 Carrier Region Total",
+      "logicalLevels": [
+        {
+          "name": "36 Carrier Region Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "36 Carrier Region Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Carrier Region Code"
+          ],
+          "displayColumn": "logicalColumn:Carrier Region Code"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "36 Carrier Region",
+          "levels": [ "36 Carrier Region Total", "36 Carrier Region Detail" ]
+        }
+      ]
+    }
+  }
+}

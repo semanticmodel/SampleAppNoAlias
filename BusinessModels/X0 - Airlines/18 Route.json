@@ -1,0 +1,186 @@
+{
+  "logicalTable": {
+    "name": "18 Route",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Route Description",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "18 ROUTE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_18_Rout00039D04",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route_Desc00039C25"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "DEST",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "18 ROUTE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.DEST"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_18_Rout00039D04",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.DEST00039C26"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "ORIGIN",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "18 ROUTE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.ORIGIN"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_18_Rout00039D04",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.ORIGIN00039C27"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Route",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "18 ROUTE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE.ROUTE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_18_Rout00039D04",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04.Route00039C28"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.18 Route Detail"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "18 ROUTE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.18 ROUTE"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_18_Rout00039D04",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_18_Rout00039D04"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "18 Route Total",
+      "logicalLevels": [
+        {
+          "name": "18 Route Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "18 Route Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 8500,
+          "primaryColumns": [
+            "logicalColumn:Route"
+          ],
+          "displayColumn": "logicalColumn:Route",
+          "preferredDrillPath": [
+            "X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Detail"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "18 Route",
+          "levels": [ "18 Route Total", "18 Route Detail" ]
+        }
+      ]
+    }
+  }
+}

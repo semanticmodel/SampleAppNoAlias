@@ -1,0 +1,53 @@
+{
+  "physicalTable": {
+    "name": "SA_Week000471A0",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Year0004686C",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "Week_000471A0SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "CK_Week000471A0",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "Month_Name00046865",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "Quarter00046868",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "Month00046864",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "Week000470BA",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "Month_No00046866",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

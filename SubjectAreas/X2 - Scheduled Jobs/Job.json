@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "Job",
+    "presentationColumns": [ {
+        "name": "Agent Path",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.Agent Path"
+      },
+      {
+        "name": "Desciption Text",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.Desciption Text"
+      },
+      {
+        "name": "Job Id",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.Job Id"
+      },
+      {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.Name"
+      },
+      {
+        "name": "Next Runtime",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.Next Runtime"
+      },
+      {
+        "name": "User Id",
+        "sourceLogicalColumn": "logicalColumn:X2 - Scheduled Jobs.Job.User Id"
+      }
+    ]
+  }
+}

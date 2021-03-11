@@ -1,0 +1,79 @@
+{
+  "presentationTable": {
+    "name": "Catalog Object",
+    "alternateNames": [
+      "WP Object Attributes"
+    ],
+    "presentationColumns": [ {
+        "name": "Object Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Object Path"
+      },
+      {
+        "name": "Object Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Object Name"
+      },
+      {
+        "name": "Object Type",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Object Type"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Owner"
+      },
+      {
+        "name": "Path L0",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Path L0"
+      },
+      {
+        "name": "Path L1",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Path L1"
+      },
+      {
+        "name": "Path L2",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Path L2"
+      },
+      {
+        "name": "Path Rest",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WP Object Attributes.Path Rest"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "All Objects",
+        "alternateNames": [
+          "WP All Objects"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WP Object Attributes",
+        "levels": [ {
+            "name": "All Objects",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.All Objects"
+          },
+          {
+            "name": "Path level 0",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.Path level 0",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Catalog Object.Path L0"
+          },
+          {
+            "name": "Path level 1",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.Path level 1",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Catalog Object.Path L1"
+          },
+          {
+            "name": "Path level 2",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.Path level 2",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Catalog Object.Path L2"
+          },
+          {
+            "name": "Path level 3",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.Path level 3",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Catalog Object.Path Rest"
+          },
+          {
+            "name": "Full Path",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WP Object Attributes.Full Path",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Catalog Object.Object Path"
+          }
+        ]
+      }
+    ]
+  }
+}

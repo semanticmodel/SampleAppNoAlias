@@ -1,0 +1,62 @@
+{
+  "presentationTable": {
+    "name": "All Cubes",
+    "alternateNames": [
+      "All_cubes",
+      "OBJ- ALL_CUBES"
+    ],
+    "presentationColumns": [ {
+        "name": "Aw Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Aw Name"
+      },
+      {
+        "name": "Consistent Solve Spec",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Consistent Solve Spec"
+      },
+      {
+        "name": "Cube Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Cube Name"
+      },
+      {
+        "name": "Description",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Description"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Owner"
+      },
+      {
+        "name": "Partition Dimension Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Partition Dimension Name"
+      },
+      {
+        "name": "Partition Hierarchy Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Partition Hierarchy Name"
+      },
+      {
+        "name": "Partition Level Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Partition Level Name"
+      },
+      {
+        "name": "Precompute Condition",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Precompute Condition"
+      },
+      {
+        "name": "Precompute Percent",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Precompute Percent"
+      },
+      {
+        "name": "Precompute Percent Top",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Precompute Percent Top"
+      },
+      {
+        "name": "Sparse Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.Sparse Type"
+      },
+      {
+        "name": "# Of Cubes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_CUBES.# Of Cubes"
+      }
+    ]
+  }
+}

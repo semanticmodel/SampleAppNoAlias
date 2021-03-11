@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Duration",
+    "presentationColumns": [ {
+        "name": "Task Avg Duratn Days",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Days"
+      },
+      {
+        "name": "Task Avg Duratn Hrs",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Hrs"
+      },
+      {
+        "name": "Task Avg Duratn Min",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Min"
+      },
+      {
+        "name": "Task Avg Duratn Mths",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Mths"
+      },
+      {
+        "name": "Task Avg Duratn Seconds",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Avg Duratn Seconds"
+      },
+      {
+        "name": "Task Total Duratn Days",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Days"
+      },
+      {
+        "name": "Task Total Duratn Hrs",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Hrs"
+      },
+      {
+        "name": "Task Total Duratn Min",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Min"
+      },
+      {
+        "name": "Task Total Duratn Mths",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Mths"
+      },
+      {
+        "name": "Task Total Duratn Seconds",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Tasks.Task Total Duratn Seconds"
+      }
+    ]
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "L2 Other Lookups",
+    "description": "Other Lookups Alias: Stores various description lookup information for dimension attributes",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_LOOKUPS_D"
+  }
+}

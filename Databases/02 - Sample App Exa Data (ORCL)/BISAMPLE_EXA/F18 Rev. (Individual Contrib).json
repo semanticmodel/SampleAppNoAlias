@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F18 Rev. (Individual Contrib)",
+    "description": "ZZZ - Not yet filled\r\n\r\nReveue Individual Contribution Alias: For every Sales Rep, it stores the Revenue contribution of just that Sales Rep.",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_REVENUE_F"
+  }
+}

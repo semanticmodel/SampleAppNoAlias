@@ -1,0 +1,50 @@
+{
+  "logicalTable": {
+    "name": "M1 Segment Cache Customers",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "X01 Cache GUID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M1 Segment Cache Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.GUID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X02 Cache Qualified ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M1 Segment Cache Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers.QUALIFIED_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "M1 Segment Cache Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M01 Mktg Cache Customers"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "presentationTable": {
+    "name": "Users",
+    "localization": {
+      "localizationKey": "Users",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Users)"
+    },
+    "description": "nQuire User(s) & Group(s) Information",
+    "presentationColumns": [ {
+        "name": "User Name",
+        "localization": {
+          "localizationKey": "User Name",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_Usage_Tracking_Users_User_Name)"
+        },
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Users.User Name",
+        "description": "Actual User Name which is the default if not part of a group."
+      },
+      {
+        "name": "Impersonated User",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.UT L Query Users.Impersonated User"
+      }
+    ]
+  }
+}

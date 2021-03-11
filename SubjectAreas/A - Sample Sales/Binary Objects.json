@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Binary Objects",
+    "presentationColumns": [ {
+        "name": "Binary Content",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.X_Binary Objects.Binary Content"
+      },
+      {
+        "name": "ID",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.X_Binary Objects.ID"
+      },
+      {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.X_Binary Objects.Name"
+      },
+      {
+        "name": "Type",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.X_Binary Objects.Type"
+      }
+    ]
+  }
+}

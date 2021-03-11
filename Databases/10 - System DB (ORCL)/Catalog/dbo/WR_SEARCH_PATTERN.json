@@ -1,0 +1,13 @@
+{
+  "physicalTable": {
+    "name": "WR_SEARCH_PATTERN",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "SEARCH_PATTERN",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      }
+    ]
+  }
+}

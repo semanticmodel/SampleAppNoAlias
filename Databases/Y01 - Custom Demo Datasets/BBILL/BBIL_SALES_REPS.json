@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "BBIL_SALES_REPS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SALESREP_BRANCH",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SALESREP_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "REP_BRANCH_TYPE",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SALES_REGION",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "COUNTRY",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SALESREP_FIRM",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "GEOGRAPHY",
+        "dataType": "VARCHAR",
+        "length": 160
+      }
+    ]
+  }
+}

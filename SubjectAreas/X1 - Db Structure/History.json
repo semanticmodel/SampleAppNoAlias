@@ -1,0 +1,41 @@
+{
+  "presentationTable": {
+    "name": "History",
+    "alternateNames": [
+      "SYS- V_SYSMETRIC_HISTORY"
+    ],
+    "presentationColumns": [ {
+        "name": "Begin Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Begin Time"
+      },
+      {
+        "name": "End Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.End Time"
+      },
+      {
+        "name": "Group Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Group Id"
+      },
+      {
+        "name": "Intsize Csec",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Intsize Csec"
+      },
+      {
+        "name": "Metric Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Metric Id"
+      },
+      {
+        "name": "Metric Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Metric Name"
+      },
+      {
+        "name": "Metric Unit",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Metric Unit"
+      },
+      {
+        "name": "Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SYS- V_SYSMETRIC_HISTORY.Value"
+      }
+    ]
+  }
+}

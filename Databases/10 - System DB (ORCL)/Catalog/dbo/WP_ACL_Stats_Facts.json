@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "WP_ACL_Stats_Facts",
+    "sourceTable": "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_STATS"
+  }
+}

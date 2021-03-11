@@ -1,0 +1,192 @@
+{
+  "physicalTable": {
+    "name": "IND$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INSTANCES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TYPE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MAXTRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DEGREE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBLKKEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATAOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ANALYZETIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "TRUNCCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DISTKEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LBLKKEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INDMETHOD#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COLS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INTCOLS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PCTTHRES$",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCTFREE$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BO#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PROPERTY",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CLUFAC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FILE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "LEAFCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWCNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SAMPLESIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITRANS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BLEVEL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE5",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "SPARE6",
+        "dataType": "DATETIME"
+      }
+    ]
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "BBIL_PRODUCTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PART_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "PRODUCT_LINE",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "TEMP",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "PART",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "PRODUCT_FAMILY",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "BUSINESS_UNIT",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SPD",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "PKG",
+        "dataType": "VARCHAR",
+        "length": 160
+      }
+    ]
+  }
+}

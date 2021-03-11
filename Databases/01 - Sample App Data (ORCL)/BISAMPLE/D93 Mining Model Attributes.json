@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "D93 Mining Model Attributes",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.ODM_MINING_MODEL_ATTRIBUTES_V",
+    "caching": {
+      "enable": true
+    }
+  }
+}

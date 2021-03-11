@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "D51 Closure Table Sales Rep Parent Child",
+    "description": "ZZZ - Not yet filled",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_EMPL_PARENT_CHILD_MAP"
+  }
+}

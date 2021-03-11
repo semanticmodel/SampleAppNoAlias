@@ -1,0 +1,52 @@
+{
+  "logicalTable": {
+    "name": "WS_Weather_Check",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WS_EQL_RESULTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.WS_GET_WEATHER.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Report",
+        "dataType": "VARCHAR",
+        "sortBy": "Id",
+        "descriptorColumn": "Id",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WS_EQL_RESULTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.WS_GET_WEATHER.REPORT"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WS_EQL_RESULTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.WS_GET_WEATHER"
+          ]
+        }
+      }
+    ]
+  }
+}

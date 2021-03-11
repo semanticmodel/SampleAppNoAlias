@@ -1,0 +1,69 @@
+{
+  "presentationTable": {
+    "name": "DataFiles",
+    "alternateNames": [
+      "DF- V_DATAFILE"
+    ],
+    "presentationColumns": [ {
+        "name": "Autoextensible",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Autoextensible"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Blocks"
+      },
+      {
+        "name": "Bytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Bytes"
+      },
+      {
+        "name": "File id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.File id"
+      },
+      {
+        "name": "File name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.File name"
+      },
+      {
+        "name": "Increment by",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Increment by"
+      },
+      {
+        "name": "Maxblocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Maxblocks"
+      },
+      {
+        "name": "Maxbytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Maxbytes"
+      },
+      {
+        "name": "Online status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Online status"
+      },
+      {
+        "name": "Relative fno",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Relative fno"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Status"
+      },
+      {
+        "name": "Tablespace name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Tablespace name"
+      },
+      {
+        "name": "Userblocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Userblocks"
+      },
+      {
+        "name": "Userbytes",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.Userbytes"
+      },
+      {
+        "name": "# of Files",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DF- DBA_DATA_FILE.# of Files"
+      }
+    ]
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "SQL Text",
+    "alternateNames": [
+      "SQL- GV_$SQLTEXT",
+      "SQLText"
+    ],
+    "presentationColumns": [ {
+        "name": "Address",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Address"
+      },
+      {
+        "name": "Command Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Command Type"
+      },
+      {
+        "name": "Hash Value",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Hash Value"
+      },
+      {
+        "name": "Inst Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Inst Id"
+      },
+      {
+        "name": "Piece",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Piece"
+      },
+      {
+        "name": "Sql Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Sql Id"
+      },
+      {
+        "name": "Sql Text",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.SQL- GV_SQLTEXT.Sql Text"
+      }
+    ]
+  }
+}

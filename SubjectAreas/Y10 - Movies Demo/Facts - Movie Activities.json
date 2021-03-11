@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Facts - Movie Activities",
+    "presentationColumns": [ {
+        "name": "Number of Activities",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movie Activities.Number of Activities"
+      },
+      {
+        "name": "Sales",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movie Activities.Sales"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movie Activities.Recommended"
+      },
+      {
+        "name": "Average Rating",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Movie Activities.Average Rating"
+      }
+    ]
+  }
+}

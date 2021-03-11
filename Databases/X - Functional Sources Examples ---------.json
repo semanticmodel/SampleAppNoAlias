@@ -1,0 +1,27 @@
+{
+  "database": {
+    "name": "X - Functional Sources Examples ---------",
+    "databaseType": "TimesTen V11",
+    "featureOverrides": [ {
+        "name": "REPLACE_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_IN_LISTS",
+        "value": false
+      },
+      {
+        "name": "GROUP_BY_GROUPING_SETS_SUPPORTED",
+        "value": true
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ]
+  }
+}

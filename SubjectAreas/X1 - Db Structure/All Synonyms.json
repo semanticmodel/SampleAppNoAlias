@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "All Synonyms",
+    "alternateNames": [
+      "All_synonyms",
+      "OBJ- ALL_SYNONYMS"
+    ],
+    "presentationColumns": [ {
+        "name": "Db Link",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.Db Link"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.Owner"
+      },
+      {
+        "name": "Synonym Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.Synonym Name"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.Table Name"
+      },
+      {
+        "name": "Table Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.Table Owner"
+      },
+      {
+        "name": "# Of Synonyms",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_SYNONYMS.# Of Synonyms"
+      }
+    ]
+  }
+}

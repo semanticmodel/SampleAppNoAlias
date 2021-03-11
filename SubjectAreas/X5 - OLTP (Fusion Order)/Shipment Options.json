@@ -1,0 +1,57 @@
+{
+  "presentationTable": {
+    "name": "Shipment Options",
+    "presentationColumns": [ {
+        "name": "Cost Per Class1 Item",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Cost Per Class1 Item"
+      },
+      {
+        "name": "Cost Per Class2 Item",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Cost Per Class2 Item"
+      },
+      {
+        "name": "Cost Per Class3 Item",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Cost Per Class3 Item"
+      },
+      {
+        "name": "Country Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Country Code"
+      },
+      {
+        "name": "Free Shipping Allowed Flag",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Free Shipping Allowed Flag"
+      },
+      {
+        "name": "Shipping Method (Lookup Phys)",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Shipping Method (Lookup Phys)"
+      },
+      {
+        "name": "Shipping Option ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Shipping Option ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Shipment Options",
+        "alternateNames": [
+          "H09 Order Shipment Options"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Total"
+          },
+          {
+            "name": "Shipping Method",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Shipping Method",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Shipment Options.Shipping Method (Lookup Phys)"
+          },
+          {
+            "name": "Odr Shipment Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D09 Order Shipment Options.Odr Shipment Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Shipment Options.Shipping Option ID"
+          }
+        ]
+      }
+    ]
+  }
+}

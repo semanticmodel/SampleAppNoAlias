@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "SA_32_Airc00039CF2",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Aircraft_G00039BFA",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "CODE00039BF9",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Aircraf_00039CF2SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

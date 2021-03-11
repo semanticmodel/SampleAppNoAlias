@@ -1,0 +1,61 @@
+{
+  "physicalTable": {
+    "name": "SAMP_XML_TARGETS_F",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/samples/SampleAppLite/sample/SampleAppFiles/Data/SAMP_XML_TARGETS_F.xml",
+    "physicalColumns": [ {
+        "name": "Year",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Year"
+      },
+      {
+        "name": "Prod_key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/PROD_KEY"
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Office_Key"
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "length": 7,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Quarter"
+      },
+      {
+        "name": "Units",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Units"
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Month"
+      },
+      {
+        "name": "Half",
+        "dataType": "VARCHAR",
+        "length": 8,
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/HALF"
+      },
+      {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_TARGETS_F/Revenue"
+      }
+    ]
+  }
+}

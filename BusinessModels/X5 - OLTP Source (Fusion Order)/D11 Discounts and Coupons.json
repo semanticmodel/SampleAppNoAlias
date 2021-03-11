@@ -1,0 +1,353 @@
+{
+  "logicalTable": {
+    "name": "D11 Discounts and Coupons",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Discount Add Free Shipping Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.ADD_FREE_SHIPPING_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Apply As Percentage Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.APPLY_AS_PERCENTAGE_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_AMOUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Easy Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.EASY_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Onetime Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.ONETIME_DISCOUNT_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Add Free Shipping Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).ADD_FREE_SHIPPING_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Apply As Percentage Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).APPLY_AS_PERCENTAGE_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Amount",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_AMOUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Easy Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).EASY_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Onetime Flag",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).ONETIME_DISCOUNT_FLAG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discount Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'DISCOUNT_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Discount Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Coupon Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'DISCOUNT_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D11 Discounts and Coupons.Coupon Type Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Discount Description (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No description for this product',\r\n %2,\r\n'FR' )",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNT_TRANSLATIONS.DESCRIPTION",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE.DISCOUNT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Coupon Description (Lookup Phys)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DISCOUNTS_BASE (COUPONS)",
+              "physicalExpression": {
+                "expressionTemplate": "LOOKUP ( SPARSE\r\n %1 ,\r\n'No description for this product',\r\n %2,\r\n'FR')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNT_TRANSLATIONS.DESCRIPTION",
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS).DISCOUNT_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DISCOUNTS_BASE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE"
+          ]
+        }
+      },
+      {
+        "name": "DISCOUNTS_BASE (COUPONS)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE (COUPONS)"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Discounts Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Discount ID",
+            "logicalColumn:Coupon ID"
+          ],
+          "displayColumn": "logicalColumn:Discount ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H11 Discounts and Coupons",
+          "levels": [ "Total", "Discounts Detail" ]
+        }
+      ]
+    }
+  }
+}

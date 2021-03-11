@@ -1,0 +1,60 @@
+{
+  "presentationTable": {
+    "name": "More Office Objects",
+    "localization": {
+      "localizationKey": "More Office Objects",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects)"
+    },
+    "description": "This folder contains additional Office attributes like Office Channel, Channel Attributes and so on.",
+    "presentationColumns": [ {
+        "name": "D1k  Office Key",
+        "localization": {
+          "localizationKey": "D1k  Office Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D1k__Office_Key)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D1k  Office Key",
+        "description": "Help : \r\nMarket Key is an integer that uniquely identifies each record in the Market dimension table."
+      },
+      {
+        "name": "D3k  Org Key",
+        "localization": {
+          "localizationKey": "D3k  Org Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D3k__Org_Key)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D3k  Org Key"
+      },
+      {
+        "name": "D2k  Dept Key",
+        "localization": {
+          "localizationKey": "D2k  Dept Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D2k__Dept_Key)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D2k  Dept Key"
+      },
+      {
+        "name": "D4k  Company Key",
+        "localization": {
+          "localizationKey": "D4k  Company Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D4k__Company_Key)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D4k  Company Key"
+      },
+      {
+        "name": "D8  Office Sequence",
+        "isDefaultReadWriteable": true,
+        "localization": {
+          "localizationKey": "D8  Office Sequence",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Office_Objects_D8__Office_Sequence)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D8  Office Sequence"
+      },
+      {
+        "name": "D99  Total Value (Hier)",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D3 Offices.D99  Total Value (Hier)",
+        "hideIfTrue": {
+          "expressionTemplate": "1"
+        }
+      }
+    ]
+  }
+}

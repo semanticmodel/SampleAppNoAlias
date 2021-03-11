@@ -1,0 +1,470 @@
+{
+  "logicalTable": {
+    "name": "Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Balance",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hier - All Accounts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Hier - Income Statement",
+              "physicalExpression": {
+                "expressionTemplate": "%1\r\n",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 GL Hier - Balance Sheet",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "EXPRESSION",
+              "aggregateExpression": {
+                "expressionTemplate": " AGGR_EXTERNAL(%1)",
+                "expressionObjects": [
+                  "logicalColumn:03 - Essbase GL.Measures.Balance"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Period Ago Balance",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase GL.Measures.Balance"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Net Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS4 GL Flat - Net Revenue",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Net Revenue"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "% of Net Rev",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 / %2 * 100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase GL.Measures.Balance",
+              "logicalColumn:03 - Essbase GL.Measures.Net Revenue"
+            ]
+          }
+        }
+      },
+      {
+        "name": "% Variation to Period Ago",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "( CAST (%1 AS DOUBLE PRECISION ) / %2 - 1) * 100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase GL.Measures.Balance",
+              "logicalColumn:03 - Essbase GL.Measures.Period Ago Balance"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Actual (Case St)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hier - All Accounts",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Actual'\r\n\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Hier - Income Statement",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Actual'\r\n\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 GL Hier - Balance Sheet",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Actual'\r\n\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plan (Case St)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hier - All Accounts",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Plan'\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Hier - Income Statement",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Plan'\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 GL Hier - Balance Sheet",
+              "physicalExpression": {
+                "expressionTemplate": "Case when \r\n %1 ='Plan'\r\nthen %2\r\nend",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Scenarios",
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Actual (LTS Filter)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS5 GL Hier - Actual Only",
+              "physicalExpression": {
+                "expressionTemplate": "%1 ",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plan (LTS Filter)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS6 GL Hier - Plan Only",
+              "physicalExpression": {
+                "expressionTemplate": "%1 ",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.GL1 - measure"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plan Completion (Case St)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 / %2 AS DOUBLE PRECISION ) * 100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase GL.Measures.Actual (LTS Filter)",
+              "logicalColumn:03 - Essbase GL.Measures.Plan (Case St)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Plan Completion (LTS Filter)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 / %2 AS DOUBLE PRECISION ) * 100",
+            "expressionObjects": [
+              "logicalColumn:03 - Essbase GL.Measures.Actual (LTS Filter)",
+              "logicalColumn:03 - Essbase GL.Measures.Plan (LTS Filter)"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hier - All Accounts",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts",
+          "logicalLevel:03 - Essbase GL.Time Periods.Months",
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios",
+          "logicalLevel:03 - Essbase GL.Entities.Unit",
+          "logicalLevel:03 - Essbase GL.Years.Years"
+        ]
+      },
+      {
+        "name": "LTS2 GL Hier - Income Statement",
+        "description": "IncomeStatement",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Acct Income Statement.Income Statement Detail",
+          "logicalLevel:03 - Essbase GL.Time Periods.Months",
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios",
+          "logicalLevel:03 - Essbase GL.Entities.Unit",
+          "logicalLevel:03 - Essbase GL.Years.Years",
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts"
+        ]
+      },
+      {
+        "name": "LTS3 GL Hier - Balance Sheet",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Acct Balance Sheet.Balance Sheet Detail",
+          "logicalLevel:03 - Essbase GL.Time Periods.Months",
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios",
+          "logicalLevel:03 - Essbase GL.Entities.Unit",
+          "logicalLevel:03 - Essbase GL.Years.Years",
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts"
+        ]
+      },
+      {
+        "name": "LTS4 GL Flat - Net Revenue",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened"
+          ]
+        }
+      },
+      {
+        "name": "LTS5 GL Hier - Actual Only",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Acct Balance Sheet.Balance Sheet Detail",
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts",
+          "logicalLevel:03 - Essbase GL.Acct Income Statement.Income Statement Detail",
+          "logicalLevel:03 - Essbase GL.Time Periods.Months",
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios",
+          "logicalLevel:03 - Essbase GL.Entities.Unit",
+          "logicalLevel:03 - Essbase GL.Years.Years"
+        ]
+      },
+      {
+        "name": "LTS6 GL Hier - Plan Only",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Acct Balance Sheet.Balance Sheet Detail",
+          "logicalLevel:03 - Essbase GL.All Accounts.Gen10,Accounts",
+          "logicalLevel:03 - Essbase GL.Acct Income Statement.Income Statement Detail",
+          "logicalLevel:03 - Essbase GL.Time Periods.Months",
+          "logicalLevel:03 - Essbase GL.Scenarios.Scenarios",
+          "logicalLevel:03 - Essbase GL.Entities.Unit",
+          "logicalLevel:03 - Essbase GL.Years.Years"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Income Statement Total",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Income Statement Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Account Level 3",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen3 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 4",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 4"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 4"
+        },
+        {
+          "name": "Account Level 5",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen5 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 6",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen6 PandL - Member Key"
+          ]
+        },
+        {
+          "name": "Account Level 7",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 7"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 7"
+        },
+        {
+          "name": "Account Level 8",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 8"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 8"
+        },
+        {
+          "name": "Account Level 9",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 9"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 9"
+        },
+        {
+          "name": "Income Statement Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:PandL Lvl 10"
+          ],
+          "displayColumn": "logicalColumn:PandL Lvl 10"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Acct Income Statement [branch at level 'Account Level 9']",
+          "levels": [ "Income Statement Total", "Account Level 3", "Account Level 4", "Account Level 5", "Account Level 6", "Account Level 7", "Account Level 8", "Account Level 9", "Income Statement Detail" ]
+        }
+      ]
+    }
+  }
+}

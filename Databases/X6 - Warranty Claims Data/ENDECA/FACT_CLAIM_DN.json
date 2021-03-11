@@ -1,0 +1,375 @@
+{
+  "physicalTable": {
+    "name": "FACT_CLAIM_DN",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CLAIM_LBR_OTHR_GLOBL_AMT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "SALE_DATE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_LABOR_DESC",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_ODMTR_MILEAGE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MONTHS_IN_SERVICE",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "VEHICLE_MAKE",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "CLAIM_DATE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PITCH_CIRCLE_DIAMETER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "DEALER_GEOCODE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "RECORDID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "DEALER_STATEPROVINCE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PROD_DATE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_EXPOSURE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_MODEL_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ROTOR_TYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "VEHICLE_FLOAT",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "VEHICLE_MODEL",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "VEHICLE_MODEL_YEAR_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_MONTH",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_AGE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_LBR_TOT_GLOBL_AMT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_MAKE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "SALE_DATE",
+        "dataType": "DATETIME",
+        "length": 20
+      },
+      {
+        "name": "VEHICLE_MODEL_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "CLAIM_LABOR_CODE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DEALER_CITY",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "ROTOR_DIAMETER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CLAIM_QUARTER",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "DEALER_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEH_EXPOSURE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_AGE_BUCKET",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_PART_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DRIVE_TRAIN_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "LATERAL_RUN_OUT",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_PART_TOT_GLOBL_AMT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DEALER_STATEPROVINCE",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_LBR_OTHR_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "VEHICLE_FLOAT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_BUILD_COUNTRY_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PRODUCTION_YEAR",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "DRIVE_TRAIN",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "CLAIM_TOT_GLOBL_AMT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DEALER_GEOCODE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "VIN",
+        "dataType": "VARCHAR",
+        "length": 25
+      },
+      {
+        "name": "VEH_EXPOSURE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ROTOR_GAP",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "DAYS_IN_SERVICE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_CYLS_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_AGE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_BUILD_REGION",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "PROD_DATE",
+        "dataType": "DATETIME",
+        "length": 5
+      },
+      {
+        "name": "PRODUCTION_PERIOD",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "DAYS_IN_SERVICE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_MANUFACTURER",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "CLAIM_LBR_TOT_GLOBL_AMT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_CYLS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "VEHICLE_MANUFACTURER_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DEALER_CITY_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DEALER",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "PRODUCTION_MONTH",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "VEHICLE_BUILD_COUNTRY",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "VEH_FLOAT_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "ROTOR_THICKNESS",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CLAIM_MONTH_NUM",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEHICLE_EXPOSURE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "CLAIM_LABOR_CODE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "VEH_FLOAT",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_DATE",
+        "dataType": "DATETIME",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_ODMTR_MILEAGE_DIST",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CLAIM_PERIOD",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "VEHICLE_ASSEMBLY_PLANT",
+        "dataType": "VARCHAR",
+        "length": 40
+      }
+    ]
+  }
+}

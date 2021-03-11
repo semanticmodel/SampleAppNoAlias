@@ -1,0 +1,84 @@
+{
+  "logicalTable": {
+    "name": "M03 Mktg Saved Res Set Customers",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "X06 Channel",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M03 Mktg Saved Res Set Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.CHANNEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X05 SR Guid",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M03 Mktg Saved Res Set Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.GUID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "SR Target level ID",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M03 Mktg Saved Res Set Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.TARGET_LEVEL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "X04 Offer code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "M03 Mktg Saved Res Set Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers.OFFER_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "M03 Mktg Saved Res Set Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.M03 Mktg Saved Res Set Customers"
+          ]
+        }
+      }
+    ]
+  }
+}

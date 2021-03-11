@@ -1,0 +1,50 @@
+{
+  "presentationTable": {
+    "name": "Asynchronous Facts",
+    "description": "->",
+    "alternateNames": [
+      "Facts#1"
+    ],
+    "presentationColumns": [ {
+        "name": "% of Net Rev",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.% of Net Rev"
+      },
+      {
+        "name": "Net Revenue",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Net Revenue"
+      },
+      {
+        "name": "Actual (Case St)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Actual (Case St)",
+        "alternateNames": [
+          "Actual"
+        ]
+      },
+      {
+        "name": "Plan (Case St)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Plan (Case St)",
+        "alternateNames": [
+          "Balance#2",
+          "Plan",
+          "Plan  (case St)"
+        ]
+      },
+      {
+        "name": "Actual (LTS Filter)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Actual (LTS Filter)"
+      },
+      {
+        "name": "Plan (LTS Filter)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Plan (LTS Filter)"
+      },
+      {
+        "name": "Plan Completion (Case St)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Plan Completion (Case St)"
+      },
+      {
+        "name": "Plan Completion (LTS Filter)",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Measures.Plan Completion (LTS Filter)"
+      }
+    ]
+  }
+}

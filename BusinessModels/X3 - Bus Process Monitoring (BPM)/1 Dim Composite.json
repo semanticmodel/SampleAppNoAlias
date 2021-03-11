@@ -1,0 +1,290 @@
+{
+  "logicalTable": {
+    "name": "1 Dim Composite",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Composite Dn",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.COMPOSITE_DN"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.COMPOSITE_DN"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.COMPOSITE_DN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Composite Instance Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.COMPOSITE_INSTANCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.COMPOSITE_INSTANCE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.COMPOSITE_INSTANCE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Composite Label",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.COMPOSITE_LABEL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.COMPOSITE_LABEL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.COMPOSITE_LABEL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Composite Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.COMPOSITE_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.COMPOSITE_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.COMPOSITE_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Composite Revision",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.COMPOSITE_REVISION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.COMPOSITE_REVISION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.COMPOSITE_REVISION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Domain Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "9 Facts Taskperf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.DOMAIN_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ProcessPerf",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.DOMAIN_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "9 Facts ActiveTasks",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.DOMAIN_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "9 Facts Taskperf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X3 - Bus Process Monitoring (BPM).1 Composite Hier.Composites Detail"
+        ]
+      },
+      {
+        "name": "9 Facts ProcessPerf",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf"
+          ]
+        }
+      },
+      {
+        "name": "9 Facts ActiveTasks",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Composites",
+      "logicalLevels": [
+        {
+          "name": "All Composites",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Composite Domain",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Domain Name"
+          ],
+          "displayColumn": "logicalColumn:Domain Name"
+        },
+        {
+          "name": "Composite Revision",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Composite Revision"
+          ],
+          "displayColumn": "logicalColumn:Composite Revision"
+        },
+        {
+          "name": "Composites Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Composite Instance Id",
+            "logicalColumn:Composite Dn"
+          ],
+          "displayColumn": "logicalColumn:Composite Instance Id"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "1 Composite Hier [branch at level 'Composite Revision']",
+          "levels": [ "All Composites", "Composite Domain", "Composite Revision", "Composites Detail" ]
+        }
+      ]
+    }
+  }
+}

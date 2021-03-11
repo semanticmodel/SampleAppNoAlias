@@ -1,0 +1,38 @@
+{
+  "physicalTable": {
+    "name": "SA_Product00004C03",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Type000046B3",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "Product_00004C03SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Brand00003D44",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true
+      },
+      {
+        "name": "Prod_Dsc00003D90",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "LOB0000460B",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "physicalTable": {
+    "name": "COLTYPE$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INTCOL#S",
+        "dataType": "VARBINARY",
+        "length": 2000
+      },
+      {
+        "name": "VERSION#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TYPIDCOL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INTCOL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SYNOBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COL#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PACKED",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INTCOLS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TOID",
+        "dataType": "VARBINARY",
+        "length": 16,
+        "nullable": true
+      }
+    ]
+  }
+}

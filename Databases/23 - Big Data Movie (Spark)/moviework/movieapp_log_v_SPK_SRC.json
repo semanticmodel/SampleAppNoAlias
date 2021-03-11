@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "movieapp_log_v_SPK_SRC",
+    "sourceTable": "physicalTable:23 - Big Data Movie (Spark).moviework.movieapp_log"
+  }
+}

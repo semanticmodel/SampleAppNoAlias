@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Exec Measures",
+    "alternateNames": [
+      "Analyses Execution Facts",
+      "Execution Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "Is Error",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Measures.Is Error"
+      },
+      {
+        "name": "Row Count Msg",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Measures.Row Count Msg"
+      },
+      {
+        "name": "Analysis Count",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Measures.Analysis Count"
+      },
+      {
+        "name": "Invalid Analysis",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Measures.Invalid Analysis",
+        "alternateNames": [
+          "Analysis Count#1",
+          "Bad Analysis"
+        ]
+      },
+      {
+        "name": "Valid Analysis",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WC Exec Measures.Valid Analysis"
+      }
+    ]
+  }
+}

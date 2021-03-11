@@ -1,0 +1,390 @@
+{
+  "logicalTable": {
+    "name": "F16 Rev. (Team Agg)",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Bill_Day_Dt",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Bill_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bill_Mth_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Bill_Mth_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bill_Qtr_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Bill_Qtr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost_Fixed",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Cost_Fixed"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cost_Variable",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Cost_Variable"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Currency",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Currency"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cust_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Cust_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discnt_Rate",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Discnt_Rate"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Discnt_Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Discnt_Value"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Empl_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Empl_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Office_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Office_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Day_Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Order_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Order_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Order_Status"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order_Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Order_Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Paid_Day_Dt",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Paid_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prod_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Prod_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Revenue"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ship_Day_Dt",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Ship_Day_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Shipto_Addr_Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Shipto_Addr_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Src_Order_Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Src_Order_Number"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Units",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "F16 Rev. (Team Agg)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Units"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "F16 Rev. (Team Agg)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)"
+          ]
+        }
+      }
+    ]
+  }
+}

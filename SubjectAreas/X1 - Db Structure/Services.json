@@ -1,0 +1,49 @@
+{
+  "presentationTable": {
+    "name": "Services",
+    "alternateNames": [
+      "DB- V_SERVICES"
+    ],
+    "presentationColumns": [ {
+        "name": "Aq Ha Notification",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Aq Ha Notification"
+      },
+      {
+        "name": "Clb Goal",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Clb Goal"
+      },
+      {
+        "name": "Creation Date",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Creation Date"
+      },
+      {
+        "name": "Creation Date Hash",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Creation Date Hash"
+      },
+      {
+        "name": "Dtp",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Dtp"
+      },
+      {
+        "name": "Goal",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Goal"
+      },
+      {
+        "name": "Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Name"
+      },
+      {
+        "name": "Name Hash",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Name Hash"
+      },
+      {
+        "name": "Network Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Network Name"
+      },
+      {
+        "name": "Service Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.DB- V_SERVICES.Service Id"
+      }
+    ]
+  }
+}

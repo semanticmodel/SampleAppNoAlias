@@ -1,0 +1,85 @@
+{
+  "physicalTable": {
+    "name": "BBIL_FACT_BOOKINGS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "PART_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "UNIT_PRICE",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "ENDCUST_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "UNITS",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "EXT_AMOUNT",
+        "dataType": "DOUBLE",
+        "length": 126
+      },
+      {
+        "name": "SALESCHANNEL_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "SCENARIO_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "PO#",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "LINE_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SALESREP_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "BILLTOCUST_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "DEBIT_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR",
+        "length": 510
+      },
+      {
+        "name": "ORDER_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DATE_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      }
+    ]
+  }
+}

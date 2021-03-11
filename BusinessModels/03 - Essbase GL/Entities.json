@@ -1,0 +1,479 @@
+{
+  "logicalTable": {
+    "name": "Entities",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Geo",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen2 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen2,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen2,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen3,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen3 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen3,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen3,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Country",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen4 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen4,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen4,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Entity",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen5,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen5 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen5,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen5,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Domain",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen6,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen6 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen6,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen6,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Department",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen7,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen7 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen7,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen7,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unit",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Entities"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen8,Entities"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Gen8 Entities - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Gen8,Entities - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 GL Flattened",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened.Gen8,Entities - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Entities - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 GL Hierarchical",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical.Entities - Default"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 GL Hierarchical",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Hierarchical.BISAMPL2.SampleGL_Hierarchical"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase GL.Entities.Unit"
+        ]
+      },
+      {
+        "name": "LTS2 GL Flattened",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Sample Flat.BISAMPL2.SampleGL_Flattened"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Geo",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "Geo",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen2 Entities - Member Key"
+          ]
+        },
+        {
+          "name": "Region",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen3 Entities - Member Key"
+          ]
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen4 Entities - Member Key"
+          ]
+        },
+        {
+          "name": "Entity",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Entity"
+          ],
+          "displayColumn": "logicalColumn:Entity"
+        },
+        {
+          "name": "Domain",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Gen6 Entities - Member Key"
+          ]
+        },
+        {
+          "name": "Department",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Department"
+          ],
+          "displayColumn": "logicalColumn:Department"
+        },
+        {
+          "name": "Unit",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Unit"
+          ],
+          "displayColumn": "logicalColumn:Unit"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Entities [branch at level 'Department']",
+          "levels": [ "Geo", "Region", "Country", "Entity", "Domain", "Department", "Unit" ]
+        }
+      ]
+    }
+  }
+}

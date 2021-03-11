@@ -1,0 +1,135 @@
+{
+  "physicalTable": {
+    "name": "INDEX_STATS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "MOST_REPEATED_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PRE_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LF_BLKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DEL_LF_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BR_ROWS_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLKS_GETS_PER_ACCESS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DEL_LF_ROWS_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LF_BLK_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HEIGHT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LF_ROWS_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BR_BLKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BR_BLK_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DISTINCT_KEYS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BR_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPT_CMPR_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPT_CMPR_PCTSAVE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_USED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LF_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "BTREE_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWS_PER_KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USED_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PRE_ROWS_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

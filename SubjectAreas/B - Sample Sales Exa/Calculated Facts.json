@@ -1,0 +1,10 @@
+{
+  "presentationTable": {
+    "name": "Calculated Facts",
+    "localization": {
+      "localizationKey": "Calculated Facts",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Calculated_Facts)"
+    },
+    "description": "Following folders contain various calculated metrics"
+  }
+}

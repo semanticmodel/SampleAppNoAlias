@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "BBIL_SCENARIOS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SCENARIO",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SCENARIO_PARENT",
+        "dataType": "VARCHAR",
+        "length": 160
+      },
+      {
+        "name": "SCENARIO_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      }
+    ]
+  }
+}

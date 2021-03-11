@@ -1,0 +1,34 @@
+{
+  "physicalTable": {
+    "name": "ORCLSTOCK",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CLOSE",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "HIGH",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "LOW",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "OPEN",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "TIMESTAMP"
+      },
+      {
+        "name": "VOLUME",
+        "dataType": "DOUBLE"
+      }
+    ]
+  }
+}

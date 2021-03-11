@@ -1,0 +1,21 @@
+{
+  "initBlock": {
+    "name": "SELECTION_STEP_TIME_INIT",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select\r\n'{\"type\":\"Hierarchy\",\"column\":{\"hier_id\":\"Time Hierarchy\",\"dim_id\":\"H0 Time\",\"table_name\":\"Time\",\"subject_area\":\"A - Sample Sales\"}, \"members\": [{\"level_id\":\"Month\", \"values\":[\"2010 / 02\",\"2010 / 03\"]},{\"level_id\":\"Day\",\"values\": [\"2010-01-01\",\"2010-01-02\"]}]}'\r\nfrom dual"
+      }
+    ],
+    "variables": [ {
+        "name": "SELECTION_STEP_TIME"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "physicalTable": {
+    "name": "SEQ$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CACHE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "HIGHWATER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "ORDER$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CYCLE#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "MAXVALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INCREMENT$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MINVALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AUDIT$",
+        "dataType": "VARCHAR",
+        "length": 38,
+        "nullable": true
+      }
+    ]
+  }
+}

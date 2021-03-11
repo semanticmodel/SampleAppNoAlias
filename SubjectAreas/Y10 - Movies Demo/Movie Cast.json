@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Movie Cast",
+    "presentationColumns": [ {
+        "name": "Cast ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Cast.Cast ID"
+      },
+      {
+        "name": "Character",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Cast.Character"
+      },
+      {
+        "name": "Actor",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Movie Cast.Actor"
+      }
+    ]
+  }
+}

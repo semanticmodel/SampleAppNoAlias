@@ -1,0 +1,738 @@
+{
+  "database": {
+    "name": "02 - Sample App Exa Data (ORCL)",
+    "databaseType": "Oracle 12c",
+    "description": "This datasource represents actual sales, booking and inventory data.",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Aggs Sample Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "description": "Connection pool for Sample relational db source.",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000
+        }
+      },
+      {
+        "name": "Exa Sample Connection",
+        "connectionTimeoutUnit": "NEVER",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "requiresFullyQualifedTableNames": true,
+        "supportParams": true,
+        "description": "Connection pool for Sample relational db source.",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 0
+        }
+      }
+    ],
+    "joins": [ {
+      "useJoinExpression": true,
+        "name": "CJ_SA__000078D8_000078CF",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03",
+        "joinExpression": {
+          "expressionTemplate": "%1 = %2 AND %3 NULLSEQUAL %4 AND %5 NULLSEQUAL %6 AND %7 NULLSEQUAL %8",
+          "expressionObjects": [
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.Brand00003D44",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Brand00003D44",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.Prod_Dsc00003D90",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Prod_Dsc00003D90",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.LOB0000460B",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.LOB0000460B",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.Type000046B3",
+            "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004C03.Type000046B3"
+          ]
+        },
+        "cardinality": "ONE_TO_MANY",
+        "joinType": "INNER"
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F17 Rev. (Siblings Aggr)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Rev. (Billed Dt Flat Aggr)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F17 Rev\\. (Siblings Aggr).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "D30 Offices_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D32 Offices Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Order_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Member_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "F13 Rev. (Order Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F13 Rev\\. (Order Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "01 Customer_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D61 Customer Segments",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D61 Customer Segments.Segment_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Segment_Key"
+          }
+        ]
+      },
+      {
+        "name": "D10 Customer_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D62 Customers Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D62 Customers Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Address_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F11 Facts Rev. (Billed Dt Flat Aggr)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Member_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F18 Rev. (Individual Contrib)_Foreign Key#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F18 Rev\\. (Individual Contrib).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F14 Rev. (Ship Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Member_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Ship_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F14 Rev\\. (Ship Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Member_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "12 Revenue (PerKey 2)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Paid_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "F12 Facts Rev. (Paid Dt Join)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "F15 Rev. (Paid Dt Join)_Foreign Key#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 02 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F15 Rev\\. (Paid Dt Join).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F16 Rev. (Team Agg)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F16 Rev\\. (Team Agg).Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#5",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D30 Offices.Office_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Office_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Facts Rev. (Billed Dt Join)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D70 Orders Ship to Addresses.Address_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Shipto_Addr_Key"
+          }
+        ]
+      },
+      {
+        "name": "11 Revenue (PerKey 1)_FKey",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D01 Time Day Grain.Calendar_Date",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Bill_Day_Dt"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D60 Customers.Cust_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Cust_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev._Foreign Key#1",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D20 Product (Ragged Hier).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "Fact 01 Revenue_FKey#4",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D10 Product (Dynamic Table).Prod_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Prod_Key"
+          }
+        ]
+      },
+      {
+        "name": "F10 Billed Rev._Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\.",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Member_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.F10 Billed Rev\\..Empl_Key"
+          }
+        ]
+      },
+      {
+        "name": "D51 Employees (PC Hier Closure Table)_Foreign Key",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D50 Employees (PC Hier)",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table)",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D50 Employees (PC Hier).Employee_Key",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.D51 Employees (PC Hier Closure Table).Ancestor_Key"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078A2_0000781D",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P0_Produc0000459A",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.P0_Produc0000459A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078A2_00007830",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1k_Offic00004295",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.D1k_Offic00004295"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078A2_00007874",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Day_Det00004C57",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Day_Det00004C57.LTS4_Targe0000449F",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_03.LTS4_Targe0000449F"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078B1_0000781D",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P0_Produc0000459A",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.P0_Produc0000459A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078B1_0000789A",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1.T02_Per_Na00003D05",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.T02_Per_Na00003D05"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078B1_00007830",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1k_Offic00004295",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.D1k_Offic00004295"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078B1_0000784D",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Custome00004BA0",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Custome00004BA0.C0_Custom00003EE7",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_02.C0_Custom00003EE7"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078C1_0000781D",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P0_Produc0000459A",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.P0_Produc0000459A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078C1_0000789A",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1.T02_Per_Na00003D05",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.T02_Per_Na00003D05"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078C1_00007830",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1k_Offic00004295",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_01.D1k_Offic00004295"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078D8_0000789A",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1.T02_Per_Na00003D05",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_RS_04.T02_Per_Na00003D05"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078E2_0000781D",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Product00004A9A.P0_Produc0000459A",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01.P0_Produc0000459A"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078E2_0000789A",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Month00004AC1.T02_Per_Na00003D05",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01.T02_Per_Na00003D05"
+          }
+        ]
+      },
+      {
+        "name": "FK_SA__000078E2_00007830",
+        "leftTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2",
+        "rightTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.SA_Offices00004AE2.D1k_Offic00004295",
+            "rightColumn": "physicalColumn:02 - Sample App Exa Data (ORCL).BISAMPLE_AGGS.FACT_AGG_OR_CD_01.D1k_Offic00004295"
+          }
+        ]
+      }
+    ]
+  }
+}

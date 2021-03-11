@@ -1,0 +1,409 @@
+{
+  "logicalTable": {
+    "name": "F1 Order Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Total Orders Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_TOTAL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_TOTAL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS (Shipped Date)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).ORDER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quantity",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.QUANTITY"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Unit Price",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.UNIT_PRICE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Order Line Item ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.LINE_ITEM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Orders",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.ORDER_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Order Lines",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS.LINE_ITEM_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Line Item Value",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 *%2 ",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Quantity",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Unit Price"
+            ]
+          }
+        }
+      },
+      {
+        "name": "# of Customers",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.CUSTOMER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS ITEMS DETAILS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS.CUSTOMER_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ORDERS (Shipped Date)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).CUSTOMER_ID"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Avg Order Value",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(%1 as double)/\r\n%2 ",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total Orders Value",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.# of Orders"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Avg Line Item Value",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(%1  as double)\r\n/ %2 ",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total Orders Value",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.# of Order Lines"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Total Shipped Orders Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ORDERS (Shipped Date)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date).ORDER_TOTAL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ORDERS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H00 Time.Day Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H05 Suppliers.Total",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H03 Cust Other Addresses.Cust Other Addresses",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H10 Order Payment Options.Odr Payment Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H04 Products.Total",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H07 Orders Attributes.Orders Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H02 Cust Primary Addresses.Cust Address",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H12 Orders Line Attributes.Total",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H01 Customers.Customer ID",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H08 Order Ship to Adress.Ship to Adress Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H09 Order Shipment Options.Odr Shipment Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H11 Discounts and Coupons.Discounts Detail"
+        ]
+      },
+      {
+        "name": "ORDERS ITEMS DETAILS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS",
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDER_ITEMS"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).ORDER_ITEMS_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H02 Cust Primary Addresses.Cust Address",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H03 Cust Other Addresses.Cust Other Addresses",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H01 Customers.Customer ID",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H00 Time.Day Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H11 Discounts and Coupons.Discounts Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H10 Order Payment Options.Odr Payment Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H09 Order Shipment Options.Odr Shipment Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H07 Orders Attributes.Orders Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H12 Orders Line Attributes.Orders Line Details",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H04 Products.Product Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H08 Order Ship to Adress.Ship to Adress Detail",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H05 Suppliers.Total",
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H06 Product Cat (PCH).Detail"
+        ]
+      },
+      {
+        "name": "ORDERS (Shipped Date)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.ORDERS (Shipped Date)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X5 - OLTP Source (Fusion Order).H00 Time.Day Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Whse City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Whse City"
+          ],
+          "displayColumn": "logicalColumn:Whse City"
+        },
+        {
+          "name": "Whse Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Warehouse Name"
+          ],
+          "displayColumn": "logicalColumn:Warehouse Name"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H13 Warehouses [branch at level 'Whse City']",
+          "levels": [ "Total", "Whse City", "Whse Detail" ]
+        }
+      ]
+    }
+  }
+}

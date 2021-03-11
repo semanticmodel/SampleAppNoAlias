@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "RandomRedDots",
+    "presentationColumns": [ {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.RandomRedDots.Id"
+      },
+      {
+        "name": "Image",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.RandomRedDots.Image"
+      }
+    ]
+  }
+}

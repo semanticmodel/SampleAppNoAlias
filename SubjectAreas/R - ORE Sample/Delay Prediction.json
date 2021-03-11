@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Delay Prediction",
+    "presentationColumns": [ {
+        "name": "Actual ArrDelay",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Delay Prediction.Actual ArrDelay"
+      },
+      {
+        "name": "Predicted ArrDelay",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Delay Prediction.Predicted ArrDelay"
+      }
+    ]
+  }
+}

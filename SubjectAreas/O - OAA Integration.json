@@ -1,0 +1,49 @@
+{
+  "subjectArea": {
+    "name": "O - OAA Integration",
+    "sourceBusinessModel": "businessModel:11 - OAA Integration",
+    "tableOrder": [
+      {
+        "name": "presentationTable:O - OAA Integration.Model"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.GLM Model Details"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Model Global Details"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Associantion Rule"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Association Rule Antecedent"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Association Rule Consequent"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Clusters"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Cluster Attribute"
+      },
+      {
+        "name": "presentationTable:O - OAA Integration.Facts",
+        "children": [
+          {
+            "name": "presentationTable:O - OAA Integration.Association Rule Facts"
+          },
+          {
+            "name": "presentationTable:O - OAA Integration.Cluster Facts"
+          },
+          {
+            "name": "presentationTable:O - OAA Integration.Model Global Details Facts"
+          },
+          {
+            "name": "presentationTable:O - OAA Integration.GLM Model Facts"
+          }
+        ]
+      }
+    ]
+  }
+}

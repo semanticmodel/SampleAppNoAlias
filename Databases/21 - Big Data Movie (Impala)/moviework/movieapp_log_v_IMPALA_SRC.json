@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "movieapp_log_v_IMPALA_SRC",
+    "sourceTable": "physicalTable:21 - Big Data Movie (Impala).moviework.movieapp_log"
+  }
+}

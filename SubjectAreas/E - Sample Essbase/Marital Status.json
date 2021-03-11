@@ -1,0 +1,42 @@
+{
+  "presentationTable": {
+    "name": "Marital Status",
+    "presentationColumns": [ {
+        "name": "C7 Marital Status",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Cust Marital Status.C7 Marital Status"
+      },
+      {
+        "name": "All Marital Status",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Cust Marital Status.All Marital Status"
+      },
+      {
+        "name": "Marital Stat - French",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Cust Marital Status.Marital Stat - French"
+      },
+      {
+        "name": "Marital Stat - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Cust Marital Status.Marital Stat - Default"
+      },
+      {
+        "name": "Marital Stat - Italian",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.D6 Cust Marital Status.Marital Stat - Italian"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Marital Status",
+        "sourceLogicalTable": "logicalTable:03 - Essbase Sample.D6 Cust Marital Status",
+        "levels": [ {
+            "name": "All Marital Status",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D6 Cust Marital Status.All Marital Status",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Marital Status.All Marital Status"
+          },
+          {
+            "name": "Marital Stat",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase Sample.D6 Cust Marital Status.Marital Stat",
+            "displayColumn": "presentationColumn:E - Sample Essbase.Marital Status.C7 Marital Status"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,103 @@
+{
+  "subjectArea": {
+    "name": "X5 - OLTP (Fusion Order)",
+    "sourceBusinessModel": "businessModel:X5 - OLTP Source (Fusion Order)",
+    "alternateNames": [
+      "O - OLTP (Fusion Order)"
+    ],
+    "implicitFactColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).F1 Order Facts.Total Orders Value",
+    "description": "OLTP Transactional Datamodel Analytics Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Time",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).More Time Objects"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Customers",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).More Customer Objects"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Memberships"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Discounts"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Interests"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Customer Addresses",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Non Primary Addresses"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Products",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Product Categories"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).More Product Objects"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Product Attributes"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Product Suppliers",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Suppliers Adresses"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Orders Attributes",
+        "children": [
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Shipment Options"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Payment Options"
+          },
+          {
+            "name": "presentationTable:X5 - OLTP (Fusion Order).Ship to Adress"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Discounts and Coupons"
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Warehouses"
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Facts Orders"
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Facts Coupons Usage"
+      },
+      {
+        "name": "presentationTable:X5 - OLTP (Fusion Order).Facts Stock Levels"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

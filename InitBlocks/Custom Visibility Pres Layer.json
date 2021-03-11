@@ -1,0 +1,22 @@
+{
+  "initBlock": {
+    "name": "Custom Visibility Pres Layer",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT\r\ncase when 'GKENDAL'=upper(':USER') THEN 1 ELSE 0 END FROM  DUAL\r\n"
+      }
+    ],
+    "variables": [ {
+        "name": "VISIBILITY_PRES_LAYER",
+        "value": "0"
+      }
+    ]
+  }
+}

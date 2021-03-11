@@ -1,0 +1,35 @@
+{
+  "physicalTable": {
+    "name": "SAMP_XML_REVENUE_F",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "uri": "VALUEOF(BI_EE_HOME)/samples/SampleAppLite/sample/SampleAppFiles/Data/SAMP_XML_REVENUE_F.xml",
+    "physicalColumns": [ {
+        "name": "Mth_key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_REVENUE_F/MTH_KEY"
+      },
+      {
+        "name": "Units",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_REVENUE_F/Units"
+      },
+      {
+        "name": "Prod_key",
+        "dataType": "INT",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_REVENUE_F/PROD_KEY"
+      },
+      {
+        "name": "Revenue",
+        "dataType": "DOUBLE",
+        "nullable": true,
+        "extName": "//Table/SAMP_XML_REVENUE_F/Revenue"
+      }
+    ]
+  }
+}

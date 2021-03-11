@@ -1,0 +1,78 @@
+{
+  "physicalTable": {
+    "name": "DELAY_PRED",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select *\r\n  from   table(rqTableEval(\r\n    cursor(select ARRDELAY,DISTANCE,DEPDELAY,YEAR,MONTH,DAYOFMONTH,DEPTIME,ARRTIME,UNIQUECARRIER,FLIGHTNUM,ORIGIN,DEST, ORIGIN||'-'||DEST ROUTE\r\n           from   ontime_s\r\n           where  year >= valueof(NQ_SESSION.OR_ARG1) and year <= valueof(NQ_SESSION.OR_ARG2)\r\n           and DEPDELAY is not NULL),\r\ncursor(select 1 \"ore.connect\" from dual),\r\n    'select ARRDELAY, DISTANCE, DEPDELAY,YEAR,MONTH,DAYOFMONTH,DEPTIME,ARRTIME,UNIQUECARRIER,FLIGHTNUM,ORIGIN,DEST, ORIGIN||''-''||DEST ROUTE, 1 PRED from ontime_s',\r\n    'PredictDelays-score'))\r\norder by 1, 2, 3"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "ArrTime",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "ArrDelay",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "DepDelay",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "Distance",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "Origin",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "Route",
+        "dataType": "VARCHAR",
+        "length": 42,
+        "nullable": true
+      },
+      {
+        "name": "UniqueCarrier",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "Dest",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "FlightNum",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "DepTime",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "Year",
+        "dataType": "INT"
+      },
+      {
+        "name": "Pred",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "DayofMonth",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "Month",
+        "dataType": "DOUBLE"
+      }
+    ]
+  }
+}

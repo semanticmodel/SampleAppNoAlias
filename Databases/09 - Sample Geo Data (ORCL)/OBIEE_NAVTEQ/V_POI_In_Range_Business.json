@@ -1,0 +1,33 @@
+{
+  "physicalTable": {
+    "name": "V_POI_In_Range_Business",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "Oracle11g",
+        "query": "select \r\npoi_id, \r\nname, \r\ncat_id\r\nfrom OBIEE_NAVTEQ.NTC_MAP_POI_BUSINESS\r\nwhere \r\nsdo_within_distance(geometry, geocode_address('VALUEOF(NQ_SESSION.OGS_ADDRESS)'),\r\n 'distance=VALUEOF(NQ_SESSION.OGS_DIST_M) unit=m')='TRUE'\r\n\r\n\r\n\r\n \r\n\r\n\r\n"
+      },
+      {
+        "databaseType": "DEFAULT",
+        "query": "SchoolsNearAddress"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "POI_Id",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "name",
+        "dataType": "VARCHAR",
+        "length": 240,
+        "nullable": true
+      },
+      {
+        "name": "cat_id",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "description": "Time dimension attribute objects ",
+    "presentationColumns": [ {
+        "name": "T02 Per Name Month",
+        "localization": {
+          "localizationKey": "T02 Per Name Month",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T02_Per_Name_Month)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D0 Time.T02 Per Name Month",
+        "description": "Help : \r\nPeriod Name Month. Stores the month information in the format YYYY / MM. Eg :- 2006 / 11"
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "localization": {
+          "localizationKey": "T03 Per Name Qtr",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T03_Per_Name_Qtr)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D0 Time.T03 Per Name Qtr",
+        "description": "Help :\r\nPeriod Name Quarter. Stores the Quarter information in the format YYYY QQuarterNumber. Eg :- 2006 Q3"
+      },
+      {
+        "name": "T04 Per Name Half",
+        "localization": {
+          "localizationKey": "T04 Per Name Half",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T04_Per_Name_Half)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D0 Time.T04 Per Name Half",
+        "description": "Help : \r\nPeriod Name Half. Stores the Half year information in the format YYYY HYHalfYearNumber. Eg :- 2006 HY2"
+      },
+      {
+        "name": "T05 Per Name Year",
+        "localization": {
+          "localizationKey": "T05 Per Name Year",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Time_T05_Per_Name_Year)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D0 Time.T05 Per Name Year",
+        "description": "Help :\r\nPeriod Name Year. Stores the year information in the format YYYY. Eg :- 2006"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Hierarchy",
+        "alternateNames": [
+          "H0 Time"
+        ],
+        "sourceLogicalTable": "logicalTable:02 - Flat XML files Sample.D0 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D0 Time.Total Time"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D0 Time.Year",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Half",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D0 Time.Half",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Time.T04 Per Name Half"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D0 Time.Quarter",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D0 Time.Month",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Time.T02 Per Name Month"
+          }
+        ]
+      }
+    ]
+  }
+}

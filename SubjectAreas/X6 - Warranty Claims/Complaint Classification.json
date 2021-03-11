@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Complaint Classification",
+    "presentationColumns": [ {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Classification.Id"
+      },
+      {
+        "name": "Classification",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Classification.Classification"
+      },
+      {
+        "name": "Search Query String",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Complaint Classification.Search Query String"
+      }
+    ]
+  }
+}

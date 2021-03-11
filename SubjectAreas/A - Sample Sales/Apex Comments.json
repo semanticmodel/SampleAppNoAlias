@@ -1,0 +1,45 @@
+{
+  "presentationTable": {
+    "name": "Apex Comments",
+    "alternateNames": [
+      "Comments",
+      "F92 Report Comments"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Comments",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.# of Comments"
+      },
+      {
+        "name": "# of Cumulated Comments",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.# of Cumulated Comments"
+      },
+      {
+        "name": "Comment id",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Comment id",
+        "alternateNames": [
+          "Comment ide"
+        ]
+      },
+      {
+        "name": "Commentary",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Commentary"
+      },
+      {
+        "name": "Id",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Id"
+      },
+      {
+        "name": "Day key",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Day key"
+      },
+      {
+        "name": "Empl key",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Empl key"
+      },
+      {
+        "name": "Lob key",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F92 Report Comments.Lob key"
+      }
+    ]
+  }
+}

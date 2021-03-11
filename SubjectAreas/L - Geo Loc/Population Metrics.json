@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "Population Metrics",
+    "presentationColumns": [ {
+        "name": "Total Pop 0 - 14",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 0 - 14"
+      },
+      {
+        "name": "Total Pop 15 - 29",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 15 - 29"
+      },
+      {
+        "name": "Total Pop 30 - 44",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 30 - 44"
+      },
+      {
+        "name": "Total Pop 45 - 59",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop 45 - 59"
+      },
+      {
+        "name": "Total Pop Gt 59",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Mumbai Demographics.Total Pop Gt 59"
+      }
+    ]
+  }
+}

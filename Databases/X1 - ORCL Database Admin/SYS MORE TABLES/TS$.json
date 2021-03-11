@@ -1,0 +1,188 @@
+{
+  "physicalTable": {
+    "name": "TS$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OWNERINSTANCE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DFLINCR",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AFFSTRENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "FLAGS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DFLOGGING",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BITMAPPED",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BLOCKSIZE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CONTENTS$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PITRSCNWRP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DFLINIT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INC#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PITRSCNBAS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIRECTALLOWED",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "UNDOBLOCK#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GROUPNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "UNDOFILE#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ONLINE$",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "BACKUPOWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SPARE3",
+        "dataType": "VARCHAR",
+        "length": 1000
+      },
+      {
+        "name": "DFLMAXEXT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DFLEXTPCT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SCNWRP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SCNBAS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLUGGED",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SPARE4",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DFLMINLEN",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DFLMINEXT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "Complaint Tokens",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_CLAIM_COMMENTS_TOK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Complaint Desc Token",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_CLAIM_COMMENTS_TOK",
+              "physicalExpression": {
+                "expressionTemplate": "lower(%1)",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK.TOKEN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Token Freq in Document",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_CLAIM_COMMENTS_TOK",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK.FREQUENCY"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DIM_CLAIM_COMMENTS_TOK",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_CLAIM_COMMENTS_TOK"
+          ]
+        }
+      }
+    ]
+  }
+}

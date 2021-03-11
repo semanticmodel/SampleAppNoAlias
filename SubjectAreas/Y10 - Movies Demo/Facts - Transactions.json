@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Facts - Transactions",
+    "presentationColumns": [ {
+        "name": "# Browsed",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.# Browsed"
+      },
+      {
+        "name": "# Completed",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.# Completed"
+      },
+      {
+        "name": "# Rated",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.# Rated"
+      },
+      {
+        "name": "# Purchases",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.# Purchases"
+      },
+      {
+        "name": "Average Rating",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.Average Rating"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.Recommended"
+      },
+      {
+        "name": "Sales $",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.Sales $"
+      },
+      {
+        "name": "# Started",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.# Started"
+      },
+      {
+        "name": "Movies Transacted",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.Movies Transacted"
+      },
+      {
+        "name": "Customers Transacted",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Transactions.Customers Transacted"
+      }
+    ]
+  }
+}

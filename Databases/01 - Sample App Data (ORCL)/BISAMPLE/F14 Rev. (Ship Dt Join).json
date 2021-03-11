@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F14 Rev. (Ship Dt Join)",
+    "description": "Reveue Paid Date Alias: Joins to the Time dimension tables on the Paid date column in the fact.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_REVENUE_F",
+    "caching": {
+      "enable": true
+    }
+  }
+}

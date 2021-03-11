@@ -1,0 +1,1712 @@
+{
+  "logicalTable": {
+    "name": "WS Objects Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Description",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.DESCRIPTION"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.DESCRIPTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Folder",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.FOLDER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.FOLDER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.FOLDER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.FOLDER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.FOLDER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OBJECTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OWNER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Type",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 IN ('-- Layouts: BI Publisher (XPT) layouts', 'Data Model Metadata', 'Report Metadata', 'Template File for Style Template or Sub Template') \r\nTHEN '3 - Publisher Objects' \r\nWHEN %1 IN ('List Export', 'Marketing BI Data Load', 'Marketing Saved ResultSet', 'Segment') \r\nTHEN '7 - Marketing Segmentation' \r\nWHEN %1 IN ('KPI', 'Scorecard Cause And Effect Linkages', 'Scorecard Causes And Effects View', 'Scorecard Custom Tree View', 'Scorecard Initiative', 'Scorecard Initiative Tree', 'Scorecard Objective', 'Scorecard Perspective', 'Scorecard Perspective List', 'Scorecard Settings', 'Scorecard Strategy Map View', 'Scorecard Strategy Tree', 'Scorecard Strategy Tree View', 'Watchlist') \r\nTHEN '5 - Scorecard Objects' \r\nWHEN %1 IN ('Folder', 'Parameters: User ID, Password, Folder Path --', 'Shortcut') \r\nTHEN '6 - Folders and Users' \r\nWHEN %1 IN ('Action', 'Agent', 'Condition') \r\nTHEN '4 - Actions, Agents & Conditions' \r\nWHEN %1 IN ('Dashboard', 'Dashboard Page') \r\nTHEN '1 - Dashboards' \r\nWHEN %1 IN ('Analysis', 'Dashboard Prompt', 'Filter') \r\nTHEN '2 - Analysis' \r\nELSE 'Other' END ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Signature"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Signature",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SIGNATURE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SIGNATURE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SIGNATURE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SIGNATURE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SIGNATURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Created Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Modified Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.LASTMODIFIEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "--- Paths Hierarchy ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Path_L1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path_L2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path_L3",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path_L4",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L4"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L4"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path_L5",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L5"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path_L6",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L6"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L6"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L6"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L6"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.PATH_L6"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path L2 Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'Explore <a href= \"saw.dll?catalog#%7B%22location%22:%22%2F' || %1 || '%2F' || %2 || '%22%7D\">' || %2 || '</a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Path L3 Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "case when %1 > ' ' then \r\n'Explore <a href= \"saw.dll?catalog#%7B%22location%22:%22%2F'||%2||'%2F'||%3||'%2F'||%1||'%22%7D\">'||%1||'</a>' end",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L3",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Path L4 Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "case when %1 > ' ' then \r\n'Explore <a href= \"saw.dll?catalog#%7B%22location%22:%22%2F'||%2||'%2F'||%3||'%2F'||%4||'%2F'||%1||'%22%7D\">'||%1||'</a>' end",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L4",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L3"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Path L5 Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "case when %1 >' ' then \r\n'Explore <a href= \"saw.dll?catalog#%7B%22location%22:%22%2F'||%2||'%2F'||%3||'%2F'||%4||'%2F'||%5||'%2F'||%1||'%22%7D\">'||%1||'</a>' end",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L5",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L3",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L4"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Path L6 Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 > '' THEN 'Explore <a href= \"saw.dll?catalog#%7B%22location%22:%22%2F' || %2 || '%2F' || %3 || '%2F' || %4 || '%2F' || %5 || '%2F' || %6 || '%2F' || %1 || '%22%7D\">' || %1 || '</a>' END ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L6",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L3",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L4",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L5"
+            ]
+          }
+        }
+      },
+      {
+        "name": "--- Analysis Specific Objects ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Analysis Column",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.ANALYSISCOLUMN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.ANALYSISNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Table",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.ANALYSISTABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Subject Area",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ANALYSIS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS.SUBJECTAREA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'<a href= \"saw.dll?Go&path=' || %1 || '&Options=mdr\"> ' || %2 || '</a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Analysis Path",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Analysis Name"
+            ]
+          }
+        }
+      },
+      {
+        "name": "--- Dashboards Specific Objects ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Dashboard Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "SUBSTRING(%1   FROM POSITION('/_portal/' IN %1)+9)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Style",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.DASHBOARDSTYLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Folder",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "SUBSTRING(%1  FROM 1 FOR POSITION('/_portal/' IN %1 )-1)",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Page Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.DASHBOARDPAGENAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Page Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.DASHBOARDPAGEPATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Analysis Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.ANALYSISNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Analysis Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.ANALYSISPATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'<a href= \"saw.dll?Dashboard&PortalPath=' || %1 || '\">' || %2 || '</a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Path",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Name"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Dashboard Page URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'<a href= \"saw.dll?Dashboard&PortalPath=' || %1 || '&Page=' || %2 || '\" target=\"_blank\">' || %2 || '</a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Path",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Page Name"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Dashboard Catalog URL",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'<a href= \"saw.dll?catalog#%7B%22location%22:%22' || %1 || '%22%7D\">' || %2 || ' Folder </a>'",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Path",
+              "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Name"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Dashboard Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DASHBOARD",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "--- Prompts Specific Objects ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Prompt Column",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.ANALYSISCOLUMN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prompt Table",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.ANALYSISTABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prompt Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prompt Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.PROMPTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prompt Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Prompt Subject Area",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DBPROMPT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT.SUBJECTAREA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "--- Filters Specific Objects ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Filter Column",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.ANALYSISCOLUMN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filter Table",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.ANALYSISTABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filter Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.FILTERNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filter Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filter Sequence Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.SEQUENCEID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Filter Subject Area",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "FILTER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_FILTER.SUBJECTAREA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "--- Time Object Created ---",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(Year( %1 ) AS VARCHAR(4))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(Year( %1 ) AS VARCHAR(4))\r\n|| ' Q' ||\r\nCAST(quarter_of_Year( %1 ) AS VARCHAR(1))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(Year( %1 ) AS VARCHAR(4))\r\n|| '-' ||\r\nCAST(month( %1 ) AS VARCHAR(2))\r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "sortBy": "Month Number",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(monthname( %1 ) AS VARCHAR(3))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(month( %1 ) AS VARCHAR(2))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Name",
+        "dataType": "VARCHAR",
+        "sortBy": "Day Number",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(dayname( %1 ) AS VARCHAR(7))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Week Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(week_of_year( %1 ) AS VARCHAR(2))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Number",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(dayofweek( %1 ) AS VARCHAR(1))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day in Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(dayofmonth( %1 ) AS VARCHAR(2))",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim.CREATEDTIME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALLOBJECTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      },
+      {
+        "name": "ANALYSIS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ANALYSIS",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS_Dim_FKey#1"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      },
+      {
+        "name": "DASHBOARD",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_DASHBOARD",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS_Dim_FKey#3"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      },
+      {
+        "name": "FILTER",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_FILTER",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS_Dim_FKey#2"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      },
+      {
+        "name": "DBPROMPT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_DBPROMPT",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS_Dim_FKey#4"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Objects",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "All Objects",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Path level 2",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L2"
+          ],
+          "displayColumn": "logicalColumn:Path_L2"
+        },
+        {
+          "name": "Path level 3",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L3",
+            "logicalColumn:Path_L2"
+          ],
+          "displayColumn": "logicalColumn:Path_L3"
+        },
+        {
+          "name": "Path level 4",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L4",
+            "logicalColumn:Path_L3",
+            "logicalColumn:Path_L2"
+          ],
+          "displayColumn": "logicalColumn:Path_L4"
+        },
+        {
+          "name": "Path level 5",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L5",
+            "logicalColumn:Path_L4",
+            "logicalColumn:Path_L3",
+            "logicalColumn:Path_L2"
+          ],
+          "displayColumn": "logicalColumn:Path_L5"
+        },
+        {
+          "name": "Path level 6",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L6",
+            "logicalColumn:Path_L5",
+            "logicalColumn:Path_L4",
+            "logicalColumn:Path_L3",
+            "logicalColumn:Path_L2"
+          ],
+          "displayColumn": "logicalColumn:Path_L6"
+        },
+        {
+          "name": "Path Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path_L6",
+            "logicalColumn:Signature",
+            "logicalColumn:Object Path"
+          ],
+          "displayColumn": "logicalColumn:Path_L6"
+        },
+        {
+          "name": "Root Folder",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Dashboard Folder"
+          ],
+          "displayColumn": "logicalColumn:Dashboard Folder"
+        },
+        {
+          "name": "Dashboard",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Dashboard Name"
+          ],
+          "displayColumn": "logicalColumn:Dashboard Name"
+        },
+        {
+          "name": "Page",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Dashboard Page Name",
+            "logicalColumn:Dashboard Name"
+          ],
+          "displayColumn": "logicalColumn:Dashboard Page Name"
+        },
+        {
+          "name": "Object Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Object Type"
+          ],
+          "displayColumn": "logicalColumn:Object Type"
+        },
+        {
+          "name": "Signature",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Signature"
+          ],
+          "displayColumn": "logicalColumn:Signature"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "WS All Objects [branch at level 'Path level 6']",
+          "levels": [ "All Objects", "Path level 2", "Path level 3", "Path level 4", "Path level 5", "Path level 6", "Path Detail" ]
+        },
+        {
+          "name": "WS All Objects [branch at level 'Page']",
+          "levels": [ "All Objects", "Root Folder", "Dashboard", "Page", "Path Detail" ]
+        },
+        {
+          "name": "WS All Objects [branch at level 'Signature']",
+          "levels": [ "All Objects", "Object Type", "Signature", "Path Detail" ]
+        }
+      ]
+    }
+  }
+}

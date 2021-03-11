@@ -1,0 +1,104 @@
+{
+  "physicalTable": {
+    "name": "WP_ACL_STATS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SETOWNERSHIP",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PATH_L0",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "DEL",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SCHEDULEPUBLISHERREPORT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PATH_L2",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "OBJECTNAME",
+        "dataType": "VARCHAR",
+        "length": 256,
+        "nullable": true
+      },
+      {
+        "name": "WRITE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PATH_REST",
+        "dataType": "VARCHAR",
+        "length": 200
+      },
+      {
+        "name": "ACCOUNT",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "READ",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "CHANGEPERMISSIONS",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "ACCOUNTTYPE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "RUNPUBLISHERREPORT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "VIEWPUBLISHEROUTPUT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "OBJECTTYPE",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "OBJECTPATH",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      },
+      {
+        "name": "EXECUTE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PATH_L1",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

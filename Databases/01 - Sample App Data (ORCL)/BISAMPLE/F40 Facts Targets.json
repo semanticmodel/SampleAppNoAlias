@@ -1,0 +1,7 @@
+{
+  "physicalTableAlias": {
+    "name": "F40 Facts Targets",
+    "description": "Targets fact Alias. Stores the target facts information at Month, Office and Product grain.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_TARGETS_F"
+  }
+}

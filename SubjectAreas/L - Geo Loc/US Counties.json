@@ -1,0 +1,88 @@
+{
+  "presentationTable": {
+    "name": "US Counties",
+    "presentationColumns": [ {
+        "name": "State",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.State"
+      },
+      {
+        "name": "Area",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.Area"
+      },
+      {
+        "name": "Area_id",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.Area_id"
+      },
+      {
+        "name": "Cbsa_id",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.Cbsa_id"
+      },
+      {
+        "name": "County",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.County"
+      },
+      {
+        "name": "CTY_FIPS",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.CTY_FIPS",
+        "alternateNames": [
+          "Ctyfips"
+        ]
+      },
+      {
+        "name": "Msa_id",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.Msa_id"
+      },
+      {
+        "name": "ST_FIPS",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.ST_FIPS",
+        "alternateNames": [
+          "Stfips"
+        ]
+      },
+      {
+        "name": "Stname",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.Stname"
+      },
+      {
+        "name": "Pop 2000",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2000"
+      },
+      {
+        "name": "Pop 2001",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2001"
+      },
+      {
+        "name": "Pop 2002",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2002"
+      },
+      {
+        "name": "Pop 2003",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2003"
+      },
+      {
+        "name": "Pop 2004",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2004"
+      },
+      {
+        "name": "Pop 2005",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2005"
+      },
+      {
+        "name": "Pop 2006",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2006"
+      },
+      {
+        "name": "Pop 2007",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2007"
+      },
+      {
+        "name": "Pop 2008",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.US County Facts.Pop 2008"
+      },
+      {
+        "name": "ST_CTY_FIPS",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Us County Dim.ST_CTY_FIPS"
+      }
+    ]
+  }
+}

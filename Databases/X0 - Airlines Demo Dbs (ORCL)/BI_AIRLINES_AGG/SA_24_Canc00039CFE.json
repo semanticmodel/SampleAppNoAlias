@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "SA_24_Canc00039CFE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "CODE00039C1C",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "Cancel__00039CFESK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Cancel_Rea00039C1D",
+        "dataType": "VARCHAR",
+        "length": 250
+      }
+    ]
+  }
+}

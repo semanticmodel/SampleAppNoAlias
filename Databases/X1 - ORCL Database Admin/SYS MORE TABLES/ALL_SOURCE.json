@@ -1,0 +1,35 @@
+{
+  "physicalTable": {
+    "name": "ALL_SOURCE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "LINE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TEXT",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

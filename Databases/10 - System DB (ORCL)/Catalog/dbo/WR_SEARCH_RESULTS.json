@@ -1,0 +1,59 @@
+{
+  "physicalTable": {
+    "name": "WR_SEARCH_RESULTS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "PATH_REST",
+        "dataType": "VARCHAR",
+        "length": 300
+      },
+      {
+        "name": "PATH_L1",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "TARGET_STATUS",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "SIGNATURE",
+        "dataType": "VARCHAR",
+        "length": 80
+      },
+      {
+        "name": "TARGET_PATH",
+        "dataType": "VARCHAR",
+        "length": 500
+      },
+      {
+        "name": "SEQUENCEID",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "PATH_L2",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "PATH_L0",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SOURCE_NAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SOURCE_PATH",
+        "dataType": "VARCHAR",
+        "length": 500,
+        "nullable": true
+      }
+    ]
+  }
+}

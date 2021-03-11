@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "Bbil Scenarios",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Scenario",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Scenarios",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS.SCENARIO"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Scenario Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Scenarios",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS.SCENARIO_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Scenario Parent",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Bbil Scenarios",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS.SCENARIO_PARENT"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Bbil Scenarios",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y01 - Custom Demo Datasets.BBILL.BBIL_SCENARIOS"
+          ]
+        }
+      }
+    ]
+  }
+}

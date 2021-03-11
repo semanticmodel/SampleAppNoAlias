@@ -1,0 +1,429 @@
+{
+  "logicalTable": {
+    "name": "Time",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.YEAR_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "YEAR  (%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End of Year",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.END_OF_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Days in Year",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAYS_IN_YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.QUARTER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.QUARTER_NUMBER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "QUARTER_OF_YEAR  (%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End of Quarter",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.END_OF_QUARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Days in Quarter",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAYS_IN_QUARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.MONTH_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.MONTH_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "MONTHNAME(%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.MONTH_NUMBER"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "MONTH(%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End of Month",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.END_OF_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Days in Month",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAYS_IN_MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Number in Month",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAY_NUMBER_IN_MONTH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": " DAYOFMONTH(%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAY_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "DAYNAME(%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day Number in Week",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.DAY_NUMBER_IN_WEEK"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "DAYOFWEEK(%1 )",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Day-Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Times",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES.TIME_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Movie Fact",
+              "physicalExpression": {
+                "expressionTemplate": "CAST(%1 AS DATE)",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT.TIME_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Times",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.TIMES"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:Y10 - Movie Demo (ORCL).Time.Day-Date"
+        ]
+      },
+      {
+        "name": "Movie Fact",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_FACT"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:Y10 - Movie Demo (ORCL).Time.Day-Date"
+        ]
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ],
+          "displayColumn": "logicalColumn:Year",
+          "chronologicalKey": "logicalColumn:Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:Quarter"
+          ],
+          "displayColumn": "logicalColumn:Quarter"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 12,
+          "primaryColumns": [
+            "logicalColumn:Month Number",
+            "logicalColumn:Year"
+          ],
+          "chronologicalKey": "logicalColumn:Month Number"
+        },
+        {
+          "name": "Day-Date",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 360,
+          "primaryColumns": [
+            "logicalColumn:Day-Date"
+          ],
+          "displayColumn": "logicalColumn:Day-Date"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Time [branch at level 'Month']",
+          "levels": [ "Total", "Year", "Quarter", "Month", "Day-Date" ]
+        }
+      ]
+    }
+  }
+}

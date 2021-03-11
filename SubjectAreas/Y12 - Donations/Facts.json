@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Facts",
+    "presentationColumns": [ {
+        "name": "# Of Donors",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.# Of Donors"
+      },
+      {
+        "name": "# Of Projects",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.# Of Projects"
+      },
+      {
+        "name": "# Of Schools",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.# Of Schools"
+      },
+      {
+        "name": "# of Teachers",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.# of Teachers"
+      },
+      {
+        "name": "# Students Reached",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.# Students Reached"
+      },
+      {
+        "name": "Σ Project Cost $",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Σ Project Cost $"
+      },
+      {
+        "name": "Σ Donations $",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Σ Donations $"
+      },
+      {
+        "name": "Pct Attainment",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Pct Attainment"
+      },
+      {
+        "name": "Avg Students Reached",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Students Reached"
+      },
+      {
+        "name": "Avg Cost Per Student",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Cost Per Student"
+      },
+      {
+        "name": "Avg Cost by Project",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Cost by Project"
+      },
+      {
+        "name": "Avg Donations by Project",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Donations by Project"
+      },
+      {
+        "name": "Avg Donations by Donors",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Donations by Donors"
+      },
+      {
+        "name": "Avg Donations per Student",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Donations per Student"
+      },
+      {
+        "name": "Avg Proj Completion Days",
+        "sourceLogicalColumn": "logicalColumn:Y12 - Donations.Facts.Avg Proj Completion Days"
+      }
+    ]
+  }
+}

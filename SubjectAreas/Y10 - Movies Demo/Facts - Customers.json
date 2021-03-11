@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Facts - Customers",
+    "presentationColumns": [ {
+        "name": "Average Age",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Age"
+      },
+      {
+        "name": "# Comments",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.# Comments"
+      },
+      {
+        "name": "Average Commute Distance",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Commute Distance"
+      },
+      {
+        "name": "Average Credit Balance",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Credit Balance"
+      },
+      {
+        "name": "Average Household Size",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Household Size"
+      },
+      {
+        "name": "Average Income",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Income"
+      },
+      {
+        "name": "Average Late Mort Rent Pmts",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Late Mort Rent Pmts"
+      },
+      {
+        "name": "Average Mortgage Amt",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Mortgage Amt"
+      },
+      {
+        "name": "Average Num Cars",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Num Cars"
+      },
+      {
+        "name": "Average Num Mortgages",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Num Mortgages"
+      },
+      {
+        "name": "Average Work Experience",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Work Experience"
+      },
+      {
+        "name": "Average Years Current Employer",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Years Current Employer"
+      },
+      {
+        "name": "Average Years Customer",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Years Customer"
+      },
+      {
+        "name": "Average Years Residence",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.Average Years Residence"
+      },
+      {
+        "name": "# of Cust in Base",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Facts - Customers.# of Cust in Base"
+      }
+    ]
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "presentationTable": {
+    "name": "SOA Composite",
+    "presentationColumns": [ {
+        "name": "Composite Dn",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Composite Dn"
+      },
+      {
+        "name": "Composite Instance Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Composite Instance Id"
+      },
+      {
+        "name": "Composite Label",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Composite Label"
+      },
+      {
+        "name": "Composite Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Composite Name"
+      },
+      {
+        "name": "Composite Revision",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Composite Revision"
+      },
+      {
+        "name": "Domain Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).1 Dim Composite.Domain Name"
+      }
+    ]
+  }
+}

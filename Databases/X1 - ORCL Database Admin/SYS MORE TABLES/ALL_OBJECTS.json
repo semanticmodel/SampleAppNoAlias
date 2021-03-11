@@ -1,0 +1,89 @@
+{
+  "physicalTable": {
+    "name": "ALL_OBJECTS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SECONDARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "LAST_DDL_TIME",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "EDITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "CREATED",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "TEMPORARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "GENERATED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "NAMESPACE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DATA_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SUBOBJECT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OBJECT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 19
+      }
+    ]
+  }
+}

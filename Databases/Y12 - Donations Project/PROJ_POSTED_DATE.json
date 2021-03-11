@@ -1,0 +1,50 @@
+{
+  "physicalTable": {
+    "name": "PROJ_POSTED_DATE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "MTH_NAME",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "YR",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "QTR_NUM",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "QTR",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DAY_DT",
+        "dataType": "DATETIME",
+        "length": 7
+      },
+      {
+        "name": "MTH_NUM",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MTH_ID",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "MTH",
+        "dataType": "VARCHAR",
+        "length": 10
+      }
+    ]
+  }
+}

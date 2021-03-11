@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "Stock Sample",
+    "sourceTable": "physicalTable:07 - ORE Sample.ORCLSTOCK",
+    "caching": {
+      "enable": true
+    }
+  }
+}

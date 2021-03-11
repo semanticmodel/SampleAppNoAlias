@@ -1,0 +1,34 @@
+{
+  "physicalTable": {
+    "name": "FACT_AGG_OR_CD_01",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "hints": "opt_param('_index_join_enabled','false')+",
+    "physicalColumns": [ {
+        "name": "T02_Per_Na00003D05",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "of_C00004031",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "D1k_Offic00004295",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P0_Produc0000459A",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

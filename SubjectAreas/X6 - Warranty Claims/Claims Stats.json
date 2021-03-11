@@ -1,0 +1,93 @@
+{
+  "presentationTable": {
+    "name": "Claims Stats",
+    "alternateNames": [
+      "Claims Stat"
+    ],
+    "presentationColumns": [ {
+        "name": "Claim Age",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Age"
+      },
+      {
+        "name": "Claim Age Bucket",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Age Bucket"
+      },
+      {
+        "name": "Claim Labor Code",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Labor Code"
+      },
+      {
+        "name": "Claim Labor Desc",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Labor Desc"
+      },
+      {
+        "name": "Claim Lbr Othr Globl Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Lbr Othr Globl Amt"
+      },
+      {
+        "name": "Claim Lbr Tot Globl Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Lbr Tot Globl Amt"
+      },
+      {
+        "name": "Claim Month",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Month"
+      },
+      {
+        "name": "Claim Month Num",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Month Num"
+      },
+      {
+        "name": "Claim Odmtr Mileage",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Odmtr Mileage"
+      },
+      {
+        "name": "Claim Part Tot Globl Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Part Tot Globl Amt"
+      },
+      {
+        "name": "Claim Period",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Period"
+      },
+      {
+        "name": "Claim Quarter",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Quarter"
+      },
+      {
+        "name": "Claim Tot Globl Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Tot Globl Amt"
+      },
+      {
+        "name": "Claim Year",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Year"
+      },
+      {
+        "name": "Days In Service",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Days In Service"
+      },
+      {
+        "name": "Dealer",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer"
+      },
+      {
+        "name": "Dealer City",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer City"
+      },
+      {
+        "name": "Dealer Geocode",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer Geocode"
+      },
+      {
+        "name": "Dealer Stateprovince",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer Stateprovince"
+      },
+      {
+        "name": "# of Claims",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.# of Claims"
+      },
+      {
+        "name": "Recordid",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Recordid"
+      }
+    ]
+  }
+}

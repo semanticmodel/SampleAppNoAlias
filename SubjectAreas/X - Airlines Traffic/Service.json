@@ -1,0 +1,21 @@
+{
+  "presentationTable": {
+    "name": "Service",
+    "alternateNames": [
+      "Carrier#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Service Class",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.37 Service Class.Service Class"
+      },
+      {
+        "name": "Aircraft Config",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.60 Market.Aircraft Config"
+      },
+      {
+        "name": "Class",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.60 Market.Class"
+      }
+    ]
+  }
+}

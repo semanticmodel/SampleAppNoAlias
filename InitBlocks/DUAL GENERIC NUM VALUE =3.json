@@ -1,0 +1,36 @@
+{
+  "initBlock": {
+    "name": "DUAL GENERIC NUM VALUE =3",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "description": "This is a generic Init Block of type Number used by several variables for which init value is not important",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "Select 3 From Dual"
+      }
+    ],
+    "variables": [ {
+        "name": "LOGLEVEL",
+        "value": "3"
+      },
+      {
+        "name": "N_AGO_PERIODS",
+        "value": "3"
+      },
+      {
+        "name": "N_TRAIL_PAST_MTHS",
+        "value": "3"
+      },
+      {
+        "name": "OGS_DIST_M",
+        "description": "Used for Geospatial interaction examples",
+        "value": "1000"
+      }
+    ]
+  }
+}

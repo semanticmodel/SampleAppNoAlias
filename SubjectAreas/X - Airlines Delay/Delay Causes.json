@@ -1,0 +1,184 @@
+{
+  "presentationTable": {
+    "name": "Delay Causes",
+    "description": "->",
+    "alternateNames": [
+      "F5"
+    ],
+    "presentationColumns": [ {
+        "name": "-- Carrier Delay -------------------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Dept Delay ---------------------",
+          "-- Dept Delay -------------------------------",
+          "Pres Folder Header"
+        ]
+      },
+      {
+        "name": "Carrier Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Carrier Delay as % of Flight Time"
+      },
+      {
+        "name": "Carrier Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Carrier Delay (Min)"
+      },
+      {
+        "name": "Carrier Delay as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Carrier Delay as % of Arrival Delay",
+        "description": "Carrier delay time expressed as % of Arrival delay time."
+      },
+      {
+        "name": "-- Late Aircraft Delay -------------------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Arr Delay ---------------------",
+          "-- Arr Delay -------------------------------",
+          "-- Dept Delay ---------------------#1"
+        ]
+      },
+      {
+        "name": "Late Aircraft Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Late Aircraft Delay as % of Flight Time"
+      },
+      {
+        "name": "Late Aircraft Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Late Aircraft Delay (Min)"
+      },
+      {
+        "name": "Late Aircraft Delay as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Late Aircraft Delay as % of Arrival Delay",
+        "description": "Late Aircraft delay time expressed as % of Arrival delay time."
+      },
+      {
+        "name": "-- Weather Delay  ---------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Arr Delay ---------------------#1",
+          "-- Delay Causes ---------------------"
+        ]
+      },
+      {
+        "name": "Weather Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Weather Delay as % of Flight Time"
+      },
+      {
+        "name": "Weather Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Weather Delay (Min)"
+      },
+      {
+        "name": "Weather Delay as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Weather Delay as % of Arrival Delay",
+        "description": "Weather delay time expressed as % of Arrival delay time."
+      },
+      {
+        "name": "-- Nas Delay -------------------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Carrier Delay -------------------------------#1",
+          "-- Nasr Delay -------------------------------"
+        ]
+      },
+      {
+        "name": "Nas Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Nas Delay as % of Flight Time"
+      },
+      {
+        "name": "Nas Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Nas Delay (Min)"
+      },
+      {
+        "name": "Nas Delay as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Nas Delay as % of Arrival Delay"
+      },
+      {
+        "name": "-- Security Delay -------------------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Late Aircraft Delay -------------------------------#1"
+        ]
+      },
+      {
+        "name": "Security Delay as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Security Delay as % of Flight Time"
+      },
+      {
+        "name": "Security Delay (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Security Delay (Min)"
+      },
+      {
+        "name": "Security Delay as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Security Delay as % of Arrival Delay",
+        "description": "Security delay time expressed as % of Arrival delay time."
+      },
+      {
+        "name": "-- Taxi Time -------------------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time."
+      },
+      {
+        "name": "Taxi In (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Taxi In (Min)",
+        "alternateNames": [
+          "Taxi In (Min) !"
+        ]
+      },
+      {
+        "name": "Taxi Out (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Taxi Out (Min)",
+        "alternateNames": [
+          "Taxi Out (Min) !"
+        ]
+      },
+      {
+        "name": "Taxi In as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Taxi In as % of Flight Time",
+        "description": "Taxi In time expressed as % of Total Flight time.",
+        "alternateNames": [
+          "Taxi In as % of Flight Time !"
+        ]
+      },
+      {
+        "name": "Taxi Out as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Taxi Out as % of Flight Time",
+        "description": "Taxi Out time expressed as % of Total Flight time.",
+        "alternateNames": [
+          "Taxi Out as % of Flight Time !"
+        ]
+      },
+      {
+        "name": "-- Other Delay Causes ----------------------",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Pres Folder Header",
+        "description": "Percent of flights that arrive on time. Note: If you select Origin as a category, you get percent of flights that depart from those airports and arrive on time.",
+        "alternateNames": [
+          "-- Security Delay -------------------------------#1"
+        ]
+      },
+      {
+        "name": "Other Causes (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Other Causes (Min)",
+        "alternateNames": [
+          "Other Delay Causes (Min)"
+        ]
+      },
+      {
+        "name": "Other Causes as % of Flight Time",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Other Causes as % of Flight Time",
+        "alternateNames": [
+          "Other Delay Causes as % of Flight Time"
+        ]
+      },
+      {
+        "name": "Other Causes as % of Arrival Delay",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Other Causes as % of Arrival Delay",
+        "alternateNames": [
+          "Other Delay Causes as % of Arrival Delay"
+        ]
+      }
+    ]
+  }
+}

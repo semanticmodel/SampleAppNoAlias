@@ -1,0 +1,46 @@
+{
+  "presentationTable": {
+    "name": "Process Duration",
+    "presentationColumns": [ {
+        "name": "Proc Inst Avg Duratn Days",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Days"
+      },
+      {
+        "name": "Proc Inst Avg Duratn Hrs",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Hrs"
+      },
+      {
+        "name": "Proc Inst Avg Duratn Min",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Min"
+      },
+      {
+        "name": "Proc Inst Avg Duratn Mths",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Mths"
+      },
+      {
+        "name": "Proc Inst Avg Duratn Seconds",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Avg Duratn Seconds"
+      },
+      {
+        "name": "Proc Inst Total Duratn Days",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Days"
+      },
+      {
+        "name": "Proc Inst Total Duratn Hrs",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Hrs"
+      },
+      {
+        "name": "Proc Inst Total Duratn Min",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Min"
+      },
+      {
+        "name": "Proc Inst Total Duratn Mths",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Mths"
+      },
+      {
+        "name": "Proc Inst Total Duratn Seconds",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.Proc Inst Total Duratn Seconds"
+      }
+    ]
+  }
+}

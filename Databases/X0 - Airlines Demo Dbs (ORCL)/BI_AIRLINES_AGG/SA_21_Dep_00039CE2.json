@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "SA_21_Dep_00039CE2",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Dep_Time_B00039BA6",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dep_Tim_00039CE2SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "Dept_Ti_00039CE4SK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

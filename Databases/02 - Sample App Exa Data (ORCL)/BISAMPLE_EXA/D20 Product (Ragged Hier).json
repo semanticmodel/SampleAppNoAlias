@@ -1,0 +1,6 @@
+{
+  "physicalTableAlias": {
+    "name": "D20 Product (Ragged Hier)",
+    "sourceTable": "physicalTable:02 - Sample App Exa Data (ORCL).BISAMPLE_EXA.SAMP_PRODUCTS_DR"
+  }
+}

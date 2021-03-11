@@ -1,0 +1,54 @@
+{
+  "physicalTable": {
+    "name": "COL_USAGE$",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "INTCOL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NULL_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "RANGE_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NONEQUIJOIN_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "EQUIJOIN_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LIKE_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EQUALITY_PREDS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJ#",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "UT_SOURCE",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "id",
+        "dataType": "VARCHAR",
+        "length": 10,
+        "nullable": true
+      },
+      {
+        "name": "START_DT",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "sources",
+        "dataType": "LONGVARCHAR",
+        "length": 5000,
+        "nullable": true
+      }
+    ]
+  }
+}

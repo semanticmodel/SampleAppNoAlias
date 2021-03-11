@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Discounts",
+    "presentationColumns": [ {
+        "name": "Discount ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Discount ID"
+      },
+      {
+        "name": "Valid From Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Valid From Date"
+      },
+      {
+        "name": "Valid To Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D01 Customers.Valid To Date"
+      }
+    ]
+  }
+}

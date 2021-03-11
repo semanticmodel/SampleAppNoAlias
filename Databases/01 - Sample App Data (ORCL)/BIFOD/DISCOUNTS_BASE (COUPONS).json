@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "DISCOUNTS_BASE (COUPONS)",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BIFOD.DISCOUNTS_BASE",
+    "caching": {
+      "enable": true
+    }
+  }
+}

@@ -1,0 +1,405 @@
+{
+  "physicalTable": {
+    "name": "WRH$_SQLSTAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DISK_READS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_PROFILE",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INVALIDATIONS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INVALIDATIONS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOADS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_SERVERS_EXECS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLAG",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_OFFLOAD_ELIG_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VERSION_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FETCHES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSEXEC_TIME_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "CCWAIT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EXECUTIONS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "APWAIT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARSING_SCHEMA_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWS_PROCESSED_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_OFFLOAD_ELIG_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZER_MODE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "EXECUTIONS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIRECT_WRITES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_OF_FETCH_COUNT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOADED_VERSIONS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZED_PHYSICAL_READS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSEXEC_TIME_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ELAPSED_TIME_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SORTS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_INTERCONNECT_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DIRECT_WRITES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLAN_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "OPTIMIZER_COST",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SHARABLE_MEM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZED_PHYSICAL_READS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_OF_FETCH_COUNT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IOWAIT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BIND_DATA",
+        "dataType": "VARBINARY",
+        "length": 2000
+      },
+      {
+        "name": "BUFFER_GETS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CELL_UNCOMPRESSED_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IOWAIT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DISK_READS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13,
+        "nullable": true
+      },
+      {
+        "name": "JAVEXEC_TIME_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLWAIT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "APWAIT_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ELAPSED_TIME_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARSING_SCHEMA_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "CCWAIT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CELL_UNCOMPRESSED_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_OFFLOAD_RETURN_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FORCE_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MODULE",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "CLWAIT_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CPU_TIME_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_GETS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FETCHES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOADS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_SERVERS_EXECS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ROWS_PROCESSED_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARSING_USER_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SORTS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_OFFLOAD_RETURN_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OPTIMIZER_ENV_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ACTION",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "PHYSICAL_WRITE_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "JAVEXEC_TIME_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CPU_TIME_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IO_INTERCONNECT_BYTES_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARSE_CALLS_DELTA",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "PARSE_CALLS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_BYTES_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS_TOTAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

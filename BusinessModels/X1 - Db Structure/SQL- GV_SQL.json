@@ -1,0 +1,1512 @@
+{
+  "logicalTable": {
+    "name": "SQL- GV_SQL",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Action",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.ACTION"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Action Hash",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.ACTION_HASH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Address",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.ADDRESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Application Wait Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.APPLICATION_WAIT_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bind Data",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.BIND_DATA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Buffer Gets",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.BUFFER_GETS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Child Address",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CHILD_ADDRESS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Child Latch",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CHILD_LATCH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Child Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CHILD_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cluster Wait Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CLUSTER_WAIT_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Command Type",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.COMMAND_TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Concurrency Wait Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CONCURRENCY_WAIT_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cpu Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.CPU_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Direct Writes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.DIRECT_WRITES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Disk Reads",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.DISK_READS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Elapsed Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.ELAPSED_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Of Fetch Count",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.END_OF_FETCH_COUNT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Exact Matching Signature",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.EXACT_MATCHING_SIGNATURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Executions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.EXECUTIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Fetches",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.FETCHES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "First Load Time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.FIRST_LOAD_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Force Matching Signature",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.FORCE_MATCHING_SIGNATURE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Inst Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.INST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Invalidations",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.INVALIDATIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Io Cell Offload Eligible Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IO_CELL_OFFLOAD_ELIGIBLE_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Io Cell Offload Returned Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IO_CELL_OFFLOAD_RETURNED_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Io Cell Uncompressed Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IO_CELL_UNCOMPRESSED_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Io Interconnect Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IO_INTERCONNECT_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Is Bind Aware",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IS_BIND_AWARE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Is Bind Sensitive",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IS_BIND_SENSITIVE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Is Obsolete",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IS_OBSOLETE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Is Shareable",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.IS_SHAREABLE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Java Exec Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.JAVA_EXEC_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Kept Versions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.KEPT_VERSIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Active Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LAST_ACTIVE_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Last Load Time",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LAST_LOAD_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Literal Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LITERAL_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loaded Versions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LOADED_VERSIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Loads",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LOADS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Locked Total",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.LOCKED_TOTAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Module",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.MODULE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Module Hash",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.MODULE_HASH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Status",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OBJECT_STATUS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Old Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OLD_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Open Versions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPEN_VERSIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Optimized Phy Read Requests",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPTIMIZED_PHY_READ_REQUESTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Optimizer Cost",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPTIMIZER_COST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Optimizer Env",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPTIMIZER_ENV"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Optimizer Env Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPTIMIZER_ENV_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Optimizer Mode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OPTIMIZER_MODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Outline Category",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OUTLINE_CATEGORY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Outline Sid",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.OUTLINE_SID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parse Calls",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PARSE_CALLS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parsing Schema Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PARSING_SCHEMA_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parsing Schema Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PARSING_SCHEMA_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Parsing User Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PARSING_USER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Persistent Mem",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PERSISTENT_MEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Read Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PHYSICAL_READ_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Read Requests",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PHYSICAL_READ_REQUESTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Write Bytes",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PHYSICAL_WRITE_BYTES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Write Requests",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PHYSICAL_WRITE_REQUESTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pinned Total",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PINNED_TOTAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plan Hash Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PLAN_HASH_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Plsql Exec Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PLSQL_EXEC_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Program Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PROGRAM_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Program Line#",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PROGRAM_LINE#"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Px Servers Executions",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.PX_SERVERS_EXECUTIONS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Remote",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.REMOTE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rows Processed",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.ROWS_PROCESSED"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Runtime Mem",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.RUNTIME_MEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Serializable Aborts",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SERIALIZABLE_ABORTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Service",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SERVICE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Service Hash",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SERVICE_HASH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sharable Mem",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SHARABLE_MEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sorts",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SORTS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Fulltext",
+        "dataType": "LONGVARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_FULLTEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Patch",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_PATCH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Plan Baseline",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_PLAN_BASELINE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Profile",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_PROFILE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sql Text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQL_TEXT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Sqltype",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.SQLTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Type Chk Heap",
+        "dataType": "VARBINARY",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.TYPE_CHK_HEAP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Typecheck Mem",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.TYPECHECK_MEM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "User Io Wait Time",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.USER_IO_WAIT_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Users Executing",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.USERS_EXECUTING"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Users Opening",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SQL.USERS_OPENING"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "GV_$SQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.GV$SQL"
+          ]
+        }
+      }
+    ]
+  }
+}

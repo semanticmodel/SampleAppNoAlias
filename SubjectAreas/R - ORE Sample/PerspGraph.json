@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "PerspGraph",
+    "presentationColumns": [ {
+        "name": "id",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.PerspGraph.id"
+      },
+      {
+        "name": "image",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.PerspGraph.image"
+      }
+    ]
+  }
+}

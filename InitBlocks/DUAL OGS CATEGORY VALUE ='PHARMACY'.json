@@ -1,0 +1,24 @@
+{
+  "initBlock": {
+    "name": "DUAL OGS CATEGORY VALUE ='PHARMACY'",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "description": "This is a generic Init Block of type Number used by several variables for which init value is not important",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "Select 'PHARMACY' From Dual"
+      }
+    ],
+    "variables": [ {
+        "name": "OGS_CATEGORY",
+        "description": "Used for Geospatial interaction examples",
+        "value": "'PHARMACY'"
+      }
+    ]
+  }
+}

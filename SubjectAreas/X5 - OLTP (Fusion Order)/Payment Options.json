@@ -1,0 +1,73 @@
+{
+  "presentationTable": {
+    "name": "Payment Options",
+    "presentationColumns": [ {
+        "name": "Expire Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Expire Date"
+      },
+      {
+        "name": "Institution Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Institution Name"
+      },
+      {
+        "name": "Payment Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Payment Type Lookup"
+      },
+      {
+        "name": "Payment Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Payment Type Code"
+      },
+      {
+        "name": "Routing IDentifier",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Routing IDentifier"
+      },
+      {
+        "name": "Valid From Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Valid From Date"
+      },
+      {
+        "name": "Valid To Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Valid To Date"
+      },
+      {
+        "name": "Account Number",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Account Number"
+      },
+      {
+        "name": "Card Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Card Type Code"
+      },
+      {
+        "name": "Check Digits",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Check Digits"
+      },
+      {
+        "name": "Payment Option ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Payment Option ID"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Payment Options",
+        "alternateNames": [
+          "H10 Order Payment Options"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D10 Order Payment Options",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Total"
+          },
+          {
+            "name": "Payment Type",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Payment Type",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Payment Options.Payment Type Code"
+          },
+          {
+            "name": "Odr Payment Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Odr Payment Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Payment Options.Payment Option ID"
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "subjectArea": {
+    "name": "Y12 - Donations",
+    "sourceBusinessModel": "businessModel:Y12 - Donations",
+    "tableOrder": [
+      {
+        "name": "presentationTable:Y12 - Donations.Facts"
+      },
+      {
+        "name": "presentationTable:Y12 - Donations.School"
+      },
+      {
+        "name": "presentationTable:Y12 - Donations.Projects"
+      },
+      {
+        "name": "presentationTable:Y12 - Donations.Teacher"
+      },
+      {
+        "name": "presentationTable:Y12 - Donations.Posted Date"
+      }
+    ]
+  }
+}

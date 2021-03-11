@@ -1,0 +1,24 @@
+{
+  "physicalTable": {
+    "name": "RANDOMREDDOTS",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select id, image\r\nfrom table(rqTableEval(cursor(\r\nselect valueof(NQ_SESSION.OR_REDDOTS) n from dual), \r\nNULL,'PNG','RandomRedDots'))"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "ID",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "IMAGE",
+        "dataType": "LONGVARBINARY",
+        "length": 32000,
+        "nullable": true
+      }
+    ]
+  }
+}

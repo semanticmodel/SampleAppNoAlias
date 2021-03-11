@@ -1,0 +1,154 @@
+{
+  "subjectArea": {
+    "name": "U - Usage Tracking",
+    "sourceBusinessModel": "businessModel:10 - Usage Tracking",
+    "implicitFactColumn": "logicalColumn:10 - Usage Tracking.UT L Query Facts.# of Queries",
+    "description": "OBIEE Usage Monitoring Analytics and More",
+    "tableOrder": [
+      {
+        "name": "presentationTable:U - Usage Tracking.Usage Tracking",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Users"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Query"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Query Time"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Measures"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Navigation"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Physical SQL",
+            "children": [
+              {
+                "name": "presentationTable:U - Usage Tracking.SQL Time"
+              }
+            ]
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Sessions"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.Webcat Statistics",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Catalog Facts"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Object Attributes",
+            "children": [
+              {
+                "name": "presentationTable:U - Usage Tracking.Webcat Path"
+              },
+              {
+                "name": "presentationTable:U - Usage Tracking.Specific Object Types",
+                "children": [
+                  {
+                    "name": "presentationTable:U - Usage Tracking.Analysis"
+                  },
+                  {
+                    "name": "presentationTable:U - Usage Tracking.Dashboards"
+                  },
+                  {
+                    "name": "presentationTable:U - Usage Tracking.Prompts"
+                  },
+                  {
+                    "name": "presentationTable:U - Usage Tracking.Filters"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Object Created Time"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.Webcat Checker",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Execution Check",
+            "children": [
+              {
+                "name": "presentationTable:U - Usage Tracking.Exec Attributes"
+              },
+              {
+                "name": "presentationTable:U - Usage Tracking.Exec Measures"
+              }
+            ]
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Syntax Check",
+            "children": [
+              {
+                "name": "presentationTable:U - Usage Tracking.Syntax Attributes"
+              },
+              {
+                "name": "presentationTable:U - Usage Tracking.Syntax Measures"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.Webcat Permissions",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Account"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Catalog Object"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Permissions"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Facts",
+            "children": [
+              {
+                "name": "presentationTable:U - Usage Tracking.Explicit Allowings"
+              },
+              {
+                "name": "presentationTable:U - Usage Tracking.Explicit Denials"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.Webcat References",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Search Results"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Source Object Attributes"
+          },
+          {
+            "name": "presentationTable:U - Usage Tracking.Search Criteria"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.BI Publisher Audit",
+        "children": [
+          {
+            "name": "presentationTable:U - Usage Tracking.Other fields"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:U - Usage Tracking.X SampleApp Index Page"
+      }
+    ]
+  }
+}

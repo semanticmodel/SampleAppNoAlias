@@ -1,0 +1,56 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "presentationColumns": [ {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Year"
+      },
+      {
+        "name": "Quarter",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Quarter"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Month"
+      },
+      {
+        "name": "Day Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Day Name"
+      },
+      {
+        "name": "Day-Date",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Time.Day-Date"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time",
+        "sourceLogicalTable": "logicalTable:Y10 - Movie Demo (ORCL).Time",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Time.Total"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Time.Year",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Time.Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Time.Quarter",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Time.Quarter"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Time.Month",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Time.Month"
+          },
+          {
+            "name": "Day-Date",
+            "sourceLogicalLevel": "logicalLevel:Y10 - Movie Demo (ORCL).Time.Day-Date",
+            "displayColumn": "presentationColumn:Y10 - Movies Demo.Time.Day-Date"
+          }
+        ]
+      }
+    ]
+  }
+}

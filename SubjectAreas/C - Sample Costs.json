@@ -1,0 +1,27 @@
+{
+  "subjectArea": {
+    "name": "C - Sample Costs",
+    "sourceBusinessModel": "businessModel:01 - Sample App",
+    "description": "Extra Subject Area from sale Sample Sales Logical Model",
+    "tableOrder": [
+      {
+        "name": "presentationTable:C - Sample Costs.Time"
+      },
+      {
+        "name": "presentationTable:C - Sample Costs.Products"
+      },
+      {
+        "name": "presentationTable:C - Sample Costs.Offices"
+      },
+      {
+        "name": "presentationTable:C - Sample Costs.Base Facts"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

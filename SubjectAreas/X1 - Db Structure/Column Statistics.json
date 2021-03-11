@@ -1,0 +1,120 @@
+{
+  "presentationTable": {
+    "name": "Column Statistics",
+    "alternateNames": [
+      "GET_DBMS_STAT"
+    ],
+    "presentationColumns": [ {
+        "name": "Column",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Column"
+      },
+      {
+        "name": "Schema",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Schema"
+      },
+      {
+        "name": "Table",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Table"
+      },
+      {
+        "name": "Bottom 5 values",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Bottom 5 values",
+        "alternateNames": [
+          "BOTTOM_5_VALUES"
+        ]
+      },
+      {
+        "name": "Count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Count"
+      },
+      {
+        "name": "Extreme values",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Extreme values",
+        "alternateNames": [
+          "EXTREME_VALUES"
+        ]
+      },
+      {
+        "name": "Extreme values count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Extreme values count",
+        "alternateNames": [
+          "EXTREME_VALUES_COUNT"
+        ]
+      },
+      {
+        "name": "Max",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Max"
+      },
+      {
+        "name": "Mean",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Mean"
+      },
+      {
+        "name": "Median",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Median"
+      },
+      {
+        "name": "Min",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Min"
+      },
+      {
+        "name": "Mode1",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Mode1"
+      },
+      {
+        "name": "Mode count",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Mode count",
+        "alternateNames": [
+          "MODE_COUNT"
+        ]
+      },
+      {
+        "name": "Quantile 25",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Quantile 25",
+        "alternateNames": [
+          "QUANTILE_25"
+        ]
+      },
+      {
+        "name": "Quantile 5",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Quantile 5",
+        "alternateNames": [
+          "QUANTILE_5"
+        ]
+      },
+      {
+        "name": "Quantile 75",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Quantile 75",
+        "alternateNames": [
+          "QUANTILE_75"
+        ]
+      },
+      {
+        "name": "Quantile 95",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Quantile 95",
+        "alternateNames": [
+          "QUANTILE_95"
+        ]
+      },
+      {
+        "name": "Range",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Range"
+      },
+      {
+        "name": "Stddev",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Stddev"
+      },
+      {
+        "name": "Top 5 values",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Top 5 values",
+        "alternateNames": [
+          "TOP_5_VALUES"
+        ]
+      },
+      {
+        "name": "Variance",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.GET_DBMS_STAT.Variance"
+      }
+    ]
+  }
+}

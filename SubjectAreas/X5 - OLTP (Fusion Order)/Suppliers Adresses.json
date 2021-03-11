@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Suppliers Adresses",
+    "presentationColumns": [ {
+        "name": "Supplier Address1",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Address1"
+      },
+      {
+        "name": "Supplier Address2",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Address2"
+      },
+      {
+        "name": "Supplier City",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier City"
+      },
+      {
+        "name": "Supplier Country Id",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Country Id"
+      },
+      {
+        "name": "Supplier Latitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Latitude"
+      },
+      {
+        "name": "Supplier Longitude",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Longitude"
+      },
+      {
+        "name": "Supplier Postal Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Postal Code"
+      },
+      {
+        "name": "Supplier State Province",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier State Province"
+      }
+    ]
+  }
+}

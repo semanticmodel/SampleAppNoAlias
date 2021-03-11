@@ -1,0 +1,27 @@
+{
+  "physicalTable": {
+    "name": "SA_19_DGro00039CE0",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "Distance_G00039B9F",
+        "dataType": "VARCHAR",
+        "length": 250
+      },
+      {
+        "name": "DGroup__00039CE0SK",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "ALL_AW_LEVEL_KEY",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

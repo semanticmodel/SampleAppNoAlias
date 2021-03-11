@@ -1,0 +1,26 @@
+{
+  "presentationTable": {
+    "name": "More Product Objects",
+    "description": "This folder contains additional Product attributes like Product Sequence, Color, Type and so on.",
+    "presentationColumns": [ {
+        "name": "P0  Product Number",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P0  Product Number",
+        "description": "Help : \r\nStores the product number."
+      },
+      {
+        "name": "P2k  Product Type Key",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P2k  Product Type Key",
+        "description": "Help : \r\nStores the product's LOB description."
+      },
+      {
+        "name": "P3k  LOB Key",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P3k  LOB Key",
+        "description": "Help : \r\nStores the product's LOB description."
+      },
+      {
+        "name": "P4k  Brand Key",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D1 Products.P4k  Brand Key"
+      }
+    ]
+  }
+}

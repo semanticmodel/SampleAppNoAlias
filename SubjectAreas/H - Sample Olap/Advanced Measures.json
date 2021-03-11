@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "Advanced Measures",
+    "presentationColumns": [ {
+        "name": "Net Revenue % Yearly Target",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue % Yearly Target"
+      },
+      {
+        "name": "Net Revenue Target Remaining",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Target Remaining"
+      },
+      {
+        "name": "Net Revenue Yearly Target (5% Growth)",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Yearly Target (5% Growth)"
+      },
+      {
+        "name": "Product Alert (10% Drop)",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Product Alert (10% Drop)"
+      }
+    ]
+  }
+}

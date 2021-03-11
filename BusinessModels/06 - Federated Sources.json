@@ -1,0 +1,36 @@
+{
+  "businessModel": {
+    "name": "06 - Federated Sources",
+    "description": "This business model requires the Sample Essbase Source to be active. It is disabled by default and should only be enabled once the Essbase Add on for Sample App is installed",
+    "joins": [      {
+        "name": "1 - Sample App#2:1 - Sample App#1:Relationship_2004:6111210742953#1",
+        "leftTable": "logicalTable:06 - Federated Sources.D0 Time",
+        "rightTable": "logicalTable:06 - Federated Sources.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#2:Relationship_2004:318001267628943",
+        "leftTable": "logicalTable:06 - Federated Sources.D3 Offices",
+        "rightTable": "logicalTable:06 - Federated Sources.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "1 - Sample App#2:1 - Sample App#1:Relationship_2004:6141210742953#1",
+        "leftTable": "logicalTable:06 - Federated Sources.D1 Products",
+        "rightTable": "logicalTable:06 - Federated Sources.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY",
+        "drivingTable": "logicalTable:06 - Federated Sources.D1 Products"
+      },
+      {
+        "name": "1 - Sample App#2:1 - Sample App#1:Relationship_2004:6051210742953#1",
+        "leftTable": "logicalTable:06 - Federated Sources.D6 Customers",
+        "rightTable": "logicalTable:06 - Federated Sources.F0 Revenue Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

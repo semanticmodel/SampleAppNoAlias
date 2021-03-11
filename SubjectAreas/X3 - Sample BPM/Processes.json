@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Processes",
+    "presentationColumns": [ {
+        "name": "Label",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Label"
+      },
+      {
+        "name": "Process Id",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Process Id"
+      },
+      {
+        "name": "Process Name",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Process Name"
+      },
+      {
+        "name": "Process Type",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Process Type"
+      },
+      {
+        "name": "Revision",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Revision"
+      },
+      {
+        "name": "SCA Label",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.SCA Label"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Status"
+      },
+      {
+        "name": "Undeploy Date",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).2 Dim Processes.Undeploy Date"
+      }
+    ]
+  }
+}

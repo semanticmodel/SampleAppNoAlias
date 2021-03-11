@@ -1,0 +1,53 @@
+{
+  "logicalTable": {
+    "name": "RandomRedDots",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "RANDOMREDDOTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.RANDOMREDDOTS.ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Image",
+        "dataType": "LONGVARBINARY",
+        "sortBy": "Id",
+        "descriptorColumn": "Id",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "RANDOMREDDOTS",
+              "physicalExpression": {
+                "expressionTemplate": "lookup(%1,%2)",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.RANDOMREDDOTS.IMAGE",
+                  "physicalColumn:07 - ORE Sample.RANDOMREDDOTS.ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "RANDOMREDDOTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.RANDOMREDDOTS"
+          ]
+        }
+      }
+    ]
+  }
+}

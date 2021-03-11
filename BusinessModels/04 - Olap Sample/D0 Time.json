@@ -1,0 +1,492 @@
+{
+  "logicalTable": {
+    "name": "D0 Time",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "T02 Per Name Month",
+        "dataType": "VARCHAR",
+        "sortBy": "Month - End Date",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Month - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "dataType": "VARCHAR",
+        "sortBy": "Quarter - End Date",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T04 Per Name Half",
+        "dataType": "VARCHAR",
+        "sortBy": "Half Year - End Date",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "T05 Per Name Year",
+        "dataType": "VARCHAR",
+        "sortBy": "Year - End Date",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Years",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.All Years"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Years - End Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.All Years - End Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Years - Desc",
+        "dataType": "VARCHAR",
+        "sortBy": "All Years - End Date",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.All Years - Long Description"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "All Years - Time Span",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.All Years - Time Span"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Half Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Half Year - End Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year - End Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Half Year - Prior Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year - Prior Fiscal Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Half Year - Time Span",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Half Year - Time Span"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter - End Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter - End Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter - Prior Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter - Prior Fiscal Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter - Time Span",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Quarter - Time Span"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year - End Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year - End Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year - Prior Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year - Prior Fiscal Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year - Time Span",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Fiscal Year - Time Span"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Month"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month - End Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Month - End Date"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month - Prior Year",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Month - Prior Fiscal Year"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month - Time Span",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Fiscal Hierarchy",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time.Month - Time Span"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Fiscal Hierarchy",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Time"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:04 - Olap Sample.H0 Time.Month"
+        ]
+      }
+    ],
+    "hierarchyType": "TIME",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "All Years",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:All Years - Desc"
+          ],
+          "displayColumn": "logicalColumn:All Years - Desc"
+        },
+        {
+          "name": "Fiscal Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ]
+        },
+        {
+          "name": "Fiscal Half Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:T04 Per Name Half"
+          ],
+          "displayColumn": "logicalColumn:T04 Per Name Half"
+        },
+        {
+          "name": "Fiscal Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:T03 Per Name Qtr"
+          ],
+          "displayColumn": "logicalColumn:T03 Per Name Qtr"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Month"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H0 Time [branch at level 'Fiscal Quarter']",
+          "levels": [ "Total", "All Years", "Fiscal Year", "Fiscal Half Year", "Fiscal Quarter", "Month" ]
+        }
+      ]
+    }
+  }
+}

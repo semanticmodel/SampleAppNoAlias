@@ -1,0 +1,84 @@
+{
+  "presentationTable": {
+    "name": "Flight Facts",
+    "alternateNames": [
+      "F",
+      "F1",
+      "Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Flights",
+        "alternateNames": [
+          "Flights"
+        ]
+      },
+      {
+        "name": "# of Scheduled Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Scheduled Flights"
+      },
+      {
+        "name": "# of Cancelled Flights",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Cancelled Flights",
+        "description": "Number of cancelled flights"
+      },
+      {
+        "name": "% Cancel Ratio",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.% Cancel Ratio",
+        "description": "Percent of Flights that are cancelled",
+        "alternateNames": [
+          "Cancel % Ratio"
+        ]
+      },
+      {
+        "name": "Distance (Miles)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Distance (Miles)"
+      },
+      {
+        "name": "Avg Distance (Miles)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Avg Distance (Miles)"
+      },
+      {
+        "name": "Air Time (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Air Time (Min)"
+      },
+      {
+        "name": "Avg Air Time (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Avg Air Time (Min)"
+      },
+      {
+        "name": "Actual Elapsed Time (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Actual Elapsed Time (Min)"
+      },
+      {
+        "name": "Crs Elapsed Time (Min)",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.Crs Elapsed Time (Min)",
+        "alternateNames": [
+          "Crs Elapsed Time (Min) !"
+        ]
+      },
+      {
+        "name": "# of Airports !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Airports !",
+        "alternateNames": [
+          "# of Airports"
+        ]
+      },
+      {
+        "name": "# of Aircrafts",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Aircrafts",
+        "alternateNames": [
+          "# of Aircrafts !"
+        ]
+      },
+      {
+        "name": "# of Carrier Flight Numbers",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Carrier Flight Numbers"
+      },
+      {
+        "name": "# of Pilots !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Pilots !"
+      }
+    ]
+  }
+}

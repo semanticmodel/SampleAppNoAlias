@@ -1,0 +1,72 @@
+{
+  "physicalTable": {
+    "name": "PROJ_SCHOOL",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SCHOOL_ZIP",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "SCHOOL_STATE",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SCHOOL_COUNTY",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SCHOOL_LATITUDE",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "SCHOOL_LONGITUDE",
+        "dataType": "DOUBLE",
+        "length": 22,
+        "nullable": true
+      },
+      {
+        "name": "SCHOOL_METRO",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SCHOOL_CHARTER",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "SCHOOL_DISTRICT",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SCHOOLID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SCHOOL_NLNS",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "SCHOOL_NCESID",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "SCHOOL_CITY",
+        "dataType": "VARCHAR",
+        "length": 100
+      }
+    ]
+  }
+}

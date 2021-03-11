@@ -1,0 +1,93 @@
+{
+  "presentationTable": {
+    "name": "Dashboards",
+    "alternateNames": [
+      "Dashboard",
+      "Dashboards Attributes"
+    ],
+    "presentationColumns": [ {
+        "name": "Dashboard Page URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Page URL",
+        "alternateNames": [
+          "Dashboard Page Link"
+        ]
+      },
+      {
+        "name": "Dashboard Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Name"
+      },
+      {
+        "name": "Dashboard Style",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Style"
+      },
+      {
+        "name": "Dashboard Folder",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Folder"
+      },
+      {
+        "name": "Dashboard Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Path"
+      },
+      {
+        "name": "Dashboard Page Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Page Name"
+      },
+      {
+        "name": "Dashboard Page Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Page Path"
+      },
+      {
+        "name": "Dashboard Analysis Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Analysis Name",
+        "alternateNames": [
+          "Analysis Name"
+        ]
+      },
+      {
+        "name": "Dashboard Analysis Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Analysis Path",
+        "alternateNames": [
+          "Analysis Path"
+        ]
+      },
+      {
+        "name": "Dashboard Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard Catalog URL",
+        "alternateNames": [
+          "Dashboard Catalog Link",
+          "Dashboard Folder Link"
+        ]
+      },
+      {
+        "name": "Dashboard URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Dashboard URL"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Dashboard Hierarchy",
+        "alternateNames": [
+          "Dashbo",
+          "Dashboar",
+          "WS All Objects Dim"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WS Objects Attributes",
+        "levels": [ {
+            "name": "Root Folder",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Root Folder",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Dashboards.Dashboard Folder"
+          },
+          {
+            "name": "Dashboard",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Dashboard",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Dashboards.Dashboard URL"
+          },
+          {
+            "name": "Page",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Page",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Dashboards.Dashboard Page URL"
+          }
+        ]
+      }
+    ]
+  }
+}

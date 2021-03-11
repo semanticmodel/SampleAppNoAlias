@@ -1,0 +1,136 @@
+{
+  "presentationTable": {
+    "name": "Simple Calculations",
+    "localization": {
+      "localizationKey": "Simple Calculations",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations)"
+    },
+    "description": "This folder contains simple calculations where each metric is defined as a division of two base facts. Eg:- Unit Price, Avg Order Size and so on\r\n",
+    "alternateNames": [
+      "Calcs"
+    ],
+    "presentationColumns": [ {
+        "name": "17  Net Costs",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.17  Net Costs",
+        "alternateNames": [
+          "12  Total Costs",
+          "17 - Net Costs",
+          "Cost"
+        ]
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "localization": {
+          "localizationKey": "20  Actual Unit Price",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_20__Actual_Unit_Price)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.20  Actual Unit Price",
+        "description": "Help :\r\nUnit Price is computed as Revenue divided by Billed Quantity",
+        "alternateNames": [
+          "UnitPrice"
+        ]
+      },
+      {
+        "name": "22  Discount Rate",
+        "localization": {
+          "localizationKey": "22  Discount Rate",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_22__Discount_Rate)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.22  Discount Rate",
+        "alternateNames": [
+          "Discount Rt"
+        ]
+      },
+      {
+        "name": "23  Avg # of Orders by Customer",
+        "localization": {
+          "localizationKey": "23  Avg # of Orders by Customer",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_23__Avg_#_of_Orders_by_Customer)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.23  Avg # of Orders by Customer",
+        "description": "Help :\r\n# of Orders by Customer is computed as Number of Distinct Orders divided by Number of Distinct Customers in the fact table."
+      },
+      {
+        "name": "24  Avg # of Orders by Sales Rep",
+        "localization": {
+          "localizationKey": "24  Avg # of Orders by Sales Rep",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_24__Avg_#_of_Orders_by_Sales_Rep)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.24  Avg # of Orders by Sales Rep",
+        "description": "Help :\r\n# of Orders by Employee is computed as Number of Distinct Orders divided by Number of Distinct Employees in the fact table."
+      },
+      {
+        "name": "25  Avg Order Size",
+        "localization": {
+          "localizationKey": "25  Avg Order Size",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_25__Avg_Order_Size)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.25  Avg Order Size",
+        "description": "Help :\r\nAverage Order Size is computed as Revenue divided by Number of Distinct Orders in the fact table.",
+        "alternateNames": [
+          "OrderSize"
+        ]
+      },
+      {
+        "name": "27  Avg Monthly Revenue",
+        "localization": {
+          "localizationKey": "27  Avg Monthly Revenue",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_27__Avg_Monthly_Revenue)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.27  Avg Monthly Revenue"
+      },
+      {
+        "name": "28  # of Customers by Sales Rep",
+        "localization": {
+          "localizationKey": "28  # of Customers by Sales Rep",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_28__#_of_Customers_by_Sales_Rep)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.28  # of Customers by Sales Rep"
+      },
+      {
+        "name": "29  Collect to Bill Ratio",
+        "localization": {
+          "localizationKey": "29  Collect to Bill Ratio",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_29__Collect_to_Bill_Ratio)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.29  Collect to Bill Ratio",
+        "description": "Help :\r\nCollect to Bill Ratio is computed as Paid Amount divided by Revenue."
+      },
+      {
+        "name": "43  Backlog Variation (Value)",
+        "localization": {
+          "localizationKey": "43  Backlog Variation (Value)",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_43__Backlog_Variation_(Value))"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.43  Backlog Variation (Value)"
+      },
+      {
+        "name": "44  Early Shipped Value",
+        "localization": {
+          "localizationKey": "44  Early Shipped Value",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_44__Early_Shipped_Value)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.44  Early Shipped Value"
+      },
+      {
+        "name": "45  Early Shipped Pct",
+        "localization": {
+          "localizationKey": "45  Early Shipped Pct",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_45__Early_Shipped_Pct)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.45  Early Shipped Pct"
+      },
+      {
+        "name": "46  Avg Order Process Time",
+        "localization": {
+          "localizationKey": "46  Avg Order Process Time",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Simple_Calculations_46__Avg_Order_Process_Time)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.F6 Logical Calculations Examples.46  Avg Order Process Time",
+        "alternateNames": [
+          "OrderProcessTime"
+        ]
+      }
+    ]
+  }
+}

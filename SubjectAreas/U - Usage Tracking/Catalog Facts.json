@@ -1,0 +1,28 @@
+{
+  "presentationTable": {
+    "name": "Catalog Facts",
+    "alternateNames": [
+      "Catalog Measures",
+      "WS Measures"
+    ],
+    "presentationColumns": [ {
+        "name": "Objects Count",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Measures.Objects Count",
+        "alternateNames": [
+          "Object Count"
+        ]
+      },
+      {
+        "name": "Analysis Counts",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Measures.Analysis Counts"
+      },
+      {
+        "name": "Dashboard Pages Counts",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Measures.Dashboard Pages Counts",
+        "alternateNames": [
+          "Dashboards Counts"
+        ]
+      }
+    ]
+  }
+}

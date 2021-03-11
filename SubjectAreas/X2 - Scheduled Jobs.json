@@ -1,0 +1,21 @@
+{
+  "subjectArea": {
+    "name": "X2 - Scheduled Jobs",
+    "sourceBusinessModel": "businessModel:X2 - Scheduled Jobs",
+    "description": "OBIEE Scheduler Job Status Monitoring Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X2 - Scheduled Jobs.Instance"
+      },
+      {
+        "name": "presentationTable:X2 - Scheduled Jobs.Job"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

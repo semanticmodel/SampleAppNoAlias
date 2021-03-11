@@ -1,0 +1,50 @@
+{
+  "presentationTable": {
+    "name": "Base Facts",
+    "presentationColumns": [ {
+        "name": "1- Revenue",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.1- Revenue"
+      },
+      {
+        "name": "2- Billed Quantity",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.2- Billed Quantity"
+      },
+      {
+        "name": "3- Discount Amount",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.3- Discount Amount"
+      },
+      {
+        "name": "10 - Variable Costs",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.10 - Variable Costs"
+      },
+      {
+        "name": "11 - Fixed Costs",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.11 - Fixed Costs"
+      },
+      {
+        "name": "16 - Net Revenue",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.16 - Net Revenue"
+      },
+      {
+        "name": "15 - Gross Margin",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.15 - Gross Margin"
+      },
+      {
+        "name": "17 - Net Costs",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.17 - Net Costs"
+      },
+      {
+        "name": "31  # of Orders  (Cnt Distinct)",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.31  # of Orders  (Cnt Distinct)"
+      },
+      {
+        "name": "Gross Margin %",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin %"
+      },
+      {
+        "name": "20  Actual Unit Price",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.20  Actual Unit Price"
+      }
+    ]
+  }
+}

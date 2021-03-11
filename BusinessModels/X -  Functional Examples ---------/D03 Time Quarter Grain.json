@@ -1,0 +1,33 @@
+{
+  "logicalTable": {
+    "name": "D03 Time Quarter Grain",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "QTR_KEY",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D03 Time Quarter Grain",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain.QTR_KEY"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D03 Time Quarter Grain",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D03 Time Quarter Grain"
+          ]
+        }
+      }
+    ]
+  }
+}

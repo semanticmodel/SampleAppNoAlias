@@ -1,0 +1,20 @@
+{
+  "physicalTable": {
+    "name": "BBIL_END_CUST",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "ENDCUST_ID",
+        "dataType": "DOUBLE",
+        "length": 10
+      },
+      {
+        "name": "ENDCUSTNAME",
+        "dataType": "VARCHAR",
+        "length": 160
+      }
+    ]
+  }
+}

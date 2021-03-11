@@ -1,0 +1,49 @@
+{
+  "physicalTable": {
+    "name": "S_NQ_SUMMARY_ADVISOR",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "LOGICAL_QUERY_ID",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "VERSION",
+        "dataType": "CHAR",
+        "length": 32,
+        "nullable": true
+      },
+      {
+        "name": "LOGICALFACTTABLEID",
+        "dataType": "CHAR",
+        "length": 255,
+        "nullable": true
+      },
+      {
+        "name": "LOGICALTABLESOURCEIDVECTOR",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "QUERYLEVELIDVECTOR",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PROCESSINGTIMEINMILLISEC",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "SOURCECELLLEVELIDVECTOR",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "QUERYSTATUS",
+        "dataType": "DOUBLE",
+        "nullable": true
+      }
+    ]
+  }
+}

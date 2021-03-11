@@ -1,0 +1,61 @@
+{
+  "physicalTable": {
+    "name": "DBA_FILE_GROUPS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "KEEP_FILES",
+        "dataType": "VARCHAR",
+        "length": 1,
+        "nullable": true
+      },
+      {
+        "name": "CREATED",
+        "dataType": "TIMESTAMP",
+        "nullable": true
+      },
+      {
+        "name": "MIN_VERSIONS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "RETENTION_DAYS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FILE_GROUP_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "DEFAULT_DIRECTORY",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "MAX_VERSIONS",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "FILE_GROUP_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

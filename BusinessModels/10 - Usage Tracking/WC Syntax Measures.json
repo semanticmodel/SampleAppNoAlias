@@ -1,0 +1,114 @@
+{
+  "logicalTable": {
+    "name": "WC Syntax Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Is Error",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_LSQL_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "CASE WHEN %1='OK' THEN 'No' ELSE 'Yes' END \r\n",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.ERROR_MSG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Error Msg",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_LSQL_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.ERROR_MSG"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analyses Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_LSQL_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.REPORT_PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bad Syntax Analysis",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WC_LSQL_Facts",
+              "physicalExpression": {
+                "expressionTemplate": "case when  %1 ='OK' then 0 else 1 end ",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts.ERROR_MSG"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Good Syntax Analyses",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 -%2 ",
+            "expressionObjects": [
+              "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Analyses Count",
+              "logicalColumn:10 - Usage Tracking.WC Syntax Measures.Bad Syntax Analysis"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WC_LSQL_Facts",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WC_LSQL_Facts"
+          ]
+        }
+      }
+    ]
+  }
+}

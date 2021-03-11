@@ -1,0 +1,139 @@
+{
+  "businessModel": {
+    "name": "X6 - Warranty Claims",
+    "joins": [      {
+        "name": "X6 - Warranty:Relationship_2004:2649901375717946",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim Comments",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2593241368471738",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Dealer - Dimension",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2668441378295562",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Supplier - Dimension",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2665801376980721",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Dummy",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Classification",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2671361378306668",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Complaint Classes",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2668371378295534",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim Comments",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2669981378297690",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claims - Dim",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2668341378295525",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2593271368471738",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Supplier - Dimension",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2670011378297695",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claims - Dim",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2671391378306681",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Complaint Classes",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2668501378295571",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Dealer - Dimension",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2657851375792653",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claims Stat",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Vehicle - Dimension",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2668411378295558",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Vehicle - Dimension",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2593301368471738",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Vehicle - Dimension",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2668471378295568",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Part Commodity - Xref",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens Facts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2593491368471738",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Part Commodity - Xref",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Commodity Hierarchy - Xref",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "X6 - Warranty:Relationship_2004:2593521368471738",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Part Commodity - Xref",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Relationship_2004:2668151378294982",
+        "leftTable": "logicalTable:X6 - Warranty Claims.Complaint Tokens",
+        "rightTable": "logicalTable:X6 - Warranty Claims.Claim - Fact",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

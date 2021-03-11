@@ -1,0 +1,108 @@
+{
+  "logicalTable": {
+    "name": "Movie Genre",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Genre ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Genre (Activity Level)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Activity Level).GENRE_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Genre (Movie Level - M:M)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Movie Level - M:M).GENRE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Genre Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Genre (Activity Level)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Activity Level).NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "Genre (Movie Level - M:M)",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Movie Level - M:M).NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Genre (Activity Level)",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Activity Level)"
+          ]
+        }
+      },
+      {
+        "name": "Genre (Movie Level - M:M)",
+        "tableMapping": {
+          "allowUnmappedTables": true,
+          "tables": [
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.MOVIE_GENRE",
+            "physicalTable:Y10 - Movies Demo (ORCL).MOVIEDEMO.Genre (Movie Level - M:M)"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:Y10 - Movies Demo (ORCL).MOVIE_GENRE_Foreign Key"
+            }
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Genre",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Genre ID"
+          ],
+          "displayColumn": "logicalColumn:Genre ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Movie Genre",
+          "levels": [ "Total", "Genre" ]
+        }
+      ]
+    }
+  }
+}

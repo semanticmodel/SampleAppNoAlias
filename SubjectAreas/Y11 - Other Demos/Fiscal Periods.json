@@ -1,0 +1,41 @@
+{
+  "presentationTable": {
+    "name": "Fiscal Periods",
+    "alternateNames": [
+      "Bbil Fiscal Periods"
+    ],
+    "presentationColumns": [ {
+        "name": "Date Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Date Id"
+      },
+      {
+        "name": "Fiscal Month",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Fiscal Month"
+      },
+      {
+        "name": "Fiscal Qtr",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Fiscal Qtr"
+      },
+      {
+        "name": "Fiscal We Date",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Fiscal We Date"
+      },
+      {
+        "name": "Fiscal Week Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Fiscal Week Number"
+      },
+      {
+        "name": "Fiscal Year",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Fiscal Year"
+      },
+      {
+        "name": "Plot Qtr",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Plot Qtr"
+      },
+      {
+        "name": "Transaction Date",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fiscal Periods.Transaction Date"
+      }
+    ]
+  }
+}

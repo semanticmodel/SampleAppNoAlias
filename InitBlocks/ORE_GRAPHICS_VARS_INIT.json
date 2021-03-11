@@ -1,0 +1,30 @@
+{
+  "initBlock": {
+    "name": "ORE_GRAPHICS_VARS_INIT",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 'cursor(select 10 n from dual)', 'NULL','RandomRedDots' from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "ORE_PARAM1",
+        "value": "'cursor(select 10 n from dual)'"
+      },
+      {
+        "name": "ORE_PARAM2",
+        "value": "'NULL'"
+      },
+      {
+        "name": "ORE_SCRIPTNAME",
+        "value": "'RandomRedDots'"
+      }
+    ]
+  }
+}

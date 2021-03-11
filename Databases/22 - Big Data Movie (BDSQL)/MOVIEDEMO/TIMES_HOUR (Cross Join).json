@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "TIMES_HOUR (Cross Join)",
+    "sourceTable": "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.TIMES_HOURS",
+    "caching": {
+      "enable": true
+    }
+  }
+}

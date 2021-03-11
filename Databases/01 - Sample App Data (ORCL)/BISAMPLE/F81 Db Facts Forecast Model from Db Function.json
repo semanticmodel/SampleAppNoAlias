@@ -1,0 +1,10 @@
+{
+  "physicalTableAlias": {
+    "name": "F81 Db Facts Forecast Model from Db Function",
+    "description": "Time dimension Alias: This alias is specifically used for the Rolling month metrics.",
+    "sourceTable": "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.SAMP_DB_MODEL_FORECAST",
+    "caching": {
+      "enable": true
+    }
+  }
+}

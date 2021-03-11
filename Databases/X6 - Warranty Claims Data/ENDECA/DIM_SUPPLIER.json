@@ -1,0 +1,36 @@
+{
+  "physicalTable": {
+    "name": "DIM_SUPPLIER",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SUPPLIER_STATE_PROVINCE",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SUPPLIER_LOCATION",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SUPPLIER_NAME",
+        "dataType": "VARCHAR",
+        "length": 50
+      },
+      {
+        "name": "SUPPLIER_ULTIMATENAME",
+        "dataType": "VARCHAR",
+        "length": 75,
+        "nullable": true
+      },
+      {
+        "name": "SUPPLIER_COUNTRY",
+        "dataType": "VARCHAR",
+        "length": 50
+      }
+    ]
+  }
+}

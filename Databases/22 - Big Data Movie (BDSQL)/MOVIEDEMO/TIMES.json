@@ -1,0 +1,120 @@
+{
+  "physicalTable": {
+    "name": "TIMES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DAYS_IN_YEAR",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "END_OF_YEAR",
+        "dataType": "DATETIME",
+        "length": 22
+      },
+      {
+        "name": "END_OF_QUARTER",
+        "dataType": "DATETIME",
+        "length": 22
+      },
+      {
+        "name": "DAYS_IN_MONTH",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "END_OF_MONTH",
+        "dataType": "DATETIME",
+        "length": 22
+      },
+      {
+        "name": "MONTH_DESC",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "MONTH_NAME",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "DATEID",
+        "dataType": "INT"
+      },
+      {
+        "name": "WEEK",
+        "dataType": "VARCHAR",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DAYS_IN_DAY",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "DAY_NUMBER_IN_WEEK",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "QUARTER_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "MONTH_ID",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "MONTH_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TIME_ID",
+        "dataType": "DATE",
+        "nullable": true
+      },
+      {
+        "name": "DAY_NAME",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "YEAR_ID",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "QUARTER_ID",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DAYS_IN_QUARTER",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "QUARTER_DESC",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "DAY_NUMBER_IN_MONTH",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "YEAR_DESC",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

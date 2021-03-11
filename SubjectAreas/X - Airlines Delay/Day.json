@@ -1,0 +1,43 @@
+{
+  "presentationTable": {
+    "name": "Day",
+    "description": "->",
+    "alternateNames": [
+      "More Date Objects"
+    ],
+    "presentationColumns": [ {
+        "name": "Day of Year !",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.01 Time Day Attributes.Day of Year !",
+        "alternateNames": [
+          "Day of Year"
+        ]
+      },
+      {
+        "name": "Day of Month",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.01 Time Day Attributes.Day of Month"
+      },
+      {
+        "name": "Day of Week",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.02 Time Week Attributes.Day of Week"
+      },
+      {
+        "name": "Day Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.02 Time Week Attributes.Day Name"
+      },
+      {
+        "name": "Qtr of Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Qtr of Year",
+        "alternateNames": [
+          "Cal Qtr"
+        ]
+      },
+      {
+        "name": "Month of Year",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.00 Time.Month of Year",
+        "alternateNames": [
+          "Cal Month"
+        ]
+      }
+    ]
+  }
+}

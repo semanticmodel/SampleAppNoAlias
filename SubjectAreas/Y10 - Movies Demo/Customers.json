@@ -1,0 +1,122 @@
+{
+  "presentationTable": {
+    "name": "Customers",
+    "presentationColumns": [ {
+        "name": "Cust Id",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Cust Id"
+      },
+      {
+        "name": "First Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.First Name"
+      },
+      {
+        "name": "Last Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Last Name"
+      },
+      {
+        "name": "Age",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Age"
+      },
+      {
+        "name": "Comments",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Comments"
+      },
+      {
+        "name": "Commute Distance",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Commute Distance"
+      },
+      {
+        "name": "Credit Balance",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Credit Balance"
+      },
+      {
+        "name": "Education",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Education"
+      },
+      {
+        "name": "Email",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Email"
+      },
+      {
+        "name": "Full Time",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Full Time"
+      },
+      {
+        "name": "Gender",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Gender"
+      },
+      {
+        "name": "Household Size",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Household Size"
+      },
+      {
+        "name": "Income",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Income"
+      },
+      {
+        "name": "Income Level",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Income Level"
+      },
+      {
+        "name": "Insuff Funds Incidents",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Insuff Funds Incidents"
+      },
+      {
+        "name": "Job Type",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Job Type"
+      },
+      {
+        "name": "Late Mort Rent Pmts",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Late Mort Rent Pmts"
+      },
+      {
+        "name": "Marital Status",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Marital Status"
+      },
+      {
+        "name": "Mortgage Amt",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Mortgage Amt"
+      },
+      {
+        "name": "Num Cars",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Num Cars"
+      },
+      {
+        "name": "Num Mortgages",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Num Mortgages"
+      },
+      {
+        "name": "Pet",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Pet"
+      },
+      {
+        "name": "Postal Code",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Postal Code"
+      },
+      {
+        "name": "Promotion Response",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Promotion Response"
+      },
+      {
+        "name": "Rent Own",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Rent Own"
+      },
+      {
+        "name": "Work Experience",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Work Experience"
+      },
+      {
+        "name": "Yrs Current Employer",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Yrs Current Employer"
+      },
+      {
+        "name": "Yrs Cust.",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Yrs Cust\\."
+      },
+      {
+        "name": "Yrs Residence",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customers.Yrs Residence"
+      }
+    ]
+  }
+}

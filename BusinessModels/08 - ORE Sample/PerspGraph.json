@@ -1,0 +1,52 @@
+{
+  "logicalTable": {
+    "name": "PerspGraph",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSPGRAPH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.PERSPGRAPH.id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "image",
+        "dataType": "LONGVARBINARY",
+        "sortBy": "id",
+        "descriptorColumn": "id",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERSPGRAPH",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:07 - ORE Sample.PERSPGRAPH.image"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PERSPGRAPH",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:07 - ORE Sample.PERSPGRAPH"
+          ]
+        }
+      }
+    ]
+  }
+}

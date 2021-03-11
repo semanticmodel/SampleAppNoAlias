@@ -1,0 +1,127 @@
+{
+  "physicalTable": {
+    "name": "GET_DBMS_STAT",
+    "sourceType": "SELECT",
+    "caching": {
+      "enable": true
+    },
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT T1.*, 'valueof(NQ_SESSION.DB_COL_STATS_SCHEMA)' S_SCHEMA, 'valueof(NQ_SESSION.DB_COL_STATS_TABLE)' S_TABLE,'valueof(NQ_SESSION.DB_COL_STATS_COLUMN)' S_COLUMN  FROM \r\nTABLE(SYS.GET_DBMS_STAT('valueof(NQ_SESSION.DB_COL_STATS_SCHEMA)' ,'valueof(NQ_SESSION.DB_COL_STATS_TABLE)','valueof(NQ_SESSION.DB_COL_STATS_COLUMN)',3)) T1\r\n\r\n"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "MEDIAN",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "TOP_5_VALUES",
+        "dataType": "LONGVARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "VARIANCE",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "MIN",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "MEAN",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "MODE1",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "QUANTILE_5",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "COUNT",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "QUANTILE_75",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "S_TABLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "MAX",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "S_COLUMN",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "RANGE",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "MODE_COUNT",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "S_SCHEMA",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "EXTREME_VALUES_COUNT",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "STDDEV",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "EXTREME_VALUES",
+        "dataType": "LONGVARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "QUANTILE_25",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "QUANTILE_95",
+        "dataType": "DOUBLE",
+        "nullable": true
+      },
+      {
+        "name": "BOTTOM_5_VALUES",
+        "dataType": "LONGVARCHAR",
+        "length": 4000,
+        "nullable": true
+      }
+    ]
+  }
+}

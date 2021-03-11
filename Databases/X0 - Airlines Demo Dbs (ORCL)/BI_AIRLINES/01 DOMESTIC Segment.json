@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "01 DOMESTIC Segment",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.DOMESTIC_SEGMENT",
+    "caching": {
+      "enable": true
+    }
+  }
+}

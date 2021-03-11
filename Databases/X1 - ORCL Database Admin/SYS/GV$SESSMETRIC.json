@@ -1,0 +1,75 @@
+{
+  "physicalTable": {
+    "name": "GV$SESSMETRIC",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "CPU",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOGICAL_READ_PCT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HARD_PARSES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SESSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READ_PCT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SOFT_PARSES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SERIAL_NUM",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PGA_MEMORY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_READS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOGICAL_READS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INTSIZE_CSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

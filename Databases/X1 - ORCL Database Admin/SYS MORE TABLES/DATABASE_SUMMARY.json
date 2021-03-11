@@ -1,0 +1,30 @@
+{
+  "physicalTable": {
+    "name": "DATABASE_SUMMARY",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "HOST_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "DB_CHARACTERSET",
+        "dataType": "VARCHAR",
+        "length": 40
+      }
+    ]
+  }
+}

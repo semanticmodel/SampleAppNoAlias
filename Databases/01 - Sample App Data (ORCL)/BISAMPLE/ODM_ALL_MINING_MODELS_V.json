@@ -1,0 +1,52 @@
+{
+  "physicalTable": {
+    "name": "ODM_ALL_MINING_MODELS_V",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "MODEL_SIZE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "BUILD_DURATION",
+        "dataType": "DOUBLE"
+      },
+      {
+        "name": "MINING_FUNCTION",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "COMMENTS",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "MODEL_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "ALGORITHM",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

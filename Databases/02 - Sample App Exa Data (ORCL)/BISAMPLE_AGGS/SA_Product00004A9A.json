@@ -1,0 +1,102 @@
+{
+  "physicalTable": {
+    "name": "SA_Product00004A9A",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "physicalColumns": [ {
+        "name": "P13_LOB_00003A8E",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P4k_Brand00003CE3",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P2k_Produ00003CE4",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P7_Produc00003E5B",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P4_Brand00003EB6",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P3k_LOB_K00004015",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P14_Brand000041B5",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P12_Produ000041EB",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P6_Attrib000044A7",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "P2_Produc00004505",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P0_Produc0000459A",
+        "dataType": "INT",
+        "nullable": true
+      },
+      {
+        "name": "P3_LOB00004630",
+        "dataType": "VARCHAR",
+        "length": 25,
+        "nullable": true
+      },
+      {
+        "name": "P10_Produ0000471F",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "P1_Produc0000477D",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "P5_Attrib0000497F",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "Product_00004A9ASK",
+        "dataType": "INT",
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "physicalTable": {
+    "name": "ALL_SUMMARY_AGGREGATES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "POSITION_IN_SELECT",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "DISTINCTFLAG",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SUMMARY_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "AGG_FUNCTION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "MEASURE",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "CONTAINER_COLUMN",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

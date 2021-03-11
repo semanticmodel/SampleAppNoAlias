@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Facts (Spark)",
+    "presentationColumns": [ {
+        "name": "Price",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Price"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Recommended"
+      },
+      {
+        "name": "Rating",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Rating"
+      },
+      {
+        "name": "Recommended Flag",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Recommended Flag"
+      },
+      {
+        "name": "Count of Activities",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Count of Activities"
+      },
+      {
+        "name": "Count of Customers",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Count of Customers"
+      },
+      {
+        "name": "Count of Movies",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Spark).Count of Movies"
+      }
+    ]
+  }
+}

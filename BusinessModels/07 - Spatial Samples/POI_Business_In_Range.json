@@ -1,0 +1,89 @@
+{
+  "logicalTable": {
+    "name": "POI_Business_In_Range",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "cat_id",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_Business_POI_Near_Address",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business.cat_id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Bus name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_Business_POI_Near_Address",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business.name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "POI_ID_Bus",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_Business_POI_Near_Address",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business.POI_Id"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Category name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "V_Business_POI_Near_Address",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "V_Business_POI_Near_Address",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.NTC_META_POI_CAT_REF",
+            "physicalTable:09 - Sample Geo Data (ORCL).OBIEE_NAVTEQ.V_POI_In_Range_Business"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:09 - Sample Geo Data (ORCL).V_Business_POI_Near_Address_FKey"
+            }
+          ]
+        }
+      }
+    ]
+  }
+}

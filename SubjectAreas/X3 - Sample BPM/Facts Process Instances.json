@@ -1,0 +1,10 @@
+{
+  "presentationTable": {
+    "name": "Facts Process Instances",
+    "presentationColumns": [ {
+        "name": "# Of Completed Proc Inst",
+        "sourceLogicalColumn": "logicalColumn:X3 - Bus Process Monitoring (BPM).Facts Proc Instances.# Of Completed Proc Inst"
+      }
+    ]
+  }
+}

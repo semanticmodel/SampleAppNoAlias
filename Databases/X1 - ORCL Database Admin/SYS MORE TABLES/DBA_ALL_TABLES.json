@@ -1,0 +1,289 @@
+{
+  "physicalTable": {
+    "name": "DBA_ALL_TABLES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SEGMENT_CREATED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DEPENDENCIES",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "CACHE",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "FREELIST_GROUPS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMPRESS_FOR",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DROPPED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_TYPE",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "MIN_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OBJECT_ID_TYPE",
+        "dataType": "VARCHAR",
+        "length": 16
+      },
+      {
+        "name": "NUM_FREELIST_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITIAL_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INI_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHAIN_CNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INSTANCES",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "ROW_MOVEMENT",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "BACKED_UP",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "COMPRESSION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "SECONDARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PCT_FREE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "MONITORING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NUM_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BUFFER_POOL",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "AVG_ROW_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SKIP_CORRUPT",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "IOT_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "FREELISTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_LOCK",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "PCT_USED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TEMPORARY",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "MAX_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVG_SPACE_FREELIST_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DURATION",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "MAX_EXTENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_TYPE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "DEGREE",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "CELL_FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "LOGGING",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "EMPTY_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVG_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PARTITIONED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NESTED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "CLUSTER_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "CLUSTER_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "IOT_TYPE",
+        "dataType": "VARCHAR",
+        "length": 12
+      }
+    ]
+  }
+}

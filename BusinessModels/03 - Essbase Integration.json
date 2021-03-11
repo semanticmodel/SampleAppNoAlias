@@ -1,0 +1,41 @@
+{
+  "businessModel": {
+    "name": "03 - Essbase Integration",
+    "joins": [      {
+        "name": "SH Cube:Relationship_2004:825641291759285",
+        "leftTable": "logicalTable:03 - Essbase Integration.Basic",
+        "rightTable": "logicalTable:03 - Essbase Integration.Scenario",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "SH Cube:Relationship_2004:826541291759285",
+        "leftTable": "logicalTable:03 - Essbase Integration.Basic",
+        "rightTable": "logicalTable:03 - Essbase Integration.Product",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "SH Cube:Relationship_2004:826091291759285",
+        "leftTable": "logicalTable:03 - Essbase Integration.Basic",
+        "rightTable": "logicalTable:03 - Essbase Integration.Channels",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "SH Cube:Relationship_2004:825311291759285",
+        "leftTable": "logicalTable:03 - Essbase Integration.Basic",
+        "rightTable": "logicalTable:03 - Essbase Integration.Year",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "SH Cube:Relationship_2004:827291291759285",
+        "leftTable": "logicalTable:03 - Essbase Integration.Basic",
+        "rightTable": "logicalTable:03 - Essbase Integration.Customers",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

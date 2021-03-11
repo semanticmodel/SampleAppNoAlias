@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "DB_COL_STATS_SCHEMA",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "SELECT 'BISAMPLE' FROM DUAL"
+      }
+    ],
+    "variables": [ {
+        "name": "DB_COL_STATS_SCHEMA",
+        "description": "Used for Opaque view generating DBMS Statistic info",
+        "value": "'BISAMPLE'"
+      }
+    ]
+  }
+}

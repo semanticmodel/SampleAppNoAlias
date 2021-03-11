@@ -1,0 +1,106 @@
+{
+  "presentationTable": {
+    "name": "Claims Attr Sigmas",
+    "alternateNames": [
+      "Claims Sigmas",
+      "Claims Stats#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Claim Age Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Age Dist"
+      },
+      {
+        "name": "Claim Date Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Date Dist"
+      },
+      {
+        "name": "Claim Labor Code Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Labor Code Dist"
+      },
+      {
+        "name": "Claim Lbr Othr Globl Amt Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Lbr Othr Globl Amt Dist"
+      },
+      {
+        "name": "Claim Lbr Tot Globl Amt Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Lbr Tot Globl Amt Dist"
+      },
+      {
+        "name": "Claim Odmtr Mileage Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Odmtr Mileage Dist"
+      },
+      {
+        "name": "Claim Part Tot Globl Amt Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Part Tot Globl Amt Dist"
+      },
+      {
+        "name": "Claim Tot Globl Amt Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Claim Tot Globl Amt Dist"
+      },
+      {
+        "name": "Days In Service Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Days In Service Dist"
+      },
+      {
+        "name": "Dealer City Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer City Dist"
+      },
+      {
+        "name": "Dealer Geocode Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer Geocode Dist"
+      },
+      {
+        "name": "Dealer Stateprovince Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Dealer Stateprovince Dist"
+      },
+      {
+        "name": "Drive Train Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Drive Train Dist"
+      },
+      {
+        "name": "Num Cyls Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Num Cyls Dist"
+      },
+      {
+        "name": "Prod Date Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Prod Date Dist"
+      },
+      {
+        "name": "Sale Date Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Sale Date Dist"
+      },
+      {
+        "name": "Veh Exposure Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Veh Exposure Dist"
+      },
+      {
+        "name": "Vehicle Build Country Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Build Country Dist"
+      },
+      {
+        "name": "Vehicle Exposure Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Exposure Dist"
+      },
+      {
+        "name": "Vehicle Float Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Float Dist"
+      },
+      {
+        "name": "Vehicle Make Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Make Dist"
+      },
+      {
+        "name": "Vehicle Manufacturer Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Manufacturer Dist"
+      },
+      {
+        "name": "Vehicle Model Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Model Dist"
+      },
+      {
+        "name": "Vehicle Model Year Dist",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claims Stat.Vehicle Model Year Dist"
+      }
+    ]
+  }
+}

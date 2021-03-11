@@ -1,0 +1,49 @@
+{
+  "presentationTable": {
+    "name": "Blocks",
+    "description": "Geo Localisation Expression Examples",
+    "alternateNames": [
+      "Blocks in range of POIs",
+      "POI"
+    ],
+    "presentationColumns": [ {
+        "name": "POI Category Name",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Groups.POI Category Name"
+      },
+      {
+        "name": "Block Id in range of POIs",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Groups.Block Id in range of POIs",
+        "alternateNames": [
+          "Block Group Id",
+          "Block Id  in range of POIs"
+        ]
+      },
+      {
+        "name": "Block Label",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Groups.Block Label",
+        "alternateNames": [
+          "Block Label#1"
+        ]
+      },
+      {
+        "name": "Total Pop",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Total Pop"
+      },
+      {
+        "name": "Households",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Households",
+        "alternateNames": [
+          "Household"
+        ]
+      },
+      {
+        "name": "Med Household Income",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Group Facts.Med Household Income"
+      },
+      {
+        "name": "Block Id",
+        "sourceLogicalColumn": "logicalColumn:07 - Spatial Samples.Block Groups.Block Id"
+      }
+    ]
+  }
+}

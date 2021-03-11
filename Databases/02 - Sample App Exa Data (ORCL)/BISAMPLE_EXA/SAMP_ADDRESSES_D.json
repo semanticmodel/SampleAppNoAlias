@@ -1,0 +1,119 @@
+{
+  "physicalTable": {
+    "name": "SAMP_ADDRESSES_D",
+    "description": "Addresses Dimension table: Stores address attribute information. This information is mainly used for plotting maps within OBIEE visualization.",
+    "sourceType": "TABLE",
+    "uri": "VALUEOF(BI_EE_HOME)/sample/SampleAppFiles/Data/SAMP_ADDRESSES_D.xml",
+    "physicalColumns": [ {
+        "name": "Address2",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "description": "Address2: Stores address2 as a text"
+      },
+      {
+        "name": "Postal_Code",
+        "dataType": "VARCHAR",
+        "length": 12,
+        "nullable": true,
+        "description": "Postal Code: Stores the postal code information as a double"
+      },
+      {
+        "name": "Area",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Area: Stores area information as a text"
+      },
+      {
+        "name": "State_Province",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "description": "State Provice: Stores the state province name as a text"
+      },
+      {
+        "name": "Iso_Country_code3",
+        "dataType": "VARCHAR",
+        "length": 3,
+        "nullable": true,
+        "description": "ISO Country Code: Stores the ISO country code as a text"
+      },
+      {
+        "name": "Region",
+        "dataType": "VARCHAR",
+        "length": 20,
+        "nullable": true,
+        "description": "Region: Stores the region information as a text"
+      },
+      {
+        "name": "Ctry_Cd3_State_Abbrv",
+        "dataType": "VARCHAR",
+        "length": 6,
+        "nullable": true,
+        "description": "Country Code State Abbrevation: Stores the country code concatenated with the state abbrevation"
+      },
+      {
+        "name": "Country_Name",
+        "dataType": "VARCHAR",
+        "length": 100,
+        "nullable": true,
+        "description": "Country Name: Stores country name as a text"
+      },
+      {
+        "name": "Address_Key",
+        "dataType": "INT",
+        "nullable": true,
+        "description": "Address Key: Surrogate key of the address dimension table."
+      },
+      {
+        "name": "City",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "nullable": true,
+        "description": "City: Stores city information as a text"
+      },
+      {
+        "name": "Latitude",
+        "dataType": "DOUBLE",
+        "description": "Latitude: Stores the latitude information as a double"
+      },
+      {
+        "name": "Longitude",
+        "dataType": "DOUBLE",
+        "description": "Longitude: Stores the longitude information as a double"
+      },
+      {
+        "name": "Ctry_Cd3_State_Name_City",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true,
+        "description": "Country Code State Name City: Stores the country code concatenated with state name concatenated with city name"
+      },
+      {
+        "name": "Address1",
+        "dataType": "VARCHAR",
+        "length": 40,
+        "description": "Address1: Stores address1 as a text"
+      },
+      {
+        "name": "Ctry_Cd3_State_Name",
+        "dataType": "VARCHAR",
+        "length": 300,
+        "nullable": true,
+        "description": "Country Code State Name: Stores the country code concatenated with state name"
+      },
+      {
+        "name": "Estab_Name",
+        "dataType": "VARCHAR",
+        "length": 240,
+        "description": "Establishment Name: Stores the establishment name as a text"
+      },
+      {
+        "name": "State_Province_Abbrv",
+        "dataType": "VARCHAR",
+        "length": 6,
+        "nullable": true,
+        "description": "State Province Abbrevation: Stores the state province abbrevation as a text"
+      }
+    ]
+  }
+}

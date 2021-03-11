@@ -1,0 +1,225 @@
+{
+  "logicalTable": {
+    "name": "WP Object Attributes",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Object Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.OBJECTNAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.OBJECTPATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Object Type",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.OBJECTTYPE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path L0",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.PATH_L0"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path L1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.PATH_L1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path L2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.PATH_L2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Path Rest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "WP_ACL_Stats_Dim",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim.PATH_REST"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "WP_ACL_Stats_Dim",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WP_ACL_Stats_Dim"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WP All Objects.Full Path"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "All Objects",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "All Objects",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Path level 0",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path L0"
+          ],
+          "displayColumn": "logicalColumn:Path L0"
+        },
+        {
+          "name": "Path level 1",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path L0",
+            "logicalColumn:Path L1"
+          ],
+          "displayColumn": "logicalColumn:Path L0"
+        },
+        {
+          "name": "Path level 2",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path L0",
+            "logicalColumn:Path L1",
+            "logicalColumn:Path L2"
+          ],
+          "displayColumn": "logicalColumn:Path L0"
+        },
+        {
+          "name": "Path level 3",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Path L0",
+            "logicalColumn:Path L1",
+            "logicalColumn:Path L2",
+            "logicalColumn:Path Rest"
+          ],
+          "displayColumn": "logicalColumn:Path L0"
+        },
+        {
+          "name": "Full Path",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Object Path"
+          ],
+          "displayColumn": "logicalColumn:Object Path"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "WP All Objects [branch at level 'Path level 3']",
+          "levels": [ "All Objects", "Path level 0", "Path level 1", "Path level 2", "Path level 3", "Full Path" ]
+        }
+      ]
+    }
+  }
+}

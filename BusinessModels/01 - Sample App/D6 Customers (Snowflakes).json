@@ -1,0 +1,1336 @@
+{
+  "logicalTable": {
+    "name": "D6 Customers (Snowflakes)",
+    "description": "This logical table maps to the physical Customer Dimension table with various attributes like Customer Name, Status, Type and so on.\r\nIt maps to 3 LTS and showcases snowflake dimension modelling.\r\nLTS1 Customers - Maps to the lowest grain of information.\r\nLTS2 Customer Segments - Maps to higher grain of information. Every customer belongs to a customer segment.\r\nLTS3 Customer Adresses - Maps to higher grain of information.\r\n",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "C0  Customer Number",
+        "description": "Help : \r\nCustomer Key is an integer that uniquely identifies each record in the Customer dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Cust_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C1  Customer Name",
+        "description": "Help : \r\nCustomer Name stores the first name followed by the last name.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Name"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C2  Customer Status",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "C2k  Cust Status Key",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE %1, %2, %2, 'Customer Status',  VALUEOF(NQ_SESSION.\"USERLOCALE\"))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.L2 Lookups Other.Lookup_Dsc",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C2k  Cust Status Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C2b  Customer Status (Phys Lookup)",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": " LOOKUP( SPARSE %1, %2,  VALUEOF(NQ_SESSION.\"USERLOCALE\"), %2, 'Customer Status')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L3 Direct Physical Lookups.Lookup_Dsc",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Status_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C2k  Cust Status Key",
+        "description": "Help : \r\nStores the status of the customer.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Status_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Status_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Status_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C3  Customer Type",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "C3k  Cust Type Key",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE %1, %2, %2, 'Customer Type',  VALUEOF(NQ_SESSION.\"USERLOCALE\"))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.L2 Lookups Other.Lookup_Dsc",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C3k  Cust Type Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C3b  Customer Type (Phys Lookup)",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": " LOOKUP( SPARSE %1, %2,  VALUEOF(NQ_SESSION.\"USERLOCALE\"), %2, 'Customer Type')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L3 Direct Physical Lookups.Lookup_Dsc",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Type_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C3k  Cust Type Key",
+        "description": "Help : \r\nStores the customer type.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Type_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Type_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Type_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4  Customer Segment",
+        "description": "Help : \r\nStores the customer segment description.",
+        "dataType": "VARCHAR",
+        "descriptorColumn": "C4k  Cust Segment Key",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments.Segment_Desc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C4k  Cust Segment Key",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Segment_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments.Segment_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C5  Income Level",
+        "description": "Help : \r\nStores the customer segment ID.",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "C5k  Income Level Key",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE %1, %2, %2, 'Income Level',  VALUEOF(NQ_SESSION.\"USERLOCALE\"))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.L2 Lookups Other.Lookup_Dsc",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C5k  Income Level Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C5k  Income Level Key",
+        "description": "Help : \r\nStores the customer industry description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Income_Lvl"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Income_Lvl"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Income_Lvl"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C6  Credit Rate",
+        "description": "Help : \r\nStores the Customer credit rate desription.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Crdt_Rate"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Crdt_Rate"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Crdt_Rate"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C7a Marital Status (Dense Lookup)",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "C7k  Marital Status Key",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE %1, %2, 'Marital Status',  VALUEOF(NQ_SESSION.\"USERLOCALE\"))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.L2 Lookups Other.Lookup_Dsc",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C7k  Marital Status Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C7b Marital Status (Sparse Lookup)",
+        "description": "Help : \r\nStores the product's color description.",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "C7k  Marital Status Key",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( SPARSE %1, %2, %2, 'Marital Status',  VALUEOF(NQ_SESSION.\"USERLOCALE\"))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.L2 Lookups Other.Lookup_Dsc",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C7k  Marital Status Key"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C7c Marital Status (Phys Lookup)",
+        "description": "Help : \r\nStores the product's color description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": " LOOKUP( SPARSE %1, %2,  VALUEOF(NQ_SESSION.\"USERLOCALE\"), %2, 'Marital Status')",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.L3 Direct Physical Lookups.Lookup_Dsc",
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Marital_St"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C7k  Marital Status Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Marital_St"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Marital_St"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Marital_St"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C8  Prev Marital St",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C9  Gender",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Gender"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C10  Prev Marital St Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Prev_Marital_St_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C12  First Contact Date",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD.",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Fst_Contact_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Fst_Contact_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Fst_Contact_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C13  Last Order Date-Time",
+        "description": "Help : \r\nStores the customer's last order date in the format YYYY-MM-DD.",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Lst_Order_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Lst_Order_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Lst_Order_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C14  Birth Date",
+        "dataType": "DATE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Birth_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Customer Segments",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Birth_Dt"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Birth_Dt"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C18  Numerical Attribute",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.Num_Attribute"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C19  Months as Customer",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD.",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_MONTH , %1,  CAST ( VALUEOF(NQ_SESSION.%2) AS DATE ))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C12  First Contact Date",
+              "variable:LAST_REFRESH_DT.LAST_REFRESH_DT"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C20  Years as Customer",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD.",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_YEAR , %1,  CAST ( VALUEOF(NQ_SESSION.%2) AS DATE ))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C12  First Contact Date",
+              "variable:LAST_REFRESH_DT.LAST_REFRESH_DT"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C19 === Calculated Attributes =======",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "C21  Customer Age",
+        "description": "Help : \r\nStores the customer's first contact date in the format YYYY-MM-DD.",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " TIMESTAMPDIFF( SQL_TSI_YEAR , %1,  CAST ( VALUEOF(NQ_SESSION.%2) AS DATE ))",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C14  Birth Date",
+              "variable:LAST_REFRESH_DT.LAST_REFRESH_DT"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C50  === Addresses Objects =====",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "C50  Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Region"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C51  Area",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Area"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C52  Country Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Country_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C53  State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.State_Province"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C54  State Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.State_Province_Abbrv"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C55  City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.City"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C56  Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Postal_Code"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C57  Address Line 1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address1"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C58  Address Line 2",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address2"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C59  Establishment Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Estab_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C60  Full Address",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1\r\n||' '||\r\n%2 \r\n||', '||\r\n%3 \r\n||', '||\r\n%4 \r\n||' '||\r\n%5 \r\n",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C57  Address Line 1",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C58  Address Line 2",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C55  City",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C54  State Code",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C56  Postal Code"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C60k  Address Key",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Address_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C61  ------- Adress Geo Codes -----------",
+        "description": "Help :\r\nHeader object, dummy not to be used in any queries",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "1"
+          }
+        }
+      },
+      {
+        "name": "C61  Geo Country Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Iso_Country_code3"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C62  Geo Ctry State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Ctry_Cd3_State_Name"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C63  Geo Ctry State City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Ctry_Cd3_State_Name_City"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C64  Latitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Latitude"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C65  Longitude",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Longitude"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C66  Lat_Long",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "cast(round( %1 ,7) as varchar(15))||'_'||\r\ncast(round(%2 ,7) as varchar(15))\r\n \r\n",
+            "expressionObjects": [
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C64  Latitude",
+              "logicalColumn:01 - Sample App.D6 Customers (Snowflakes).C65  Longitude"
+            ]
+          }
+        }
+      },
+      {
+        "name": "C67  Geo Postal Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Postal_Code"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C68  Region Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Region"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C69  Area Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS3 Customer Adresses",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses.Area"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "C99  Total Value (Hier)",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Customers",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers.TOTAL_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Customers",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H6 Customers.Customers Detail"
+        ]
+      },
+      {
+        "name": "LTS2 Customer Segments",
+        "description": "Right outer join here",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D61 Customer Segments"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).01 Customer_FKey",
+              "joinType": "RIGHT_OUTER"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H6 Customers.Customers Detail"
+        ]
+      },
+      {
+        "name": "LTS3 Customer Adresses",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D60 Customers",
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D62 Customers Addresses"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:01 - Sample App Data (ORCL).D10 Customer_FKey"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H6 Customers.Customers Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Customers Total",
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Customers Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Customers Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:C3k  Cust Type Key"
+          ]
+        },
+        {
+          "name": "Customers Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1000,
+          "primaryColumns": [
+            "logicalColumn:C0  Customer Number"
+          ],
+          "preferredDrillPath": [
+            "01 - Sample App.H7 Orders.Order Status"
+          ]
+        },
+        {
+          "name": "Customers Segment",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 5,
+          "primaryColumns": [
+            "logicalColumn:C4  Customer Segment"
+          ],
+          "displayColumn": "logicalColumn:C4  Customer Segment"
+        },
+        {
+          "name": "Custs Geo A Descriptions",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C50  Region"
+          ],
+          "displayColumn": "logicalColumn:C50  Region"
+        },
+        {
+          "name": "Custs Geo A Area",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C51  Area"
+          ],
+          "displayColumn": "logicalColumn:C51  Area"
+        },
+        {
+          "name": "Custs Geo A Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 100,
+          "primaryColumns": [
+            "logicalColumn:C52  Country Name"
+          ],
+          "displayColumn": "logicalColumn:C52  Country Name"
+        },
+        {
+          "name": "Custs Geo A State",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 150,
+          "primaryColumns": [
+            "logicalColumn:C53  State Province",
+            "logicalColumn:C52  Country Name"
+          ],
+          "displayColumn": "logicalColumn:C53  State Province"
+        },
+        {
+          "name": "Custs Geo A City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 200,
+          "primaryColumns": [
+            "logicalColumn:C55  City",
+            "logicalColumn:C53  State Province"
+          ],
+          "displayColumn": "logicalColumn:C55  City"
+        },
+        {
+          "name": "Custs Geo A Postal Code",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 250,
+          "primaryColumns": [
+            "logicalColumn:C56  Postal Code"
+          ],
+          "displayColumn": "logicalColumn:C56  Postal Code"
+        },
+        {
+          "name": "Custs Geo B Codes (Mapvw)",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C68  Region Code"
+          ],
+          "displayColumn": "logicalColumn:C68  Region Code"
+        },
+        {
+          "name": "Area",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C69  Area Code"
+          ],
+          "displayColumn": "logicalColumn:C69  Area Code"
+        },
+        {
+          "name": "Country",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C61  Geo Country Code"
+          ],
+          "displayColumn": "logicalColumn:C61  Geo Country Code"
+        },
+        {
+          "name": "Custs Geo B State",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C62  Geo Ctry State Name"
+          ],
+          "displayColumn": "logicalColumn:C62  Geo Ctry State Name"
+        },
+        {
+          "name": "Custs Geo B City",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C63  Geo Ctry State City Name"
+          ],
+          "displayColumn": "logicalColumn:C63  Geo Ctry State City Name"
+        },
+        {
+          "name": "Custs Geo B Postal Code",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C61  Geo Country Code",
+            "logicalColumn:C62  Geo Ctry State Name",
+            "logicalColumn:C63  Geo Ctry State City Name",
+            "logicalColumn:C67  Geo Postal Code"
+          ]
+        },
+        {
+          "name": "Custs Geo B Coordinates",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:C61  Geo Country Code",
+            "logicalColumn:C62  Geo Ctry State Name",
+            "logicalColumn:C63  Geo Ctry State City Name",
+            "logicalColumn:C64  Latitude",
+            "logicalColumn:C65  Longitude",
+            "logicalColumn:C67  Geo Postal Code",
+            "logicalColumn:C68  Region Code",
+            "logicalColumn:C69  Area Code"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H6 Customers [branch at level 'Customers Type']",
+          "description": "Customer Dimension:\r\nType - Skipped Levels\r\nIncludes 4 drill paths\r\n1) Segment->Detail\r\n2) Region->Area->Country->State->City->Postal Code->Detail\r\n3) Geo Country->Geo State->Geo City->Geo Coordinates->Detail\r\n4) Type->Status->Detail\r\n\r\n",
+          "levels": [ "Customers Total", "Customers Type", "Customers Detail" ]
+        },
+        {
+          "name": "H6 Customers [branch at level 'Customers Segment']",
+          "description": "Customer Dimension:\r\nType - Skipped Levels\r\nIncludes 4 drill paths\r\n1) Segment->Detail\r\n2) Region->Area->Country->State->City->Postal Code->Detail\r\n3) Geo Country->Geo State->Geo City->Geo Coordinates->Detail\r\n4) Type->Status->Detail\r\n\r\n",
+          "levels": [ "Customers Total", "Customers Segment", "Customers Detail" ]
+        },
+        {
+          "name": "H6 Customers [branch at level 'Custs Geo A Postal Code']",
+          "description": "Customer Dimension:\r\nType - Skipped Levels\r\nIncludes 4 drill paths\r\n1) Segment->Detail\r\n2) Region->Area->Country->State->City->Postal Code->Detail\r\n3) Geo Country->Geo State->Geo City->Geo Coordinates->Detail\r\n4) Type->Status->Detail\r\n\r\n",
+          "levels": [ "Customers Total", "Custs Geo A Descriptions", "Custs Geo A Area", "Custs Geo A Country", "Custs Geo A State", "Custs Geo A City", "Custs Geo A Postal Code", "Customers Detail" ]
+        },
+        {
+          "name": "H6 Customers [branch at level 'Custs Geo B Coordinates']",
+          "description": "Customer Dimension:\r\nType - Skipped Levels\r\nIncludes 4 drill paths\r\n1) Segment->Detail\r\n2) Region->Area->Country->State->City->Postal Code->Detail\r\n3) Geo Country->Geo State->Geo City->Geo Coordinates->Detail\r\n4) Type->Status->Detail\r\n\r\n",
+          "levels": [ "Customers Total", "Custs Geo B Codes (Mapvw)", "Area", "Country", "Custs Geo B State", "Custs Geo B City", "Custs Geo B Postal Code", "Custs Geo B Coordinates", "Customers Detail" ]
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,124 @@
+{
+  "presentationTable": {
+    "name": "Webcat Path",
+    "alternateNames": [
+      "Analysis#1"
+    ],
+    "presentationColumns": [ {
+        "name": "Path_L1",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L1"
+      },
+      {
+        "name": "Path_L2",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L2"
+      },
+      {
+        "name": "Path_L3",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L3"
+      },
+      {
+        "name": "Path_L4",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L4"
+      },
+      {
+        "name": "Path_L5",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L5"
+      },
+      {
+        "name": "Path_L6",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path_L6"
+      },
+      {
+        "name": "Object Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Object Path"
+      },
+      {
+        "name": "Path L2 Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path L2 Catalog URL",
+        "alternateNames": [
+          "Path L2 Catalog Link",
+          "Path Link L2"
+        ]
+      },
+      {
+        "name": "Path L3 Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path L3 Catalog URL",
+        "alternateNames": [
+          "Path L3 Catalog Link",
+          "Path Link L3"
+        ]
+      },
+      {
+        "name": "Path L4 Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path L4 Catalog URL",
+        "alternateNames": [
+          "Path L4",
+          "Path L4 Catalog Link",
+          "Path Link L4"
+        ]
+      },
+      {
+        "name": "Path L5 Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path L5 Catalog URL",
+        "alternateNames": [
+          "Path L5",
+          "Path L5 Catalog Link",
+          "Path Link L5"
+        ]
+      },
+      {
+        "name": "Path L6 Catalog URL",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Path L6 Catalog URL",
+        "alternateNames": [
+          "Path L6 Catalog Link"
+        ]
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Object Path Hierarchy",
+        "alternateNames": [
+          "WS All Objects Dim"
+        ],
+        "sourceLogicalTable": "logicalTable:10 - Usage Tracking.WS Objects Attributes",
+        "levels": [ {
+            "name": "All Folders",
+            "alternateNames": [
+              "All Objects"
+            ],
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.All Objects"
+          },
+          {
+            "name": "Path level 2",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path level 2",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Path_L2"
+          },
+          {
+            "name": "Path level 3",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path level 3",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Path_L3"
+          },
+          {
+            "name": "Path level 4",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path level 4",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Path_L4"
+          },
+          {
+            "name": "Path level 5",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path level 5",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Path_L5"
+          },
+          {
+            "name": "Path level 6",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path level 6",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Path_L6"
+          },
+          {
+            "name": "Path Detail",
+            "sourceLogicalLevel": "logicalLevel:10 - Usage Tracking.WS Objects Attributes.Path Detail",
+            "displayColumn": "presentationColumn:U - Usage Tracking.Webcat Path.Object Path"
+          }
+        ]
+      }
+    ]
+  }
+}

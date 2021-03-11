@@ -1,0 +1,76 @@
+{
+  "presentationTable": {
+    "name": "Time",
+    "description": "Time dimension attribute objects ",
+    "presentationColumns": [ {
+        "name": "T00 Date (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D0 Time.T00 Date (Rel Only)",
+        "description": "Help : \r\nStores the date information."
+      },
+      {
+        "name": "T01 Per Name Week (Rel Only)",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D0 Time.T01 Per Name Week (Rel Only)",
+        "description": "Help : \r\nPeriod Name Week. Stores the week information in the format YYYY Week Number. Eg :- 2006 Week 40",
+        "alternateNames": [
+          "T01 Per Name Week"
+        ]
+      },
+      {
+        "name": "T02 Per Name Month",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D0 Time.T02 Per Name Month",
+        "description": "Help : \r\nPeriod Name Month. Stores the month information in the format YYYY / MM. Eg :- 2006 / 11"
+      },
+      {
+        "name": "T03 Per Name Qtr",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D0 Time.T03 Per Name Qtr",
+        "description": "Help :\r\nPeriod Name Quarter. Stores the Quarter information in the format YYYY QQuarterNumber. Eg :- 2006 Q3"
+      },
+      {
+        "name": "T05 Per Name Year",
+        "sourceLogicalColumn": "logicalColumn:06 - Federated Sources.D0 Time.T05 Per Name Year",
+        "description": "Help :\r\nPeriod Name Year. Stores the year information in the format YYYY. Eg :- 2006"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Hierarchy",
+        "alternateNames": [
+          "H0 Time"
+        ],
+        "sourceLogicalTable": "logicalTable:06 - Federated Sources.D0 Time",
+        "levels": [ {
+            "name": "Total Time",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Total Time"
+          },
+          {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Year",
+            "displayColumn": "presentationColumn:D - Sample Federated.Time.T05 Per Name Year"
+          },
+          {
+            "name": "Quarter",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Quarter",
+            "displayColumn": "presentationColumn:D - Sample Federated.Time.T03 Per Name Qtr"
+          },
+          {
+            "name": "Month",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Month",
+            "displayColumn": "presentationColumn:D - Sample Federated.Time.T02 Per Name Month"
+          },
+          {
+            "name": "Week",
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Week",
+            "displayColumn": "presentationColumn:D - Sample Federated.Time.T01 Per Name Week (Rel Only)"
+          },
+          {
+            "name": "Day",
+            "alternateNames": [
+              "Day Detail"
+            ],
+            "sourceLogicalLevel": "logicalLevel:06 - Federated Sources.D0 Time.Day Detail",
+            "displayColumn": "presentationColumn:D - Sample Federated.Time.T00 Date (Rel Only)"
+          }
+        ]
+      }
+    ]
+  }
+}

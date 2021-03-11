@@ -1,0 +1,264 @@
+{
+  "logicalTable": {
+    "name": "WS Measures",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Object Path",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ALLOBJECTS UT Joined",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Objects Count",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ALLOBJECTS UT Joined",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Analysis Counts",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "case when  %1 = 'Analysis' then \r\n%2 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.SIGNATURE",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ALLOBJECTS UT Joined",
+              "physicalExpression": {
+                "expressionTemplate": " CASE  WHEN %1 = 'Analysis' THEN %2 END ",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.SIGNATURE",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dashboard Pages Counts",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS",
+              "physicalExpression": {
+                "expressionTemplate": "case when  %1 = 'Dashboard Page' then \r\n%2 end",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.SIGNATURE",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "ALLOBJECTS UT Joined",
+              "physicalExpression": {
+                "expressionTemplate": "CASE  WHEN %1 = 'Dashboard Page' THEN %2 END",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.SIGNATURE",
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts.PATH"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "COUNT_DISTINCT"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dummy Object 1",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ALLOBJECTS UT Joined",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim.NODE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ALLOBJECTS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      },
+      {
+        "name": "ALLOBJECTS UT Joined",
+        "tableMapping": {
+          "allowUnmappedTables": true,
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS_Dim",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.WS_ALLOBJECTS Facts",
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_ACCT_Dim"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS Facts_Foreign Key#1"
+            },
+            {
+              "physicalJoin": "physicalJoin:10 - System DB (ORCL).WS_ALLOBJECTS Facts_Foreign Key#2"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:10 - Usage Tracking.WS All Objects.Path Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "TotalTime",
+      "logicalLevels": [
+        {
+          "name": "TotalTime",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Year",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year"
+          ],
+          "displayColumn": "logicalColumn:Year"
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year Quarter"
+          ],
+          "displayColumn": "logicalColumn:Year Quarter"
+        },
+        {
+          "name": "Month",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year Month"
+          ],
+          "displayColumn": "logicalColumn:Year Month"
+        },
+        {
+          "name": "Week Number",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Year",
+            "logicalColumn:Week Number",
+            "logicalColumn:Year Month"
+          ],
+          "displayColumn": "logicalColumn:Year"
+        },
+        {
+          "name": "Date",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Start Date"
+          ],
+          "displayColumn": "logicalColumn:Start Date"
+        },
+        {
+          "name": "Hour Min Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10000,
+          "primaryColumns": [
+            "logicalColumn:Start Hour Min",
+            "logicalColumn:Start Time",
+            "logicalColumn:End Time"
+          ],
+          "displayColumn": "logicalColumn:Start Hour Min"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "UT L Query Time [branch at level 'Date']",
+          "levels": [ "TotalTime", "Year", "Quarter", "Month", "Week Number", "Date", "Hour Min Detail" ]
+        }
+      ]
+    }
+  }
+}

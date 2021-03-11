@@ -1,0 +1,25 @@
+{
+  "presentationTable": {
+    "name": "Source Navigation",
+    "description": "This folder contains various Variation metrics on Revenue like Variations to Period Ago and Time span variations.",
+    "alternateNames": [
+      "Preserve Dim Members#1"
+    ],
+    "presentationColumns": [ {
+        "name": "X03  Physical Fact Table Hit",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.X03  Physical Fact Table Hit",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value"
+      },
+      {
+        "name": "X01  LTS Selected",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.X01  LTS Selected",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value"
+      },
+      {
+        "name": "X02  Physical Fact Alias Hit",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.F0 Sales Base Measures.X02  Physical Fact Alias Hit",
+        "description": "Help :\r\nThis object should not be used in reports queries, it is used for segmentation metadata purposes (see answers hyperlink More Products->Marketing), and returns the customer key value"
+      }
+    ]
+  }
+}

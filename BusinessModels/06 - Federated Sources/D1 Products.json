@@ -1,0 +1,475 @@
+{
+  "logicalTable": {
+    "name": "D1 Products",
+    "description": "This logical table maps to the physical Products Dimension table with various attributes like Product Name, Brand, Type and so on.",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "P0  Product Number",
+        "description": "Help : \r\nProduct Number: An integer that uniquely identifies each record in the Product dimension table.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(5))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Product Members - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Product"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Prod_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P1  Product",
+        "description": "Help : \r\nProduct: Stores the product description information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(128))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Prod_Dsc"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Product Members"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Product - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Prod_Dsc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2  Product Type",
+        "description": "Help : \r\nProduct Type: Stores the product type information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Type"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Product Types"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Type - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P2k  Product Type Key",
+        "description": "Help : \r\nType Key: Stores product type key as an integer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(5))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Type_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Product Types - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Type"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Type_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3  LOB",
+        "description": "Help : \r\nLOB: Stores the product LOB information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).LOB"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.LOBs"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Lob - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).LOB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3k  LOB Key",
+        "description": "Help : \r\nLOB Key: Stores product LOB key as an integer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(6))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).LOB_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.LOBs - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Lob"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(6))",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).LOB_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4  Brand",
+        "description": "Help : \r\nBrand: Stores the product brand information as text",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Brand"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Brands"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Brand - Long Description"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Brand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P4k  Brand Key",
+        "description": "Help :\r\nBrand Key: Stores product brand key as an integer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "cast(%1 as varchar(5))",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table).Brand_Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS2 Essb Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened.Brands - Member Key"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS3 OLAP Products Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "oracleOLAPColumn:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product.Brand"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "LTS6  Flat Xml File Product Source",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:08 - Sample App Xml Target Data.D10 Product (XML Source).Brand_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P3 LOB (Rel Lookup)",
+        "description": "Help : \r\nLOB: Stores the product LOB information as text",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE %1,  VALUEOF(NQ_SESSION.\"USERLOCALE\"), %2)",
+            "expressionObjects": [
+              "logicalColumn:06 - Federated Sources.L1 Lookups Translation.Lookup_Dsc",
+              "logicalColumn:06 - Federated Sources.D1 Products.P3k  LOB Key"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Products Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D10 Product (Dynamic Table)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS2 Essb Products Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase Sample E1 Flat.BISAMPLE Flat.Sample Flattened"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:06 - Federated Sources.H1 Products.Products Detail"
+        ]
+      },
+      {
+        "name": "LTS3 OLAP Products Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:04 - Sample OLAP AW.BISAMPLE.OLAPSAMPLE.Product"
+          ]
+        }
+      },
+      {
+        "name": "LTS6  Flat Xml File Product Source",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:08 - Sample App Xml Target Data.D10 Product (XML Source)"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Products Total",
+      "logicalLevels": [
+        {
+          "name": "Products Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Products Brand",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 4,
+          "primaryColumns": [
+            "logicalColumn:P4  Brand"
+          ],
+          "displayColumn": "logicalColumn:P4  Brand"
+        },
+        {
+          "name": "Products LOB",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 6,
+          "primaryColumns": [
+            "logicalColumn:P3  LOB"
+          ],
+          "displayColumn": "logicalColumn:P3  LOB"
+        },
+        {
+          "name": "Products Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 9,
+          "primaryColumns": [
+            "logicalColumn:P2  Product Type"
+          ],
+          "displayColumn": "logicalColumn:P2  Product Type"
+        },
+        {
+          "name": "Products Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 15,
+          "primaryColumns": [
+            "logicalColumn:P1  Product"
+          ],
+          "displayColumn": "logicalColumn:P1  Product"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H1 Products [branch at level 'Products Type']",
+          "levels": [ "Products Total", "Products Brand", "Products LOB", "Products Type", "Products Detail" ]
+        }
+      ]
+    }
+  }
+}

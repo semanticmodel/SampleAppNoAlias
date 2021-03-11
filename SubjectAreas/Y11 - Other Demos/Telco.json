@@ -1,0 +1,45 @@
+{
+  "presentationTable": {
+    "name": "Telco",
+    "alternateNames": [
+      "Telco Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "Actualchurn",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Actualchurn"
+      },
+      {
+        "name": "Cost",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Cost"
+      },
+      {
+        "name": "Predictedchurn",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Predictedchurn"
+      },
+      {
+        "name": "Profit",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Profit"
+      },
+      {
+        "name": "Revenue",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Revenue"
+      },
+      {
+        "name": "Totalcomplaints",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.Totalcomplaints"
+      },
+      {
+        "name": "# Of Customers",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.# Of Customers"
+      },
+      {
+        "name": "# Of Plans",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.# Of Plans"
+      },
+      {
+        "name": "# Of Products",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Telco Facts.# Of Products"
+      }
+    ]
+  }
+}

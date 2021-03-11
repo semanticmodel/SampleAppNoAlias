@@ -1,0 +1,246 @@
+{
+  "logicalTable": {
+    "name": "Year",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "History",
+        "dataType": "VARCHAR",
+        "sortBy": "History - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.History"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "History - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.History - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "History - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.History - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "VARCHAR",
+        "sortBy": "Quarter - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Quarter"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Quarter - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Quarter - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Months",
+        "dataType": "VARCHAR",
+        "sortBy": "Months - Memnor",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Months"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Months - Memnor",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Months - Memnor"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Months - Member Key",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Months - Member Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year - Default",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Year - Default"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year - Long Names",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "Basic",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:03 - Essbase GL Basic.BISAMPL2.Basic.Year - Long Names"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "Basic",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:03 - Essbase GL Basic.BISAMPL2.Basic"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:03 - Essbase Integration.Year.Months"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "History",
+      "ragged": true,
+      "logicalLevels": [
+        {
+          "name": "History",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:History - Member Key"
+          ]
+        },
+        {
+          "name": "Quarter",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Quarter"
+          ],
+          "displayColumn": "logicalColumn:Quarter"
+        },
+        {
+          "name": "Months",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Months - Member Key"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "Year [branch at level 'Quarter']",
+          "levels": [ "History", "Quarter", "Months" ]
+        }
+      ]
+    }
+  }
+}

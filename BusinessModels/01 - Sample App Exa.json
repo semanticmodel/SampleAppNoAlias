@@ -1,0 +1,190 @@
+{
+  "businessModel": {
+    "name": "01 - Sample App Exa",
+    "description": "\r\n",
+    "joins": [      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #4",
+        "leftTable": "logicalTable:01 - Sample App Exa.D0 Time",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD7 Orders (Facts Attributes)F18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #6",
+        "leftTable": "logicalTable:01 - Sample App Exa.D6 Customers (Snowflakes)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2589691362580639",
+        "leftTable": "logicalTable:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD3 OfficesF16 Rev. (Team Agg)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F16 Rev\\. (Team Agg)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D3 Offices",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App Wi",
+        "leftTable": "logicalTable:01 - Sample App Exa.D3 Offices",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD20 Product (Ragged Hier)F16 Rev. (Team Agg)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F16 Rev\\. (Team Agg)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D20 Product (Ragged Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD1 Products (Level Based Hier)F18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D1 Products (Level Based Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #2",
+        "leftTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD1 Products (Level Based Hier)F17 Rev. (Siblings Aggr)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D1 Products (Level Based Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD7 Orders (Facts Attributes)F16 Rev. (Team Agg)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F16 Rev\\. (Team Agg)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD6 Customers (Snowflakes)F16 Rev. (Team Agg)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F16 Rev\\. (Team Agg)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D6 Customers (Snowflakes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #3",
+        "leftTable": "logicalTable:01 - Sample App Exa.D1 Products (Level Based Hier)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY",
+        "drivingTable": "logicalTable:01 - Sample App Exa.D1 Products (Level Based Hier)"
+      },
+      {
+        "name": "RelationshipD6 Customers (Snowflakes)F17 Rev. (Siblings Aggr)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D6 Customers (Snowflakes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD20 Product (Ragged Hier)F18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D20 Product (Ragged Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD3 OfficesF17 Rev. (Siblings Aggr)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D3 Offices",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD3 OfficesF18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D3 Offices",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD1 Products (Level Based Hier)F16 Rev. (Team Agg)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F16 Rev\\. (Team Agg)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D1 Products (Level Based Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #1",
+        "leftTable": "logicalTable:01 - Sample App Exa.F90 Time Facts",
+        "rightTable": "logicalTable:01 - Sample App Exa.D0 Time",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #5",
+        "leftTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F6 Logical Calculations Examples",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD7 Orders (Facts Attributes)F17 Rev. (Siblings Aggr)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "Sample Sales Exa:03 - Sample App With ORCL Agg#1:03 - Sample App With ORCL Agg:03 - Sample App With ORCL Agg:01b - Sample App #7",
+        "leftTable": "logicalTable:01 - Sample App Exa.D7 Orders (Facts Attributes)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F5 Time Series and Level Based Examples",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2903971420439038",
+        "leftTable": "logicalTable:01 - Sample App Exa.D20 Product (Ragged Hier)",
+        "rightTable": "logicalTable:01 - Sample App Exa.F0 Sales Base Measures",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "RelationshipD5 Sales Rep (Parent Child Hier)F18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD20 Product (Ragged Hier)F17 Rev. (Siblings Aggr)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F17 Rev\\. (Siblings Aggr)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D20 Product (Ragged Hier)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      },
+      {
+        "name": "RelationshipD6 Customers (Snowflakes)F18 Rev. (Individual Contrib)",
+        "leftTable": "logicalTable:01 - Sample App Exa.F18 Rev\\. (Individual Contrib)",
+        "rightTable": "logicalTable:01 - Sample App Exa.D6 Customers (Snowflakes)",
+        "joinType": "INNER",
+        "cardinality": "MANY_TO_ZERO_OR_ONE"
+      }
+    ]
+  }
+}

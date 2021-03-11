@@ -1,0 +1,60 @@
+{
+  "physicalTable": {
+    "name": "COUNTRY_CODES",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "LAST_UPDATE_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "LAST_UPDATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREATED_BY",
+        "dataType": "VARCHAR",
+        "length": 60,
+        "nullable": true
+      },
+      {
+        "name": "CREATION_DATE",
+        "dataType": "DATETIME",
+        "nullable": true
+      },
+      {
+        "name": "OBJECT_VERSION_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "COUNTRY_NAME",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "LANGUAGE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "SOURCE_LANG",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "ISO_COUNTRY_CODE",
+        "dataType": "VARCHAR",
+        "length": 2,
+        "nullable": true
+      }
+    ]
+  }
+}

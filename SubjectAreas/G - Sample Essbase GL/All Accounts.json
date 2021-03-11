@@ -1,0 +1,96 @@
+{
+  "presentationTable": {
+    "name": "All Accounts",
+    "description": "->",
+    "alternateNames": [
+      "Accounts#1",
+      "More Account Objects"
+    ],
+    "presentationColumns": [ {
+        "name": "Book",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Book",
+        "alternateNames": [
+          "Gen2,Accounts"
+        ]
+      },
+      {
+        "name": "Account Lvl 3",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 3"
+      },
+      {
+        "name": "Account Lvl 4",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 4"
+      },
+      {
+        "name": "Account Lvl 5",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 5"
+      },
+      {
+        "name": "Account Lvl 6",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 6"
+      },
+      {
+        "name": "Account Lvl 7",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 7"
+      },
+      {
+        "name": "Account Lvl 8",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 8"
+      },
+      {
+        "name": "Account Lvl 9",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 9"
+      },
+      {
+        "name": "Account Lvl 10",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Account Lvl 10"
+      },
+      {
+        "name": "Accounts - Asset",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Asset"
+      },
+      {
+        "name": "Accounts - Liability",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Liability"
+      },
+      {
+        "name": "Accounts - Equity",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Equity"
+      },
+      {
+        "name": "Accounts - Saved Assumption",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Saved Assumption"
+      },
+      {
+        "name": "Accounts - Saved Assumption HSP_UDF",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Saved Assumption HSP_UDF",
+        "alternateNames": [
+          "Accounts - Saved Assumption,HSP_UDF"
+        ]
+      },
+      {
+        "name": "Accounts - ExchangeRate",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - ExchangeRate"
+      },
+      {
+        "name": "Accounts - Revenue",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Revenue"
+      },
+      {
+        "name": "Accounts - Expense",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Expense"
+      },
+      {
+        "name": "Accounts - Expense HSP_UDF",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Expense HSP_UDF",
+        "alternateNames": [
+          "Accounts - Expense,HSP_UDF"
+        ]
+      },
+      {
+        "name": "Accounts - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.GL All Accounts.Accounts - Default"
+      }
+    ]
+  }
+}

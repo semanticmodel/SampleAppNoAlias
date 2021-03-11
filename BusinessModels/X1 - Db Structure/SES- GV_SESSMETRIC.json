@@ -1,0 +1,254 @@
+{
+  "logicalTable": {
+    "name": "SES- GV_SESSMETRIC",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Begin Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.BEGIN_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cpu",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.CPU"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "End Time",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.END_TIME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Hard Parses",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.HARD_PARSES"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Inst Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.INST_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Intsize Csec",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.INTSIZE_CSEC"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logical Read Pct",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.LOGICAL_READ_PCT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Logical Reads",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.LOGICAL_READS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Pga Memory",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.PGA_MEMORY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Read Pct",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.PHYSICAL_READ_PCT"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Physical Reads",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.PHYSICAL_READS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Serial Num",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.SERIAL_NUM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Session Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.SESSION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Soft Parses",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "GV_$SESSMETRIC",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC.SOFT_PARSES"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "GV_$SESSMETRIC",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X1 - ORCL Database Admin.SYS.GV$SESSMETRIC"
+          ]
+        }
+      }
+    ]
+  }
+}

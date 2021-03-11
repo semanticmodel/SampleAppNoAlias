@@ -1,0 +1,9 @@
+{
+  "physicalTableAlias": {
+    "name": "40 TIME DAY",
+    "sourceTable": "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.OBIEE_TIME_DAY_D",
+    "caching": {
+      "enable": true
+    }
+  }
+}

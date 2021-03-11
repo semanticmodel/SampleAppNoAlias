@@ -1,0 +1,34 @@
+{
+  "presentationTable": {
+    "name": "Facts (BDSQL)",
+    "presentationColumns": [ {
+        "name": "Count of Movies",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Count of Movies"
+      },
+      {
+        "name": "Count of Activities",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Count of Activities"
+      },
+      {
+        "name": "Count of Customers",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Count of Customers"
+      },
+      {
+        "name": "Price",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Price"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Recommended"
+      },
+      {
+        "name": "Rating",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Rating"
+      },
+      {
+        "name": "Recommended Flag",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (BDSQL).Recommended Flag"
+      }
+    ]
+  }
+}

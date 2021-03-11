@@ -1,0 +1,28 @@
+{
+  "presentationTable": {
+    "name": "More Sales Rep Objects",
+    "localization": {
+      "localizationKey": "More Sales Rep Objects",
+      "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Sales_Rep_Objects)"
+    },
+    "description": "This folder contains addition Employee attributes like Position Key and Closure Distance.",
+    "presentationColumns": [ {
+        "name": "E4k  Position Key",
+        "localization": {
+          "localizationKey": "E4k  Position Key",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Sales_Rep_Objects_E4k__Position_Key)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E4k  Position Key",
+        "description": "Help : \r\nStores the employee position key."
+      },
+      {
+        "name": "E99  Closure Distance",
+        "localization": {
+          "localizationKey": "E99  Closure Distance",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Sales_Rep_Objects_E99__Closure_Distance)"
+        },
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App.D5 Sales Rep (Parent Child Hier).E99  Closure Distance"
+      }
+    ]
+  }
+}

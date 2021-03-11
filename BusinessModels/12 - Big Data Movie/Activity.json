@@ -1,0 +1,92 @@
+{
+  "logicalTable": {
+    "name": "Activity",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Activity",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_IMP",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC.activity"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_HIVE",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC.activity"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "MOVIEAPP_ACTIVITY_BDSQL",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC.ACTIVITYID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Activity Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "ACTIVITY",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "ACTIVITY",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.ACTIVITY"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_IMP",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:21 - Big Data Movie (Impala).moviework.movieapp_log_v_IMPALA_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_HIVE",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:20 - Big Data Movie (Hive).moviework.movieapp_log_v_HIVE_SRC"
+          ]
+        }
+      },
+      {
+        "name": "MOVIEAPP_ACTIVITY_BDSQL",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:22 - Big Data Movie (BDSQL).MOVIEDEMO.MOVIEAPP_LOG_BDSQL_SRC"
+          ]
+        }
+      }
+    ]
+  }
+}

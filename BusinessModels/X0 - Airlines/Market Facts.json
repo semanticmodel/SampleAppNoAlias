@@ -1,0 +1,1316 @@
+{
+  "logicalTable": {
+    "name": "Market Facts",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Airline Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIRLINE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEST"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Month",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.MONTH"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Origin",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.ORIGIN"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Quarter",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.QUARTER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Year",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.YEAR"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Freight (Tons)",
+        "description": "Non-Stop Segment Freight Transported (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1*1000/cast(2204622 as double)",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.FREIGHT"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Freight_T00039BE0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Freight_T00039BE0"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mail (Tons)",
+        "description": "Non-Stop Segment Mail Transported (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1*1000/cast(2204622 as double)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.MAIL"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Mail_Tons00039BE1"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Mail_Tons00039BE1"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Passengers",
+        "description": "Non-Stop Segment Passengers Transported",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PASSENGERS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Passengers00039BE2"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Passengers00039BE2"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payload (Tons)",
+        "description": "Available Payload (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1*1000/cast(2204622 as double)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PAYLOAD"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Payload_T00039BE3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Payload_T00039BE3"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Ramp To Ramp (Min)",
+        "description": "Ramp to Ramp Time (minutes)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.RAMP_TO_RAMP"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# of Seats",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.SEATS"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Z_of_Seats00039BE5"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Z_of_Seats00039BE5"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Air Time (Min)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.AIR_TIME"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Depts Performed",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEPARTURES_PERFORMED"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "# Depts Scheduled",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DEPARTURES_SCHEDULED"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Distance (Miles)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.DISTANCE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "PAX Load Factor",
+        "description": "Ratio of Passenger Miles to Available Seat Miles",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 AS DOUBLE PRECISION ) / %2 * 100",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Passengers",
+              "logicalColumn:X0 - Airlines.Market Facts.# of Seats"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Freight Load Factor",
+        "description": "Ratio of Passenger Miles to Available Seat Miles",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CAST (%1 + %2 AS DOUBLE PRECISION ) / %3 * 100",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Freight (Tons)",
+              "logicalColumn:X0 - Airlines.Market Facts.Mail (Tons)",
+              "logicalColumn:X0 - Airlines.Market Facts.Payload (Tons)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "P Ago Freight (Tons)",
+        "description": "Non-Stop Segment Freight Transported (pounds)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Freight (Tons)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "P Ago Mail (Tons)",
+        "description": "Non-Stop Segment Mail Transported (pounds)",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Mail (Tons)"
+            ]
+          }
+        }
+      },
+      {
+        "name": "P Ago Passengers",
+        "description": "Non-Stop Segment Passengers Transported",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Passengers"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Freight (Tons) x Miles",
+        "description": "Non-Stop Segment Passengers Transported",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1*1000/cast(2204622 as double)\r\n",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.FREIGHT_PND_MILES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Freight_T00039BEF"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Freight_T00039BEF"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Passengers x Miles",
+        "description": "Non-Stop Segment Passengers Transported",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PASSENGERS_MILES"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Passengers00039BF0"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Passengers00039BF0"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "P Ago Freight x Miles",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Freight (Tons) x Miles"
+            ]
+          }
+        }
+      },
+      {
+        "name": "P Ago Passengers x Miles",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " AGO(%1, 1)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.Market Facts.Passengers x Miles"
+            ]
+          }
+        }
+      },
+      {
+        "name": "Avg PAX per Flight",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PASSENGERS_PER_FLIGHT"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M.Avg_PAX_pe00039BF3"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M.Avg_PAX_pe00039BF3"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "AVG"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Freight (Pounds)",
+        "description": "Non-Stop Segment Freight Transported (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.FREIGHT"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Mail (Pounds)",
+        "description": "Non-Stop Segment Mail Transported (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.MAIL"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payload (Pounds)",
+        "description": "Available Payload (pounds)",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.PAYLOAD"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      },
+      {
+        "name": "Freight (pnds) x Miles",
+        "description": "Non-Stop Segment Passengers Transported",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DOMESTIC_SEGMENT",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment.FREIGHT_PND_MILES"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "SUM"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DOMESTIC_SEGMENT",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.01 DOMESTIC Segment"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail",
+          "logicalLevel:X0 - Airlines.24 Cancellation.24 Cancel Total",
+          "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail",
+          "logicalLevel:X0 - Airlines.50 Flight.50 Flight Total",
+          "logicalLevel:X0 - Airlines.37 Service Class.37 Service Class Detail",
+          "logicalLevel:X0 - Airlines.60 Segment.60 Segment Detail",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+          "logicalLevel:X0 - Airlines.32 Aircraft Group.32 Aircraft Group Detail",
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail",
+          "logicalLevel:X0 - Airlines.36 Carrier Region.36 Carrier Region Detail",
+          "logicalLevel:X0 - Airlines.21 Dep Time Blk.21 Dep Time Blk Total",
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month",
+          "logicalLevel:X0 - Airlines.22 Dept Delay.22 Dept Delay Total",
+          "logicalLevel:X0 - Airlines.23 Arr Time Blk.23 Arr Time Blk Total",
+          "logicalLevel:X0 - Airlines.20 Arr Delay.20 Arr Delay Total",
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail",
+          "logicalLevel:X0 - Airlines.34 Carrier Group.34 Carrier Group Detail",
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04Y",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04Y"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail",
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Year",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_02M",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_02M"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month",
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail",
+          "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_03M",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_03M"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail",
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_04M",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_04M"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail",
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05Y",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05Y"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail",
+          "logicalLevel:X0 - Airlines.32 Aircraft Group.32 Aircraft Group Detail",
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Year",
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_01M",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_01M"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.19 Distance Group.19 DGroup Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_FACT_AGG_ORMK_05M",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.FACT_AGG_ORMK_05M"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.31 Carrier.31 Carrier Detail",
+          "logicalLevel:X0 - Airlines.32 Aircraft Group.32 Aircraft Group Detail",
+          "logicalLevel:X0 - Airlines.33 Aircraft Type.33 Aircraft Type Detail",
+          "logicalLevel:X0 - Airlines.00 Time.Time Month",
+          "logicalLevel:X0 - Airlines.18 Route.18 Route Detail",
+          "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+          "logicalLevel:X0 - Airlines.35 PPF Group.35 PPF Group Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "25 Cancelled Total",
+      "logicalLevels": [
+        {
+          "name": "25 Cancelled Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "25 Cancelled",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:Cancelled Code"
+          ],
+          "displayColumn": "logicalColumn:Cancelled Code"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "25 Cancelled",
+          "levels": [ "25 Cancelled Total", "25 Cancelled" ]
+        }
+      ]
+    }
+  }
+}

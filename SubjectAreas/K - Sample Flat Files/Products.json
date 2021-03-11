@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Products",
+    "description": "Product dimension attribute objects",
+    "presentationColumns": [ {
+        "name": "P1  Product",
+        "localization": {
+          "localizationKey": "P1  Product",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Products_P1__Product)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D1 Products.P1  Product",
+        "description": "Help : \r\nStores the product description."
+      },
+      {
+        "name": "P2  Product Type",
+        "localization": {
+          "localizationKey": "P2  Product Type",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Products_P2__Product_Type)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D1 Products.P2  Product Type",
+        "description": "Help : \r\nStores the product type description."
+      },
+      {
+        "name": "P3  LOB",
+        "localization": {
+          "localizationKey": "P3  LOB",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Products_P3__LOB)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D1 Products.P3  LOB",
+        "description": "Help : \r\nStores the product's LOB description."
+      },
+      {
+        "name": "P4  Brand",
+        "localization": {
+          "localizationKey": "P4  Brand",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_Products_P4__Brand)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D1 Products.P4  Brand",
+        "description": "Help : \r\nStores the product's brand description."
+      },
+      {
+        "name": "P0  Product Number",
+        "localization": {
+          "localizationKey": "P0  Product Number",
+          "nameVariable": "VALUEOF(NQ_SESSION.CN_A_-_Sample_Sales_More_Product_Objects_P0__Product_Number)"
+        },
+        "sourceLogicalColumn": "logicalColumn:02 - Flat XML files Sample.D1 Products.P0  Product Number",
+        "description": "Help : \r\nStores the product number."
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Products Hierarchy",
+        "alternateNames": [
+          "H1 Products"
+        ],
+        "sourceLogicalTable": "logicalTable:02 - Flat XML files Sample.D1 Products",
+        "levels": [ {
+            "name": "Products Total",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D1 Products.Products Total"
+          },
+          {
+            "name": "Products Brand",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D1 Products.Products Brand",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Products.P4  Brand"
+          },
+          {
+            "name": "Products LOB",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D1 Products.Products LOB",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Products.P3  LOB"
+          },
+          {
+            "name": "Products Type",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D1 Products.Products Type",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Products.P2  Product Type"
+          },
+          {
+            "name": "Products Detail",
+            "sourceLogicalLevel": "logicalLevel:02 - Flat XML files Sample.D1 Products.Products Detail",
+            "displayColumn": "presentationColumn:K - Sample Flat Files.Products.P1  Product"
+          }
+        ]
+      }
+    ]
+  }
+}

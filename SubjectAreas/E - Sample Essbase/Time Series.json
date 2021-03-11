@@ -1,0 +1,14 @@
+{
+  "presentationTable": {
+    "name": "Time Series",
+    "presentationColumns": [ {
+        "name": "121  Period Ago Rev",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).121  Period Ago Rev"
+      },
+      {
+        "name": "123  Rev Pct Var to Period Ago",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Sample.F0 Flat Measures (E1).123  Rev Pct Var to Period Ago"
+      }
+    ]
+  }
+}

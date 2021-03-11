@@ -1,0 +1,214 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_PARTITIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "COMPOSITE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "LOGGING",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "PCT_INCREASE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FREELIST_GROUPS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CELL_FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "BUFFER_POOL",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "FREELISTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMPRESSION",
+        "dataType": "VARCHAR",
+        "length": 8
+      },
+      {
+        "name": "TABLESPACE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "SUBPARTITION_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INITIAL_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHAIN_CNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FLASH_CACHE",
+        "dataType": "VARCHAR",
+        "length": 7
+      },
+      {
+        "name": "PARENT_TABLE_PARTITION",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "HIGH_VALUE_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_USED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVG_ROW_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NEXT_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INI_TRANS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "EMPTY_BLOCKS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PCT_FREE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMPRESS_FOR",
+        "dataType": "VARCHAR",
+        "length": 12
+      },
+      {
+        "name": "AVG_SPACE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SEGMENT_CREATED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "IS_NESTED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INTERVAL",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NUM_ROWS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAX_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIGH_VALUE",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARTITION_POSITION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MIN_EXTENT",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "logicalTable": {
+    "name": "Dim - Association Rule Consequent",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Consequent Confidence",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_CONF"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent Attribute Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_NM"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent Attribute Num Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_NUM_VAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent Attribute Str Value",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_STR_VAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_VAL"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent Support",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_ATTR_SUP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Consequent Conditional Operator",
+        "dataType": "CHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.CON_COND_OP"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Model Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.MODEL_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Owner",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.OWNER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Rule Id",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D91 Associantion Rules",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules.RULE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D91 Associantion Rules",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D91 Associantion Rules"
+          ]
+        }
+      }
+    ]
+  }
+}

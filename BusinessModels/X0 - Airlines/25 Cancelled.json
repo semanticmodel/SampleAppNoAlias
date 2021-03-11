@@ -1,0 +1,96 @@
+{
+  "logicalTable": {
+    "name": "25 Cancelled",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Cancelled Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PERFORMANCE_1",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL.CANCELLED"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_25_Canc00039D16",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16.Cancelled_00039C5B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Cancelled",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " CASE  WHEN %1 = '0.00' THEN 'Departed' ELSE 'Cancelled' END ",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.25 Cancelled.Cancelled Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PERFORMANCE_1",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.00 PERFORMANCE FULL"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.25 Cancelled.25 Cancelled"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_25_Canc00039D16",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_25_Canc00039D16"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.25 Cancelled.25 Cancelled"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "25 Cancelled Total",
+      "logicalLevels": [
+        {
+          "name": "25 Cancelled Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "25 Cancelled",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 3,
+          "primaryColumns": [
+            "logicalColumn:Cancelled Code"
+          ],
+          "displayColumn": "logicalColumn:Cancelled Code"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "25 Cancelled",
+          "levels": [ "25 Cancelled Total", "25 Cancelled" ]
+        }
+      ]
+    }
+  }
+}

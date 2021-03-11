@@ -1,0 +1,65 @@
+{
+  "physicalTable": {
+    "name": "V$SYSMETRIC_SUMMARY",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "METRIC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "END_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "GROUP_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STANDARD_DEVIATION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "AVERAGE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_INTERVAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MAXVAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "INTSIZE_CSEC",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "METRIC_UNIT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "MINVAL",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BEGIN_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "METRIC_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      }
+    ]
+  }
+}

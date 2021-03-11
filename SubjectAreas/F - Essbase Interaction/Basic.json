@@ -1,0 +1,103 @@
+{
+  "presentationTable": {
+    "name": "Basic",
+    "presentationColumns": [ {
+        "name": "Profit",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Profit"
+      },
+      {
+        "name": "Margin",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Margin"
+      },
+      {
+        "name": "Sales",
+        "isDefaultReadWriteable": true,
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Sales"
+      },
+      {
+        "name": "COGS",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.COGS"
+      },
+      {
+        "name": "Total Expenses",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Total Expenses"
+      },
+      {
+        "name": "Marketing",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Marketing"
+      },
+      {
+        "name": "Payroll",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Payroll"
+      },
+      {
+        "name": "Misc",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Misc"
+      },
+      {
+        "name": "Inventory",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Inventory"
+      },
+      {
+        "name": "Opening Inventory",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Opening Inventory"
+      },
+      {
+        "name": "Additions",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Additions"
+      },
+      {
+        "name": "Ending Inventory",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Ending Inventory"
+      },
+      {
+        "name": "Ratios",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Ratios"
+      },
+      {
+        "name": "Margin %",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Margin %"
+      },
+      {
+        "name": "Profit %",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Profit %"
+      },
+      {
+        "name": "Metrics",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Metrics"
+      },
+      {
+        "name": "Budget Operating Expenses",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Budget Operating Expenses"
+      },
+      {
+        "name": "Operating Expenses",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Operating Expenses"
+      },
+      {
+        "name": "Operating Expenses LR",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Operating Expenses LR"
+      },
+      {
+        "name": "Operating Expenses SES",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Operating Expenses SES"
+      },
+      {
+        "name": "Drivers",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Drivers"
+      },
+      {
+        "name": "Expense Adjustment",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.Expense Adjustment"
+      },
+      {
+        "name": "LR Temp",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.LR Temp"
+      },
+      {
+        "name": "SES Temp",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase Integration.Basic.SES Temp"
+      }
+    ]
+  }
+}

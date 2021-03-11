@@ -1,0 +1,22 @@
+{
+  "presentationTable": {
+    "name": "AirportsCount",
+    "presentationColumns": [ {
+        "name": "Airport",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.AirportsCount.Airport"
+      },
+      {
+        "name": "ChangeInNumFlts",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.AirportsCount.ChangeInNumFlts"
+      },
+      {
+        "name": "NumFlightsY1",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.AirportsCount.NumFlightsY1"
+      },
+      {
+        "name": "NumFlightsY2",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.AirportsCount.NumFlightsY2"
+      }
+    ]
+  }
+}

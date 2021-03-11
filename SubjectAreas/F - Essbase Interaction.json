@@ -1,0 +1,33 @@
+{
+  "subjectArea": {
+    "name": "F - Essbase Interaction",
+    "sourceBusinessModel": "businessModel:03 - Essbase Integration",
+    "description": "Essbase Interaction Examples",
+    "tableOrder": [
+      {
+        "name": "presentationTable:F - Essbase Interaction.Basic"
+      },
+      {
+        "name": "presentationTable:F - Essbase Interaction.Year"
+      },
+      {
+        "name": "presentationTable:F - Essbase Interaction.Scenario"
+      },
+      {
+        "name": "presentationTable:F - Essbase Interaction.Channels"
+      },
+      {
+        "name": "presentationTable:F - Essbase Interaction.Product"
+      },
+      {
+        "name": "presentationTable:F - Essbase Interaction.Customers"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

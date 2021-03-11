@@ -1,0 +1,33 @@
+{
+  "presentationTable": {
+    "name": "Prompts",
+    "alternateNames": [
+      "Dashboard Prompt",
+      "Prompts Attributes"
+    ],
+    "presentationColumns": [ {
+        "name": "Prompt Name",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Prompt Name"
+      },
+      {
+        "name": "Prompt Table",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Prompt Table"
+      },
+      {
+        "name": "Prompt Column",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Prompt Column"
+      },
+      {
+        "name": "Prompt Path",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Prompt Path"
+      },
+      {
+        "name": "Prompt Subject Area",
+        "sourceLogicalColumn": "logicalColumn:10 - Usage Tracking.WS Objects Attributes.Prompt Subject Area",
+        "alternateNames": [
+          "Subject Area"
+        ]
+      }
+    ]
+  }
+}

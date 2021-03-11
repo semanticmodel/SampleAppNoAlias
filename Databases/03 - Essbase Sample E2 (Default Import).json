@@ -1,0 +1,89 @@
+{
+  "database": {
+    "name": "03 - Essbase Sample E2 (Default Import)",
+    "databaseType": "Essbase 11.1.2.3.500",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "FLOOR_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "ROUND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "TRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LTRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RTRIM_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "UPPER_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LOWER_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CONCAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "SUBSTRING_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "LEFT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RIGHT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "CAST_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "MULTI_COLUMN_IN_SUPPORTED",
+        "value": true
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "Connection Pool",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "ESSBASE",
+        "xmlaInfo": "<Replace Me>",
+        "xmlaCatalog": "10.228.232.106",
+        "xmlaUseSession": true,
+        "supportParams": true,
+        "description": "Connection pool for Sample Essbase source.\r\nInstead of editing connectivity parameters in each connection pool, update the RPD and Session variables that hold that information (Manage > Variables)\r\n\r\nMake sure you have \r\n- updated the default value of the session variable ESS_SERVER with the correct information, \r\n- and updated the password in the password field with the correct values\r\n\r\nNote : you can also replace the \r\n\"VALUEOF(NQ_SESSION.ESSB_SERVER)\"\r\nby the correct essbase server host name or IP adress directly",
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 0,
+          "transactionBoundary": 0
+        }
+      }
+    ]
+  }
+}

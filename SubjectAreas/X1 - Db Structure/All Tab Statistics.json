@@ -1,0 +1,102 @@
+{
+  "presentationTable": {
+    "name": "All Tab Statistics",
+    "alternateNames": [
+      "All_tab_statistics",
+      "OBJ- ALL_TAB_STATISTICS"
+    ],
+    "presentationColumns": [ {
+        "name": "Avg Cache Hit Ratio",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Avg Cache Hit Ratio"
+      },
+      {
+        "name": "Avg Cached Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Avg Cached Blocks"
+      },
+      {
+        "name": "Avg Row Len",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Avg Row Len"
+      },
+      {
+        "name": "Avg Space",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Avg Space"
+      },
+      {
+        "name": "Avg Space Freelist Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Avg Space Freelist Blocks"
+      },
+      {
+        "name": "Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Blocks"
+      },
+      {
+        "name": "Chain Cnt",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Chain Cnt"
+      },
+      {
+        "name": "Empty Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Empty Blocks"
+      },
+      {
+        "name": "Global Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Global Stats"
+      },
+      {
+        "name": "Last Analyzed",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Last Analyzed"
+      },
+      {
+        "name": "Num Freelist Blocks",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Num Freelist Blocks"
+      },
+      {
+        "name": "Num Rows",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Num Rows"
+      },
+      {
+        "name": "Object Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Object Type"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Owner"
+      },
+      {
+        "name": "Partition Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Partition Name"
+      },
+      {
+        "name": "Partition Position",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Partition Position"
+      },
+      {
+        "name": "Sample Size",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Sample Size"
+      },
+      {
+        "name": "Stale Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Stale Stats"
+      },
+      {
+        "name": "Stattype Locked",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Stattype Locked"
+      },
+      {
+        "name": "Subpartition Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Subpartition Name"
+      },
+      {
+        "name": "Subpartition Position",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Subpartition Position"
+      },
+      {
+        "name": "Table Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.Table Name"
+      },
+      {
+        "name": "User Stats",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_TAB_STATISTICS.User Stats"
+      }
+    ]
+  }
+}

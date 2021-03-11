@@ -1,0 +1,37 @@
+{
+  "physicalTable": {
+    "name": "DBA_DIMENSIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DIMENSION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "INVALID",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "REVISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMPILE_STATE",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "presentationTable": {
+    "name": "Time Series",
+    "presentationColumns": [ {
+        "name": "Gross Margin % Chg Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin % Chg Pr Period"
+      },
+      {
+        "name": "Gross Margin % Chg Pr Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin % Chg Pr Year"
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Avg",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Avg"
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Max",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Max"
+      },
+      {
+        "name": "Gross Margin 3 Period Moving Total",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin 3 Period Moving Total"
+      },
+      {
+        "name": "Gross Margin YTD",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin YTD"
+      },
+      {
+        "name": "Gross Margin YTD % Chg Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Gross Margin YTD % Chg Pr Period"
+      },
+      {
+        "name": "Net Revenue % Chg Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue % Chg Pr Period"
+      },
+      {
+        "name": "Net Revenue % Chg Pr Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue % Chg Pr Year"
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Avg",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Avg"
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Max",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Max"
+      },
+      {
+        "name": "Net Revenue 3 Period Moving Total",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue 3 Period Moving Total"
+      },
+      {
+        "name": "Net Revenue Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Pr Period"
+      },
+      {
+        "name": "Net Revenue Pr Year",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue Pr Year"
+      },
+      {
+        "name": "Net Revenue YTD",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue YTD"
+      },
+      {
+        "name": "Net Revenue YTD % Chg Pr Period",
+        "sourceLogicalColumn": "logicalColumn:04 - Olap Sample.F0 Revenue Cube.Net Revenue YTD % Chg Pr Period"
+      }
+    ]
+  }
+}

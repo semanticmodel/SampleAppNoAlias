@@ -1,0 +1,25 @@
+{
+  "physicalTable": {
+    "name": "ORE_SCRIPTS",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select name, '    '||script script from sys.rq$script"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true
+      },
+      {
+        "name": "SCRIPT",
+        "dataType": "VARCHAR",
+        "length": 4000,
+        "nullable": true
+      }
+    ]
+  }
+}

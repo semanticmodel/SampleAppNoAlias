@@ -1,0 +1,104 @@
+{
+  "presentationTable": {
+    "name": "Origin",
+    "description": "->",
+    "alternateNames": [
+      "O",
+      "Ori"
+    ],
+    "presentationColumns": [ {
+        "name": "Orig Region Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Region Name"
+      },
+      {
+        "name": "Orig Division Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Division Name",
+        "alternateNames": [
+          "Orig Division"
+        ]
+      },
+      {
+        "name": "Orig US State Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig US State Name"
+      },
+      {
+        "name": "Orig City Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig City Name",
+        "alternateNames": [
+          "Orig City"
+        ]
+      },
+      {
+        "name": "Orig Airport",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Airport"
+      },
+      {
+        "name": "Orig Airport Name",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Airport Name",
+        "alternateNames": [
+          "Orig Airport Name#1"
+        ]
+      },
+      {
+        "name": "Orig Airport Lat",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Airport Lat"
+      },
+      {
+        "name": "Orig Airport Long",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Airport Long"
+      },
+      {
+        "name": "Orig Airport Desc",
+        "sourceLogicalColumn": "logicalColumn:X0 - Airlines.11 Orig Airport Map.Orig Airport Desc"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Orig Airport",
+        "alternateNames": [
+          "11 Orig Airport Map"
+        ],
+        "sourceLogicalTable": "logicalTable:X0 - Airlines.11 Orig Airport Map",
+        "levels": [ {
+            "name": "All Orig Airports",
+            "alternateNames": [
+              "11 Orig Total Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Total Map"
+          },
+          {
+            "name": "Orig Region",
+            "alternateNames": [
+              "11 Orig Region Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Region Map",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Origin.Orig Region Name"
+          },
+          {
+            "name": "Orig Division",
+            "alternateNames": [
+              "11 Orig Division Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Division Map",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Origin.Orig Division Name"
+          },
+          {
+            "name": "Orig State",
+            "alternateNames": [
+              "11 Orig State Map"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig State Map",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Origin.Orig US State Name"
+          },
+          {
+            "name": "Orig Airport",
+            "alternateNames": [
+              "11 Orig Airport Map Detail"
+            ],
+            "sourceLogicalLevel": "logicalLevel:X0 - Airlines.11 Orig Airport Map.11 Orig Airport Map Detail",
+            "displayColumn": "presentationColumn:X - Airlines Traffic.Origin.Orig Airport Name"
+          }
+        ]
+      }
+    ]
+  }
+}

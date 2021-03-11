@@ -1,0 +1,233 @@
+{
+  "database": {
+    "name": "X3 - BPM Data (ORCL)",
+    "databaseType": "Oracle 12c",
+    "featureOverrides": [ {
+        "name": "LENGTH_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "RAND_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "REPEAT_SUPPORTED",
+        "value": false
+      },
+      {
+        "name": "PERF_PREFER_NO_COMMON_QUERY_FACTORING",
+        "value": false
+      },
+      {
+        "name": "FRACTIONAL_SECOND_PRECISION",
+        "value": 0
+      },
+      {
+        "name": "MAX_BULK_FETCH_BUFFER_SIZE",
+        "value": 327680
+      },
+      {
+        "name": "DEFAULT_BULK_FETCH_ROW_COUNT",
+        "value": 100
+      }
+    ],
+    "connectionPools": [ {
+        "name": "BPM Relational Connection",
+        "connectionTimeout": 5,
+        "connectionTimeoutUnit": "MINUTES",
+        "maxConnections": 10,
+        "connection": "",
+        "callInterface": "OCI10G",
+        "supportParams": true,
+        "writeBackConfig": {
+          "bulkInsertBufferSize": 10485760,
+          "transactionBoundary": 1000,
+          "tempTablePrefix": "TT"
+        }
+      }
+    ],
+    "joins": [ {
+        "name": "9 Facts_FKey#2",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.ACTIVITYID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "9 Facts_FKey",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.4 Dim Roles.ROLEID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.ACTIVITY_ROLE_ID"
+          }
+        ]
+      },
+      {
+        "name": "9 Facts_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.7 Facts TasksPerf.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "9 Facts_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.6 Facts ProcessPerf.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_ACTIVE_STD_V_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_ACTIVE_STD_V_FKey",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.ACTIVITYID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V.ACTIVITY_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVE_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_TASKPERF_STD_V_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.ACTIVITYID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V.ACTIVITY_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_TASKPERF_STD_V_FKey#2",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_TASKPERF_STD_V_FKey",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V.ROLEID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V.ACTIVITY_ROLE_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_TASKPERF_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "9 Facts_FKey#2",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.ACTIVITYID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.ACTIVITY_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.3 Dim Activities.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "9 Facts_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.2 Dim Processes.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.5 Facts ActiveTasks.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_PROCPERF_STD_V_FKey",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCPERF_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCPERF_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_WORKLOAD_STD_V_FKey#2",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_PROCESS_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_WORKLOAD_STD_V_FKey",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V.ROLEID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V.ACTIVITY_ROLE_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ROLE_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V.PROCESS_ID"
+          }
+        ]
+      },
+      {
+        "name": "BPM_CUBE_WORKLOAD_STD_V_FKey#1",
+        "leftTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V",
+        "rightTable": "physicalTable:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V",
+        "joinConditions": [ {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.ACTIVITYID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V.ACTIVITY_ID"
+          },
+          {
+            "leftColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_ACTIVITY_V.PROCESSID",
+            "rightColumn": "physicalColumn:X3 - BPM Data (ORCL).BISAMPLE.BPM_CUBE_WORKLOAD_STD_V.PROCESS_ID"
+          }
+        ]
+      }
+    ]
+  }
+}

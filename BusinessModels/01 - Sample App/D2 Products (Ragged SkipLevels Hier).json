@@ -1,0 +1,204 @@
+{
+  "logicalTable": {
+    "name": "D2 Products (Ragged SkipLevels Hier)",
+    "description": "This logical table maps to the physical Products Ragged Dimension table which stores ragged and skipped level product data.\r\nIt is mapped to 1 LTS\r\nLTS1 Products - Maps the physical Product Ragged table. There are a few entries in the table where some of the levels are null or some levels have been skipped.\r\n",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "P10  Product Number (Rgd Sk Lvl)",
+        "description": "Help : \r\nProduct Key is an integer that uniquely identifies each record in the Product dimension table.",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Key"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P11  Product (Rgd Sk Lvl)",
+        "description": "Help : \r\nStores the product description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Prod_Dsc"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P12  Product Type (Rgd Sk Lvl)",
+        "description": "Help : \r\nStores the product type description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Type"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P13  LOB (Rgd Sk Lvl)",
+        "description": "Help : \r\nStores the product's LOB description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).LOB"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P14  Brand (Rgd Sk Lvl)",
+        "description": "Help : \r\nStores the product's brand description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).Brand"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "P15  Total",
+        "description": "Help : \r\nStores the product description.",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "'Total'"
+          }
+        }
+      },
+      {
+        "name": "P99  Total Value Rgd Skp (Hier)",
+        "description": "Help : \r\nStores the product description.",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "LTS1 Products",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier).TOTAL_VALUE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "LTS1 Products",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D20 Product (Ragged Hier)"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:01 - Sample App.H2 Products Ragged SkipLevels.Product (Rgd Sk Lvl) Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Product (Rgd Sk Lvl) Total",
+      "ragged": true,
+      "skipped": true,
+      "logicalLevels": [
+        {
+          "name": "Product (Rgd Sk Lvl) Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Brand",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P14  Brand (Rgd Sk Lvl)"
+          ],
+          "displayColumn": "logicalColumn:P14  Brand (Rgd Sk Lvl)"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) LOB",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P13  LOB (Rgd Sk Lvl)"
+          ],
+          "displayColumn": "logicalColumn:P13  LOB (Rgd Sk Lvl)"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P12  Product Type (Rgd Sk Lvl)"
+          ],
+          "displayColumn": "logicalColumn:P12  Product Type (Rgd Sk Lvl)"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Product",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P11  Product (Rgd Sk Lvl)"
+          ],
+          "displayColumn": "logicalColumn:P11  Product (Rgd Sk Lvl)"
+        },
+        {
+          "name": "Product (Rgd Sk Lvl) Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:P10  Product Number (Rgd Sk Lvl)"
+          ],
+          "displayColumn": "logicalColumn:P10  Product Number (Rgd Sk Lvl)"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H2 Products Ragged SkipLevels [branch at level 'Product (Rgd Sk Lvl) Product']",
+          "description": "Products Dimension:\r\nType - Ragged and Skipped Levels\r\nDrill Path - Brand->LOB->Type->Product->Detail",
+          "levels": [ "Product (Rgd Sk Lvl) Total", "Product (Rgd Sk Lvl) Brand", "Product (Rgd Sk Lvl) LOB", "Product (Rgd Sk Lvl) Type", "Product (Rgd Sk Lvl) Product", "Product (Rgd Sk Lvl) Detail" ]
+        }
+      ]
+    }
+  }
+}

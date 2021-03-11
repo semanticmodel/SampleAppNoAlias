@@ -1,0 +1,85 @@
+{
+  "presentationTable": {
+    "name": "Product Suppliers",
+    "presentationColumns": [ {
+        "name": "Supplier Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Name"
+      },
+      {
+        "name": "Supplier Status Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Status Lookup"
+      },
+      {
+        "name": "Supplier Status",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Status"
+      },
+      {
+        "name": "Supplier Type Lookup",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Type Lookup"
+      },
+      {
+        "name": "Supplier Type Code",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Type Code"
+      },
+      {
+        "name": "Email",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Email"
+      },
+      {
+        "name": "Phone Number",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Phone Number"
+      },
+      {
+        "name": "Supplier ID",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier ID"
+      },
+      {
+        "name": "Ui Skin",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Ui Skin"
+      },
+      {
+        "name": "Principal Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Principal Name"
+      },
+      {
+        "name": "Registered Date",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Registered Date"
+      },
+      {
+        "name": "Title",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Title"
+      },
+      {
+        "name": "First Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.First Name"
+      },
+      {
+        "name": "Last Name",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Last Name"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Suppliers Hier",
+        "alternateNames": [
+          "H05 Suppliers"
+        ],
+        "sourceLogicalTable": "logicalTable:X5 - OLTP Source (Fusion Order).D05 Product Suppliers",
+        "levels": [ {
+            "name": "Total",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Total"
+          },
+          {
+            "name": "Status",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Status",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Product Suppliers.Supplier Status"
+          },
+          {
+            "name": "Supplier Detail",
+            "sourceLogicalLevel": "logicalLevel:X5 - OLTP Source (Fusion Order).D05 Product Suppliers.Supplier Detail",
+            "displayColumn": "presentationColumn:X5 - OLTP (Fusion Order).Product Suppliers.Supplier ID"
+          }
+        ]
+      }
+    ]
+  }
+}

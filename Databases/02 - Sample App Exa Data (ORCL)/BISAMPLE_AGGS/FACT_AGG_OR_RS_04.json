@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "FACT_AGG_OR_RS_04",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true,
+      "expiryTime": 1,
+      "expiryUnit": "DAYS"
+    },
+    "hints": "opt_param('_index_join_enabled','false')+",
+    "physicalColumns": [ {
+        "name": "T02_Per_Na00003D05",
+        "dataType": "VARCHAR",
+        "length": 9,
+        "nullable": true
+      },
+      {
+        "name": "Brand00003D44",
+        "dataType": "VARCHAR",
+        "length": 255,
+        "nullable": true
+      },
+      {
+        "name": "Prod_Dsc00003D90",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "Revenue00004032",
+        "dataType": "DOUBLE",
+        "length": 20
+      },
+      {
+        "name": "LOB0000460B",
+        "dataType": "VARCHAR",
+        "length": 255
+      },
+      {
+        "name": "Type000046B3",
+        "dataType": "VARCHAR",
+        "length": 255
+      }
+    ]
+  }
+}

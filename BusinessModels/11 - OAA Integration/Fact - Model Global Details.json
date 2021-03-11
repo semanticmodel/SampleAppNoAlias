@@ -1,0 +1,41 @@
+{
+  "logicalTable": {
+    "name": "Fact - Model Global Details",
+    "type": "FACT",
+    "logicalColumns": [ {
+        "name": "Global Detail Value",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "D96 Model Global Details",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details.GLOBAL_DETAIL_VALUE"
+                ]
+              }
+            }
+          ]
+        },
+        "aggregation": {
+          "rule": "BASED_ON_DIMENSION",
+          "dimensionBasedRules": [ {
+              "dimension": "OTHER",
+              "rule": "MAX"
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "D96 Model Global Details",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BISAMPLE.D96 Model Global Details"
+          ]
+        }
+      }
+    ]
+  }
+}

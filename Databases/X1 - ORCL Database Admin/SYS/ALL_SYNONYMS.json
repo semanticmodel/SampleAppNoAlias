@@ -1,0 +1,32 @@
+{
+  "physicalTable": {
+    "name": "ALL_SYNONYMS",
+    "sourceType": "TABLE",
+    "physicalColumns": [ {
+        "name": "DB_LINK",
+        "dataType": "VARCHAR",
+        "length": 128
+      },
+      {
+        "name": "SYNONYM_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

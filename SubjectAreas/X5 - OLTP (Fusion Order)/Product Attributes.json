@@ -1,0 +1,70 @@
+{
+  "presentationTable": {
+    "name": "Product Attributes",
+    "presentationColumns": [ {
+        "name": "Attribute Category",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute Category"
+      },
+      {
+        "name": "Attribute1",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute1"
+      },
+      {
+        "name": "Attribute10",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute10"
+      },
+      {
+        "name": "Attribute11",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute11"
+      },
+      {
+        "name": "Attribute12",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute12"
+      },
+      {
+        "name": "Attribute13",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute13"
+      },
+      {
+        "name": "Attribute14",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute14"
+      },
+      {
+        "name": "Attribute15",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute15"
+      },
+      {
+        "name": "Attribute2",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute2"
+      },
+      {
+        "name": "Attribute3",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute3"
+      },
+      {
+        "name": "Attribute4",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute4"
+      },
+      {
+        "name": "Attribute5",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute5"
+      },
+      {
+        "name": "Attribute6",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute6"
+      },
+      {
+        "name": "Attribute7",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute7"
+      },
+      {
+        "name": "Attribute8",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute8"
+      },
+      {
+        "name": "Attribute9",
+        "sourceLogicalColumn": "logicalColumn:X5 - OLTP Source (Fusion Order).D04 Products.Attribute9"
+      }
+    ]
+  }
+}

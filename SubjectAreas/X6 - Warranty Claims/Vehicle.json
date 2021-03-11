@@ -1,0 +1,109 @@
+{
+  "presentationTable": {
+    "name": "Vehicle",
+    "alternateNames": [
+      "Vehicle - Dimension"
+    ],
+    "presentationColumns": [ {
+        "name": "Drive Train",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Drive Train"
+      },
+      {
+        "name": "Lateral Run Out",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Lateral Run Out"
+      },
+      {
+        "name": "Num Cyls",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Num Cyls"
+      },
+      {
+        "name": "Pitch Circle Diameter",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Pitch Circle Diameter"
+      },
+      {
+        "name": "Prod Date",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Prod Date"
+      },
+      {
+        "name": "Production Month",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Production Month"
+      },
+      {
+        "name": "Production Period",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Production Period"
+      },
+      {
+        "name": "Production Year",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Production Year"
+      },
+      {
+        "name": "Rotor Diameter",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Rotor Diameter"
+      },
+      {
+        "name": "Rotor Gap",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Rotor Gap"
+      },
+      {
+        "name": "Rotor Thickness",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Rotor Thickness"
+      },
+      {
+        "name": "Rotor Type",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Rotor Type"
+      },
+      {
+        "name": "Sale Date",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Sale Date"
+      },
+      {
+        "name": "Veh Exposure",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Veh Exposure"
+      },
+      {
+        "name": "Veh Float",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Veh Float"
+      },
+      {
+        "name": "Vehicle Assembly Plant",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Assembly Plant"
+      },
+      {
+        "name": "Vehicle Build Country",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Build Country"
+      },
+      {
+        "name": "Vehicle Build Region",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Build Region"
+      },
+      {
+        "name": "Vehicle Exposure",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Exposure"
+      },
+      {
+        "name": "Vehicle Float",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Float"
+      },
+      {
+        "name": "Vehicle Make",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Make"
+      },
+      {
+        "name": "Vehicle Manufacturer",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Manufacturer"
+      },
+      {
+        "name": "Vehicle Model",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Model"
+      },
+      {
+        "name": "Vehicle Model Year",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.Vehicle Model Year"
+      },
+      {
+        "name": "VIN",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Vehicle - Dimension.VIN"
+      }
+    ]
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "logicalTable": {
+    "name": "UT RPD UIDs Lookups",
+    "type": "LOOKUP",
+    "logicalColumns": [ {
+        "name": "UPGRADE_ID",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SAMPLE_RPD_UIDS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SAMPLE_RPD_UIDS.UPGRADE_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "NAME",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SAMPLE_RPD_UIDS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SAMPLE_RPD_UIDS.NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "TYPE",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "S_NQ_SAMPLE_RPD_UIDS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:10 - System DB (ORCL).Catalog.dbo.S_NQ_SAMPLE_RPD_UIDS.TYPE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "S_NQ_SAMPLE_RPD_UIDS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:10 - System DB (ORCL).Catalog.dbo.S_NQ_SAMPLE_RPD_UIDS"
+          ]
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "initBlock": {
+    "name": "DB_MODEL_ARG",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select 0.05 from dual"
+      }
+    ],
+    "variables": [ {
+        "name": "DB_MODEL_ARG",
+        "description": "Used for Database Model Clause forecast example",
+        "value": "0.05"
+      }
+    ]
+  }
+}

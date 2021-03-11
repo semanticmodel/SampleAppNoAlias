@@ -1,0 +1,61 @@
+{
+  "presentationTable": {
+    "name": "Fact Orders",
+    "alternateNames": [
+      "Bbil Fact Orders"
+    ],
+    "presentationColumns": [ {
+        "name": "# Of Billtocust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.# Of Billtocust Id"
+      },
+      {
+        "name": "Comments",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Comments"
+      },
+      {
+        "name": "Debit Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Debit Number"
+      },
+      {
+        "name": "# Of Endcust Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.# Of Endcust Id"
+      },
+      {
+        "name": "Ext Amount",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Ext Amount"
+      },
+      {
+        "name": "Ext Cost",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Ext Cost"
+      },
+      {
+        "name": "Line Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Line Number"
+      },
+      {
+        "name": "# Of Order Number",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.# Of Order Number"
+      },
+      {
+        "name": "# Of Part Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.# Of Part Id"
+      },
+      {
+        "name": "Po#",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Po#"
+      },
+      {
+        "name": "Std Unit Cost",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Std Unit Cost"
+      },
+      {
+        "name": "Unit Price",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Unit Price"
+      },
+      {
+        "name": "Units",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Fact Orders.Units"
+      }
+    ]
+  }
+}

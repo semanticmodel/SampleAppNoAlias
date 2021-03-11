@@ -1,0 +1,962 @@
+{
+  "cubeTable": {
+    "name": "Basic",
+    "sourceType": "TABLE",
+    "extName": "Basic",
+    "memberReference": "Default",
+    "dateFormat": "MM-DD-YYYY",
+    "isMemberAliasUnique": true,
+    "alternateNames": [
+      "Default",
+      "Long Names"
+    ],
+    "DBMap": [
+      {
+        "name": "DEFAULT",
+        "value": "Basic"
+      }
+    ],
+    "columns": [ {
+        "name": "Months - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Channels - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen1,Customers - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Channels - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Subcategory - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "State/Province - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Customers - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Misc",
+        "extName": "Misc",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Channels Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Payroll",
+        "extName": "Payroll",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Scenarios - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Drivers",
+        "extName": "Drivers",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Total Expenses",
+        "extName": "Total Expenses",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Sub Region - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Year Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen4,Measures",
+        "extName": "Gen4,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Expense Adjustment",
+        "extName": "Expense Adjustment",
+        "aggrType": "sum",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Channel Type - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Customers - New Market",
+        "extName": "New Market",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Customers Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Gen1,Scenario - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Product Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Margin",
+        "extName": "Margin",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Product - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen2,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Profit %",
+        "extName": "Profit %",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Operating Expenses",
+        "extName": "Operating Expenses",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Scenario - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Country - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Product - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Months - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Channel Type - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Scenarios - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Months - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Country - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen3,Measures",
+        "extName": "Gen3,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Year Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen1,Customers",
+        "extName": "Gen1,Customers",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Subcategory - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Channels - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Scenario",
+        "extName": "Gen1,Scenario",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Year - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen1,Channels",
+        "extName": "Gen1,Channels",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Ratios",
+        "extName": "Ratios",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Marketing",
+        "extName": "Marketing",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Region - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Region - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "History - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Margin %",
+        "extName": "Margin %",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Category - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Operating Expenses LR",
+        "extName": "Operating Expenses LR",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen4,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen4,Measures - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Budget Operating Expenses",
+        "extName": "Budget Operating Expenses",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Measures",
+        "extName": "Gen1,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Channel Name - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen2,Measures",
+        "extName": "Gen2,Measures",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Additions",
+        "extName": "Additions",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Subcategory - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Channels Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Gen1,Channels - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Scenario Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "Channel Name - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen2,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "SES Temp",
+        "extName": "SES Temp",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Gen1,Customers - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Quarter",
+        "extName": "Quarter",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Subcategory",
+        "extName": "Subcategory",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Scenario - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Sub Region - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Quarter - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Measures Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Sub Region",
+        "extName": "Sub Region",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Sales",
+        "extName": "Sales",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Profit",
+        "extName": "Profit",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Category - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Channel Name",
+        "extName": "Channel Name",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Operating Expenses SES",
+        "extName": "Operating Expenses SES",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Channel Type",
+        "extName": "Channel Type",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - Major Market",
+        "extName": "Major Market",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Scenarios - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "COGS",
+        "extName": "COGS",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Country",
+        "extName": "Country",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Inventory",
+        "extName": "Inventory",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "State/Province - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Opening Inventory",
+        "extName": "Opening Inventory",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Category",
+        "extName": "Category",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Customers - Small Market",
+        "extName": "Small Market",
+        "dataType": "INT",
+        "nullable": true,
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Ending Inventory",
+        "extName": "Ending Inventory",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Channel Type - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Gen3,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Year - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Region",
+        "extName": "Region",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Months",
+        "extName": "Months",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Scenarios",
+        "extName": "Scenarios",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "LR Temp",
+        "extName": "LR Temp",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Region - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Category - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Scenario - Default",
+        "extName": "Default",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen2,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Gen4,Measures - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Quarter - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "State/Province - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "History",
+        "extName": "History",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Product Leaf Indicator",
+        "extName": "LEVEL_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "levelNumber"
+      },
+      {
+        "name": "History - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Metrics",
+        "extName": "Metrics",
+        "aggrType": "external",
+        "dataType": "DOUBLE",
+        "dimPropType": "uda"
+      },
+      {
+        "name": "Country - Memnor",
+        "extName": "Memnor",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memnor"
+      },
+      {
+        "name": "Sub Region - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      },
+      {
+        "name": "Gen1,Product",
+        "extName": "Gen1,Product",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Channel Name - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Customers - Long Names",
+        "extName": "Long Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Gen3,Measures - Member Key",
+        "extName": "MEMBER_UNIQUE_NAME",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "memberKey"
+      },
+      {
+        "name": "Scenario Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "Customers Root Indicator",
+        "extName": "GEN_NUMBER",
+        "dataType": "INT",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "genNumber"
+      },
+      {
+        "name": "State/Province",
+        "extName": "State/Province",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "dimPropType": "none"
+      },
+      {
+        "name": "Quarter - Ancestor Ref",
+        "extName": "Ancestor_Names",
+        "dataType": "VARCHAR",
+        "length": 128,
+        "nullable": true,
+        "dimPropType": "ancestorRef"
+      }
+    ]
+  }
+}

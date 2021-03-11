@@ -1,0 +1,53 @@
+{
+  "presentationTable": {
+    "name": "Sales Person",
+    "alternateNames": [
+      "E"
+    ],
+    "presentationColumns": [ {
+        "name": "E0  Sales Rep Number",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E0  Sales Rep Number",
+        "alternateNames": [
+          "SalesRep"
+        ]
+      },
+      {
+        "name": "E1  Sales Rep Name",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E1  Sales Rep Name"
+      },
+      {
+        "name": "E2  Sales Rep Type",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E2  Sales Rep Type"
+      },
+      {
+        "name": "E4k  Position Key",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E4k  Position Key"
+      },
+      {
+        "name": "E7  Hire Date",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E7  Hire Date"
+      },
+      {
+        "name": "E8  Manager Number",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E8  Manager Number"
+      },
+      {
+        "name": "E10 Length Of Service",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E10 Length Of Service"
+      },
+      {
+        "name": "E99  Closure Distance",
+        "sourceLogicalColumn": "logicalColumn:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier).E99  Closure Distance"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Sales Rep Hierarchy",
+        "alternateNames": [
+          "H5 Sales Rep"
+        ],
+        "sourceLogicalTable": "logicalTable:01 - Sample App Exa.D5 Sales Rep (Parent Child Hier)",
+        "displayColumn": "presentationColumn:B - Sample Sales Exa.Sales Person.E0  Sales Rep Number"
+      }
+    ]
+  }
+}

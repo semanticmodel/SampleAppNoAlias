@@ -1,0 +1,44 @@
+{
+  "physicalTable": {
+    "name": "Instance",
+    "sourceType": "SELECT",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "select JOB_ID, INSTANCE_ID,\r\ncase\r\nwhen STATUS = 0 then 'Completed'\r\nwhen STATUS = 1 then 'Running'\r\nwhen STATUS = 2 then 'Failed'\r\nwhen STATUS = 3 then 'Cancelled'\r\nwhen STATUS = 4 then 'Timed Out'\r\nwhen STATUS = 5 then 'Warning'\r\nwhen STATUS = 6 then 'Try Again'\r\nelse 'Unknown'\r\nend as STATUS,\r\nBEGIN_TS, END_TS,\r\nto_number(\r\nsubstr(\r\n(\r\n(\r\n(END_TS - BEGIN_TS)*\r\n(24*60*60)\r\n)\r\n),1,10)\r\n)\r\nAS EXECUTION_TIME,\r\nEXIT_CODE,\r\nERROR_MSG_FLG\r\nFROM S_NQ_INSTANCE\r\nWHERE DELETE_FLG = 0"
+      }
+    ],
+    "physicalColumns": [ {
+        "name": "EXECUTION_TIME",
+        "dataType": "UINT"
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 20
+      },
+      {
+        "name": "BEGIN_TS",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "INSTANCE_ID",
+        "dataType": "UINT",
+        "nullable": true
+      },
+      {
+        "name": "END_TS",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "JOB_ID",
+        "dataType": "UINT",
+        "nullable": true
+      },
+      {
+        "name": "EXIT_CODE",
+        "dataType": "UINT"
+      }
+    ]
+  }
+}

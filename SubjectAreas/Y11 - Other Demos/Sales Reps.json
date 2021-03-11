@@ -1,0 +1,37 @@
+{
+  "presentationTable": {
+    "name": "Sales Reps",
+    "alternateNames": [
+      "Bbil Sales Reps"
+    ],
+    "presentationColumns": [ {
+        "name": "Country",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Country"
+      },
+      {
+        "name": "Geography",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Geography"
+      },
+      {
+        "name": "Rep Branch Type",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Rep Branch Type"
+      },
+      {
+        "name": "Sales Region",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Sales Region"
+      },
+      {
+        "name": "Salesrep Branch",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Salesrep Branch"
+      },
+      {
+        "name": "Salesrep Firm",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Salesrep Firm"
+      },
+      {
+        "name": "Salesrep Id",
+        "sourceLogicalColumn": "logicalColumn:Y11 - Other Demos.Bbil Sales Reps.Salesrep Id"
+      }
+    ]
+  }
+}

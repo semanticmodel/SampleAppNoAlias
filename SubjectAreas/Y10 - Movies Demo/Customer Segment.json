@@ -1,0 +1,18 @@
+{
+  "presentationTable": {
+    "name": "Customer Segment",
+    "presentationColumns": [ {
+        "name": "Segment",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Segment.Segment"
+      },
+      {
+        "name": "Segment Name",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Segment.Segment Name"
+      },
+      {
+        "name": "Segment ID",
+        "sourceLogicalColumn": "logicalColumn:Y10 - Movie Demo (ORCL).Customer Segment.Segment ID"
+      }
+    ]
+  }
+}

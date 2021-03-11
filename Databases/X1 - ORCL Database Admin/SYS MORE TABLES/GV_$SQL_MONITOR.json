@@ -1,0 +1,322 @@
+{
+  "physicalTable": {
+    "name": "GV_$SQL_MONITOR",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "USER#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ERROR_NUMBER",
+        "dataType": "VARCHAR",
+        "length": 40
+      },
+      {
+        "name": "PX_SERVER_SET",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_PLAN_HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "APPLICATION_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CPU_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CONCURRENCY_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLIENT_IDENTIFIER",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "PX_SERVER#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "MODULE",
+        "dataType": "VARCHAR",
+        "length": 48
+      },
+      {
+        "name": "DIRECT_WRITES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FETCHES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "JAVA_EXEC_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "IS_FULL_SQLTEXT",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "USERNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PLSQL_EXEC_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PHYSICAL_WRITE_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DISK_READS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_IS_CROSS_INSTANCE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "PROCESS_NAME",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "PX_SERVERS_REQUESTED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLIENT_INFO",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "EXACT_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 19
+      },
+      {
+        "name": "PX_QCINST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_CHILD_ADDRESS",
+        "dataType": "VARBINARY",
+        "length": 4
+      },
+      {
+        "name": "PHYSICAL_READ_REQUESTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_EXEC_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_SERVER_GROUP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_SERVERS_ALLOCATED",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LAST_REFRESH_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "PHYSICAL_READ_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "SERVICE_NAME",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "IO_INTERCONNECT_BYTES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FIRST_REFRESH_TIME",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "SQL_EXEC_START",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "ERROR_MESSAGE",
+        "dataType": "VARCHAR",
+        "length": 256
+      },
+      {
+        "name": "PX_QCSID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ELAPSED_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_IO_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PROGRAM",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "SESSION_SERIAL#",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ACTION",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "ERROR_FACILITY",
+        "dataType": "VARCHAR",
+        "length": 4
+      },
+      {
+        "name": "REFRESH_COUNT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "BINDS_XML",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "PX_MAXDOP_INSTANCES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SQL_TEXT",
+        "dataType": "VARCHAR",
+        "length": 2000
+      },
+      {
+        "name": "BUFFER_GETS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PX_MAXDOP",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "KEY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "OTHER_XML",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CLUSTER_WAIT_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "FORCE_MATCHING_SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_ENTRY_SUBPROGRAM_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PLSQL_ENTRY_OBJECT_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "QUEUING_TIME",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

@@ -1,0 +1,269 @@
+{
+  "logicalTable": {
+    "name": "D10 Order Payment Options",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Customer ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.CUSTOMER_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Expire Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.EXPIRE_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Institution Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.INSTITUTION_NAME"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payment Option ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.PAYMENT_OPTION_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payment Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.PAYMENT_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Routing IDentifier",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.ROUTING_IDENTIFIER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Valid From Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.VALID_FROM_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Valid To Date",
+        "dataType": "DATETIME",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.VALID_TO_DATE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Account Number",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.ACCOUNT_NUMBER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Billing Address ID",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.BILLING_ADDRESS_ID"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Card Type Code",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.CARD_TYPE_CODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Check Digits",
+        "dataType": "INT",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "PAYMENT_OPTIONS",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS.CHECK_DIGITS"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Payment Type Lookup",
+        "dataType": "UNKNOWN",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": " LOOKUP( DENSE \r\n %1,\r\n %2 ,\r\n'FR',\r\n'PAYMENT_TYPE_CODE')",
+            "expressionObjects": [
+              "logicalColumn:X5 - OLTP Source (Fusion Order).L1 Logical Lookups.Meaning",
+              "logicalColumn:X5 - OLTP Source (Fusion Order).D10 Order Payment Options.Payment Type Code"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "PAYMENT_OPTIONS",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:01 - Sample App Data (ORCL).BIFOD.PAYMENT_OPTIONS"
+          ]
+        }
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "Total",
+      "logicalLevels": [
+        {
+          "name": "Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "Payment Type",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Payment Type Code"
+          ],
+          "displayColumn": "logicalColumn:Payment Type Code"
+        },
+        {
+          "name": "Odr Payment Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Payment Option ID"
+          ],
+          "displayColumn": "logicalColumn:Payment Option ID"
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "H10 Order Payment Options [branch at level 'Payment Type']",
+          "levels": [ "Total", "Payment Type", "Odr Payment Detail" ]
+        }
+      ]
+    }
+  }
+}

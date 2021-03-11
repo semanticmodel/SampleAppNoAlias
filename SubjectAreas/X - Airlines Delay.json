@@ -1,0 +1,71 @@
+{
+  "subjectArea": {
+    "name": "X - Airlines Delay",
+    "sourceBusinessModel": "businessModel:X0 - Airlines",
+    "implicitFactColumn": "logicalColumn:X0 - Airlines.Flight Facts.# of Flights",
+    "description": "US Air Traffic delay Analysis\r\nThjs Subject Area is disabled OOB and",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X - Airlines Delay.Date"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Day"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Route",
+        "children": [
+          {
+            "name": "presentationTable:X - Airlines Delay.Origin"
+          },
+          {
+            "name": "presentationTable:X - Airlines Delay.Destination"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Carrier"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Schedule"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Delay"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Flight Facts"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Period Ago"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Delay Facts"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Delay Causes"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Arrival Delay"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Depart Delay"
+      },
+      {
+        "name": "presentationTable:X - Airlines Delay.Config",
+        "children": [
+          {
+            "name": "presentationTable:X - Airlines Delay.Schedules"
+          },
+          {
+            "name": "presentationTable:X - Airlines Delay.Essb Only Facts"
+          }
+        ]
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "physicalTable": {
+    "name": "WRH$_TABLESPACE_STAT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "EXTENT_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "SEGMENT_SPACE_MANAGEMENT",
+        "dataType": "VARCHAR",
+        "length": 6
+      },
+      {
+        "name": "IS_BACKUP",
+        "dataType": "VARCHAR",
+        "length": 5
+      },
+      {
+        "name": "DBID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "INSTANCE_NUMBER",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "TS#",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SNAP_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "STATUS",
+        "dataType": "VARCHAR",
+        "length": 9
+      },
+      {
+        "name": "TSNAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "CONTENTS",
+        "dataType": "VARCHAR",
+        "length": 9
+      }
+    ]
+  }
+}

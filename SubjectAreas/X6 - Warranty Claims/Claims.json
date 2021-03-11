@@ -1,0 +1,66 @@
+{
+  "presentationTable": {
+    "name": "Claims",
+    "alternateNames": [
+      "Claim - Fact",
+      "Claim Facts"
+    ],
+    "presentationColumns": [ {
+        "name": "# of Claims",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.# of Claims"
+      },
+      {
+        "name": "Sum Lbr Othr Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Sum Lbr Othr Amt"
+      },
+      {
+        "name": "Sum Lbr Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Sum Lbr Tot Amt"
+      },
+      {
+        "name": "Sum Part Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Sum Part Tot Amt"
+      },
+      {
+        "name": "Sum Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Sum Tot Amt"
+      },
+      {
+        "name": "# of VINs",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.# of VINs"
+      },
+      {
+        "name": "# of Dealers",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.# of Dealers"
+      },
+      {
+        "name": "Avg Age",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Age"
+      },
+      {
+        "name": "Avg Lbr Othr Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Lbr Othr Amt"
+      },
+      {
+        "name": "Avg Lbr Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Lbr Tot Amt"
+      },
+      {
+        "name": "Avg Odmtr Mileage",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Odmtr Mileage"
+      },
+      {
+        "name": "Avg Part Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Part Tot Amt"
+      },
+      {
+        "name": "Avg Tot Amt",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Tot Amt"
+      },
+      {
+        "name": "Avg Days In Service",
+        "sourceLogicalColumn": "logicalColumn:X6 - Warranty Claims.Claim - Fact.Avg Days In Service"
+      }
+    ]
+  }
+}

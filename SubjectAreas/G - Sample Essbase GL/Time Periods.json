@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Time Periods",
+    "presentationColumns": [ {
+        "name": "Years",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Years.Years"
+      },
+      {
+        "name": "Total Year",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Time Periods.Total Year"
+      },
+      {
+        "name": "Quarters",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Time Periods.Quarters"
+      },
+      {
+        "name": "Months",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Time Periods.Months"
+      },
+      {
+        "name": "Time Periods - Default",
+        "sourceLogicalColumn": "logicalColumn:03 - Essbase GL.Time Periods.Time Periods - Default"
+      }
+    ],
+    "hierarchies": [ {
+        "name": "Time Periods",
+        "sourceLogicalTable": "logicalTable:03 - Essbase GL.Time Periods",
+        "levels": [ {
+            "name": "Year",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Time Periods.Year",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Time Periods.Total Year"
+          },
+          {
+            "name": "Quarters",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Time Periods.Quarters",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Time Periods.Quarters"
+          },
+          {
+            "name": "Months",
+            "sourceLogicalLevel": "logicalLevel:03 - Essbase GL.Time Periods.Months",
+            "displayColumn": "presentationColumn:G - Sample Essbase GL.Time Periods.Months"
+          }
+        ]
+      }
+    ]
+  }
+}

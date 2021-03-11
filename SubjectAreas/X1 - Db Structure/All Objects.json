@@ -1,0 +1,74 @@
+{
+  "presentationTable": {
+    "name": "All Objects",
+    "alternateNames": [
+      "All_objects",
+      "OBJ- ALL_OBJECTS"
+    ],
+    "presentationColumns": [ {
+        "name": "Created",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Created"
+      },
+      {
+        "name": "Data Object Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Data Object Id"
+      },
+      {
+        "name": "Edition Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Edition Name"
+      },
+      {
+        "name": "Generated",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Generated"
+      },
+      {
+        "name": "Last Ddl Time",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Last Ddl Time"
+      },
+      {
+        "name": "Namespace",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Namespace"
+      },
+      {
+        "name": "Object Id",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Object Id"
+      },
+      {
+        "name": "Object Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Object Name"
+      },
+      {
+        "name": "Object Type",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Object Type"
+      },
+      {
+        "name": "Owner",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Owner"
+      },
+      {
+        "name": "Secondary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Secondary"
+      },
+      {
+        "name": "Status",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Status"
+      },
+      {
+        "name": "Subobject Name",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Subobject Name"
+      },
+      {
+        "name": "Temporary",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Temporary"
+      },
+      {
+        "name": "Timestamp",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.Timestamp"
+      },
+      {
+        "name": "# Of Objects",
+        "sourceLogicalColumn": "logicalColumn:X1 - Db Structure.OBJ- ALL_OBJECTS.# Of Objects"
+      }
+    ]
+  }
+}

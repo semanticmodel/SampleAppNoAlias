@@ -1,0 +1,38 @@
+{
+  "physicalTable": {
+    "name": "SQL$TEXT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SQL_TEXT",
+        "dataType": "LONGVARCHAR",
+        "length": 4000,
+        "nullable": true
+      },
+      {
+        "name": "SPARE2",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "SPARE1",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "SIGNATURE",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "SQL_HANDLE",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      }
+    ]
+  }
+}

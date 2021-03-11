@@ -1,0 +1,47 @@
+{
+  "presentationTable": {
+    "name": "Addl Attrs",
+    "description": "->",
+    "presentationColumns": [ {
+        "name": "Dest",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Dest"
+      },
+      {
+        "name": "Origin",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Origin"
+      },
+      {
+        "name": "UniqueCarrier",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.UniqueCarrier"
+      },
+      {
+        "name": "FlightNum",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.FlightNum"
+      },
+      {
+        "name": "Year",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Year"
+      },
+      {
+        "name": "Month",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Month"
+      },
+      {
+        "name": "DayofMonth",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.DayofMonth"
+      },
+      {
+        "name": "ArrTime",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.ArrTime"
+      },
+      {
+        "name": "DepTime",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.DepTime"
+      },
+      {
+        "name": "Route",
+        "sourceLogicalColumn": "logicalColumn:08 - ORE Sample.Dim - Delay Pred Attrs.Route"
+      }
+    ]
+  }
+}

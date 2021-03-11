@@ -1,0 +1,55 @@
+{
+  "businessModel": {
+    "name": "08 - ORE Sample",
+    "joins": [      {
+        "name": "Relationship_2004:2513441358848231",
+        "leftTable": "logicalTable:08 - ORE Sample.Dummy",
+        "rightTable": "logicalTable:08 - ORE Sample.ORE Graphics",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:300001465273358",
+        "leftTable": "logicalTable:08 - ORE Sample.Dummy",
+        "rightTable": "logicalTable:08 - ORE Sample.Stock Sample",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2511161356068404",
+        "leftTable": "logicalTable:08 - ORE Sample.Dummy",
+        "rightTable": "logicalTable:08 - ORE Sample.PerspGraph",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2541881359526206",
+        "leftTable": "logicalTable:08 - ORE Sample.Dummy",
+        "rightTable": "logicalTable:08 - ORE Sample.ORE Scripts",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "15 - ORE Sample:99 - Airline Performance:Relationship_2004:1959251329347440",
+        "leftTable": "logicalTable:08 - ORE Sample.Dim - Delay Pred Attrs",
+        "rightTable": "logicalTable:08 - ORE Sample.Delay Prediction",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "Relationship_2004:2510771355989807",
+        "leftTable": "logicalTable:08 - ORE Sample.Dummy",
+        "rightTable": "logicalTable:08 - ORE Sample.RandomRedDots",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      },
+      {
+        "name": "15 - ORE Sample:Relationship_2004:2300221336588369",
+        "leftTable": "logicalTable:08 - ORE Sample.Dim- Airports",
+        "rightTable": "logicalTable:08 - ORE Sample.AirportsCount",
+        "joinType": "INNER",
+        "cardinality": "ZERO_OR_ONE_TO_MANY"
+      }
+    ]
+  }
+}

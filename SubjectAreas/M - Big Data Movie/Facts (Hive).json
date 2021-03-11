@@ -1,0 +1,38 @@
+{
+  "presentationTable": {
+    "name": "Facts (Hive)",
+    "presentationColumns": [ {
+        "name": "Count of Movies",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Count of Movies"
+      },
+      {
+        "name": "Count of Activities",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Count of Activities"
+      },
+      {
+        "name": "Count of Customers",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Count of Customers"
+      },
+      {
+        "name": "Price",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Price"
+      },
+      {
+        "name": "Recommended",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Recommended"
+      },
+      {
+        "name": "Rating",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Rating"
+      },
+      {
+        "name": "Recommend Flag",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Recommend Flag"
+      },
+      {
+        "name": "Activity ID",
+        "sourceLogicalColumn": "logicalColumn:12 - Big Data Movie.Facts (Hive).Activity ID"
+      }
+    ]
+  }
+}

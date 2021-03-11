@@ -1,0 +1,194 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_COLS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "CHARACTER_SET_NAME",
+        "dataType": "VARCHAR",
+        "length": 44
+      },
+      {
+        "name": "CHAR_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "VIRTUAL_COLUMN",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DATA_TYPE_MOD",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "INTERNAL_COLUMN_ID",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "AVG_COL_LEN",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATA_DEFAULT",
+        "dataType": "LONGVARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "LAST_ANALYZED",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "QUALIFIED_COL_NAME",
+        "dataType": "VARCHAR",
+        "length": 4000
+      },
+      {
+        "name": "SEGMENT_COLUMN_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COLUMN_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DATA_TYPE",
+        "dataType": "VARCHAR",
+        "length": 106
+      },
+      {
+        "name": "SAMPLE_SIZE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATA_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15,
+        "nullable": true
+      },
+      {
+        "name": "V80_FMT_IMAGE",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DATA_SCALE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "USER_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "NUM_BUCKETS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HIGH_VALUE",
+        "dataType": "VARBINARY",
+        "length": 32
+      },
+      {
+        "name": "NULLABLE",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "HISTOGRAM",
+        "dataType": "VARCHAR",
+        "length": 15
+      },
+      {
+        "name": "OWNER",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DENSITY",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "LOW_VALUE",
+        "dataType": "VARBINARY",
+        "length": 32
+      },
+      {
+        "name": "GLOBAL_STATS",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "HIDDEN_COLUMN",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "DATA_TYPE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "NUM_DISTINCT",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DEFAULT_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "CHAR_USED",
+        "dataType": "VARCHAR",
+        "length": 1
+      },
+      {
+        "name": "COLUMN_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "DATA_UPGRADED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "CHAR_COL_DECL_LENGTH",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30,
+        "nullable": true
+      },
+      {
+        "name": "DATA_PRECISION",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "NUM_NULLS",
+        "dataType": "DOUBLE",
+        "length": 15
+      }
+    ]
+  }
+}

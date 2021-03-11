@@ -1,0 +1,597 @@
+{
+  "logicalTable": {
+    "name": "16 Dest Airport Map",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Dest Airport",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.AIRPORT"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2A"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.16 Dest Airport Map Detail"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Airport Id",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.AIRPORT_ID"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2B"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Airport Lat",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.LATITUDE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2C"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Airport Long",
+        "dataType": "DOUBLE",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.LONGITUDE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2D"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Airport Full Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.TR_AIRPORT_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Airpo00039C2E"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest City Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST.TR_CITY_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_City_00039C2F"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "020 Dest Region",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.R_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_R00039C30"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Region Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.R_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Regio00039C31"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.16 Dest Region Map"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "030 Dest Division",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.D_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_D00039C32"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Division Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.D_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Divis00039C33"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.16 Dest Division Map"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "030 Dest Regiondivision",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.RD_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_R00039C34"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "040 Dest State",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.S_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_S00039C35"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest US State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "'USA_' || %1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.S_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_US_St00039C36"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalCubeColumn:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG.16 Dest State Map"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "050 Dest County",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.C_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_C00039C37"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest County Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.C_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_Count00039C38"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest StateCounty",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.SC_CODE"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_State00039C39"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest State Name",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "11 GEO_AIPORT_DEST",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST.S_NAME"
+                ]
+              }
+            },
+            {
+              "logicalTableSource": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06.Dest_State00039C3A"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dest Airport Name",
+        "dataType": "UNKNOWN",
+        "descriptorColumn": "Dest Airport",
+        "logicalColumnSource": {
+          "derivedFrom": "LOGICAL_COLUMNS",
+          "logicalExpression": {
+            "expressionTemplate": "%1 || ' - ' ||  SUBSTRING(%2 FROM  LOCATE(': ', %2) + 2 FOR 50)",
+            "expressionObjects": [
+              "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport",
+              "logicalColumn:X0 - Airlines.16 Dest Airport Map.Dest Airport Full Name"
+            ]
+          }
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "11 GEO_AIPORT_DEST",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.12 GEO_AIPORT_DEST",
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES.13 COUNTY_HIER_DEST"
+          ],
+          "logicalTableSourceJoins": [ {
+              "physicalJoin": "physicalJoin:X0 - Airlines Demo Dbs (ORCL).11 GEO_AIPORT_DEST_Foreign Key#1"
+            }
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ORCL)__BI_AIRLINES_AGG_SA_16_Dest00039D06",
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ORCL).BI_AIRLINES_AGG.SA_16_Dest00039D06"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail"
+        ]
+      },
+      {
+        "name": "X0 - Airlines Demo Dbs (ESSB)_ESSB_AGG__ESSB_AGG",
+        "disable": true,
+        "isSysGen": true,
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X0 - Airlines Demo Dbs (ESSB).ESSB_AGG.ESSB_AGG"
+          ]
+        },
+        "dataGranularity": [
+          "logicalLevel:X0 - Airlines.16 Dest Airport Map.16 Dest Airport Map Detail"
+        ]
+      }
+    ],
+    "hierarchyType": "LEVEL_BASED",
+    "levelBasedHierarchy": {
+      "defaultRootLevel": "16 Dest Map Total",
+      "logicalLevels": [
+        {
+          "name": "16 Dest Map Total",
+          "grandTotalLevel": true,
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1
+        },
+        {
+          "name": "16 Dest Region Map",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 1,
+          "primaryColumns": [
+            "logicalColumn:Dest Region Name"
+          ],
+          "displayColumn": "logicalColumn:Dest Region Name"
+        },
+        {
+          "name": "16 Dest Division Map",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 10,
+          "primaryColumns": [
+            "logicalColumn:Dest Division Name"
+          ],
+          "displayColumn": "logicalColumn:Dest Division Name"
+        },
+        {
+          "name": "16 Dest State Map",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 50,
+          "primaryColumns": [
+            "logicalColumn:Dest US State Name"
+          ],
+          "displayColumn": "logicalColumn:Dest US State Name"
+        },
+        {
+          "name": "16 Dest Airport Map Detail",
+          "disableAggregateToHigherLevel": true,
+          "numberOfElements": 350,
+          "primaryColumns": [
+            "logicalColumn:Dest Airport"
+          ],
+          "preferredDrillPath": [
+            "X0 - Airlines.18 Route.18 Route Detail"
+          ]
+        }
+      ],
+      "logicalHierarchies": [ {
+          "name": "16 Dest Airport Map [branch at level '16 Dest State Map']",
+          "levels": [ "16 Dest Map Total", "16 Dest Region Map", "16 Dest Division Map", "16 Dest State Map", "16 Dest Airport Map Detail" ]
+        }
+      ]
+    }
+  }
+}

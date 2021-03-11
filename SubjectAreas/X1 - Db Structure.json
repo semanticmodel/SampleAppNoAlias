@@ -1,0 +1,143 @@
+{
+  "subjectArea": {
+    "name": "X1 - Db Structure",
+    "sourceBusinessModel": "businessModel:X1 - Db Structure",
+    "description": "Oracle Database Schema Structure",
+    "tableOrder": [
+      {
+        "name": "presentationTable:X1 - Db Structure.DB Objects",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.All Aws"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Cubes"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Indexes"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Mviews"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Objects"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Synonyms"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Tab Cols"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Tab Partitions"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Tab Statistics"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Tables"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Views"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Segments"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Tab Col Statistics"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Segment Statistics"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.DB Privileges",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.All Col Privs"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Tab Privs"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.All Users"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Sys Privs"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.Database",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.Services"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Properties"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.Tablespaces",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.Groups"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Temp Files"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Temp Free Space"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Free Space"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.DataFiles"
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.Sessions",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.Session Metrics"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.SQLs",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.SQL Stats"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.SQL Text"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.System Metrics",
+        "children": [
+          {
+            "name": "presentationTable:X1 - Db Structure.History"
+          },
+          {
+            "name": "presentationTable:X1 - Db Structure.Sys Metric Summary"
+          }
+        ]
+      },
+      {
+        "name": "presentationTable:X1 - Db Structure.Column Statistics"
+      }
+    ],
+    "hideIfTrue": {
+      "expressionTemplate": "VALUEOF(NQ_SESSION.%1) =1",
+      "expressionObjects": [
+        "variable:Custom Visibility Pres Layer.VISIBILITY_PRES_LAYER"
+      ]
+    }
+  }
+}

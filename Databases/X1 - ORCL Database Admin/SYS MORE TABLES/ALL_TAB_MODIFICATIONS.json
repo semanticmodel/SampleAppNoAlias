@@ -1,0 +1,59 @@
+{
+  "physicalTable": {
+    "name": "ALL_TAB_MODIFICATIONS",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "DELETES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TIMESTAMP",
+        "dataType": "DATETIME"
+      },
+      {
+        "name": "INSERTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TRUNCATED",
+        "dataType": "VARCHAR",
+        "length": 3
+      },
+      {
+        "name": "TABLE_OWNER",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "PARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "DROP_SEGMENTS",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "UPDATES",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "TABLE_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      },
+      {
+        "name": "SUBPARTITION_NAME",
+        "dataType": "VARCHAR",
+        "length": 30
+      }
+    ]
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "physicalTable": {
+    "name": "GV_$SQLTEXT",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "SQL_ID",
+        "dataType": "VARCHAR",
+        "length": 13
+      },
+      {
+        "name": "SQL_TEXT",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "INST_ID",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "COMMAND_TYPE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "HASH_VALUE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "PIECE",
+        "dataType": "DOUBLE",
+        "length": 15
+      },
+      {
+        "name": "ADDRESS",
+        "dataType": "VARBINARY",
+        "length": 4
+      }
+    ]
+  }
+}

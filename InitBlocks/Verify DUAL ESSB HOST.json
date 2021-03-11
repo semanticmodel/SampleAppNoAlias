@@ -1,0 +1,24 @@
+{
+  "initBlock": {
+    "name": "Verify DUAL ESSB HOST",
+    "type": "SESSION",
+    "runSchedule": {
+      "interval": 1,
+      "intervalUnit": "DAYS"
+    },
+    "connectionPool": "10 - System DB (ORCL).SampleApp Init Blocks",
+    "description": "This host information should be the computer name (or IP) of your essbase server host.",
+    "selectStatements": [
+      {
+        "databaseType": "DEFAULT",
+        "query": "Select 'localhost:9799' From Dual"
+      }
+    ],
+    "variables": [ {
+        "name": "ESSB_SERVER",
+        "description": "Used to identify the Essbase Server Host in physical Layer",
+        "value": "'localhost:9799'"
+      }
+    ]
+  }
+}

@@ -1,0 +1,430 @@
+{
+  "physicalTable": {
+    "name": "INDC_MUMBAI_SAMPLE",
+    "sourceType": "TABLE",
+    "caching": {
+      "enable": true
+    },
+    "physicalColumns": [ {
+        "name": "NUM_HH_EARN_LT_75K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PER_CAPITA_EXPENDITURE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_0_14_LT_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "URBANSEC_D_AND_E_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_75K_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_45_59_150K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_GT_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NCITY",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "TOTSAV_HH_EARN_LT_75K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_GT_59_GT_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_0_14_GT_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_500K_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "WARDCODE_G",
+        "dataType": "VARCHAR",
+        "length": 55
+      },
+      {
+        "name": "NEIGHBOURHOOD_DESCRIPTION",
+        "dataType": "VARCHAR",
+        "length": 256
+      },
+      {
+        "name": "TOTINC_HH_EARN_LT_75K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CITY",
+        "dataType": "VARCHAR",
+        "length": 32
+      },
+      {
+        "name": "NUM_HH_EARN_GT_10M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTINC_HH_EARN_GT_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_300K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_GT_59_LT_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PER_CAPITA_INCOME",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_INCOME",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_5M_10M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_45_59",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_POPULATION",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_15_29",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_EXPENDITURE",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTINC_HH_EARN_500K_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_30_44_LT_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_1M_2M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_GT_59",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_15_29_150K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_CLOTHING_FOOTWEAR",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NEIGHBOURHOOD_AREA",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_150K_3000K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_2M_5M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOWN",
+        "dataType": "VARCHAR",
+        "length": 10
+      },
+      {
+        "name": "POP_30_44",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTSAV_HH_EARN_150K_300K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_0_14",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "CAR_OWNERSHIP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NTOWN",
+        "dataType": "VARCHAR",
+        "length": 100
+      },
+      {
+        "name": "POP_45_59_LT_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_LT_75K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTINC_HH_EARN_75K_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "COLOR_TV_OWNERSHIP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_0_14_150K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_15_29_LT_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTSAV_HH_EARN_GT_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTEXP_HH_EARN_500K_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_HH_EARN_75K_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_DURABLES_PERSONAL",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_HH_EARN_300K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "REFRIGERATOR_OWNERSHIP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_HH_EARN_150K_300K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "PER_CAPITA_SAVINGS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_HH_EARN_GT_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTINC_HH_EARN_150K_300K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_FMCG",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TWO_WHEELER_OWNERSHIP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_30_44_150K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTSAV_HH_EARN_75K_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_150K_300K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_GT_59_150K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_HH_EARN_LT_75K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_75K_150K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NEIGHBOURHOOD_TOTAL",
+        "dataType": "VARCHAR",
+        "length": 64
+      },
+      {
+        "name": "POP_HH_EARN_500K_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_45_59_GT_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "URBAN_SEC_B_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "WASHING_MACHINE_OWNERSHIP",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTINC_HH_EARN_300K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_FOOD_RELATED",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTSAV_HH_EARN_500K_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "URBAN_SECA_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_30_44_GT_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTAL_HOUSEHOLD_SAVINGS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "URBAN_SEC_C_HOUSEHOLDS",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "POP_15_29_GT_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "TOTSAV_HH_EARN_300K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "EXP_MISC_GOODS_SERVICES",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_300K_500K",
+        "dataType": "DOUBLE",
+        "length": 22
+      },
+      {
+        "name": "NUM_HH_EARN_GT_1M",
+        "dataType": "DOUBLE",
+        "length": 22
+      }
+    ]
+  }
+}

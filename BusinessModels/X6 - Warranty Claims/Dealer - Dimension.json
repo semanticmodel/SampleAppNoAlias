@@ -1,0 +1,84 @@
+{
+  "logicalTable": {
+    "name": "Dealer - Dimension",
+    "type": "DIMENSION",
+    "logicalColumns": [ {
+        "name": "Dealer",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_DEALER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_DEALER.DEALER"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer City",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_DEALER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_DEALER.DEALER_CITY"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer Geocode",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_DEALER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_DEALER.DEALER_GEOCODE"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      {
+        "name": "Dealer State Province",
+        "dataType": "VARCHAR",
+        "logicalColumnSource": {
+          "derivedFrom": "PHYSICAL_COLUMNS",
+          "physicalMappings": [ {
+              "logicalTableSource": "DIM_DEALER",
+              "physicalExpression": {
+                "expressionTemplate": "%1",
+                "expressionObjects": [
+                  "physicalColumn:X6 - Warranty Claims Data.ENDECA.DIM_DEALER.DEALER_STATEPROVINCE"
+                ]
+              }
+            }
+          ]
+        }
+      }
+    ],
+    "logicalTableSources": [ {
+        "name": "DIM_DEALER",
+        "tableMapping": {
+          "tables": [
+            "physicalTable:X6 - Warranty Claims Data.ENDECA.DIM_DEALER"
+          ]
+        }
+      }
+    ]
+  }
+}
